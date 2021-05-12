@@ -1,0 +1,355 @@
+<html>
+<head>
+<title>Ideal.v</title>
+<style>
+.time {
+  background-color: #ffaaaa;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.code {
+  z-index: 0;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+}
+.code:hover {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+pre {
+  margin: 1px;
+}
+</style>
+</head>
+<body>
+<h1>Timings for Ideal.v</h1>
+
+<div class="code" title="File: Ideal.v
+Line: 1
+Time: 0.047s">
+<div class="time" style="width: 37.007874015748%"></div>
+<pre>Require Import Basics Types.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 1
+Time: 0.127s">
+<div class="time" style="width: 100%"></div>
+<pre>
+Require Import Algebra.Rings.CRing.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 2
+Time: 0.014s">
+<div class="time" style="width: 11.023622047244%"></div>
+<pre>
+Require Import Algebra.AbGroups.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 3
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Local Open Scope mc_scope.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 5
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** In this file we define Ideals *)
+
+(** TODO: In the future it might be useful to define ideals as submodules when we go about defining R-modules. *)
+
+(** An additive subgroup I of a ring R is an ideal when: *)</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 11
+Time: 0.002s">
+<div class="time" style="width: 1.5748031496063%"></div>
+<pre>Class IsIdeal {R : CRing} (I : Subgroup R) :=
+  isideal (r x : R) : I x -&gt; I (r * x).</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 12
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
+<pre>
+
+Record Ideal (R : CRing) := {
+  ideal_subgroup : Subgroup R;
+  ideal_isideal : IsIdeal ideal_subgroup;
+}.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 17
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Coercion ideal_subgroup : Ideal &gt;-&gt; Subgroup.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 19
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Global Existing Instances ideal_isideal.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Section Examples.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 22
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Context (R : CRing).</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** The zero ideal is an ideal *)
+ </pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 27
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Global Instance isideal_trivial_subgroup
+    : IsIdeal (R:=R) trivial_subgroup.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 28
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 29
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    hnf; cbn.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros r x p.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    refine (_ @ rng_mult_zero_r r).</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 31
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    f_ap.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 32
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 33
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** Zero ideal *)
+ </pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition ideal_zero : Ideal R
+    := Build_Ideal R _ isideal_trivial_subgroup.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 37
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** The unit ideal is an ideal *)
+ </pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 40
+Time: 0.002s">
+<div class="time" style="width: 1.5748031496063%"></div>
+<pre>Global Instance isideal_maximal_subgroup
+    : IsIdeal (R:=R) maximal_subgroup.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 41
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 42
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    split.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 43
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 44
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** Unit ideal *)
+ </pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 47
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition ideal_unit : Ideal R
+    := Build_Ideal R _ isideal_maximal_subgroup.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** TODO: Intersection of ideals *)
+(** TODO: Sum of ideals *)
+(** TODO: Product of ideals *)
+
+</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>End Examples.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition ideal_kernel {R S : CRing} (f : CRingHomomorphism R S) : Ideal R.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 56
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
+<pre>
+  snrapply Build_Ideal.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: exact (grp_kernel f).</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 58
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros r x p; cbn in p.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  simpl.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 60
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  refine (rng_homo_mult _ _ _ @ _).</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 61
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  refine (_ @ rng_mult_zero_r (f r)).</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 62
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  f_ap.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Ideal.v
+Line: 65
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Properties of ideals *)
+
+(** TODO: Maximal ideals *)
+(** TODO: Principal ideal *)
+(** TODO: Prime ideals *)
+(** TODO: Radical ideals *)
+(** TODO: Minimal ideals *)
+(** TODO: Primary ideals *)
+
+
+</pre>
+</div>
+</body>
+</html>
+

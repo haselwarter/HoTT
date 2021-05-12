@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HoTT.Algebra.Groups.FreeGroup</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HoTT.Algebra.Groups.FreeGroup</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.html#"><span class="id" title="library">Basics</span></a> <a class="idref" href="HoTT.Types.html#"><span class="id" title="library">Types</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#"><span class="id" title="library">Groups.Group</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.WildCat.html#"><span class="id" title="library">WildCat</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Free groups are defined in Group.v. In this file we prove properties of free groups. There are various constructions of free groups to choose from, all of which can be found in the FreeGroup folder. Though, this is a bit of a lie since currently there is only one full implmentation. O:-) 
+<div class="paragraph"> </div>
+
+ In this file, and in the rest of the library we choose a modified version of the free group which can be found in Kraus-Altenkirch 2018 arXiv:1805.02069. This is a very simple HIT in a similar manner to the abelianization HIT used in Algebra.AbGroup.Abelianization. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#"><span class="id" title="library">Algebra.Groups.FreeGroup.ListQuotient</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Properties of free groups 
+<div class="paragraph"> </div>
+
+ We can state the universal property of free groups as an equivalence: (F(A) 
+</div>
+<div class="code">
+<span class="id" title="keyword">Theorem</span> <a id="equiv_isfreegroup_rec" class="idref" href="#equiv_isfreegroup_rec"><span class="id" title="lemma">equiv_isfreegroup_rec</span></a> `{<a id="H:1" class="idref" href="#H:1"><span class="id" title="binder">Funext</span></a>} (<a id="G:2" class="idref" href="#G:2"><span class="id" title="binder">G</span></a> <a id="F:3" class="idref" href="#F:3"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>) (<a id="A:4" class="idref" href="#A:4"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="i:5" class="idref" href="#i:5"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:4"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:3"><span class="id" title="variable">F</span></a>)<br/>
+&nbsp;&nbsp;`{<a id="H0:6" class="idref" href="#H0:6"><span class="id" title="binder">IsFreeGroupOn</span></a> <a id="H0:6" class="idref" href="#H0:6"><span class="id" title="binder">A</span></a> <a id="H0:6" class="idref" href="#H0:6"><span class="id" title="binder">F</span></a> <a id="H0:6" class="idref" href="#H0:6"><span class="id" title="binder">i</span></a>}<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:3"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#G:2"><span class="id" title="variable">G</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:4"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#G:2"><span class="id" title="variable">G</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Overture.html#Build_Equiv"><span class="id" title="constructor">Build_Equiv</span></a>.<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <span class="id" title="var">i</span>). }<br/>
+&nbsp;&nbsp;<span class="id" title="var">nrapply</span> <a class="idref" href="HoTT.Types.Equiv.html#isequiv_contr_map"><span class="id" title="definition">isequiv_contr_map</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv'"><span class="id" title="definition">contr_equiv'</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#FactorsThroughFreeGroup"><span class="id" title="definition">FactorsThroughFreeGroup</span></a> <span class="id" title="var">A</span> <span class="id" title="var">F</span> <span class="id" title="var">i</span> <span class="id" title="var">G</span> <span class="id" title="var">f</span>).<br/>
+&nbsp;&nbsp;{ <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_functor_sigma_id"><span class="id" title="definition">equiv_functor_sigma_id</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">g</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Forall.html#equiv_path_forall"><span class="id" title="definition">equiv_path_forall</span></a>. }<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The above theorem is true regardless of the implementation of free groups. This lets us state the more specific theorem about the canonical free groups. This can be read as <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a></span> is left adjoint to the forgetful functor <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.Group.html#group_type"><span class="id" title="projection">group_type</span></a></span>. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Theorem</span> <a id="equiv_freegroup_rec" class="idref" href="#equiv_freegroup_rec"><span class="id" title="lemma">equiv_freegroup_rec</span></a> `{<a id="H:7" class="idref" href="#H:7"><span class="id" title="binder">Funext</span></a>} (<a id="G:8" class="idref" href="#G:8"><span class="id" title="binder">G</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>) (<a id="A:9" class="idref" href="#A:9"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#HoTT.Algebra.Groups.FreeGroup.FreeGroup"><span class="id" title="definition">FreeGroup</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:9"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#G:8"><span class="id" title="variable">G</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:9"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#G:8"><span class="id" title="variable">G</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#equiv_isfreegroup_rec"><span class="id" title="lemma">equiv_isfreegroup_rec</span></a>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Global Instance</span> <a id="ishprop_isfreegroupon" class="idref" href="#ishprop_isfreegroupon"><span class="id" title="instance">ishprop_isfreegroupon</span></a> `{<a id="H:10" class="idref" href="#H:10"><span class="id" title="binder">Funext</span></a>} (<a id="F:11" class="idref" href="#F:11"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>) (<a id="A:12" class="idref" href="#A:12"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="i:13" class="idref" href="#i:13"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:12"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:11"><span class="id" title="variable">F</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#IsFreeGroupOn"><span class="id" title="class">IsFreeGroupOn</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:12"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:11"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#i:13"><span class="id" title="variable">i</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#IsFreeGroupOn"><span class="id" title="class">IsFreeGroupOn</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Forall.html#istrunc_forall"><span class="id" title="instance">istrunc_forall</span></a>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Both ways of stating the universal property are equivalent. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="equiv_isfregroupon_isequiv_precomp" class="idref" href="#equiv_isfregroupon_isequiv_precomp"><span class="id" title="definition">equiv_isfregroupon_isequiv_precomp</span></a> `{<a id="H:14" class="idref" href="#H:14"><span class="id" title="binder">Funext</span></a>} (<a id="F:15" class="idref" href="#F:15"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>) (<a id="A:16" class="idref" href="#A:16"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="i:17" class="idref" href="#i:17"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:16"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:15"><span class="id" title="variable">F</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Algebra.Groups.Group.html#IsFreeGroupOn"><span class="id" title="class">IsFreeGroupOn</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#A:16"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:15"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#i:17"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="G:18" class="idref" href="#G:18"><span class="id" title="binder">G</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<span class="id" title="keyword">fun</span> <a id="f:19" class="idref" href="#f:19"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#F:15"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#G:18"><span class="id" title="variable">G</span></a> ⇒ <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#f:19"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#i:17"><span class="id" title="variable">i</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Basics.Trunc.html#equiv_iff_hprop"><span class="id" title="definition">equiv_iff_hprop</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">intros</span> <span class="id" title="var">k</span> <span class="id" title="var">G</span>; <span class="id" title="var">rapply</span> (<a class="idref" href="HoTT.Basics.Overture.html#equiv_isequiv"><span class="id" title="projection">equiv_isequiv</span></a> (<a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#equiv_isfreegroup_rec"><span class="id" title="lemma">equiv_isfreegroup_rec</span></a> <span class="id" title="var">G</span> <span class="id" title="var">F</span> <span class="id" title="var">A</span> <span class="id" title="var">i</span>)).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">k</span> <span class="id" title="var">G</span> <span class="id" title="var">g</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">specialize</span> (<span class="id" title="var">k</span> <span class="id" title="var">G</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv'"><span class="id" title="definition">contr_equiv'</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a> (<span class="id" title="keyword">fun</span> <a id="f:22" class="idref" href="#f:22"><span class="id" title="binder">f</span></a> <a id="x:23" class="idref" href="#x:23"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_map"><span class="id" title="projection">grp_homo_map</span></a> <span class="id" title="var">F</span> <span class="id" title="var">G</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#f:20"><span class="id" title="variable">f</span></a> (<span class="id" title="var">i</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.html#x:21"><span class="id" title="variable">x</span></a>)) <span class="id" title="var">g</span>).<br/>
+&nbsp;&nbsp;{ <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_functor_sigma_id"><span class="id" title="definition">equiv_functor_sigma_id</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Forall.html#equiv_path_forall"><span class="id" title="definition">equiv_path_forall</span></a>. }<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

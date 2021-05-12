@@ -1,0 +1,802 @@
+<html>
+<head>
+<title>Projective.v</title>
+<style>
+.time {
+  background-color: #ffaaaa;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.code {
+  z-index: 0;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+}
+.code:hover {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+pre {
+  margin: 1px;
+}
+</style>
+</head>
+<body>
+<h1>Timings for Projective.v</h1>
+
+<div class="code" title="File: Projective.v
+Line: 1
+Time: 0.055s">
+<div class="time" style="width: 88.709677419355%"></div>
+<pre>Require Import Basics Types HProp HFiber HSet.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 1
+Time: 0.062s">
+<div class="time" style="width: 100%"></div>
+<pre>
+Require Import Truncations.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 2
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Require Import Modalities.Descent Modalities.Separated.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 3
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Require Import Limits.Pullback.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 4
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+
+(** * Projective types *)
+
+</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 8
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>Definition IsProjective (X : Type) : Type
+  := forall A B : Type, forall f : X -&gt; B, forall p : A -&gt; B,
+        IsSurjection p -&gt; merely (exists s : X -&gt; A, p o s == f).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 10
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** A type X is projective if and only if surjections into X merely split. *)</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 12
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>Proposition iff_isprojective_surjections_split (X : Type)
+  : IsProjective X &lt;-&gt;
+    (forall (Y : Type), forall (p : Y -&gt; X),
+          IsSurjection p -&gt; merely (exists s : X -&gt; Y, p o s == idmap)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 15
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 16
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  split.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 17
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 18
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros isprojX Y p S; unfold IsProjective in isprojX.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 18
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact (isprojX Y X idmap p S).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 19
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intro splits.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> unfold IsProjective.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intros A B f p S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 21
+Time: 0.002s">
+<div class="time" style="width: 3.2258064516129%"></div>
+<pre>
+    pose proof (splits (Pullback p f) pullback_pr2 _) as s'.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 22
+Time: 0.027s">
+<div class="time" style="width: 43.548387096774%"></div>
+<pre>
+    strip_truncations.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    destruct s' as [s E].</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 24
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+    refine (tr (pullback_pr1 o s; _)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 25
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro x.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 26
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    refine (pullback_commsq p f (s x) @ _).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 27
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply (ap f).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 28
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply E.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 29
+Time: 0.002s">
+<div class="time" style="width: 3.2258064516129%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 30
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+
+Corollary equiv_isprojective_surjections_split `{Funext} (X : Type)
+  : IsProjective X &lt;~&gt;
+    (forall (Y : Type), forall (p : Y -&gt; X),
+          IsSurjection p -&gt; merely (exists s : X -&gt; Y, p o s == idmap)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 35
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 36
+Time: 0.04s">
+<div class="time" style="width: 64.516129032258%"></div>
+<pre>
+  exact (equiv_iff_hprop_uncurried (iff_isprojective_surjections_split X)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 37
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 38
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+
+(** ** Projectivity and the axiom of choice *)
+
+(** In topos theory, an object X is said to be projective if the axiom of choice holds when making choices indexed by X. *)</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 43
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition IsProjective' (X : Type) : Type := forall P : X -&gt; Type,
+    (forall x, merely (P x)) -&gt; merely (forall x, P x).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 44
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+
+Proposition iff_isprojective_choice (X : Type)
+  : IsProjective X &lt;-&gt; IsProjective' X.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 47
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  refine (iff_compose (iff_isprojective_surjections_split X) _).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 49
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  split.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 50
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros splits P S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    specialize splits with {x : X &amp; P x} pr1.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    pose proof (splits (fst (iff_merely_issurjection P) S)) as M.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    clear S splits.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 54
+Time: 0.011s">
+<div class="time" style="width: 17.741935483871%"></div>
+<pre>
+    strip_truncations; apply tr.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    destruct M as [s p].</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 56
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro x.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact (transport _ (p x) (s x).2).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 58
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros choiceX Y p S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    unfold IsConnMap, IsConnected in S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 60
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    pose proof (fun b =&gt; (@center _ (S b))) as S'; clear S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 61
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    pose proof (choiceX (hfiber p) S') as M; clear S'.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 62
+Time: 0.018s">
+<div class="time" style="width: 29.032258064516%"></div>
+<pre>
+    strip_truncations; apply tr.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exists (fun x =&gt; (M x).1).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 64
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact (fun x =&gt; (M x).2).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 65
+Time: 0.002s">
+<div class="time" style="width: 3.2258064516129%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Proposition equiv_isprojective_choice `{Funext} (X : Type)
+  : IsProjective X &lt;~&gt; IsProjective' X.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 69
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 70
+Time: 0.035s">
+<div class="time" style="width: 56.451612903226%"></div>
+<pre>
+  exact (equiv_iff_hprop_uncurried (iff_isprojective_choice X)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 71
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 72
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Proposition isprojective_unit : IsProjective Unit.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 74
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 75
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+  apply (iff_isprojective_choice Unit).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 76
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros P S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 77
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  specialize S with tt.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 78
+Time: 0.029s">
+<div class="time" style="width: 46.774193548387%"></div>
+<pre>
+  strip_truncations; apply tr.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 79
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply Unit_ind.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 80
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  exact S.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 81
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 82
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Section AC_oo_neg1.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 84
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  (** ** Projectivity and AC_(oo,-1) (defined in HoTT book, Exercise 7.8) *)
+  (* TODO: Generalize to n, m. *)
+
+ </pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 88
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Context {AC : forall X : HSet, IsProjective' X}.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 88
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** (Exercise 7.9) Assuming AC_(oo,-1) every type merely has a projective cover. *)
+ </pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 91
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Proposition projective_cover_AC `{Univalence} (A : Type)
+    : merely (exists X:HSet, exists p : X -&gt; A, IsSurjection p).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 92
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 93
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    pose (X := Build_HSet (Tr 0 A)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 94
+Time: 0.005s">
+<div class="time" style="width: 8.0645161290323%"></div>
+<pre>
+    pose proof ((equiv_isprojective_choice X)^-1 (AC X)) as P.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 95
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+    pose proof (P A X idmap tr _) as F; clear P.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 96
+Time: 0.016s">
+<div class="time" style="width: 25.806451612903%"></div>
+<pre>
+    strip_truncations.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 97
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    destruct F as [f p].</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 98
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    refine (tr (X; (f; BuildIsSurjection f _))).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 99
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro a; unfold hfiber.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 100
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply equiv_O_sigma_O.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 101
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    refine (tr (tr a; _)).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 102
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+    rapply (equiv_path_Tr _ _)^-1%equiv.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 103
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>  (* Uses Univalence. *)
+   </pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 104
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>apply p.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 104
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 105
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** Assuming AC_(oo,-1), projective types are exactly sets. *)
+ </pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 108
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem equiv_isprojective_ishset_AC `{Univalence} (X : Type)
+    : IsProjective X &lt;~&gt; IsHSet X.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 109
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 110
+Time: 0.018s">
+<div class="time" style="width: 29.032258064516%"></div>
+<pre>
+    apply equiv_iff_hprop.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 111
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 112
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intro isprojX.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 112
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> unfold IsProjective in isprojX.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 112
+Time: 0.021s">
+<div class="time" style="width: 33.870967741935%"></div>
+<pre>
+      pose proof (projective_cover_AC X) as P; strip_truncations.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 113
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      destruct P as [P [p issurj_p]].</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 114
+Time: 0.029s">
+<div class="time" style="width: 46.774193548387%"></div>
+<pre>
+      pose proof (isprojX P X idmap p issurj_p) as S; strip_truncations.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 115
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      destruct S as [s h].</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 116
+Time: 0.002s">
+<div class="time" style="width: 3.2258064516129%"></div>
+<pre>
+      rapply (istrunc_embedding_trunc s).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 117
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      apply isembedding_isinj_hset.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 118
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      exact (isinj_section h).</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 119
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 120
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intro ishsetX.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 120
+Time: 0.005s">
+<div class="time" style="width: 8.0645161290323%"></div>
+<pre>
+      apply (equiv_isprojective_choice X)^-1.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 121
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      rapply AC.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 122
+Time: 0.001s">
+<div class="time" style="width: 1.6129032258065%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 123
+Time: 0.002s">
+<div class="time" style="width: 3.2258064516129%"></div>
+<pre>
+
+End AC_oo_neg1.</pre>
+</div>
+<div class="code" title="File: Projective.v
+Line: 126
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+</pre>
+</div>
+</body>
+</html>
+

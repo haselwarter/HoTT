@@ -1,0 +1,401 @@
+<html>
+<head>
+<title>FreeGroup.v</title>
+<style>
+.time {
+  background-color: #ffaaaa;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.code {
+  z-index: 0;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+}
+.code:hover {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+pre {
+  margin: 1px;
+}
+</style>
+</head>
+<body>
+<h1>Timings for FreeGroup.v</h1>
+
+<div class="code" title="File: FreeGroup.v
+Line: 1
+Time: 0.046s">
+<div class="time" style="width: 26.589595375723%"></div>
+<pre>Require Import Basics Types.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 1
+Time: 0.088s">
+<div class="time" style="width: 50.867052023121%"></div>
+<pre>
+Require Import Groups.Group.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 2
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+Require Import WildCat.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 3
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Free groups are defined in Group.v. In this file we prove properties of free groups. There are various constructions of free groups to choose from, all of which can be found in the FreeGroup folder. Though, this is a bit of a lie since currently there is only one full implmentation. O:-) *)
+
+(** In this file, and in the rest of the library we choose a modified version of the free group which can be found in Kraus-Altenkirch 2018 arXiv:1805.02069. This is a very simple HIT in a similar manner to the abelianization HIT used in Algebra.AbGroup.Abelianization. *)</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 7
+Time: 0.002s">
+<div class="time" style="width: 1.1560693641618%"></div>
+<pre>Require Export Algebra.Groups.FreeGroup.ListQuotient.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 7
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Properties of free groups *)
+
+(** We can state the universal property of free groups as an equivalence: (F(A) $-&gt; G) &lt;~&gt; (A -&gt; G) *)</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 11
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem equiv_isfreegroup_rec `{Funext} (G F : Group) (A : Type) (i : A -&gt; F)
+  `{IsFreeGroupOn A F i}
+  : (F $-&gt; G) &lt;~&gt; (A -&gt; G).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 13
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 14
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+  snrapply Build_Equiv.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 15
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 16
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros f.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 16
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact (f o i).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 17
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 17
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+  nrapply isequiv_contr_map.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 18
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intro f.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 19
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  unfold hfiber.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 20
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+  snrapply contr_equiv'.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: exact (FactorsThroughFreeGroup A F i G f).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 22
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rapply equiv_functor_sigma_id.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro g.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply equiv_path_forall.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 25
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 25
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+  exact _.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 26
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 27
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** The above theorem is true regardless of the implementation of free groups. This lets us state the more specific theorem about the canonical free groups. This can be read as [FreeGroup] is left adjoint to the forgetful functor [group_type]. *)</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 29
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>Theorem equiv_freegroup_rec `{Funext} (G : Group) (A : Type)
+  : (FreeGroup A $-&gt; G) &lt;~&gt; (A -&gt; G).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 31
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+  rapply equiv_isfreegroup_rec.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 32
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 33
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Global Instance ishprop_isfreegroupon `{Funext} (F : Group) (A : Type) (i : A -&gt; F)
+  : IsHProp (IsFreeGroupOn A F i).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 37
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  unfold IsFreeGroupOn.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 38
+Time: 0.007s">
+<div class="time" style="width: 4.0462427745665%"></div>
+<pre>
+  apply istrunc_forall.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 39
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 40
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Both ways of stating the universal property are equivalent. *)</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 42
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>Definition equiv_isfregroupon_isequiv_precomp `{Funext} (F : Group) (A : Type) (i : A -&gt; F)
+  : IsFreeGroupOn A F i &lt;~&gt; forall G, IsEquiv (fun f : F $-&gt; G =&gt; f o i).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 43
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 44
+Time: 0.173s">
+<div class="time" style="width: 100%"></div>
+<pre>
+  srapply equiv_iff_hprop.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: intros k G; rapply (equiv_isequiv (equiv_isfreegroup_rec G F A i)).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 46
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros k G g.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 47
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  specialize (k G).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 48
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+  snrapply contr_equiv'.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 49
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: exact (hfiber (fun f x =&gt; grp_homo_map F G f (i x)) g).</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 50
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rapply equiv_functor_sigma_id.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro y; symmetry.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply equiv_path_forall.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 53
+Time: 0.003s">
+<div class="time" style="width: 1.7341040462428%"></div>
+<pre>
+  exact _.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 54
+Time: 0.001s">
+<div class="time" style="width: 0.57803468208092%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: FreeGroup.v
+Line: 56
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+</pre>
+</div>
+</body>
+</html>
+

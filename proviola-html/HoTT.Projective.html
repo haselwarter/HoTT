@@ -1,0 +1,1334 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="coqdoc.css" type="text/css" rel="stylesheet">
+<link href="proviola.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+        var responses = new Array();
+
+        function mouseover(id, scene) {
+          set_response(get_response(id), scene);
+        };
+
+        function mouseout(scene) {
+          set_response("", scene);
+        };
+
+        function set_array() {
+          
+
+            i = 0;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 1;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 2;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 3;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 4;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 5;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 6;
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 7;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 8;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 9;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 10;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 11;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 12;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 13;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 14;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 15;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 16;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 17;
+            data = "<infomsg>IsProjective is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 18;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 19;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 20;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 21;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 22;
+            data = "1 goal (ID 31)	  	  X : Type	  ============================	  IsProjective X <->	  (forall (Y : Type) (p : Y -> X),	   IsConnMap (Tr (-1)) p -> merely {s : X -> Y & p o s == idmap})	";
+            responses[i]=data;
+          
+
+            i = 23;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 24;
+            data = "2 goals (ID 33)	  	  X : Type	  ============================	  IsProjective X ->	  forall (Y : Type) (p : Y -> X),	  IsConnMap (Tr (-1)) p ->	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}		goal 2 (ID 34) is:	 (forall (Y : Type) (p : Y -> X),	  IsConnMap (Tr (-1)) p ->	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}) -> 	 IsProjective X	";
+            responses[i]=data;
+          
+
+            i = 25;
+            data = "1 goal (ID 33)	  	  X : Type	  ============================	  IsProjective X ->	  forall (Y : Type) (p : Y -> X),	  IsConnMap (Tr (-1)) p ->	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	1 goal (ID 39)	  	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  Y : Type	  p : Y -> X	  S : IsConnMap (Tr (-1)) p	  ============================	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 26;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 34) is:	 (forall (Y : Type) (p : Y -> X),	  IsConnMap (Tr (-1)) p ->	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}) -> 	 IsProjective X	";
+            responses[i]=data;
+          
+
+            i = 27;
+            data = "1 goal (ID 34)	  	  X : Type	  ============================	  (forall (Y : Type) (p : Y -> X),	   IsConnMap (Tr (-1)) p ->	   merely {s : X -> Y & (fun x : X => p (s x)) == idmap}) -> 	  IsProjective X	1 goal (ID 41)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  ============================	  IsProjective X	";
+            responses[i]=data;
+          
+
+            i = 28;
+            data = "1 goal (ID 42)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  ============================	  forall (A B : Type) (f : X -> B) (p : A -> B),	  IsConnMap (Tr (-1)) p -> merely {s : X -> A & (fun x : X => p (s x)) == f}	";
+            responses[i]=data;
+          
+
+            i = 29;
+            data = "1 goal (ID 47)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  ============================	  merely {s : X -> A & (fun x : X => p (s x)) == f}	";
+            responses[i]=data;
+          
+
+            i = 30;
+            data = "1 goal (ID 61)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s' : merely	         {s : X -> Pullback p f & (fun x : X => pullback_pr2 (s x)) == idmap}	  ============================	  merely {s : X -> A & (fun x : X => p (s x)) == f}	";
+            responses[i]=data;
+          
+
+            i = 31;
+            data = "1 goal (ID 88)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s' : {s : X -> Pullback p f & (fun x : X => pullback_pr2 (s x)) == idmap}	  ============================	  merely {s : X -> A & (fun x : X => p (s x)) == f}	";
+            responses[i]=data;
+          
+
+            i = 32;
+            data = "1 goal (ID 173)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s : X -> Pullback p f	  E : (fun x : X => pullback_pr2 (s x)) == idmap	  ============================	  merely {s0 : X -> A & (fun x : X => p (s0 x)) == f}	";
+            responses[i]=data;
+          
+
+            i = 33;
+            data = "1 goal (ID 198)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s : X -> Pullback p f	  E : (fun x : X => pullback_pr2 (s x)) == idmap	  ============================	  (fun x : X => p (pullback_pr1 (s x))) == f	";
+            responses[i]=data;
+          
+
+            i = 34;
+            data = "1 goal (ID 200)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s : X -> Pullback p f	  E : (fun x : X => pullback_pr2 (s x)) == idmap	  x : X	  ============================	  p (pullback_pr1 (s x)) = f x	";
+            responses[i]=data;
+          
+
+            i = 35;
+            data = "1 goal (ID 210)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s : X -> Pullback p f	  E : (fun x : X => pullback_pr2 (s x)) == idmap	  x : X	  ============================	  f (pullback_pr2 (s x)) = f x	";
+            responses[i]=data;
+          
+
+            i = 36;
+            data = "1 goal (ID 215)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  A : Type	  B : Type	  f : X -> B	  p : A -> B	  S : IsConnMap (Tr (-1)) p	  s : X -> Pullback p f	  E : (fun x : X => pullback_pr2 (s x)) == idmap	  x : X	  ============================	  pullback_pr2 (s x) = x	";
+            responses[i]=data;
+          
+
+            i = 37;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 38;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 39;
+            data = "1 goal (ID 49)	  	  H : Funext	  X : Type	  ============================	  IsProjective X <~>	  (forall (Y : Type) (p : Y -> X),	   IsConnMap (Tr (-1)) p -> merely {s : X -> Y & p o s == idmap})	";
+            responses[i]=data;
+          
+
+            i = 40;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 41;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 42;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 43;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 44;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 45;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 46;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 47;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 48;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 49;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 50;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 51;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 52;
+            data = "<infomsg>IsProjective' is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 53;
+            data = "1 goal (ID 53)	  	  X : Type	  ============================	  IsProjective X <-> IsProjective' X	";
+            responses[i]=data;
+          
+
+            i = 54;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 55;
+            data = "1 goal (ID 58)	  	  X : Type	  ============================	  (forall (Y : Type) (p : Y -> X),	   IsConnMap (Tr (-1)) p ->	   merely {s : X -> Y & (fun x : X => p (s x)) == idmap}) <-> 	  IsProjective' X	";
+            responses[i]=data;
+          
+
+            i = 56;
+            data = "2 goals (ID 60)	  	  X : Type	  ============================	  (forall (Y : Type) (p : Y -> X),	   IsConnMap (Tr (-1)) p ->	   merely {s : X -> Y & (fun x : X => p (s x)) == idmap}) -> 	  IsProjective' X		goal 2 (ID 61) is:	 IsProjective' X ->	 forall (Y : Type) (p : Y -> X),	 IsConnMap (Tr (-1)) p ->	 merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 57;
+            data = "1 goal (ID 60)	  	  X : Type	  ============================	  (forall (Y : Type) (p : Y -> X),	   IsConnMap (Tr (-1)) p ->	   merely {s : X -> Y & (fun x : X => p (s x)) == idmap}) -> 	  IsProjective' X	1 goal (ID 65)	  	  X : Type	  splits : forall (Y : Type) (p : Y -> X),	           IsConnMap (Tr (-1)) p ->	           merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	  P : X -> Type	  S : forall x : X, merely (P x)	  ============================	  merely (forall x : X, P x)	";
+            responses[i]=data;
+          
+
+            i = 58;
+            data = "1 goal (ID 70)	  	  X : Type	  P : X -> Type	  splits : IsConnMap (Tr (-1)) pr1 ->	           merely {s : X -> {x : X & P x} & (fun x : X => (s x).1) == idmap}	  S : forall x : X, merely (P x)	  ============================	  merely (forall x : X, P x)	";
+            responses[i]=data;
+          
+
+            i = 59;
+            data = "1 goal (ID 75)	  	  X : Type	  P : X -> Type	  splits : IsConnMap (Tr (-1)) pr1 ->	           merely {s : X -> {x : X & P x} & (fun x : X => (s x).1) == idmap}	  S : forall x : X, merely (P x)	  M : merely {s : X -> {x : X & P x} & (fun x : X => (s x).1) == idmap}	  ============================	  merely (forall x : X, P x)	";
+            responses[i]=data;
+          
+
+            i = 60;
+            data = "1 goal (ID 76)	  	  X : Type	  P : X -> Type	  M : merely {s : X -> {x : X & P x} & (fun x : X => (s x).1) == idmap}	  ============================	  merely (forall x : X, P x)	";
+            responses[i]=data;
+          
+
+            i = 61;
+            data = "1 goal (ID 133)	  	  X : Type	  P : X -> Type	  M : {s : X -> {x : X & P x} & (fun x : X => (s x).1) == idmap}	  ============================	  forall x : X, P x	";
+            responses[i]=data;
+          
+
+            i = 62;
+            data = "1 goal (ID 138)	  	  X : Type	  P : X -> Type	  s : X -> {x : X & P x}	  p : (fun x : X => (s x).1) == idmap	  ============================	  forall x : X, P x	";
+            responses[i]=data;
+          
+
+            i = 63;
+            data = "1 goal (ID 139)	  	  X : Type	  P : X -> Type	  s : X -> {x : X & P x}	  p : (fun x : X => (s x).1) == idmap	  x : X	  ============================	  P x	";
+            responses[i]=data;
+          
+
+            i = 64;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 61) is:	 IsProjective' X ->	 forall (Y : Type) (p : Y -> X),	 IsConnMap (Tr (-1)) p ->	 merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 65;
+            data = "1 goal (ID 61)	  	  X : Type	  ============================	  IsProjective' X ->	  forall (Y : Type) (p : Y -> X),	  IsConnMap (Tr (-1)) p ->	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	1 goal (ID 150)	  	  X : Type	  choiceX : IsProjective' X	  Y : Type	  p : Y -> X	  S : IsConnMap (Tr (-1)) p	  ============================	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 66;
+            data = "1 goal (ID 151)	  	  X : Type	  choiceX : IsProjective' X	  Y : Type	  p : Y -> X	  S : forall b : X, Contr (Tr (-1) (hfiber p b))	  ============================	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 67;
+            data = "1 goal (ID 157)	  	  X : Type	  choiceX : IsProjective' X	  Y : Type	  p : Y -> X	  S' : forall b : X, Tr (-1) (hfiber p b)	  ============================	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 68;
+            data = "1 goal (ID 162)	  	  X : Type	  choiceX : IsProjective' X	  Y : Type	  p : Y -> X	  M : merely (forall x : X, hfiber p x)	  ============================	  merely {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 69;
+            data = "1 goal (ID 245)	  	  X : Type	  choiceX : IsProjective' X	  Y : Type	  p : Y -> X	  M : forall x : X, hfiber p x	  ============================	  {s : X -> Y & (fun x : X => p (s x)) == idmap}	";
+            responses[i]=data;
+          
+
+            i = 70;
+            data = "1 goal (ID 250)	  	  X : Type	  choiceX : IsProjective' X	  Y : Type	  p : Y -> X	  M : forall x : X, hfiber p x	  ============================	  (fun x : X => p (M x).1) == idmap	";
+            responses[i]=data;
+          
+
+            i = 71;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 72;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 73;
+            data = "1 goal (ID 56)	  	  H : Funext	  X : Type	  ============================	  IsProjective X <~> IsProjective' X	";
+            responses[i]=data;
+          
+
+            i = 74;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 75;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 76;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 77;
+            data = "1 goal (ID 57)	  	  ============================	  IsProjective Unit	";
+            responses[i]=data;
+          
+
+            i = 78;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 79;
+            data = "1 goal (ID 63)	  	  ============================	  IsProjective' Unit	";
+            responses[i]=data;
+          
+
+            i = 80;
+            data = "1 goal (ID 66)	  	  P : Unit -> Type	  S : forall x : Unit, merely (P x)	  ============================	  merely (forall x : Unit, P x)	";
+            responses[i]=data;
+          
+
+            i = 81;
+            data = "1 goal (ID 68)	  	  P : Unit -> Type	  S : merely (P tt)	  ============================	  merely (forall x : Unit, P x)	";
+            responses[i]=data;
+          
+
+            i = 82;
+            data = "1 goal (ID 124)	  	  P : Unit -> Type	  S : P tt	  ============================	  forall x : Unit, P x	";
+            responses[i]=data;
+          
+
+            i = 83;
+            data = "1 goal (ID 125)	  	  P : Unit -> Type	  S : P tt	  ============================	  P tt	";
+            responses[i]=data;
+          
+
+            i = 84;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 85;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 86;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 87;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 88;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 89;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 90;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 91;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 92;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 93;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 94;
+            data = "<infomsg>AC is declared</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 95;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 96;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 97;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 98;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 99;
+            data = "1 goal (ID 64)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  ============================	  merely {X : HSet & {p : X -> A & IsConnMap (Tr (-1)) p}}	";
+            responses[i]=data;
+          
+
+            i = 100;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 101;
+            data = "1 goal (ID 66)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  ============================	  merely {X0 : HSet & {p : X0 -> A & IsConnMap (Tr (-1)) p}}	";
+            responses[i]=data;
+          
+
+            i = 102;
+            data = "1 goal (ID 80)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  P : IsProjective X	  ============================	  merely {X0 : HSet & {p : X0 -> A & IsConnMap (Tr (-1)) p}}	";
+            responses[i]=data;
+          
+
+            i = 103;
+            data = "1 goal (ID 92)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  F : merely {s : X -> A & tr o s == idmap}	  ============================	  merely {X0 : HSet & {p : X0 -> A & IsConnMap (Tr (-1)) p}}	";
+            responses[i]=data;
+          
+
+            i = 104;
+            data = "1 goal (ID 119)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  F : {s : X -> A & (fun x : X => tr (s x)) == idmap}	  ============================	  merely {X0 : HSet & {p : X0 -> A & IsConnMap (Tr (-1)) p}}	";
+            responses[i]=data;
+          
+
+            i = 105;
+            data = "1 goal (ID 201)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  f : X -> A	  p : (fun x : X => tr (f x)) == idmap	  ============================	  merely {X0 : HSet & {p0 : X0 -> A & IsConnMap (Tr (-1)) p0}}	";
+            responses[i]=data;
+          
+
+            i = 106;
+            data = "1 goal (ID 215)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  f : X -> A	  p : (fun x : X => tr (f x)) == idmap	  ============================	  forall b : A, merely (hfiber f b)	";
+            responses[i]=data;
+          
+
+            i = 107;
+            data = "1 goal (ID 217)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  f : X -> A	  p : (fun x : X => tr (f x)) == idmap	  a : A	  ============================	  merely {x : X & f x = a}	";
+            responses[i]=data;
+          
+
+            i = 108;
+            data = "1 goal (ID 221)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  f : X -> A	  p : (fun x : X => tr (f x)) == idmap	  a : A	  ============================	  Tr (-1) {x : X & Tr (-1) (f x = a)}	";
+            responses[i]=data;
+          
+
+            i = 109;
+            data = "1 goal (ID 233)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  f : X -> A	  p : (fun x : X => tr (f x)) == idmap	  a : A	  ============================	  Tr (-1) (f (tr a) = a)	";
+            responses[i]=data;
+          
+
+            i = 110;
+            data = "1 goal (ID 257)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  A : Type	  X := Build_HSet (Tr 0 A) : HSet	  f : X -> A	  p : (fun x : X => tr (f x)) == idmap	  a : A	  ============================	  tr (f (tr a)) = tr a	No more goals.	";
+            responses[i]=data;
+          
+
+            i = 111;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 112;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 113;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 114;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 115;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 116;
+            data = "1 goal (ID 67)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  ============================	  IsProjective X <~> IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 117;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 118;
+            data = "2 goals (ID 232)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  ============================	  IsProjective X -> IsHSet X		goal 2 (ID 233) is:	 IsHSet X -> IsProjective X	";
+            responses[i]=data;
+          
+
+            i = 119;
+            data = "1 goal (ID 232)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  ============================	  IsProjective X -> IsHSet X	1 goal (ID 234)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : IsProjective X	  ============================	  IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 120;
+            data = "1 goal (ID 235)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  ============================	  IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 121;
+            data = "1 goal (ID 273)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  P : {X0 : HSet & {p : X0 -> X & IsConnMap (Tr (-1)) p}}	  ============================	  IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 122;
+            data = "1 goal (ID 383)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  P : HSet	  p : P -> X	  issurj_p : IsConnMap (Tr (-1)) p	  ============================	  IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 123;
+            data = "1 goal (ID 421)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  P : HSet	  p : P -> X	  issurj_p : IsConnMap (Tr (-1)) p	  S : {s : X -> P & (fun x : X => p (s x)) == idmap}	  ============================	  IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 124;
+            data = "1 goal (ID 554)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  P : HSet	  p : P -> X	  issurj_p : IsConnMap (Tr (-1)) p	  s : X -> P	  h : (fun x : X => p (s x)) == idmap	  ============================	  IsHSet X	";
+            responses[i]=data;
+          
+
+            i = 125;
+            data = "1 goal (ID 582)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  P : HSet	  p : P -> X	  issurj_p : IsConnMap (Tr (-1)) p	  s : X -> P	  h : (fun x : X => p (s x)) == idmap	  ============================	  IsEmbedding s	";
+            responses[i]=data;
+          
+
+            i = 126;
+            data = "1 goal (ID 590)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  isprojX : forall (A B : Type) (f : X -> B) (p : A -> B),	            IsConnMap (Tr (-1)) p ->	            merely {s : X -> A & (fun x : X => p (s x)) == f}	  P : HSet	  p : P -> X	  issurj_p : IsConnMap (Tr (-1)) p	  s : X -> P	  h : (fun x : X => p (s x)) == idmap	  ============================	  isinj s	";
+            responses[i]=data;
+          
+
+            i = 127;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 233) is:	 IsHSet X -> IsProjective X	";
+            responses[i]=data;
+          
+
+            i = 128;
+            data = "1 goal (ID 233)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  ============================	  IsHSet X -> IsProjective X	1 goal (ID 595)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  ishsetX : IsHSet X	  ============================	  IsProjective X	";
+            responses[i]=data;
+          
+
+            i = 129;
+            data = "1 goal (ID 608)	  	  AC : forall X : HSet, IsProjective' X	  H : Univalence	  X : Type	  ishsetX : IsHSet X	  ============================	  IsProjective' X	";
+            responses[i]=data;
+          
+
+            i = 130;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 131;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 132;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 133;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 134;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 135;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 136;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 137;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 138;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 139;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 140;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 141;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 142;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 143;
+            data = "";
+            responses[i]=data;
+          
+        };
+        
+        function get_response(id) {
+          return responses[id];
+        };
+
+        function set_response(response, scene) {
+          goalId = "goal"+scene;
+          elById = document.getElementById(goalId);
+          if(elById){ 
+            goalSpan = elById.getElementsByTagName("span")[0];
+            goalSpan.innerHTML = response.replace(/	/g , '\n');
+          }
+        };
+      </script>
+</head>
+<body onload="set_array()"><div id="page" scenenumber="0" class="doc">
+<div id="header" scenenumber="1" class="doc">
+</div>
+<div id="main" scenenumber="3" class="doc">
+<h1 class="libtitle">Library HoTT.Projective</h1>
+<div scenenumber="3" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(6, '0_3_3');
+      ">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.html#"><span class="id" title="library">Basics</span></a> <a class="idref" href="HoTT.Types.html#"><span class="id" title="library">Types</span></a> <a class="idref" href="HoTT.HProp.html#"><span class="id" title="library">HProp</span></a> <a class="idref" href="HoTT.HFiber.html#"><span class="id" title="library">HFiber</span></a> <a class="idref" href="HoTT.HSet.html#"><span class="id" title="library">HSet</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(7, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Truncations.html#"><span class="id" title="library">Truncations</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(8, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Modalities.Descent.html#"><span class="id" title="library">Modalities.Descent</span></a> <a class="idref" href="HoTT.Modalities.Separated.html#"><span class="id" title="library">Modalities.Separated</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(9, '0_3_3');
+      "><br>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Limits.Pullback.html#"><span class="id" title="library">Limits.Pullback</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_3');
+      " onmouseover="
+      mouseover(10, '0_3_3');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
+<div class="doc" scenenumber="5">
+<a id="lab581"></a><h1 class="section">Projective types</h1>
+</div>
+<div scenenumber="7" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(17, '0_3_7');
+      ">
+<br>
+<span class="id" title="keyword">Definition</span> <a id="IsProjective" class="idref" href="#IsProjective"><span class="id" title="definition">IsProjective</span></a> (<a id="X:1" class="idref" href="#X:1"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>) : <span class="id" title="keyword">Type</span><br>
+  := <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="A:2" class="idref" href="#A:2"><span class="id" title="binder">A</span></a> <a id="B:3" class="idref" href="#B:3"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="f:4" class="idref" href="#f:4"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Projective.html#X:1"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#B:3"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="p:5" class="idref" href="#p:5"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Projective.html#A:2"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#B:3"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a><br>
+        <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Projective.html#p:5"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Core.html#merely"><span class="id" title="definition">merely</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">∃</span></a> <a id="s:6" class="idref" href="#s:6"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Projective.html#X:1"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#A:2"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Projective.html#p:5"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Projective.html#s:6"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Projective.html#f:4"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(18, '0_3_7');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
+<div class="doc" scenenumber="9">
+A type X is projective if and only if surjections into X merely split. 
+</div>
+<div scenenumber="11" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(22, '0_3_11');
+      ">
+<span class="id" title="keyword">Proposition</span> <a id="iff_isprojective_surjections_split" class="idref" href="#iff_isprojective_surjections_split"><span class="id" title="lemma">iff_isprojective_surjections_split</span></a> (<a id="X:7" class="idref" href="#X:7"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>)<br>
+  : <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <a class="idref" href="HoTT.Projective.html#X:7"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">↔</span></a><br>
+    <a class="idref" href="HoTT.Basics.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="Y:8" class="idref" href="#Y:8"><span class="id" title="binder">Y</span></a> : <span class="id" title="keyword">Type</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="p:9" class="idref" href="#p:9"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Projective.html#Y:8"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#X:7"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a><br>
+          <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Projective.html#p:9"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Core.html#merely"><span class="id" title="definition">merely</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">∃</span></a> <a id="s:10" class="idref" href="#s:10"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Projective.html#X:7"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#Y:8"><span class="id" title="variable">Y</span></a><a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Projective.html#p:9"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Projective.html#s:10"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>)<a class="idref" href="HoTT.Basics.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(23, '0_3_11');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(24, '0_3_11');
+      "><br>
+  <span class="id" title="tactic">split</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(25, '0_3_11');
+      "><br>
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">isprojX</span> <span class="id" title="var">Y</span> <span class="id" title="var">p</span> <span class="id" title="var">S</span>; <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">isprojX</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(26, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">exact</span> (<span class="id" title="var">isprojX</span> <span class="id" title="var">Y</span> <span class="id" title="var">X</span> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <span class="id" title="var">p</span> <span class="id" title="var">S</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(27, '0_3_11');
+      "><br>
+  - <span class="id" title="tactic">intro</span> <span class="id" title="var">splits</span>. </span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(28, '0_3_11');
+      "><span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(29, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">intros</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span> <span class="id" title="var">p</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(30, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<span class="id" title="var">splits</span> (<a class="idref" href="HoTT.Limits.Pullback.html#Pullback"><span class="id" title="definition">Pullback</span></a> <span class="id" title="var">p</span> <span class="id" title="var">f</span>) <a class="idref" href="HoTT.Limits.Pullback.html#pullback_pr2"><span class="id" title="definition">pullback_pr2</span></a> <span class="id" title="var">_</span>) <span class="id" title="keyword">as</span> <span class="id" title="var">s'</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(31, '0_3_11');
+      "><br>
+    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(32, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">destruct</span> <span class="id" title="var">s'</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">s</span> <span class="id" title="var">E</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(33, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Limits.Pullback.html#pullback_pr1"><span class="id" title="definition">pullback_pr1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <span class="id" title="var">s</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(34, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(35, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Limits.Pullback.html#pullback_commsq"><span class="id" title="definition">pullback_commsq</span></a> <span class="id" title="var">p</span> <span class="id" title="var">f</span> (<span class="id" title="var">s</span> <span class="id" title="var">x</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(36, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(37, '0_3_11');
+      "><br>
+    <span class="id" title="tactic">apply</span> <span class="id" title="var">E</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(38, '0_3_11');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(39, '0_3_11');
+      "><br>
+<br>
+<span class="id" title="keyword">Corollary</span> <a id="equiv_isprojective_surjections_split" class="idref" href="#equiv_isprojective_surjections_split"><span class="id" title="lemma">equiv_isprojective_surjections_split</span></a> `{<a id="H:11" class="idref" href="#H:11"><span class="id" title="binder">Funext</span></a>} (<a id="X:12" class="idref" href="#X:12"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>)<br>
+  : <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <a class="idref" href="HoTT.Projective.html#X:12"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a><br>
+    <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="Y:13" class="idref" href="#Y:13"><span class="id" title="binder">Y</span></a> : <span class="id" title="keyword">Type</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="p:14" class="idref" href="#p:14"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Projective.html#Y:13"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#X:12"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a><br>
+          <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Projective.html#p:14"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Core.html#merely"><span class="id" title="definition">merely</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">∃</span></a> <a id="s:15" class="idref" href="#s:15"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Projective.html#X:12"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#Y:13"><span class="id" title="variable">Y</span></a><a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Projective.html#p:14"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Projective.html#s:15"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(40, '0_3_11');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(41, '0_3_11');
+      "><br>
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Trunc.html#equiv_iff_hprop_uncurried"><span class="id" title="definition">equiv_iff_hprop_uncurried</span></a> (<a class="idref" href="HoTT.Projective.html#iff_isprojective_surjections_split"><span class="id" title="lemma">iff_isprojective_surjections_split</span></a> <span class="id" title="var">X</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(42, '0_3_11');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(43, '0_3_11');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
+<div class="doc" scenenumber="13">
+<a id="lab582"></a><h2 class="section">Projectivity and the axiom of choice</h2>
+<div class="doc" scenenumber="4"> </div>
+
+ In topos theory, an object X is said to be projective if the axiom of choice holds when making choices indexed by X. 
+</div>
+<div scenenumber="15" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(52, '0_3_15');
+      ">
+<span class="id" title="keyword">Definition</span> <a id="IsProjective'" class="idref" href="#IsProjective'"><span class="id" title="definition">IsProjective'</span></a> (<a id="X:16" class="idref" href="#X:16"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>) : <span class="id" title="keyword">Type</span> := <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="P:17" class="idref" href="#P:17"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Projective.html#X:16"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a><br>
+    <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:18" class="idref" href="#x:18"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Truncations.Core.html#merely"><span class="id" title="definition">merely</span></a> (<a class="idref" href="HoTT.Projective.html#P:17"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Projective.html#x:18"><span class="id" title="variable">x</span></a>)<a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Core.html#merely"><span class="id" title="definition">merely</span></a> (<a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:19" class="idref" href="#x:19"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Projective.html#P:17"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Projective.html#x:19"><span class="id" title="variable">x</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(53, '0_3_15');
+      "><br>
+<br>
+<span class="id" title="keyword">Proposition</span> <a id="iff_isprojective_choice" class="idref" href="#iff_isprojective_choice"><span class="id" title="lemma">iff_isprojective_choice</span></a> (<a id="X:20" class="idref" href="#X:20"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>)<br>
+  : <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <a class="idref" href="HoTT.Projective.html#X:20"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">↔</span></a> <a class="idref" href="HoTT.Projective.html#IsProjective'"><span class="id" title="definition">IsProjective'</span></a> <a class="idref" href="HoTT.Projective.html#X:20"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(54, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(55, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Overture.html#iff_compose"><span class="id" title="instance">iff_compose</span></a> (<a class="idref" href="HoTT.Projective.html#iff_isprojective_surjections_split"><span class="id" title="lemma">iff_isprojective_surjections_split</span></a> <span class="id" title="var">X</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(56, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">split</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(57, '0_3_15');
+      "><br>
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">splits</span> <span class="id" title="var">P</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(58, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">specialize</span> <span class="id" title="var">splits</span> <span class="id" title="keyword">with</span> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a><a id="x:22" class="idref" href="#x:22"><span class="id" title="binder">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <span class="id" title="var">X</span> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <span class="id" title="var">P</span> <a class="idref" href="HoTT.Projective.html#x:21"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(59, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<span class="id" title="var">splits</span> (<a class="idref" href="HoTT.Basics.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<a class="idref" href="HoTT.Truncations.Core.html#iff_merely_issurjection"><span class="id" title="lemma">iff_merely_issurjection</span></a> <span class="id" title="var">P</span>) <span class="id" title="var">S</span>)) <span class="id" title="keyword">as</span> <span class="id" title="var">M</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(60, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">clear</span> <span class="id" title="var">S</span> <span class="id" title="var">splits</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(61, '0_3_15');
+      "><br>
+    <span class="id" title="var">strip_truncations</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(62, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">destruct</span> <span class="id" title="var">M</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">s</span> <span class="id" title="var">p</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(63, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(64, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> <span class="id" title="var">_</span> (<span class="id" title="var">p</span> <span class="id" title="var">x</span>) <a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">(</span></a><span class="id" title="var">s</span> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">).2</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(65, '0_3_15');
+      "><br>
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">choiceX</span> <span class="id" title="var">Y</span> <span class="id" title="var">p</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(66, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#IsConnMap"><span class="id" title="class">IsConnMap</span></a>, <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#IsConnected"><span class="id" title="class">IsConnected</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(67, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<span class="id" title="keyword">fun</span> <a id="b:24" class="idref" href="#b:24"><span class="id" title="binder">b</span></a> ⇒ (@<a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="method">center</span></a> <span class="id" title="var">_</span> (<span class="id" title="var">S</span> <a class="idref" href="HoTT.Projective.html#b:23"><span class="id" title="variable">b</span></a>))) <span class="id" title="keyword">as</span> <span class="id" title="var">S'</span>; <span class="id" title="tactic">clear</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(68, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<span class="id" title="var">choiceX</span> (<a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a> <span class="id" title="var">p</span>) <span class="id" title="var">S'</span>) <span class="id" title="keyword">as</span> <span class="id" title="var">M</span>; <span class="id" title="tactic">clear</span> <span class="id" title="var">S'</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(69, '0_3_15');
+      "><br>
+    <span class="id" title="var">strip_truncations</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(70, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <a id="x:26" class="idref" href="#x:26"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">(</span></a><span class="id" title="var">M</span> <a class="idref" href="HoTT.Projective.html#x:25"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">).1</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(71, '0_3_15');
+      "><br>
+    <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="x:28" class="idref" href="#x:28"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">(</span></a><span class="id" title="var">M</span> <a class="idref" href="HoTT.Projective.html#x:27"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">).2</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(72, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(73, '0_3_15');
+      "><br>
+<br>
+<span class="id" title="keyword">Proposition</span> <a id="equiv_isprojective_choice" class="idref" href="#equiv_isprojective_choice"><span class="id" title="lemma">equiv_isprojective_choice</span></a> `{<a id="H:29" class="idref" href="#H:29"><span class="id" title="binder">Funext</span></a>} (<a id="X:30" class="idref" href="#X:30"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>)<br>
+  : <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <a class="idref" href="HoTT.Projective.html#X:30"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Projective.html#IsProjective'"><span class="id" title="definition">IsProjective'</span></a> <a class="idref" href="HoTT.Projective.html#X:30"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(74, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(75, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Trunc.html#equiv_iff_hprop_uncurried"><span class="id" title="definition">equiv_iff_hprop_uncurried</span></a> (<a class="idref" href="HoTT.Projective.html#iff_isprojective_choice"><span class="id" title="lemma">iff_isprojective_choice</span></a> <span class="id" title="var">X</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(76, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(77, '0_3_15');
+      "><br>
+<br>
+<span class="id" title="keyword">Proposition</span> <a id="isprojective_unit" class="idref" href="#isprojective_unit"><span class="id" title="lemma">isprojective_unit</span></a> : <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(78, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(79, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Projective.html#iff_isprojective_choice"><span class="id" title="lemma">iff_isprojective_choice</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(80, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">P</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(81, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">specialize</span> <span class="id" title="var">S</span> <span class="id" title="keyword">with</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(82, '0_3_15');
+      "><br>
+  <span class="id" title="var">strip_truncations</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(83, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#Unit_ind"><span class="id" title="definition">Unit_ind</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(84, '0_3_15');
+      "><br>
+  <span class="id" title="tactic">exact</span> <span class="id" title="var">S</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(85, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(86, '0_3_15');
+      "><br>
+<br>
+<span class="id" title="keyword">Section</span> <a id="AC_oo_neg1" class="idref" href="#AC_oo_neg1"><span class="id" title="section">AC_oo_neg1</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(87, '0_3_15');
+      "><br>
+</span>
+</div>
+<div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
+<div class="doc" scenenumber="17">
+<a id="lab583"></a><h2 class="section">Projectivity and AC(oo,-1) (defined in HoTT book, Exercise 7.8)</h2>
+</div>
+<div scenenumber="19" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_19');
+      " onmouseover="
+      mouseover(94, '0_3_19');
+      ">
+<br>
+  <span class="id" title="keyword">Context</span> {<a id="AC:32" class="idref" href="#AC:32"><span class="id" title="binder">AC</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="X:31" class="idref" href="#X:31"><span class="id" title="binder">X</span></a> : <a class="idref" href="HoTT.Basics.Trunc.html#HSet"><span class="id" title="abbreviation">HSet</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Projective.html#IsProjective'"><span class="id" title="definition">IsProjective'</span></a> <a class="idref" href="HoTT.Projective.html#X:31"><span class="id" title="variable">X</span></a>}.</span><span class="command" onmouseout="
+      mouseout('0_3_19');
+      " onmouseover="
+      mouseover(95, '0_3_19');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
+<div class="doc" scenenumber="21">
+(Exercise 7.9) Assuming AC(oo,-1) every type merely has a projective cover. 
+</div>
+<div scenenumber="23" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(99, '0_3_23');
+      ">
+  <span class="id" title="keyword">Proposition</span> <a id="projective_cover_AC" class="idref" href="#projective_cover_AC"><span class="id" title="lemma">projective_cover_AC</span></a> `{<a id="H:33" class="idref" href="#H:33"><span class="id" title="binder">Univalence</span></a>} (<a id="A:34" class="idref" href="#A:34"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>)<br>
+    : <a class="idref" href="HoTT.Truncations.Core.html#merely"><span class="id" title="definition">merely</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">∃</span></a> <a id="X:35" class="idref" href="#X:35"><span class="id" title="binder">X</span></a>:<a class="idref" href="HoTT.Basics.Trunc.html#HSet"><span class="id" title="abbreviation">HSet</span></a><a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">∃</span></a> <a id="p:36" class="idref" href="#p:36"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Projective.html#X:35"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Projective.html#A:34"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Overture.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Projective.html#p:36"><span class="id" title="variable">p</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(100, '0_3_23');
+      "><br>
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(101, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">pose</span> (<span class="id" title="var">X</span> := <a class="idref" href="HoTT.Basics.Trunc.html#Build_HSet"><span class="id" title="abbreviation">Build_HSet</span></a> (<a class="idref" href="HoTT.Truncations.Core.html#Tr"><span class="id" title="definition">Tr</span></a> 0 <span class="id" title="var">A</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(102, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Projective.html#equiv_isprojective_choice"><span class="id" title="lemma">equiv_isprojective_choice</span></a> <span class="id" title="var">X</span><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">)^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">AC</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">)</span></a>) <span class="id" title="keyword">as</span> <span class="id" title="var">P</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(103, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<span class="id" title="var">P</span> <span class="id" title="var">A</span> <span class="id" title="var">X</span> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">_</span>) <span class="id" title="keyword">as</span> <span class="id" title="var">F</span>; <span class="id" title="tactic">clear</span> <span class="id" title="var">P</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(104, '0_3_23');
+      "><br>
+    <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(105, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">destruct</span> <span class="id" title="var">F</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">f</span> <span class="id" title="var">p</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(106, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><span class="id" title="var">X</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><span class="id" title="var">f</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Truncations.Core.html#BuildIsSurjection"><span class="id" title="definition">BuildIsSurjection</span></a> <span class="id" title="var">f</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">))</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(107, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(108, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#equiv_O_sigma_O"><span class="id" title="definition">equiv_O_sigma_O</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(109, '0_3_23');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(110, '0_3_23');
+      "><br>
+    <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#76214fa316f18d720833e810bbfd71fb"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Truncations.Core.html#equiv_path_Tr"><span class="id" title="definition">equiv_path_Tr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Equivalences.html#76214fa316f18d720833e810bbfd71fb"><span class="id" title="notation">)^-1</span></a>%<span class="id" title="var">equiv</span>.     <span class="id" title="tactic">apply</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(111, '0_3_23');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_23');
+      " onmouseover="
+      mouseover(112, '0_3_23');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_23"><pre><span></span></pre></div>
+<div class="doc" scenenumber="25">
+Assuming AC(oo,-1), projective types are exactly sets. 
+</div>
+<div scenenumber="27" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(116, '0_3_27');
+      ">
+  <span class="id" title="keyword">Theorem</span> <a id="equiv_isprojective_ishset_AC" class="idref" href="#equiv_isprojective_ishset_AC"><span class="id" title="lemma">equiv_isprojective_ishset_AC</span></a> `{<a id="H:37" class="idref" href="#H:37"><span class="id" title="binder">Univalence</span></a>} (<a id="X:38" class="idref" href="#X:38"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>)<br>
+    : <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <a class="idref" href="HoTT.Projective.html#X:38"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHSet"><span class="id" title="abbreviation">IsHSet</span></a> <a class="idref" href="HoTT.Projective.html#X:38"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(117, '0_3_27');
+      "><br>
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(118, '0_3_27');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Trunc.html#equiv_iff_hprop"><span class="id" title="definition">equiv_iff_hprop</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(119, '0_3_27');
+      "><br>
+    - <span class="id" title="tactic">intro</span> <span class="id" title="var">isprojX</span>. </span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(120, '0_3_27');
+      "><span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Projective.html#IsProjective"><span class="id" title="definition">IsProjective</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">isprojX</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(121, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<a class="idref" href="HoTT.Projective.html#projective_cover_AC"><span class="id" title="lemma">projective_cover_AC</span></a> <span class="id" title="var">X</span>) <span class="id" title="keyword">as</span> <span class="id" title="var">P</span>; <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(122, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">destruct</span> <span class="id" title="var">P</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">P</span> [<span class="id" title="var">p</span> <span class="id" title="var">issurj_p</span>]].</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(123, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">pose</span> <span class="id" title="var">proof</span> (<span class="id" title="var">isprojX</span> <span class="id" title="var">P</span> <span class="id" title="var">X</span> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <span class="id" title="var">p</span> <span class="id" title="var">issurj_p</span>) <span class="id" title="keyword">as</span> <span class="id" title="var">S</span>; <span class="id" title="var">strip_truncations</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(124, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">destruct</span> <span class="id" title="var">S</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">s</span> <span class="id" title="var">h</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(125, '0_3_27');
+      "><br>
+      <span class="id" title="var">rapply</span> (<a class="idref" href="HoTT.Modalities.Separated.html#istrunc_embedding_trunc"><span class="id" title="lemma">istrunc_embedding_trunc</span></a> <span class="id" title="var">s</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(126, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HSet.html#isembedding_isinj_hset"><span class="id" title="lemma">isembedding_isinj_hset</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(127, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HSet.html#isinj_section"><span class="id" title="definition">isinj_section</span></a> <span class="id" title="var">h</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(128, '0_3_27');
+      "><br>
+    - <span class="id" title="tactic">intro</span> <span class="id" title="var">ishsetX</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(129, '0_3_27');
+      "><br>
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Projective.html#equiv_isprojective_choice"><span class="id" title="lemma">equiv_isprojective_choice</span></a> <span class="id" title="var">X</span><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">)^-1</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(130, '0_3_27');
+      "><br>
+      <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Projective.html#AC_oo_neg1.AC"><span class="id" title="variable">AC</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(131, '0_3_27');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(132, '0_3_27');
+      "><br>
+<br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Projective.html#AC_oo_neg1"><span class="id" title="section">AC_oo_neg1</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(133, '0_3_27');
+      "><br>
+</span>
+</div>
+<div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
+</div>
+<div id="footer" scenenumber="5" class="doc">
+<hr>
+<a href="index.html">Index</a><hr>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+</div></body>
+</html>

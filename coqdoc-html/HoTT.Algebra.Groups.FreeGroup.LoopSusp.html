@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HoTT.Algebra.Groups.FreeGroup.LoopSusp</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HoTT.Algebra.Groups.FreeGroup.LoopSusp</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.html#"><span class="id" title="library">Basics</span></a> <a class="idref" href="HoTT.Types.html#"><span class="id" title="library">Types</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#"><span class="id" title="library">Groups.Group</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Pointed.html#"><span class="id" title="library">Pointed</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.WildCat.html#"><span class="id" title="library">WildCat</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Truncations.html#"><span class="id" title="library">Truncations</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Homotopy.Suspension.html#"><span class="id" title="library">Homotopy.Suspension</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#"><span class="id" title="library">Homotopy.ClassifyingSpace</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#"><span class="id" title="library">Homotopy.HomotopyGroup</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">pointed_scope</span>.<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">ClassifyingSpaceNotation</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+In this file we experiment with defining the free group on <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to be the fundamental group of the suspension of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">+</span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span>. 
+<div class="paragraph"> </div>
+
+ Note that this is NOT the definition of a free group that is used in the library. The definition in use will be exported in the file Algebra.Groups.FreeGroup. This file merely exists to serve as a demonstration that the free group *could* be defined this way.
+
+<div class="paragraph"> </div>
+
+This is not a very practical definition because we cannot even show that it is free at the time of writing, and univalence is used in a crucial way which seems overkill for a definition of freegroup. 
+<div class="paragraph"> </div>
+
+ TODO: Perhaps move this to the Pointed directory?  The free base point added to a type. This is in fact a functor and left adjoint to the forgetful functor pType to Type. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="pointify" class="idref" href="#pointify"><span class="id" title="definition">pointify</span></a> (<a id="S:1" class="idref" href="#S:1"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>) : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a> := <a class="idref" href="HoTT.Basics.Overture.html#Build_pType"><span class="id" title="constructor">Build_pType</span></a> (<a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:1"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>) (<a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+pointify is left adjoint to forgetting the basepoint in the following sense 
+</div>
+<div class="code">
+<span class="id" title="keyword">Theorem</span> <a id="equiv_pointify_map" class="idref" href="#equiv_pointify_map"><span class="id" title="lemma">equiv_pointify_map</span></a> `{<a id="H:2" class="idref" href="#H:2"><span class="id" title="binder">Funext</span></a>} (<a id="A:3" class="idref" href="#A:3"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="X:4" class="idref" href="#X:4"><span class="id" title="binder">X</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#pointify"><span class="id" title="definition">pointify</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#A:3"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#X:4"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#A:3"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#X:4"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_adjointify"><span class="id" title="definition">equiv_adjointify</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="f:6" class="idref" href="#f:6"><span class="id" title="binder">f</span></a> ⇒ <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#f:5"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a>).<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pMap"><span class="id" title="definition">Build_pMap</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|].<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<span class="id" title="var">f</span> <span class="id" title="var">a</span>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">_</span>). }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">reflexivity</span>. }<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">cbv</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">pointed_reduce</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.Core.html#equiv_path_pforall"><span class="id" title="definition">equiv_path_pforall</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">by</span> <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|[]].<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">reflexivity</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We can rephrase the universal property of the free group as a certain precomposition being an equivalence. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="isfreegroupon_isequiv_postcomp" class="idref" href="#isfreegroupon_isequiv_postcomp"><span class="id" title="definition">isfreegroupon_isequiv_postcomp</span></a> `{<a id="H:7" class="idref" href="#H:7"><span class="id" title="binder">Funext</span></a>} (<a id="F:8" class="idref" href="#F:8"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>) (<a id="A:9" class="idref" href="#A:9"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="i:10" class="idref" href="#i:10"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#A:9"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#F:8"><span class="id" title="variable">F</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="G:11" class="idref" href="#G:11"><span class="id" title="binder">G</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<span class="id" title="keyword">fun</span> <a id="f:12" class="idref" href="#f:12"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#F:8"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#G:11"><span class="id" title="variable">G</span></a> ⇒ <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#f:12"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#i:10"><span class="id" title="variable">i</span></a>)<a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.Group.html#IsFreeGroupOn"><span class="id" title="class">IsFreeGroupOn</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#A:9"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#F:8"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#i:10"><span class="id" title="variable">i</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">k</span> <span class="id" title="var">G</span> <span class="id" title="var">g</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">specialize</span> (<span class="id" title="var">k</span> <span class="id" title="var">G</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv'"><span class="id" title="definition">contr_equiv'</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a> (<span class="id" title="keyword">fun</span> <a id="f:15" class="idref" href="#f:15"><span class="id" title="binder">f</span></a> <a id="x:16" class="idref" href="#x:16"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_map"><span class="id" title="projection">grp_homo_map</span></a> <span class="id" title="var">F</span> <span class="id" title="var">G</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#f:13"><span class="id" title="variable">f</span></a> (<span class="id" title="var">i</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#x:14"><span class="id" title="variable">x</span></a>)) <span class="id" title="var">g</span>).<br/>
+&nbsp;&nbsp;{ <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_functor_sigma_id"><span class="id" title="definition">equiv_functor_sigma_id</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Forall.html#equiv_path_forall"><span class="id" title="definition">equiv_path_forall</span></a>. }<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="AssumeUnivalence" class="idref" href="#AssumeUnivalence"><span class="id" title="section">AssumeUnivalence</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Context</span> `{<a id="H:17" class="idref" href="#H:17"><span class="id" title="binder">Univalence</span></a>}.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We define the free group as the 0-truncation of the loop space of the suspension of S + 1. Or in other words the fundamental group of the suspension of S + 1. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="FreeGroup" class="idref" href="#FreeGroup"><span class="id" title="definition">FreeGroup</span></a> (<a id="S:18" class="idref" href="#S:18"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>) : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi1"><span class="id" title="definition">Pi1</span></a> (<a class="idref" href="HoTT.Pointed.pSusp.html#psusp"><span class="id" title="definition">psusp</span></a> (<a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#pointify"><span class="id" title="definition">pointify</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:18"><span class="id" title="variable">S</span></a>)).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We can directly prove that it satisfies the desired equivalence. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="keyword">Theorem</span> <a id="equiv_freegroup_rec" class="idref" href="#equiv_freegroup_rec"><span class="id" title="lemma">equiv_freegroup_rec</span></a> (<a id="S:19" class="idref" href="#S:19"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>) (<a id="G:20" class="idref" href="#G:20"><span class="id" title="binder">G</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:19"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#G:20"><span class="id" title="variable">G</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:19"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#G:20"><span class="id" title="variable">G</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a>.<br/>
+</div>
+
+<div class="doc">
+The first step is to swap the fundemantal group for the fundemantal group of a truncation. This will be important later. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">etransitivity</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Equiv.html#equiv_precompose_cat_equiv"><span class="id" title="definition">equiv_precompose_cat_equiv</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi1"><span class="id" title="definition">Pi1</span></a> (<a class="idref" href="HoTT.Pointed.pTrunc.html#pTr"><span class="id" title="definition">pTr</span></a> 1 (<a class="idref" href="HoTT.Pointed.pSusp.html#psusp"><span class="id" title="definition">psusp</span></a> (<a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#pointify"><span class="id" title="definition">pointify</span></a> <span class="id" title="var">S</span>)))).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#grp_iso_pi1_Tr"><span class="id" title="lemma">grp_iso_pi1_Tr</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<div class="doc">
+Now we use the equivalence of group homomorphisms and pointed maps between their deloopings. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">etransitivity</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#equiv_grp_homo_pmap_bg"><span class="id" title="lemma">equiv_grp_homo_pmap_bg</span></a>.<br/>
+</div>
+
+<div class="doc">
+Now since we have the classifying space of a fundamental group, we can change it into the original type. This lemma only works since the truncation is 1-truncated. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">etransitivity</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.pEquiv.html#equiv_pequiv_precompose"><span class="id" title="definition">equiv_pequiv_precompose</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">nrapply</span> <a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#pequiv_pclassifyingspace_pi1"><span class="id" title="lemma">pequiv_pclassifyingspace_pi1</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Connectedness.html#isconnected_trunc"><span class="id" title="instance">isconnected_trunc</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Homotopy.Suspension.html#isconnected_susp"><span class="id" title="instance">isconnected_susp</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>; <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">_</span>). }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<div class="doc">
+We can now get rid of the truncation by the universal property of trucation since BG is 1-truncated. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">etransitivity</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.pTrunc.html#equiv_ptr_rec"><span class="id" title="definition">equiv_ptr_rec</span></a>.<br/>
+</div>
+
+<div class="doc">
+Applying the loop-susp adjunction 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">etransitivity</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Pointed.pSusp.html#loop_susp_adjoint"><span class="id" title="definition">loop_susp_adjoint</span></a>.<br/>
+</div>
+
+<div class="doc">
+Now we use the pointed equivalence between a group and the loop space of its delooping 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">etransitivity</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.pEquiv.html#equiv_pequiv_postcompose"><span class="id" title="definition">equiv_pequiv_postcompose</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#pequiv_loops_bg_g"><span class="id" title="definition">pequiv_loops_bg_g</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<div class="doc">
+Finally we use the pointify adjunction. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#equiv_pointify_map"><span class="id" title="lemma">equiv_pointify_map</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We can define the inclusion map by using the previous equivalence on the identity group homomorphism. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="freegroup_incl" class="idref" href="#freegroup_incl"><span class="id" title="definition">freegroup_incl</span></a> (<a id="S:21" class="idref" href="#S:21"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>) : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:21"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:21"><span class="id" title="variable">S</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#equiv_freegroup_rec"><span class="id" title="lemma">equiv_freegroup_rec</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_id"><span class="id" title="definition">grp_homo_id</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+This in theory would allow us to prove that this definition of a free group is in fact a free group. We however run into trouble. We have to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_homotopic'"><span class="id" title="definition">isequiv_homotopic'</span></a></span> since we are not using the specific map that the property of being a free group uses. However showing that these two maps are homotopic seems to be nontrivial. Coq struggles a lot working with the extreme amount of data needed to be unfolded here as well. Therefore we leave this instance as aborted. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a id="isfreegroupon_freegroup" class="idref" href="#isfreegroupon_freegroup"><span class="id" title="instance">isfreegroupon_freegroup</span></a> (<a id="S:22" class="idref" href="#S:22"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Algebra.Groups.Group.html#IsFreeGroupOn"><span class="id" title="class">IsFreeGroupOn</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:22"><span class="id" title="variable">S</span></a> (<a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:22"><span class="id" title="variable">S</span></a>) (<a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#freegroup_incl"><span class="id" title="definition">freegroup_incl</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#S:22"><span class="id" title="variable">S</span></a>).<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#isfreegroupon_isequiv_postcomp"><span class="id" title="definition">isfreegroupon_isequiv_postcomp</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">G</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_homotopic'"><span class="id" title="definition">isequiv_homotopic'</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#equiv_freegroup_rec"><span class="id" title="lemma">equiv_freegroup_rec</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#equiv_freegroup_rec"><span class="id" title="lemma">equiv_freegroup_rec</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Equivalences.html#transitive_equiv"><span class="id" title="instance">transitive_equiv</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#equiv_isequiv"><span class="id" title="projection">equiv_isequiv</span></a>.<br/>
+</div>
+
+<div class="doc">
+It's not obvious how this can be finished. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="keyword">Abort</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#AssumeUnivalence"><span class="id" title="section">AssumeUnivalence</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

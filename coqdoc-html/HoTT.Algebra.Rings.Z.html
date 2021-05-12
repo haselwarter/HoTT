@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HoTT.Algebra.Rings.Z</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HoTT.Algebra.Rings.Z</h1>
+
+<div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.html#"><span class="id" title="library">Basics</span></a> <a class="idref" href="HoTT.Types.html#"><span class="id" title="library">Types</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Algebra.AbGroups.html#"><span class="id" title="library">Algebra.AbGroups</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#"><span class="id" title="library">Algebra.Rings.CRing</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Spaces.Int.html#"><span class="id" title="library">Spaces.Int</span></a> <a class="idref" href="HoTT.Spaces.Pos.html#"><span class="id" title="library">Spaces.Pos</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.WildCat.html#"><span class="id" title="library">WildCat</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+In this file we define the ring Z of integers. The underlying abelian group is already defined in Algebra.AbGroups.Z. Many of the ring axioms are proven and made opaque. Typically, everything inside IsRing can be opaque since we will only ever rewrite along them and they are hprops. This also means we don't have to be too careful with how our proofs are structured. This allows us to freely use tactics such as rewrite. It would perhaps be possible to shorten many of the proofs here, but it would probably be unneeded due to the opacicty. 
+<div class="paragraph"> </div>
+
+ The ring of integers 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="cring_Z" class="idref" href="#cring_Z"><span class="id" title="definition">cring_Z</span></a> : <a class="idref" href="HoTT.Algebra.Rings.CRing.html#CRing"><span class="id" title="record">CRing</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> (<a class="idref" href="HoTT.Algebra.Rings.CRing.html#Build_CRing"><span class="id" title="constructor">Build_CRing</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Z.html#abgroup_Z"><span class="id" title="definition">abgroup_Z</span></a>).<br/>
+&nbsp;&nbsp;6: <span class="id" title="tactic">split</span>; [<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span> | <span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span> | ].<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Multiplication 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Spaces.Int.Core.html#int_mul"><span class="id" title="definition">int_mul</span></a>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Multiplicative unit 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> 1%<span class="id" title="var">int</span>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+IsHSet 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Associativity of multiplication 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_mul_assoc"><span class="id" title="lemma">int_mul_assoc</span></a>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Left identity 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_mul_1_l"><span class="id" title="lemma">int_mul_1_l</span></a>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Right identity 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_mul_1_r"><span class="id" title="lemma">int_mul_1_r</span></a>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Commutativity of integer multiplication 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_mul_comm"><span class="id" title="lemma">int_mul_comm</span></a>.<br/>
+&nbsp;&nbsp;+ </div>
+
+<div class="doc">
+Left distributivity 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_mul_add_distr_l"><span class="id" title="lemma">int_mul_add_distr_l</span></a>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">mc_scope</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Multiplication of a ring element by an integer.  We call this a "catamorphism" which is the name of the map from an initial object. It seems to be a more common terminology in computer science. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="cring_catamorphism_fun" class="idref" href="#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> (<a id="R:1" class="idref" href="#R:1"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Algebra.Rings.CRing.html#CRing"><span class="id" title="record">CRing</span></a>) (<a id="z:2" class="idref" href="#z:2"><span class="id" title="binder">z</span></a> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a>) : <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:1"><span class="id" title="variable">R</span></a><br/>
+&nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Algebra.Rings.Z.html#z:2"><span class="id" title="variable">z</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Spaces.Int.Core.html#neg"><span class="id" title="constructor">neg</span></a> <span class="id" title="var">z</span> ⇒ <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec"><span class="id" title="definition">pos_peano_rec</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:1"><span class="id" title="variable">R</span></a> (-1) (<span class="id" title="keyword">fun</span> <a id="n:4" class="idref" href="#n:4"><span class="id" title="binder">n</span></a> <a id="nr:5" class="idref" href="#nr:5"><span class="id" title="binder">nr</span></a> ⇒ -1 <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#nr:5"><span class="id" title="variable">nr</span></a>) <a class="idref" href="HoTT.Algebra.Rings.Z.html#z:2"><span class="id" title="variable">z</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0%<span class="id" title="var">int</span> ⇒ 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">z</span> ⇒ <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec"><span class="id" title="definition">pos_peano_rec</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:1"><span class="id" title="variable">R</span></a> 1 (<span class="id" title="keyword">fun</span> <a id="n:6" class="idref" href="#n:6"><span class="id" title="binder">n</span></a> <a id="nr:7" class="idref" href="#nr:7"><span class="id" title="binder">nr</span></a> ⇒ 1 <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#nr:7"><span class="id" title="variable">nr</span></a>) <a class="idref" href="HoTT.Algebra.Rings.Z.html#z:2"><span class="id" title="variable">z</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Preservation of + 
+</div>
+<div class="code">
+<span class="id" title="keyword">Global Instance</span> <a id="issemigrouppreserving_cring_catamorphism_fun_plus" class="idref" href="#issemigrouppreserving_cring_catamorphism_fun_plus"><span class="id" title="instance">issemigrouppreserving_cring_catamorphism_fun_plus</span></a> (<a id="R:8" class="idref" href="#R:8"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Algebra.Rings.CRing.html#CRing"><span class="id" title="record">CRing</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#IsSemiGroupPreserving"><span class="id" title="class">IsSemiGroupPreserving</span></a> (<span class="id" title="var">Aop</span>:=<a class="idref" href="HoTT.Algebra.Rings.CRing.html#cring_plus"><span class="id" title="projection">cring_plus</span></a>) (<span class="id" title="var">Bop</span>:=<a class="idref" href="HoTT.Algebra.Rings.CRing.html#cring_plus"><span class="id" title="projection">cring_plus</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:8"><span class="id" title="variable">R</span></a> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:8"><span class="id" title="variable">R</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+</div>
+
+<div class="doc">
+Unfortunately, due to how we have defined things we need to seperate this out into 9 cases. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="tactic">hnf</span>. <span class="id" title="tactic">intros</span> [<span class="id" title="var">x</span>| |<span class="id" title="var">x</span>] [<span class="id" title="var">y</span>| |<span class="id" title="var">y</span>].<br/>
+</div>
+
+<div class="doc">
+Some of these cases are easy however 
+</div>
+<div class="code">
+&nbsp;&nbsp;2,5,8: <span class="id" title="var">cbn</span>; <span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_identity"><span class="id" title="definition">right_identity</span></a>.<br/>
+&nbsp;&nbsp;3,4: <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_identity"><span class="id" title="definition">left_identity</span></a>.<br/>
+</div>
+
+<div class="doc">
+This leaves us with four cases to consider  x &lt; 0 , y &lt; 0 
+</div>
+<div class="code">
+&nbsp;&nbsp;{ <span class="id" title="tactic">change</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#eb485f4cd55d957aba496ff444892245"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#neg"><span class="id" title="constructor">neg</span></a> <span class="id" title="var">x</span><a class="idref" href="HoTT.Spaces.Int.Core.html#eb485f4cd55d957aba496ff444892245"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Spaces.Int.Core.html#eb485f4cd55d957aba496ff444892245"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Spaces.Int.Core.html#eb485f4cd55d957aba496ff444892245"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#neg"><span class="id" title="constructor">neg</span></a> <span class="id" title="var">y</span><a class="idref" href="HoTT.Spaces.Int.Core.html#eb485f4cd55d957aba496ff444892245"><span class="id" title="notation">)</span></a>)%<span class="id" title="var">int</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#neg"><span class="id" title="constructor">neg</span></a> <span class="id" title="var">x</span>)<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#neg"><span class="id" title="constructor">neg</span></a> <span class="id" title="var">y</span>)<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">)</span></a>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">y</span> <span class="id" title="var">IHy</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Spec.html#pos_add_1_r"><span class="id" title="lemma">pos_add_1_r</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Spec.html#pos_add_succ_r"><span class="id" title="lemma">pos_add_succ_r</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> <span class="id" title="var">_</span> (-1)).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">f_ap</span>. }<br/>
+&nbsp;&nbsp;</div>
+
+<div class="doc">
+x &lt; 0 , y &gt; 0 
+</div>
+<div class="code">
+&nbsp;&nbsp;{ <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">revert</span> <span class="id" title="var">x</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">y</span> <span class="id" title="var">IHy</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>; <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">x</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">symmetry</span>; <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_inverse"><span class="id" title="definition">left_inverse</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_sub_succ_r"><span class="id" title="lemma">int_pos_sub_succ_r</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span>; <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#moveL_equiv_M"><span class="id" title="definition">moveL_equiv_M</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span>; <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#involutive"><span class="id" title="definition">involutive</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">x</span> <span class="id" title="var">IHx</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_sub_succ_l"><span class="id" title="lemma">int_pos_sub_succ_l</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#moveL_equiv_M"><span class="id" title="definition">moveL_equiv_M</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span>; <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#involutive"><span class="id" title="definition">involutive</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_sub_succ_succ"><span class="id" title="lemma">int_pos_sub_succ_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">IHy</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> (-1)).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> &lt;- (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> 1).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_inverse"><span class="id" title="definition">left_inverse</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">f_ap</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_identity"><span class="id" title="definition">right_identity</span></a>. }<br/>
+&nbsp;&nbsp;- <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">revert</span> <span class="id" title="var">x</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">y</span> <span class="id" title="var">IHy</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>; <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">induction</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">x</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">symmetry</span>; <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_inverse"><span class="id" title="definition">right_inverse</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> 1).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_sub_succ_l"><span class="id" title="lemma">int_pos_sub_succ_l</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span>; <span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_inverse"><span class="id" title="definition">right_inverse</span></a>, <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_identity"><span class="id" title="definition">right_identity</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">x</span> <span class="id" title="var">IHx</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_sub_succ_r"><span class="id" title="lemma">int_pos_sub_succ_r</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_inverse"><span class="id" title="definition">right_inverse</span></a> 1).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_identity"><span class="id" title="definition">left_identity</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_sub_succ_succ"><span class="id" title="lemma">int_pos_sub_succ_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">IHy</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> 1).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> &lt;- (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (-1)).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_inverse"><span class="id" title="definition">right_inverse</span></a> 1).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">f_ap</span>; <span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_identity"><span class="id" title="definition">right_identity</span></a>.<br/>
+&nbsp;&nbsp;- <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">y</span> <span class="id" title="var">IHy</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Spec.html#pos_add_1_r"><span class="id" title="lemma">pos_add_1_r</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Spec.html#pos_add_succ_r"><span class="id" title="lemma">pos_add_succ_r</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">IHy</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#simple_associativity"><span class="id" title="definition">simple_associativity</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> 1).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">reflexivity</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a id="cring_catamorphism_fun_negate" class="idref" href="#cring_catamorphism_fun_negate"><span class="id" title="lemma">cring_catamorphism_fun_negate</span></a> {<a id="R:9" class="idref" href="#R:9"><span class="id" title="binder">R</span></a>} <a id="x:10" class="idref" href="#x:10"><span class="id" title="binder">x</span></a><br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:9"><span class="id" title="variable">R</span></a> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#x:10"><span class="id" title="variable">x</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:9"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#x:10"><span class="id" title="variable">x</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> (<a class="idref" href="HoTT.Classes.theory.groups.html#preserves_negate"><span class="id" title="lemma">groups.preserves_negate</span></a> <span class="id" title="var">_</span>).<br/>
+&nbsp;&nbsp;1-6: <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#Build_IsMonoidPreserving"><span class="id" title="constructor">Build_IsMonoidPreserving</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">split</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a id="cring_catamorphism_fun_pos_mult" class="idref" href="#cring_catamorphism_fun_pos_mult"><span class="id" title="lemma">cring_catamorphism_fun_pos_mult</span></a> {<a id="R:11" class="idref" href="#R:11"><span class="id" title="binder">R</span></a>} <a id="x:12" class="idref" href="#x:12"><span class="id" title="binder">x</span></a> <a id="y:13" class="idref" href="#y:13"><span class="id" title="binder">y</span></a><br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:11"><span class="id" title="variable">R</span></a> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#x:12"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Spaces.Int.Core.html#f957f03f82d81f8d3648cb35791a36c5"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#y:13"><span class="id" title="variable">y</span></a>)%<span class="id" title="var">int</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:11"><span class="id" title="variable">R</span></a> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#x:12"><span class="id" title="variable">x</span></a>) <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:11"><span class="id" title="variable">R</span></a> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#y:13"><span class="id" title="variable">y</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">revert</span> <span class="id" title="var">y</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">x</span> <span class="id" title="var">IHx</span>] <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>; <span class="id" title="tactic">intro</span> <span class="id" title="var">y</span>.<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">symmetry</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_identity"><span class="id" title="definition">left_identity</span></a>. }<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">change</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> (<a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_succ"><span class="id" title="definition">pos_succ</span></a> <span class="id" title="var">x</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#83db3fa9f059c10cb623a122cf097cd0"><span class="id" title="notation">×</span></a> <span class="id" title="var">y</span>)%<span class="id" title="var">pos</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> (<a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_succ"><span class="id" title="definition">pos_succ</span></a> <span class="id" title="var">x</span>)) <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">y</span>)).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Spec.html#pos_mul_succ_l"><span class="id" title="lemma">pos_mul_succ_l</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#issemigrouppreserving_cring_catamorphism_fun_plus"><span class="id" title="instance">issemigrouppreserving_cring_catamorphism_fun_plus</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> (<span class="id" title="var">x</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#83db3fa9f059c10cb623a122cf097cd0"><span class="id" title="notation">×</span></a> <span class="id" title="var">y</span>)%<span class="id" title="var">pos</span>) (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">y</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">IHx</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">(</span></a>1 <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#a4d7e4771ea39b5cf663e20d42f11815"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">x</span>)<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">y</span>)).<br/>
+&nbsp;&nbsp;2: <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_dist_r"><span class="id" title="definition">rng_dist_r</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_mult_one_l"><span class="id" title="definition">rng_mult_one_l</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Preservation of * (multiplication) 
+</div>
+<div class="code">
+<span class="id" title="keyword">Global Instance</span> <a id="issemigrouppreserving_cring_catamorphism_fun_mult" class="idref" href="#issemigrouppreserving_cring_catamorphism_fun_mult"><span class="id" title="instance">issemigrouppreserving_cring_catamorphism_fun_mult</span></a> (<a id="R:14" class="idref" href="#R:14"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Algebra.Rings.CRing.html#CRing"><span class="id" title="record">CRing</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#IsSemiGroupPreserving"><span class="id" title="class">IsSemiGroupPreserving</span></a> (<span class="id" title="var">Aop</span>:=<a class="idref" href="HoTT.Algebra.Rings.CRing.html#cring_mult"><span class="id" title="projection">cring_mult</span></a>) (<span class="id" title="var">Bop</span>:=<a class="idref" href="HoTT.Algebra.Rings.CRing.html#cring_mult"><span class="id" title="projection">cring_mult</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:14"><span class="id" title="variable">R</span></a> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:14"><span class="id" title="variable">R</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">hnf</span>. <span class="id" title="tactic">intros</span> [<span class="id" title="var">x</span>| |<span class="id" title="var">x</span>] [<span class="id" title="var">y</span>| |<span class="id" title="var">y</span>].<br/>
+&nbsp;&nbsp;2,5,8: <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_mult_zero_r"><span class="id" title="definition">rng_mult_zero_r</span></a>.<br/>
+&nbsp;&nbsp;3,4: <span class="id" title="var">cbn</span>; <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> 0); <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_mult_zero_r"><span class="id" title="definition">rng_mult_zero_r</span></a>.<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">change</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> (<span class="id" title="var">x</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#83db3fa9f059c10cb623a122cf097cd0"><span class="id" title="notation">×</span></a> <span class="id" title="var">y</span>)%<span class="id" title="var">pos</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">x</span> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">)</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">)</span></a>)).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_negate"><span class="id" title="lemma">cring_catamorphism_fun_negate</span></a>, <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_pos_mult"><span class="id" title="lemma">cring_catamorphism_fun_pos_mult</span></a>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_mult_negate_negate"><span class="id" title="definition">rng_mult_negate_negate</span></a>. }<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">change</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> (<span class="id" title="var">x</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#83db3fa9f059c10cb623a122cf097cd0"><span class="id" title="notation">×</span></a> <span class="id" title="var">y</span>)%<span class="id" title="var">pos</span> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">)</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">x</span> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">)</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">y</span>)).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_negate"><span class="id" title="lemma">cring_catamorphism_fun_negate</span></a>, <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_pos_mult"><span class="id" title="lemma">cring_catamorphism_fun_pos_mult</span></a>, <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_mult_negate_l"><span class="id" title="definition">rng_mult_negate_l</span></a>. }<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">change</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> (<span class="id" title="var">x</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#83db3fa9f059c10cb623a122cf097cd0"><span class="id" title="notation">×</span></a> <span class="id" title="var">y</span>)%<span class="id" title="var">pos</span> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">)</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">x</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#970301967e3905519c12a089c065f064"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Int.Core.html#pos"><span class="id" title="constructor">pos</span></a> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">)</span></a>)).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_negate"><span class="id" title="lemma">cring_catamorphism_fun_negate</span></a>, <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_pos_mult"><span class="id" title="lemma">cring_catamorphism_fun_pos_mult</span></a>, <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_mult_negate_r"><span class="id" title="definition">rng_mult_negate_r</span></a>. }<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun_pos_mult"><span class="id" title="lemma">cring_catamorphism_fun_pos_mult</span></a>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+This is a ring homomorphism 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="rng_homo_int" class="idref" href="#rng_homo_int"><span class="id" title="definition">rng_homo_int</span></a> (<a id="R:15" class="idref" href="#R:15"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Algebra.Rings.CRing.html#CRing"><span class="id" title="record">CRing</span></a>) : <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#R:15"><span class="id" title="variable">R</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#Build_CRingHomomorphism"><span class="id" title="constructor">Build_CRingHomomorphism</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_catamorphism_fun"><span class="id" title="definition">cring_catamorphism_fun</span></a> <span class="id" title="var">R</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span>; <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The integers are the initial commutative ring 
+</div>
+<div class="code">
+<span class="id" title="keyword">Global Instance</span> <a id="isinitial_cring_Z" class="idref" href="#isinitial_cring_Z"><span class="id" title="instance">isinitial_cring_Z</span></a> : <a class="idref" href="HoTT.WildCat.Core.html#IsInitial"><span class="id" title="class">IsInitial</span></a> <a class="idref" href="HoTT.Algebra.Rings.Z.html#cring_Z"><span class="id" title="definition">cring_Z</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.WildCat.Core.html#IsInitial"><span class="id" title="class">IsInitial</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">R</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.Algebra.Rings.Z.html#rng_homo_int"><span class="id" title="definition">rng_homo_int</span></a> <span class="id" title="var">R</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">n</span>| |<span class="id" title="var">p</span>].<br/>
+&nbsp;&nbsp;+ <span class="id" title="tactic">induction</span> <span class="id" title="var">n</span> <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">cbn</span>. <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_minus_one"><span class="id" title="definition">rng_homo_minus_one</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_neg_pos_succ"><span class="id" title="lemma">int_neg_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Spaces.Int.Core.html#int_pred"><span class="id" title="definition">int_pred</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_add_comm"><span class="id" title="lemma">int_add_comm</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_plus"><span class="id" title="definition">rng_homo_plus</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_minus_one"><span class="id" title="definition">rng_homo_minus_one</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">IHn</span>.<br/>
+&nbsp;&nbsp;+ <span class="id" title="tactic">by</span> <span class="id" title="tactic">rewrite</span> 2 <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_zero"><span class="id" title="definition">rng_homo_zero</span></a>.<br/>
+&nbsp;&nbsp;+ <span class="id" title="tactic">induction</span> <span class="id" title="var">p</span> <span class="id" title="keyword">using</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_ind"><span class="id" title="definition">pos_peano_ind</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="var">cbn</span>. <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_one"><span class="id" title="definition">rng_homo_one</span></a>. }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Pos.Core.html#pos_peano_rec_beta_pos_succ"><span class="id" title="definition">pos_peano_rec_beta_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_pos_pos_succ"><span class="id" title="lemma">int_pos_pos_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Spaces.Int.Core.html#int_succ"><span class="id" title="definition">int_succ</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Int.Spec.html#int_add_comm"><span class="id" title="lemma">int_add_comm</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_plus"><span class="id" title="definition">rng_homo_plus</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_one"><span class="id" title="definition">rng_homo_one</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> <span class="id" title="var">IHp</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

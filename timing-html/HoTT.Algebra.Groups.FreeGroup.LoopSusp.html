@@ -1,0 +1,855 @@
+<html>
+<head>
+<title>LoopSusp.v</title>
+<style>
+.time {
+  background-color: #ffaaaa;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.code {
+  z-index: 0;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+}
+.code:hover {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+pre {
+  margin: 1px;
+}
+</style>
+</head>
+<body>
+<h1>Timings for LoopSusp.v</h1>
+
+<div class="code" title="File: LoopSusp.v
+Line: 1
+Time: 0.048s">
+<div class="time" style="width: 53.932584269663%"></div>
+<pre>Require Import Basics Types.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 1
+Time: 0.089s">
+<div class="time" style="width: 100%"></div>
+<pre>
+Require Import Groups.Group.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 2
+Time: 0.012s">
+<div class="time" style="width: 13.483146067416%"></div>
+<pre>
+Require Import Pointed.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 3
+Time: 0.002s">
+<div class="time" style="width: 2.247191011236%"></div>
+<pre>
+Require Import WildCat.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 4
+Time: 0.002s">
+<div class="time" style="width: 2.247191011236%"></div>
+<pre>
+Require Import Truncations.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 5
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Require Import Homotopy.Suspension.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 6
+Time: 0.037s">
+<div class="time" style="width: 41.573033707865%"></div>
+<pre>
+Require Import Homotopy.ClassifyingSpace.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 7
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Require Import Homotopy.HomotopyGroup.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 8
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Local Open Scope pointed_scope.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 10
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Import ClassifyingSpaceNotation.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 11
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** In this file we experiment with defining the free group on [A] to be the fundamental group of the suspension of [A + Unit]. *)
+
+(** Note that this is NOT the definition of a free group that is used in the library. The definition in use will be exported in the file Algebra.Groups.FreeGroup. This file merely exists to serve as a demonstration that the free group *could* be defined this way.
+
+This is not a very practical definition because we cannot even show that it is free at the time of writing, and univalence is used in a crucial way which seems overkill for a definition of freegroup. *)
+
+
+(** TODO: Perhaps move this to the Pointed directory? *)
+(** The free base point added to a type. This is in fact a functor and left adjoint to the forgetful functor pType to Type. *)</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition pointify (S : Type) : pType := Build_pType (S + Unit) (inr tt).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** pointify is left adjoint to forgetting the basepoint in the following sense *)</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem equiv_pointify_map `{Funext} (A : Type) (X : pType)
+  : (pointify A -&gt;* X) &lt;~&gt; (A -&gt; X).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 25
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+  snrapply equiv_adjointify.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 26
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+  1: exact (fun f =&gt; f o inl).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 27
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 28
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros f.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 28
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+    snrapply Build_pMap.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 29
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    {</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros [a|].</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      1: exact (f a).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 31
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      exact (point _).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 32
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 32
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    reflexivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 33
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 33
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: intro x; reflexivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 34
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros f.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 35
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  cbv.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 36
+Time: 0.006s">
+<div class="time" style="width: 6.7415730337079%"></div>
+<pre>
+  pointed_reduce.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 37
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+  rapply equiv_path_pforall.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 38
+Time: 0.003s">
+<div class="time" style="width: 3.3707865168539%"></div>
+<pre>
+  snrapply Build_pHomotopy.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 39
+Time: 0.003s">
+<div class="time" style="width: 3.3707865168539%"></div>
+<pre>
+  1: by intros [a|[]].</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 40
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+  reflexivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 41
+Time: 0.011s">
+<div class="time" style="width: 12.359550561798%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 42
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** We can rephrase the universal property of the free group as a certain precomposition being an equivalence. *)</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 44
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>Definition isfreegroupon_isequiv_postcomp `{Funext} (F : Group) (A : Type) (i : A -&gt; F)
+  : (forall G, IsEquiv (fun f : F $-&gt; G =&gt; f o i)) -&gt; IsFreeGroupOn A F i.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 46
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros k G g.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 47
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  specialize (k G).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 48
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+  snrapply contr_equiv'.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 49
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: exact (hfiber (fun f x =&gt; grp_homo_map F G f (i x)) g).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 50
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rapply equiv_functor_sigma_id.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro y; symmetry.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 52
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply equiv_path_forall.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 53
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 53
+Time: 0.005s">
+<div class="time" style="width: 5.6179775280899%"></div>
+<pre>
+  exact _.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 54
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Section AssumeUnivalence.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Context `{Univalence}.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** We define the free group as the 0-truncation of the loop space of the suspension of S + 1. Or in other words the fundamental group of the suspension of S + 1. *)
+ </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 62
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition FreeGroup (S : Type) : Group
+    := Pi1 (psusp (pointify S)).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** We can directly prove that it satisfies the desired equivalence. *)
+ </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem equiv_freegroup_rec (S : Type) (G : Group)
+    : (FreeGroup S $-&gt; G) &lt;~&gt; (S -&gt; G).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 67
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 68
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    unfold FreeGroup.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 69
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** The first step is to swap the fundemantal group for the fundemantal group of a truncation. This will be important later. *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 71
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>etransitivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 71
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    {</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 72
+Time: 0.009s">
+<div class="time" style="width: 10.112359550562%"></div>
+<pre> srapply equiv_precompose_cat_equiv.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 72
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      1: exact (Pi1 (pTr 1 (psusp (pointify S)))).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 73
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      apply grp_iso_pi1_Tr.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 74
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 74
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** Now we use the equivalence of group homomorphisms and pointed maps between their deloopings. *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 76
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>etransitivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 76
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+    1: rapply equiv_grp_homo_pmap_bg.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 77
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** Now since we have the classifying space of a fundamental group, we can change it into the original type. This lemma only works since the truncation is 1-truncated. *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 79
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>etransitivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 79
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    {</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 80
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre> rapply equiv_pequiv_precompose.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 80
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      symmetry.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 81
+Time: 0.004s">
+<div class="time" style="width: 4.4943820224719%"></div>
+<pre>
+      nrapply pequiv_pclassifyingspace_pi1.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 82
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      2: exact _.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 83
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      apply isconnected_trunc.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 84
+Time: 0.024s">
+<div class="time" style="width: 26.966292134831%"></div>
+<pre>
+      rapply isconnected_susp.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 85
+Time: 0.017s">
+<div class="time" style="width: 19.101123595506%"></div>
+<pre>
+      rapply contr_inhabited_hprop.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 86
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      apply tr; exact (point _).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 87
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 87
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** We can now get rid of the truncation by the universal property of trucation since BG is 1-truncated. *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 89
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>etransitivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 89
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    1: rapply equiv_ptr_rec.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 90
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** Applying the loop-susp adjunction *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 92
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>etransitivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 92
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>
+    1: apply loop_susp_adjoint.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 93
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** Now we use the pointed equivalence between a group and the loop space of its delooping *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 95
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>etransitivity.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 95
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    {</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 96
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre> rapply equiv_pequiv_postcompose.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 96
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      apply pequiv_loops_bg_g.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 97
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 97
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** Finally we use the pointify adjunction. *)
+   </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 99
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>apply equiv_pointify_map.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 99
+Time: 0.034s">
+<div class="time" style="width: 38.202247191011%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 100
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** We can define the inclusion map by using the previous equivalence on the identity group homomorphism. *)
+ </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 103
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition freegroup_incl (S : Type) : S -&gt; FreeGroup S.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 103
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 104
+Time: 0.003s">
+<div class="time" style="width: 3.3707865168539%"></div>
+<pre>
+    rapply equiv_freegroup_rec.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 105
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply grp_homo_id.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 106
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 107
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  (** This in theory would allow us to prove that this definition of a free group is in fact a free group. We however run into trouble. We have to use [isequiv_homotopic'] since we are not using the specific map that the property of being a free group uses. However showing that these two maps are homotopic seems to be nontrivial. Coq struggles a lot working with the extreme amount of data needed to be unfolded here as well. Therefore we leave this instance as aborted. *)
+ </pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 110
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>Global Instance isfreegroupon_freegroup (S : Type)
+    : IsFreeGroupOn S (FreeGroup S) (freegroup_incl S).</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 111
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 112
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply isfreegroupon_isequiv_postcomp.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 113
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro G.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 114
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    snrapply isequiv_homotopic'.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 115
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    1: apply equiv_freegroup_rec.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 116
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intro f.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 117
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    unfold equiv_freegroup_rec.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 118
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    unfold transitive_equiv.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 119
+Time: 0.007s">
+<div class="time" style="width: 7.8651685393258%"></div>
+<pre>
+    unfold equiv_compose.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 120
+Time: 0.005s">
+<div class="time" style="width: 5.6179775280899%"></div>
+<pre>
+    unfold equiv_isequiv.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 121
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** It's not obvious how this can be finished. *)
+  Abort.
+
+</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 124
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
+<pre>End AssumeUnivalence.</pre>
+</div>
+<div class="code" title="File: LoopSusp.v
+Line: 125
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+</pre>
+</div>
+</body>
+</html>
+

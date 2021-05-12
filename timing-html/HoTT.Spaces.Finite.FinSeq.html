@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: FinSeq.v
 Line: 1
-Time: 0.103s">
+Time: 0.105s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Basics
@@ -73,8 +73,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 18
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>Definition fsnil {A : Type} : FinSeq 0 A := Empty_rec.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
@@ -94,8 +94,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   apply path_contr.</pre>
 </div>
@@ -118,8 +118,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition fscons' {A : Type} (n : nat) (a : A) (v : FinSeq (pred n) A)
   : FinSeq n A
   := fun i =&gt;  fin_rec (fun n =&gt; FinSeq (pred n) A -&gt; A)
@@ -147,8 +147,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>Definition fshead' {A} (n : nat) : n &gt; 0 -&gt; FinSeq n A -&gt; A
   := match n with
      | 0 =&gt; fun N _ =&gt; Empty_rec N
@@ -165,8 +165,8 @@ Definition fshead {A} {n : nat} : FinSeq n.+1 A -&gt; A := fshead' n.+1 tt.</pre
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition compute_fshead' {A} n (N : n &gt; 0) (a : A) (v : FinSeq (pred n) A)
@@ -181,29 +181,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 46
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   destruct n; [elim N|].</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 47
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact (apD10 (compute_fin_rec_fin_zero _ _ _ _) v).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 48
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 
 Definition compute_fshead {A} {n} (a : A) (v : FinSeq n A)
@@ -242,8 +242,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 58
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>Definition fstail' {A} (n : nat) : FinSeq n A -&gt; FinSeq (pred n) A
   := match n with
      | 0 =&gt; fun _ =&gt; Empty_rec
@@ -268,8 +268,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition compute_fstail' {A} n (a : A) (v : FinSeq (pred n) A)
@@ -291,29 +291,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 70
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct n; [elim i|].</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   exact (apD10 (compute_fin_rec_fsucc _ _ _ _) v).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 72
-Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 73
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition compute_fstail `{Funext} {A} {n} (a : A) (v : FinSeq n A)
@@ -335,15 +335,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 78
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   apply compute_fstail'.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -360,8 +360,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 84
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma path_expand_fscons' {A : Type} (n : nat)
   (i : Fin n) (N : n &gt; 0) (v : FinSeq n A)
   : fscons' n (fshead' n N v) (fstail' n v) i = v i.</pre>
@@ -375,8 +375,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 87
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   induction i using fin_ind.</pre>
 </div>
@@ -389,8 +389,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 89
-Time: 0.027s">
-<div class="time" style="width: 26.21359223301%"></div>
+Time: 0.03s">
+<div class="time" style="width: 28.571428571429%"></div>
 <pre> apply compute_fshead.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
@@ -403,13 +403,13 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 90
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre> apply (compute_fstail' n.+1 (fshead v) (fstail v)).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 90
 Time: 0.004s">
-<div class="time" style="width: 3.8834951456311%"></div>
+<div class="time" style="width: 3.8095238095238%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -438,15 +438,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 96
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   apply path_expand_fscons'.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 97
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -464,8 +464,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 103
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition path_fscons' {A} n {a1 a2 : A} {v1 v2 : FinSeq (pred n) A}
   (p : a1 = a2) (q : forall i, v1 i = v2 i) (i : Fin n)
   : fscons' n a1 v1 i = fscons' n a2 v2 i.</pre>
@@ -479,8 +479,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 106
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   induction i using fin_ind.</pre>
 </div>
@@ -493,8 +493,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 108
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre> exact (compute_fshead _ _ @ p @ (compute_fshead _ _)^).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
@@ -506,28 +506,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre> refine (_ @ (compute_fstail' n.+1 a2 v2 i)^).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 109
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
     exact (compute_fstail' n.+1 a1 v1 i @ q i).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 110
 Time: 0.003s">
-<div class="time" style="width: 2.9126213592233%"></div>
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 111
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
 
 Definition compute_path_fscons' {A} (n : nat)
@@ -543,8 +543,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   induction i using fin_ind; unfold path_fscons'.</pre>
 </div>
@@ -558,20 +558,20 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 118
 Time: 0.004s">
-<div class="time" style="width: 3.8834951456311%"></div>
+<div class="time" style="width: 3.8095238095238%"></div>
 <pre> rewrite compute_fin_ind_fin_zero.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 118
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
     refine (ap (fun p =&gt; p @ _) (concat_p1 _) @ _).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
     apply concat_pV.</pre>
 </div>
@@ -585,34 +585,34 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 121
 Time: 0.004s">
-<div class="time" style="width: 3.8834951456311%"></div>
+<div class="time" style="width: 3.8095238095238%"></div>
 <pre> rewrite compute_fin_ind_fsucc.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 121
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
     refine (ap (fun p =&gt; p @ _) (concat_p1 _) @ _).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 122
-Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
     apply concat_pV.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 123
-Time: 0.025s">
-<div class="time" style="width: 24.271844660194%"></div>
+Time: 0.027s">
+<div class="time" style="width: 25.714285714286%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 124
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition path_fscons `{Funext} {A} {n} {a1 a2 : A} (p : a1 = a2)
@@ -636,7 +636,7 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre> apply path_fscons'.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
@@ -673,15 +673,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 132
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 133
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
 
 Lemma compute_path_fscons `{Funext} {A} {n} (a : A) (v : FinSeq n A)
@@ -696,8 +696,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 137
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (ap (path_forall _ _) _ @ eta_path_forall _ _ _).</pre>
 </div>
@@ -711,13 +711,13 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 139
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre> exact (compute_path_fscons' n.+1 a v i).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 139
 Time: 0.003s">
-<div class="time" style="width: 2.9126213592233%"></div>
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -736,7 +736,7 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 145
 Time: 0.005s">
-<div class="time" style="width: 4.8543689320388%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>Lemma path_expand_fscons_fscons' {A : Type} (n : nat)
   (N : n &gt; 0) (a : A) (v : FinSeq (pred n) A) (i : Fin n)
   : path_expand_fscons' n i N (fscons' n a v) =
@@ -751,8 +751,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 149
-Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
   induction i using fin_ind; unfold path_fscons', path_expand_fscons'.</pre>
 </div>
@@ -765,21 +765,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 151
-Time: 0.036s">
-<div class="time" style="width: 34.95145631068%"></div>
+Time: 0.038s">
+<div class="time" style="width: 36.190476190476%"></div>
 <pre> do 2 rewrite compute_fin_ind_fin_zero.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 151
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
     refine (_ @ concat_p_pp _ _ _).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 152
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
     refine (_ @ (ap (fun p =&gt; _ @ p) (concat_pV _))^).</pre>
 </div>
@@ -800,41 +800,41 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 155
 Time: 0.01s">
-<div class="time" style="width: 9.7087378640777%"></div>
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre> do 2 rewrite compute_fin_ind_fsucc.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 155
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
     refine (_ @ concat_p_pp _ _ _).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 156
 Time: 0.003s">
-<div class="time" style="width: 2.9126213592233%"></div>
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
     refine (_ @ (ap (fun p =&gt; _ @ p) (concat_pV _))^).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 157
-Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
     exact (concat_p1 _)^.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 158
-Time: 0.049s">
-<div class="time" style="width: 47.572815533981%"></div>
+Time: 0.051s">
+<div class="time" style="width: 48.571428571429%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 159
 Time: 0.003s">
-<div class="time" style="width: 2.9126213592233%"></div>
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
 
 Lemma path_expand_fscons_fscons `{Funext}
@@ -858,36 +858,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 166
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   funext i.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 167
 Time: 0.005s">
-<div class="time" style="width: 4.8543689320388%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
   pose (p := eisretr apD10 (compute_fstail' n.+1 a v)).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 168
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
   refine (_ @ (ap (fun f =&gt; _ f i) p)^).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 169
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
   exact (path_expand_fscons_fscons' n.+1 tt a v i).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 170
 Time: 0.005s">
-<div class="time" style="width: 4.8543689320388%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -904,8 +904,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 175
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>Lemma finseq_ind `{Funext} {A : Type} (P : forall n, FinSeq n A -&gt; Type)
   (z : P 0 fsnil) (s : forall n a (v : FinSeq n A), P n v -&gt; P n.+1 (fscons a v))
   {n : nat} (v : FinSeq n A)
@@ -974,7 +974,7 @@ Defined.</pre>
 <div class="code" title="File: FinSeq.v
 Line: 184
 Time: 0.001s">
-<div class="time" style="width: 0.97087378640777%"></div>
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 
 Lemma compute_finseq_ind_fsnil `{Funext} {A : Type}
@@ -991,22 +991,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 190
-Time: 0.03s">
-<div class="time" style="width: 29.126213592233%"></div>
+Time: 0.034s">
+<div class="time" style="width: 32.380952380952%"></div>
 <pre>
   exact (ap (fun x =&gt; _ x z) (hset_path2 1 (path_fsnil fsnil)))^.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 191
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.95238095238095%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 192
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
 
 Lemma compute_finseq_ind_fscons `{Funext} {A : Type}
@@ -1032,7 +1032,7 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 200
 Time: 0.005s">
-<div class="time" style="width: 4.8543689320388%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
   induction (path_expand_fscons_fscons a v)^.</pre>
 </div>
@@ -1046,28 +1046,28 @@ Time: 0s">
 <div class="code" title="File: FinSeq.v
 Line: 202
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
   set (p2 := compute_fstail a v).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 203
-Time: 0.007s">
-<div class="time" style="width: 6.7961165048544%"></div>
+Time: 0.008s">
+<div class="time" style="width: 7.6190476190476%"></div>
 <pre>
   induction p1, p2.</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 204
 Time: 0.002s">
-<div class="time" style="width: 1.9417475728155%"></div>
+<div class="time" style="width: 1.9047619047619%"></div>
 <pre>
   exact (ap (fun p =&gt; transport _ p _) (compute_path_fscons _ _)).</pre>
 </div>
 <div class="code" title="File: FinSeq.v
 Line: 205
 Time: 0.005s">
-<div class="time" style="width: 4.8543689320388%"></div>
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 Defined.</pre>
 </div>

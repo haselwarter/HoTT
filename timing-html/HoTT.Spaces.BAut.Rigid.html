@@ -36,28 +36,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Rigid.v
 Line: 1
-Time: 0.04s">
-<div class="time" style="width: 20.618556701031%"></div>
+Time: 0.041s">
+<div class="time" style="width: 20.812182741117%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 1
-Time: 0.006s">
-<div class="time" style="width: 3.0927835051546%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.5532994923858%"></div>
 <pre>
 Require Import HProp HFiber.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 2
 Time: 0.055s">
-<div class="time" style="width: 28.350515463918%"></div>
+<div class="time" style="width: 27.918781725888%"></div>
 <pre>
 Require Import Modalities.Modality Truncations.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 3
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 Require Import Spaces.BAut.</pre>
 </div>
@@ -165,13 +165,13 @@ Proof.</pre>
 <div class="code" title="File: Rigid.v
 Line: 24
 Time: 0.005s">
-<div class="time" style="width: 2.5773195876289%"></div>
+<div class="time" style="width: 2.5380710659898%"></div>
 <pre>
   refine (contr_change_center (point (BAut A))).</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 25
-Time: 0.194s">
+Time: 0.197s">
 <div class="time" style="width: 100%"></div>
 <pre>
   refine (contr_trunc_conn (Tr 0)).</pre>
@@ -179,14 +179,14 @@ Time: 0.194s">
 <div class="code" title="File: Rigid.v
 Line: 26
 Time: 0.006s">
-<div class="time" style="width: 3.0927835051546%"></div>
+<div class="time" style="width: 3.0456852791878%"></div>
 <pre>
   intros Z W; baut_reduce.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 27
 Time: 0.007s">
-<div class="time" style="width: 3.6082474226804%"></div>
+<div class="time" style="width: 3.5532994923858%"></div>
 <pre>
   refine (istrunc_equiv_istrunc (n := -1) (A &lt;~&gt; A)
                       (path_baut (point (BAut A)) (point (BAut A)))).</pre>
@@ -194,7 +194,7 @@ Time: 0.007s">
 <div class="code" title="File: Rigid.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -223,29 +223,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Rigid.v
 Line: 35
-Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
   equiv_intro ((path_baut (point (BAut A)) (point (BAut A)))^-1) f.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 36
 Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
+<div class="time" style="width: 1.5228426395939%"></div>
 <pre>
   equiv_intro ((path_baut (point (BAut A)) (point (BAut A)))^-1) g.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 37
 Time: 0.002s">
-<div class="time" style="width: 1.0309278350515%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
   apply ap10, ap, ap, path_contr.</pre>
 </div>
 <div class="code" title="File: Rigid.v
 Line: 38
 Time: 0.002s">
-<div class="time" style="width: 1.0309278350515%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -302,7 +302,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 52
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>Definition aut_homomorphism_end `{Funext} {X Y : Type}
            (M : (X -&gt; X) -&gt; (Y -&gt; Y))
            (Mid : M idmap == idmap)
@@ -319,7 +319,7 @@ Proof.</pre>
 <div class="code" title="File: Rigid.v
 Line: 57
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
   assert (MS : forall f g, g o f == idmap -&gt; (M g) o (M f) == idmap).</pre>
 </div>
@@ -450,8 +450,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Rigid.v
 Line: 69
-Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact (fun f =&gt; (Build_Equiv _ _ (M f) (ME f _))).</pre>
 </div>
@@ -483,7 +483,7 @@ Proof.</pre>
 <div class="code" title="File: Rigid.v
 Line: 77
 Time: 0.018s">
-<div class="time" style="width: 9.2783505154639%"></div>
+<div class="time" style="width: 9.1370558375634%"></div>
 <pre>
   refine (Build_Equiv _ _ (baut_prod_r X A) _).</pre>
 </div>
@@ -510,7 +510,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 80
 Time: 0.003s">
-<div class="time" style="width: 1.5463917525773%"></div>
+<div class="time" style="width: 1.5228426395939%"></div>
 <pre>
     baut_reduce.</pre>
 </div>
@@ -524,7 +524,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 82
 Time: 0.002s">
-<div class="time" style="width: 1.0309278350515%"></div>
+<div class="time" style="width: 1.0152284263959%"></div>
 <pre>
     apply path_sigma_hprop; reflexivity.</pre>
 </div>
@@ -563,8 +563,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Rigid.v
 Line: 86
-Time: 0.027s">
-<div class="time" style="width: 13.917525773196%"></div>
+Time: 0.028s">
+<div class="time" style="width: 14.213197969543%"></div>
 <pre>
     refine (isequiv_commsq
              L (ap (baut_prod_r X A))
@@ -575,7 +575,7 @@ Time: 0.027s">
 <div class="code" title="File: Rigid.v
 Line: 91
 Time: 0.042s">
-<div class="time" style="width: 21.649484536082%"></div>
+<div class="time" style="width: 21.319796954315%"></div>
 <pre>
     refine ((isconnected_elim (Tr (-1)) (A := A) _ _).1).</pre>
 </div>
@@ -609,7 +609,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 95
 Time: 0.012s">
-<div class="time" style="width: 6.1855670103093%"></div>
+<div class="time" style="width: 6.0913705583756%"></div>
 <pre>
     baut_reduce.</pre>
 </div>
@@ -637,8 +637,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Rigid.v
 Line: 100
-Time: 0.011s">
-<div class="time" style="width: 5.6701030927835%"></div>
+Time: 0.013s">
+<div class="time" style="width: 6.5989847715736%"></div>
 <pre> refine (conn_map_elim (Tr n) (unit_name a0) _ _).</pre>
 </div>
 <div class="code" title="File: Rigid.v
@@ -677,7 +677,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 103
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
       transitivity (fst (g (fst (f (x,a0)), snd (f (x,a0))))).</pre>
 </div>
@@ -783,7 +783,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 113
 Time: 0.004s">
-<div class="time" style="width: 2.0618556701031%"></div>
+<div class="time" style="width: 2.0304568527919%"></div>
 <pre>
         refine (isequiv_commsq' _ f
                   (equiv_sigma_prod0 X A) (equiv_sigma_prod0 X A) _).</pre>
@@ -884,7 +884,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 124
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
       apply moveL_equiv_M.</pre>
 </div>
@@ -919,7 +919,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 129
 Time: 0.001s">
-<div class="time" style="width: 0.51546391752577%"></div>
+<div class="time" style="width: 0.50761421319797%"></div>
 <pre>
       change ((M' g)^-1 (M f x) = x).</pre>
 </div>
@@ -939,7 +939,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 131
 Time: 0.004s">
-<div class="time" style="width: 2.0618556701031%"></div>
+<div class="time" style="width: 2.0304568527919%"></div>
 <pre>
     refine (isequiv_adjointify L M' _ _);
       intros e;
@@ -956,7 +956,7 @@ Time: 0s">
 <div class="code" title="File: Rigid.v
 Line: 136
 Time: 0.009s">
-<div class="time" style="width: 4.639175257732%"></div>
+<div class="time" style="width: 4.5685279187817%"></div>
 <pre>
 Defined.</pre>
 </div>

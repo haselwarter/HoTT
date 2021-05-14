@@ -34,7 +34,7 @@
 </div>
 
 <div class="doc">
-<a id="lab722"></a><h1 class="section">Quotient groups</h1>
+<a id="lab718"></a><h1 class="section">Quotient groups</h1>
 
 </div>
 <div class="code">
@@ -209,7 +209,7 @@ Now we have to make a choice whether to pick the left or right cosets. Due to ex
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">exact</span> <span class="id" title="var">f</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="var">cbn</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">n</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">symmetry</span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#group_moveL_M1"><span class="id" title="lemma">group_moveL_M1</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_moveL_M1"><span class="id" title="definition">grp_moveL_M1</span></a>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_inv"><span class="id" title="definition">grp_homo_inv</span></a>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_op"><span class="id" title="definition">grp_homo_op</span></a>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">h</span>; <span class="id" title="tactic">assumption</span>.<br/>

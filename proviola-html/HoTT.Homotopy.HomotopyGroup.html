@@ -458,12 +458,12 @@
           
 
             i = 88;
-            data = "1 goal (ID 721)	  	  X : pType	  z, y, x : loops X	  ============================	  sg_op (tr x) (sg_op (tr y) (tr z)) = sg_op (sg_op (tr x) (tr y)) (tr z)	1 goal (ID 807)	  	  X : pType	  z, y, x : loops X	  ============================	  x @ (y @ z) = (x @ y) @ z	";
+            data = "";
             responses[i]=data;
           
 
             i = 89;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 goals		goal 1 (ID 258) is:	 LeftIdentity sg_op mon_unit	goal 2 (ID 259) is:	 RightIdentity sg_op mon_unit	goal 3 (ID 254) is:	 LeftInverse sg_op negate mon_unit	goal 4 (ID 255) is:	 RightInverse sg_op negate mon_unit	";
+            data = "1 goal (ID 721)	  	  X : pType	  z, y, x : loops X	  ============================	  sg_op (tr x) (sg_op (tr y) (tr z)) = sg_op (sg_op (tr x) (tr y)) (tr z)	1 goal (ID 807)	  	  X : pType	  z, y, x : loops X	  ============================	  x @ (y @ z) = (x @ y) @ z	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 goals		goal 1 (ID 258) is:	 LeftIdentity sg_op mon_unit	goal 2 (ID 259) is:	 RightIdentity sg_op mon_unit	goal 3 (ID 254) is:	 LeftInverse sg_op negate mon_unit	goal 4 (ID 255) is:	 RightInverse sg_op negate mon_unit	";
             responses[i]=data;
           
 
@@ -1013,12 +1013,12 @@
           
 
             i = 199;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 200;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1363,7 +1363,7 @@
           
 
             i = 269;
-            data = "2 goals (ID 771)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  ap fst (point_eq Z)^ @	  ((ap fst (ap Z x) @ ap fst (ap Z y)) @ ap fst (point_eq Z)) =	  (ap fst (point_eq Z)^ @ (ap fst (ap Z x) @ ap fst (point_eq Z))) @	  (ap fst (point_eq Z)^ @ (ap fst (ap Z y) @ ap fst (point_eq Z)))		goal 2 (ID 797) is:	 ap snd (point_eq Z)^ @	 ((ap snd (ap Z x) @ ap snd (ap Z y)) @ ap snd (point_eq Z)) =	 (ap snd (point_eq Z)^ @ (ap snd (ap Z x) @ ap snd (point_eq Z))) @	 (ap snd (point_eq Z)^ @ (ap snd (ap Z y) @ ap snd (point_eq Z)))	";
+            data = "";
             responses[i]=data;
           
 
@@ -1373,12 +1373,12 @@
           
 
             i = 271;
-            data = "";
+            data = "2 goals (ID 771)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  ap fst (point_eq Z)^ @	  ((ap fst (ap Z x) @ ap fst (ap Z y)) @ ap fst (point_eq Z)) =	  (ap fst (point_eq Z)^ @ (ap fst (ap Z x) @ ap fst (point_eq Z))) @	  (ap fst (point_eq Z)^ @ (ap fst (ap Z y) @ ap fst (point_eq Z)))		goal 2 (ID 797) is:	 ap snd (point_eq Z)^ @	 ((ap snd (ap Z x) @ ap snd (ap Z y)) @ ap snd (point_eq Z)) =	 (ap snd (point_eq Z)^ @ (ap snd (ap Z x) @ ap snd (point_eq Z))) @	 (ap snd (point_eq Z)^ @ (ap snd (ap Z y) @ ap snd (point_eq Z)))	";
             responses[i]=data;
           
 
             i = 272;
-            data = "2 goals (ID 829)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  ((ap fst (point_eq Z)^ @ ap fst (ap Z x)) @ ap fst (ap Z y)) @	  ap fst (point_eq Z) =	  ((((ap fst (point_eq Z)^ @ ap fst (ap Z x)) @ ap fst (point_eq Z)) @	    ap fst (point_eq Z)^) @ ap fst (ap Z y)) @ ap fst (point_eq Z)		goal 2 (ID 869) is:	 ((ap snd (point_eq Z)^ @ ap snd (ap Z x)) @ ap snd (ap Z y)) @	 ap snd (point_eq Z) =	 ((((ap snd (point_eq Z)^ @ ap snd (ap Z x)) @ ap snd (point_eq Z)) @	   ap snd (point_eq Z)^) @ ap snd (ap Z y)) @ ap snd (point_eq Z)	2 goals (ID 900)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  ap fst (point_eq Z)^ @ ap fst (ap Z x) =	  ((ap fst (point_eq Z)^ @ ap fst (ap Z x)) @ ap fst (point_eq Z)) @	  ap fst (point_eq Z)^		goal 2 (ID 907) is:	 ap snd (point_eq Z)^ @ ap snd (ap Z x) =	 ((ap snd (point_eq Z)^ @ ap snd (ap Z x)) @ ap snd (point_eq Z)) @	 ap snd (point_eq Z)^	2 goals (ID 910)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  (((ap fst (point_eq Z))^ @ ap fst (ap Z x)) @ ap fst (point_eq Z)) @	  (ap fst (point_eq Z))^		goal 2 (ID 917) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 (((ap snd (point_eq Z))^ @ ap snd (ap Z x)) @ ap snd (point_eq Z)) @	 (ap snd (point_eq Z))^	2 goals (ID 927)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  ((ap fst (point_eq Z))^ @ ap fst (ap Z x)) @	  (ap fst (point_eq Z) @ (ap fst (point_eq Z))^)		goal 2 (ID 938) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 ((ap snd (point_eq Z))^ @ ap snd (ap Z x)) @	 (ap snd (point_eq Z) @ (ap snd (point_eq Z))^)	2 goals (ID 947)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  ((ap fst (point_eq Z))^ @ ap fst (ap Z x)) @ 1		goal 2 (ID 954) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 ((ap snd (point_eq Z))^ @ ap snd (ap Z x)) @ 1	2 goals (ID 961)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  (ap fst (point_eq Z))^ @ ap fst (ap Z x)		goal 2 (ID 968) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 (ap snd (point_eq Z))^ @ ap snd (ap Z x)	No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1423,7 +1423,7 @@
           
 
             i = 281;
-            data = "";
+            data = "2 goals (ID 829)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  ((ap fst (point_eq Z)^ @ ap fst (ap Z x)) @ ap fst (ap Z y)) @	  ap fst (point_eq Z) =	  ((((ap fst (point_eq Z)^ @ ap fst (ap Z x)) @ ap fst (point_eq Z)) @	    ap fst (point_eq Z)^) @ ap fst (ap Z y)) @ ap fst (point_eq Z)		goal 2 (ID 869) is:	 ((ap snd (point_eq Z)^ @ ap snd (ap Z x)) @ ap snd (ap Z y)) @	 ap snd (point_eq Z) =	 ((((ap snd (point_eq Z)^ @ ap snd (ap Z x)) @ ap snd (point_eq Z)) @	   ap snd (point_eq Z)^) @ ap snd (ap Z y)) @ ap snd (point_eq Z)	2 goals (ID 900)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  ap fst (point_eq Z)^ @ ap fst (ap Z x) =	  ((ap fst (point_eq Z)^ @ ap fst (ap Z x)) @ ap fst (point_eq Z)) @	  ap fst (point_eq Z)^		goal 2 (ID 907) is:	 ap snd (point_eq Z)^ @ ap snd (ap Z x) =	 ((ap snd (point_eq Z)^ @ ap snd (ap Z x)) @ ap snd (point_eq Z)) @	 ap snd (point_eq Z)^	2 goals (ID 910)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  (((ap fst (point_eq Z))^ @ ap fst (ap Z x)) @ ap fst (point_eq Z)) @	  (ap fst (point_eq Z))^		goal 2 (ID 917) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 (((ap snd (point_eq Z))^ @ ap snd (ap Z x)) @ ap snd (point_eq Z)) @	 (ap snd (point_eq Z))^	2 goals (ID 927)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  ((ap fst (point_eq Z))^ @ ap fst (ap Z x)) @	  (ap fst (point_eq Z) @ (ap fst (point_eq Z))^)		goal 2 (ID 938) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 ((ap snd (point_eq Z))^ @ ap snd (ap Z x)) @	 (ap snd (point_eq Z) @ (ap snd (point_eq Z))^)	2 goals (ID 947)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  ((ap fst (point_eq Z))^ @ ap fst (ap Z x)) @ 1		goal 2 (ID 954) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 ((ap snd (point_eq Z))^ @ ap snd (ap Z x)) @ 1	2 goals (ID 961)	  	  X : pType	  Y : pType	  n : nat	  y, x : loops (iterated_loops n (X * Y))	  Z := iterated_loops_prod X Y	   : iterated_loops n (X * Y) <~>* iterated_loops n X * iterated_loops n Y	  ============================	  (ap fst (point_eq Z))^ @ ap fst (ap Z x) =	  (ap fst (point_eq Z))^ @ ap fst (ap Z x)		goal 2 (ID 968) is:	 (ap snd (point_eq Z))^ @ ap snd (ap Z x) =	 (ap snd (point_eq Z))^ @ ap snd (ap Z x)	No more goals.	";
             responses[i]=data;
           
 
@@ -1518,7 +1518,7 @@
           
 
             i = 300;
-            data = "1 goal (ID 259)	  	  n : nat	  ============================	  Is0Functor (Pi n.+1)	1 goal (ID 261)	  	  n : nat	  ============================	  forall a b : pType, (a $-> b) -> Pi n.+1 a $-> Pi n.+1 b	1 goal (ID 264)	  	  n : nat	  X, Y : pType	  f : X $-> Y	  ============================	  Pi n.+1 X $-> Pi n.+1 Y	No more goals.	1 goal (ID 270)	  	  n : nat	  ============================	  Is1Functor (Pi n.+1)	3 goals (ID 272)	  	  n : nat	  ============================	  forall (a b : pType) (f g : a $-> b),	  f $== g -> fmap (Pi n.+1) f $== fmap (Pi n.+1) g		goal 2 (ID 273) is:	 forall a : pType, fmap (Pi n.+1) (Id a) $== Id (Pi n.+1 a)	goal 3 (ID 274) is:	 forall (a b c : pType) (f : a $-> b) (g : b $-> c),	 fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 272)	  	  n : nat	  ============================	  forall (a b : pType) (f g : a $-> b),	  f $== g -> fmap (Pi n.+1) f $== fmap (Pi n.+1) g	1 goal (ID 279)	  	  n : nat	  X, Y : pType	  f, g : X $-> Y	  h : f $== g	  ============================	  fmap (Pi n.+1) f $== fmap (Pi n.+1) g	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 273) is:	 forall a : pType, fmap (Pi n.+1) (Id a) $== Id (Pi n.+1 a)	goal 2 (ID 274) is:	 forall (a b c : pType) (f : a $-> b) (g : b $-> c),	 fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 273)	  	  n : nat	  ============================	  forall a : pType, fmap (Pi n.+1) (Id a) $== Id (Pi n.+1 a)	1 goal (ID 286)	  	  n : nat	  X : pType	  ============================	  fmap (Pi n.+1) (Id X) $== Id (Pi n.+1 X)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 274) is:	 forall (a b c : pType) (f : a $-> b) (g : b $-> c),	 fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 274)	  	  n : nat	  ============================	  forall (a b c : pType) (f : a $-> b) (g : b $-> c),	  fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 294)	  	  n : nat	  X, Y, Z : pType	  f : X $-> Y	  g : Y $-> Z	  h : Pi n.+1 X	  ============================	  fmap (Pi n.+1) (g $o f) h = (fmap (Pi n.+1) g $o fmap (Pi n.+1) f) h	No more goals.	1 goal (ID 287)	  	  X, Y : pType	  f : X ->* Y	  n : nat	  ============================	  pi_functor n.+1 f ==* ptr_functor 0 (iterated_loops_functor n.+1 f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1528,12 +1528,12 @@
           
 
             i = 302;
-            data = "2 goals (ID 303)	  	  X, Y : pType	  f : X ->* Y	  n : nat	  ============================	  pi_functor n.+1 f == ptr_functor 0 (iterated_loops_functor n.+1 f)		goal 2 (ID 305) is:	 ?p (point (Pi n.+1 X)) =	 dpoint_eq (pi_functor n.+1 f) @	 (dpoint_eq (ptr_functor 0 (iterated_loops_functor n.+1 f)))^	1 goal (ID 305)	  	  X, Y : pType	  f : X ->* Y	  n : nat	  ============================	  (fun x0 : Trunc 0 (point (iterated_loops n X) = point (iterated_loops n X))	   => 1) (point (Pi n.+1 X)) =	  dpoint_eq (pi_functor n.+1 f) @	  (dpoint_eq (ptr_functor 0 (iterated_loops_functor n.+1 f)))^	";
+            data = "";
             responses[i]=data;
           
 
             i = 303;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1573,7 +1573,7 @@
           
 
             i = 311;
-            data = "1 goal (ID 290)	  	  H : Univalence	  X : pType	  ============================	  GroupIsomorphism (Pi1 (pTr 1 X)) (Pi1 X)	";
+            data = "1 goal (ID 259)	  	  n : nat	  ============================	  Is0Functor (Pi n.+1)	1 goal (ID 261)	  	  n : nat	  ============================	  forall a b : pType, (a $-> b) -> Pi n.+1 a $-> Pi n.+1 b	1 goal (ID 264)	  	  n : nat	  X, Y : pType	  f : X $-> Y	  ============================	  Pi n.+1 X $-> Pi n.+1 Y	No more goals.	1 goal (ID 270)	  	  n : nat	  ============================	  Is1Functor (Pi n.+1)	3 goals (ID 272)	  	  n : nat	  ============================	  forall (a b : pType) (f g : a $-> b),	  f $== g -> fmap (Pi n.+1) f $== fmap (Pi n.+1) g		goal 2 (ID 273) is:	 forall a : pType, fmap (Pi n.+1) (Id a) $== Id (Pi n.+1 a)	goal 3 (ID 274) is:	 forall (a b c : pType) (f : a $-> b) (g : b $-> c),	 fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 272)	  	  n : nat	  ============================	  forall (a b : pType) (f g : a $-> b),	  f $== g -> fmap (Pi n.+1) f $== fmap (Pi n.+1) g	1 goal (ID 279)	  	  n : nat	  X, Y : pType	  f, g : X $-> Y	  h : f $== g	  ============================	  fmap (Pi n.+1) f $== fmap (Pi n.+1) g	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 273) is:	 forall a : pType, fmap (Pi n.+1) (Id a) $== Id (Pi n.+1 a)	goal 2 (ID 274) is:	 forall (a b c : pType) (f : a $-> b) (g : b $-> c),	 fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 273)	  	  n : nat	  ============================	  forall a : pType, fmap (Pi n.+1) (Id a) $== Id (Pi n.+1 a)	1 goal (ID 286)	  	  n : nat	  X : pType	  ============================	  fmap (Pi n.+1) (Id X) $== Id (Pi n.+1 X)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 274) is:	 forall (a b c : pType) (f : a $-> b) (g : b $-> c),	 fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 274)	  	  n : nat	  ============================	  forall (a b c : pType) (f : a $-> b) (g : b $-> c),	  fmap (Pi n.+1) (g $o f) $== fmap (Pi n.+1) g $o fmap (Pi n.+1) f	1 goal (ID 294)	  	  n : nat	  X, Y, Z : pType	  f : X $-> Y	  g : Y $-> Z	  h : Pi n.+1 X	  ============================	  fmap (Pi n.+1) (g $o f) h = (fmap (Pi n.+1) g $o fmap (Pi n.+1) f) h	No more goals.	1 goal (ID 287)	  	  X, Y : pType	  f : X ->* Y	  n : nat	  ============================	  pi_functor n.+1 f ==* ptr_functor 0 (iterated_loops_functor n.+1 f)	2 goals (ID 303)	  	  X, Y : pType	  f : X ->* Y	  n : nat	  ============================	  pi_functor n.+1 f == ptr_functor 0 (iterated_loops_functor n.+1 f)		goal 2 (ID 305) is:	 ?p (point (Pi n.+1 X)) =	 dpoint_eq (pi_functor n.+1 f) @	 (dpoint_eq (ptr_functor 0 (iterated_loops_functor n.+1 f)))^	1 goal (ID 305)	  	  X, Y : pType	  f : X ->* Y	  n : nat	  ============================	  (fun x0 : Trunc 0 (point (iterated_loops n X) = point (iterated_loops n X))	   => 1) (point (Pi n.+1 X)) =	  dpoint_eq (pi_functor n.+1 f) @	  (dpoint_eq (ptr_functor 0 (iterated_loops_functor n.+1 f)))^	No more goals.	1 goal (ID 290)	  	  H : Univalence	  X : pType	  ============================	  GroupIsomorphism (Pi1 (pTr 1 X)) (Pi1 X)	";
             responses[i]=data;
           
 

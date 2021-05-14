@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.025s">
+Time: 0.039s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.008s">
-<div class="time" style="width: 32%"></div>
+Time: 0.01s">
+<div class="time" style="width: 25.641025641026%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall Types.Paths.</pre>
 </div>
@@ -88,7 +88,7 @@ Axiom seg : zero = one.</pre>
 <div class="code" title="File: Interval.v
 Line: 15
 Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
 
 Definition interval_ind (P : interval -&gt; Type)
@@ -101,8 +101,8 @@ Definition interval_ind (P : interval -&gt; Type)
 </div>
 <div class="code" title="File: Interval.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 4%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Axiom interval_ind_beta_seg : forall (P : interval -&gt; Type)
@@ -135,8 +135,8 @@ reflexivity.
 </div>
 <div class="code" title="File: Interval.v
 Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.1282051282051%"></div>
 <pre>Definition interval_rec (P : Type) (a b : P) (p : a = b)
   : interval -&gt; P
   := interval_ind (fun _ =&gt; P) a b (transport_const _ _ @ p).</pre>
@@ -180,8 +180,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 47
-Time: 0.002s">
-<div class="time" style="width: 8%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -224,8 +224,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
   refine (transport_paths_r _ _ @ concat_1p _).</pre>
 </div>

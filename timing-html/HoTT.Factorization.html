@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 4
-Time: 0.042s">
-<div class="time" style="width: 40.384615384615%"></div>
+Time: 0.045s">
+<div class="time" style="width: 40.178571428571%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 4
-Time: 0.015s">
-<div class="time" style="width: 14.423076923077%"></div>
+Time: 0.014s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Require Import HProp Extensions PathAny.</pre>
 </div>
@@ -87,7 +87,7 @@ Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  (** It's important that these are all declared with a single [Context] command, so that the marker [@{i}] refers to the same universe level in all of them. *)
+  (** It's important that these are all declared with a single [Context] command, so that the marker [@{ctxi}] refers to the same universe level in all of them. *)
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
@@ -110,10 +110,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 19
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>Record Factorization :=
-    { intermediate : Type ;
+    { intermediate : Type@{ctxi} ;
       factor1 : A -&gt; intermediate ;
       factor2 : intermediate -&gt; B ;
       fact_factors : factor2 o factor1 == f ;
@@ -124,7 +124,7 @@ Time: 0.002s">
 <div class="code" title="File: Factorization.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
 
   Lemma issig_Factorization :
@@ -141,15 +141,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 32
-Time: 0.104s">
+Time: 0.112s">
 <div class="time" style="width: 100%"></div>
 <pre>
     issig.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 33
-Time: 0.012s">
-<div class="time" style="width: 11.538461538462%"></div>
+Time: 0.015s">
+<div class="time" style="width: 13.392857142857%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -164,8 +164,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 37
-Time: 0.005s">
-<div class="time" style="width: 4.8076923076923%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.3571428571429%"></div>
 <pre>Record PathFactorization {fact fact' : Factorization} :=
     { path_intermediate : intermediate fact &lt;~&gt; intermediate fact' ;
       path_factor1 : path_intermediate o factor1 fact == factor1 fact' ;
@@ -185,8 +185,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 46
-Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.4642857142857%"></div>
 <pre>
 
   Lemma issig_PathFactorization (fact fact' : Factorization) :
@@ -208,15 +208,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 57
-Time: 0.094s">
-<div class="time" style="width: 90.384615384615%"></div>
+Time: 0.101s">
+<div class="time" style="width: 90.178571428571%"></div>
 <pre>
     issig.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 58
 Time: 0.012s">
-<div class="time" style="width: 11.538461538462%"></div>
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -260,14 +260,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 67
-Time: 0.083s">
-<div class="time" style="width: 79.807692307692%"></div>
+Time: 0.096s">
+<div class="time" style="width: 85.714285714286%"></div>
 <pre> intros [I [f1 [f2 [ff [oc1 oc2]]]]].</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 67
-Time: 0.013s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.016s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
       exists (equiv_idmap I); cbn.</pre>
 </div>
@@ -300,43 +300,43 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 71
-Time: 0.056s">
-<div class="time" style="width: 53.846153846154%"></div>
+Time: 0.063s">
+<div class="time" style="width: 56.25%"></div>
 <pre>
     intros [I [f1 [f2 [ff [oc1 oc2]]]]].</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 72
-Time: 0.09s">
-<div class="time" style="width: 86.538461538462%"></div>
+Time: 0.109s">
+<div class="time" style="width: 97.321428571429%"></div>
 <pre>
     contr_sigsig I (equiv_idmap I); cbn.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 73
-Time: 0.051s">
-<div class="time" style="width: 49.038461538462%"></div>
+Time: 0.059s">
+<div class="time" style="width: 52.678571428571%"></div>
 <pre>
     contr_sigsig f1 (fun x:A =&gt; idpath (f1 x)); cbn.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 74
-Time: 0.039s">
-<div class="time" style="width: 37.5%"></div>
+Time: 0.054s">
+<div class="time" style="width: 48.214285714286%"></div>
 <pre>
     contr_sigsig f2 (fun x:I =&gt; idpath (f2 x)); cbn.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 75
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.6785714285714%"></div>
 <pre>
     refine (contr_equiv' {ff' : f2 o f1 == f &amp; ff == ff'} _).</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 76
-Time: 0.009s">
-<div class="time" style="width: 8.6538461538462%"></div>
+Time: 0.011s">
+<div class="time" style="width: 9.8214285714286%"></div>
 <pre>
     symmetry; srefine (equiv_functor_sigma' (equiv_sigma_contr _) _).</pre>
 </div>
@@ -355,8 +355,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 78
-Time: 0.024s">
-<div class="time" style="width: 23.076923076923%"></div>
+Time: 0.008s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
       srefine (@istrunc_sigma _ _ _ _ _); [ | intros a];
         apply contr_inhabited_hprop; try exact _; assumption.</pre>
@@ -370,14 +370,14 @@ Time: 0s">
 <div class="code" title="File: Factorization.v
 Line: 80
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>
     intros [ff' [oc1' oc2']]; cbn.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (equiv_functor_forall' (equiv_idmap _) _); intros a.</pre>
 </div>
@@ -391,14 +391,14 @@ Time: 0s">
 <div class="code" title="File: Factorization.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     apply equiv_concat_l; symmetry; apply concat_1p.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 84
-Time: 0.053s">
-<div class="time" style="width: 50.961538461538%"></div>
+Time: 0.057s">
+<div class="time" style="width: 50.892857142857%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -414,8 +414,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 89
-Time: 0.031s">
-<div class="time" style="width: 29.807692307692%"></div>
+Time: 0.034s">
+<div class="time" style="width: 30.357142857143%"></div>
 <pre>
 
 End Factorization.</pre>
@@ -461,8 +461,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 100
-Time: 0.005s">
-<div class="time" style="width: 4.8076923076923%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.3571428571429%"></div>
 <pre>Record FactorizationSystem@{i j k} :=
   { class1 : forall {X Y : Type@{i}}, (X -&gt; Y) -&gt; Type@{j} ;
     ishprop_class1 : forall {X Y : Type@{i}} (g:X-&gt;Y), IsHProp (class1 g) ;
@@ -475,11 +475,11 @@ Time: 0.005s">
     class2_compose : forall {X Y Z : Type@{i}} (g:X-&gt;Y) (h:Y-&gt;Z),
                        class2 g -&gt; class2 h -&gt; class2 (h o g) ;
     (** Morally, the uniqueness of factorizations says that [Factorization class1 class2 f] is contractible.  However, in practice we always *prove* that by way of [path_factorization], and we frequently want to *use* the components of a [PathFactorization] as well.  Thus, as data we store the canonical factorization and a [PathFactorization] between any two such, and prove in a moment that this implies contractibility of the space of factorizations. *)
-    factor : forall {X Y : Type@{i}} (f:X-&gt;Y), Factorization@{i i} (@class1) (@class2) f ;
+    factor : forall {X Y : Type@{i}} (f:X-&gt;Y), Factorization@{i} (@class1) (@class2) f ;
     path_factor : forall {X Y : Type@{i}} (f:X-&gt;Y)
-                         (fact : Factorization@{i i} (@class1) (@class2) f)
-                         (fact' : Factorization@{i i} (@class1) (@class2) f),
-                    PathFactorization@{i i i} fact fact'
+                         (fact : Factorization@{i} (@class1) (@class2) f)
+                         (fact' : Factorization@{i} (@class1) (@class2) f),
+                    PathFactorization@{i} fact fact'
   }.</pre>
 </div>
 <div class="code" title="File: Factorization.v
@@ -496,18 +496,102 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Section FactSys.</pre>
+(** The type of factorizations is, as promised, contractible. *)</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-
-  Context `{Univalence} (factsys : FactorizationSystem).</pre>
+<pre>Theorem contr_factor `{Univalence} (factsys : FactorizationSystem)
+        {X Y : Type} (f : X -&gt; Y)
+  : Contr (Factorization (@class1 factsys) (@class2 factsys) f).</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 123
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 124
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply contr_inhabited_hprop.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 125
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 126
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply hprop_allpath.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 126
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intros fact fact'.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 127
+Time: 0.008s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+    apply path_factorization; try exact _.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 128
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply path_factor.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 129
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 130
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply factor.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 130
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Section FactSys.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 133
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Context (factsys : FactorizationSystem).</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -516,7 +600,7 @@ Time: 0s">
     := @Build_Factorization (@class1 factsys) (@class2 factsys) X Y.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 126
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -525,103 +609,19 @@ Time: 0s">
     := @Build_PathFactorization (@class1 factsys) (@class2 factsys) X Y.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 129
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-  (** The type of factorizations is, as promised, contractible. *)
- </pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 132
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Theorem contr_factor {X Y} (f : X -&gt; Y)
-  : Contr (Factorization (@class1 factsys) (@class2 factsys) f).</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 133
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 134
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    apply contr_inhabited_hprop.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 135
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    -</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply hprop_allpath.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-      intros fact fact'.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 137
-Time: 0.007s">
-<div class="time" style="width: 6.7307692307692%"></div>
-<pre>
-      apply path_factorization; try exact _.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 138
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-      apply path_factor.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 139
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    -</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 140
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply factor.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 140
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Factorization.v
 Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  (** It follows that the left class is right-cancellable and the right class is left-cancellable. *)
+  (** The left class is right-cancellable and the right class is left-cancellable. *)
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Definition cancelR_class1 {X Y Z} (f : X -&gt; Y) (g : Y -&gt; Z)
+<pre>Definition cancelR_class1 `{Funext} {X Y Z} (f : X -&gt; Y) (g : Y -&gt; Z)
   : class1 factsys f -&gt; class1 factsys (g o f) -&gt; class1 factsys g.</pre>
 </div>
 <div class="code" title="File: Factorization.v
@@ -648,15 +648,15 @@ Time: 0s">
 <div class="code" title="File: Factorization.v
 Line: 148
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     pose (fact  := Build_Factorization' (g o f) Z (g o f) (idmap)
                      (fun x =&gt; 1) c1gf (class2_isequiv factsys idmap)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 150
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     pose (fact' := Build_Factorization' (g o f) I (g1 o f) g2
                      (fun x =&gt; gf (f x))
@@ -664,10 +664,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 153
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.6785714285714%"></div>
 <pre>
-    destruct (path_factor factsys (g o f) fact fact')
+    destruct (path_factor factsys (g o f) fact' fact)
              as [q q1 q2 qf]; simpl in *.</pre>
 </div>
 <div class="code" title="File: Factorization.v
@@ -686,119 +686,117 @@ Time: 0s">
 </div>
 <div class="code" title="File: Factorization.v
 Line: 157
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    refine (transport (class1 factsys) (path_arrow q^-1 g2 _)
-                      (class1_isequiv factsys q^-1)).</pre>
+    apply class1_isequiv.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 158
+Time: 0.001s">
+<div class="time" style="width: 0.89285714285714%"></div>
+<pre>
+    apply (isequiv_homotopic _ (fun i =&gt; (q2 i)^)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 159
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    unfold pointwise_paths; equiv_intro q x.</pre>
+  Defined.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    exact (eissect q x @ q2 x).</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 161
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 162
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
 
-  Definition cancelL_class2 {X Y Z} (f : X -&gt; Y) (g : Y -&gt; Z)
+  Definition cancelL_class2 `{Funext} {X Y Z} (f : X -&gt; Y) (g : Y -&gt; Z)
   : class2 factsys g -&gt; class2 factsys (g o f) -&gt; class2 factsys f.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 165
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 166
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros c2g c2gf.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 167
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 165
+Time: 0.001s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     destruct (factor factsys f) as [I f1 f2 ff c1f1 c2f2].</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 168
+Line: 166
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     pose (fact  := Build_Factorization' (g o f) X (idmap) (g o f)
                      (fun x =&gt; 1) (class1_isequiv factsys idmap) c2gf).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 170
+Line: 168
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     pose (fact' := Build_Factorization' (g o f) I f1 (g o f2)
                      (fun x =&gt; ap g (ff x))
                      c1f1 (class2_compose factsys f2 g c2f2 c2g)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 173
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Line: 171
+Time: 0.003s">
+<div class="time" style="width: 2.6785714285714%"></div>
 <pre>
     destruct (path_factor factsys (g o f) fact fact')
              as [q q1 q2 qf]; simpl in *.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 175
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (transport (class2 factsys) (path_arrow _ _ ff) _).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 176
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (class2_compose factsys f1 f2 _ c2f2).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 177
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Line: 175
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    exact (transport (class2 factsys) (path_arrow q f1 q1)
-                     (class2_isequiv factsys q)).</pre>
+    apply class2_isequiv.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 179
+Line: 176
+Time: 0.004s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+    apply (isequiv_homotopic _ q1).</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 177
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 180
+Line: 178
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -807,15 +805,15 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 183
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Universe ctxi.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 183
+Line: 181
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
   Context {A B X Y : Type@{ctxi}}
           (i : A -&gt; B) (c1i : class1 factsys i)
@@ -823,7 +821,7 @@ Time: 0.001s">
           (f : A -&gt; X) (g : B -&gt; Y) (h : p o f == g o i).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 187
+Line: 185
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -832,34 +830,34 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 190
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Let C  : Type         := intermediate (factor factsys f).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 190
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let f1 : A -&gt; C       := factor1      (factor factsys f).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 191
+Line: 189
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let f2 : C -&gt; X       := factor2      (factor factsys f).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 192
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let ff : f2 o f1 == f := fact_factors (factor factsys f).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 193
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -868,34 +866,34 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 196
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Let D  : Type         := intermediate (factor factsys g).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 196
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let g1 : B -&gt; D       := factor1      (factor factsys g).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 197
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let g2 : D -&gt; Y       := factor2      (factor factsys g).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 198
+Line: 196
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Let gf : g2 o g1 == g := fact_factors (factor factsys g).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 199
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -904,9 +902,9 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 202
+Line: 200
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>Let fact  : Factorization (@class1 factsys) (@class2 factsys) (p o f)
             := Build_Factorization' (p o f) C f1 (p o f2)
                  (fun a =&gt; ap p (ff a))
@@ -916,9 +914,9 @@ Time: 0.002s">
                                  c2p).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 208
+Line: 206
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>
   Let fact' : Factorization (@class1 factsys) (@class2 factsys) (p o f)
             := Build_Factorization' (p o f) D (g1 o i) g2
@@ -928,7 +926,7 @@ Time: 0.002s">
                  (inclass2 (factor factsys g)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 214
+Line: 212
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -937,30 +935,30 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 217
-Time: 0.009s">
-<div class="time" style="width: 8.6538461538462%"></div>
+Line: 215
+Time: 0.001s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>Let q  : C &lt;~&gt; D          := path_intermediate
                                  (path_factor factsys (p o f) fact fact').</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 218
+Line: 216
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>
   Let q1 : q o f1 == g1 o i := path_factor1
                                  (path_factor factsys (p o f) fact fact').</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 220
+Line: 218
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>
   Let q2 : p o f2 == g2 o q := path_factor2
                                  (path_factor factsys (p o f) fact fact').</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 222
+Line: 220
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -969,14 +967,14 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 225
+Line: 223
 Time: 0.005s">
-<div class="time" style="width: 4.8076923076923%"></div>
+<div class="time" style="width: 4.4642857142857%"></div>
 <pre>Definition lift_factsys : B -&gt; X
     := f2 o q^-1 o g1.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 226
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -985,74 +983,74 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 229
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition lift_factsys_tri1 : lift_factsys o i == f.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 229
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 230
+Line: 228
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros x.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 231
+Line: 229
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     refine (ap (f2 o q^-1) (q1 x)^ @ _).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 232
+Line: 230
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     transitivity (f2 (f1 x)).</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 231
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 232
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply ap, eissect.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 232
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 233
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply ff.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 233
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 234
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply ap, eissect.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 234
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 235
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply ff.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 235
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 236
+Line: 234
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1060,68 +1058,68 @@ Time: 0s">
   Definition lift_factsys_tri2 : p o lift_factsys == g.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 238
+Line: 236
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 239
+Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros x.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 240
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 238
+Time: 0.015s">
+<div class="time" style="width: 13.392857142857%"></div>
 <pre>
     refine (q2 _ @ _).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 241
+Line: 239
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     transitivity (g2 (g1 x)).</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 240
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 241
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply ap, eisretr.</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 241
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Factorization.v
+Line: 242
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply gf.</pre>
 </div>
 <div class="code" title="File: Factorization.v
 Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 243
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply ap, eisretr.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 243
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 244
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply gf.</pre>
-</div>
-<div class="code" title="File: Factorization.v
-Line: 244
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 245
+Line: 243
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1130,35 +1128,35 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 248
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition lift_factsys_square (x : A)
   : ap p (lift_factsys_tri1 x)^ @ lift_factsys_tri2 (i x) = h x.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 249
+Line: 247
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 250
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     unfold lift_factsys_tri1, lift_factsys_tri2.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 251
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Open Scope long_path_scope.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 252
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1166,35 +1164,35 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 254
+Line: 252
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>pose (r := path_fact_factors (path_factor factsys (p o f) fact fact') x
             : q2 (f1 x) @ ap g2 (q1 x) @ (gf (i x) @ (h x)^) = ap p (ff x)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 255
+Line: 253
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     rewrite concat_p_pp in r.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 256
+Line: 254
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     apply moveL_pM, moveR_Vp in r.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 257
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (_ @ r); clear r.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 258
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1202,27 +1200,27 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 260
-Time: 0.018s">
-<div class="time" style="width: 17.307692307692%"></div>
+Line: 258
+Time: 0.019s">
+<div class="time" style="width: 16.964285714286%"></div>
 <pre>repeat rewrite inv_pp; repeat rewrite ap_pp; rewrite ap_V.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 260
-Time: 0.022s">
-<div class="time" style="width: 21.153846153846%"></div>
+Line: 258
+Time: 0.017s">
+<div class="time" style="width: 15.178571428571%"></div>
 <pre>
     repeat rewrite concat_pp_p; apply whiskerL.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 261
-Time: 0.023s">
-<div class="time" style="width: 22.115384615385%"></div>
+Line: 259
+Time: 0.017s">
+<div class="time" style="width: 15.178571428571%"></div>
 <pre>
     repeat rewrite concat_p_pp; apply whiskerR.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 262
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1230,13 +1228,13 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 264
-Time: 0.007s">
-<div class="time" style="width: 6.7307692307692%"></div>
+Line: 262
+Time: 0.009s">
+<div class="time" style="width: 8.0357142857143%"></div>
 <pre>rewrite (ap_compose q^-1 f2), &lt;- ap_pp, &lt;- inv_pp.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 264
+Line: 262
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1244,34 +1242,34 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 266
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>unfold lift_factsys.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 266
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Line: 264
+Time: 0.01s">
+<div class="time" style="width: 8.9285714285714%"></div>
 <pre>
     rewrite &lt;- ap_pp.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 267
+Line: 265
 Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+<div class="time" style="width: 2.6785714285714%"></div>
 <pre>
     rewrite &lt;- ap_V, &lt;- ap_compose.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 268
+Line: 266
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>
     rewrite (concat_Ap q2).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 269
+Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1279,13 +1277,13 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 271
+Line: 269
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>rewrite concat_pp_p; apply whiskerL.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 271
+Line: 269
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1293,27 +1291,27 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 273
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Line: 271
+Time: 0.002s">
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 273
+Line: 271
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     rewrite &lt;- ap_pp.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 274
+Line: 272
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 275
+Line: 273
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1321,20 +1319,20 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 277
-Time: 0.004s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 275
+Time: 0.005s">
+<div class="time" style="width: 4.4642857142857%"></div>
 <pre>rewrite inv_pp, ap_pp, ap_V.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 277
+Line: 275
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     rewrite &lt;- eisadj.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 278
+Line: 276
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1342,40 +1340,40 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 280
+Line: 278
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>rewrite concat_pp_p; apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 280
-Time: 0.004s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 278
+Time: 0.005s">
+<div class="time" style="width: 4.4642857142857%"></div>
 <pre>
     rewrite &lt;- ap_V, inv_V, &lt;- ap_compose.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 281
+Line: 279
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exact (concat_A1p (eisretr q) (q1 x)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 282
+Line: 280
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Close Scope long_path_scope.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 283
+Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre></pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 283
+Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1412,28 +1410,28 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 314
+Line: 312
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Close Scope long_path_scope.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 314
-Time: 0.033s">
-<div class="time" style="width: 31.730769230769%"></div>
+Line: 312
+Time: 0.036s">
+<div class="time" style="width: 32.142857142857%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 315
-Time: 0.004s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Line: 313
+Time: 0.003s">
+<div class="time" style="width: 2.6785714285714%"></div>
 <pre>
 
 End FactSys.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 317
+Line: 315
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1441,14 +1439,14 @@ Time: 0s">
 Section FactsysExtensions.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 319
+Line: 317
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Context {factsys : FactorizationSystem} {ua : Univalence}.</pre>
+  Context {factsys : FactorizationSystem}.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 320
+Line: 318
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1457,7 +1455,7 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 323
+Line: 321
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition extension_factsys {A B : Type}
@@ -1467,14 +1465,14 @@ Time: 0s">
   : ExtensionAlong f P d.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 327
+Line: 325
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 328
+Line: 326
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1483,7 +1481,7 @@ Time: 0s">
                             (fun a =&gt; 1)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 331
+Line: 329
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1492,23 +1490,23 @@ Time: 0s">
                             (fun a =&gt; 1)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 334
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 332
+Time: 0.001s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     exists (fun a =&gt; (e2 a) # (e a).2).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 335
+Line: 333
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros a.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 336
+Line: 334
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     pose (e1 := lift_factsys_tri1 factsys f c1f pr1 c2P
                             (fun a =&gt; (f a ; d a)) idmap
@@ -1516,9 +1514,9 @@ Time: 0.001s">
                 : e (f a) = (f a ; d a)).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 340
-Time: 0.005s">
-<div class="time" style="width: 4.8076923076923%"></div>
+Line: 338
+Time: 0.014s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
     pose (e3 := moveL_M1 _ _ (((ap_V _ _)^ @@ 1)
                 @ lift_factsys_square factsys f c1f pr1 c2P
@@ -1527,36 +1525,36 @@ Time: 0.005s">
                 : e2 (f a) = pr1_path e1).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 345
+Line: 343
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
     refine (ap (fun p =&gt; transport P p (e (f a)).2) e3 @ _).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 346
+Line: 344
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exact (pr2_path e1).</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 347
-Time: 0.006s">
-<div class="time" style="width: 5.7692307692308%"></div>
+Line: 345
+Time: 0.007s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 348
+Line: 346
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7857142857143%"></div>
 <pre>
 
 End FactsysExtensions.</pre>
 </div>
 <div class="code" title="File: Factorization.v
-Line: 351
+Line: 349
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

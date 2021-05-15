@@ -558,12 +558,12 @@
           
 
             i = 108;
-            data = "";
+            data = "1 goal (ID 746)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  B'' : Type	  A'' : Type	  f'', g'' : B'' -> A''	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B''	  k' : A' -> A''	  p' : k' o f' == f'' o h'	  q' : k' o g' == g'' o h'	  b : B	  ============================	  (ap (functor_coeq h' k' p' q') (ap coeq (p b)) @	   ((ap coeq (p' (h b)) @ cglue (h' (h b))) @ ap coeq (q' (h b))^)) @	  ap (functor_coeq h' k' p' q') (ap coeq (q b)^) =	  ((ap coeq (ap k' (p b)) @ ap coeq (p' (h b))) @ cglue (h' (h b))) @	  ap coeq (ap k' (q b) @ q' (h b))^	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 goal (ID 746)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  B'' : Type	  A'' : Type	  f'', g'' : B'' -> A''	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B''	  k' : A' -> A''	  p' : k' o f' == f'' o h'	  q' : k' o g' == g'' o h'	  b : B	  ============================	  (ap (functor_coeq h' k' p' q') (ap coeq (p b)) @	   ((ap coeq (p' (h b)) @ cglue (h' (h b))) @ ap coeq (q' (h b))^)) @	  ap (functor_coeq h' k' p' q') (ap coeq (q b)^) =	  ((ap coeq (ap k' (p b)) @ ap coeq (p' (h b))) @ cglue (h' (h b))) @	  ap coeq (ap k' (q b) @ q' (h b))^	1 goal (ID 766)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  B'' : Type	  A'' : Type	  f'', g'' : B'' -> A''	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B''	  k' : A' -> A''	  p' : k' o f' == f'' o h'	  q' : k' o g' == g'' o h'	  b : B	  ============================	  (ap (fun x : A' => functor_coeq h' k' p' q' (coeq x)) (p b) @	   ((ap coeq (p' (h b)) @ cglue (h' (h b))) @ ap coeq (q' (h b))^)) @	  ap (fun x : A' => functor_coeq h' k' p' q' (coeq x)) (q b)^ =	  ((ap (fun x : A' => coeq (k' x)) (p b) @ ap coeq (p' (h b))) @	   cglue (h' (h b))) @ ap coeq (ap k' (q b) @ q' (h b))^	";
+            data = "1 goal (ID 766)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  B'' : Type	  A'' : Type	  f'', g'' : B'' -> A''	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B''	  k' : A' -> A''	  p' : k' o f' == f'' o h'	  q' : k' o g' == g'' o h'	  b : B	  ============================	  (ap (fun x : A' => functor_coeq h' k' p' q' (coeq x)) (p b) @	   ((ap coeq (p' (h b)) @ cglue (h' (h b))) @ ap coeq (q' (h b))^)) @	  ap (fun x : A' => functor_coeq h' k' p' q' (coeq x)) (q b)^ =	  ((ap (fun x : A' => coeq (k' x)) (p b) @ ap coeq (p' (h b))) @	   cglue (h' (h b))) @ ap coeq (ap k' (q b) @ q' (h b))^	";
             responses[i]=data;
           
 
@@ -1991,7 +1991,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab454"></a><h1 class="section">Homotopy coequalizers</h1>
+<a id="lab462"></a><h1 class="section">Homotopy coequalizers</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -2025,7 +2025,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab455"></a><h2 class="section">Definition</h2>
+<a id="lab463"></a><h2 class="section">Definition</h2>
 </div>
 <div scenenumber="11" class="code">
 <span class="command" onmouseout="
@@ -2208,7 +2208,7 @@ Use <span class="inlinecode"><span class="id" title="tactic">eapply</span></span
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a id="lab456"></a><h2 class="section">Universal property</h2>
+<a id="lab464"></a><h2 class="section">Universal property</h2>
 </div>
 <div scenenumber="19" class="code">
 <span class="command" onmouseout="
@@ -2338,7 +2338,7 @@ Use <span class="inlinecode"><span class="id" title="tactic">eapply</span></span
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a id="lab457"></a><h2 class="section">Functoriality</h2>
+<a id="lab465"></a><h2 class="section">Functoriality</h2>
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="
@@ -2926,7 +2926,7 @@ The two proofs are identical modulo replacing <span class="inlinecode"><a class=
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a id="lab458"></a><h2 class="section">A double recursion principle</h2>
+<a id="lab466"></a><h2 class="section">A double recursion principle</h2>
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
@@ -3178,7 +3178,7 @@ TODO: <span class="inlinecode"><span class="id" title="var">Coeq_rec2_beta_cglue
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<a id="lab459"></a><h2 class="section">A double induction principle</h2>
+<a id="lab467"></a><h2 class="section">A double induction principle</h2>
 </div>
 <div scenenumber="39" class="code">
 <span class="command" onmouseout="
@@ -3483,7 +3483,7 @@ Now we just have to rearrange it a bit.
 </div>
 <div class="goal" id="goal0_3_71"><pre><span></span></pre></div>
 <div class="doc" scenenumber="73">
-<a id="lab460"></a><h2 class="section">Symmetry</h2>
+<a id="lab468"></a><h2 class="section">Symmetry</h2>
 </div>
 <div scenenumber="75" class="code">
 <span class="command" onmouseout="

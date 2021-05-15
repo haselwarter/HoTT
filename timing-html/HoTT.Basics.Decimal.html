@@ -50,7 +50,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 14
-Time: 0.02s">
+Time: 0.018s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.Overture.</pre>
 </div>
@@ -76,7 +76,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 26
 Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>Inductive uint :=
  | Nil
  | D0 (_:uint)
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Variant int := Pos (d:uint) | Neg (d:uint).</pre>
 </div>
 <div class="code" title="File: Decimal.v
@@ -139,8 +139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 51
-Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Variant decimal :=
  | Decimal (i:int) (f:uint)
  | DecimalExp (i:int) (f:uint) (e:int).</pre>
@@ -213,8 +213,8 @@ Register decimal as num.decimal.type.</pre>
 </div>
 <div class="code" title="File: Decimal.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0.002s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
 
 Fixpoint nb_digits d :=
@@ -261,8 +261,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 87
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition unorm d :=
   match nzhead d with
   | Nil =&gt; zero
@@ -382,8 +382,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 138
-Time: 0.003s">
-<div class="time" style="width: 15%"></div>
+Time: 0.002s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>Definition nztail d :=
   let fix aux d_rev :=
     match d_rev with
@@ -454,7 +454,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 171
 Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>Fixpoint double d :=
   match d with
   | Nil =&gt; Nil

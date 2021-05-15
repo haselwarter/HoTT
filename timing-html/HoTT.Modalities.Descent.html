@@ -36,21 +36,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 1
-Time: 0.044s">
-<div class="time" style="width: 44.897959183673%"></div>
+Time: 0.052s">
+<div class="time" style="width: 42.276422764228%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 1
-Time: 0.017s">
-<div class="time" style="width: 17.34693877551%"></div>
+Time: 0.021s">
+<div class="time" style="width: 17.073170731707%"></div>
 <pre>
 Require Import HFiber Extensions Pullback.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 2
-Time: 0.021s">
-<div class="time" style="width: 21.428571428571%"></div>
+Time: 0.022s">
+<div class="time" style="width: 17.886178861789%"></div>
 <pre>
 Require Import ReflectiveSubuniverse Modality Accessible Localization.</pre>
 </div>
@@ -87,8 +87,8 @@ Note that this kind of descent is not the same as the "modal descent" of Cherubi
 </div>
 <div class="code" title="File: Descent.v
 Line: 16
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>Class Descends@{i} (O' O : Subuniverse@{i}) (T : Type@{i})
       `{ReflectsD@{i} O' O T} :=
 {
@@ -134,8 +134,8 @@ Arguments OO_descend_beta O' O {T _ _ _} P {P_inO} x.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Class O_lex_leq (O1 O2 : ReflectiveSubuniverse) `{O1 &lt;&lt; O2} :=
@@ -143,8 +143,8 @@ Class O_lex_leq (O1 O2 : ReflectiveSubuniverse) `{O1 &lt;&lt; O2} :=
 </div>
 <div class="code" title="File: Descent.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Infix "&lt;&lt;&lt;" := O_lex_leq : subuniverse_scope.</pre>
@@ -168,8 +168,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>Definition O_lex_leq_eq {O1 O2 O3 : ReflectiveSubuniverse}
            `{O1 &lt;=&gt; O2} `{O2 &lt;&lt; O3, O2 &lt;&lt;&lt; O3}
            (Hstrong := O_strong_leq_trans_l O1 O2 O3)
@@ -191,8 +191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 47
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.8780487804878%"></div>
 <pre>
   all:pose (P_inO2 := fun x =&gt; inO_leq O1 O2 _ (P_inO1 x)).</pre>
 </div>
@@ -205,8 +205,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.4390243902439%"></div>
 <pre> apply (OO_descend O3 O2 P).</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -218,8 +218,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 50
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre> intros x; apply (inO_leq O2 O1), (OO_descend_inO O3 O2 P).</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -231,8 +231,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 51
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply (OO_descend_beta O3 O2 P).</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -315,29 +315,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 68
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
   assert (Qp := OO_descend_beta O' O P).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 69
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   assert (Q_inO := OO_descend_inO O' O P).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   set (Q := OO_descend O' O P) in *.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine (extendable_postcompose' _ (Q o to O' B) P f Qp _).</pre>
 </div>
@@ -350,43 +350,43 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 73
-Time: 0.006s">
-<div class="time" style="width: 6.1224489795918%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.5040650406504%"></div>
 <pre>
   1:srapply (extendable_conn_map_inO O).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 74
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (extendable_homotopic _ _ (O_functor O' f o to O' A) (to_O_natural O' f) _).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 75
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.8780487804878%"></div>
 <pre>
   srapply extendable_compose.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 76
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
   1:srapply extendable_equiv.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 77
-Time: 0.008s">
-<div class="time" style="width: 8.1632653061224%"></div>
+Time: 0.011s">
+<div class="time" style="width: 8.9430894308943%"></div>
 <pre>
   srapply (extendable_conn_map_inO O).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -401,7 +401,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 81
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Definition OO_inverts_functor_sigma 
        {A B : Type} {P : A -&gt; Type} {Q : B -&gt; Type}
        (f : A -&gt; B) (g : forall a, P a -&gt; Q (f a))
@@ -431,13 +431,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 88
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> refine (equiv_O_sigma_O O _ oE _ oE (equiv_O_sigma_O O _)^-1).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 88
-Time: 0.098s">
+Time: 0.123s">
 <div class="time" style="width: 100%"></div>
 <pre>
     refine (Build_Equiv _ _ (O_functor O (functor_sigma f (fun x =&gt; O_functor O (g x)))) _).</pre>
@@ -451,27 +451,27 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 90
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre> apply O_indpaths.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 90
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre> intros [x u]; cbn.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 90
-Time: 0.018s">
-<div class="time" style="width: 18.367346938776%"></div>
+Time: 0.026s">
+<div class="time" style="width: 21.138211382114%"></div>
 <pre>
     rewrite !to_O_natural, O_rec_beta; cbn.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 91
-Time: 0.022s">
-<div class="time" style="width: 22.448979591837%"></div>
+Time: 0.024s">
+<div class="time" style="width: 19.512195121951%"></div>
 <pre>
     rewrite !to_O_natural, O_rec_beta.</pre>
 </div>
@@ -484,8 +484,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 93
-Time: 0.006s">
-<div class="time" style="width: 6.1224489795918%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.6910569105691%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -522,8 +522,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 101
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   pose (Q := OO_descend O' O P).</pre>
 </div>
@@ -543,8 +543,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 104
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
 
 Global Instance OO_descend_O_inverts_inO
@@ -555,8 +555,8 @@ Global Instance OO_descend_O_inverts_inO
 </div>
 <div class="code" title="File: Descent.v
 Line: 110
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Definition OO_descend_O_inverts_beta
@@ -580,8 +580,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 117
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   refine (OO_descend_beta O' O P a oE _).</pre>
 </div>
@@ -638,15 +638,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 127
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
   rapply ooextendable_TypeO_from_extension; intros P.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 128
-Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.0650406504065%"></div>
 <pre>
   exists (fun x =&gt; (OO_descend_O_inverts f P x ;
                     OO_descend_O_inverts_inO f P x)).</pre>
@@ -683,7 +683,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 135
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Global Instance inO_TypeO_lex_leq `{Univalence} `{IsAccRSU O'}
   : In (lift_accrsu O') (Type_ O)
   := fun i =&gt; ooextendable_TypeO_lex_leq (acc_lgen O' i).</pre>
@@ -714,21 +714,21 @@ Proof.</pre>
 <div class="code" title="File: Descent.v
 Line: 142
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
   assert (Pb := OO_descend_O_inverts_beta f (fun y:A =&gt; O (x = y))).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 143
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
   assert (P_inO := OO_descend_O_inverts_inO f (fun y:A =&gt; O (x = y))).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 144
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
   set (P := OO_descend_O_inverts f (fun y:A =&gt; O (x = y))) in *.</pre>
 </div>
@@ -741,8 +741,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 146
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   srapply isequiv_adjointify.</pre>
 </div>
@@ -761,15 +761,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
     pose (t := fun p =&gt; @transport B P (f x) (f y) p ((Pb x)^-1 (to O (x = x) 1))).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 149
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
     exact (Pb y (O_rec t q)).</pre>
 </div>
@@ -783,20 +783,20 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 151
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre> apply O_indpaths; intros p; cbn.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 151
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
     rewrite O_rec_beta.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 152
-Time: 0.058s">
-<div class="time" style="width: 59.183673469388%"></div>
+Time: 0.08s">
+<div class="time" style="width: 65.040650406504%"></div>
 <pre>
     assert (g := extension_conn_map_elim O (functor_sigma f (fun (a:A) (p:P (f a)) =&gt; p))
                                          (fun bp =&gt; O (f x = bp.1)) (fun u =&gt; O_functor O (ap f) (Pb u.1 u.2))).</pre>
@@ -831,7 +831,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 157
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
     assert (g2 := fun a p =&gt; e _ @ g.2 (a;p)); cbn in g2.</pre>
 </div>
@@ -844,29 +844,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
     rewrite (ap_transport p g1).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 160
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
     rewrite (g2 x ((Pb x)^-1 (to O (x = x) 1))).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 161
-Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.4390243902439%"></div>
 <pre>
     rewrite eisretr, to_O_natural; cbn.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 162
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
     rewrite &lt;- (ap_transport p (fun b =&gt; to O (f x = b))).</pre>
 </div>
@@ -879,8 +879,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 164
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
     rewrite transport_paths_r.</pre>
 </div>
@@ -900,14 +900,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 167
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre> apply O_indpaths; intros p; cbn.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 167
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
     rewrite to_O_natural, O_rec_beta.</pre>
 </div>
@@ -920,22 +920,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 169
-Time: 0.009s">
-<div class="time" style="width: 9.1836734693878%"></div>
+Time: 0.015s">
+<div class="time" style="width: 12.19512195122%"></div>
 <pre>
     srapply eisretr.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 170
-Time: 0.006s">
-<div class="time" style="width: 6.1224489795918%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.5040650406504%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 171
-Time: 0.004s">
-<div class="time" style="width: 4.0816326530612%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.6910569105691%"></div>
 <pre>
 
 Definition equiv_O_functor_ap_OO_inverts
@@ -968,8 +968,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 181
-Time: 0.009s">
-<div class="time" style="width: 9.1836734693878%"></div>
+Time: 0.012s">
+<div class="time" style="width: 9.7560975609756%"></div>
 <pre>
   rapply (contr_equiv' _ (equiv_O_functor_ap_OO_inverts (const tt) x y)^-1).</pre>
 </div>
@@ -1005,8 +1005,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 188
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   nrefine (O_rec (O := O) (@ap X (O' X) (to O' X) x y)).</pre>
 </div>
@@ -1019,8 +1019,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 190
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre> rapply (@inO_leq O' (Sep O)).</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -1077,8 +1077,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 200
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>apply (OO_inverts_ap (to O' X)).</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -1091,7 +1091,7 @@ Defined.</pre>
 <div class="code" title="File: Descent.v
 Line: 201
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Definition equiv_path_OO `{O' &lt;= Sep O}
@@ -1110,7 +1110,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 208
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>Global Instance OO_inverts_functor_hfiber
        {A B C D : Type} {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
        (p : k o f == g o h) (b : B)
@@ -1154,22 +1154,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 217
-Time: 0.065s">
-<div class="time" style="width: 66.326530612245%"></div>
+Time: 0.089s">
+<div class="time" style="width: 72.357723577236%"></div>
 <pre>
   refine (isequiv_homotopic (O_functor O (concat (p a)^) o O_functor O (@ap _ _ k (f a) b)) _).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 218
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   symmetry; apply O_functor_compose.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 219
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1184,7 +1184,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 222
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Global Instance OO_inverts_functor_hfiber_to_O
        {Y X : Type} (f : Y -&gt; X) (x : X)
   : O_inverts O (functor_hfiber (fun a =&gt; (to_O_natural O' f a)^) x).</pre>
@@ -1206,21 +1206,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 227
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>exact (OO_inverts_functor_hfiber _ _).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 227
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 228
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
 
 Definition equiv_OO_functor_hfiber_to_O
@@ -1253,8 +1253,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 238
-Time: 0.02s">
-<div class="time" style="width: 20.408163265306%"></div>
+Time: 0.027s">
+<div class="time" style="width: 21.951219512195%"></div>
 <pre>
   intros x; rapply (contr_equiv' _ (equiv_OO_functor_hfiber_to_O f x)^-1).</pre>
 </div>
@@ -1267,8 +1267,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 240
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Definition OO_isconnected_hfiber
@@ -1350,7 +1350,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 256
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Definition OO_conn_map_functor_hfiber {A B C D : Type}
            {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
            `{IsConnMap O' _ _ h, IsConnMap O' _ _ k}
@@ -1373,15 +1373,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 262
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
   nrefine (isconnected_equiv' O _ (hfiber_functor_hfiber p b c q)^-1 _).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 263
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
   apply OO_isconnected_hfiber.</pre>
 </div>
@@ -1403,7 +1403,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 267
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Global Instance OO_conn_map_functor_hfiber_to_O `{IsModality O'}
        {Y X : Type} (f : Y -&gt; X) (x : X)
   : IsConnMap O (functor_hfiber (fun y =&gt; (to_O_natural O' f y)^) x).</pre>
@@ -1418,14 +1418,14 @@ Proof.</pre>
 <div class="code" title="File: Descent.v
 Line: 270
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   apply OO_conn_map_functor_hfiber.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 271
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1439,8 +1439,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 274
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>Definition OO_ispullback_connmap_mapino
            {A B C D : Type} {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
            (p : k o f == g o h)
@@ -1463,15 +1463,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 280
-Time: 0.038s">
-<div class="time" style="width: 38.775510204082%"></div>
+Time: 0.051s">
+<div class="time" style="width: 41.463414634146%"></div>
 <pre>
   apply (isequiv_O_inverts O).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 281
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   apply OO_inverts_functor_hfiber; exact _.</pre>
 </div>
@@ -1492,8 +1492,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 285
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.0650406504065%"></div>
 <pre>Global Instance OO_inverts_functor_pullback
        {A1 B1 C1 A2 B2 C2 : Type}
        (f1 : B1 -&gt; A1) (g1 : C1 -&gt; A1)
@@ -1575,14 +1575,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 302
-Time: 0.07s">
-<div class="time" style="width: 71.428571428571%"></div>
+Time: 0.095s">
+<div class="time" style="width: 77.235772357724%"></div>
 <pre>refine (isequiv_homotopic (O_functor O (fun r =&gt; r @ (q c1)^) o O_functor O (concat (p b1)) o O_functor O (@ap _ _ h (f1 b1) (g1 c1))) _).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 302
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   intros r; symmetry.</pre>
 </div>
@@ -1602,15 +1602,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 305
-Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
   cbn; srapply O_functor_compose.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 306
 Time: 0.004s">
-<div class="time" style="width: 4.0816326530612%"></div>
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1624,8 +1624,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 309
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>Global Instance OO_inverts_functor_pullback_to_O
        {A B C : Type} (f : B -&gt; A) (g : C -&gt; A)
   : O_inverts O (functor_pullback f g (O_functor O' f) (O_functor O' g)
@@ -1641,22 +1641,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 314
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre>
   apply OO_inverts_functor_pullback; exact _.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 315
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 316
 Time: 0.002s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
 
 Definition equiv_OO_pullback {A B C : Type} (f : B -&gt; A) (g : C -&gt; A)
@@ -1696,22 +1696,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 327
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   nrapply (cancelL_isequiv (O_functor O' g)).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 328
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.0650406504065%"></div>
 <pre>
   1:exact _.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 329
-Time: 0.024s">
-<div class="time" style="width: 24.489795918367%"></div>
+Time: 0.028s">
+<div class="time" style="width: 22.764227642276%"></div>
 <pre>
   rapply (isequiv_homotopic _ (O_functor_compose O' f g)).</pre>
 </div>
@@ -1724,8 +1724,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 331
-Time: 0.019s">
-<div class="time" style="width: 19.387755102041%"></div>
+Time: 0.023s">
+<div class="time" style="width: 18.69918699187%"></div>
 <pre>
 
 End LeftExactness.</pre>
@@ -1772,14 +1772,14 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 342
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   exists (conn_map_elim O' (g o f) P (h o f)).</pre>
 </div>
 <div class="code" title="File: Descent.v
 Line: 343
-Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
   nrefine (conn_map_elim O f _ _); [ exact _ | .. ].</pre>
 </div>
@@ -1805,8 +1805,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 346
-Time: 0.007s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.3170731707317%"></div>
 <pre>
     exact _.</pre>
 </div>
@@ -1832,8 +1832,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 349
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1866,7 +1866,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 358
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   apply (OO_cancelR_conn_map O' O f (const tt)).</pre>
 </div>
@@ -1887,8 +1887,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 362
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Definition OO_inverts_conn_map_factor_conn_map
        (O' O : ReflectiveSubuniverse) `{O &lt;&lt; O', O &lt;&lt;&lt; O', O' &lt;= Sep O}
        {Y X Z : Type} (f : Y -&gt; X) (g : X -&gt; Z)
@@ -1905,7 +1905,7 @@ Proof.</pre>
 <div class="code" title="File: Descent.v
 Line: 367
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   nrapply (cancelL_isequiv (O_functor O' g)).</pre>
 </div>
@@ -1938,8 +1938,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 371
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.0650406504065%"></div>
 <pre> rapply (isequiv_homotopic _ (O_functor_compose O' f g)).</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -1971,7 +1971,7 @@ Proof.</pre>
 <div class="code" title="File: Descent.v
 Line: 379
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
   apply (OO_inverts_conn_map_factor_conn_map O' O f (const tt)).</pre>
 </div>
@@ -2068,8 +2068,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 393
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2127,8 +2127,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Descent.v
 Line: 404
-Time: 0.003s">
-<div class="time" style="width: 3.0612244897959%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2520325203252%"></div>
 <pre> rapply (O_inverts_O_leq' (lift_accrsu O') O').</pre>
 </div>
 <div class="code" title="File: Descent.v
@@ -2141,7 +2141,7 @@ Time: 0s">
 <div class="code" title="File: Descent.v
 Line: 405
 Time: 0.001s">
-<div class="time" style="width: 1.0204081632653%"></div>
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre> exact (fst (ooextendable_O_inverts (lift_accrsu O') (to O' A) (Type_ O) 1%nat) g).</pre>
 </div>
 <div class="code" title="File: Descent.v

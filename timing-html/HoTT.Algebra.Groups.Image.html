@@ -30,35 +30,35 @@ pre {
 
 <div class="code" title="File: Image.v
 Line: 1
-Time: 0.046s">
-<div class="time" style="width: 57.5%"></div>
+Time: 0.049s">
+<div class="time" style="width: 57.647058823529%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 1
-Time: 0.08s">
+Time: 0.085s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Algebra.Groups.Group.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 2
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.3529411764706%"></div>
 <pre>
 Require Import Algebra.Groups.Subgroup.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 3
 Time: 0.002s">
-<div class="time" style="width: 2.5%"></div>
+<div class="time" style="width: 2.3529411764706%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 4
-Time: 0.002s">
-<div class="time" style="width: 2.5%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -108,29 +108,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
   snrapply (Build_Subgroup _ (fun b =&gt; hexists (fun a =&gt; f a = b))).</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 13
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   repeat split.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 14
 Time: 0.003s">
-<div class="time" style="width: 3.75%"></div>
+<div class="time" style="width: 3.5294117647059%"></div>
 <pre>
   1: exact _.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
   1: apply tr; exists mon_unit; apply grp_homo_unit.</pre>
 </div>
@@ -143,14 +143,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Image.v
 Line: 17
-Time: 0.038s">
-<div class="time" style="width: 47.5%"></div>
+Time: 0.04s">
+<div class="time" style="width: 47.058823529412%"></div>
 <pre> intros x y p q; strip_truncations; apply tr.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 17
 Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
     destruct p as [a []], q as [b []].</pre>
 </div>
@@ -183,22 +183,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Image.v
 Line: 21
-Time: 0.014s">
-<div class="time" style="width: 17.5%"></div>
+Time: 0.015s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 22
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p as [a []].</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 23
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
   apply tr; exists (- a).</pre>
 </div>
@@ -211,15 +211,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Image.v
 Line: 25
-Time: 0.002s">
-<div class="time" style="width: 2.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.5294117647059%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition grp_image_in {A B : Group} (f : A $-&gt; B) : A $-&gt; grp_image f.</pre>
@@ -233,8 +233,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
   snrapply Build_GroupHomomorphism.</pre>
 </div>
@@ -260,8 +260,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Image.v
 Line: 32
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
     srapply tr.</pre>
 </div>
@@ -287,21 +287,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Image.v
 Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 36
 Time: 0.02s">
-<div class="time" style="width: 25%"></div>
+<div class="time" style="width: 23.529411764706%"></div>
 <pre> grp_auto.</pre>
 </div>
 <div class="code" title="File: Image.v
 Line: 36
 Time: 0.005s">
-<div class="time" style="width: 6.25%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 Defined.</pre>
 </div>

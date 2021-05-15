@@ -19,7 +19,7 @@
 <h1 class="libtitle">Library HoTT.Basics.Tactics</h1>
 
 <div class="code">
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.Overture.html#"><span class="id" title="library">Basics.Overture</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.Basics.Overture.html#"><span class="id" title="library">Basics.Overture</span></a> <a class="idref" href="HoTT.Basics.Nat.html#"><span class="id" title="library">Basics.Nat</span></a>.<br/>
 
 <br/>
 </div>
@@ -66,8 +66,8 @@ The <span class="inlinecode"><span class="id" title="tactic">do</span></span> ta
 <br/>
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">do_nat</span> <span class="id" title="var">n</span> <span class="id" title="var">tac</span> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">n</span> <span class="id" title="keyword">with</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Datatypes.html#O"><span class="id" title="constructor">O</span></a> ⇒ <span class="id" title="tactic">idtac</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> ?<span class="id" title="var">n'</span> ⇒ <span class="id" title="var">tac</span> ; <span class="id" title="var">do_nat</span> <span class="id" title="var">n'</span> <span class="id" title="var">tac</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#O"><span class="id" title="constructor">O</span></a> ⇒ <span class="id" title="tactic">idtac</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> ?<span class="id" title="var">n'</span> ⇒ <span class="id" title="var">tac</span> ; <span class="id" title="var">do_nat</span> <span class="id" title="var">n'</span> <span class="id" title="var">tac</span><br/>
 &nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
 
 <br/>

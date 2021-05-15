@@ -38,21 +38,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sequential.v
 Line: 2
-Time: 0.031s">
-<div class="time" style="width: 3.6088474970896%"></div>
+Time: 0.032s">
+<div class="time" style="width: 3.9900249376559%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 2
-Time: 0.015s">
-<div class="time" style="width: 1.7462165308498%"></div>
+Time: 0.016s">
+<div class="time" style="width: 1.9950124688279%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 3
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
 Require Import Diagrams.Diagram.</pre>
 </div>
@@ -66,21 +66,21 @@ Require Import Diagrams.Sequence.</pre>
 <div class="code" title="File: Sequential.v
 Line: 5
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 Require Import Diagrams.Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 6
 Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
 Require Import Colimits.Colimit.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 7
-Time: 0.056s">
-<div class="time" style="width: 6.5192083818393%"></div>
+Time: 0.074s">
+<div class="time" style="width: 9.2269326683292%"></div>
 <pre>
 Require Import Spaces.Nat.</pre>
 </div>
@@ -104,10 +104,17 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Local Open Scope path_scope.</pre>
+Local Open Scope nat_scope.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 12
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Open Scope path_scope.</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -115,14 +122,14 @@ Time: 0s">
 Notation coe := (transport idmap).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 14
+Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "a ^+" := (@arr sequence_graph _ _ _ 1 a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 15
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -130,54 +137,54 @@ Time: 0s">
 Definition seq_shift_from_zero_by {A : Sequence} (a : A 0) k : A k.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 17
+Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 18
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction k as [ | k q].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 20
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact a.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 20
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 21
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact q^+.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 21
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 22
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -185,7 +192,7 @@ Time: 0s">
 Notation "a ^+ k" := (seq_shift_from_zero_by a k).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 24
+Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -193,34 +200,34 @@ Time: 0s">
 (** Shiftings; described in the paragraph after Lemma 3.7. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 26
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition seq_pair_shift {A : Sequence} (x : sig A) : sig A.</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct x as [n a]; exact (n.+1; a^+).</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 28
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
+<pre>
+  destruct x as [n a]; exact (n.+1; a^+).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 29
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -228,54 +235,54 @@ Time: 0s">
 Definition seq_pair_shift_by {A : Sequence} (x : sig A) (k : nat) : sig A.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 31
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 32
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction k as [ | k y].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 33
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 34
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact x.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 34
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 35
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (seq_pair_shift y).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 35
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 36
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -283,70 +290,70 @@ Time: 0s">
 Notation "x ^++" := (seq_pair_shift x).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 38
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation "x ^++ k" := (seq_pair_shift_by x k).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 39
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 40
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition seq_pair_shift_assoc {A : Sequence} (x : sig A) (k : nat)
   : (x^++)^++k = x^++(k.+1).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 42
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 43
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction k as [ | k q].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 44
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 45
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 45
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 46
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (ap seq_pair_shift q).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 46
+Line: 47
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 47
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -354,54 +361,54 @@ Time: 0s">
 Definition seq_shift_pair_from_zero {A : Sequence} (a : A 0) k : (0;a)^++k = (k;a^+k).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 49
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 50
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction k as [ | k q].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 51
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 52
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 52
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 53
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (ap seq_pair_shift q).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 54
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 54
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -409,14 +416,14 @@ Time: 0s">
 Notation inj A := (@colim sequence_graph A).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 56
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Notation glue A := (fun n =&gt; @colimp sequence_graph A n n.+1 1).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 57
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -424,51 +431,51 @@ Time: 0s">
 (** The uniqueness principle for sequential colimits; Lemma 3.3. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 59
+Line: 60
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>Definition seq_colimit_uniq {A : Sequence} E (F G : Colimit A -&gt; E)
   (h : forall n, F o inj A n == G o inj A n)
   (H : forall n a, ap F (glue A n a) @ h n a = h n.+1 a^+ @ ap G (glue A n a))
   : F == G.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 62
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 63
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 64
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
   srapply (Colimit_ind _ h); intros n m p a; destruct p.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 64
-Time: 0.01s">
-<div class="time" style="width: 1.1641443538999%"></div>
+Line: 65
+Time: 0.009s">
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre>
   generalize (H n a); generalize (h n a); destruct (glue A n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 65
+Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   intros p q; srefine ((concat_p1 _)^ @ _); srefine (_ @ (concat_1p _)); exact q^.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 66
+Line: 67
 Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 67
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -476,14 +483,14 @@ Time: 0s">
 (** The successor sequence from Lemma 3.6. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 69
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 70
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition succ_seq (A : Sequence) : Sequence
   := Build_Sequence (fun k =&gt; A k.+1) (fun k a =&gt; a^+).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 70
+Line: 71
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -491,14 +498,14 @@ Time: 0s">
 (** The shifted sequence from Lemma 3.7. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 72
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition shift_seq (A : Sequence) n : Sequence
   := Build_Sequence (fun k =&gt; A (k+n)%nat) (fun k a =&gt; a^+).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 73
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -506,120 +513,120 @@ Time: 0s">
 (** The canonical equivalence between the colimit of the succesor sequence and the colimit of the original sequence; Lemma 3.6. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 75
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition colim_succ_seq_to_colim_seq A : Colimit (succ_seq A) -&gt; Colimit A.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 75
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 76
+Line: 77
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply Colimit_rec; srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 77
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 78
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a =&gt; inj _ n.+1 a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 78
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 79
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 80
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros n m p; destruct p; exact (glue A n.+1).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 79
+Line: 80
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 80
+Line: 81
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Definition colim_succ_seq_to_colim_seq_beta_glue A n a
   : ap (colim_succ_seq_to_colim_seq A) (glue (succ_seq A) n a) = glue A (n.+1) a.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 83
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 84
-Time: 0.008s">
-<div class="time" style="width: 0.93131548311991%"></div>
+Line: 85
+Time: 0.006s">
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
   srapply Colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 85
+Line: 86
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 86
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 87
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
 
 Definition colim_succ_seq_to_colim_seq_ap_inj A n (a1 a2 : succ_seq A n) (p : a1 = a2)
   : ap (colim_succ_seq_to_colim_seq A) (ap (inj _ n) p) = ap (inj _ n.+1) p.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 89
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 90
+Line: 91
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 91
+Line: 92
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 92
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -628,168 +635,168 @@ Global Instance isequiv_colim_succ_seq_to_colim_seq A
   : IsEquiv (colim_succ_seq_to_colim_seq A).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 95
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 96
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 97
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply isequiv_adjointify.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 97
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 98
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 99
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> srapply Colimit_rec; srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 98
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 99
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a =&gt; inj (succ_seq A) n a^+).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 99
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 100
+Line: 101
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros n m p a; destruct p; exact (glue (succ_seq A) n a^+).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 100
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 101
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 102
+Time: 0.003s">
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre> srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 101
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 102
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a =&gt; glue _ n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 102
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 103
+Line: 104
 Time: 0.035s">
-<div class="time" style="width: 4.0745052386496%"></div>
+<div class="time" style="width: 4.3640897755611%"></div>
 <pre> intros n a; rewrite ap_idmap, ap_compose, Colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 103
-Time: 0.012s">
-<div class="time" style="width: 1.3969732246799%"></div>
+Line: 104
+Time: 0.011s">
+<div class="time" style="width: 1.3715710723192%"></div>
 <pre>
       rewrite colim_succ_seq_to_colim_seq_beta_glue; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 104
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 105
+Line: 106
 Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre> srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 105
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 106
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a =&gt; glue _ n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 106
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 107
+Line: 108
 Time: 0.058s">
-<div class="time" style="width: 6.7520372526193%"></div>
+<div class="time" style="width: 7.2319201995012%"></div>
 <pre> intros n a; rewrite ap_idmap, ap_compose, Colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 107
-Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+Line: 108
+Time: 0.01s">
+<div class="time" style="width: 1.2468827930175%"></div>
 <pre>
       rewrite (@Colimit_rec_beta_colimp _ A _ _ _ _ 1); reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 108
-Time: 0.047s">
-<div class="time" style="width: 5.4714784633295%"></div>
+Line: 109
+Time: 0.048s">
+<div class="time" style="width: 5.9850374064838%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 109
+Line: 110
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Definition equiv_colim_succ_seq_to_colim_seq A : Colimit (succ_seq A) &lt;~&gt; Colimit A
   := Build_Equiv _ _ (colim_succ_seq_to_colim_seq A) _.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 112
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -797,120 +804,120 @@ Time: 0s">
 (** The canonical equivalence between the colimit of the shifted sequence and the colimit of the original sequence; Lemma 3.6. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 114
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition colim_shift_seq_to_colim_seq A n : Colimit (shift_seq A n) -&gt; Colimit A.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 114
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 115
+Line: 116
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply Colimit_rec; srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 116
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 117
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun k a =&gt; inj A (k+n)%nat a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 117
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 118
+Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros k l p; destruct p; exact (glue A (k+n)%nat).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 118
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 119
+Line: 120
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Definition colim_shift_seq_to_colim_seq_beta_glue A n k a
   : ap (colim_shift_seq_to_colim_seq A n) (glue (shift_seq A n) k a) = glue A (k+n)%nat a.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 122
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 123
+Line: 124
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>
   srapply Colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 124
+Line: 125
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 125
+Line: 126
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Definition colim_shift_seq_to_colim_seq_ap_inj A n k (a1 a2 : shift_seq A n k) (p : a1 = a2)
   : ap (colim_shift_seq_to_colim_seq A n) (ap (inj _ k) p) = ap (inj _ (k+n)%nat) p.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 128
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 129
+Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 130
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 131
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -919,60 +926,60 @@ Local Definition J {X Y Z} {x1 x2 : X} {y} {I : forall x, Y x -&gt; Z} (p : x1 =
   : I x2 y = I x1 (coe (ap Y p^) y).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 134
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Sequential.v
 Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct p; reflexivity.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+  destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 137
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Local Definition K {X Y} {x1 x2 : X} {y} F G (p : x1 = x2) :
   G x2 (coe (ap Y p) y) = coe (ap Y (ap F p)) (G x1 y).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 140
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 141
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 142
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 143
+Line: 144
 Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
+<div class="time" style="width: 0.87281795511222%"></div>
 <pre>
 
 Local Definition L {X Y Z} {x1 x2 : X} {y} {F G} {I : forall x, Y x -&gt; Z} {p : x1 = x2}
@@ -982,28 +989,28 @@ Local Definition L {X Y Z} {x1 x2 : X} {y} {F G} {I : forall x, Y x -&gt; Z} {p 
     Q x1 (coe (ap Y p^) y)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 149
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 150
+Line: 151
 Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre>
   destruct p; rewrite !concat_1p, concat_p1; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 151
-Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
+Line: 152
+Time: 0.006s">
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 152
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1012,59 +1019,46 @@ Global Instance isequiv_colim_shift_seq_to_colim_seq `{Funext} A n
   : IsEquiv (colim_shift_seq_to_colim_seq A n).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 155
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 156
+Line: 157
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction n as [ | n e]; srapply isequiv_homotopic'.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 157
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 158
+Line: 159
 Time: 0.019s">
-<div class="time" style="width: 2.2118742724098%"></div>
+<div class="time" style="width: 2.3690773067332%"></div>
 <pre> srapply equiv_functor_colimit; srapply Build_diagram_equiv.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 158
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 159
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply Build_DiagramMap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-      *</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 160
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (fun k =&gt; coe (ap A (nat_plus_n_O k)^)).</pre>
-</div>
-<div class="code" title="File: Sequential.v
 Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -1073,57 +1067,57 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sequential.v
 Line: 161
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (fun k =&gt; coe (ap A (nat_add_n_O k)^)).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 161
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      *</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 162
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
-<pre> intros k l p a; destruct p; srapply (K S (fun n a =&gt; a^+) (nat_plus_n_O k)^ @ _).</pre>
+<div class="time" style="width: 0.12468827930175%"></div>
+<pre> intros k l p a; destruct p; srapply (K S (fun n a =&gt; a^+) (nat_add_n_O k)^ @ _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 161
+Line: 162
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
         srapply (ap10 (ap coe (ap (ap _) (ap_V _ _)))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 162
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 163
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro k; srapply isequiv_path.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 163
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 164
+Line: 165
 Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre> symmetry; srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 164
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 165
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
-<pre> intros k a; exact (J (nat_plus_n_O k)).</pre>
-</div>
-<div class="code" title="File: Sequential.v
 Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -1132,147 +1126,147 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sequential.v
 Line: 166
-Time: 0.098s">
-<div class="time" style="width: 11.408614668219%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
+<pre> intros k a; exact (J (nat_add_n_O k)).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 166
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 167
+Time: 0.1s">
+<div class="time" style="width: 12.468827930175%"></div>
 <pre> intros k a; rewrite !Colimit_rec_beta_colimp; srapply (L (glue A)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 166
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 167
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> transitivity (Colimit (succ_seq (shift_seq A n))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 167
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 168
+Line: 169
 Time: 0.021s">
-<div class="time" style="width: 2.4447031431898%"></div>
+<div class="time" style="width: 2.6184538653367%"></div>
 <pre> srapply equiv_functor_colimit; srapply Build_diagram_equiv.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 168
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 169
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply Build_DiagramMap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 169
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         {</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 170
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
-<pre> exact (fun k =&gt; coe (ap A (nat_plus_n_Sm k n)^)).</pre>
+Line: 171
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (fun k =&gt; coe (ap A (nat_add_n_Sm k n)^)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 170
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 170
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         {</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 171
+Line: 172
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
-<pre> intros k l p a; destruct p; rapply (K S (fun n a =&gt; a^+) (nat_plus_n_Sm k n)^ @ _).</pre>
+<div class="time" style="width: 0.24937655860349%"></div>
+<pre> intros k l p a; destruct p; rapply (K S (fun n a =&gt; a^+) (nat_add_n_Sm k n)^ @ _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 171
+Line: 172
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
           srapply (ap10 (ap coe (ap (ap _) (ap_V _ _)))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 172
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 172
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 173
+Line: 174
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intro k; srapply isequiv_path.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 173
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 174
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srefine (transitivity (equiv_colim_succ_seq_to_colim_seq _) (Build_Equiv _ _ _ e)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 174
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 175
-Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+Line: 176
+Time: 0.01s">
+<div class="time" style="width: 1.2468827930175%"></div>
 <pre> symmetry; srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 175
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 176
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
-<pre> intros k a; exact (J (nat_plus_n_Sm k n)).</pre>
-</div>
-<div class="code" title="File: Sequential.v
 Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -1281,49 +1275,62 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sequential.v
 Line: 177
-Time: 0.072s">
-<div class="time" style="width: 8.3818393480792%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
+<pre> intros k a; exact (J (nat_add_n_Sm k n)).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 177
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 178
+Time: 0.066s">
+<div class="time" style="width: 8.2294264339152%"></div>
 <pre> intros k a; rewrite Colimit_rec_beta_colimp; simpl.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 177
-Time: 0.332s">
-<div class="time" style="width: 38.649592549476%"></div>
+Line: 178
+Time: 0.329s">
+<div class="time" style="width: 41.022443890274%"></div>
 <pre>
       rewrite 2(ap_compose' _ _ (glue _ k a)), Colimit_rec_beta_colimp, 2ap_pp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 178
-Time: 0.208s">
-<div class="time" style="width: 24.214202561118%"></div>
+Line: 179
+Time: 0.206s">
+<div class="time" style="width: 25.68578553616%"></div>
 <pre>
       rewrite colim_succ_seq_to_colim_seq_ap_inj, colim_shift_seq_to_colim_seq_ap_inj.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 179
-Time: 0.08s">
-<div class="time" style="width: 9.3131548311991%"></div>
+Line: 180
+Time: 0.079s">
+<div class="time" style="width: 9.8503740648379%"></div>
 <pre>
       rewrite (colim_succ_seq_to_colim_seq_beta_glue (shift_seq A n)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 180
-Time: 0.093s">
-<div class="time" style="width: 10.826542491269%"></div>
+Line: 181
+Time: 0.097s">
+<div class="time" style="width: 12.094763092269%"></div>
 <pre>
       rewrite colim_shift_seq_to_colim_seq_beta_glue; srapply (L (glue A)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 181
-Time: 0.859s">
+Line: 182
+Time: 0.802s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 182
+Line: 183
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
 
 Definition equiv_colim_shift_seq_to_colim_seq `{Funext} A n
@@ -1331,7 +1338,7 @@ Definition equiv_colim_shift_seq_to_colim_seq `{Funext} A n
   := Build_Equiv _ _ (colim_shift_seq_to_colim_seq A n) _.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 186
+Line: 187
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1339,160 +1346,160 @@ Time: 0s">
 (** Corollary 7.7.1 for k := -2; implies Lemma 7.2. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 188
+Line: 189
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition contr_colim_contr_seq `{Funext} (A : Sequence)
   : (forall k, Contr (A k)) -&gt; Contr (Colimit A).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 189
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 190
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro h_seqcontr; pose (unit_seq := Build_Sequence (fun _ =&gt; Unit) (fun _ _ =&gt; tt)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 191
+Line: 192
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply (contr_equiv' (Colimit unit_seq)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 192
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 193
-Time: 0.005s">
-<div class="time" style="width: 0.58207217694994%"></div>
+Line: 194
+Time: 0.004s">
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre> symmetry; srapply equiv_functor_colimit.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 193
-Time: 0.011s">
-<div class="time" style="width: 1.2805587892899%"></div>
+Line: 194
+Time: 0.017s">
+<div class="time" style="width: 2.1197007481297%"></div>
 <pre>
     srapply Build_diagram_equiv; srapply Build_DiagramMap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 194
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 195
+Line: 196
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun _ _ =&gt; tt).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 195
+Line: 196
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 196
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros n m p a; destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 196
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 197
+Line: 198
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> srapply (Build_Contr _ (inj unit_seq 0 tt)); intro y; symmetry; revert y.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 197
-Time: 0.005s">
-<div class="time" style="width: 0.58207217694994%"></div>
+Line: 198
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 198
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 199
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros n a; destruct a; induction n as [ | n r].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 199
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 200
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 200
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 201
+Line: 202
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (glue unit_seq n tt @ r).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 201
+Line: 202
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 202
-Time: 0.013s">
-<div class="time" style="width: 1.5133876600698%"></div>
+Line: 203
+Time: 0.011s">
+<div class="time" style="width: 1.3715710723192%"></div>
 <pre> intro n; destruct a; rewrite ap_idmap, ap_const, concat_p1; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 202
-Time: 0.008s">
-<div class="time" style="width: 0.93131548311991%"></div>
+Line: 203
+Time: 0.009s">
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 203
+Line: 204
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1500,16 +1507,16 @@ Time: 0s">
 (** Fibered sequences; Section 4. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 205
+Line: 206
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>Record FibSequence (A : Sequence) := {
   fibSequence : sig A -&gt; Type;
   fibSequenceArr x : fibSequence x -&gt; fibSequence x^++
 }.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 208
+Line: 209
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1517,7 +1524,7 @@ Time: 0s">
 Coercion fibSequence : FibSequence  &gt;-&gt; Funclass.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 210
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1525,14 +1532,14 @@ Time: 0s">
 Arguments fibSequence {A}.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 212
+Line: 213
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments fibSequenceArr {A}.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 213
+Line: 214
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1540,7 +1547,7 @@ Time: 0s">
 Notation "b ^+f" := (fibSequenceArr _ _ b).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 215
+Line: 216
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1548,60 +1555,60 @@ Time: 0s">
 (** The Sigma of a fibered type sequence; Definition 4.3. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 217
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition sig_seq {A} (B : FibSequence A) : Sequence.</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 217
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  srapply Build_Sequence.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 219
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
+  srapply Build_Sequence.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 220
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n =&gt; {a : A n &amp; B (n;a)}).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 220
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 221
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros n [a b]; exact (a^+; b^+f).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 221
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 222
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 222
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1609,61 +1616,61 @@ Time: 0s">
 (** The canonical projection from the sequential colimit of Sigmas to the sequential colimit of the first component; Definition 4.3. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 224
+Line: 225
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition seq_colim_sum_to_seq_colim_fst {A} (B : FibSequence A)
   : Colimit (sig_seq B) -&gt; Colimit A.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 225
+Line: 226
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 226
+Line: 227
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply Colimit_rec; srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 227
+Line: 228
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 228
+Line: 229
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros n [a _]; exact (inj _ n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 228
+Line: 229
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 229
+Line: 230
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros n m p [a b]; destruct p; exact (glue _ n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 229
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 230
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 230
+Line: 231
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1671,52 +1678,39 @@ Time: 0s">
 (** Given a sequence fibered over A, aach point x : sig A induces a new type sequence; Section 4. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 232
+Line: 233
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition fib_seq_to_seq {A} (B : FibSequence A) (x : sig A) : Sequence.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 232
+Line: 233
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 233
+Line: 234
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply Build_Sequence; intro k; revert x; induction k as [ | k h].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 234
+Line: 235
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 235
+Line: 236
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun x =&gt; B x).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 235
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  *</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 236
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (fun x =&gt; h x^++).</pre>
-</div>
-<div class="code" title="File: Sequential.v
 Line: 236
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -1725,32 +1719,45 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sequential.v
 Line: 237
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (fun x =&gt; h x^++).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 237
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  *</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 238
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun x b =&gt; b^+f).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 237
+Line: 238
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 238
+Line: 239
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun x =&gt; h x^++).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 238
+Line: 239
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 239
+Line: 240
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1758,14 +1765,14 @@ Time: 0s">
 (** The induced sequence can be equivalently described by using shifting; Lemma 7.1. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 241
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition fib_seq_to_seq' {A} (B : FibSequence A) (x : sig A) : Sequence
   := Build_Sequence (fun k =&gt; B x^++k) (fun k b =&gt; b^+f).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 242
+Line: 243
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1774,158 +1781,158 @@ Definition equiv_fib_seq_to_seq {A} (B : FibSequence A) (x : sig A)
   : fib_seq_to_seq B x ~d~ fib_seq_to_seq' B x.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 245
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 246
-Time: 0.022s">
-<div class="time" style="width: 2.5611175785797%"></div>
+Line: 247
+Time: 0.017s">
+<div class="time" style="width: 2.1197007481297%"></div>
 <pre>
   srapply Build_diagram_equiv.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 247
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 248
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply Build_DiagramMap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 248
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 249
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro n; revert x; induction n as [ | n e].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 249
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 250
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun _ =&gt; idmap).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 250
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 251
+Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> exact (fun x =&gt; coe (ap B (seq_pair_shift_assoc x n)) o e x^++).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 251
+Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 252
+Line: 253
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre> intros n m p; destruct p; revert x; induction n as [ | n p].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 252
+Line: 253
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 253
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun _ _ =&gt; idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 253
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 254
-Time: 0.008s">
-<div class="time" style="width: 0.93131548311991%"></div>
+Line: 255
+Time: 0.042s">
+<div class="time" style="width: 5.2369077306733%"></div>
 <pre> exact (fun x b =&gt; K _ _ _ @ (ap _ (p (x^++) b))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 254
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 255
-Time: 0.064s">
-<div class="time" style="width: 7.4505238649593%"></div>
+Line: 256
+Time: 0.018s">
+<div class="time" style="width: 2.2443890274314%"></div>
 <pre> intro n; revert x; induction n as [ | n e].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 255
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 256
+Line: 257
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun _ =&gt; isequiv_idmap _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 256
+Line: 257
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 257
-Time: 0.01s">
-<div class="time" style="width: 1.1641443538999%"></div>
+Line: 258
+Time: 0.009s">
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre> intro x; srapply isequiv_compose.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 257
-Time: 0.042s">
-<div class="time" style="width: 4.8894062863795%"></div>
+Line: 258
+Time: 0.032s">
+<div class="time" style="width: 3.9900249376559%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 258
+Line: 259
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1933,69 +1940,69 @@ Time: 0s">
 (** A fibered type sequence defines a type family; Section 4. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 260
+Line: 261
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition fib_seq_to_type_fam `{Univalence} {A} (B : FibSequence A) : Colimit A -&gt; Type.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 260
+Line: 261
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 261
+Line: 262
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply Colimit_rec; srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 262
+Line: 263
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 263
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a =&gt; Colimit (fib_seq_to_seq B (n;a))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 263
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 264
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 265
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros n m p a; destruct p; apply path_universe_uncurried.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 264
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 265
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     exact (equiv_colim_succ_seq_to_colim_seq (fib_seq_to_seq B (n;a))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 265
+Line: 266
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 266
+Line: 267
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
 
 Definition fib_seq_to_type_fam_beta_glue `{Univalence} {A} B n a :
@@ -2003,35 +2010,35 @@ Definition fib_seq_to_type_fam_beta_glue `{Univalence} {A} B n a :
   colim_succ_seq_to_colim_seq (fib_seq_to_seq B (n;a)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 270
+Line: 271
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 271
-Time: 0.005s">
-<div class="time" style="width: 0.58207217694994%"></div>
+Line: 272
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply (ap _ (Colimit_rec_beta_colimp _ _ _ _ _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 272
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 273
+Time: 0.003s">
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
   srapply (transport_idmap_path_universe_uncurried _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 273
-Time: 0.015s">
-<div class="time" style="width: 1.7462165308498%"></div>
+Line: 274
+Time: 0.008s">
+<div class="time" style="width: 0.99750623441397%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 274
+Line: 275
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2040,58 +2047,58 @@ Local Definition Delta {X Y} {x1 x2 : X} {F} (p : x1 = x2) (psi : coe (ap Y p) =
   : (x1;y) = (x2;F y).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 277
+Line: 278
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 278
+Line: 279
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   destruct p; destruct psi; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 279
+Line: 280
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 280
+Line: 281
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Local Definition Delta_proj {X Y} {x1 x2 : X} {F} (p : x1 = x2) (psi : coe (ap Y p) = F) y
   : ap pr1 (Delta p psi y) = p.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 283
+Line: 284
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 284
+Line: 285
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   destruct p; destruct psi; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 285
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 286
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 286
+Line: 287
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2099,70 +2106,70 @@ Time: 0s">
 (** The canonical map from the sequential colimit of Sigmas to the Sigma of sequential colimits; Definition 5.1. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 288
+Line: 289
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition seq_colim_sum_to_sum_seq_colim `{Univalence} {A} (B : FibSequence A)
   : Colimit (sig_seq B) -&gt; sig (fib_seq_to_type_fam B).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 289
+Line: 290
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 290
+Line: 291
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srapply Colimit_rec; srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 291
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 292
-Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+Line: 293
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros n [a b]; exact (inj A n a; inj (fib_seq_to_seq _ _) 0 b).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 292
+Line: 293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 293
+Line: 294
 Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre> intros n m p [a b]; destruct p; srefine (_ @ ap _ (glue (fib_seq_to_seq _ _) 0 b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 293
-Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+Line: 294
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
     srapply (Delta _ (fib_seq_to_type_fam_beta_glue B n a)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 294
+Line: 295
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 295
-Time: 0.013s">
-<div class="time" style="width: 1.5133876600698%"></div>
+Line: 296
+Time: 0.011s">
+<div class="time" style="width: 1.3715710723192%"></div>
 <pre>
 
 Definition seq_colim_sum_to_sum_seq_colim_beta_glue `{Univalence} {A} B n a b :
@@ -2171,28 +2178,28 @@ Definition seq_colim_sum_to_sum_seq_colim_beta_glue `{Univalence} {A} B n a b :
   ap (exist _ (inj A n a)) (glue (fib_seq_to_seq _ _) 0 b).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 300
+Line: 301
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 301
-Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+Line: 302
+Time: 0.006s">
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
   srapply Colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 302
-Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+Line: 303
+Time: 0.008s">
+<div class="time" style="width: 0.99750623441397%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 303
+Line: 304
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2200,13 +2207,13 @@ Time: 0s">
 (** An alternative induction principle for the sum of colimits; Lemma 5.2 and Section 6. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 305
+Line: 306
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section SeqColimitSumInd.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 305
+Line: 306
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2214,29 +2221,29 @@ Time: 0s">
   Context `{Univalence} {A} (B : FibSequence A).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 307
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
-<pre>
-  Context (E : sig (fib_seq_to_type_fam B) -&gt; Type).</pre>
-</div>
-<div class="code" title="File: Sequential.v
 Line: 308
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Context (e : forall n a b, E (seq_colim_sum_to_sum_seq_colim B (inj (sig_seq B) n (a;b)))).</pre>
+  Context (E : sig (fib_seq_to_type_fam B) -&gt; Type).</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 309
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
+<pre>
+  Context (e : forall n a b, E (seq_colim_sum_to_sum_seq_colim B (inj (sig_seq B) n (a;b)))).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 310
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>
   Context (t : forall n a b, ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a;b))
     # e n.+1 (a^+) (b^+f) = e n a b).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 311
+Line: 312
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2245,60 +2252,60 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 314
+Line: 315
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Definition Q k : forall n a b, E (inj _ n a; inj _ k b).</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 314
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 315
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    induction k as [ | k h].</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 316
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    -</pre>
+    induction k as [ | k h].</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 317
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 318
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact e.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 317
+Line: 318
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 318
+Line: 319
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros n a b; exact (Delta _ (fib_seq_to_type_fam_beta_glue B n a) _ # h n.+1 (a^+) b).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 318
-Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+Line: 319
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 319
+Line: 320
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2308,44 +2315,44 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 323
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 324
+Time: 0.003s">
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>Local Definition Eta {X Y Z} {x : X} {y1 y2 : Y x} {z : sig Y} {p : y1 = y2}
     {q1 : z = (x;y1)} {q2 : z = (x;y2)} (theta : q2 = q1 @ ap _ p)
     : transport (Z o exist Y x) p o transport Z q1 == transport Z q2.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 325
+Line: 326
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 326
-Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+Line: 327
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
     symmetry in theta; destruct theta; destruct p; simpl; destruct q1.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 327
+Line: 328
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 327
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 328
+Time: 0.003s">
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 328
-Time: 0.01s">
-<div class="time" style="width: 1.1641443538999%"></div>
+Line: 329
+Time: 0.005s">
+<div class="time" style="width: 0.62344139650873%"></div>
 <pre>
 
   Local Definition Epsilon {X Y Z} {x1 x2 : X} {y1 y2} {F} (p : x1 = x2) {q : y1 = y2}
@@ -2354,28 +2361,28 @@ Time: 0.01s">
       transport Z (Delta p psi y2) o transport (Z o exist Y x1) q.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 333
+Line: 334
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 334
-Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+Line: 335
+Time: 0.003s">
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
     destruct theta; destruct q; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 335
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 336
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 336
+Line: 337
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2384,75 +2391,75 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 339
+Line: 340
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>Local Definition R k : forall n a b,
     transport (E o exist _ (inj A n a)) (glue _ k b) (Q k.+1 n a (b^+)) = Q k n a b.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 340
+Line: 341
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 341
+Line: 342
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     induction k as [ | k h].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 342
+Line: 343
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 343
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros n a b; srapply (_ @ t n a b).</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 343
-Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
-<pre>
-      srapply (Eta (seq_colim_sum_to_sum_seq_colim_beta_glue B n a b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 344
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> intros n a b; srapply (_ @ t n a b).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 344
+Time: 0.007s">
+<div class="time" style="width: 0.87281795511222%"></div>
+<pre>
+      srapply (Eta (seq_colim_sum_to_sum_seq_colim_beta_glue B n a b)).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 345
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 345
+Line: 346
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros n a b; srefine (_ @ ap _ (h n.+1 (a^+) b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 345
+Line: 346
 Time: 0.01s">
-<div class="time" style="width: 1.1641443538999%"></div>
+<div class="time" style="width: 1.2468827930175%"></div>
 <pre>
       srapply (Epsilon (glue A n a) (colim_succ_seq_to_colim_seq_beta_glue _ _ _)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 346
-Time: 0.029s">
-<div class="time" style="width: 3.3760186263097%"></div>
+Line: 347
+Time: 0.025s">
+<div class="time" style="width: 3.1172069825436%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 347
+Line: 348
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2461,91 +2468,91 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 350
+Line: 351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Definition F n a : forall x, E (inj _ n a; x).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 350
+Line: 351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 351
+Line: 352
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     srapply Colimit_ind.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 352
+Line: 353
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 353
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun k =&gt; Q k n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 353
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 354
+Line: 355
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre> intros k l p; destruct p; exact (R k n a).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 354
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 355
+Time: 0.005s">
+<div class="time" style="width: 0.62344139650873%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 355
-Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+Line: 356
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
 
   Local Definition F_beta_glue n a b : apD (F n a) (glue _ 0 b) = R 0 n a b.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 357
+Line: 358
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 358
-Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
+Line: 359
+Time: 0.003s">
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
     srapply Colimit_ind_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 359
+Line: 360
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 360
+Line: 361
 Time: 0.013s">
-<div class="time" style="width: 1.5133876600698%"></div>
+<div class="time" style="width: 1.6209476309227%"></div>
 <pre>
 
   Local Definition Phi {X Y Z} {x1 x2 : X} {y1 y2} {F} (p : x1 = x2) {q : y1 = y2}
@@ -2557,41 +2564,41 @@ Time: 0.013s">
       -&gt; transport (fun y =&gt; G2 (F y) = Delta p psi y # G1 y) q u1 = u2.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 368
+Line: 369
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 369
+Line: 370
 Time: 0.019s">
-<div class="time" style="width: 2.2118742724098%"></div>
+<div class="time" style="width: 2.3690773067332%"></div>
 <pre>
     destruct theta; destruct q; intros u1 u2; rewrite ap_idmap, !concat_p1.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 370
+Line: 371
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 370
+Line: 371
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     intro s; destruct s; srefine (concat_1p _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 371
-Time: 0.011s">
-<div class="time" style="width: 1.2805587892899%"></div>
+Line: 372
+Time: 0.01s">
+<div class="time" style="width: 1.2468827930175%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 372
+Line: 373
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2600,91 +2607,91 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 375
+Line: 376
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>Local Definition G n a : forall y,
     F n a _ = Delta _ (fib_seq_to_type_fam_beta_glue B n a) y # F n.+1 (a^+) y.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 376
+Line: 377
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 377
+Line: 378
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
     srapply Colimit_ind.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 378
+Line: 379
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 379
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 380
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> exact (fun k b =&gt; idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 379
+Line: 380
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 380
-Time: 0.011s">
-<div class="time" style="width: 1.2805587892899%"></div>
+Line: 381
+Time: 0.013s">
+<div class="time" style="width: 1.6209476309227%"></div>
 <pre> intros k l p b; destruct p.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 380
-Time: 0.043s">
-<div class="time" style="width: 5.0058207217695%"></div>
+Line: 381
+Time: 0.115s">
+<div class="time" style="width: 14.339152119701%"></div>
 <pre>
       snrapply (Phi (glue A n a) (colim_succ_seq_to_colim_seq_beta_glue _ _ _)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 381
-Time: 0.155s">
-<div class="time" style="width: 18.044237485448%"></div>
+Line: 382
+Time: 0.083s">
+<div class="time" style="width: 10.349127182045%"></div>
 <pre>
       rewrite (Colimit_ind_beta_colimp _ (fun k =&gt; Q k n a) _ _ _ idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 382
-Time: 0.092s">
-<div class="time" style="width: 10.710128055879%"></div>
+Line: 383
+Time: 0.085s">
+<div class="time" style="width: 10.598503740648%"></div>
 <pre>
       rewrite (Colimit_ind_beta_colimp _ (fun k =&gt; Q k n.+1 a^+) _ _ _ idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 383
-Time: 0.122s">
-<div class="time" style="width: 14.202561117579%"></div>
+Line: 384
+Time: 0.118s">
+<div class="time" style="width: 14.713216957606%"></div>
 <pre>
       rewrite concat_p1, concat_1p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 384
+Line: 385
 Time: 0.257s">
-<div class="time" style="width: 29.918509895227%"></div>
+<div class="time" style="width: 32.044887780549%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 385
+Line: 386
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
 
   Local Definition I {X Y Z} {x1 x2 : X} {p : x1 = x2} {F} (psi : coe (ap Y p) = F) {G1 G2}
@@ -2692,35 +2699,35 @@ Time: 0.002s">
       forall y, G2 (F y) = Delta p psi y # G1 y.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 389
+Line: 390
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 390
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 391
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     destruct p; destruct psi.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 391
+Line: 392
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     srefine (transitivity (equiv_path_inverse _ _) (equiv_apD10 _ _ _)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 392
+Line: 393
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 393
+Line: 394
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2730,41 +2737,41 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 397
+Line: 398
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition seq_colim_sum_ind_cur : forall x y, E (x;y).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 397
+Line: 398
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 398
+Line: 399
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     srapply (Colimit_ind _ F); intros n m p a; destruct p.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 399
-Time: 0.005s">
-<div class="time" style="width: 0.58207217694994%"></div>
+Line: 400
+Time: 0.007s">
+<div class="time" style="width: 0.87281795511222%"></div>
 <pre>
     exact ((I (fib_seq_to_type_fam_beta_glue B n a))^-1 (G n a)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 400
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 401
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 401
+Line: 402
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2773,35 +2780,35 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 404
-Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+Line: 405
+Time: 0.009s">
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre>Definition seq_colim_sum_ind_cur_beta_glue n a :
     I (fib_seq_to_type_fam_beta_glue B n a) (apD seq_colim_sum_ind_cur (glue _ n a)) = G n a.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 405
+Line: 406
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 406
-Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
+Line: 407
+Time: 0.008s">
+<div class="time" style="width: 0.99750623441397%"></div>
 <pre>
     apply moveR_equiv_M; srapply Colimit_ind_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 407
-Time: 0.011s">
-<div class="time" style="width: 1.2805587892899%"></div>
+Line: 408
+Time: 0.012s">
+<div class="time" style="width: 1.4962593516209%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 408
+Line: 409
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2810,36 +2817,36 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 411
+Line: 412
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition seq_colim_sum_ind : forall x, E x.</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 411
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 412
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    intros [x y]; apply seq_colim_sum_ind_cur.</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 413
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+    intros [x y]; apply seq_colim_sum_ind_cur.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 414
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 415
 Time: 0.008s">
-<div class="time" style="width: 0.93131548311991%"></div>
+<div class="time" style="width: 0.99750623441397%"></div>
 <pre>
 
   Local Definition Xi {X Y Z} G {x : X} {y1 y2 : Y x} {z : sig Y} {p : y1 = y2}
@@ -2848,50 +2855,50 @@ Time: 0.008s">
       ap (transport (Z o exist Y x) p) (apD G q1)^ @ Eta theta (G z) @ apD G q2.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 419
+Line: 420
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 420
+Line: 421
 Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
+<div class="time" style="width: 0.87281795511222%"></div>
 <pre>
     revert theta; srapply (equiv_ind (equiv_path_inverse _ _)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 421
+Line: 422
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre> intro s; destruct s.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 421
-Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+Line: 422
+Time: 0.01s">
+<div class="time" style="width: 1.2468827930175%"></div>
 <pre>
     revert q1; srapply (equiv_ind (equiv_path_inverse _ _)); intro s; destruct s.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 422
-Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+Line: 423
+Time: 0.005s">
+<div class="time" style="width: 0.62344139650873%"></div>
 <pre>
     destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 423
-Time: 0.011s">
-<div class="time" style="width: 1.2805587892899%"></div>
+Line: 424
+Time: 0.007s">
+<div class="time" style="width: 0.87281795511222%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 424
-Time: 0.007s">
-<div class="time" style="width: 0.81490104772992%"></div>
+Line: 425
+Time: 0.006s">
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
 
   Local Definition Mu {X Y Z} {x1 x2 : X} (p : x1 = x2) {F} (G : forall z, Z z)
@@ -2899,28 +2906,28 @@ Time: 0.007s">
     : apD G (Delta p psi y) = (q y)^.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 428
+Line: 429
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 429
+Line: 430
 Time: 0.01s">
-<div class="time" style="width: 1.1641443538999%"></div>
+<div class="time" style="width: 1.2468827930175%"></div>
 <pre>
     destruct p; destruct psi; destruct theta; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 430
+Line: 431
 Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 431
+Line: 432
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2929,65 +2936,65 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 434
+Line: 435
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>Definition seq_colim_sum_ind_beta_glue : forall n a b,
     apD seq_colim_sum_ind (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n _)) =
     t n a b.</pre>
-</div>
-<div class="code" title="File: Sequential.v
-Line: 436
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 437
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    intros n a b; pose (h := F_beta_glue n a b).</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
 Line: 438
-Time: 0.023s">
-<div class="time" style="width: 2.6775320139697%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intros n a b; pose (h := F_beta_glue n a b).</pre>
+</div>
+<div class="code" title="File: Sequential.v
+Line: 439
+Time: 0.022s">
+<div class="time" style="width: 2.7431421446384%"></div>
 <pre>
     rewrite (Xi seq_colim_sum_ind (seq_colim_sum_to_sum_seq_colim_beta_glue B n a b)) in h.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 439
-Time: 0.258s">
-<div class="time" style="width: 30.034924330617%"></div>
+Line: 440
+Time: 0.271s">
+<div class="time" style="width: 33.790523690773%"></div>
 <pre>
     rewrite (Mu (glue _ n a) seq_colim_sum_ind (seq_colim_sum_ind_cur_beta_glue n a)) in h.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 440
-Time: 0.028s">
-<div class="time" style="width: 3.2596041909197%"></div>
+Line: 441
+Time: 0.025s">
+<div class="time" style="width: 3.1172069825436%"></div>
 <pre>
     rewrite concat_1p in h; exact (cancelL _ _ _ h).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 441
-Time: 0.368s">
-<div class="time" style="width: 42.840512223516%"></div>
+Line: 442
+Time: 0.357s">
+<div class="time" style="width: 44.513715710723%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 442
-Time: 0.134s">
-<div class="time" style="width: 15.599534342258%"></div>
+Line: 443
+Time: 0.145s">
+<div class="time" style="width: 18.079800498753%"></div>
 <pre>
 
 End SeqColimitSumInd.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 444
+Line: 445
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2995,13 +3002,13 @@ Time: 0s">
 (** An alternative recursion principle for the sum of colimits; Lemma 5.3. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 446
+Line: 447
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section SeqColimitSumRec.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 446
+Line: 447
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3009,52 +3016,52 @@ Time: 0s">
   Context `{Univalence} {A} (B : FibSequence A).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 448
+Line: 449
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context E (e : forall n a, B (n;a) -&gt; E).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 449
+Line: 450
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context (t : forall n a (b : B (n;a)), e n.+1 (a^+) (b^+f) = e n a b).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 450
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 451
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
   Definition seq_colim_sum_rec : sig (fib_seq_to_type_fam B)-&gt; E.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 452
+Line: 453
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 453
+Line: 454
 Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
     exact (seq_colim_sum_ind B _ e (fun n a b =&gt; transport_const _ _ @ t n a b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 454
+Line: 455
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 455
+Line: 456
 Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
 
   Definition seq_colim_sum_rec_beta_glue : forall n a b,
@@ -3062,43 +3069,43 @@ Time: 0.003s">
     t n a b.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 459
+Line: 460
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 460
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 461
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
     intros n a b; srapply (cancelL _ _ _ ((apD_const _ _)^ @ _)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 461
-Time: 0.018s">
-<div class="time" style="width: 2.0954598370198%"></div>
+Line: 462
+Time: 0.014s">
+<div class="time" style="width: 1.7456359102244%"></div>
 <pre>
     srapply seq_colim_sum_ind_beta_glue.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 462
-Time: 0.015s">
-<div class="time" style="width: 1.7462165308498%"></div>
+Line: 463
+Time: 0.017s">
+<div class="time" style="width: 2.1197007481297%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 463
+Line: 464
 Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
 
 End SeqColimitSumRec.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 465
+Line: 466
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3106,44 +3113,44 @@ Time: 0s">
 (** Lemma 5.4. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 467
+Line: 468
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>Definition seq_colimit_sum_uniq `{Univalence} {A} (B : FibSequence A) E
   (F G : sig (fib_seq_to_type_fam B) -&gt; E)
   : F o (seq_colim_sum_to_sum_seq_colim B) == G o (seq_colim_sum_to_sum_seq_colim B) -&gt;
     F == G.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 470
+Line: 471
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 471
+Line: 472
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
   intro h; srapply (seq_colim_sum_ind B _ (fun _ _ _ =&gt; h _)); intros n a b.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 472
+Line: 473
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
   srapply ((transport_compose _ _ _ _)^ @ _); exact (apD h (glue (sig_seq B) n (a;b))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 473
+Line: 474
 Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 474
+Line: 475
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3151,155 +3158,155 @@ Time: 0s">
 (** The canonical map from the sequential colimit of Sigmas to the Sigma of sequential colimits is an equivalence; Theorem 5.1. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 476
+Line: 477
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance isequiv_seq_colim_sum_to_sum_seq_colim `{Univalence} {A} (B : FibSequence A)
   : IsEquiv (seq_colim_sum_to_sum_seq_colim B).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 477
+Line: 478
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 478
+Line: 479
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   assert (L : {G : _ &amp; G o seq_colim_sum_to_sum_seq_colim B == idmap}).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 479
+Line: 480
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 480
+Line: 481
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply (_;_).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 480
+Line: 481
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 481
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 482
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> srapply seq_colim_sum_rec.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 481
+Line: 482
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 482
+Line: 483
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a b =&gt; inj (sig_seq B) n (a;b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 482
+Line: 483
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 483
+Line: 484
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a b =&gt; glue (sig_seq B) n (a;b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 483
+Line: 484
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 484
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 485
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 484
+Line: 485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 485
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 486
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> exact (fun n a =&gt; idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 485
+Line: 486
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 486
-Time: 0.021s">
-<div class="time" style="width: 2.4447031431898%"></div>
+Line: 487
+Time: 0.023s">
+<div class="time" style="width: 2.8678304239401%"></div>
 <pre> intros n a; rewrite concat_1p, concat_p1, ap_compose, ap_idmap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 486
-Time: 0.028s">
-<div class="time" style="width: 3.2596041909197%"></div>
+Line: 487
+Time: 0.022s">
+<div class="time" style="width: 2.7431421446384%"></div>
 <pre>
         rewrite seq_colim_sum_rec_beta_glue; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 487
+Line: 488
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 488
-Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+Line: 489
+Time: 0.004s">
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre> srapply (isequiv_adjointify _ L.1 _ L.2); srapply seq_colimit_sum_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 488
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 489
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     intro x; rewrite L.2; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 489
-Time: 0.03s">
-<div class="time" style="width: 3.4924330616997%"></div>
+Line: 490
+Time: 0.029s">
+<div class="time" style="width: 3.6159600997506%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 490
+Line: 491
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
 
 Definition equiv_seq_colim_sum_to_sum_seq_colim `{Univalence} {A} (B : FibSequence A)
@@ -3307,7 +3314,7 @@ Definition equiv_seq_colim_sum_to_sum_seq_colim `{Univalence} {A} (B : FibSequen
   := Build_Equiv _ _ _ (isequiv_seq_colim_sum_to_sum_seq_colim B).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 494
+Line: 495
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3315,82 +3322,82 @@ Time: 0s">
 (** The canonical map from the sequential colimit of Sigmas to the Sigma of sequential colimits commutes with the first projection; Theorem 5.1. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 496
+Line: 497
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>Definition seq_colim_sum_to_sum_seq_colim_fst `{Univalence} {A} (B : FibSequence A)
   : pr1 o (seq_colim_sum_to_sum_seq_colim B) == seq_colim_sum_to_seq_colim_fst B.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 497
+Line: 498
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 498
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 499
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
   srapply seq_colimit_uniq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 499
+Line: 500
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 500
+Line: 501
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (fun n a =&gt; idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 500
+Line: 501
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 501
-Time: 0.055s">
-<div class="time" style="width: 6.4027939464494%"></div>
+Line: 502
+Time: 0.05s">
+<div class="time" style="width: 6.2344139650873%"></div>
 <pre> intros n [a b]; rewrite concat_1p, concat_p1, ap_compose, !Colimit_rec_beta_colimp.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 501
-Time: 0.02s">
-<div class="time" style="width: 2.3282887077998%"></div>
+Line: 502
+Time: 0.019s">
+<div class="time" style="width: 2.3690773067332%"></div>
 <pre>
     rewrite ap_pp, (Delta_proj _ (fib_seq_to_type_fam_beta_glue B n a)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 502
-Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+Line: 503
+Time: 0.005s">
+<div class="time" style="width: 0.62344139650873%"></div>
 <pre>
     srapply (whiskerL _ _ @ concat_p1 _); rewrite (ap_compose _ _ _)^; simpl.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 503
+Line: 504
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
     rewrite ap_const; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 504
-Time: 0.08s">
-<div class="time" style="width: 9.3131548311991%"></div>
+Line: 505
+Time: 0.083s">
+<div class="time" style="width: 10.349127182045%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 505
+Line: 506
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3398,14 +3405,14 @@ Time: 0s">
 (** The characterization of path spaces in sequential colimits; Theorem 7.4, first part. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 507
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 508
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>Definition path_seq (A : Sequence) (a1 a2 : A 0)
   := Build_Sequence (fun k =&gt; a1^+k = a2^+k) (fun k p =&gt; ap (fun a =&gt; a^+) p).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 508
+Line: 509
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3414,153 +3421,153 @@ Definition equiv_path_colim_zero `{Univalence} {A : Sequence} (a1 a2 : A 0) :
   (inj A 0 a1 = inj A 0 a2) &lt;~&gt; Colimit (path_seq A a1 a2).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 511
+Line: 512
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> 
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 512
-Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+Line: 513
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   pose (B := Build_FibSequence A (fun x =&gt; a1^+(x.1) = x.2) (fun x =&gt; ap (fun a =&gt; a^+))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 513
+Line: 514
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   transitivity (fib_seq_to_type_fam B (inj A 0 a2)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 514
+Line: 515
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 515
-Time: 0.006s">
-<div class="time" style="width: 0.69848661233993%"></div>
+Line: 516
+Time: 0.007s">
+<div class="time" style="width: 0.87281795511222%"></div>
 <pre> symmetry; srapply equiv_path_from_contr.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 515
+Line: 516
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 516
+Line: 517
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (inj (fib_seq_to_seq B (0;a1)) 0 idpath).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 516
+Line: 517
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 517
+Line: 518
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre> srefine (contr_equiv _ (seq_colim_sum_to_sum_seq_colim B)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 517
-Time: 0.01s">
-<div class="time" style="width: 1.1641443538999%"></div>
+Line: 518
+Time: 0.008s">
+<div class="time" style="width: 0.99750623441397%"></div>
 <pre>
       srapply contr_colim_contr_seq; intro k; srapply contr_basedpaths.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 518
+Line: 519
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 519
+Line: 520
 Time: 0.009s">
-<div class="time" style="width: 1.0477299185099%"></div>
+<div class="time" style="width: 1.1221945137157%"></div>
 <pre> srapply equiv_functor_colimit; srefine (transitivity (equiv_fib_seq_to_seq B (0;a2)) _).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 519
-Time: 0.032s">
-<div class="time" style="width: 3.7252619324796%"></div>
+Line: 520
+Time: 0.033s">
+<div class="time" style="width: 4.1147132169576%"></div>
 <pre>
     srapply Build_diagram_equiv.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 520
+Line: 521
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 521
+Line: 522
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply Build_DiagramMap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 521
+Line: 522
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 522
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 523
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> exact (fun n =&gt; coe (ap B (seq_shift_pair_from_zero a2 n))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 522
+Line: 523
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 523
+Line: 524
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre> intros n m p b; destruct p; srapply (K _ _ (seq_shift_pair_from_zero a2 n)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 523
+Line: 524
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 524
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 525
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intro n; srapply isequiv_path.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 524
+Line: 525
 Time: 0.003s">
-<div class="time" style="width: 0.34924330616997%"></div>
+<div class="time" style="width: 0.37406483790524%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 525
+Line: 526
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3568,42 +3575,42 @@ Time: 0s">
 (** The characterization of path spaces in sequential colimits; Theorem 7.4, second part. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 527
+Line: 528
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition equiv_path_colim `{Univalence} {A : Sequence} n (a1 a2 : A n) :
   (inj A n a1 = inj A n a2) &lt;~&gt; Colimit (path_seq (shift_seq A n) a1 a2).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 528
+Line: 529
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 529
+Line: 530
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
   srefine (transitivity _ (equiv_path_colim_zero _ _)); symmetry.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 530
+Line: 531
 Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+<div class="time" style="width: 0.49875311720698%"></div>
 <pre>
   srapply (@equiv_ap _ _ (colim_shift_seq_to_colim_seq A n)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 531
+Line: 532
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 532
+Line: 533
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3611,7 +3618,7 @@ Time: 0s">
 Open Scope trunc_scope.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 534
+Line: 535
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3619,231 +3626,231 @@ Time: 0s">
 (** Corollary 7.7.1, second part. *)</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 536
+Line: 537
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance trunc_seq_colim `{Univalence} {A : Sequence} k :
   (forall n, IsTrunc k (A n)) -&gt; IsTrunc k (Colimit A) | 100.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 537
+Line: 538
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 538
+Line: 539
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   revert A; induction k as [ | k IHk].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 539
+Line: 540
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 540
+Line: 541
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply contr_colim_contr_seq.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 540
+Line: 541
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 541
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 542
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros A trH; srapply Colimit_ind.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 541
+Line: 542
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 542
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 543
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intro n; revert trH; revert A; induction n as [ | n IHn].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 542
+Line: 543
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 543
+Line: 544
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros A trH a; srapply Colimit_ind.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 543
+Line: 544
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         {</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 544
+Line: 545
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros m b; revert b; revert a; revert trH; revert A; induction m as [ | m IHm].</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 544
+Line: 545
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
           {</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 545
+Line: 546
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros A trH a b.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 545
+Line: 546
 Time: 0.002s">
-<div class="time" style="width: 0.23282887077998%"></div>
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
             srefine (istrunc_equiv_istrunc _ (equiv_inverse (equiv_path_colim _ a b))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 546
+Line: 547
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 546
+Line: 547
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
           {</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 547
+Line: 548
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros A trH a b.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 547
-Time: 0.017s">
-<div class="time" style="width: 1.9790454016298%"></div>
+Line: 548
+Time: 0.02s">
+<div class="time" style="width: 2.4937655860349%"></div>
 <pre>
             srefine (istrunc_equiv_istrunc _ (equiv_inverse (equiv_concat_l (glue A _ a) _))).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 548
-Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+Line: 549
+Time: 0.002s">
+<div class="time" style="width: 0.24937655860349%"></div>
 <pre>
             srapply (@istrunc_equiv_istrunc _ _ _ k (IHm (succ_seq A) _ (@arr _ A 0%nat _ 1%path a) b)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 549
+Line: 550
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
             srapply (equiv_ap (colim_succ_seq_to_colim_seq A)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 550
+Line: 551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 550
+Line: 551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>}</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 550
+Line: 551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         {</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 551
-Time: 0.004s">
-<div class="time" style="width: 0.46565774155995%"></div>
+Line: 552
+Time: 0.006s">
+<div class="time" style="width: 0.74812967581047%"></div>
 <pre> intros n m p b; snrapply path_ishprop; snrapply ishprop_istrunc; exact _.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 551
+Line: 552
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 551
+Line: 552
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       *</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 552
+Line: 553
 Time: 0.001s">
-<div class="time" style="width: 0.11641443538999%"></div>
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre> intros A trH a; srapply (functor_forall_equiv_pb (colim_succ_seq_to_colim_seq A)).</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 552
-Time: 0.045s">
-<div class="time" style="width: 5.2386495925495%"></div>
+Line: 553
+Time: 0.048s">
+<div class="time" style="width: 5.9850374064838%"></div>
 <pre>
         intro x; srapply (@istrunc_equiv_istrunc _ _ _ k (IHn (succ_seq A) _ a x)); srapply equiv_ap.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 553
+Line: 554
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     +</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 554
-Time: 0.012s">
-<div class="time" style="width: 1.3969732246799%"></div>
+Line: 555
+Time: 0.018s">
+<div class="time" style="width: 2.2443890274314%"></div>
 <pre> intros n m p a; snrapply path_ishprop; snrapply istrunc_forall.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 554
-Time: 0.005s">
-<div class="time" style="width: 0.58207217694994%"></div>
+Line: 555
+Time: 0.001s">
+<div class="time" style="width: 0.12468827930175%"></div>
 <pre>
       intro x; srapply ishprop_istrunc.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 555
-Time: 0.022s">
-<div class="time" style="width: 2.5611175785797%"></div>
+Line: 556
+Time: 0.024s">
+<div class="time" style="width: 2.9925187032419%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sequential.v
-Line: 557
+Line: 558
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

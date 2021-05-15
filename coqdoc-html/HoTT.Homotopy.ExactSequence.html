@@ -35,11 +35,11 @@
 </div>
 
 <div class="doc">
-<a id="lab659"></a><h1 class="section">Exact sequences</h1>
+<a id="lab661"></a><h1 class="section">Exact sequences</h1>
 
 <div class="paragraph"> </div>
 
-<a id="lab660"></a><h2 class="section">Very short complexes</h2>
+<a id="lab662"></a><h2 class="section">Very short complexes</h2>
 
 <div class="paragraph"> </div>
 
@@ -119,7 +119,7 @@ Loopspaces preserve complexes.
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="iscomplex_iterated_loops" class="idref" href="#iscomplex_iterated_loops"><span class="id" title="definition">iscomplex_iterated_loops</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<a id="F:31" class="idref" href="#F:31"><span class="id" title="binder">F</span></a> <a id="X:32" class="idref" href="#X:32"><span class="id" title="binder">X</span></a> <a id="Y:33" class="idref" href="#Y:33"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:34" class="idref" href="#i:34"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:31"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:32"><span class="id" title="variable">X</span></a>) (<a id="f:35" class="idref" href="#f:35"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:32"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:33"><span class="id" title="variable">Y</span></a>)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a id="cx:36" class="idref" href="#cx:36"><span class="id" title="binder">cx</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsComplex"><span class="id" title="definition">IsComplex</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:34"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:35"><span class="id" title="variable">f</span></a>) (<a id="n:37" class="idref" href="#n:37"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a id="cx:36" class="idref" href="#cx:36"><span class="id" title="binder">cx</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsComplex"><span class="id" title="definition">IsComplex</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:34"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:35"><span class="id" title="variable">f</span></a>) (<a id="n:37" class="idref" href="#n:37"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
 &nbsp;&nbsp;: <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsComplex"><span class="id" title="definition">IsComplex</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:37"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:34"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:37"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:35"><span class="id" title="variable">f</span></a>).<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">n</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">n</span> <span class="id" title="var">IHn</span>]; [ <span class="id" title="tactic">exact</span> <span class="id" title="var">cx</span> | ].<br/>
@@ -210,7 +210,7 @@ If Y is a set, then IsComplex is an HProp.
 </div>
 
 <div class="doc">
-<a id="lab661"></a><h2 class="section">Very short exact sequences and fiber sequences</h2>
+<a id="lab663"></a><h2 class="section">Very short exact sequences and fiber sequences</h2>
 
 <div class="paragraph"> </div>
 
@@ -451,7 +451,7 @@ Now we can deduce that they preserve purely-exact sequences.  The hardest part i
 
 <br/>
 <span class="id" title="keyword">Global Instance</span> <a id="isexact_iterated_loops" class="idref" href="#isexact_iterated_loops"><span class="id" title="instance">isexact_iterated_loops</span></a> {<a id="F:199" class="idref" href="#F:199"><span class="id" title="binder">F</span></a> <a id="X:200" class="idref" href="#X:200"><span class="id" title="binder">X</span></a> <a id="Y:201" class="idref" href="#Y:201"><span class="id" title="binder">Y</span></a>} (<a id="i:202" class="idref" href="#i:202"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:199"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:200"><span class="id" title="variable">X</span></a>) (<a id="f:203" class="idref" href="#f:203"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:200"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:201"><span class="id" title="variable">Y</span></a>)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{<a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">IsExact</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">purely</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">F</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">X</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">Y</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">i</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">f</span></a>} (<a id="n:205" class="idref" href="#n:205"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{<a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">IsExact</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">purely</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">F</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">X</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">Y</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">i</span></a> <a id="H:204" class="idref" href="#H:204"><span class="id" title="binder">f</span></a>} (<a id="n:205" class="idref" href="#n:205"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
 &nbsp;&nbsp;: <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:205"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:202"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:205"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:203"><span class="id" title="variable">f</span></a>).<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">n</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">n</span> <span class="id" title="var">IHn</span>]; [ <span class="id" title="tactic">assumption</span> | <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_loops"><span class="id" title="instance">isexact_loops</span></a>; <span class="id" title="tactic">assumption</span> ].<br/>
@@ -505,7 +505,7 @@ In particular, (n.+1)-truncation takes fiber sequences to n-exact ones.
 </div>
 
 <div class="doc">
-<a id="lab662"></a><h2 class="section">Connecting maps</h2>
+<a id="lab664"></a><h2 class="section">Connecting maps</h2>
 
 <div class="paragraph"> </div>
 
@@ -572,7 +572,7 @@ The connecting maps for the long exact sequence of loop spaces, defined as an ex
 </div>
 
 <div class="doc">
-<a id="lab663"></a><h2 class="section">Long exact sequences</h2>
+<a id="lab665"></a><h2 class="section">Long exact sequences</h2>
 
 </div>
 <div class="code">
@@ -608,7 +608,7 @@ Long exact sequences are preserved by truncation.
 </div>
 
 <div class="doc">
-<a id="lab664"></a><h2 class="section">LES of loop spaces and homotopy groups</h2>
+<a id="lab666"></a><h2 class="section">LES of loop spaces and homotopy groups</h2>
 
 </div>
 <div class="code">

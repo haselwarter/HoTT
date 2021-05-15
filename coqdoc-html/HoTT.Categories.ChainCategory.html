@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a id="lab1113"></a><h1 class="section">The category ω of (ℕ, ≤), and the chain categories <span class="inlinecode">[<span class="id" title="var">n</span>]</span></h1>
+<a id="lab1115"></a><h1 class="section">The category ω of (ℕ, ≤), and the chain categories <span class="inlinecode">[<span class="id" title="var">n</span>]</span></h1>
 
 </div>
 <div class="code">
@@ -38,10 +38,13 @@
 <span class="id" title="keyword">Set</span> <span class="id" title="var">Asymmetric</span> <span class="id" title="var">Patterns</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">nat_scope</span>.<br/>
+
+<br/>
 </div>
 
 <div class="doc">
-<a id="lab1114"></a><h2 class="section">Definitions</h2>
+<a id="lab1116"></a><h2 class="section">Definitions</h2>
  Quoting Wikipedia (http://en.wikipedia.org/wiki/Total_order#Chains):
 
 <div class="paragraph"> </div>
@@ -60,16 +63,16 @@
 </div>
 
 <div class="doc">
-<a id="lab1115"></a><h3 class="section"><span class="inlinecode">[ω]</span>, the linear order on ℕ</h3>
+<a id="lab1117"></a><h3 class="section"><span class="inlinecode">[ω]</span>, the linear order on ℕ</h3>
 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="Core.omega" class="idref" href="#Core.omega"><span class="id" title="definition">omega</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;:= @<a class="idref" href="HoTT.Categories.Category.Core.html#Build_PreCategory"><span class="id" title="definition">Build_PreCategory</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Spaces.Nat.html#leq"><span class="id" title="definition">leq</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Spaces.Nat.html#leq_refl"><span class="id" title="instance">leq_refl</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">fun</span> <a id="x:1" class="idref" href="#x:1"><span class="id" title="binder">x</span></a> <a id="y:2" class="idref" href="#y:2"><span class="id" title="binder">y</span></a> <a id="z:3" class="idref" href="#z:3"><span class="id" title="binder">z</span></a> <a id="p:4" class="idref" href="#p:4"><span class="id" title="binder">p</span></a> <a id="q:5" class="idref" href="#q:5"><span class="id" title="binder">q</span></a> ⇒ <a class="idref" href="HoTT.Spaces.Nat.html#leq_trans"><span class="id" title="instance">leq_trans</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Categories.ChainCategory.html#q:5"><span class="id" title="variable">q</span></a> <a class="idref" href="HoTT.Categories.ChainCategory.html#p:4"><span class="id" title="variable">p</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Spaces.Nat.html#leq"><span class="id" title="class">leq</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Spaces.Nat.html#leq_refl"><span class="id" title="abbreviation">leq_refl</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">fun</span> <a id="x:1" class="idref" href="#x:1"><span class="id" title="binder">x</span></a> <a id="y:2" class="idref" href="#y:2"><span class="id" title="binder">y</span></a> <a id="z:3" class="idref" href="#z:3"><span class="id" title="binder">z</span></a> <a id="p:4" class="idref" href="#p:4"><span class="id" title="binder">p</span></a> <a id="q:5" class="idref" href="#q:5"><span class="id" title="binder">q</span></a> ⇒ <a class="idref" href="HoTT.Spaces.Nat.html#leq_trans"><span class="id" title="lemma">leq_trans</span></a> <a class="idref" href="HoTT.Categories.ChainCategory.html#q:5"><span class="id" title="variable">q</span></a> <a class="idref" href="HoTT.Categories.ChainCategory.html#p:4"><span class="id" title="variable">p</span></a>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br/>
@@ -79,13 +82,13 @@
 </div>
 
 <div class="doc">
-<a id="lab1116"></a><h3 class="section"><span class="inlinecode">[<span class="id" title="var">n</span>]</span>, a linear order on a finite set with <span class="inlinecode"><span class="id" title="var">n</span></span> <span class="inlinecode">+</span> <span class="inlinecode">1</span> elements</h3>
+<a id="lab1118"></a><h3 class="section"><span class="inlinecode">[<span class="id" title="var">n</span>]</span>, a linear order on a finite set with <span class="inlinecode"><span class="id" title="var">n</span></span> <span class="inlinecode">+</span> <span class="inlinecode">1</span> elements</h3>
  Using <span class="inlinecode"><span class="id" title="var">n</span></span> <span class="inlinecode">+</span> <span class="inlinecode">1</span> elements allows us to agree with the common
       definition of an <span class="inlinecode"><span class="id" title="var">n</span></span>-simplex, where a 0-simplex is a point, and
       a 1-simplex has two end-points, etc. 
 </div>
 <div class="code">
-&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="Core.chain" class="idref" href="#Core.chain"><span class="id" title="definition">chain</span></a> (<a id="n:6" class="idref" href="#n:6"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="Core.chain" class="idref" href="#Core.chain"><span class="id" title="definition">chain</span></a> (<a id="n:6" class="idref" href="#n:6"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="HoTT.Categories.Category.Subcategory.Full.html#9df811055870507ebec9be328f811d9c"><span class="id" title="notation">{</span></a> <a id="m:7" class="idref" href="#m:7"><span class="id" title="binder">m</span></a> <a class="idref" href="HoTT.Categories.Category.Subcategory.Full.html#9df811055870507ebec9be328f811d9c"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Categories.ChainCategory.html#Core.omega"><span class="id" title="definition">omega</span></a> <a class="idref" href="HoTT.Categories.Category.Subcategory.Full.html#9df811055870507ebec9be328f811d9c"><span class="id" title="notation">|</span></a> <a class="idref" href="HoTT.Categories.ChainCategory.html#m:7"><span class="id" title="variable">m</span></a> <a class="idref" href="HoTT.Spaces.Nat.html#cb53cf0ee22c036a03b4a9281c68b5a3"><span class="id" title="notation">≤</span></a> <a class="idref" href="HoTT.Categories.ChainCategory.html#n:6"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Categories.Category.Subcategory.Full.html#9df811055870507ebec9be328f811d9c"><span class="id" title="notation">}</span></a>%<span class="id" title="var">category</span>.<br/>
 
 <br/>

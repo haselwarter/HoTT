@@ -54,7 +54,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Datatypes.v
 Line: 12
-Time: 0.017s">
+Time: 0.012s">
 <div class="time" style="width: 100%"></div>
 <pre>
 
@@ -346,75 +346,6 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-(* Natural numbers. *)
-
-</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 77
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Inductive nat : Type :=
-  | O : nat
-  | S : nat -&gt; nat.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Scheme nat_rect := Induction for nat Sort Type.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(* It would be nice not to need this, but the tactic [induction] requires it when the target is in [Set], and the above definition of [nat] puts it in [Set]. *)</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 83
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Scheme nat_rec := Induction for nat Sort Set.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 83
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Declare Scope nat_scope.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 85
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Delimit Scope nat_scope with nat.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 86
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Bind Scope nat_scope with nat.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 87
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Arguments S _%nat.</pre>
-</div>
-<div class="code" title="File: Datatypes.v
-Line: 88
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
 (** Another way of interpreting booleans as propositions *)
 
 (* Definition is_true b := b = true. *)
@@ -424,7 +355,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 95
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Inductive list (A : Type) : Type :=
@@ -432,7 +363,7 @@ Time: 0s">
  | cons : A -&gt; list A -&gt; list A.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 97
+Line: 83
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -440,7 +371,7 @@ Time: 0s">
 Scheme list_rect := Induction for list Sort Type.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 99
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -448,35 +379,35 @@ Time: 0s">
 Arguments nil {A}.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 101
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Declare Scope list_scope.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 102
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Infix "::" := cons : list_scope.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 103
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Delimit Scope list_scope with list.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 104
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Bind Scope list_scope with list.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 105
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -484,7 +415,7 @@ Time: 0s">
 Local Open Scope list_scope.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 107
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -493,7 +424,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 109
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition app (A : Type) : list A -&gt; list A -&gt; list A :=
@@ -504,7 +435,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 114
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -512,7 +443,7 @@ Time: 0s">
 Infix "++" := app : list_scope.</pre>
 </div>
 <div class="code" title="File: Datatypes.v
-Line: 117
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

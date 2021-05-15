@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a id="lab1109"></a><h1 class="section">Discrete categories on <span class="inlinecode"><span class="id" title="var">n</span></span> objects</h1>
+<a id="lab1111"></a><h1 class="section">Discrete categories on <span class="inlinecode"><span class="id" title="var">n</span></span> objects</h1>
 
 </div>
 <div class="code">
@@ -42,17 +42,17 @@
 </div>
 
 <div class="doc">
-<a id="lab1110"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span> types, or <span class="inlinecode"><a class="idref" href="HoTT.Categories.NatCategory.html#Core.CardinalityRepresentative"><span class="id" title="definition">CardinalityRepresentative</span></a></span></h2>
+<a id="lab1112"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span> types, or <span class="inlinecode"><a class="idref" href="HoTT.Categories.NatCategory.html#Core.CardinalityRepresentative"><span class="id" title="definition">CardinalityRepresentative</span></a></span></h2>
  We use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a></span> for <span class="inlinecode">0</span> and <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span> for <span class="inlinecode">1</span> so that we get nice judgmental behavior.
       TODO: this should be unified with <span class="inlinecode"><span class="id" title="library">Spaces.Finite.Fin</span></span>.
    
 </div>
 <div class="code">
-&nbsp;&nbsp;<span class="id" title="keyword">Fixpoint</span> <a id="Core.CardinalityRepresentative" class="idref" href="#Core.CardinalityRepresentative"><span class="id" title="definition">CardinalityRepresentative</span></a> (<a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Fixpoint</span> <a id="Core.CardinalityRepresentative" class="idref" href="#Core.CardinalityRepresentative"><span class="id" title="definition">CardinalityRepresentative</span></a> (<a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a> :=<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Categories.NatCategory.html#n:1"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0 ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 1 ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span> ⇒ (<a class="idref" href="HoTT.Categories.NatCategory.html#CardinalityRepresentative:2"><span class="id" title="definition">CardinalityRepresentative</span></a> <span class="id" title="var">n'</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>)%<span class="id" title="keyword">type</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span> ⇒ (<a class="idref" href="HoTT.Categories.NatCategory.html#CardinalityRepresentative:2"><span class="id" title="definition">CardinalityRepresentative</span></a> <span class="id" title="var">n'</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>)%<span class="id" title="keyword">type</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
 
 <br/>
@@ -62,11 +62,11 @@
 </div>
 
 <div class="doc">
-<a id="lab1111"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span> is an hSet</h2>
+<a id="lab1113"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span> is an hSet</h2>
 
 </div>
 <div class="code">
-&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a id="Core.trunc_cardinality_representative" class="idref" href="#Core.trunc_cardinality_representative"><span class="id" title="instance">trunc_cardinality_representative</span></a> (<a id="n:4" class="idref" href="#n:4"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a id="Core.trunc_cardinality_representative" class="idref" href="#Core.trunc_cardinality_representative"><span class="id" title="instance">trunc_cardinality_representative</span></a> (<a id="n:4" class="idref" href="#n:4"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
 &nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#IsHSet"><span class="id" title="abbreviation">IsHSet</span></a> (<a class="idref" href="HoTT.Categories.NatCategory.html#Core.CardinalityRepresentative"><span class="id" title="definition">CardinalityRepresentative</span></a> <a class="idref" href="HoTT.Categories.NatCategory.html#n:4"><span class="id" title="variable">n</span></a>).<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">n</span>; [ <span class="id" title="var">typeclasses</span> <span class="id" title="tactic">eauto</span> |].<br/>
@@ -79,15 +79,15 @@
 </div>
 
 <div class="doc">
-<a id="lab1112"></a><h2 class="section">Define the categories <span class="inlinecode"><span class="id" title="var">n</span></span></h2>
+<a id="lab1114"></a><h2 class="section">Define the categories <span class="inlinecode"><span class="id" title="var">n</span></span></h2>
 
 </div>
 <div class="code">
-&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="Core.nat_category" class="idref" href="#Core.nat_category"><span class="id" title="definition">nat_category</span></a> (<a id="n:5" class="idref" href="#n:5"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="Core.nat_category" class="idref" href="#Core.nat_category"><span class="id" title="definition">nat_category</span></a> (<a id="n:5" class="idref" href="#n:5"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#nat"><span class="id" title="inductive">nat</span></a>) :=<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Categories.NatCategory.html#n:5"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0 ⇒ <a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Core.indiscrete_category"><span class="id" title="definition">indiscrete_category</span></a> 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 1 ⇒ <a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Core.indiscrete_category"><span class="id" title="definition">indiscrete_category</span></a> 1<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span>) ⇒ <a class="idref" href="HoTT.Categories.DiscreteCategory.html#Core.discrete_category"><span class="id" title="definition">discrete_category</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span>) ⇒ <a class="idref" href="HoTT.Categories.DiscreteCategory.html#Core.discrete_category"><span class="id" title="definition">discrete_category</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span>))<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
 
 <br/>

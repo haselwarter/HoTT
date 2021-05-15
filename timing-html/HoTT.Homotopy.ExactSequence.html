@@ -36,42 +36,42 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 1
-Time: 0.051s">
-<div class="time" style="width: 44.347826086957%"></div>
+Time: 0.052s">
+<div class="time" style="width: 47.272727272727%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 1
-Time: 0.067s">
-<div class="time" style="width: 58.260869565217%"></div>
+Time: 0.07s">
+<div class="time" style="width: 63.636363636364%"></div>
 <pre>
 Require Import SuccessorStructure.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 2
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 3
-Time: 0.014s">
-<div class="time" style="width: 12.173913043478%"></div>
+Time: 0.015s">
+<div class="time" style="width: 13.636363636364%"></div>
 <pre>
 Require Import Pointed.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 4
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
 Require Import ReflectiveSubuniverse Modality Modalities.Identity Modalities.Descent.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 5
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -111,8 +111,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 16
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition IsComplex {F X Y} (i : F -&gt;* X) (f : X -&gt;* Y)
   := (f o* i ==* pconst).</pre>
 </div>
@@ -126,8 +126,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition cxfib {F X Y : pType} {i : F -&gt;* X} {f : X -&gt;* Y}
            (cx : IsComplex i f)
   : F -&gt;* pfiber f.</pre>
@@ -141,8 +141,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   srapply Build_pMap.</pre>
 </div>
@@ -174,14 +174,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> refine (path_sigma' _ (point_eq i) _); cbn.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 25
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (transport_paths_Fl _ _ @ _).</pre>
 </div>
@@ -194,15 +194,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     exact ((concat_p1 _)^ @ point_htpy cx).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 28
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -217,7 +217,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 31
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition pfib_cxfib {F X Y : pType} {i : F -&gt;* X} {f : X -&gt;* Y}
            (cx : IsComplex i f)
   : pfib f o* cxfib cx ==* i.</pre>
@@ -231,8 +231,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   srapply Build_pHomotopy.</pre>
 </div>
@@ -259,20 +259,20 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 37
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 37
-Time: 0.092s">
-<div class="time" style="width: 80%"></div>
+Time: 0.089s">
+<div class="time" style="width: 80.909090909091%"></div>
 <pre>
     rewrite ap_pr1_path_sigma; hott_simpl.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 38
-Time: 0.011s">
-<div class="time" style="width: 9.5652173913043%"></div>
+Time: 0.012s">
+<div class="time" style="width: 10.909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -287,7 +287,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition iscomplex_ptr (n : trunc_index)
        {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y) (cx : IsComplex i f)
   : IsComplex (ptr_functor n i) (ptr_functor n f).</pre>
@@ -301,8 +301,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 44
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   refine ((ptr_functor_pmap_compose n i f)^* @* _).</pre>
 </div>
@@ -322,8 +322,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -337,8 +337,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition iscomplex_loops
        {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y) (cx : IsComplex i f)
   : IsComplex (loops_functor i) (loops_functor f).</pre>
@@ -352,29 +352,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine ((loops_functor_compose f i)^* @* _ @* loops_functor_pconst).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   apply loops_2functor; assumption.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 55
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 56
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Definition iscomplex_iterated_loops
@@ -398,15 +398,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 63
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   apply iscomplex_loops; assumption.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 64
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -421,7 +421,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition iscomplex_homotopic_i {F X Y : pType}
            {i i' : F -&gt;* X} (ii : i' ==* i) (f : X -&gt;* Y) (cx : IsComplex i f)
   : IsComplex i' f.</pre>
@@ -449,8 +449,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 72
-Time: 0.026s">
-<div class="time" style="width: 22.608695652174%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition iscomplex_homotopic_f {F X Y : pType}
@@ -480,8 +480,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 79
-Time: 0.02s">
-<div class="time" style="width: 17.391304347826%"></div>
+Time: 0.023s">
+<div class="time" style="width: 20.909090909091%"></div>
 <pre>
 
 Definition iscomplex_cancelR {F X Y Y' : pType}
@@ -501,7 +501,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 87
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>Definition iscomplex_equiv_i {F F' X X' Y : pType}
            (i : F -&gt;* X) (i' : F' -&gt;* X')
            (g : F' &lt;~&gt;* F) (h : X' &lt;~&gt;* X) (p : Square g h i' i)
@@ -532,8 +532,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 95
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   refine ((pmap_compose_assoc _ _ _)^* @* _).</pre>
 </div>
@@ -553,8 +553,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 98
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -630,7 +630,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 108
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -653,7 +653,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 113
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>Global Instance ishprop_iscomplex_hset `{Univalence} {F X Y : pType} `{IsHSet Y} (i : F -&gt;* X) (f : X -&gt;* Y)
   : IsHProp (IsComplex i f) := {}.</pre>
 </div>
@@ -671,7 +671,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 119
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>Class IsExact (n : Modality) {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y) :=
 {
   cx_isexact : IsComplex i f ;
@@ -688,8 +688,8 @@ Global Existing Instance conn_map_isexact.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 125
-Time: 0.018s">
-<div class="time" style="width: 15.652173913043%"></div>
+Time: 0.019s">
+<div class="time" style="width: 17.272727272727%"></div>
 <pre>
 
 Definition issig_isexact (n : Modality) {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y)
@@ -719,22 +719,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 132
-Time: 0.011s">
-<div class="time" style="width: 9.5652173913043%"></div>
+Time: 0.012s">
+<div class="time" style="width: 10.909090909091%"></div>
 <pre>
   rapply (transport IsHProp (x := { cx : IsComplex i f &amp; IsConnMap n (cxfib cx) })).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 133
 Time: 0.016s">
-<div class="time" style="width: 13.913043478261%"></div>
+<div class="time" style="width: 14.545454545455%"></div>
 <pre>
   apply path_universe_uncurried; issig.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 134
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -748,8 +748,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 137
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition isexact_homotopic_i n  {F X Y : pType}
            {i i' : F -&gt;* X} (ii : i' ==* i) (f : X -&gt;* Y)
            `{IsExact n F X Y i f}
@@ -765,14 +765,14 @@ Proof.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 141
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   exists (iscomplex_homotopic_i ii f cx_isexact).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 142
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   refine (conn_map_homotopic n (cxfib cx_isexact) _ _ _).</pre>
 </div>
@@ -785,29 +785,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 144
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (path_sigma' _ (ii u)^ _).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 145
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   exact (transport_paths_Fl _ _ @ ((inverse2 (ap_V _ _) @ inv_V _) @@ 1)).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 146
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 147
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>  
 
 Definition isexact_homotopic_f n  {F X Y : pType}
@@ -839,7 +839,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 155
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   nrefine (cancelR_isequiv_conn_map n _ e).</pre>
 </div>
@@ -852,8 +852,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 157
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   refine (conn_map_homotopic n (cxfib (cx_isexact)) _ _ _).</pre>
 </div>
@@ -867,7 +867,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 159
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
@@ -886,14 +886,14 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 160
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   refine (concat_1p _ @ concat_V_pp _ _)^.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 161
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -908,7 +908,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 164
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>Definition isexact_equiv_i n  {F F' X X' Y : pType}
            (i : F -&gt;* X) (i' : F' -&gt;* X')
            (g : F' &lt;~&gt;* F) (h : X' &lt;~&gt;* X) (p : Square g h i' i)
@@ -926,14 +926,14 @@ Proof.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 170
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   exists (iscomplex_equiv_i i i' g h p f cx_isexact); cbn.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 171
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   snrefine (cancelR_equiv_conn_map n (C := pfiber f) _ _).</pre>
 </div>
@@ -947,7 +947,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 173
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> exact (@equiv_functor_hfiber _ _ _ _ (f o h) f h equiv_idmap
              (fun x =&gt; 1%path) (point Y)).</pre>
 </div>
@@ -960,14 +960,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 175
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> cbn; unfold functor_hfiber, functor_sigma; cbn.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 175
-Time: 0.037s">
-<div class="time" style="width: 32.173913043478%"></div>
+Time: 0.043s">
+<div class="time" style="width: 39.090909090909%"></div>
 <pre>
     refine (conn_map_homotopic n (@cxfib _ _ _ i f cx_isexact o g) _ _ _).</pre>
 </div>
@@ -987,8 +987,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 178
-Time: 0.027s">
-<div class="time" style="width: 23.478260869565%"></div>
+Time: 0.031s">
+<div class="time" style="width: 28.181818181818%"></div>
 <pre>
     abstract (
         rewrite transport_paths_Fl, ap_V, inv_V,
@@ -999,7 +999,7 @@ Time: 0.027s">
 <div class="code" title="File: ExactSequence.v
 Line: 183
 Time: 0.015s">
-<div class="time" style="width: 13.04347826087%"></div>
+<div class="time" style="width: 13.636363636364%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1013,8 +1013,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 186
-Time: 0.015s">
-<div class="time" style="width: 13.04347826087%"></div>
+Time: 0.012s">
+<div class="time" style="width: 10.909090909091%"></div>
 <pre>Definition isexact_square_if n  {F F' X X' Y Y' : pType}
            {i : F -&gt;* X} {i' : F' -&gt;* X'}
            {f : X -&gt;* Y} {f' : X' -&gt;* Y'}
@@ -1048,21 +1048,21 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 196
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   exists (iscomplex_cancelR i' f' k cx_isexact).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 197
-Time: 0.024s">
-<div class="time" style="width: 20.869565217391%"></div>
+Time: 0.015s">
+<div class="time" style="width: 13.636363636364%"></div>
 <pre>
   pose (e := (pequiv_pfiber (id_cate _) k (cat_idr _)^$ : pfiber f' &lt;~&gt;* pfiber (k o* f'))).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 198
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
   nrefine (cancelR_isequiv_conn_map n _ e).</pre>
 </div>
@@ -1074,8 +1074,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 199
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   refine (conn_map_homotopic n (cxfib (cx_isexact)) _ _ _).</pre>
 </div>
@@ -1113,8 +1113,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 202
-Time: 0.069s">
-<div class="time" style="width: 60%"></div>
+Time: 0.073s">
+<div class="time" style="width: 66.363636363636%"></div>
 <pre>
   cbn.</pre>
 </div>
@@ -1126,28 +1126,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 203
-Time: 0.08s">
-<div class="time" style="width: 69.565217391304%"></div>
+Time: 0.088s">
+<div class="time" style="width: 80%"></div>
 <pre> rewrite !concat_1p, !concat_p1, ap_pp_p, ap_pp, (ap_pp k _ (eissect k (point Y'))), ap_V, &lt;- !eisadj.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 203
-Time: 0.013s">
-<div class="time" style="width: 11.304347826087%"></div>
+Time: 0.015s">
+<div class="time" style="width: 13.636363636364%"></div>
 <pre> 
   rewrite &lt;- !ap_compose, concat_pp_p.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 204
-Time: 0.009s">
-<div class="time" style="width: 7.8260869565217%"></div>
+Time: 0.011s">
+<div class="time" style="width: 10%"></div>
 <pre> 
   rewrite (concat_A1p (eisretr k)), concat_pV_p.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 205
 Time: 0.008s">
-<div class="time" style="width: 6.9565217391304%"></div>
+<div class="time" style="width: 7.2727272727273%"></div>
 <pre>
   rewrite (concat_A1p (eisretr k)), concat_V_pp.</pre>
 </div>
@@ -1159,8 +1159,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 206
-Time: 0.096s">
-<div class="time" style="width: 83.478260869565%"></div>
+Time: 0.103s">
+<div class="time" style="width: 93.636363636364%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1230,7 +1230,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 215
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1260,7 +1260,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 221
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -1288,7 +1288,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 225
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Definition i_fiberseq {F X Y} (fs : FiberSeq F X Y)
@@ -1313,8 +1313,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 233
-Time: 0.019s">
-<div class="time" style="width: 16.521739130435%"></div>
+Time: 0.018s">
+<div class="time" style="width: 16.363636363636%"></div>
 <pre>
   srapply Build_IsExact; [ srapply Build_pHomotopy | ].</pre>
 </div>
@@ -1388,7 +1388,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 241
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
     apply whiskerR, inverse2, ap, concat_p1.</pre>
 </div>
@@ -1401,28 +1401,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 243
-Time: 0.015s">
-<div class="time" style="width: 13.04347826087%"></div>
+Time: 0.017s">
+<div class="time" style="width: 15.454545454545%"></div>
 <pre> intros [x p].</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 243
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
     apply contr_map_isequiv.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 244
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
     change (IsEquiv fs.2); exact _.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 245
 Time: 0.032s">
-<div class="time" style="width: 27.826086956522%"></div>
+<div class="time" style="width: 29.090909090909%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1445,8 +1445,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 251
-Time: 0.029s">
-<div class="time" style="width: 25.217391304348%"></div>
+Time: 0.026s">
+<div class="time" style="width: 23.636363636364%"></div>
 <pre>
   refine (Build_pEquiv _ _ (cxfib cx_isexact) _).</pre>
 </div>
@@ -1460,7 +1460,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 253
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> 
   rapply conn_map_isexact.</pre>
 </div>
@@ -1474,7 +1474,7 @@ Defined.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 255
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Definition fiberseq_isexact_purely {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y)
@@ -1543,7 +1543,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 270
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Global Instance isexact_loops {F X Y} (i : F -&gt;* X) (f : X -&gt;* Y)
            `{IsExact purely F X Y i f}
   : IsExact purely (loops_functor i) (loops_functor f).</pre>
@@ -1558,15 +1558,15 @@ Proof.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 273
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   refine (@isexact_homotopic_i purely _ _ _ _ (loops_functor i) _ (loops_functor f)
     (isexact_purely_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f)))).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 275
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   transitivity (loops_functor (pfib f) o* loops_functor (cxfib cx_isexact)).</pre>
 </div>
@@ -1607,13 +1607,13 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 280
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> refine (_ @* pmap_compose_assoc _ _ _).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 280
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
     refine (pmap_prewhisker (loops_functor (cxfib cx_isexact)) _).</pre>
 </div>
@@ -1626,22 +1626,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 282
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply pr1_pfiber_loops_functor.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 283
-Time: 0.006s">
-<div class="time" style="width: 5.2173913043478%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 284
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Global Instance isexact_iterated_loops {F X Y} (i : F -&gt;* X) (f : X -&gt;* Y)
@@ -1658,14 +1658,14 @@ Proof.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 289
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   induction n as [|n IHn]; [ assumption | apply isexact_loops; assumption ].</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 290
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1680,7 +1680,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 293
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Global Instance isexact_ptr `{Univalence} (n : trunc_index)
            {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y)
            `{IsExact (Tr n) F X Y i f}
@@ -1696,14 +1696,14 @@ Proof.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 297
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   exists (iscomplex_ptr n.+1 i f cx_isexact).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 298
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   simple notypeclasses refine
     (cancelR_conn_map (Tr n) (@tr n.+1 F) 
@@ -1718,8 +1718,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 302
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre> intros x; rapply isconnected_pred.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
@@ -1731,14 +1731,14 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 302
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   nrapply conn_map_homotopic.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 303
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
   2:nrapply (conn_map_compose _ (cxfib _)
                (functor_hfiber (fun y =&gt; (to_O_natural (Tr n.+1) f y)^)
@@ -1746,8 +1746,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 306
-Time: 0.01s">
-<div class="time" style="width: 8.695652173913%"></div>
+Time: 0.009s">
+<div class="time" style="width: 8.1818181818182%"></div>
 <pre>
   3:pose @O_lex_leq_Tr; rapply (OO_conn_map_functor_hfiber_to_O).</pre>
 </div>
@@ -1761,7 +1761,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 308
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre> intros x; refine (path_sigma' _ 1 _); cbn.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
@@ -1775,7 +1775,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 310
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>exact (1 @@ (concat_p1 _)^).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
@@ -1793,8 +1793,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 311
-Time: 0.01s">
-<div class="time" style="width: 8.695652173913%"></div>
+Time: 0.014s">
+<div class="time" style="width: 12.727272727273%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1809,7 +1809,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 314
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Global Instance isexact_ptr_purely `{Univalence} (n : trunc_index)
            {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y) `{IsExact purely F X Y i f}
   : IsExact (Tr n) (ptr_functor n.+1 i) (ptr_functor n.+1 f).</pre>
@@ -1823,8 +1823,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 317
-Time: 0.007s">
-<div class="time" style="width: 6.0869565217391%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   rapply isexact_ptr.</pre>
 </div>
@@ -1852,7 +1852,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 321
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1869,7 +1869,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 326
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>Definition square_pfib_pequiv_cxfib
            {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y)
            `{IsExact purely F X Y i f}
@@ -1942,8 +1942,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 340
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
   exact (((pfiber2_loops f) o*E (pequiv_pfiber _ _ (square_pfib_pequiv_cxfib i f)))^-1*).</pre>
 </div>
@@ -1957,7 +1957,7 @@ Defined.</pre>
 <div class="code" title="File: ExactSequence.v
 Line: 342
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Definition connecting_map {F X Y} (i : F -&gt;* X) (f : X -&gt;* Y)
@@ -1968,7 +1968,7 @@ Definition connecting_map {F X Y} (i : F -&gt;* X) (f : X -&gt;* Y)
 <div class="code" title="File: ExactSequence.v
 Line: 347
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Global Instance isexact_connect_R {F X Y} (i : F -&gt;* X) (f : X -&gt;* Y)
@@ -1984,8 +1984,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 352
-Time: 0.008s">
-<div class="time" style="width: 6.9565217391304%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.4545454545455%"></div>
 <pre>
   refine (isexact_equiv_i (Y := F) purely
           (pfib (pfib i)) (loops_functor f)
@@ -1997,8 +1997,8 @@ Time: 0.008s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 359
-Time: 0.012s">
-<div class="time" style="width: 10.434782608696%"></div>
+Time: 0.011s">
+<div class="time" style="width: 10%"></div>
 <pre>
   refine (vinverse 
             ((loops_inv X) o*E
@@ -2008,8 +2008,8 @@ Time: 0.012s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 364
-Time: 0.011s">
-<div class="time" style="width: 9.5652173913043%"></div>
+Time: 0.014s">
+<div class="time" style="width: 12.727272727273%"></div>
 <pre>
   refine (vconcat (f03 := loops_inv X o* pfiber2_loops (pfib f))
                   (f01 := pequiv_pfiber _ _ (square_pequiv_pfiber _ _ (square_pfib_pequiv_cxfib i f)))
@@ -2026,7 +2026,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 369
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre> exact (square_pequiv_pfiber _ _ (square_pequiv_pfiber _ _ (square_pfib_pequiv_cxfib i f))).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
@@ -2044,8 +2044,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 370
-Time: 0.006s">
-<div class="time" style="width: 5.2173913043478%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2062,8 +2062,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 375
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Record LongExactSequence (k : Modality) (N : SuccStr) : Type :=
 {
   les_carrier : N -&gt; pType;
@@ -2104,7 +2104,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 386
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>Definition trunc_les `{Univalence} (k : trunc_index) {N : SuccStr}
            (S : LongExactSequence purely N)
   : LongExactSequence (Tr k) N
@@ -2126,7 +2126,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 395
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition loops_carrier (F X Y : pType) (n : N3) : pType :=
   match n with
   | (n, inl (inl (inl x))) =&gt; Empty_ind _ x
@@ -2160,14 +2160,14 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 406
-Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
   srefine (Build_LongExactSequence purely (N3) (loops_carrier F X Y) _ _).</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 407
-Time: 0.115s">
+Time: 0.11s">
 <div class="time" style="width: 100%"></div>
 <pre>
   all:intros [n [[[[]|[]]|[]]|[]]]; cbn.</pre>
@@ -2220,7 +2220,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 411
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre> exact (connecting_map (iterated_loops_functor n i)
                           (iterated_loops_functor n f)).</pre>
 </div>
@@ -2233,14 +2233,14 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 412
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.7272727272727%"></div>
 <pre>
   all:exact _.</pre>
 </div>
 <div class="code" title="File: ExactSequence.v
 Line: 413
-Time: 0.113s">
-<div class="time" style="width: 98.260869565217%"></div>
+Time: 0.1s">
+<div class="time" style="width: 90.909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2255,7 +2255,7 @@ Time: 0s">
 <div class="code" title="File: ExactSequence.v
 Line: 416
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Definition Pi_les `{Univalence} {F X Y : pType} (i : F -&gt;* X) (f : X -&gt;* Y)
            `{IsExact purely F X Y i f}
   : LongExactSequence (Tr (-1)) (N3)

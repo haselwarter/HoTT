@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: Square.v
 Line: 1
-Time: 0.033s">
-<div class="time" style="width: 50%"></div>
+Time: 0.029s">
+<div class="time" style="width: 47.540983606557%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 1
 Time: 0.002s">
-<div class="time" style="width: 3.030303030303%"></div>
+<div class="time" style="width: 3.2786885245902%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 3.030303030303%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.6393442622951%"></div>
 <pre>
 Require Import WildCat.Equiv.</pre>
 </div>
@@ -65,7 +65,7 @@ Time: 0s">
 <div class="code" title="File: Square.v
 Line: 10
 Time: 0.003s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 4.9180327868852%"></div>
 <pre>Definition Square {A : Type} `{Is1Cat A} {x00 x20 x02 x22 : A}
   (f01 : x00 $-&gt; x02) (f21 : x20 $-&gt; x22) (f10 : x00 $-&gt; x20) (f12 : x02 $-&gt; x22) 
   : Type
@@ -96,8 +96,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 24
-Time: 0.005s">
-<div class="time" style="width: 7.5757575757576%"></div>
+Time: 0.004s">
+<div class="time" style="width: 6.5573770491803%"></div>
 <pre>Context {A : Type} `{HasEquivs A} {x x' x00 x20 x40 x02 x22 x42 x04 x24 x44 : A}
     {f10 f10' : x00 $-&gt; x20} {f30 : x20 $-&gt; x40} 
     {f12 f12' : x02 $-&gt; x22} {f32 : x22 $-&gt; x42} 
@@ -117,13 +117,13 @@ Time: 0s">
 <div class="code" title="File: Square.v
 Line: 32
 Time: 0.003s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 4.9180327868852%"></div>
 <pre>Definition Build_Square (p : f21 $o f10 $== f12 $o f01) : Square f01 f21 f10 f12 := p.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 32
-Time: 0.004s">
-<div class="time" style="width: 6.0606060606061%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.9180327868852%"></div>
 <pre>
   Definition gpdhom_square (s : Square f01 f21 f10 f12) : f21 $o f10 $== f12 $o f01 := s.</pre>
 </div>
@@ -138,15 +138,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 36
-Time: 0.011s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.01s">
+<div class="time" style="width: 16.393442622951%"></div>
 <pre>Definition hdeg_square {f f' : x $-&gt; x'} (p : f $== f') : Square f f' (Id x) (Id x')
     := cat_idr f' $@ p^$ $@ (cat_idl f)^$.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 37
-Time: 0.01s">
-<div class="time" style="width: 15.151515151515%"></div>
+Time: 0.009s">
+<div class="time" style="width: 14.754098360656%"></div>
 <pre>
   Definition vdeg_square {f f' : x $-&gt; x'} (p : f $== f') : Square (Id x) (Id x') f f'
     := cat_idl f $@ p $@ (cat_idr f')^$.</pre>
@@ -162,14 +162,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 42
-Time: 0.002s">
-<div class="time" style="width: 3.030303030303%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.6393442622951%"></div>
 <pre>Definition hrefl (f : x $-&gt; x') : Square f f (Id x) (Id x') := hdeg_square (Id f).</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 42
-Time: 0.003s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.2786885245902%"></div>
 <pre>
   Definition vrefl (f : x $-&gt; x') : Square (Id x) (Id x') f f := vdeg_square (Id f).</pre>
 </div>
@@ -185,7 +185,7 @@ Time: 0s">
 <div class="code" title="File: Square.v
 Line: 46
 Time: 0.002s">
-<div class="time" style="width: 3.030303030303%"></div>
+<div class="time" style="width: 3.2786885245902%"></div>
 <pre>Definition transpose (s : Square f01 f21 f10 f12) : Square f10 f12 f01 f21 := s^$.</pre>
 </div>
 <div class="code" title="File: Square.v
@@ -199,16 +199,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 49
-Time: 0.032s">
-<div class="time" style="width: 48.484848484848%"></div>
+Time: 0.03s">
+<div class="time" style="width: 49.180327868852%"></div>
 <pre>Definition hconcat (s : Square f01 f21 f10 f12) (t : Square f21 f41 f30 f32)
     : Square f01 f41 (f30 $o f10) (f32 $o f12)
     := (cat_assoc _ _ _)^$ $@ (t $@R f10) $@ cat_assoc _ _ _ $@ (f32 $@L s) $@ (cat_assoc _ _ _)^$.</pre>
 </div>
 <div class="code" title="File: Square.v
 Line: 51
-Time: 0.028s">
-<div class="time" style="width: 42.424242424242%"></div>
+Time: 0.025s">
+<div class="time" style="width: 40.983606557377%"></div>
 <pre>
   Definition vconcat (s : Square f01 f21 f10 f12) (t : Square f03 f23 f12 f14)
     : Square (f03 $o f01) (f23 $o f21) f10 f14
@@ -225,7 +225,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 57
-Time: 0.066s">
+Time: 0.061s">
 <div class="time" style="width: 100%"></div>
 <pre>Definition hinverse (f10 : x00 $&lt;~&gt; x20) (f12 : x02 $&lt;~&gt; x22) (s : Square f01 f21 f10 f12)
     : Square f21 f01 f10^-1$ f12^-1$
@@ -246,8 +246,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 66
-Time: 0.007s">
-<div class="time" style="width: 10.606060606061%"></div>
+Time: 0.006s">
+<div class="time" style="width: 9.8360655737705%"></div>
 <pre>Definition hconcatL (p : f01' $== f01) (s : Square f01 f21 f10 f12)
     : Square f01' f21 f10 f12
     := s $@ (f12 $@L p^$).</pre>
@@ -264,7 +264,7 @@ Time: 0s">
 <div class="code" title="File: Square.v
 Line: 71
 Time: 0.005s">
-<div class="time" style="width: 7.5757575757576%"></div>
+<div class="time" style="width: 8.1967213114754%"></div>
 <pre>Definition hconcatR (s : Square f01 f21 f10 f12) (p : f21' $== f21)
     : Square f01 f21' f10 f12
     := (p $@R f10) $@ s.</pre>
@@ -281,7 +281,7 @@ Time: 0s">
 <div class="code" title="File: Square.v
 Line: 76
 Time: 0.005s">
-<div class="time" style="width: 7.5757575757576%"></div>
+<div class="time" style="width: 8.1967213114754%"></div>
 <pre>Definition vconcatL (p : f10' $== f10) (s : Square f01 f21 f10 f12)
     : Square f01 f21 f10' f12
     := (f21 $@L p) $@ s.</pre>
@@ -298,7 +298,7 @@ Time: 0s">
 <div class="code" title="File: Square.v
 Line: 81
 Time: 0.006s">
-<div class="time" style="width: 9.0909090909091%"></div>
+<div class="time" style="width: 9.8360655737705%"></div>
 <pre>Definition vconcatR (s : Square f01 f21 f10 f12) (p : f12' $== f12)
     : Square f01 f21 f10 f12'
     := s $@ (p^$ $@R f01).</pre>
@@ -306,7 +306,7 @@ Time: 0.006s">
 <div class="code" title="File: Square.v
 Line: 83
 Time: 0.004s">
-<div class="time" style="width: 6.0606060606061%"></div>
+<div class="time" style="width: 6.5573770491803%"></div>
 <pre>
 
 End Squares.</pre>
@@ -330,8 +330,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 90
-Time: 0.007s">
-<div class="time" style="width: 10.606060606061%"></div>
+Time: 0.006s">
+<div class="time" style="width: 9.8360655737705%"></div>
 <pre>Context {A B : Type} `{HasEquivs A} `{Is1Cat B}
     {x x' x00 x20 x40 x02 x22 x42 x04 x24 x44 : A}
     {f10 f10' : x00 $-&gt; x20} {f30 : x20 $-&gt; x40} 
@@ -351,8 +351,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 99
-Time: 0.009s">
-<div class="time" style="width: 13.636363636364%"></div>
+Time: 0.008s">
+<div class="time" style="width: 13.114754098361%"></div>
 <pre>Definition vinverse (f01 : x00 $&lt;~&gt; x02) (f21 : x20 $&lt;~&gt; x22) (s : Square f01 f21 f10 f12)
     : Square (f01^-1$) (f21^-1$) f12 f10
     := transpose (hinverse _ _ (transpose s)).</pre>
@@ -369,8 +369,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 105
-Time: 0.024s">
-<div class="time" style="width: 36.363636363636%"></div>
+Time: 0.022s">
+<div class="time" style="width: 36.065573770492%"></div>
 <pre>Definition whiskerTL {f : x $-&gt; x00} (s : Square f01 f21 f10 f12)
     : Square (f01 $o f) f21 (f10 $o f) f12
     := (cat_assoc _ _ _)^$ $@ (s $@R f) $@ cat_assoc _ _ _.</pre>
@@ -378,7 +378,7 @@ Time: 0.024s">
 <div class="code" title="File: Square.v
 Line: 107
 Time: 0.032s">
-<div class="time" style="width: 48.484848484848%"></div>
+<div class="time" style="width: 52.459016393443%"></div>
 <pre>
 
   Definition whiskerBR {f : x22 $-&gt; x} (s : Square f01 f21 f10 f12)
@@ -387,8 +387,8 @@ Time: 0.032s">
 </div>
 <div class="code" title="File: Square.v
 Line: 111
-Time: 0.041s">
-<div class="time" style="width: 62.121212121212%"></div>
+Time: 0.039s">
+<div class="time" style="width: 63.934426229508%"></div>
 <pre>
 
   Definition whiskerBL {f : x $&lt;~&gt; x02} (s : Square f01 f21 f10 f12)
@@ -397,8 +397,8 @@ Time: 0.041s">
 </div>
 <div class="code" title="File: Square.v
 Line: 115
-Time: 0.042s">
-<div class="time" style="width: 63.636363636364%"></div>
+Time: 0.039s">
+<div class="time" style="width: 63.934426229508%"></div>
 <pre>
 
   Definition whiskerLB {f : x02 $&lt;~&gt; x} (s : Square f01 f21 f10 f12)
@@ -407,8 +407,8 @@ Time: 0.042s">
 </div>
 <div class="code" title="File: Square.v
 Line: 119
-Time: 0.039s">
-<div class="time" style="width: 59.090909090909%"></div>
+Time: 0.037s">
+<div class="time" style="width: 60.655737704918%"></div>
 <pre>
 
   Definition whiskerTR {f : x20 $&lt;~&gt; x} (s : Square f01 f21 f10 f12)
@@ -417,8 +417,8 @@ Time: 0.039s">
 </div>
 <div class="code" title="File: Square.v
 Line: 123
-Time: 0.039s">
-<div class="time" style="width: 59.090909090909%"></div>
+Time: 0.037s">
+<div class="time" style="width: 60.655737704918%"></div>
 <pre>
 
   Definition whiskerRT {f : x $&lt;~&gt; x20} (s : Square f01 f21 f10 f12)
@@ -437,8 +437,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Square.v
 Line: 131
-Time: 0.012s">
-<div class="time" style="width: 18.181818181818%"></div>
+Time: 0.011s">
+<div class="time" style="width: 18.032786885246%"></div>
 <pre>Definition move_bottom_left {f01 : x00 $-&gt; x} {f01' : x $-&gt; x02}
     (s : Square (f01' $o f01) f21 f10 f12) 
     : Square f01 f21 f10 (f12 $o f01')
@@ -446,8 +446,8 @@ Time: 0.012s">
 </div>
 <div class="code" title="File: Square.v
 Line: 134
-Time: 0.004s">
-<div class="time" style="width: 6.0606060606061%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.9180327868852%"></div>
 <pre>
 
   Definition move_left_bottom {f12 : x02 $-&gt; x} {f12' : x $-&gt; x22}
@@ -457,8 +457,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Square.v
 Line: 139
-Time: 0.013s">
-<div class="time" style="width: 19.69696969697%"></div>
+Time: 0.012s">
+<div class="time" style="width: 19.672131147541%"></div>
 <pre>
 
   Definition move_right_top {f10 : x00 $-&gt; x} {f10' : x $-&gt; x20}
@@ -468,8 +468,8 @@ Time: 0.013s">
 </div>
 <div class="code" title="File: Square.v
 Line: 144
-Time: 0.019s">
-<div class="time" style="width: 28.787878787879%"></div>
+Time: 0.017s">
+<div class="time" style="width: 27.868852459016%"></div>
 <pre>
 
   Definition move_top_right {f21 : x20 $-&gt; x} {f21' : x $-&gt; x22}
@@ -479,8 +479,8 @@ Time: 0.019s">
 </div>
 <div class="code" title="File: Square.v
 Line: 149
-Time: 0.031s">
-<div class="time" style="width: 46.969696969697%"></div>
+Time: 0.032s">
+<div class="time" style="width: 52.459016393443%"></div>
 <pre>
 
   Definition fmap_square (f : A -&gt; B) `{!Is0Functor f} `{!Is1Functor f}
@@ -490,8 +490,8 @@ Time: 0.031s">
 </div>
 <div class="code" title="File: Square.v
 Line: 154
-Time: 0.004s">
-<div class="time" style="width: 6.0606060606061%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.9180327868852%"></div>
 <pre>
 
 End Squares2.</pre>

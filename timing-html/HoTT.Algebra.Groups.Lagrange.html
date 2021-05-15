@@ -30,28 +30,28 @@ pre {
 
 <div class="code" title="File: Lagrange.v
 Line: 1
-Time: 0.052s">
-<div class="time" style="width: 57.777777777778%"></div>
+Time: 0.05s">
+<div class="time" style="width: 56.818181818182%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 1
-Time: 0.09s">
+Time: 0.088s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Algebra.Groups.Group.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 2.2222222222222%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
 Require Import Algebra.Groups.Subgroup.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 3
-Time: 0.011s">
-<div class="time" style="width: 12.222222222222%"></div>
+Time: 0.01s">
+<div class="time" style="width: 11.363636363636%"></div>
 <pre>
 Require Import Algebra.Groups.QuotientGroup.</pre>
 </div>
@@ -65,7 +65,7 @@ Require Import Spaces.Finite.</pre>
 <div class="code" title="File: Lagrange.v
 Line: 5
 Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
 Require Import Spaces.Nat.</pre>
 </div>
@@ -111,22 +111,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 15
-Time: 0.064s">
-<div class="time" style="width: 71.111111111111%"></div>
+Time: 0.059s">
+<div class="time" style="width: 67.045454545455%"></div>
 <pre>
   refine (fcard (Quotient (in_cosetL H))).</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 16
-Time: 0.008s">
-<div class="time" style="width: 8.8888888888889%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7.9545454545455%"></div>
 <pre>
   nrapply finite_quotient.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 17
-Time: 0.007s">
-<div class="time" style="width: 7.7777777777778%"></div>
+Time: 0.009s">
+<div class="time" style="width: 10.227272727273%"></div>
 <pre>
   1-5: exact _.</pre>
 </div>
@@ -139,8 +139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 19
-Time: 0.006s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7.9545454545455%"></div>
 <pre>
   pose (dec_H := detachable_finite_subset H).</pre>
 </div>
@@ -169,7 +169,7 @@ Time: 0s">
 <div class="code" title="File: Lagrange.v
 Line: 24
 Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>Theorem lagrange {U : Univalence} (G : Group) (H : Subgroup G)
   (fin_G : Finite G) (fin_H : Finite H)
   : exists d, d * (fcard H) = fcard G.</pre>
@@ -184,49 +184,49 @@ Proof.</pre>
 <div class="code" title="File: Lagrange.v
 Line: 27
 Time: 0.002s">
-<div class="time" style="width: 2.2222222222222%"></div>
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
   exists (subgroup_index G H _ _).</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
   symmetry.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 29
-Time: 0.083s">
-<div class="time" style="width: 92.222222222222%"></div>
+Time: 0.079s">
+<div class="time" style="width: 89.772727272727%"></div>
 <pre>
   refine (fcard_quotient (in_cosetL H) @ _).</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
   refine (_ @ finadd_const _ _).</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 31
 Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
   apply ap, path_forall.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 32
-Time: 0.027s">
-<div class="time" style="width: 30%"></div>
+Time: 0.022s">
+<div class="time" style="width: 25%"></div>
 <pre>
   srapply Quotient_ind_hprop.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
   simpl.</pre>
 </div>
@@ -245,8 +245,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 1.1111111111111%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply fcard_equiv'.</pre>
 </div>
@@ -266,8 +266,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 38
-Time: 0.002s">
-<div class="time" style="width: 2.2222222222222%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
   snrapply equiv_functor_sigma.</pre>
 </div>
@@ -287,22 +287,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 41
-Time: 0.014s">
-<div class="time" style="width: 15.555555555556%"></div>
+Time: 0.011s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
   exact _.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 42
 Time: 0.008s">
-<div class="time" style="width: 8.8888888888889%"></div>
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 43
-Time: 0.015s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.011s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Corollary lagrange_normal {U : Univalence} (G : Group) (H : NormalSubgroup G)
@@ -319,14 +319,14 @@ Proof.</pre>
 <div class="code" title="File: Lagrange.v
 Line: 48
 Time: 0.013s">
-<div class="time" style="width: 14.444444444444%"></div>
+<div class="time" style="width: 14.772727272727%"></div>
 <pre>
   apply lagrange.</pre>
 </div>
 <div class="code" title="File: Lagrange.v
 Line: 49
 Time: 0.011s">
-<div class="time" style="width: 12.222222222222%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Defined.</pre>
 </div>

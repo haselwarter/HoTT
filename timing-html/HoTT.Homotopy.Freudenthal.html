@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: Freudenthal.v
 Line: 1
-Time: 0.037s">
-<div class="time" style="width: 26.618705035971%"></div>
+Time: 0.034s">
+<div class="time" style="width: 25.563909774436%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 1
-Time: 0.021s">
-<div class="time" style="width: 15.107913669065%"></div>
+Time: 0.017s">
+<div class="time" style="width: 12.781954887218%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 2
-Time: 0.004s">
-<div class="time" style="width: 2.8776978417266%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.7593984962406%"></div>
 <pre>
 Require Import Colimits.Pushout.</pre>
 </div>
@@ -57,15 +57,15 @@ Require Import Colimits.SpanPushout.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 4
-Time: 0.056s">
-<div class="time" style="width: 40.287769784173%"></div>
+Time: 0.061s">
+<div class="time" style="width: 45.864661654135%"></div>
 <pre>
 Require Import HoTT.Truncations.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 5
-Time: 0.001s">
-<div class="time" style="width: 0.71942446043165%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Homotopy.Join.</pre>
 </div>
@@ -79,7 +79,7 @@ Require Import Homotopy.Suspension.</pre>
 <div class="code" title="File: Freudenthal.v
 Line: 7
 Time: 0.003s">
-<div class="time" style="width: 2.158273381295%"></div>
+<div class="time" style="width: 2.2556390977444%"></div>
 <pre>
 Require Import Homotopy.BlakersMassey.</pre>
 </div>
@@ -97,8 +97,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 13
-Time: 0.001s">
-<div class="time" style="width: 0.71942446043165%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance freudenthal `{Univalence} (n : trunc_index)
            (X : Type) `{IsConnected n.+1 X}
   : IsConnMap (n +2+ n) (@merid X).</pre>
@@ -112,15 +112,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 16
-Time: 0.027s">
-<div class="time" style="width: 19.424460431655%"></div>
+Time: 0.024s">
+<div class="time" style="width: 18.045112781955%"></div>
 <pre>
   pose (blakers_massey n n (fun (u v:Unit) =&gt; X) tt tt).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 17
 Time: 0.007s">
-<div class="time" style="width: 5.0359712230216%"></div>
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
   pose (f := equiv_pushout (equiv_contr_sigma (fun _ : Unit * Unit =&gt; X))^-1
                            (equiv_idmap Unit) (equiv_idmap Unit)
@@ -129,8 +129,8 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 21
-Time: 0.065s">
-<div class="time" style="width: 46.762589928058%"></div>
+Time: 0.05s">
+<div class="time" style="width: 37.593984962406%"></div>
 <pre>
   srefine (@cancelR_equiv_conn_map (n +2+ n) _ _ _ _
              (equiv_ap' f North South)
@@ -146,8 +146,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 26
-Time: 0.022s">
-<div class="time" style="width: 15.827338129496%"></div>
+Time: 0.018s">
+<div class="time" style="width: 13.533834586466%"></div>
 <pre>
   refine (_ @ (equiv_pushout_pglue
                  (equiv_contr_sigma (fun _ : Unit * Unit =&gt; X))^-1
@@ -156,14 +156,14 @@ Time: 0.022s">
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 30
-Time: 0.005s">
-<div class="time" style="width: 3.5971223021583%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.0075187969925%"></div>
 <pre>
   exact ((concat_p1 _ @ concat_1p _)^).</pre>
 </div>
 <div class="code" title="File: Freudenthal.v
 Line: 31
-Time: 0.139s">
+Time: 0.133s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>

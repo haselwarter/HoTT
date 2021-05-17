@@ -41,14 +41,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 5
-Time: 0.131s">
+Time: 0.155s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export HoTT.Algebra.Universal.Algebra.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 5
-Time: 0.014s">
-<div class="time" style="width: 10.687022900763%"></div>
+Time: 0.03s">
+<div class="time" style="width: 19.354838709677%"></div>
 <pre>
 
 Require Import
@@ -88,8 +88,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 21
-Time: 0.002s">
-<div class="time" style="width: 1.5267175572519%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.5806451612903%"></div>
 <pre>Monomorphic Definition head_dom' {σ} (A : Carriers σ) (n : nat)
   : forall (N : n &gt; 0) (ss : FinSeq n (Sort σ)) (a : forall i, A (ss i)),
     A (fshead' n N ss)
@@ -101,7 +101,7 @@ Time: 0.002s">
 <div class="code" title="File: Operation.v
 Line: 27
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 Monomorphic Definition head_dom {σ} (A : Carriers σ) {n : nat}
@@ -122,8 +122,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>Monomorphic Definition tail_dom' {σ} (A : Carriers σ) (n : nat)
   : forall (ss : FinSeq n (Sort σ)) (a : forall i, A (ss i)) (i : Fin (pred n)),
     A (fstail' n ss i)
@@ -134,8 +134,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 Monomorphic Definition tail_dom {σ} (A : Carriers σ) {n : nat}
@@ -156,8 +156,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 51
-Time: 0.011s">
-<div class="time" style="width: 8.3969465648855%"></div>
+Time: 0.012s">
+<div class="time" style="width: 7.741935483871%"></div>
 <pre>Monomorphic Definition cons_dom' {σ} (A : Carriers σ) {n : nat}
   : forall (i : Fin n) (ss : FinSeq n (Sort σ)) (N : n &gt; 0),
     A (fshead' n N ss) -&gt; (forall i, A (fstail' n ss i)) -&gt; A (ss i)
@@ -170,8 +170,8 @@ Time: 0.011s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
 
 Definition cons_dom {σ} (A : Carriers σ)
@@ -192,8 +192,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 68
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition nil_dom {σ} (A : Carriers σ) (ss : FinSeq 0 (Sort σ))
   : forall i : Fin 0, A (ss i)
   := Empty_ind (A o ss).</pre>
@@ -211,7 +211,7 @@ Time: 0s">
 <div class="code" title="File: Operation.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>Definition FiniteOperation {σ : Signature} (A : Carriers σ)
   {n : nat} (ss : FinSeq n (Sort σ)) (t : Sort σ) : Type
   := Operation A {| Arity := Fin n; sorts_dom := ss; sort_cod := t |}.</pre>
@@ -231,8 +231,8 @@ CurriedOperation A [s1, ..., sn] t := A s1 -&gt; ... -&gt; A sn -&gt; A t.
 </div>
 <div class="code" title="File: Operation.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>Fixpoint CurriedOperation {σ} (A : Carriers σ) {n : nat}
   : (FinSeq n (Sort σ)) -&gt; Sort σ -&gt; Type
   := match n with
@@ -259,8 +259,8 @@ See [equiv_operation_curry] below. *)
 </div>
 <div class="code" title="File: Operation.v
 Line: 96
-Time: 0.004s">
-<div class="time" style="width: 3.0534351145038%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>Fixpoint operation_uncurry {σ} (A : Carriers σ) {n : nat}
   : forall (ss : FinSeq n (Sort σ)) (t : Sort σ),
     CurriedOperation A ss t -&gt; FiniteOperation A ss t
@@ -273,8 +273,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 104
-Time: 0.009s">
-<div class="time" style="width: 6.8702290076336%"></div>
+Time: 0.011s">
+<div class="time" style="width: 7.0967741935484%"></div>
 <pre>
 
 Local Example computation_example_operation_uncurry
@@ -301,8 +301,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 114
-Time: 0.004s">
-<div class="time" style="width: 3.0534351145038%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -324,8 +324,8 @@ See [equiv_operation_curry] below. *)
 </div>
 <div class="code" title="File: Operation.v
 Line: 124
-Time: 0.004s">
-<div class="time" style="width: 3.0534351145038%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>Fixpoint operation_curry {σ} (A : Carriers σ) {n : nat} 
   : forall (ss : FinSeq n (Sort σ)) (t : Sort σ),
     FiniteOperation A ss t -&gt; CurriedOperation A ss t
@@ -338,8 +338,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 132
-Time: 0.006s">
-<div class="time" style="width: 4.5801526717557%"></div>
+Time: 0.007s">
+<div class="time" style="width: 4.5161290322581%"></div>
 <pre>
 
 Local Example computation_example_operation_curry
@@ -360,22 +360,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 143
-Time: 0.002s">
-<div class="time" style="width: 1.5267175572519%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.5806451612903%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 144
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 Lemma expand_cons_dom' {σ} (A : Carriers σ) (n : nat)
@@ -399,8 +399,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 151
-Time: 0.002s">
-<div class="time" style="width: 1.5267175572519%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
   induction i using fin_ind; intros ss N a.</pre>
 </div>
@@ -419,8 +419,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 153
-Time: 0.007s">
-<div class="time" style="width: 5.3435114503817%"></div>
+Time: 0.009s">
+<div class="time" style="width: 5.8064516129032%"></div>
 <pre>
     rewrite compute_fin_ind_fin_zero.</pre>
 </div>
@@ -446,22 +446,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 156
-Time: 0.023s">
-<div class="time" style="width: 17.557251908397%"></div>
+Time: 0.031s">
+<div class="time" style="width: 20%"></div>
 <pre>
     by rewrite compute_fin_ind_fsucc.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 157
-Time: 0.019s">
-<div class="time" style="width: 14.503816793893%"></div>
+Time: 0.025s">
+<div class="time" style="width: 16.129032258065%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 158
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 Lemma expand_cons_dom `{Funext} {σ} (A : Carriers σ)
@@ -484,22 +484,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 164
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
   apply expand_cons_dom'.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 165
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 166
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 Lemma path_operation_curry_to_cunurry `{Funext} {σ} (A : Carriers σ)
@@ -536,8 +536,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 174
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre> funext d.</pre>
 </div>
 <div class="code" title="File: Operation.v
@@ -548,8 +548,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 174
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre> apply path_contr.</pre>
 </div>
 <div class="code" title="File: Operation.v
@@ -568,7 +568,7 @@ Time: 0s">
 <div class="code" title="File: Operation.v
 Line: 175
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     refine (ap (fun x =&gt; x _) (IHn _ _) @ _).</pre>
 </div>
@@ -581,22 +581,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 177
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
     apply expand_cons_dom.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 178
-Time: 0.004s">
-<div class="time" style="width: 3.0534351145038%"></div>
+Time: 0.012s">
+<div class="time" style="width: 7.741935483871%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 179
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 Lemma path_operation_uncurry_to_curry `{Funext} {σ} (A : Carriers σ)
@@ -654,8 +654,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 190
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.008s">
+<div class="time" style="width: 5.1612903225806%"></div>
 <pre>
   simpl.</pre>
 </div>
@@ -668,15 +668,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 192
-Time: 0.044s">
-<div class="time" style="width: 33.587786259542%"></div>
+Time: 0.051s">
+<div class="time" style="width: 32.903225806452%"></div>
 <pre>
   rewrite compute_fin_ind_fin_zero.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 193
 Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
   refine (ap (operation_uncurry A (fstail ss) t (a x)) _).</pre>
 </div>
@@ -689,15 +689,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 195
-Time: 0.027s">
-<div class="time" style="width: 20.610687022901%"></div>
+Time: 0.035s">
+<div class="time" style="width: 22.58064516129%"></div>
 <pre>
   now rewrite compute_fin_ind_fsucc.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 196
-Time: 0.026s">
-<div class="time" style="width: 19.847328244275%"></div>
+Time: 0.031s">
+<div class="time" style="width: 20%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -766,15 +766,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Operation.v
 Line: 206
-Time: 0.001s">
-<div class="time" style="width: 0.76335877862595%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Operation.v
 Line: 207
-Time: 0.007s">
-<div class="time" style="width: 5.3435114503817%"></div>
+Time: 0.009s">
+<div class="time" style="width: 5.8064516129032%"></div>
 <pre>
 
 Definition equiv_operation_curry `{Funext} {σ} (A : Carriers σ)

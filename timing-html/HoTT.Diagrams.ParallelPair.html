@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: ParallelPair.v
 Line: 1
-Time: 0.045s">
+Time: 0.034s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 1
-Time: 0.019s">
-<div class="time" style="width: 42.222222222222%"></div>
+Time: 0.016s">
+<div class="time" style="width: 47.058823529412%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
@@ -50,15 +50,15 @@ Require Import Diagrams.Graph.</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 2.2222222222222%"></div>
+Time: 0.003s">
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
 Require Import Diagrams.Diagram.</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 4
 Time: 0.001s">
-<div class="time" style="width: 2.2222222222222%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
 Require Import Diagrams.Cocone.</pre>
 </div>
@@ -154,7 +154,7 @@ Time: 0s">
 <div class="code" title="File: ParallelPair.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 2.2222222222222%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   intros [] [] []; [exact f | exact g].</pre>
 </div>
@@ -177,8 +177,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>Definition Build_parallel_pair_cocone {A B Q} {f g : B -&gt; A}
   `(q: A -&gt; Q) (Hq: q o g == q o f)
   : Cocone (parallel_pair f g) Q.</pre>
@@ -192,29 +192,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 28
-Time: 0.001s">
-<div class="time" style="width: 2.2222222222222%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   srapply Build_Cocone.</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   1: intros []; [exact (q o f) | exact q].</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 30
 Time: 0.005s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 14.705882352941%"></div>
 <pre>
   intros [] [] []; [reflexivity | exact Hq].</pre>
 </div>
 <div class="code" title="File: ParallelPair.v
 Line: 31
 Time: 0.002s">
-<div class="time" style="width: 4.4444444444444%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 Defined.</pre>
 </div>

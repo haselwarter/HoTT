@@ -61,21 +61,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 25
-Time: 0.349s">
-<div class="time" style="width: 99.147727272727%"></div>
+Time: 0.31s">
+<div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Require Import Spaces.Nat.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import HoTT.Metatheory.Core HoTT.Metatheory.FunextVarieties HoTT.Metatheory.UnivalenceImpliesFunext.</pre>
 </div>
@@ -115,14 +115,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>Definition Book_1_1 := (fun (A B C : Type) (f : A -&gt; B) (g : B -&gt; C) =&gt; g o f).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 36
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
 Theorem Book_1_1_refl : forall (A B C D : Type) (f : A -&gt; B) (g : B -&gt; C) (h : C -&gt; D),
@@ -314,8 +314,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 73
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Let sig_rec_proj C (g : forall (x : A), B x -&gt; C) (p : exists (x : A), B x) : C :=
     g (pr1 p) (pr2 p).</pre>
 </div>
@@ -406,8 +406,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 92
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Let prod_ind_eta (C : A * B -&gt; Type) (g : forall (x : A) (y : B), C (x, y)) (x : A * B) : C x :=
@@ -487,8 +487,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 107
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Let sig_ind_eta (C : (exists (a : A), B a) -&gt; Type)
@@ -563,8 +563,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 128
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Definition Book_1_5_sum (A B : Type) := { x : Bool &amp; if x then A else B }.</pre>
 </div>
@@ -585,8 +585,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 132
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
   Definition Book_1_5_ind (A B : Type) (C : Book_1_5_sum A B -&gt; Type) (f : forall a, C (inl a))
@@ -598,7 +598,7 @@ Time: 0.001s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Theorem inl_red {A B : Type} {C : Book_1_5_sum A B -&gt; Type} f g { a : A }
@@ -626,7 +626,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 142
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Theorem inr_red {A B : Type} {C : Book_1_5_sum A B -&gt; Type} f g { b : B }
@@ -653,8 +653,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 146
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 End Book_1_5.</pre>
 </div>
@@ -725,8 +725,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 175
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Example add_example: add 32 17 = 49.</pre>
@@ -752,7 +752,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 177
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Example mult_example: mult 20 5 = 100.</pre>
 </div>
@@ -764,20 +764,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 178
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 178
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 178
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
 Example exp_example: exp 2 10 = 1024.</pre>
 </div>
@@ -789,14 +789,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 179
-Time: 0.008s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.258064516129%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 179
-Time: 0.013s">
-<div class="time" style="width: 3.6931818181818%"></div>
+Time: 0.014s">
+<div class="time" style="width: 4.5161290322581%"></div>
 <pre> Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -819,8 +819,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 190
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Fixpoint ack (n m : nat) : nat :=
   match n with
   | O =&gt; S m
@@ -1011,8 +1011,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 230
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     intros A B [na | nb] [a b].</pre>
 </div>
@@ -1285,7 +1285,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 293
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     induction p, q.</pre>
 </div>
@@ -1298,8 +1298,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 295
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1321,7 +1321,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 299
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     induction p, q.</pre>
 </div>
@@ -1334,8 +1334,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 301
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1356,15 +1356,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 305
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     induction p, q.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 306
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.05s">
+<div class="time" style="width: 16.129032258065%"></div>
 <pre>
     reflexivity.</pre>
 </div>
@@ -1377,8 +1377,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 308
-Time: 0.074s">
-<div class="time" style="width: 21.022727272727%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 End Book_2_1_Proofs_Are_Equal.</pre>
 </div>
@@ -1395,8 +1395,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 313
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition Book_2_2 :
   forall {A : Type} {x y z : A} (p : x = y) (q : y = z),
     (Book_2_1_concatenation1_eq_Book_2_1_concatenation2 p q) *1
@@ -1413,7 +1413,7 @@ Proof.</pre>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 318
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   induction p, q.</pre>
 </div>
@@ -1575,7 +1575,7 @@ Eval compute in (Book_2_4_npath 2 A). (* and so on... *)
 <div class="code" title="File: HoTTBookExercises.v
 Line: 365
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>Definition Book_2_4_nboundary
   : forall {n : nat} {A : Type}, Book_2_4_npath (S n) A -&gt;
                           (Book_2_4_npath n A * Book_2_4_npath n A)
@@ -1605,8 +1605,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 377
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition Book_eq_2_3_7 {A B : Type} {x y : A} (p : x = y) (f : A -&gt; B)
@@ -1646,7 +1646,7 @@ Proof.</pre>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 393
 Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
   apply (isequiv_adjointify (Book_eq_2_3_6 p f) (Book_eq_2_3_7 p f));
     unfold Book_eq_2_3_6, Book_eq_2_3_7, transport_const;
@@ -1658,7 +1658,7 @@ Time: 0.006s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 399
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1722,7 +1722,7 @@ Proof.</pre>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 420
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
   apply (isequiv_adjointify (concat_left z p) (concat_right z p));
     induction p;
@@ -1734,7 +1734,7 @@ Time: 0.003s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 426
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1759,8 +1759,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 433
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
   Definition Book_2_7 {A B : Type} {P : A -&gt; Type} {Q : B -&gt; Type}
             (f : A -&gt; B) (g : forall a, P a -&gt; Q (f a))
@@ -1782,42 +1782,42 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 443
 Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
     destruct u as [u1 u2]; destruct v as [v1 v2]; simpl in p, q.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 444
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
     destruct p; simpl in q.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 445
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     destruct q.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 446
-Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 447
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 448
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 End Book_2_7.</pre>
 </div>
@@ -1843,7 +1843,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 462
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>Definition coprod_ump1 {A B X} : (A + B -&gt; X) -&gt; (A -&gt; X) * (B -&gt; X) :=
   fun f =&gt; (f o inl, f o inr).</pre>
 </div>
@@ -1865,7 +1865,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 466
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Definition coprod_ump2 {A B X} : (A -&gt; X) * (B -&gt; X) -&gt; (A + B -&gt; X) :=
   prod_rect (fun _ =&gt; A + B -&gt; X) (fun f g =&gt; sum_rect (fun _ =&gt; X) f g).</pre>
@@ -1977,7 +1977,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 487
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Local Definition f210 : (exists a : A, (exists b : B a, (C (a; b)))) -&gt;
@@ -2056,8 +2056,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 507
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     apply (equiv_adjointify f210 g210); compute; reflexivity.</pre>
 </div>
@@ -2199,7 +2199,7 @@ Defined.</pre>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 562
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
 Lemma retr_f_g_path_in_B {A B} (f : A -&gt; B)  (g : B -&gt; A)
@@ -2391,7 +2391,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 586
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2527,13 +2527,13 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 606
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> rewrite (inverse (eisretr_path_sum p)).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 606
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     rewrite (axiomK_hset isHSet_A a (path_sum_inv p)).</pre>
 </div>
@@ -2554,7 +2554,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 609
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> rewrite (inverse (eisretr_path_sum p)).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -2574,7 +2574,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 611
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2650,14 +2650,14 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 625
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   apply (useful (axiomK_hset _ _ _) (hset_path2 _ _)).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 626
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2714,8 +2714,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 635
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
@@ -2822,8 +2822,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 651
-Time: 0.014s">
-<div class="time" style="width: 3.9772727272727%"></div>
+Time: 0.013s">
+<div class="time" style="width: 4.1935483870968%"></div>
 <pre>
   destruct x as [a1|n1]; destruct y as [a2|n2]; apply path_sum; try apply path_ishprop.</pre>
 </div>
@@ -2907,8 +2907,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 663
-Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
   destruct x as [a1|b1]; destruct y as [a2|b2]; apply path_sum; try apply path_ishprop.</pre>
 </div>
@@ -2970,7 +2970,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 676
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
 
 Definition LEM_hProp_Bool (lem : LEM) (hprop : HProp) : Bool
@@ -3176,8 +3176,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 697
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>exact ((if_hprop_then_equiv_Unit hprop p)^-1)%equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -3210,13 +3210,13 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 700
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>exact ((if_not_hprop_then_equiv_Empty hprop np)^-1)%equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 700
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -3244,8 +3244,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 717
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma univalence_func_natural_equiv `{Univalence}
   : forall (C : Type -&gt; Type) (all_contr : forall A, Contr (C A -&gt; C A))
       (g : forall A, C A -&gt; A) {A : Type}  (e : A &lt;~&gt; A),
@@ -3358,7 +3358,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 752
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -3430,8 +3430,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 765
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply Trunc_is_trunc.</pre>
 </div>
@@ -3572,7 +3572,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 809
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Lemma Book_3_13 `{Funext}
@@ -3635,8 +3635,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 825
-Time: 0.014s">
-<div class="time" style="width: 3.9772727272727%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
     apply Trunc_rec.</pre>
 </div>
@@ -3694,8 +3694,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 835
-Time: 0.012s">
-<div class="time" style="width: 3.4090909090909%"></div>
+Time: 0.011s">
+<div class="time" style="width: 3.5483870967742%"></div>
 <pre>
 
   Definition Book_3_14
@@ -3755,7 +3755,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 847
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
       etransitivity; [ symmetry; apply (p x x y' x') | ].</pre>
 </div>
@@ -3776,8 +3776,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 851
-Time: 0.043s">
-<div class="time" style="width: 12.215909090909%"></div>
+Time: 0.039s">
+<div class="time" style="width: 12.58064516129%"></div>
 <pre>
       assert (H' : idpath = path) by apply path_ishprop.</pre>
 </div>
@@ -3804,8 +3804,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 855
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> destruct (LEM (P nna) _) as [pnna|npnna]; trivial.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -3838,15 +3838,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 859
-Time: 0.012s">
-<div class="time" style="width: 3.4090909090909%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
       exact (transport P (path_ishprop _ _) (base a)).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 860
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -3867,8 +3867,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 864
-Time: 0.012s">
-<div class="time" style="width: 3.4090909090909%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
     apply equiv_iff_hprop.</pre>
 </div>
@@ -3881,8 +3881,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 866
-Time: 0.01s">
-<div class="time" style="width: 2.8409090909091%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.9032258064516%"></div>
 <pre> apply Trunc_rec.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -3941,7 +3941,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 871
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
         apply path_ishprop.</pre>
 </div>
@@ -3968,7 +3968,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 874
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 End Book_3_14.</pre>
 </div>
@@ -4110,8 +4110,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 949
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
     Local Instance Book_4_5_g : IsEquiv g.</pre>
@@ -4147,7 +4147,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 955
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre> exists ((h o g)^-1 o h);
         repeat intro; simpl;
         try apply (@eissect _ _ (h o g)).</pre>
@@ -4162,15 +4162,15 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 958
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> exists (f o (g o f)^-1);
         repeat intro; simpl;
         try apply (@eisretr _ _ (g o f)).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 960
-Time: 0.011s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -4191,8 +4191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 964
-Time: 0.036s">
-<div class="time" style="width: 10.227272727273%"></div>
+Time: 0.032s">
+<div class="time" style="width: 10.322580645161%"></div>
 <pre>
       apply (isequiv_homotopic (g^-1 o (g o f))); try exact _.</pre>
 </div>
@@ -4227,8 +4227,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 970
-Time: 0.352s">
-<div class="time" style="width: 100%"></div>
+Time: 0.294s">
+<div class="time" style="width: 94.838709677419%"></div>
 <pre>
       apply (isequiv_homotopic ((h o g) o g^-1)); try exact _.</pre>
 </div>
@@ -4263,8 +4263,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 976
-Time: 0.025s">
-<div class="time" style="width: 7.1022727272727%"></div>
+Time: 0.021s">
+<div class="time" style="width: 6.7741935483871%"></div>
 <pre>
       typeclasses eauto.</pre>
 </div>
@@ -4324,7 +4324,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 993
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Definition is_qinv {A B : Type} (f : A -&gt; B)
@@ -4340,8 +4340,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 998
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Definition qinv_id A : qinv A A
     := (fun x =&gt; x; (fun x =&gt; x ; (fun x =&gt; 1, fun x =&gt; 1))).</pre>
@@ -4379,8 +4379,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1007
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intros [g [s r]].</pre>
 </div>
@@ -4410,7 +4410,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1013
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Definition qinv_isequiv {A B} (f : A -&gt; B) `{IsEquiv _ _ f}
@@ -4457,8 +4457,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1025
-Time: 0.007s">
-<div class="time" style="width: 1.9886363636364%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
     refine (isequiv_adjointify
               (fun (g:C-&gt;A) =&gt; w o g)
@@ -4476,7 +4476,7 @@ Time: 0.007s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1037
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -4493,7 +4493,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1042
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>Local Instance isequiv_src_compose A B
   : @IsEquiv (A -&gt; {xy : B * B &amp; fst xy = snd xy})
              (A -&gt; B)
@@ -4508,15 +4508,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1046
-Time: 0.121s">
-<div class="time" style="width: 34.375%"></div>
+Time: 0.111s">
+<div class="time" style="width: 35.806451612903%"></div>
 <pre>
     rapply @qinv_univalence_isequiv_postcompose.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1047
-Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>
     refine (isequiv_adjointify
               (fst o pr1) (fun x =&gt; ((x, x); idpath))
@@ -4530,14 +4530,14 @@ Time: 0.006s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1055
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1056
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
   Local Instance isequiv_tgt_compose A B
@@ -4554,15 +4554,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1062
-Time: 0.133s">
-<div class="time" style="width: 37.784090909091%"></div>
+Time: 0.114s">
+<div class="time" style="width: 36.774193548387%"></div>
 <pre>
     rapply @qinv_univalence_isequiv_postcompose.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1063
-Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.258064516129%"></div>
 <pre>
     refine (isequiv_adjointify
               (snd o pr1) (fun x =&gt; ((x, x); idpath))
@@ -4576,7 +4576,7 @@ Time: 0.006s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1071
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -4620,28 +4620,28 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1079
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     change f with ((snd o pr1) o d).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1080
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     change g with ((snd o pr1) o e).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1081
-Time: 0.009s">
-<div class="time" style="width: 2.5568181818182%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.5806451612903%"></div>
 <pre>
     rapply (ap (fun g =&gt; snd o pr1 o g)).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1082
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     pose (fun A B x y=&gt; @equiv_inv _ _ _ (@isequiv_ap _ _ _ (@isequiv_src_compose A B) x y)) as H'.</pre>
 </div>
@@ -4678,7 +4678,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1089
 Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
 
 End Book_4_6_i.</pre>
@@ -4738,7 +4738,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1107
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     simple refine (isequiv_adjointify
                      (functor_forall f g)
@@ -4758,7 +4758,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1115
 Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre> abstract (
           apply ft_path_forall; intros b; unfold functor_forall;
           rewrite eisadj;
@@ -4777,8 +4777,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1123
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre> abstract (
           apply ft_path_forall; intros a; unfold functor_forall;
           rewrite eissect;
@@ -4788,14 +4788,14 @@ Time: 0.003s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1127
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1128
-Time: 0.02s">
-<div class="time" style="width: 5.6818181818182%"></div>
+Time: 0.016s">
+<div class="time" style="width: 5.1612903225806%"></div>
 <pre>
 
   Definition ft_equiv_functor_forall
@@ -4808,8 +4808,8 @@ Time: 0.02s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1136
-Time: 0.013s">
-<div class="time" style="width: 3.6931818181818%"></div>
+Time: 0.011s">
+<div class="time" style="width: 3.5483870967742%"></div>
 <pre>
 
   Definition ft_equiv_functor_forall_id
@@ -4821,7 +4821,7 @@ Time: 0.013s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1142
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
 End EquivFunctorFunextType.</pre>
@@ -4954,8 +4954,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1162
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   assert (HK := @istrunc_equiv_istrunc _ _ e^-1 (-1)).</pre>
 </div>
@@ -4976,7 +4976,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1165
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> intros X p; rewrite concat_p1, concat_1p; reflexivity.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -5008,8 +5008,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1168
-Time: 0.031s">
-<div class="time" style="width: 8.8068181818182%"></div>
+Time: 0.024s">
+<div class="time" style="width: 7.741935483871%"></div>
 <pre>
   assert (r := pr1_path (apD10 (apD10 (path_ishprop alpha beta) Bool)
                      ((qinv_path Bool Bool)^-1 (qinv_isequiv equiv_negb)))).</pre>
@@ -5030,8 +5030,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1172
-Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>
   rewrite eisretr in r.</pre>
 </div>
@@ -5051,15 +5051,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1175
-Time: 0.007s">
-<div class="time" style="width: 1.9886363636364%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1176
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
 Definition allqinv_coherent (qua : QInv_Univalence_type)
@@ -5082,22 +5082,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1182
-Time: 0.007s">
-<div class="time" style="width: 1.9886363636364%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
   equiv_intro (equiv_qinv_path qua A B) p.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1183
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   destruct p; cbn; reflexivity.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1184
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -5125,8 +5125,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1189
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
   refine (istrunc_succ).</pre>
 </div>
@@ -5146,8 +5146,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1192
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact (allqinv_coherent qua2 B B (idmap ; (idmap ; (fun A:B =&gt; 1 , u)))).</pre>
 </div>
@@ -5575,7 +5575,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1280
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
       exact (ap10 (apD10 (ap snd (H1^ @ ap _ H' @ H2)) 0) false).</pre>
 </div>
@@ -5595,7 +5595,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1282
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
       intro n; induction n; trivial.</pre>
 </div>
@@ -5622,15 +5622,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1286
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1287
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 End Book_5_5.</pre>
 </div>
@@ -5817,14 +5817,14 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1399
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     pose proof (@LEM (Contr { f : X &lt;~&gt; X &amp; ~(forall x, f x = x) }) _) as contrXEquiv.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1400
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     destruct contrXEquiv as [[f H]|H].</pre>
 </div>
@@ -5922,14 +5922,14 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1414
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     pose proof (eval_bool_isequiv f.1).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1415
-Time: 0.014s">
-<div class="time" style="width: 3.9772727272727%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
     destruct b', b, (f.1 true), (f.1 false);
       simpl in *;
@@ -5942,8 +5942,8 @@ Time: 0.014s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1423
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -5978,8 +5978,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1429
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     destruct (@LEM (Contr { f : Bool &lt;~&gt; Bool &amp; ~(forall x, f x = x) }) _) as [[f H']|H'].</pre>
 </div>
@@ -5999,7 +5999,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1431
 Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
       destruct (f.1 b), b;
       match goal with
@@ -6019,14 +6019,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1440
-Time: 0.039s">
-<div class="time" style="width: 11.079545454545%"></div>
+Time: 0.033s">
+<div class="time" style="width: 10.645161290323%"></div>
 <pre> refine (match H' _ with end).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1440
-Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
       eexists (exist (fun f : Bool &lt;~&gt; Bool =&gt;
                          ~(forall x, f x = x))
@@ -6050,8 +6050,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1447
-Time: 0.015s">
-<div class="time" style="width: 4.2613636363636%"></div>
+Time: 0.013s">
+<div class="time" style="width: 4.1935483870968%"></div>
 <pre>
       refine ((fun H'' =&gt;
                  (equiv_path_equiv _ _ H'';
@@ -6076,7 +6076,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1454
 Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
       destruct (f.1 b'), b';
       match goal with
@@ -6090,7 +6090,7 @@ Time: 0.004s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1462
 Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -6175,8 +6175,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1476
-Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre> apply istrunc_forall.</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -6219,8 +6219,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1484
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     elim (@LEM (Contr (AllExistsOther X)) _); intro.</pre>
 </div>
@@ -6233,8 +6233,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1486
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (fun x:X =&gt; (center (AllExistsOther X) x).1).</pre>
 </div>
 <div class="code" title="File: HoTTBookExercises.v
@@ -6308,7 +6308,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1494
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
       destruct (LEM (Contr (AllExistsOther Bool)) _) as [[f C]|C];simpl.</pre>
 </div>
@@ -6379,7 +6379,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1499
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
 
 End Book_6_9.</pre>
@@ -6437,8 +6437,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1527
-Time: 0.01s">
-<div class="time" style="width: 2.8409090909091%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.9032258064516%"></div>
 <pre>
     apply (@HoTT.HSet.ishset_hrel_subpaths
              A (fun x y =&gt; merely (x = y)));
@@ -6553,8 +6553,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1547
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
     apply Trunc_ind; try exact _.</pre>
 </div>
@@ -6635,7 +6635,7 @@ Time: 0s">
 <div class="code" title="File: HoTTBookExercises.v
 Line: 1592
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>Definition Book_7_9_oo_neg1 `{Univalence} (AC_oo_neg1 : forall X : HSet, IsProjective' X) (A : Type)
   : merely (exists X : HSet, exists p : X -&gt; A, IsSurjection p)
   := @HoTT.Projective.projective_cover_AC AC_oo_neg1 _ A.</pre>

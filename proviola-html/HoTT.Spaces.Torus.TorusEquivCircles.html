@@ -268,12 +268,12 @@
           
 
             i = 50;
-            data = "";
+            data = "1 goal (ID 147)	  	  H : Funext	  ============================	  c2t o t2c == idmap	1 focused goal	(shelved: 2) (ID 160)	  	  H : Funext	  ============================	  DPathSquare (fun x : Torus => c2t (t2c x) = x) surf 	    ?Goal ?Goal ?Goal0 ?Goal0	1 focused goal	(shelved: 2) (ID 190)	  	  H : Funext	  ============================	  PathCube (sq_dp ?Goal) (sq_dp ?Goal) (sq_dp ?Goal0) 	    (sq_dp ?Goal0) (sq_ap (fun x : Torus => c2t (t2c x)) surf)	    (sq_ap idmap surf)	1 focused goal	(shelved: 2) (ID 269)	  	  H : Funext	  ============================	  PathCube ?Goal ?Goal ?Goal0 ?Goal0	    (sq_ap (fun x : Torus => c2t (t2c x)) surf) (sq_ap idmap surf)	1 focused goal	(shelved: 2) (ID 300)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) (sq_tr ?Goal) (sq_tr ?Goal) 	    (sq_tr ?Goal0) (sq_tr ?Goal0)	1 focused goal	(shelved: 2) (ID 379)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) ?Goal ?Goal ?Goal0 ?Goal0	";
             responses[i]=data;
           
 
             i = 51;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -283,7 +283,7 @@
           
 
             i = 53;
-            data = "1 goal (ID 147)	  	  H : Funext	  ============================	  c2t o t2c == idmap	1 focused goal	(shelved: 2) (ID 160)	  	  H : Funext	  ============================	  DPathSquare (fun x : Torus => c2t (t2c x) = x) surf 	    ?Goal ?Goal ?Goal0 ?Goal0	1 focused goal	(shelved: 2) (ID 190)	  	  H : Funext	  ============================	  PathCube (sq_dp ?Goal) (sq_dp ?Goal) (sq_dp ?Goal0) 	    (sq_dp ?Goal0) (sq_ap (fun x : Torus => c2t (t2c x)) surf)	    (sq_ap idmap surf)	1 focused goal	(shelved: 2) (ID 269)	  	  H : Funext	  ============================	  PathCube ?Goal ?Goal ?Goal0 ?Goal0	    (sq_ap (fun x : Torus => c2t (t2c x)) surf) (sq_ap idmap surf)	1 focused goal	(shelved: 2) (ID 300)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) (sq_tr ?Goal) (sq_tr ?Goal) 	    (sq_tr ?Goal0) (sq_tr ?Goal0)	1 focused goal	(shelved: 2) (ID 379)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) ?Goal ?Goal ?Goal0 ?Goal0	No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -328,32 +328,32 @@
           
 
             i = 62;
-            data = "";
+            data = "1 goal (ID 255)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C	  g : C -> D	  a, a' : A	  p : a = a'	  b, b' : B	  q : b = b'	  ============================	  PathCube (sq_ap011 (fun (x : A) (y : B) => g (f x y)) p q)	    (sq_ap g (sq_ap011 f p q)) apcs apcs apcs apcs	No more goals.	1 goal (ID 268)	  	  H : Funext	  ============================	  t2c o c2t == idmap	1 goal (ID 281)	  	  H : Funext	  ============================	  forall fst snd : Circle, t2c (c2t (fst, snd)) = (fst, snd)	2 goals (ID 289)	  	  H : Funext	  ============================	  DPath (fun x : Circle => t2c (c2t (base, x)) = (base, x)) loop 1 1		goal 2 (ID 291) is:	 DPath (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	   loop	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	1 focused goal	(shelved: 1) (ID 291)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	    loop	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	";
             responses[i]=data;
           
 
             i = 63;
-            data = "";
+            data = "1 focused goal	(shelved: 1) (ID 340)	  	  H : Funext	  ============================	  forall x : Circle,	  DPath (fun t : Circle => t2c (c2t (t, x)) = (t, x)) loop	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	";
             responses[i]=data;
           
 
             i = 64;
-            data = "";
+            data = "1 focused goal	(shelved: 1) (ID 361)	  	  H : Funext	  ============================	  forall x : Circle,	  PathSquare	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	    (ap (fun x0 : Circle => (x0, x)) loop)	";
             responses[i]=data;
           
 
             i = 65;
-            data = "";
+            data = "2 focused goals	(shelved: 1) (ID 365)	  	  H : Funext	  ============================	  (fun x : Circle =>	   PathSquare	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	     (ap (fun x0 : Circle => (x0, x)) loop)) base		goal 2 (ID 367) is:	 DPath	   (fun x : Circle =>	    PathSquare	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	      (ap (fun x0 : Circle => (x0, x)) loop)) loop 	   ?b ?b	";
             responses[i]=data;
           
 
             i = 66;
-            data = "";
+            data = "1 focused goal	(shelved: 2) (ID 367)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle =>	     PathSquare	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	       (ap (fun x0 : Circle => (x0, x)) loop)) loop 	    (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 goal (ID 255)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C	  g : C -> D	  a, a' : A	  p : a = a'	  b, b' : B	  q : b = b'	  ============================	  PathCube (sq_ap011 (fun (x : A) (y : B) => g (f x y)) p q)	    (sq_ap g (sq_ap011 f p q)) apcs apcs apcs apcs	No more goals.	1 goal (ID 268)	  	  H : Funext	  ============================	  t2c o c2t == idmap	1 goal (ID 281)	  	  H : Funext	  ============================	  forall fst snd : Circle, t2c (c2t (fst, snd)) = (fst, snd)	2 goals (ID 289)	  	  H : Funext	  ============================	  DPath (fun x : Circle => t2c (c2t (base, x)) = (base, x)) loop 1 1		goal 2 (ID 291) is:	 DPath (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	   loop	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	1 focused goal	(shelved: 1) (ID 291)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	    loop	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	1 focused goal	(shelved: 1) (ID 340)	  	  H : Funext	  ============================	  forall x : Circle,	  DPath (fun t : Circle => t2c (c2t (t, x)) = (t, x)) loop	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	1 focused goal	(shelved: 1) (ID 361)	  	  H : Funext	  ============================	  forall x : Circle,	  PathSquare	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	    (ap (fun x0 : Circle => (x0, x)) loop)	2 focused goals	(shelved: 1) (ID 365)	  	  H : Funext	  ============================	  (fun x : Circle =>	   PathSquare	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	     (ap (fun x0 : Circle => (x0, x)) loop)) base		goal 2 (ID 367) is:	 DPath	   (fun x : Circle =>	    PathSquare	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	      (ap (fun x0 : Circle => (x0, x)) loop)) loop 	   ?b ?b	1 focused goal	(shelved: 2) (ID 367)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle =>	     PathSquare	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	       (ap (fun x0 : Circle => (x0, x)) loop)) loop 	    (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	1 focused goal	(shelved: 2) (ID 404)	  	  H : Funext	  ============================	  PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
+            data = "1 focused goal	(shelved: 2) (ID 404)	  	  H : Funext	  ============================	  PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
             responses[i]=data;
           
 

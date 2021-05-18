@@ -728,12 +728,12 @@
           
 
             i = 142;
-            data = "";
+            data = "1 goal (ID 1262)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : h' o h == idmap	  s : k' o k == idmap	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cglue b =	  cglue (h' (h b))	  @' (ap coeq (q' (h b))^	      @' (ap coeq (ap k' (q b)^)	          @' ap coeq (s (g b))))	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 goal (ID 1262)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : h' o h == idmap	  s : k' o k == idmap	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cglue b =	  cglue (h' (h b))	  @' (ap coeq (q' (h b))^	      @' (ap coeq (ap k' (q b)^)	          @' ap coeq (s (g b))))	1 goal (ID 1274)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : h' o h == idmap	  s : k' o k == idmap	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cglue b =	  cglue (h' (h b))	  @' ap coeq (q' (h b))^	  @' ap coeq (ap k' (q b)^)	  @' ap coeq (s (g b))	";
+            data = "1 goal (ID 1274)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : h' o h == idmap	  s : k' o k == idmap	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cglue b =	  cglue (h' (h b))	  @' ap coeq (q' (h b))^	  @' ap coeq (ap k' (q b)^)	  @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
@@ -1293,12 +1293,12 @@
           
 
             i = 255;
-            data = "1 goal (ID 1201)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cgluel : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            cgluel b (f' b') @ cgluer (g b) b' =	            cgluer (f b) b' @ cgluel b (g' b')	  b : B	  a' : A'	  ============================	  ap10 (ap Coeq_rec2 (cglue b)) (coeq a') = cgluel b a'	";
+            data = "1 goal (ID 1201)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cgluel : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            cgluel b (f' b') @ cgluer (g b) b' =	            cgluer (f b) b' @ cgluel b (g' b')	  b : B	  a' : A'	  ============================	  ap10 (ap Coeq_rec2 (cglue b)) (coeq a') = cgluel b a'	1 goal (ID 1230)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cgluel : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            cgluel b (f' b') @ cgluer (g b) b' =	            cgluer (f b) b' @ cgluel b (g' b')	  b : B	  a' : A'	  ============================	  ap10	    (path_arrow	       (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	          (fun b' : B' => cgluer (f b) b'))	       (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	          (fun b' : B' => cgluer (g b) b'))	       (fun a : Coeq f' g' =>	        Coeq_ind	          (fun w : Coeq f' g' =>	           Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	             (fun b' : B' => cgluer (f b) b') w =	           Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	             (fun b' : B' => cgluer (g b) b') w)	          (fun a'0 : A' => cgluel b a'0)	          (fun b' : B' =>	           transport_paths_FlFr (cglue b') (cgluel b (f' b')) @	           (concat_pp_p	              (ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	                    (fun b'0 : B' => cgluer (f b) b'0)) 	                 (cglue b'))^ (cgluel b (f' b'))	              (ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	                    (fun b'0 : B' => cgluer (g b) b'0)) 	                 (cglue b')) @	            moveR_Vp	              (cgluel b (f' b') @	               ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	                    (fun b'0 : B' => cgluer (g b) b'0)) 	                 (cglue b')) (cgluel b (g' b'))	              (ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	                    (fun b'0 : B' => cgluer (f b) b'0)) 	                 (cglue b'))	              ((whiskerL (cgluel b (f' b'))	                  (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (g b) a'0)	                     (fun b'0 : B' => cgluer (g b) b'0) b') @ 	                cgluelr b b') @	               whiskerR	                 (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (f b) a'0)	                    (fun b'0 : B' => cgluer (f b) b'0) b')^	                 (cgluel b (g' b'))))) a)) (coeq a') = 	  cgluel b a'	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 goal (ID 1230)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cgluel : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            cgluel b (f' b') @ cgluer (g b) b' =	            cgluer (f b) b' @ cgluel b (g' b')	  b : B	  a' : A'	  ============================	  ap10	    (path_arrow	       (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	          (fun b' : B' => cgluer (f b) b'))	       (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	          (fun b' : B' => cgluer (g b) b'))	       (fun a : Coeq f' g' =>	        Coeq_ind	          (fun w : Coeq f' g' =>	           Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	             (fun b' : B' => cgluer (f b) b') w =	           Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	             (fun b' : B' => cgluer (g b) b') w)	          (fun a'0 : A' => cgluel b a'0)	          (fun b' : B' =>	           transport_paths_FlFr (cglue b') (cgluel b (f' b')) @	           (concat_pp_p	              (ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	                    (fun b'0 : B' => cgluer (f b) b'0)) 	                 (cglue b'))^ (cgluel b (f' b'))	              (ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	                    (fun b'0 : B' => cgluer (g b) b'0)) 	                 (cglue b')) @	            moveR_Vp	              (cgluel b (f' b') @	               ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	                    (fun b'0 : B' => cgluer (g b) b'0)) 	                 (cglue b')) (cgluel b (g' b'))	              (ap	                 (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	                    (fun b'0 : B' => cgluer (f b) b'0)) 	                 (cglue b'))	              ((whiskerL (cgluel b (f' b'))	                  (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (g b) a'0)	                     (fun b'0 : B' => cgluer (g b) b'0) b') @ 	                cgluelr b b') @	               whiskerR	                 (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (f b) a'0)	                    (fun b'0 : B' => cgluer (f b) b'0) b')^	                 (cgluel b (g' b'))))) a)) (coeq a') = 	  cgluel b a'	1 goal (ID 1241)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cgluel : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            cgluel b (f' b') @ cgluer (g b) b' =	            cgluer (f b) b' @ cgluel b (g' b')	  b : B	  a' : A'	  ============================	  Coeq_ind	    (fun w : Coeq f' g' =>	     Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	       (fun b' : B' => cgluer (f b) b') w =	     Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	       (fun b' : B' => cgluer (g b) b') w) (fun a'0 : A' => cgluel b a'0)	    (fun b' : B' =>	     transport_paths_FlFr (cglue b') (cgluel b (f' b')) @	     (concat_pp_p	        (ap	           (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	              (fun b'0 : B' => cgluer (f b) b'0)) 	           (cglue b'))^ (cgluel b (f' b'))	        (ap	           (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	              (fun b'0 : B' => cgluer (g b) b'0)) 	           (cglue b')) @	      moveR_Vp	        (cgluel b (f' b') @	         ap	           (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	              (fun b'0 : B' => cgluer (g b) b'0)) 	           (cglue b')) (cgluel b (g' b'))	        (ap	           (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	              (fun b'0 : B' => cgluer (f b) b'0)) 	           (cglue b'))	        ((whiskerL (cgluel b (f' b'))	            (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (g b) a'0)	               (fun b'0 : B' => cgluer (g b) b'0) b') @ 	          cgluelr b b') @	         whiskerR	           (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (f b) a'0)	              (fun b'0 : B' => cgluer (f b) b'0) b')^ 	           (cgluel b (g' b'))))) (coeq a') = cgluel b a'	";
+            data = "1 goal (ID 1241)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cgluel : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            cgluel b (f' b') @ cgluer (g b) b' =	            cgluer (f b) b' @ cgluel b (g' b')	  b : B	  a' : A'	  ============================	  Coeq_ind	    (fun w : Coeq f' g' =>	     Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	       (fun b' : B' => cgluer (f b) b') w =	     Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	       (fun b' : B' => cgluer (g b) b') w) (fun a'0 : A' => cgluel b a'0)	    (fun b' : B' =>	     transport_paths_FlFr (cglue b') (cgluel b (f' b')) @	     (concat_pp_p	        (ap	           (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	              (fun b'0 : B' => cgluer (f b) b'0)) 	           (cglue b'))^ (cgluel b (f' b'))	        (ap	           (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	              (fun b'0 : B' => cgluer (g b) b'0)) 	           (cglue b')) @	      moveR_Vp	        (cgluel b (f' b') @	         ap	           (Coeq_rec P (fun a'0 : A' => coeq' (g b) a'0)	              (fun b'0 : B' => cgluer (g b) b'0)) 	           (cglue b')) (cgluel b (g' b'))	        (ap	           (Coeq_rec P (fun a'0 : A' => coeq' (f b) a'0)	              (fun b'0 : B' => cgluer (f b) b'0)) 	           (cglue b'))	        ((whiskerL (cgluel b (f' b'))	            (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (g b) a'0)	               (fun b'0 : B' => cgluer (g b) b'0) b') @ 	          cgluelr b b') @	         whiskerR	           (Coeq_rec_beta_cglue P (fun a'0 : A' => coeq' (f b) a'0)	              (fun b'0 : B' => cgluer (f b) b'0) b')^ 	           (cgluel b (g' b'))))) (coeq a') = cgluel b a'	";
             responses[i]=data;
           
 
@@ -1653,7 +1653,7 @@
           
 
             i = 327;
-            data = "";
+            data = "1 goal (ID 1397)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cgluel : forall (b : B) (a' : A'),	           transport (fun x : Coeq f g => P x (coeq a')) 	             (cglue b) (coeq' (f b) a') = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'),	           transport (fun y : Coeq f' g' => P (coeq a) y) 	             (cglue b') (coeq' a (f' b')) = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            ap (transport (P (coeq (g b))) (cglue b')) (cgluel b (f' b'))	            @' cgluer (g b) b' =	            transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b'))	            @' ap	                 (transport (fun x : Coeq f g => P x (coeq (g' b')))	                    (cglue b)) (cgluer (f b) b')	            @' cgluel b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cgluer (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  transport_forall_constant (cglue b) G (coeq (g' b'))	  @' ((ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cglue b))	         (apD G (cglue b')))^	      @' ((transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b')))^	          @' (ap (transport (P (coeq (g b))) (cglue b'))	                (transport_forall_constant (cglue b) G (coeq (f' b'))))^))	  @' ap (transport (P (coeq (g b))) (cglue b'))	       (transport_forall_constant (cglue b) G (coeq (f' b')))	  @' ap (transport (P (coeq (g b))) (cglue b')) (cgluel b (f' b'))	  @' cgluer (g b) b' =	  transport_forall_constant (cglue b) G (coeq (g' b'))	  @' cgluel b (g' b')	";
             responses[i]=data;
           
 
@@ -1688,7 +1688,7 @@
           
 
             i = 334;
-            data = "1 goal (ID 1397)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cgluel : forall (b : B) (a' : A'),	           transport (fun x : Coeq f g => P x (coeq a')) 	             (cglue b) (coeq' (f b) a') = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'),	           transport (fun y : Coeq f' g' => P (coeq a) y) 	             (cglue b') (coeq' a (f' b')) = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            ap (transport (P (coeq (g b))) (cglue b')) (cgluel b (f' b'))	            @' cgluer (g b) b' =	            transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b'))	            @' ap	                 (transport (fun x : Coeq f g => P x (coeq (g' b')))	                    (cglue b)) (cgluer (f b) b')	            @' cgluel b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cgluer (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  transport_forall_constant (cglue b) G (coeq (g' b'))	  @' ((ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cglue b))	         (apD G (cglue b')))^	      @' ((transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b')))^	          @' (ap (transport (P (coeq (g b))) (cglue b'))	                (transport_forall_constant (cglue b) G (coeq (f' b'))))^))	  @' ap (transport (P (coeq (g b))) (cglue b'))	       (transport_forall_constant (cglue b) G (coeq (f' b')))	  @' ap (transport (P (coeq (g b))) (cglue b')) (cgluel b (f' b'))	  @' cgluer (g b) b' =	  transport_forall_constant (cglue b) G (coeq (g' b'))	  @' cgluel b (g' b')	1 goal (ID 1448)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cgluel : forall (b : B) (a' : A'),	           transport (fun x : Coeq f g => P x (coeq a')) 	             (cglue b) (coeq' (f b) a') = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'),	           transport (fun y : Coeq f' g' => P (coeq a) y) 	             (cglue b') (coeq' a (f' b')) = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            ap (transport (P (coeq (g b))) (cglue b')) (cgluel b (f' b'))	            @' cgluer (g b) b' =	            transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b'))	            @' ap	                 (transport (fun x : Coeq f g => P x (coeq (g' b')))	                    (cglue b)) (cgluer (f b) b')	            @' cgluel b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cgluer (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cglue b))	     (apD G (cglue b')))^	  @' ((transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b')))^	      @' ((ap (transport (P (coeq (g b))) (cglue b'))	             (transport_forall_constant (cglue b) G (coeq (f' b'))))^	          @' (ap (transport (P (coeq (g b))) (cglue b'))	                (transport_forall_constant (cglue b) G (coeq (f' b')))	              @' (ap (transport (P (coeq (g b))) (cglue b'))	                    (cgluel b (f' b'))	                  @' cgluer (g b) b')))) = cgluel b (g' b')	";
+            data = "1 goal (ID 1448)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cgluel : forall (b : B) (a' : A'),	           transport (fun x : Coeq f g => P x (coeq a')) 	             (cglue b) (coeq' (f b) a') = coeq' (g b) a'	  cgluer : forall (a : A) (b' : B'),	           transport (fun y : Coeq f' g' => P (coeq a) y) 	             (cglue b') (coeq' a (f' b')) = coeq' a (g' b')	  cgluelr : forall (b : B) (b' : B'),	            ap (transport (P (coeq (g b))) (cglue b')) (cgluel b (f' b'))	            @' cgluer (g b) b' =	            transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b'))	            @' ap	                 (transport (fun x : Coeq f g => P x (coeq (g' b')))	                    (cglue b)) (cgluer (f b) b')	            @' cgluel b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cgluer (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cglue b))	     (apD G (cglue b')))^	  @' ((transport_transport P (cglue b) (cglue b') (coeq' (f b) (f' b')))^	      @' ((ap (transport (P (coeq (g b))) (cglue b'))	             (transport_forall_constant (cglue b) G (coeq (f' b'))))^	          @' (ap (transport (P (coeq (g b))) (cglue b'))	                (transport_forall_constant (cglue b) G (coeq (f' b')))	              @' (ap (transport (P (coeq (g b))) (cglue b'))	                    (cgluel b (f' b'))	                  @' cgluer (g b) b')))) = cgluel b (g' b')	";
             responses[i]=data;
           
 
@@ -1843,12 +1843,12 @@
           
 
             i = 365;
-            data = "";
+            data = "<infomsg>Coeq_sym_map is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 366;
-            data = "<infomsg>Coeq_sym_map is defined</infomsg>	1 goal (ID 1145)	  	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Coeq_sym_map f g o Coeq_sym_map g f == idmap	";
+            data = "1 goal (ID 1145)	  	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Coeq_sym_map f g o Coeq_sym_map g f == idmap	";
             responses[i]=data;
           
 
@@ -1878,12 +1878,12 @@
           
 
             i = 372;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 373;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1991,7 +1991,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab465"></a><h1 class="section">Homotopy coequalizers</h1>
+<a id="lab467"></a><h1 class="section">Homotopy coequalizers</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -2025,7 +2025,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab466"></a><h2 class="section">Definition</h2>
+<a id="lab468"></a><h2 class="section">Definition</h2>
 </div>
 <div scenenumber="11" class="code">
 <span class="command" onmouseout="
@@ -2208,7 +2208,7 @@ Use <span class="inlinecode"><span class="id" title="tactic">eapply</span></span
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a id="lab467"></a><h2 class="section">Universal property</h2>
+<a id="lab469"></a><h2 class="section">Universal property</h2>
 </div>
 <div scenenumber="19" class="code">
 <span class="command" onmouseout="
@@ -2338,7 +2338,7 @@ Use <span class="inlinecode"><span class="id" title="tactic">eapply</span></span
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a id="lab468"></a><h2 class="section">Functoriality</h2>
+<a id="lab470"></a><h2 class="section">Functoriality</h2>
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="
@@ -2926,7 +2926,7 @@ The two proofs are identical modulo replacing <span class="inlinecode"><a class=
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a id="lab469"></a><h2 class="section">A double recursion principle</h2>
+<a id="lab471"></a><h2 class="section">A double recursion principle</h2>
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
@@ -3178,7 +3178,7 @@ TODO: <span class="inlinecode"><span class="id" title="var">Coeq_rec2_beta_cglue
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<a id="lab470"></a><h2 class="section">A double induction principle</h2>
+<a id="lab472"></a><h2 class="section">A double induction principle</h2>
 </div>
 <div scenenumber="39" class="code">
 <span class="command" onmouseout="
@@ -3483,7 +3483,7 @@ Now we just have to rearrange it a bit.
 </div>
 <div class="goal" id="goal0_3_71"><pre><span></span></pre></div>
 <div class="doc" scenenumber="73">
-<a id="lab471"></a><h2 class="section">Symmetry</h2>
+<a id="lab473"></a><h2 class="section">Symmetry</h2>
 </div>
 <div scenenumber="75" class="code">
 <span class="command" onmouseout="

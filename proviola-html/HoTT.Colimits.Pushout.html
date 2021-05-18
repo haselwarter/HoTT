@@ -1668,17 +1668,17 @@
           
 
             i = 330;
-            data = "1 goal (ID 840)	  	  A1 : Type	  A2 : Type	  B : Type	  C : Type	  D : Type	  f1 : A1 -> B	  g1 : A1 -> C	  f2 : A2 -> C	  g2 : A2 -> D	  pushll := pushl' (pushr' f1 g1 o f2) g2 o pushl' f1 g1	   : B -> pushout_assoc_left	  pushlm := pushl' (pushr' f1 g1 o f2) g2 o pushr' f1 g1	   : C -> pushout_assoc_left	  pushlr := pushr' (pushr' f1 g1 o f2) g2 : D -> pushout_assoc_left	  pgluell := fun a1 : A1 =>	             ap (pushl' (pushr' f1 g1 o f2) g2) (pglue' f1 g1 a1)	   : forall a1 : A1, pushll (f1 a1) = pushlm (g1 a1)	  pgluelr := fun a2 : A2 => pglue' (pushr' f1 g1 o f2) g2 a2	   : forall a2 : A2, pushlm (f2 a2) = pushlr (g2 a2)	  pushrl := pushl' f1 (pushl' f2 g2 o g1) : B -> pushout_assoc_right	  pushrm := pushr' f1 (pushl' f2 g2 o g1) o pushl' f2 g2	   : C -> pushout_assoc_right	  pushrr := pushr' f1 (pushl' f2 g2 o g1) o pushr' f2 g2	   : D -> pushout_assoc_right	  pgluerl := fun a1 : A1 => pglue' f1 (pushl' f2 g2 o g1) a1	   : forall a1 : A1, pushrl (f1 a1) = pushrm (g1 a1)	  pgluerr := fun a2 : A2 =>	             ap (pushr' f1 (pushl' f2 g2 o g1)) (pglue' f2 g2 a2)	   : forall a2 : A2, pushrm (f2 a2) = pushrr (g2 a2)	  ============================	  pushout_assoc_left_rec pushout_assoc_right pushrl pushrm pushrr pgluerl	    pgluerr	  o pushout_assoc_right_rec pushout_assoc_left pushll pushlm pushlr pgluell	      pgluelr == idmap	";
+            data = "1 goal (ID 840)	  	  A1 : Type	  A2 : Type	  B : Type	  C : Type	  D : Type	  f1 : A1 -> B	  g1 : A1 -> C	  f2 : A2 -> C	  g2 : A2 -> D	  pushll := pushl' (pushr' f1 g1 o f2) g2 o pushl' f1 g1	   : B -> pushout_assoc_left	  pushlm := pushl' (pushr' f1 g1 o f2) g2 o pushr' f1 g1	   : C -> pushout_assoc_left	  pushlr := pushr' (pushr' f1 g1 o f2) g2 : D -> pushout_assoc_left	  pgluell := fun a1 : A1 =>	             ap (pushl' (pushr' f1 g1 o f2) g2) (pglue' f1 g1 a1)	   : forall a1 : A1, pushll (f1 a1) = pushlm (g1 a1)	  pgluelr := fun a2 : A2 => pglue' (pushr' f1 g1 o f2) g2 a2	   : forall a2 : A2, pushlm (f2 a2) = pushlr (g2 a2)	  pushrl := pushl' f1 (pushl' f2 g2 o g1) : B -> pushout_assoc_right	  pushrm := pushr' f1 (pushl' f2 g2 o g1) o pushl' f2 g2	   : C -> pushout_assoc_right	  pushrr := pushr' f1 (pushl' f2 g2 o g1) o pushr' f2 g2	   : D -> pushout_assoc_right	  pgluerl := fun a1 : A1 => pglue' f1 (pushl' f2 g2 o g1) a1	   : forall a1 : A1, pushrl (f1 a1) = pushrm (g1 a1)	  pgluerr := fun a2 : A2 =>	             ap (pushr' f1 (pushl' f2 g2 o g1)) (pglue' f2 g2 a2)	   : forall a2 : A2, pushrm (f2 a2) = pushrr (g2 a2)	  ============================	  pushout_assoc_left_rec pushout_assoc_right pushrl pushrm pushrr pgluerl	    pgluerr	  o pushout_assoc_right_rec pushout_assoc_left pushll pushlm pushlr pgluell	      pgluelr == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 842) is:	 pushout_assoc_right_rec pushout_assoc_left pushll pushlm pushlr pgluell	   pgluelr	 o pushout_assoc_left_rec pushout_assoc_right pushrl pushrm pushrr pgluerl	     pgluerr == idmap	";
             responses[i]=data;
           
 
             i = 331;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 842) is:	 pushout_assoc_right_rec pushout_assoc_left pushll pushlm pushlr pgluell	   pgluelr	 o pushout_assoc_left_rec pushout_assoc_right pushrl pushrm pushrr pgluerl	     pgluerr == idmap	1 goal (ID 842)	  	  A1 : Type	  A2 : Type	  B : Type	  C : Type	  D : Type	  f1 : A1 -> B	  g1 : A1 -> C	  f2 : A2 -> C	  g2 : A2 -> D	  pushll := pushl' (pushr' f1 g1 o f2) g2 o pushl' f1 g1	   : B -> pushout_assoc_left	  pushlm := pushl' (pushr' f1 g1 o f2) g2 o pushr' f1 g1	   : C -> pushout_assoc_left	  pushlr := pushr' (pushr' f1 g1 o f2) g2 : D -> pushout_assoc_left	  pgluell := fun a1 : A1 =>	             ap (pushl' (pushr' f1 g1 o f2) g2) (pglue' f1 g1 a1)	   : forall a1 : A1, pushll (f1 a1) = pushlm (g1 a1)	  pgluelr := fun a2 : A2 => pglue' (pushr' f1 g1 o f2) g2 a2	   : forall a2 : A2, pushlm (f2 a2) = pushlr (g2 a2)	  pushrl := pushl' f1 (pushl' f2 g2 o g1) : B -> pushout_assoc_right	  pushrm := pushr' f1 (pushl' f2 g2 o g1) o pushl' f2 g2	   : C -> pushout_assoc_right	  pushrr := pushr' f1 (pushl' f2 g2 o g1) o pushr' f2 g2	   : D -> pushout_assoc_right	  pgluerl := fun a1 : A1 => pglue' f1 (pushl' f2 g2 o g1) a1	   : forall a1 : A1, pushrl (f1 a1) = pushrm (g1 a1)	  pgluerr := fun a2 : A2 =>	             ap (pushr' f1 (pushl' f2 g2 o g1)) (pglue' f2 g2 a2)	   : forall a2 : A2, pushrm (f2 a2) = pushrr (g2 a2)	  ============================	  pushout_assoc_right_rec pushout_assoc_left pushll pushlm pushlr pgluell	    pgluelr	  o pushout_assoc_left_rec pushout_assoc_right pushrl pushrm pushrr pgluerl	      pgluerr == idmap	";
+            data = "1 goal (ID 842)	  	  A1 : Type	  A2 : Type	  B : Type	  C : Type	  D : Type	  f1 : A1 -> B	  g1 : A1 -> C	  f2 : A2 -> C	  g2 : A2 -> D	  pushll := pushl' (pushr' f1 g1 o f2) g2 o pushl' f1 g1	   : B -> pushout_assoc_left	  pushlm := pushl' (pushr' f1 g1 o f2) g2 o pushr' f1 g1	   : C -> pushout_assoc_left	  pushlr := pushr' (pushr' f1 g1 o f2) g2 : D -> pushout_assoc_left	  pgluell := fun a1 : A1 =>	             ap (pushl' (pushr' f1 g1 o f2) g2) (pglue' f1 g1 a1)	   : forall a1 : A1, pushll (f1 a1) = pushlm (g1 a1)	  pgluelr := fun a2 : A2 => pglue' (pushr' f1 g1 o f2) g2 a2	   : forall a2 : A2, pushlm (f2 a2) = pushlr (g2 a2)	  pushrl := pushl' f1 (pushl' f2 g2 o g1) : B -> pushout_assoc_right	  pushrm := pushr' f1 (pushl' f2 g2 o g1) o pushl' f2 g2	   : C -> pushout_assoc_right	  pushrr := pushr' f1 (pushl' f2 g2 o g1) o pushr' f2 g2	   : D -> pushout_assoc_right	  pgluerl := fun a1 : A1 => pglue' f1 (pushl' f2 g2 o g1) a1	   : forall a1 : A1, pushrl (f1 a1) = pushrm (g1 a1)	  pgluerr := fun a2 : A2 =>	             ap (pushr' f1 (pushl' f2 g2 o g1)) (pglue' f2 g2 a2)	   : forall a2 : A2, pushrm (f2 a2) = pushrr (g2 a2)	  ============================	  pushout_assoc_right_rec pushout_assoc_left pushll pushlm pushlr pgluell	    pgluelr	  o pushout_assoc_left_rec pushout_assoc_right pushrl pushrm pushrr pgluerl	      pgluerr == idmap	No more goals.	";
             responses[i]=data;
           
 
             i = 332;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1988,7 +1988,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab498"></a><h1 class="section">Homotopy Pushouts</h1>
+<a id="lab500"></a><h1 class="section">Homotopy Pushouts</h1>
 <div class="doc" scenenumber="4"> </div>
 
  We define pushouts in terms of coproducts and coequalizers. 
@@ -2203,7 +2203,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-<a id="lab499"></a><h2 class="section">Universal property</h2>
+<a id="lab501"></a><h2 class="section">Universal property</h2>
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -2356,7 +2356,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a id="lab500"></a><h2 class="section">Symmetry</h2>
+<a id="lab502"></a><h2 class="section">Symmetry</h2>
 </div>
 <div scenenumber="19" class="code">
 <span class="command" onmouseout="
@@ -2432,7 +2432,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a id="lab501"></a><h2 class="section">Functoriality</h2>
+<a id="lab503"></a><h2 class="section">Functoriality</h2>
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="
@@ -2501,7 +2501,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_23"><pre><span></span></pre></div>
 <div class="doc" scenenumber="25">
-<a id="lab502"></a><h2 class="section">Equivalences</h2>
+<a id="lab504"></a><h2 class="section">Equivalences</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Pushouts preserve equivalences. 
@@ -2621,7 +2621,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a id="lab503"></a><h2 class="section">Contractibility</h2>
+<a id="lab505"></a><h2 class="section">Contractibility</h2>
 <div class="doc" scenenumber="4"> </div>
 
  The pushout of a span of contractible types is contractible 
@@ -2735,7 +2735,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a id="lab504"></a><h2 class="section">Sigmas</h2>
+<a id="lab506"></a><h2 class="section">Sigmas</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Pushouts commute with sigmas 
@@ -3080,7 +3080,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<a id="lab505"></a><h2 class="section">Pushouts are associative</h2>
+<a id="lab507"></a><h2 class="section">Pushouts are associative</h2>
 </div>
 <div scenenumber="39" class="code">
 <span class="command" onmouseout="
@@ -3578,7 +3578,7 @@ But we want to allow the user to forget that we've defined pushouts in terms of 
 </div>
 <div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 <div class="doc" scenenumber="41">
-<a id="lab506"></a><h2 class="section">Pushouts of equvialences are equivalences</h2>
+<a id="lab508"></a><h2 class="section">Pushouts of equvialences are equivalences</h2>
 </div>
 <div scenenumber="43" class="code">
 <span class="command" onmouseout="

@@ -838,12 +838,12 @@
           
 
             i = 164;
-            data = "";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 405) is:	 (fun Co : Cocone (span f g) Y =>	  Pushout_rec Y (pol' Co) (por' Co) (popp' Co))	 o cocone_postcompose (Build_span_cocone (push o inl) (push o inr) pglue) ==	 idmap	";
             responses[i]=data;
           
 
             i = 165;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 405) is:	 (fun Co : Cocone (span f g) Y =>	  Pushout_rec Y (pol' Co) (por' Co) (popp' Co))	 o cocone_postcompose (Build_span_cocone (push o inl) (push o inr) pglue) ==	 idmap	1 goal (ID 405)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  ============================	  (fun Co : Cocone (span f g) Y =>	   Pushout_rec Y (pol' Co) (por' Co) (popp' Co))	  o cocone_postcompose (Build_span_cocone (push o inl) (push o inr) pglue) ==	  idmap	1 goal (ID 772)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  h : Pushout f g -> Y	  ============================	  Pushout_rec Y	    (pol'	       (cocone_postcompose	          (Build_span_cocone (fun x : B => push (inl x))	             (fun x : C => push (inr x)) pglue) h))	    (por'	       (cocone_postcompose	          (Build_span_cocone (fun x : B => push (inl x))	             (fun x : C => push (inr x)) pglue) h))	    (popp'	       (cocone_postcompose	          (Build_span_cocone (fun x : B => push (inl x))	             (fun x : C => push (inr x)) pglue) h)) = h	";
+            data = "1 goal (ID 405)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  ============================	  (fun Co : Cocone (span f g) Y =>	   Pushout_rec Y (pol' Co) (por' Co) (popp' Co))	  o cocone_postcompose (Build_span_cocone (push o inl) (push o inr) pglue) ==	  idmap	1 goal (ID 772)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  h : Pushout f g -> Y	  ============================	  Pushout_rec Y	    (pol'	       (cocone_postcompose	          (Build_span_cocone (fun x : B => push (inl x))	             (fun x : C => push (inr x)) pglue) h))	    (por'	       (cocone_postcompose	          (Build_span_cocone (fun x : B => push (inl x))	             (fun x : C => push (inr x)) pglue) h))	    (popp'	       (cocone_postcompose	          (Build_span_cocone (fun x : B => push (inl x))	             (fun x : C => push (inr x)) pglue) h)) = h	";
             responses[i]=data;
           
 
@@ -898,12 +898,12 @@
           
 
             i = 176;
-            data = "";
+            data = "1 goal (ID 14)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  Pushout f g <~> PO f g	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 goal (ID 14)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  Pushout f g <~> PO f g	";
+            data = "";
             responses[i]=data;
           
 
@@ -1055,12 +1055,12 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab524"></a><h1 class="section">Pushout as a colimit</h1>
+<a id="lab526"></a><h1 class="section">Pushout as a colimit</h1>
 <div class="doc" scenenumber="4"> </div>
 
  In this file, we define <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Colimit_Pushout.html#PO"><span class="id" title="definition">PO</span></a></span> the pushout of two maps as the colimit of a particular diagram, and then show that it is equivalent to <span class="inlinecode"><span class="id" title="var">pushout</span></span> the primitive pushout defined as an HIT. 
 <div class="doc" scenenumber="10"> </div>
-<a id="lab525"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Colimits.Colimit_Pushout.html#PO"><span class="id" title="definition">PO</span></a></span></h2>
+<a id="lab527"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Colimits.Colimit_Pushout.html#PO"><span class="id" title="definition">PO</span></a></span></h2>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -1583,7 +1583,7 @@ A nice property: the pushout of an equivalence is an equivalence.
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a id="lab526"></a><h2 class="section">Equivalence with <span class="inlinecode"><span class="id" title="var">pushout</span></span>
+<a id="lab528"></a><h2 class="section">Equivalence with <span class="inlinecode"><span class="id" title="var">pushout</span></span>
 </h2>
 </div>
 <div scenenumber="19" class="code">

@@ -30,42 +30,42 @@ pre {
 
 <div class="code" title="File: HomotopyGroup.v
 Line: 1
-Time: 0.038s">
-<div class="time" style="width: 1.705565529623%"></div>
+Time: 0.034s">
+<div class="time" style="width: 1.8348623853211%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 1
 Time: 0.017s">
-<div class="time" style="width: 0.76301615798923%"></div>
+<div class="time" style="width: 0.91743119266055%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 2
-Time: 0.08s">
-<div class="time" style="width: 3.5906642728905%"></div>
+Time: 0.074s">
+<div class="time" style="width: 3.9935240151106%"></div>
 <pre>
 Require Import Pointed.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 3
-Time: 0.076s">
-<div class="time" style="width: 3.411131059246%"></div>
+Time: 0.073s">
+<div class="time" style="width: 3.9395574743659%"></div>
 <pre>
 Require Import Algebra.AbGroups.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 4
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 5
-Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
 Require Import Spaces.Nat.</pre>
 </div>
@@ -79,7 +79,7 @@ Require Import Modalities.ReflectiveSubuniverse.</pre>
 <div class="code" title="File: HomotopyGroup.v
 Line: 7
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -115,8 +115,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 14
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition HomotopyGroup_type (n : nat) : Type
   := match n with
       | 0 =&gt; pType
@@ -133,8 +133,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 20
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>Definition HomotopyGroup_type_ptype (n : nat) : HomotopyGroup_type n -&gt; pType
   := match n return HomotopyGroup_type n -&gt; pType with
      | 0 =&gt; fun X =&gt; X
@@ -175,8 +175,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 32
-Time: 0.028s">
-<div class="time" style="width: 1.2567324955117%"></div>
+Time: 0.025s">
+<div class="time" style="width: 1.3491635186185%"></div>
 <pre>
   srapply (Build_Group (Tr 0 (loops X)));
   repeat split.</pre>
@@ -203,8 +203,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 36
-Time: 0.044s">
-<div class="time" style="width: 1.9748653500898%"></div>
+Time: 0.041s">
+<div class="time" style="width: 2.2126281705343%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -252,13 +252,13 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 42
 Time: 0.007s">
-<div class="time" style="width: 0.31418312387792%"></div>
+<div class="time" style="width: 0.37776578521317%"></div>
 <pre> srapply Trunc_rec; intro x.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     exact (tr x^).</pre>
 </div>
@@ -278,8 +278,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -304,8 +304,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 47
-Time: 0.236s">
-<div class="time" style="width: 10.592459605027%"></div>
+Time: 0.185s">
+<div class="time" style="width: 9.9838100377766%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -345,8 +345,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 52
-Time: 0.028s">
-<div class="time" style="width: 1.2567324955117%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.241230437129%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -386,8 +386,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 57
-Time: 0.028s">
-<div class="time" style="width: 1.2567324955117%"></div>
+Time: 0.025s">
+<div class="time" style="width: 1.3491635186185%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -427,15 +427,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 62
-Time: 0.029s">
-<div class="time" style="width: 1.3016157989228%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.241230437129%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
     apply (ap tr).</pre>
 </div>
@@ -468,15 +468,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 67
-Time: 0.028s">
-<div class="time" style="width: 1.2567324955117%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.241230437129%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 68
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply (ap tr).</pre>
 </div>
@@ -489,8 +489,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 70
-Time: 0.063s">
-<div class="time" style="width: 2.8276481149013%"></div>
+Time: 0.054s">
+<div class="time" style="width: 2.9141932002159%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -545,8 +545,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 78
-Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
 
 Definition pi_succ n X : Pi n.+1 X $&lt;~&gt; Pi 1 (iterated_loops n X).</pre>
@@ -560,15 +560,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 81
-Time: 0.017s">
-<div class="time" style="width: 0.76301615798923%"></div>
+Time: 0.015s">
+<div class="time" style="width: 0.80949811117107%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 82
-Time: 0.02s">
-<div class="time" style="width: 0.89766606822262%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.75553157042634%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -604,8 +604,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 89
-Time: 0.026s">
-<div class="time" style="width: 1.1669658886894%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.4570966001079%"></div>
 <pre>Global Instance isabgroup_pi (n : nat) (X : pType)
   : IsAbGroup (Pi n.+2 X).</pre>
 </div>
@@ -619,14 +619,14 @@ Proof.</pre>
 <div class="code" title="File: HomotopyGroup.v
 Line: 91
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
   nrapply Build_IsAbGroup.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 92
 Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
   1: exact _.</pre>
 </div>
@@ -639,29 +639,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 94
-Time: 0.11s">
-<div class="time" style="width: 4.9371633752244%"></div>
+Time: 0.093s">
+<div class="time" style="width: 5.0188882892607%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 95
-Time: 0.005s">
-<div class="time" style="width: 0.22441651705566%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
   cbn; apply (ap tr).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply eckmann_hilton.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 97
-Time: 0.02s">
-<div class="time" style="width: 0.89766606822262%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.02536427415%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -676,7 +676,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 100
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>Definition pi_functor_type (n : nat) (X Y : pType) : Type
   := match n with
      | 0 =&gt; pTr 0 X -&gt;* pTr 0 Y
@@ -694,7 +694,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 106
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>Definition pi_functor_type_pmap {n X Y}
   : pi_functor_type n X Y -&gt; Pi n X -&gt;* Pi n Y
   := match n return pi_functor_type n X Y -&gt; (Pi n X -&gt;* Pi n Y) with
@@ -741,8 +741,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 118
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   snrapply Build_GroupHomomorphism.</pre>
 </div>
@@ -756,7 +756,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 120
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre> apply Trunc_functor.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -795,22 +795,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 124
-Time: 0.176s">
-<div class="time" style="width: 7.8994614003591%"></div>
+Time: 0.141s">
+<div class="time" style="width: 7.6092822450081%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 125
-Time: 0.018s">
-<div class="time" style="width: 0.80789946140036%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.75553157042634%"></div>
 <pre>
   apply (ap tr); cbn.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 126
-Time: 0.007s">
-<div class="time" style="width: 0.31418312387792%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.21586616297895%"></div>
 <pre>
   rewrite 2 concat_pp_p.</pre>
 </div>
@@ -823,29 +823,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 128
-Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
   rewrite 2 concat_p_pp.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 129
-Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
   rewrite (concat_pp_p (ap f x)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 130
-Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
   rewrite concat_pV, concat_p1.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 131
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
   rewrite concat_p_pp.</pre>
 </div>
@@ -865,8 +865,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 134
-Time: 0.041s">
-<div class="time" style="width: 1.8402154398564%"></div>
+Time: 0.039s">
+<div class="time" style="width: 2.1046950890448%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -921,8 +921,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 142
-Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (pi1_functor (iterated_loops_functor n f)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -934,8 +934,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 143
-Time: 0.069s">
-<div class="time" style="width: 3.096947935368%"></div>
+Time: 0.066s">
+<div class="time" style="width: 3.5617916891527%"></div>
 <pre>
 
 Definition pi_functor_succ {X Y : pType} (f : X $-&gt; Y) (n : nat)
@@ -950,22 +950,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 147
-Time: 0.123s">
-<div class="time" style="width: 5.5206463195691%"></div>
+Time: 0.115s">
+<div class="time" style="width: 6.2061521856449%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 148
-Time: 0.115s">
-<div class="time" style="width: 5.1615798922801%"></div>
+Time: 0.108s">
+<div class="time" style="width: 5.8283864004317%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 149
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pi_functor_idmap n {X : pType}
@@ -1007,8 +1007,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 156
-Time: 0.011s">
-<div class="time" style="width: 0.49371633752244%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.48569886670264%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1020,14 +1020,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 157
-Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre> apply O_functor_homotopy.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 157
-Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
       exact (iterated_loops_functor_idmap _ n.+1).</pre>
 </div>
@@ -1041,20 +1041,20 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 159
 Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre> apply O_functor_idmap.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 159
-Time: 0.007s">
-<div class="time" style="width: 0.31418312387792%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.32379924446843%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 160
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
 
 Definition pi_functor_compose n {X Y Z : pType}
@@ -1071,7 +1071,7 @@ Proof.</pre>
 <div class="code" title="File: HomotopyGroup.v
 Line: 165
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
   destruct n; intro x.</pre>
 </div>
@@ -1084,8 +1084,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 167
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> cbn; apply Trunc_functor_compose.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1097,8 +1097,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 168
-Time: 0.011s">
-<div class="time" style="width: 0.49371633752244%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.53966540744738%"></div>
 <pre> etransitivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1110,14 +1110,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 169
-Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre> apply O_functor_homotopy.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 169
-Time: 0.008s">
-<div class="time" style="width: 0.35906642728905%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.37776578521317%"></div>
 <pre> rapply (iterated_loops_functor_compose (n.+1)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1129,21 +1129,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 170
-Time: 0.01s">
-<div class="time" style="width: 0.44883303411131%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.32379924446843%"></div>
 <pre> refine (O_functor_compose (Tr 0) _ _ x).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 170
-Time: 0.017s">
-<div class="time" style="width: 0.76301615798923%"></div>
+Time: 0.015s">
+<div class="time" style="width: 0.80949811117107%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 171
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
 
 Definition pi_2functor (n : nat)
@@ -1173,8 +1173,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 178
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply O_functor_homotopy; exact p.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1187,19 +1187,19 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 179
 Time: 0.005s">
-<div class="time" style="width: 0.22441651705566%"></div>
+<div class="time" style="width: 0.26983270372369%"></div>
 <pre> apply O_functor_homotopy.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 179
-Time: 0.014s">
-<div class="time" style="width: 0.62836624775583%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.64759848893686%"></div>
 <pre> refine (iterated_loops_2functor (n.+1) _); exact p.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 179
-Time: 0.005s">
-<div class="time" style="width: 0.22441651705566%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.21586616297895%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1233,8 +1233,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 184
-Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
   all:apply equiv_O_functor.</pre>
 </div>
@@ -1248,21 +1248,21 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 186
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
   all:apply unfold_iterated_loops'.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 187
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 188
 Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
 
 Definition pi_functor_loops (n : nat) {X Y : pType} (f : X -&gt;* Y)
@@ -1279,21 +1279,21 @@ Proof.</pre>
 <div class="code" title="File: HomotopyGroup.v
 Line: 193
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
   destruct n; intros x.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 194
 Time: 0.011s">
-<div class="time" style="width: 0.49371633752244%"></div>
+<div class="time" style="width: 0.59363194819212%"></div>
 <pre>
   all:refine ((O_functor_compose 0 _ _ _)^ @ _ @ (O_functor_compose 0 _ _ _)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 195
 Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>
   all:apply O_functor_homotopy.</pre>
 </div>
@@ -1307,7 +1307,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 197
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1319,21 +1319,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 198
-Time: 0.044s">
-<div class="time" style="width: 1.9748653500898%"></div>
+Time: 0.05s">
+<div class="time" style="width: 2.6983270372369%"></div>
 <pre> exact (pointed_htpy (unfold_iterated_loops_functor n.+1 f)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 198
-Time: 0.052s">
-<div class="time" style="width: 2.3339317773788%"></div>
+Time: 0.051s">
+<div class="time" style="width: 2.7522935779817%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 199
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
 
 Definition groupiso_pi_functor (n : nat)
@@ -1350,7 +1350,7 @@ Proof.</pre>
 <div class="code" title="File: HomotopyGroup.v
 Line: 204
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
   snrapply Build_GroupIsomorphism.</pre>
 </div>
@@ -1364,21 +1364,21 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 206
 Time: 0.008s">
-<div class="time" style="width: 0.35906642728905%"></div>
+<div class="time" style="width: 0.43173232595791%"></div>
 <pre>
   nrefine (Trunc_functor_isequiv _ _).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 207
-Time: 0.005s">
-<div class="time" style="width: 0.22441651705566%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.21586616297895%"></div>
 <pre>
   refine (isequiv_homotopic _ (pequiv_iterated_loops_functor_is_iterated_loops_functor n.+1 e)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 208
-Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1393,7 +1393,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 211
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>Lemma pi_prod (X Y : pType) {n : nat}
   : GroupIsomorphism (Pi n.+1 (X * Y))
       (grp_prod (Pi n.+1 X) (Pi n.+1 Y)).</pre>
@@ -1407,8 +1407,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 214
-Time: 0.04s">
-<div class="time" style="width: 1.7953321364452%"></div>
+Time: 0.038s">
+<div class="time" style="width: 2.0507285483001%"></div>
 <pre>
   srapply Build_GroupIsomorphism'.</pre>
 </div>
@@ -1422,13 +1422,13 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 216
 Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+<div class="time" style="width: 0.21586616297895%"></div>
 <pre> refine (equiv_O_prod_cmp _ _ _ oE _).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 216
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
     apply Trunc_functor_equiv.</pre>
 </div>
@@ -1454,105 +1454,105 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 219
-Time: 0.282s">
-<div class="time" style="width: 12.657091561939%"></div>
+Time: 0.239s">
+<div class="time" style="width: 12.898003237992%"></div>
 <pre>
   strip_truncations; simpl.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 220
-Time: 0.165s">
-<div class="time" style="width: 7.4057450628366%"></div>
+Time: 0.145s">
+<div class="time" style="width: 7.825148407987%"></div>
 <pre>
   set (Z := (iterated_loops_prod X Y)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 221
 Time: 0.018s">
-<div class="time" style="width: 0.80789946140036%"></div>
+<div class="time" style="width: 0.97139773340529%"></div>
 <pre>
   apply path_prod.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 222
-Time: 0.052s">
-<div class="time" style="width: 2.3339317773788%"></div>
+Time: 0.045s">
+<div class="time" style="width: 2.4284943335132%"></div>
 <pre>
   1,2: apply (ap tr).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 223
-Time: 0.12s">
-<div class="time" style="width: 5.3859964093357%"></div>
+Time: 0.096s">
+<div class="time" style="width: 5.1807879114949%"></div>
 <pre>
   1: set (q := ap fst); unfold fst; unfold q; clear q.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 224
-Time: 0.107s">
-<div class="time" style="width: 4.802513464991%"></div>
+Time: 0.093s">
+<div class="time" style="width: 5.0188882892607%"></div>
 <pre>
   2: set (q := ap snd); unfold snd; unfold q; clear q.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 225
-Time: 0.649s">
-<div class="time" style="width: 29.129263913824%"></div>
+Time: 0.535s">
+<div class="time" style="width: 28.872099298435%"></div>
 <pre>
   1,2: rewrite 8 ap_pp.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 226
-Time: 0.49s">
-<div class="time" style="width: 21.992818671454%"></div>
+Time: 0.417s">
+<div class="time" style="width: 22.504047490556%"></div>
 <pre>
   1,2: rewrite ? concat_p_pp.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 227
-Time: 0.029s">
-<div class="time" style="width: 1.3016157989228%"></div>
+Time: 0.028s">
+<div class="time" style="width: 1.5110631408527%"></div>
 <pre>
   1,2: do 2 apply whiskerR.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 228
-Time: 0.073s">
-<div class="time" style="width: 3.2764811490126%"></div>
+Time: 0.063s">
+<div class="time" style="width: 3.3998920669185%"></div>
 <pre>
   1,2: rewrite ? ap_V.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 229
-Time: 0.057s">
-<div class="time" style="width: 2.5583482944345%"></div>
+Time: 0.042s">
+<div class="time" style="width: 2.266594711279%"></div>
 <pre>
   1,2: rewrite concat_pp_p.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 230
-Time: 0.058s">
-<div class="time" style="width: 2.6032315978456%"></div>
+Time: 0.049s">
+<div class="time" style="width: 2.6443604964922%"></div>
 <pre>
   1,2: rewrite concat_pV.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 231
-Time: 0.036s">
-<div class="time" style="width: 1.6157989228007%"></div>
+Time: 0.031s">
+<div class="time" style="width: 1.6729627630869%"></div>
 <pre>
   1,2: rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 232
-Time: 0.006s">
-<div class="time" style="width: 0.26929982046679%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.26983270372369%"></div>
 <pre>
   1,2: reflexivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 233
-Time: 2.228s">
+Time: 1.853s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>
@@ -1567,8 +1567,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 236
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance is0functor_pi (n : nat) : Is0Functor (Pi n.+1).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1599,15 +1599,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 238
-Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 239
-Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
 
 Global Instance is1functor_pi (n : nat) : Is1Functor (Pi n.+1).</pre>
@@ -1641,8 +1641,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 244
-Time: 0.015s">
-<div class="time" style="width: 0.67324955116697%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre> exact (pi_2functor (n.+1) _ _ h).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1661,7 +1661,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 245
 Time: 0.005s">
-<div class="time" style="width: 0.22441651705566%"></div>
+<div class="time" style="width: 0.26983270372369%"></div>
 <pre> exact (pi_functor_idmap (n.+1)).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1680,13 +1680,13 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 246
 Time: 0.002s">
-<div class="time" style="width: 0.089766606822262%"></div>
+<div class="time" style="width: 0.10793308148948%"></div>
 <pre> exact (pi_functor_compose (n.+1) f g h).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 246
 Time: 0.006s">
-<div class="time" style="width: 0.26929982046679%"></div>
+<div class="time" style="width: 0.32379924446843%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1701,7 +1701,7 @@ Time: 0s">
 <div class="code" title="File: HomotopyGroup.v
 Line: 249
 Time: 0.003s">
-<div class="time" style="width: 0.13464991023339%"></div>
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre>Lemma pmap_pi_functor {X Y : pType} (f : X -&gt;* Y) (n : nat) 
   : pi_functor_type_pmap (pi_functor (S n) f) ==* 
   ptr_functor 0 (iterated_loops_functor (S n) f).</pre>
@@ -1716,26 +1716,26 @@ Proof.</pre>
 <div class="code" title="File: HomotopyGroup.v
 Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
   srapply Build_pHomotopy.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 253
-Time: 0.009s">
-<div class="time" style="width: 0.40394973070018%"></div>
+Time: 0.043s">
+<div class="time" style="width: 2.3205612520237%"></div>
 <pre> 1: reflexivity.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 253
-Time: 0.032s">
-<div class="time" style="width: 1.4362657091562%"></div>
+Time: 0.028s">
+<div class="time" style="width: 1.5110631408527%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 253
-Time: 0.02s">
-<div class="time" style="width: 0.89766606822262%"></div>
+Time: 0.017s">
+<div class="time" style="width: 0.91743119266055%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1772,8 +1772,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 261
-Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   snrapply Build_GroupIsomorphism'.</pre>
 </div>
@@ -1786,8 +1786,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 263
-Time: 0.004s">
-<div class="time" style="width: 0.17953321364452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.16189962223421%"></div>
 <pre> unfold Pi1.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
@@ -1806,15 +1806,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 265
-Time: 0.007s">
-<div class="time" style="width: 0.31418312387792%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
     1: symmetry; rapply ptr_loops.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 266
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
     rapply equiv_tr.</pre>
 </div>
@@ -1833,29 +1833,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 268
-Time: 0.156s">
-<div class="time" style="width: 7.0017953321364%"></div>
+Time: 0.132s">
+<div class="time" style="width: 7.1235833783055%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 269
-Time: 0.023s">
-<div class="time" style="width: 1.032315978456%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.0793308148948%"></div>
 <pre>
   apply path_Tr, tr.</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 270
 Time: 0.001s">
-<div class="time" style="width: 0.044883303411131%"></div>
+<div class="time" style="width: 0.053966540744738%"></div>
 <pre>
   exact (ap_pp tr x y).</pre>
 </div>
 <div class="code" title="File: HomotopyGroup.v
 Line: 271
-Time: 0.255s">
-<div class="time" style="width: 11.445242369838%"></div>
+Time: 0.221s">
+<div class="time" style="width: 11.926605504587%"></div>
 <pre>
 Defined.</pre>
 </div>

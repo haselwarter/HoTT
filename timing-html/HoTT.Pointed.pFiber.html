@@ -30,42 +30,42 @@ pre {
 
 <div class="code" title="File: pFiber.v
 Line: 1
-Time: 0.039s">
-<div class="time" style="width: 4.4368600682594%"></div>
+Time: 0.038s">
+<div class="time" style="width: 4.2600896860987%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 1
 Time: 0.018s">
-<div class="time" style="width: 2.0477815699659%"></div>
+<div class="time" style="width: 2.0179372197309%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
 Require Import HFiber.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 3
-Time: 0.021s">
-<div class="time" style="width: 2.3890784982935%"></div>
+Time: 0.022s">
+<div class="time" style="width: 2.4663677130045%"></div>
 <pre>
 Require Import Pointed.Core.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 4
-Time: 0.003s">
-<div class="time" style="width: 0.34129692832765%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.22421524663677%"></div>
 <pre>
 Require Import Pointed.pEquiv.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 5
-Time: 0.045s">
-<div class="time" style="width: 5.1194539249147%"></div>
+Time: 0.043s">
+<div class="time" style="width: 4.8206278026906%"></div>
 <pre>
 Require Import Pointed.Loops.</pre>
 </div>
@@ -102,8 +102,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 12
-Time: 0.004s">
-<div class="time" style="width: 0.45506257110353%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre>
   refine (Build_pType (hfiber f (point B)) _); try exact _.</pre>
 </div>
@@ -131,7 +131,7 @@ Defined.</pre>
 <div class="code" title="File: pFiber.v
 Line: 16
 Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
 
 Definition pfib {A B : pType} (f : A -&gt;* B) : pfiber f -&gt;* A
@@ -147,8 +147,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition pfiber2_loops {A B : pType} (f : A -&gt;* B)
   : pfiber (pfib f) &lt;~&gt;* loops B.</pre>
 </div>
@@ -161,8 +161,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 23
-Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply issig_pequiv'; srefine (_;_).</pre>
 </div>
@@ -176,13 +176,13 @@ Time: 0s">
 <div class="code" title="File: pFiber.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre> transitivity (f (point A) = point B).</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 25
 Time: 0.014s">
-<div class="time" style="width: 1.5927189988623%"></div>
+<div class="time" style="width: 1.5695067264574%"></div>
 <pre>
     1: make_equiv_contr_basedpaths.</pre>
 </div>
@@ -195,8 +195,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 27
-Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
     symmetry; apply point_eq.</pre>
 </div>
@@ -215,15 +215,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 29
-Time: 0.021s">
-<div class="time" style="width: 2.3890784982935%"></div>
+Time: 0.02s">
+<div class="time" style="width: 2.2421524663677%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
 
 Definition pfiber_loops_functor {A B : pType} (f : A -&gt;* B)
@@ -258,22 +258,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
     2: srapply equiv_path_sigma.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 37
-Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     simpl; unfold hfiber.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
     srapply equiv_functor_sigma_id.</pre>
 </div>
@@ -286,8 +286,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 40
-Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (_ oE equiv_moveL_Mp _ _ _).</pre>
 </div>
@@ -321,8 +321,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
     apply transport_paths_Fl.</pre>
 </div>
@@ -334,22 +334,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 46
-Time: 0.061s">
-<div class="time" style="width: 6.9397042093288%"></div>
+Time: 0.056s">
+<div class="time" style="width: 6.2780269058296%"></div>
 <pre>
   by pointed_reduce.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 47
 Time: 0.055s">
-<div class="time" style="width: 6.2571103526735%"></div>
+<div class="time" style="width: 6.1659192825112%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 48
 Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+<div class="time" style="width: 0.22421524663677%"></div>
 <pre>
 
 Definition pr1_pfiber_loops_functor {A B} (f : A -&gt;* B)
@@ -365,8 +365,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   srapply Build_pHomotopy.</pre>
 </div>
@@ -379,21 +379,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre> intros [u v].</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 55
-Time: 0.026s">
-<div class="time" style="width: 2.9579067121729%"></div>
+Time: 0.025s">
+<div class="time" style="width: 2.8026905829596%"></div>
 <pre>
     refine (concat_1p _ @ concat_p1 _ @ _).</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 56
 Time: 0.003s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre>
     exact (@ap_pr1_path_sigma _ _ (point A; point_eq f) (point A;point_eq f) _ _).</pre>
 </div>
@@ -406,14 +406,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 58
-Time: 0.879s">
+Time: 0.892s">
 <div class="time" style="width: 100%"></div>
 <pre> abstract (pointed_reduce_rewrite; reflexivity).</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 58
-Time: 0.077s">
-<div class="time" style="width: 8.7599544937429%"></div>
+Time: 0.075s">
+<div class="time" style="width: 8.4080717488789%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -470,15 +470,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 68
-Time: 0.004s">
-<div class="time" style="width: 0.45506257110353%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 69
 Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
 
 Definition functor_pfiber {A B C D}
@@ -554,8 +554,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 80
-Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> refine (concat_pp_p _ _ _ @ _).</pre>
 </div>
 <div class="code" title="File: pFiber.v
@@ -572,15 +572,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 80
-Time: 0.008s">
-<div class="time" style="width: 0.91012514220705%"></div>
+Time: 0.009s">
+<div class="time" style="width: 1.0089686098655%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 81
 Time: 0.016s">
-<div class="time" style="width: 1.8202502844141%"></div>
+<div class="time" style="width: 1.7937219730942%"></div>
 <pre>
 
 Definition pequiv_pfiber {A B C D}
@@ -592,7 +592,7 @@ Definition pequiv_pfiber {A B C D}
 <div class="code" title="File: pFiber.v
 Line: 87
 Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+<div class="time" style="width: 0.22421524663677%"></div>
 <pre>
 
 Definition square_functor_pfiber {A B C D}
@@ -636,34 +636,34 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 96
-Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre> apply moveL_pV.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 96
-Time: 0.017s">
-<div class="time" style="width: 1.93401592719%"></div>
+Time: 0.016s">
+<div class="time" style="width: 1.7937219730942%"></div>
 <pre> cbn; unfold functor_sigma; cbn.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 96
-Time: 0.033s">
-<div class="time" style="width: 3.7542662116041%"></div>
+Time: 0.032s">
+<div class="time" style="width: 3.5874439461883%"></div>
 <pre>
     abstract (rewrite ap_pr1_path_sigma, concat_p1; reflexivity).</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 97
-Time: 0.041s">
-<div class="time" style="width: 4.6643913538111%"></div>
+Time: 0.043s">
+<div class="time" style="width: 4.8206278026906%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 98
-Time: 0.004s">
-<div class="time" style="width: 0.45506257110353%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.56053811659193%"></div>
 <pre>
 
 Definition square_pequiv_pfiber {A B C D}
@@ -682,8 +682,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 106
-Time: 0.004s">
-<div class="time" style="width: 0.45506257110353%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre>Definition pfiber2_loops_functor {A B : pType} (f : A -&gt;* B)
 : pfiber2_loops f o* pfib (pfib (pfib f))
   ==* loops_functor f o* (loops_inv _ o* pfiber2_loops (pfib f)).</pre>
@@ -697,15 +697,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 109
-Time: 0.039s">
-<div class="time" style="width: 4.4368600682594%"></div>
+Time: 0.041s">
+<div class="time" style="width: 4.5964125560538%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 110
 Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _).</pre>
 </div>
@@ -718,14 +718,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 112
-Time: 0.052s">
-<div class="time" style="width: 5.9158134243458%"></div>
+Time: 0.051s">
+<div class="time" style="width: 5.7174887892377%"></div>
 <pre> intros [[[x p] q] r].</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 112
-Time: 0.004s">
-<div class="time" style="width: 0.45506257110353%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre> simpl in *.</pre>
 </div>
 <div class="code" title="File: pFiber.v
@@ -739,35 +739,35 @@ Time: 0s">
 <div class="code" title="File: pFiber.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>move q before x; revert dependent x;
       refine (paths_ind_r _ _ _); intros p r; cbn.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 115
 Time: 0.006s">
-<div class="time" style="width: 0.68259385665529%"></div>
+<div class="time" style="width: 0.67264573991031%"></div>
 <pre>
     rewrite !concat_1p, concat_p1.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 116
 Time: 0.001s">
-<div class="time" style="width: 0.11376564277588%"></div>
+<div class="time" style="width: 0.11210762331839%"></div>
 <pre>
     rewrite paths_ind_r_transport.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 117
 Time: 0.003s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre>
     rewrite transport_arrow_toconst, transport_paths_Fl.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 118
 Time: 0.003s">
-<div class="time" style="width: 0.34129692832765%"></div>
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre> 
     rewrite concat_p1, inv_V, ap_V.</pre>
 </div>
@@ -780,15 +780,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 120
-Time: 0.002s">
-<div class="time" style="width: 0.22753128555176%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.33632286995516%"></div>
 <pre>
     rewrite transport_paths_Fl; cbn.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 121
 Time: 0.018s">
-<div class="time" style="width: 2.0477815699659%"></div>
+<div class="time" style="width: 2.0179372197309%"></div>
 <pre>
     rewrite pr1_path_V, !ap_V, !inv_V.</pre>
 </div>
@@ -808,14 +808,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: pFiber.v
 Line: 124
-Time: 0.019s">
-<div class="time" style="width: 2.1615472127418%"></div>
+Time: 0.018s">
+<div class="time" style="width: 2.0179372197309%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: pFiber.v
 Line: 124
-Time: 0.138s">
-<div class="time" style="width: 15.699658703072%"></div>
+Time: 0.133s">
+<div class="time" style="width: 14.910313901345%"></div>
 <pre>
 Qed.</pre>
 </div>

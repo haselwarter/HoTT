@@ -2178,12 +2178,12 @@
           
 
             i = 432;
-            data = "";
+            data = "1 goal (ID 644)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' O_indpaths (O_functor (fun x : B => h (g x)))	       (fun x : O B => O_functor h (O_functor g x))	       (fun x : B =>	        to_O_natural (fun x0 : B => h (g x0)) x	        @' ((to_O_natural h (g x))^	            @' ap (O_functor h) (to_O_natural g x)^))	       (O_functor f (to O A a)) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
             i = 433;
-            data = "1 goal (ID 644)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' O_indpaths (O_functor (fun x : B => h (g x)))	       (fun x : O B => O_functor h (O_functor g x))	       (fun x : B =>	        to_O_natural (fun x0 : B => h (g x0)) x	        @' ((to_O_natural h (g x))^	            @' ap (O_functor h) (to_O_natural g x)^))	       (O_functor f (to O A a)) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	1 goal (ID 683)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' transport	       (fun x : O_reflector O B =>	        O_functor (fun x0 : B => h (g x0)) x = O_functor h (O_functor g x))	       (to_O_natural f a)^	       (O_indpaths (O_functor (fun x : B => h (g x)))	          (fun x : O B => O_functor h (O_functor g x))	          (fun x : B =>	           to_O_natural (fun x0 : B => h (g x0)) x	           @' ((to_O_natural h (g x))^	               @' ap (O_functor h) (to_O_natural g x)^)) 	          (to O B (f a))) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 goal (ID 683)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' transport	       (fun x : O_reflector O B =>	        O_functor (fun x0 : B => h (g x0)) x = O_functor h (O_functor g x))	       (to_O_natural f a)^	       (O_indpaths (O_functor (fun x : B => h (g x)))	          (fun x : O B => O_functor h (O_functor g x))	          (fun x : B =>	           to_O_natural (fun x0 : B => h (g x0)) x	           @' ((to_O_natural h (g x))^	               @' ap (O_functor h) (to_O_natural g x)^)) 	          (to O B (f a))) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
@@ -5738,12 +5738,12 @@
           
 
             i = 1144;
-            data = "1 goal (ID 484)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  H0 : In O A	  ============================	  In O (Contr A)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 486) is:	 In O (IsTrunc n.+1 A)	";
+            data = "1 goal (ID 484)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  H0 : In O A	  ============================	  In O (Contr A)	";
             responses[i]=data;
           
 
             i = 1145;
-            data = "1 goal (ID 486)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type, In O A -> In O (IsTrunc n A)	  A : Type	  H0 : In O A	  ============================	  In O (IsTrunc n.+1 A)	1 goal (ID 1016)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type, In O A -> In O (IsTrunc n A)	  A : Type	  H0 : In O A	  ============================	  In O (forall x y : A, IsTrunc n (x = y))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 486) is:	 In O (IsTrunc n.+1 A)	1 goal (ID 486)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type, In O A -> In O (IsTrunc n A)	  A : Type	  H0 : In O A	  ============================	  In O (IsTrunc n.+1 A)	1 goal (ID 1016)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type, In O A -> In O (IsTrunc n A)	  A : Type	  H0 : In O A	  ============================	  In O (forall x y : A, IsTrunc n (x = y))	";
             responses[i]=data;
           
 
@@ -6698,12 +6698,12 @@
           
 
             i = 1336;
-            data = "";
+            data = "1 goal (ID 1582)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  ============================	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_functor (equiv_prod_assoc A B C)^-1	     (O_monad_strength (A * B) C (x1, x0, to O C x))) ==	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C)	        ((equiv_prod_assoc A B (O C))^-1 (x1, x0, to O C x))))	";
             responses[i]=data;
           
 
             i = 1337;
-            data = "1 goal (ID 1582)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  ============================	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_functor (equiv_prod_assoc A B C)^-1	     (O_monad_strength (A * B) C (x1, x0, to O C x))) ==	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C)	        ((equiv_prod_assoc A B (O C))^-1 (x1, x0, to O C x))))	1 goal (ID 1585)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  c : C	  ============================	  (fun (x : B) (x0 : A) =>	   O_functor (fun H : A * B * C => (fst (fst H), (snd (fst H), snd H)))	     (O_monad_strength (A * B) C (x0, x, to O C c))) =	  (fun (x : B) (x0 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C) (x0, (x, to O C c))))	";
+            data = "1 goal (ID 1585)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  c : C	  ============================	  (fun (x : B) (x0 : A) =>	   O_functor (fun H : A * B * C => (fst (fst H), (snd (fst H), snd H)))	     (O_monad_strength (A * B) C (x0, x, to O C c))) =	  (fun (x : B) (x0 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C) (x0, (x, to O C c))))	";
             responses[i]=data;
           
 

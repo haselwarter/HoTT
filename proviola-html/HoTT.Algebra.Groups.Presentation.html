@@ -573,12 +573,12 @@
           
 
             i = 111;
-            data = "";
+            data = "1 goal (ID 1468)	  	  funext : Funext	  G : Group	  P : HasPresentation G	  H : Group	  f : gp_generators P -> H	  p : forall r : gp_rel_index P,	      FreeGroup_rec (gp_generators P) H f (gp_relators P r) = group_unit	  a : gp_rel_index P + gp_rel_index P	  w : list (gp_rel_index P + gp_rel_index P)	  IHw : ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (gp_relators P) (tr (Coeq.Coeq.coeq w))) =	        ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (fun _ : gp_rel_index P => group_unit) 	             (tr (Coeq.Coeq.coeq w)))	  ============================	  FreeGroup_rec (gp_generators P) H f	    match a with	    | inl a0 => gp_relators P a0	    | inr b => - gp_relators P b	    end =	  FreeGroup_rec (gp_generators P) H f	    match a with	    | inl _ => monunit_freegroup_type (gp_generators P)	    | inr _ => - monunit_freegroup_type (gp_generators P)	    end	";
             responses[i]=data;
           
 
             i = 112;
-            data = "1 goal (ID 1468)	  	  funext : Funext	  G : Group	  P : HasPresentation G	  H : Group	  f : gp_generators P -> H	  p : forall r : gp_rel_index P,	      FreeGroup_rec (gp_generators P) H f (gp_relators P r) = group_unit	  a : gp_rel_index P + gp_rel_index P	  w : list (gp_rel_index P + gp_rel_index P)	  IHw : ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (gp_relators P) (tr (Coeq.Coeq.coeq w))) =	        ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (fun _ : gp_rel_index P => group_unit) 	             (tr (Coeq.Coeq.coeq w)))	  ============================	  FreeGroup_rec (gp_generators P) H f	    match a with	    | inl a0 => gp_relators P a0	    | inr b => - gp_relators P b	    end =	  FreeGroup_rec (gp_generators P) H f	    match a with	    | inl _ => monunit_freegroup_type (gp_generators P)	    | inr _ => - monunit_freegroup_type (gp_generators P)	    end	2 goals (ID 1475)	  	  funext : Funext	  G : Group	  P : HasPresentation G	  H : Group	  f : gp_generators P -> H	  p : forall r : gp_rel_index P,	      FreeGroup_rec (gp_generators P) H f (gp_relators P r) = group_unit	  g : gp_rel_index P	  w : list (gp_rel_index P + gp_rel_index P)	  IHw : ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (gp_relators P) (tr (Coeq.Coeq.coeq w))) =	        ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (fun _ : gp_rel_index P => group_unit) 	             (tr (Coeq.Coeq.coeq w)))	  ============================	  FreeGroup_rec (gp_generators P) H f (gp_relators P g) =	  FreeGroup_rec (gp_generators P) H f	    (monunit_freegroup_type (gp_generators P))		goal 2 (ID 1477) is:	 FreeGroup_rec (gp_generators P) H f (- gp_relators P g) =	 FreeGroup_rec (gp_generators P) H f	   (- monunit_freegroup_type (gp_generators P))	";
+            data = "2 goals (ID 1475)	  	  funext : Funext	  G : Group	  P : HasPresentation G	  H : Group	  f : gp_generators P -> H	  p : forall r : gp_rel_index P,	      FreeGroup_rec (gp_generators P) H f (gp_relators P r) = group_unit	  g : gp_rel_index P	  w : list (gp_rel_index P + gp_rel_index P)	  IHw : ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (gp_relators P) (tr (Coeq.Coeq.coeq w))) =	        ((equiv_freegroup_rec H (gp_generators P))^-1)%equiv f	          (FreeGroup_rec (gp_rel_index P) (FreeGroup (gp_generators P))	             (fun _ : gp_rel_index P => group_unit) 	             (tr (Coeq.Coeq.coeq w)))	  ============================	  FreeGroup_rec (gp_generators P) H f (gp_relators P g) =	  FreeGroup_rec (gp_generators P) H f	    (monunit_freegroup_type (gp_generators P))		goal 2 (ID 1477) is:	 FreeGroup_rec (gp_generators P) H f (- gp_relators P g) =	 FreeGroup_rec (gp_generators P) H f	   (- monunit_freegroup_type (gp_generators P))	";
             responses[i]=data;
           
 
@@ -871,7 +871,7 @@ Note: A relator is a relation in the form of "w = 1", any relation "w = v" can b
 </div>
 <div class="goal" id="goal0_3_23"><pre><span></span></pre></div>
 <div class="doc" scenenumber="25">
-A group <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span> has a presentation if there exists a group presentation whose presented group is isomorphic to <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span>. 
+A group <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span> has a presentation if there exists a group presentation whose presented group is isomorphic to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span>. 
 </div>
 <div scenenumber="27" class="code">
 <span class="command" onmouseout="
@@ -1014,7 +1014,7 @@ A group is finitely related if it has a finitely related presentation.
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-<a id="lab741"></a><h2 class="section">Fundamental theorem of presentations of groups</h2>
+<a id="lab29"></a><h2 class="section">Fundamental theorem of presentations of groups</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A group homomorphism from a presented group is determined with how the underlying map acts on generators subject to the condition that relators are sent to the unit. 

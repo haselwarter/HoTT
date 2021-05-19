@@ -32,7 +32,7 @@
 </div>
 
 <div class="doc">
-In this file we construct the free abelian group on a type <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> as a higher inductive type. This construction is due to Kraus-Altenkirch 2018 arXiv:1805.02069. Their construction is actually more general, but we set truncate it to suit our needs which is the free group as a set. 
+In this file we construct the free abelian group on a type <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> as a higher inductive type. This construction is due to Kraus-Altenkirch 2018 arXiv:1805.02069. Their construction is actually more general, but we set truncate it to suit our needs which is the free group as a set. 
 </div>
 <div class="code">
 
@@ -140,7 +140,7 @@ Singleton word
 </div>
 
 <div class="doc">
-We define an inductive family <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#Red"><span class="id" title="inductive">Red</span></a></span> on <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#Words"><span class="id" title="definition">Words</span></a></span> which expresses whether a given word can be reduced to the empty list 
+We define an inductive family <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#Red"><span class="id" title="inductive">Red</span></a></span> on <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeProduct.html#Words"><span class="id" title="definition">Words</span></a></span> which expresses whether a given word can be reduced to the empty list 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Inductive</span> <a id="Red" class="idref" href="#Red"><span class="id" title="inductive">Red</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#Words"><span class="id" title="definition">Words</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span> :=<br/>
@@ -465,7 +465,7 @@ Right inverse
 </div>
 
 <div class="doc">
-Finally we have defined the free group on <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> 
+Finally we have defined the free group on <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="FreeGroup" class="idref" href="#FreeGroup"><span class="id" title="definition">FreeGroup</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>.<br/>
@@ -515,7 +515,7 @@ Finally we have defined the free group on <span class="inlinecode"><a class="idr
 </div>
 
 <div class="doc">
-Given a group <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span> we can construct a group homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span> if we have a map <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span> 
+Given a group <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span> we can construct a group homomorphism <span class="inlinecode"><a class="idref" href="HoTT.Algebra.Groups.FreeGroup.LoopSusp.html#FreeGroup"><span class="id" title="definition">FreeGroup</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span> if we have a map <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span> 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="FreeGroup_rec" class="idref" href="#FreeGroup_rec"><span class="id" title="definition">FreeGroup_rec</span></a> (<a id="G:42" class="idref" href="#G:42"><span class="id" title="binder">G</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>) (<a id="s:43" class="idref" href="#s:43"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#Reduction.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.Groups.FreeGroup.ListQuotient.html#G:42"><span class="id" title="variable">G</span></a>)<br/>

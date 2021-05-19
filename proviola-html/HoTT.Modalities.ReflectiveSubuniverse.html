@@ -6698,12 +6698,12 @@
           
 
             i = 1336;
-            data = "";
+            data = "1 goal (ID 1582)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  ============================	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_functor (equiv_prod_assoc A B C)^-1	     (O_monad_strength (A * B) C (x1, x0, to O C x))) ==	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C)	        ((equiv_prod_assoc A B (O C))^-1 (x1, x0, to O C x))))	";
             responses[i]=data;
           
 
             i = 1337;
-            data = "1 goal (ID 1582)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  ============================	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_functor (equiv_prod_assoc A B C)^-1	     (O_monad_strength (A * B) C (x1, x0, to O C x))) ==	  (fun (x : C) (x0 : B) (x1 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C)	        ((equiv_prod_assoc A B (O C))^-1 (x1, x0, to O C x))))	1 goal (ID 1585)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  c : C	  ============================	  (fun (x : B) (x0 : A) =>	   O_functor (fun H : A * B * C => (fst (fst H), (snd (fst H), snd H)))	     (O_monad_strength (A * B) C (x0, x, to O C c))) =	  (fun (x : B) (x0 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C) (x0, (x, to O C c))))	";
+            data = "1 goal (ID 1585)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  c : C	  ============================	  (fun (x : B) (x0 : A) =>	   O_functor (fun H : A * B * C => (fst (fst H), (snd (fst H), snd H)))	     (O_monad_strength (A * B) C (x0, x, to O C c))) =	  (fun (x : B) (x0 : A) =>	   O_monad_strength A (B * C)	     (functor_prod idmap (O_monad_strength B C) (x0, (x, to O C c))))	";
             responses[i]=data;
           
 
@@ -7833,12 +7833,12 @@
           
 
             i = 1563;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 1564;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -11839,9 +11839,9 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab395"></a><h1 class="section">Reflective Subuniverses</h1>
+<a id="lab967"></a><h1 class="section">Reflective Subuniverses</h1>
 <div class="doc" scenenumber="4"> </div>
-<a id="lab396"></a><h2 class="section">References</h2>
+<a id="lab968"></a><h2 class="section">References</h2>
 <div class="doc" scenenumber="9"> </div>
 
  Reflective subuniverses (and modalities) are studied in the following papers, which we will refer to below by their abbreviations:
@@ -11859,9 +11859,9 @@
 </li>
 </ul>
 <div class="doc" scenenumber="15"> </div>
-<a id="lab397"></a><h2 class="section">Definitions</h2>
+<a id="lab969"></a><h2 class="section">Definitions</h2>
 <div class="doc" scenenumber="20"> </div>
-<a id="lab398"></a><h3 class="section">Subuniverses</h3>
+<a id="lab970"></a><h3 class="section">Subuniverses</h3>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -12028,7 +12028,7 @@ Types in <span class="inlinecode"><span class="id" title="var">TypeO</span></spa
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a id="lab399"></a><h2 class="section">Properties of Subuniverses</h2>
+<a id="lab971"></a><h2 class="section">Properties of Subuniverses</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A map is O-local if all its fibers are. 
@@ -12255,7 +12255,7 @@ A family of types is local if and only if the associated projection map is local
 </div>
 <div class="goal" id="goal0_3_51"><pre><span></span></pre></div>
 <div class="doc" scenenumber="53">
-<a id="lab400"></a><h3 class="section">Reflections</h3>
+<a id="lab972"></a><h3 class="section">Reflections</h3>
 <div class="doc" scenenumber="4"> </div>
 
  A pre-reflection is a map to a type in the subuniverse. 
@@ -12509,7 +12509,7 @@ We allow the name of a subuniverse or modality to be used as the name of its ref
 </div>
 <div class="goal" id="goal0_3_75"><pre><span></span></pre></div>
 <div class="doc" scenenumber="77">
-<a id="lab401"></a><h3 class="section">Recursion principles</h3>
+<a id="lab973"></a><h3 class="section">Recursion principles</h3>
 <div class="doc" scenenumber="4"> </div>
 
  We now extract the recursion principle and the restricted induction principles for paths. 
@@ -12688,7 +12688,7 @@ Given <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#
 </div>
 <div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
 <div class="doc" scenenumber="93">
-<a id="lab402"></a><h2 class="section">Properties of Reflective Subuniverses</h2>
+<a id="lab974"></a><h2 class="section">Properties of Reflective Subuniverses</h2>
 <div class="doc" scenenumber="4"> </div>
 
  We now prove a bunch of things about an arbitrary reflective subuniverse. 
@@ -12765,7 +12765,7 @@ Functoriality of <span class="inlinecode"><a class="idref" href="HoTT.Modalities
 </div>
 <div class="goal" id="goal0_3_99"><pre><span></span></pre></div>
 <div class="doc" scenenumber="101">
-If <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.T"><span class="id" title="record">T</span></a></span> is in the subuniverse, then <span class="inlinecode"><a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Functors.to"><span class="id" title="definition">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.T"><span class="id" title="record">T</span></a></span> is an equivalence. 
+If <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Torus.TorusHomotopy.html#T"><span class="id" title="abbreviation">T</span></a></span> is in the subuniverse, then <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="projection">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Torus.TorusHomotopy.html#T"><span class="id" title="abbreviation">T</span></a></span> is an equivalence. 
 </div>
 <div scenenumber="103" class="code">
 <span class="command" onmouseout="
@@ -12871,7 +12871,7 @@ In this section, we see that <span class="inlinecode"><a class="idref" href="HoT
 </div>
 <div class="goal" id="goal0_3_107"><pre><span></span></pre></div>
 <div class="doc" scenenumber="109">
-Naturality of <span class="inlinecode"><a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Functors.to"><span class="id" title="definition">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>
+Naturality of <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="projection">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>
 </div>
 <div scenenumber="111" class="code">
 <span class="command" onmouseout="
@@ -13264,7 +13264,7 @@ Of course, if we wanted to prove 4-functoriality, we'd need to make this transpa
 </div>
 <div class="goal" id="goal0_3_143"><pre><span></span></pre></div>
 <div class="doc" scenenumber="145">
-The pointed endofunctor (<span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>,<span class="inlinecode"><a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Functors.to"><span class="id" title="definition">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>) is well-pointed 
+The pointed endofunctor (<span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>,<span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="projection">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>) is well-pointed 
 </div>
 <div scenenumber="147" class="code">
 <span class="command" onmouseout="
@@ -13760,7 +13760,7 @@ An equivalent formulation of repleteness is that a type lies in the subuniverse 
 </div>
 <div class="goal" id="goal0_3_175"><pre><span></span></pre></div>
 <div class="doc" scenenumber="177">
-Thus, <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.T"><span class="id" title="record">T</span></a></span> is in a subuniverse as soon as <span class="inlinecode"><a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Functors.to"><span class="id" title="definition">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.T"><span class="id" title="record">T</span></a></span> admits a retraction. 
+Thus, <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Torus.TorusHomotopy.html#T"><span class="id" title="abbreviation">T</span></a></span> is in a subuniverse as soon as <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="projection">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Torus.TorusHomotopy.html#T"><span class="id" title="abbreviation">T</span></a></span> admits a retraction. 
 </div>
 <div scenenumber="179" class="code">
 <span class="command" onmouseout="
@@ -13987,7 +13987,7 @@ Strangely, even this seems to cause infinite loops  <span class="inlinecode"><sp
 </div>
 <div class="goal" id="goal0_3_191"><pre><span></span></pre></div>
 <div class="doc" scenenumber="193">
-If <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> is inverted by <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, then mapping out of it into any modal type is an equivalence.  First we prove a version not requiring funext.  For use in <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_inverts_O_leq"><span class="id" title="definition">O_inverts_O_leq</span></a></span> below, we allow the types <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a></span>, and <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.Z"><span class="id" title="definition">Z</span></a></span> to perhaps live in smaller universes than the one <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span> on which our subuniverse lives.  This the first half of Lemma 1.23 of RSS. 
+If <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> is inverted by <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, then mapping out of it into any modal type is an equivalence.  First we prove a version not requiring funext.  For use in <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_inverts_O_leq"><span class="id" title="definition">O_inverts_O_leq</span></a></span> below, we allow the types <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a></span>, and <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.Z"><span class="id" title="definition">Z</span></a></span> to perhaps live in smaller universes than the one <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span> on which our subuniverse lives.  This the first half of Lemma 1.23 of RSS. 
 </div>
 <div scenenumber="195" class="code">
 <span class="command" onmouseout="
@@ -14450,7 +14450,7 @@ Two maps between modal types that become equal after applying <span class="inlin
 </div>
 <div class="goal" id="goal0_3_223"><pre><span></span></pre></div>
 <div class="doc" scenenumber="225">
-Any map to a type in the subuniverse that is inverted by <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> must be equivalent to <span class="inlinecode"><a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Functors.to"><span class="id" title="definition">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>.  More precisely, the type of such maps is contractible. 
+Any map to a type in the subuniverse that is inverted by <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> must be equivalent to <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="projection">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>.  More precisely, the type of such maps is contractible. 
 </div>
 <div scenenumber="227" class="code">
 <span class="command" onmouseout="
@@ -14658,7 +14658,7 @@ Any map to a type in the subuniverse that is inverted by <span class="inlinecode
 </div>
 <div class="goal" id="goal0_3_227"><pre><span></span></pre></div>
 <div class="doc" scenenumber="229">
-<a id="lab403"></a><h2 class="section">The <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span> type</h2>
+<a id="lab975"></a><h2 class="section">The <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span> type</h2>
 </div>
 <div scenenumber="231" class="code">
 <span class="command" onmouseout="
@@ -14762,7 +14762,7 @@ And that the reflection of a contractible type is still contractible.
 </div>
 <div class="goal" id="goal0_3_239"><pre><span></span></pre></div>
 <div class="doc" scenenumber="241">
-<a id="lab404"></a><h2 class="section">Dependent product and arrows</h2>
+<a id="lab976"></a><h2 class="section">Dependent product and arrows</h2>
  Theorem 7.7.2 
 </div>
 <div scenenumber="243" class="code">
@@ -14864,7 +14864,7 @@ And that the reflection of a contractible type is still contractible.
 </div>
 <div class="goal" id="goal0_3_243"><pre><span></span></pre></div>
 <div class="doc" scenenumber="245">
-<a id="lab405"></a><h2 class="section">Product</h2>
+<a id="lab977"></a><h2 class="section">Product</h2>
 </div>
 <div scenenumber="247" class="code">
 <span class="command" onmouseout="
@@ -14914,7 +14914,7 @@ And that the reflection of a contractible type is still contractible.
 </div>
 <div class="goal" id="goal0_3_247"><pre><span></span></pre></div>
 <div class="doc" scenenumber="249">
-We show that <span class="inlinecode"><span class="id" title="var">OA</span>×<span class="id" title="var">OB</span></span> has the same universal property as <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>×<a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a>)</span>
+We show that <span class="inlinecode"><span class="id" title="var">OA</span>×<span class="id" title="var">OB</span></span> has the same universal property as <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a>(<a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>×<a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a>)</span>
 <div class="doc" scenenumber="5"> </div>
 
  Here is the map witnessing the universal property.  
@@ -15024,7 +15024,7 @@ Here's the version with funext.
 </div>
 <div class="goal" id="goal0_3_259"><pre><span></span></pre></div>
 <div class="doc" scenenumber="261">
-The (funext-free) universal property implies that <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_prod_unit"><span class="id" title="definition">O_prod_unit</span></a></span> is an <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-equivalence, hence induces an equivalence between <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>×<a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a>)</span> and <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a></span>. 
+The (funext-free) universal property implies that <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_prod_unit"><span class="id" title="definition">O_prod_unit</span></a></span> is an <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-equivalence, hence induces an equivalence between <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>×<a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a>)</span> and <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a></span>. 
 </div>
 <div scenenumber="263" class="code">
 <span class="command" onmouseout="
@@ -15100,7 +15100,7 @@ The (funext-free) universal property implies that <span class="inlinecode"><a cl
 </div>
 <div class="goal" id="goal0_3_263"><pre><span></span></pre></div>
 <div class="doc" scenenumber="265">
-<a id="lab406"></a><h2 class="section">Pullbacks</h2>
+<a id="lab978"></a><h2 class="section">Pullbacks</h2>
 </div>
 <div scenenumber="267" class="code">
 <span class="command" onmouseout="
@@ -15199,7 +15199,7 @@ The (funext-free) universal property implies that <span class="inlinecode"><a cl
 </div>
 <div class="goal" id="goal0_3_267"><pre><span></span></pre></div>
 <div class="doc" scenenumber="269">
-<a id="lab407"></a><h2 class="section">Fibers</h2>
+<a id="lab979"></a><h2 class="section">Fibers</h2>
 </div>
 <div scenenumber="271" class="code">
 <span class="command" onmouseout="
@@ -15462,7 +15462,7 @@ The reflector preserving hfibers is a characterization of lex modalities.  Here 
 </div>
 <div class="goal" id="goal0_3_283"><pre><span></span></pre></div>
 <div class="doc" scenenumber="285">
-Theorem 7.3.9: The reflector <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> can be discarded inside a reflected sum.  This can be obtained from <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_inverts_functor_sigma_id"><span class="id" title="definition">O_inverts_functor_sigma_id</span></a></span> applied to the family of units <span class="inlinecode"><a class="idref" href="HoTT.Categories.IndiscreteCategory.html#Functors.to"><span class="id" title="definition">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Analysis.Locator.html#P"><span class="id" title="definition">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>)</span>, but unfortunately the definitional behavior of the inverse obtained thereby (which here we take as the "forwards" direction) is poor.  So instead we give an explicit proof, but note that the "backwards" direction here is precisely <span class="inlinecode"><a class="idref" href="HoTT.Types.Sigma.html#functor_sigma"><span class="id" title="definition">functor_sigma</span></a></span>. 
+Theorem 7.3.9: The reflector <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> can be discarded inside a reflected sum.  This can be obtained from <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_inverts_functor_sigma_id"><span class="id" title="definition">O_inverts_functor_sigma_id</span></a></span> applied to the family of units <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="projection">to</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Types.Bool.html#BoolForall.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>)</span>, but unfortunately the definitional behavior of the inverse obtained thereby (which here we take as the "forwards" direction) is poor.  So instead we give an explicit proof, but note that the "backwards" direction here is precisely <span class="inlinecode"><a class="idref" href="HoTT.Types.Sigma.html#functor_sigma"><span class="id" title="definition">functor_sigma</span></a></span>. 
 </div>
 <div scenenumber="287" class="code">
 <span class="command" onmouseout="
@@ -15563,10 +15563,10 @@ Theorem 7.3.9: The reflector <span class="inlinecode"><a class="idref" href="HoT
 </div>
 <div class="goal" id="goal0_3_291"><pre><span></span></pre></div>
 <div class="doc" scenenumber="293">
-<a id="lab408"></a><h2 class="section">Equivalences</h2>
+<a id="lab980"></a><h2 class="section">Equivalences</h2>
 <div class="doc" scenenumber="4"> </div>
 
- Naively it might seem that we need closure under Sigmas (hence a modality) to deduce closure under <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Quotient.html#Equiv"><span class="id" title="section">Equiv</span></a></span>, but in fact the above closure under fibers is sufficient.  This appears as part of the proof of Proposition 2.18 of CORS.  For later use, we try to reduce the number of universe parameters (but we don't completely control them all). 
+ Naively it might seem that we need closure under Sigmas (hence a modality) to deduce closure under <span class="inlinecode"><a class="idref" href="HoTT.HIT.quotient.html#Equiv"><span class="id" title="section">Equiv</span></a></span>, but in fact the above closure under fibers is sufficient.  This appears as part of the proof of Proposition 2.18 of CORS.  For later use, we try to reduce the number of universe parameters (but we don't completely control them all). 
 </div>
 <div scenenumber="295" class="code">
 <span class="command" onmouseout="
@@ -15729,7 +15729,7 @@ Introduces some extra copies of <span class="inlinecode"><span class="id" title=
 </div>
 <div class="goal" id="goal0_3_299"><pre><span></span></pre></div>
 <div class="doc" scenenumber="301">
-<a id="lab409"></a><h2 class="section">Paths</h2>
+<a id="lab981"></a><h2 class="section">Paths</h2>
 </div>
 <div scenenumber="303" class="code">
 <span class="command" onmouseout="
@@ -15795,7 +15795,7 @@ Introduces some extra copies of <span class="inlinecode"><span class="id" title=
 </div>
 <div class="goal" id="goal0_3_303"><pre><span></span></pre></div>
 <div class="doc" scenenumber="305">
-<a id="lab410"></a><h2 class="section">Truncations</h2>
+<a id="lab982"></a><h2 class="section">Truncations</h2>
 <div class="doc" scenenumber="4"> </div>
 
  The reflector preserves hprops (and, as we have already seen, contractible types), although it doesn't generally preserve <span class="inlinecode"><span class="id" title="var">n</span></span>-types for other <span class="inlinecode"><span class="id" title="var">n</span></span>. 
@@ -15852,7 +15852,7 @@ Introduces some extra copies of <span class="inlinecode"><span class="id" title=
 </div>
 <div class="goal" id="goal0_3_307"><pre><span></span></pre></div>
 <div class="doc" scenenumber="309">
-If <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> is <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#In"><span class="id" title="record">In</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, then so is <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="record">IsTrunc</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>. 
+If <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> is <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#In"><span class="id" title="record">In</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, then so is <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="record">IsTrunc</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>. 
 </div>
 <div scenenumber="311" class="code">
 <span class="command" onmouseout="
@@ -15913,7 +15913,7 @@ We have to be slightly clever here: the actual definition of <span class="inline
 </div>
 <div class="goal" id="goal0_3_315"><pre><span></span></pre></div>
 <div class="doc" scenenumber="317">
-<a id="lab411"></a><h2 class="section">Coproducts</h2>
+<a id="lab983"></a><h2 class="section">Coproducts</h2>
 </div>
 <div scenenumber="319" class="code">
 <span class="command" onmouseout="
@@ -15971,7 +15971,7 @@ We have to be slightly clever here: the actual definition of <span class="inline
 </div>
 <div class="goal" id="goal0_3_319"><pre><span></span></pre></div>
 <div class="doc" scenenumber="321">
-<a id="lab412"></a><h2 class="section">Coequalizers</h2>
+<a id="lab984"></a><h2 class="section">Coequalizers</h2>
 </div>
 <div scenenumber="323" class="code">
 <span class="command" onmouseout="
@@ -16138,7 +16138,7 @@ We have to be slightly clever here: the actual definition of <span class="inline
 </div>
 <div class="goal" id="goal0_3_323"><pre><span></span></pre></div>
 <div class="doc" scenenumber="325">
-<a id="lab413"></a><h2 class="section">Pushouts</h2>
+<a id="lab985"></a><h2 class="section">Pushouts</h2>
 </div>
 <div scenenumber="327" class="code">
 <span class="command" onmouseout="
@@ -16362,7 +16362,7 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Emp
 </div>
 <div class="goal" id="goal0_3_331"><pre><span></span></pre></div>
 <div class="doc" scenenumber="333">
-Dually, if <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> is decidable, then <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Reflective_Subuniverse.Decidable"><span class="id" title="section">Decidable</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>)</span>. 
+Dually, if <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> is decidable, then <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Reflective_Subuniverse.Decidable"><span class="id" title="section">Decidable</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>)</span>. 
 </div>
 <div scenenumber="335" class="code">
 <span class="command" onmouseout="
@@ -16911,7 +16911,7 @@ Now we make the <span class="inlinecode"><a class="idref" href="HoTT.Modalities.
 </div>
 <div class="goal" id="goal0_3_343"><pre><span></span></pre></div>
 <div class="doc" scenenumber="345">
-<a id="lab414"></a><h2 class="section">Modally connected types</h2>
+<a id="lab986"></a><h2 class="section">Modally connected types</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Connectedness of a type, relative to a modality or reflective subuniverse, can be defined in two equivalent ways: quantifying over all maps into modal types, or by considering just the universal case, the modal reflection of the type itself.  The former requires only core Coq, but blows up the size (universe level) of <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#IsConnected"><span class="id" title="record">IsConnected</span></a></span>, since it quantifies over types; moreover, it is not even quite correct since (at least with a polymorphic modality) it should really be quantified over all universes.  Thus, we use the latter, although in most examples it requires HITs to define the modal reflection.
@@ -17076,7 +17076,7 @@ The O-connected types form a subuniverse.
 </div>
 <div class="goal" id="goal0_3_359"><pre><span></span></pre></div>
 <div class="doc" scenenumber="361">
-Connectedness of a type <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> can equivalently be characterized by the fact that any map to an <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-type <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> is nullhomotopic.  Here is one direction of that equivalence. 
+Connectedness of a type <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> can equivalently be characterized by the fact that any map to an <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-type <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> is nullhomotopic.  Here is one direction of that equivalence. 
 </div>
 <div scenenumber="363" class="code">
 <span class="command" onmouseout="
@@ -17134,7 +17134,7 @@ Connectedness of a type <span class="inlinecode"><a class="idref" href="HoTT.Cat
 </div>
 <div class="goal" id="goal0_3_363"><pre><span></span></pre></div>
 <div class="doc" scenenumber="365">
-For the other direction of the equivalence, it's sufficient to consider the case when <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> is <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>. 
+For the other direction of the equivalence, it's sufficient to consider the case when <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> is <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>. 
 </div>
 <div scenenumber="367" class="code">
 <span class="command" onmouseout="
@@ -17490,7 +17490,7 @@ Here's another way of stating the universal property for mapping out of connecte
 </div>
 <div class="goal" id="goal0_3_391"><pre><span></span></pre></div>
 <div class="doc" scenenumber="393">
-<a id="lab415"></a><h2 class="section">Modally truncated maps</h2>
+<a id="lab987"></a><h2 class="section">Modally truncated maps</h2>
 </div>
 <div scenenumber="395" class="code">
 <span class="command" onmouseout="
@@ -17867,7 +17867,7 @@ So does <span class="inlinecode"><span class="id" title="var">unfunctor_sum</spa
 </div>
 <div class="goal" id="goal0_3_423"><pre><span></span></pre></div>
 <div class="doc" scenenumber="425">
-<a id="lab416"></a><h2 class="section">Modally connected maps</h2>
+<a id="lab988"></a><h2 class="section">Modally connected maps</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Connectedness of a map can again be defined in two equivalent ways: by connectedness of its fibers (as types), or by the lifting property/elimination principle against modal types.  We use the former; the equivalence with the latter is given below in <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#conn_map_elim"><span class="id" title="definition">conn_map_elim</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#conn_map_comp"><span class="id" title="definition">conn_map_comp</span></a></span>, and <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#conn_map_from_extension_elim"><span class="id" title="lemma">conn_map_from_extension_elim</span></a></span>. 
@@ -18519,7 +18519,7 @@ When considering lexness properties, we often want to consider the property of t
 </div>
 <div class="goal" id="goal0_3_471"><pre><span></span></pre></div>
 <div class="doc" scenenumber="473">
-By definition, in addition to our assumption <span class="inlinecode"><span class="id" title="var">extP</span></span> that maps into <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Type_"><span class="id" title="definition">Type_</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> extend along <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span>, we must show that sections of families of equivalences are <span class="inlinecode"><a class="idref" href="HoTT.Extensions.html#ooExtendableAlong"><span class="id" title="definition">ooExtendableAlong</span></a></span> it.  
+By definition, in addition to our assumption <span class="inlinecode"><span class="id" title="var">extP</span></span> that maps into <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Type_"><span class="id" title="definition">Type_</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> extend along <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span>, we must show that sections of families of equivalences are <span class="inlinecode"><a class="idref" href="HoTT.Extensions.html#ooExtendableAlong"><span class="id" title="definition">ooExtendableAlong</span></a></span> it.  
 </div>
 <div scenenumber="475" class="code">
 <span class="command" onmouseout="
@@ -19350,7 +19350,7 @@ And by pushouts
 </div>
 <div class="goal" id="goal0_3_531"><pre><span></span></pre></div>
 <div class="doc" scenenumber="533">
-<a id="lab417"></a><h2 class="section">Containment of (reflective) subuniverses</h2>
+<a id="lab989"></a><h2 class="section">Containment of (reflective) subuniverses</h2>
 <div class="doc" scenenumber="4"> </div>
 
  One subuniverse is contained in another if every <span class="inlinecode"><span class="id" title="var">O1</span></span>-modal type is <span class="inlinecode"><span class="id" title="var">O2</span></span>-modal.  We define this parametrized by three universes: <span class="inlinecode"><span class="id" title="var">O1</span></span> and <span class="inlinecode"><span class="id" title="var">O2</span></span> are reflective subuniverses of <span class="inlinecode"><span class="id" title="var">Type@</span>{<span class="id" title="var">i1</span>}</span> and <span class="inlinecode"><span class="id" title="var">Type@</span>{<span class="id" title="var">i2</span>}</span> respectively, and the relation says that all types in <span class="inlinecode"><span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>}</span> that <span class="inlinecode"><span class="id" title="var">O1</span></span>-modal are also <span class="inlinecode"><span class="id" title="var">O2</span></span>-modal.  This implies <span class="inlinecode"><span class="id" title="var">j</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><span class="id" title="var">i1</span></span> and <span class="inlinecode"><span class="id" title="var">j</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><span class="id" title="var">i2</span></span>, of course.  The most common application is when <span class="inlinecode"><span class="id" title="var">i1</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="var">i2</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="var">j</span></span>, but it's sometimes useful to talk about a subuniverse of a larger universe agreeing with a subuniverse of a smaller universe on the smaller universe.  
@@ -19629,7 +19629,7 @@ This is Lemma 2.12(i) in CORS, again with the same universe constraint <span cla
 </div>
 <div class="goal" id="goal0_3_551"><pre><span></span></pre></div>
 <div class="doc" scenenumber="553">
-<a id="lab418"></a><h2 class="section">Equality of (reflective) subuniverses</h2>
+<a id="lab990"></a><h2 class="section">Equality of (reflective) subuniverses</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Two subuniverses are the same if they have the same modal types.  The universe parameters are the same as for <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_leq"><span class="id" title="record">O_leq</span></a></span>: <span class="inlinecode"><span class="id" title="var">O1</span></span> and <span class="inlinecode"><span class="id" title="var">O2</span></span> are reflective subuniverses of <span class="inlinecode"><span class="id" title="var">Type@</span>{<span class="id" title="var">i1</span>}</span> and <span class="inlinecode"><span class="id" title="var">Type@</span>{<span class="id" title="var">i2</span>}</span>, and the relation says that they agree when restricted to <span class="inlinecode"><span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>}</span>, where <span class="inlinecode"><span class="id" title="var">j</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><span class="id" title="var">i1</span></span> and <span class="inlinecode"><span class="id" title="var">j</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><span class="id" title="var">i2</span></span>. 
@@ -19916,7 +19916,7 @@ It should also be true that if <span class="inlinecode"><span class="id" title="
 </div>
 <div class="goal" id="goal0_3_559"><pre><span></span></pre></div>
 <div class="doc" scenenumber="561">
-<a id="lab419"></a><h2 class="section">Separated subuniverses</h2>
+<a id="lab991"></a><h2 class="section">Separated subuniverses</h2>
 <div class="doc" scenenumber="4"> </div>
 
  For any subuniverse <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, a type is <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-separated iff all its identity types are <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-modal.  We will study these further in <span class="inlinecode"><span class="id" title="var">Separated.v</span></span>, but we put the definition here because it's needed in <span class="inlinecode"><span class="id" title="var">Descent.v</span></span>. 
@@ -19981,7 +19981,7 @@ It should also be true that if <span class="inlinecode"><span class="id" title="
 </div>
 <div class="goal" id="goal0_3_563"><pre><span></span></pre></div>
 <div class="doc" scenenumber="565">
-TODO: Where to put this?  Morally it goes with the study of <span class="inlinecode">&lt;&lt;</span> in <span class="inlinecode"><span class="id" title="var">Modality.v</span></span> and <span class="inlinecode">&lt;&lt;&lt;</span> in <span class="inlinecode"><span class="id" title="var">Descent.v</span></span> and <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a></span> in <span class="inlinecode"><span class="id" title="var">Separated.v</span></span>, but it doesn't actually need any of those relations, only <span class="inlinecode"><span class="id" title="var">O'</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, and it would also be nice to have it next to  <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_inverts_functor_coeq"><span class="id" title="definition">O_inverts_functor_coeq</span></a></span>.  It's a variation on the latter: if <span class="inlinecode"><span class="id" title="var">O'</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, then for <span class="inlinecode"><span class="id" title="var">O'</span></span> to invert <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#functor_coeq"><span class="id" title="definition">functor_coeq</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a></span> <span class="inlinecode"><span class="id" title="var">k</span></span> it suffices that it invert <span class="inlinecode"><span class="id" title="var">k</span></span> and that <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a></span> be <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-connected (by <span class="inlinecode"><a class="idref" href="HoTT.Modalities.Descent.html#conn_map_OO_inverts"><span class="id" title="instance">conn_map_OO_inverts</span></a></span>, which has different hypotheses but applies in many of the same examples, that is a weaker assumption). 
+TODO: Where to put this?  Morally it goes with the study of <span class="inlinecode">&lt;&lt;</span> in <span class="inlinecode"><span class="id" title="var">Modality.v</span></span> and <span class="inlinecode">&lt;&lt;&lt;</span> in <span class="inlinecode"><span class="id" title="var">Descent.v</span></span> and <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a></span> in <span class="inlinecode"><span class="id" title="var">Separated.v</span></span>, but it doesn't actually need any of those relations, only <span class="inlinecode"><span class="id" title="var">O'</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, and it would also be nice to have it next to  <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_inverts_functor_coeq"><span class="id" title="definition">O_inverts_functor_coeq</span></a></span>.  It's a variation on the latter: if <span class="inlinecode"><span class="id" title="var">O'</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>, then for <span class="inlinecode"><span class="id" title="var">O'</span></span> to invert <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#functor_coeq"><span class="id" title="definition">functor_coeq</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a></span> <span class="inlinecode"><span class="id" title="var">k</span></span> it suffices that it invert <span class="inlinecode"><span class="id" title="var">k</span></span> and that <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a></span> be <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-connected (by <span class="inlinecode"><a class="idref" href="HoTT.Modalities.Descent.html#conn_map_OO_inverts"><span class="id" title="instance">conn_map_OO_inverts</span></a></span>, which has different hypotheses but applies in many of the same examples, that is a weaker assumption). 
 </div>
 <div scenenumber="567" class="code">
 <span class="command" onmouseout="

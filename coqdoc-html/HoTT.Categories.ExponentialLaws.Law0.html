@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a id="lab1041"></a><h1 class="section">Exponential laws about the initial category</h1>
+<a id="lab371"></a><h1 class="section">Exponential laws about the initial category</h1>
 
 </div>
 <div class="code">
@@ -51,7 +51,7 @@ In this file, we prove that
 <li> <span class="inlinecode"><span class="id" title="var">x⁰</span></span> <span class="inlinecode">≅</span> <span class="inlinecode">1</span>
 
 </li>
-<li> <span class="inlinecode">0ˣ</span> <span class="inlinecode">≅</span> <span class="inlinecode">0</span> if <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">≠</span> <span class="inlinecode">0</span>
+<li> <span class="inlinecode">0ˣ</span> <span class="inlinecode">≅</span> <span class="inlinecode">0</span> if <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">≠</span> <span class="inlinecode">0</span>
 
 </li>
 <li> <span class="inlinecode">0<span class="id" title="var">⁰</span></span> <span class="inlinecode">≅</span> <span class="inlinecode">1</span>
@@ -61,7 +61,7 @@ In this file, we prove that
  
 <div class="paragraph"> </div>
 
-<a id="lab1042"></a><h2 class="section">x⁰ ≅ 1</h2>
+<a id="lab372"></a><h2 class="section">x⁰ ≅ 1</h2>
 
 </div>
 <div class="code">
@@ -93,7 +93,7 @@ There is only one functor to the terminal category <span class="inlinecode">1</s
 </div>
 
 <div class="doc">
-We have already proven in <span class="inlinecode"><span class="id" title="var">InitialTerminalCategory.v</span></span> that <span class="inlinecode">0</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> is a terminal category, so there is only one functor to it. 
+We have already proven in <span class="inlinecode"><span class="id" title="var">InitialTerminalCategory.v</span></span> that <span class="inlinecode">0</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> is a terminal category, so there is only one functor to it. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="inverse" class="idref" href="#inverse"><span class="id" title="definition">inverse</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> 1 (0 <a class="idref" href="HoTT.Categories.FunctorCategory.Core.html#FunctorCategoryCoreNotations.::category_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Categories.ExponentialLaws.Law0.html#law0.C"><span class="id" title="variable">C</span></a>)<br/>
@@ -116,7 +116,7 @@ Since the objects and morphisms in terminal categories are contractible, functor
 </div>
 
 <div class="doc">
-<a id="lab1043"></a><h2 class="section"><span class="inlinecode">0ˣ</span> <span class="inlinecode">≅</span> <span class="inlinecode">0</span> if <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">≠</span> <span class="inlinecode">0</span></h2>
+<a id="lab373"></a><h2 class="section"><span class="inlinecode">0ˣ</span> <span class="inlinecode">≅</span> <span class="inlinecode">0</span> if <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">≠</span> <span class="inlinecode">0</span></h2>
 
 </div>
 <div class="code">
@@ -140,7 +140,7 @@ Since the objects and morphisms in terminal categories are contractible, functor
 </div>
 
 <div class="doc">
-There is exactly one functor from an initial category, and we proved above that if <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> is inhabited, then <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">0</span> is initial. 
+There is exactly one functor from an initial category, and we proved above that if <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> is inhabited, then <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">0</span> is initial. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="functor'" class="idref" href="#functor'"><span class="id" title="definition">functor'</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> (<a class="idref" href="HoTT.Categories.ExponentialLaws.Law0.html#law0'.C"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Categories.FunctorCategory.Core.html#FunctorCategoryCoreNotations.::category_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> 0) 0<br/>
@@ -173,7 +173,7 @@ Since objects and morphisms in an initial category are -1-truncated, so are func
 </div>
 
 <div class="doc">
-<a id="lab1044"></a><h2 class="section"><span class="inlinecode">0<span class="id" title="var">⁰</span></span> <span class="inlinecode">≅</span> <span class="inlinecode">1</span></h2>
+<a id="lab374"></a><h2 class="section"><span class="inlinecode">0<span class="id" title="var">⁰</span></span> <span class="inlinecode">≅</span> <span class="inlinecode">1</span></h2>
 
 </div>
 <div class="code">

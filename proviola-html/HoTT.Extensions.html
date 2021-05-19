@@ -3553,12 +3553,12 @@
           
 
             i = 707;
-            data = "1 goal (ID 867)	  	  n : nat	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  C : Coeq f' g' -> Type	  ek : ExtendableAlong n k (C o coeq)	  eh : forall u v : forall x : B', C (coeq (g' x)),	       ExtendableAlong n h (fun x : B' => u x = v x)	  ============================	  ExtendableAlong n (functor_coeq h k p q) C	";
+            data = "";
             responses[i]=data;
           
 
             i = 708;
-            data = "";
+            data = "1 goal (ID 867)	  	  n : nat	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  C : Coeq f' g' -> Type	  ek : ExtendableAlong n k (C o coeq)	  eh : forall u v : forall x : B', C (coeq (g' x)),	       ExtendableAlong n h (fun x : B' => u x = v x)	  ============================	  ExtendableAlong n (functor_coeq h k p q) C	";
             responses[i]=data;
           
 
@@ -3786,7 +3786,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab587"></a><h1 class="section">Extensions and extendible maps</h1>
+<a id="lab820"></a><h1 class="section">Extensions and extendible maps</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -3831,7 +3831,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-Given <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span> and <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a></span>, an extension of <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> along <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> is a section <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span> such that <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> for all <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>:<a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>.  This is equivalently the existence of fillers for commutative squares, restricted to the case where the bottom of the square is the identity; type-theoretically, this approach is sometimes more convenient.  In this file we study the type of such extensions.  One of its crucial properties is that a path between extensions is equivalently an extension in a fibration of paths.
+Given <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span> and <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a></span>, an extension of <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> along <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> is a section <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span> such that <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> for all <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>:<a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>.  This is equivalently the existence of fillers for commutative squares, restricted to the case where the bottom of the square is the identity; type-theoretically, this approach is sometimes more convenient.  In this file we study the type of such extensions.  One of its crucial properties is that a path between extensions is equivalently an extension in a fibration of paths.
 
 <div class="doc" scenenumber="63"> </div>
 
@@ -3855,7 +3855,7 @@ This turns out to be useful for several reasons.  For instance, by iterating it,
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-This elimination rule (and others) can be seen as saying that, given a fibration over the codomain and a section of it over the domain, there is some *extension* of this to a section over the whole codomain.  It can also be considered as an equivalent form of an <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a></span> of precomposition-with-<span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> that replaces paths by pointwise paths, thereby avoiding <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>. 
+This elimination rule (and others) can be seen as saying that, given a fibration over the codomain and a section of it over the domain, there is some *extension* of this to a section over the whole codomain.  It can also be considered as an equivalent form of an <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a></span> of precomposition-with-<span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> that replaces paths by pointwise paths, thereby avoiding <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>. 
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -3892,7 +3892,7 @@ This elimination rule (and others) can be seen as saying that, given a fibration
 </ul>
 <div class="doc" scenenumber="5"> </div>
 
- It's occasionally useful to be able to modify those universes.  For each of the universes <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.KanExtensions.Functors.html#kan_extension_functors.p"><span class="id" title="variable">p</span></a></span>, we give an initial one, a final one, and a "minimum" one smaller than both and where the type actually lives. 
+ It's occasionally useful to be able to modify those universes.  For each of the universes <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.p"><span class="id" title="projection">p</span></a></span>, we give an initial one, a final one, and a "minimum" one smaller than both and where the type actually lives. 
 </div>
 <div scenenumber="19" class="code">
 <span class="command" onmouseout="
@@ -5247,7 +5247,7 @@ We take part of the data from <span class="inlinecode"><span class="id" title="v
 </div>
 <div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
 <div class="doc" scenenumber="93">
-Extendability of a family <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> along a map <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> can be detected by extendability of the constant family <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span> along the projection from the corresponding fiber of <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span>.  Note that this is *not* an if-and-only-if; the hypothesis can be genuinely stronger than the conclusion. 
+Extendability of a family <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> along a map <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> can be detected by extendability of the constant family <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span> along the projection from the corresponding fiber of <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span>.  Note that this is *not* an if-and-only-if; the hypothesis can be genuinely stronger than the conclusion. 
 </div>
 <div scenenumber="95" class="code">
 <span class="command" onmouseout="
@@ -5334,7 +5334,7 @@ Extendability of a family <span class="inlinecode"><a class="idref" href="HoTT.C
 </div>
 <div class="goal" id="goal0_3_95"><pre><span></span></pre></div>
 <div class="doc" scenenumber="97">
-<a id="lab588"></a><h2 class="section">Extendability along cofibrations</h2>
+<a id="lab821"></a><h2 class="section">Extendability along cofibrations</h2>
 <div class="doc" scenenumber="4"> </div>
 
  If a family is extendable along a cofibration (i.e. a mapping cylinder), it is extendable definitionally. 
@@ -5537,7 +5537,7 @@ The point is that this equality is now definitional.
 </div>
 <div class="goal" id="goal0_3_103"><pre><span></span></pre></div>
 <div class="doc" scenenumber="105">
-<a id="lab589"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.Types.Prod.html#functor_prod"><span class="id" title="definition">functor_prod</span></a></span>
+<a id="lab822"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.Types.Prod.html#functor_prod"><span class="id" title="definition">functor_prod</span></a></span>
 </h2>
 </div>
 <div scenenumber="107" class="code">
@@ -5691,7 +5691,7 @@ The point is that this equality is now definitional.
 </div>
 <div class="goal" id="goal0_3_107"><pre><span></span></pre></div>
 <div class="doc" scenenumber="109">
-<a id="lab590"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.Types.Sigma.html#functor_sigma"><span class="id" title="definition">functor_sigma</span></a></span>
+<a id="lab823"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.Types.Sigma.html#functor_sigma"><span class="id" title="definition">functor_sigma</span></a></span>
 </h2>
 </div>
 <div scenenumber="111" class="code">
@@ -6004,7 +6004,7 @@ Unfortunately, the technology of <span class="inlinecode"><a class="idref" href=
 </div>
 <div class="goal" id="goal0_3_115"><pre><span></span></pre></div>
 <div class="doc" scenenumber="117">
-<a id="lab591"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.Types.Sum.html#functor_sum"><span class="id" title="definition">functor_sum</span></a></span>
+<a id="lab824"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.Types.Sum.html#functor_sum"><span class="id" title="definition">functor_sum</span></a></span>
 </h2>
 </div>
 <div scenenumber="119" class="code">
@@ -6152,14 +6152,14 @@ Unfortunately, the technology of <span class="inlinecode"><a class="idref" href=
 </div>
 <div class="goal" id="goal0_3_119"><pre><span></span></pre></div>
 <div class="doc" scenenumber="121">
-<a id="lab592"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#functor_coeq"><span class="id" title="definition">functor_coeq</span></a></span>
+<a id="lab825"></a><h2 class="section">Extendability along <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#functor_coeq"><span class="id" title="definition">functor_coeq</span></a></span>
 </h2>
 <div class="doc" scenenumber="4"> </div>
 
  The path algebra in these proofs is terrible on its own.  But by replacing the maps with cofibrations so that many equalities hold definitionally, and modifying the extensions to also be strict, it becomes manageable with a bit of dependent-path technology. 
 <div class="doc" scenenumber="6"> </div>
 
- First we show that if we can extend in <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> along <span class="inlinecode"><span class="id" title="var">k</span></span>, and we can extend in appropriate path-types of <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> along <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a></span>, then we can extend in <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> along <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#functor_coeq"><span class="id" title="definition">functor_coeq</span></a></span>.  This is where the hard work is. 
+ First we show that if we can extend in <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> along <span class="inlinecode"><span class="id" title="var">k</span></span>, and we can extend in appropriate path-types of <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> along <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a></span>, then we can extend in <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> along <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#functor_coeq"><span class="id" title="definition">functor_coeq</span></a></span>.  This is where the hard work is. 
 </div>
 <div scenenumber="123" class="code">
 <span class="command" onmouseout="
@@ -6535,7 +6535,7 @@ Now we can easily iterate into higher extendability.
 </div>
 <div class="goal" id="goal0_3_147"><pre><span></span></pre></div>
 <div class="doc" scenenumber="149">
-Since extending at level <span class="inlinecode"><span class="id" title="var">n</span>.+1</span> into <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> implies extending at level <span class="inlinecode"><span class="id" title="var">n</span></span> into path-types of <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span>, we get the following corollary. 
+Since extending at level <span class="inlinecode"><span class="id" title="var">n</span>.+1</span> into <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> implies extending at level <span class="inlinecode"><span class="id" title="var">n</span></span> into path-types of <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span>, we get the following corollary. 
 </div>
 <div scenenumber="151" class="code">
 <span class="command" onmouseout="

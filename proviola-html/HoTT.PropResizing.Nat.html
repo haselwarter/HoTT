@@ -5065,7 +5065,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab763"></a><h1 class="section">Defining the natural numbers from univalence and propresizing.</h1>
+<a id="lab1033"></a><h1 class="section">Defining the natural numbers from univalence and propresizing.</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -5146,8 +5146,8 @@ The basic idea is that since the universe is closed under coproducts, it is alre
 
   However, to enable performance speedups by controlling universes, we write out its universe parameters explicitly, making it less readable.  Moreover, since here we will eventually only be interested in those graphs that represent natural numbers, it does no harm to fix these universes at the outset throughout the entire development. 
 <div class="doc" scenenumber="9"> </div>
-<span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span> : universe of the vertex and edge types
-      <span class="inlinecode"><span class="id" title="var">u</span></span> : universe of the graph type, morally <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a>+1</span>
+<span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.Bool.IncoherentIdempotent.html#IncoherentQuasiIdempotent.s"><span class="id" title="variable">s</span></a></span> : universe of the vertex and edge types
+      <span class="inlinecode"><span class="id" title="var">u</span></span> : universe of the graph type, morally <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.Bool.IncoherentIdempotent.html#IncoherentQuasiIdempotent.s"><span class="id" title="variable">s</span></a>+1</span>
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -5911,7 +5911,7 @@ Here is the impredicative definition of N, as the smallest
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<span class="inlinecode"><a class="idref" href="HoTT.Categories.KanExtensions.Functors.html#kan_extension_functors.p"><span class="id" title="variable">p</span></a></span> : universe of <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#N"><span class="id" title="definition">N</span></a></span>, morally <span class="inlinecode"><span class="id" title="var">u</span>+1</span> i.e. <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a>+2</span>. 
+<span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.p"><span class="id" title="projection">p</span></a></span> : universe of <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#N"><span class="id" title="definition">N</span></a></span>, morally <span class="inlinecode"><span class="id" title="var">u</span>+1</span> i.e. <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.Bool.IncoherentIdempotent.html#IncoherentQuasiIdempotent.s"><span class="id" title="variable">s</span></a>+2</span>. 
 </div>
 <div scenenumber="39" class="code">
 <span class="command" onmouseout="
@@ -6692,7 +6692,7 @@ Sometimes we just need a bigger fish.
 </div>
 <div class="goal" id="goal0_3_63"><pre><span></span></pre></div>
 <div class="doc" scenenumber="65">
-Importantly, however, the universe of the motive <span class="inlinecode"><a class="idref" href="HoTT.Analysis.Locator.html#P"><span class="id" title="definition">P</span></a></span> is not
+Importantly, however, the universe of the motive <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#BoolForall.P"><span class="id" title="variable">P</span></a></span> is not
       constrained but can be arbitrary. 
 </div>
 <div scenenumber="67" class="code">
@@ -8316,7 +8316,7 @@ Now we're finally ready to prove recursion.
 <div class="goal" id="goal0_3_87"><pre><span></span></pre></div>
 <div class="doc" scenenumber="89">
 Here is the type we will recurse into.  Importantly, it
-    doesn't have to be a set!  <span class="inlinecode"><span class="id" title="var">nr</span></span> is the universe of <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#partial_Nrec"><span class="id" title="definition">partial_Nrec</span></a></span>, morally <span class="inlinecode"><a class="idref" href="HoTT.Classes.orders.lattices.html#max"><span class="id" title="definition">max</span></a>(<a class="idref" href="HoTT.Categories.KanExtensions.Functors.html#kan_extension_functors.p"><span class="id" title="variable">p</span></a>,<a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>)</span>.
+    doesn't have to be a set!  <span class="inlinecode"><span class="id" title="var">nr</span></span> is the universe of <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#partial_Nrec"><span class="id" title="definition">partial_Nrec</span></a></span>, morally <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Nat.html#max"><span class="id" title="definition">max</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.p"><span class="id" title="projection">p</span></a>,<a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>)</span>.
         Note that it shouldn't be <span class="inlinecode"><span class="id" title="var">large</span></span>, see constraints on <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#contr_partial_Nrec_zero"><span class="id" title="definition">contr_partial_Nrec_zero</span></a></span>. 
 </div>
 <div scenenumber="91" class="code">
@@ -8363,7 +8363,7 @@ The type of partially defined recursive functions "up to <span class="inlinecode
 </div>
 <div class="goal" id="goal0_3_95"><pre><span></span></pre></div>
 <div class="doc" scenenumber="97">
-The crucial point that makes it work for arbitrary <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is to
+The crucial point that makes it work for arbitrary <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is to
     prove in one big induction that these types are always
     contractible.  Here is the base case. 
 </div>
@@ -9553,7 +9553,7 @@ This is a weird lemma.  We could prove it by <span class="inlinecode"><a class="
 </div>
 <div class="goal" id="goal0_3_127"><pre><span></span></pre></div>
 <div class="doc" scenenumber="129">
-Here is where we use <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#nrec_partials_succ"><span class="id" title="definition">nrec_partials_succ</span></a></span>: the <span class="inlinecode"><a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a></span> equal to it, which allows us to identify <span class="inlinecode"><a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#ap"><span class="id" title="section">ap</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToCat.html#pr1"><span class="id" title="definition">pr1</span></a></span> of the latter.  (Note that <span class="inlinecode"><a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#ap"><span class="id" title="section">ap</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToCat.html#pr1"><span class="id" title="definition">pr1</span></a></span> of a <span class="inlinecode"><a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a></span> can be nontrivial even when the endpoints happen to coincide judgmentally, for instance (x;p) and (x;1) in {y:X &amp; y = x}, so there really is something to prove here.) 
+Here is where we use <span class="inlinecode"><a class="idref" href="HoTT.PropResizing.Nat.html#nrec_partials_succ"><span class="id" title="definition">nrec_partials_succ</span></a></span>: the <span class="inlinecode"><a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a></span> equal to it, which allows us to identify <span class="inlinecode"><a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#ap"><span class="id" title="section">ap</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#pr1"><span class="id" title="definition">pr1</span></a></span> of the latter.  (Note that <span class="inlinecode"><a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#ap"><span class="id" title="section">ap</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#pr1"><span class="id" title="definition">pr1</span></a></span> of a <span class="inlinecode"><a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a></span> can be nontrivial even when the endpoints happen to coincide judgmentally, for instance (x;p) and (x;1) in {y:X &amp; y = x}, so there really is something to prove here.) 
 </div>
 <div scenenumber="131" class="code">
 <span class="command" onmouseout="

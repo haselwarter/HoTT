@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a id="lab1309"></a><h1 class="section">The Yoneda Lemma</h1>
+<a id="lab741"></a><h1 class="section">The Yoneda Lemma</h1>
 
 </div>
 <div class="code">
@@ -57,8 +57,8 @@
 </div>
 
 <div class="doc">
-Quoting Wikipedia on the Yoneda lemma (chainging <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> and
-    <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.natpair_integers.html#NatPair.PairT.C"><span class="id" title="constructor">C</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> so that we can use unicode superscripts and
+Quoting Wikipedia on the Yoneda lemma (chainging <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> and
+    <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> so that we can use unicode superscripts and
     subscripts):
 
 <div class="paragraph"> </div>
@@ -78,63 +78,63 @@ Quoting Wikipedia on the Yoneda lemma (chainging <span class="inlinecode"><a cla
 
 <div class="paragraph"> </div>
 
-<a id="lab1310"></a><h2 class="section">Generalities</h2>
+<a id="lab742"></a><h2 class="section">Generalities</h2>
 
 
 <div class="paragraph"> </div>
 
     The Yoneda lemma suggests that instead of studying the (locally
-    small) category <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>, one should study the category of all functors
-    of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> into <span class="inlinecode"><span class="id" title="keyword">Set</span></span> (the category of sets with functions as
+    small) category <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>, one should study the category of all functors
+    of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> into <span class="inlinecode"><span class="id" title="keyword">Set</span></span> (the category of sets with functions as
     morphisms). <span class="inlinecode"><span class="id" title="keyword">Set</span></span> is a category we understand well, and a functor
-    of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> into <span class="inlinecode"><span class="id" title="keyword">Set</span></span> can be seen as a "representation" of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> in
-    terms of known structures. The original category <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> is contained
+    of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> into <span class="inlinecode"><span class="id" title="keyword">Set</span></span> can be seen as a "representation" of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> in
+    terms of known structures. The original category <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> is contained
     in this functor category, but new objects appear in the functor
-    category which were absent and "hidden" in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>. Treating these new
+    category which were absent and "hidden" in <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>. Treating these new
     objects just like the old ones often unifies and simplifies the
     theory.  This approach is akin to (and in fact generalizes) the
     common method of studying a ring by investigating the modules over
-    that ring. The ring takes the place of the category <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>, and the
+    that ring. The ring takes the place of the category <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>, and the
     category of modules over the ring is a category of functors
-    defined on <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>.
+    defined on <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>.
 
 <div class="paragraph"> </div>
 
-<a id="lab1311"></a><h2 class="section">Formal statement</h2>
-
-
-<div class="paragraph"> </div>
-
-<a id="lab1312"></a><h3 class="section">General version</h3>
+<a id="lab743"></a><h2 class="section">Formal statement</h2>
 
 
 <div class="paragraph"> </div>
 
-    Yoneda's lemma concerns functors from a fixed category <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to the
-    category of sets, <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. If <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> is a locally small category
+<a id="lab744"></a><h3 class="section">General version</h3>
+
+
+<div class="paragraph"> </div>
+
+    Yoneda's lemma concerns functors from a fixed category <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to the
+    category of sets, <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. If <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> is a locally small category
     (i.e. the hom-sets are actual sets and not proper classes), then
-    each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> gives rise to a natural functor to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>
+    each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> gives rise to a natural functor to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>
     called a hom-functor. This functor is denoted:
 
 <div class="paragraph"> </div>
 
-    <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode">─)</span>.
+    <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode">─)</span>.
 
 <div class="paragraph"> </div>
 
-    The (covariant) hom-functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span> sends <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> to the set of morphisms
-    <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>)</span> and sends a morphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> to the
-    morphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">∘</span> <span class="inlinecode">─</span> (composition with <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> on the left) that sends a
-    morphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>)</span> to the morphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">∘</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span>
+    The (covariant) hom-functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span> sends <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> to the set of morphisms
+    <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>)</span> and sends a morphism <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> to the
+    morphism <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">∘</span> <span class="inlinecode">─</span> (composition with <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> on the left) that sends a
+    morphism <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>)</span> to the morphism <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">∘</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span>
     <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span>. That is,
 
 <div class="paragraph"> </div>
 
-    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">↦</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a>)</span> <span class="inlinecode">=</span> <span class="inlinecode">⟦</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>)</span> <span class="inlinecode">∋</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">↦</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">∘</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">∈</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,<a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span> <span class="inlinecode">⟧</span>.
+    <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">↦</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a>)</span> <span class="inlinecode">=</span> <span class="inlinecode">⟦</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>)</span> <span class="inlinecode">∋</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">↦</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">∘</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">∈</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,<a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span> <span class="inlinecode">⟧</span>.
  
 <div class="paragraph"> </div>
 
-<a id="lab1313"></a><h2 class="section">The (co)yoneda functors <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">(<a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>ᵒᵖ</span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="tactic">set</span>)</span></h2>
+<a id="lab745"></a><h2 class="section">The (co)yoneda functors <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">(<a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>ᵒᵖ</span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="tactic">set</span>)</span></h2>
 
 </div>
 <div class="code">
@@ -156,7 +156,7 @@ Quoting Wikipedia on the Yoneda lemma (chainging <span class="inlinecode"><a cla
 </div>
 
 <div class="doc">
-<a id="lab1314"></a><h2 class="section">The (co)yoneda lemma</h2>
+<a id="lab746"></a><h2 class="section">The (co)yoneda lemma</h2>
 
 </div>
 <div class="code">
@@ -171,36 +171,36 @@ Quoting Wikipedia on the Yoneda lemma (chainging <span class="inlinecode"><a cla
 </div>
 
 <div class="doc">
-Let <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> be an arbitrary functor from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. Then Yoneda's
+Let <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> be an arbitrary functor from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. Then Yoneda's
       lemma says that: 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-For each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>, 
+For each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>, 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-the natural transformations from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> are in one-to-one
-      correspondence with the elements of <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. That is,
+the natural transformations from <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> are in one-to-one
+      correspondence with the elements of <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. That is,
 
 <div class="paragraph"> </div>
 
-      <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>.
+      <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>.
 
 <div class="paragraph"> </div>
 
-      Moreover this isomorphism is natural in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> when both
-      sides are regarded as functors from <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to
+      Moreover this isomorphism is natural in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> when both
+      sides are regarded as functors from <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to
       <span class="inlinecode"><span class="id" title="keyword">Set</span></span>.
 
 <div class="paragraph"> </div>
 
-      Given a natural transformation <span class="inlinecode"><span class="id" title="var">Φ</span></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>, the
-      corresponding element of <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> is <span class="inlinecode"><span class="id" title="var">u</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="var">Φ</span>ₐ(<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#id"><span class="id" title="definition">id</span></a>ₐ)</span>. 
+      Given a natural transformation <span class="inlinecode"><span class="id" title="var">Φ</span></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>, the
+      corresponding element of <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> is <span class="inlinecode"><span class="id" title="var">u</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="var">Φ</span>ₐ(<a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#id"><span class="id" title="section">id</span></a>ₐ)</span>. 
 </div>
 <div class="code">
 
@@ -322,22 +322,22 @@ the natural transformations from <span class="inlinecode"><a class="idref" href=
 
 <div class="doc">
 There is a contravariant version of Yoneda's lemma which
-      concerns contravariant functors from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. This version
+      concerns contravariant functors from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. This version
       involves the contravariant hom-functor
 
 <div class="paragraph"> </div>
 
-      <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ₐ</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(─,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>)</span>,
+      <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ₐ</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(─,</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>)</span>,
 
 <div class="paragraph"> </div>
 
-      which sends <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> to the hom-set <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. Given an arbitrary
-      contravariant functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>, Yoneda's lemma
+      which sends <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> to the hom-set <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. Given an arbitrary
+      contravariant functor <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span> from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>, Yoneda's lemma
       asserts that
 
 <div class="paragraph"> </div>
 
-      <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ₐ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. 
+      <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ₐ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. 
 </div>
 <div class="code">
 
@@ -350,36 +350,36 @@ There is a contravariant version of Yoneda's lemma which
 </div>
 
 <div class="doc">
-Let <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> be an arbitrary functor from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. Then Yoneda's
+Let <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> be an arbitrary functor from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. Then Yoneda's
       lemma says that: 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-For each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>, 
+For each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>, 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-the natural transformations from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> are in one-to-one
-      correspondence with the elements of <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. That is,
+the natural transformations from <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> are in one-to-one
+      correspondence with the elements of <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>. That is,
 
 <div class="paragraph"> </div>
 
-      <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>.
+      <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>.
 
 <div class="paragraph"> </div>
 
-      Moreover this isomorphism is natural in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> when both
-      sides are regarded as functors from <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to
+      Moreover this isomorphism is natural in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> when both
+      sides are regarded as functors from <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to
       <span class="inlinecode"><span class="id" title="keyword">Set</span></span>.
 
 <div class="paragraph"> </div>
 
-      Given a natural transformation <span class="inlinecode"><span class="id" title="var">Φ</span></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>, the
-      corresponding element of <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> is <span class="inlinecode"><span class="id" title="var">u</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="var">Φ</span>ₐ(<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#id"><span class="id" title="definition">id</span></a>ₐ)</span>. 
+      Given a natural transformation <span class="inlinecode"><span class="id" title="var">Φ</span></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span> to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>, the
+      corresponding element of <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span> is <span class="inlinecode"><span class="id" title="var">u</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="var">Φ</span>ₐ(<a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#id"><span class="id" title="section">id</span></a>ₐ)</span>. 
 </div>
 <div class="code">
 
@@ -415,47 +415,47 @@ the natural transformations from <span class="inlinecode"><a class="idref" href=
 </div>
 
 <div class="doc">
-<a id="lab1315"></a><h2 class="section">The Yoneda embedding</h2>
+<a id="lab747"></a><h2 class="section">The Yoneda embedding</h2>
 
 
 <div class="paragraph"> </div>
 
     An important special case of Yoneda's lemma is when the functor
-    <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span> is another hom-functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵇ</span>. In this case,
+    <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span> is another hom-functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵇ</span>. In this case,
     the covariant version of Yoneda's lemma states that
 
 <div class="paragraph"> </div>
 
-    <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵇ)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>.
+    <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵇ)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>)</span>.
 
 <div class="paragraph"> </div>
 
     That is, natural transformations between hom-functors are in
     one-to-one correspondence with morphisms (in the reverse
-    direction) between the associated objects. Given a morphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span>
-    <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> the associated natural transformation is denoted <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a>,</span> <span class="inlinecode">─)</span>.
+    direction) between the associated objects. Given a morphism <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a></span>
+    <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> the associated natural transformation is denoted <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a>,</span> <span class="inlinecode">─)</span>.
 
 <div class="paragraph"> </div>
 
-    Mapping each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to its associated hom-functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ=</span>
-    <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode">─)</span> and each morphism <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to the corresponding
-    natural transformation <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a>,</span> <span class="inlinecode">─)</span> determines a contravariant
-    functor <span class="inlinecode"><span class="id" title="var">h⁻</span></span> from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span>, the functor category of all
-    (covariant) functors from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. One can interpret <span class="inlinecode"><span class="id" title="var">h⁻</span></span> as
+    Mapping each object <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to its associated hom-functor <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ=</span>
+    <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode">─)</span> and each morphism <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to the corresponding
+    natural transformation <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a>,</span> <span class="inlinecode">─)</span> determines a contravariant
+    functor <span class="inlinecode"><span class="id" title="var">h⁻</span></span> from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span>, the functor category of all
+    (covariant) functors from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. One can interpret <span class="inlinecode"><span class="id" title="var">h⁻</span></span> as
     a covariant functor:
 
 <div class="paragraph"> </div>
 
-    <span class="inlinecode"><span class="id" title="var">h⁻</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>ᵒᵖ</span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span>.
+    <span class="inlinecode"><span class="id" title="var">h⁻</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>ᵒᵖ</span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Set</span>ᴬ</span>.
 
 <div class="paragraph"> </div>
 
     The meaning of Yoneda's lemma in this setting is that the functor
-    <span class="inlinecode"><span class="id" title="var">h⁻</span></span> is fully faithful, and therefore gives an embedding of <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>ᵒᵖ</span>
+    <span class="inlinecode"><span class="id" title="var">h⁻</span></span> is fully faithful, and therefore gives an embedding of <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>ᵒᵖ</span>
     in the category of functors to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>. The collection of all
-    functors {<span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>} is a subcategory of <span class="inlinecode"><span class="id" title="keyword">Set</span>̂ᴬ</span>. Therefore,
-    Yoneda embedding implies that the category <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a>ᵒᵖ</span> is isomorphic to
-    the category {<span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ᵃ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span>}.
+    functors {<span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>} is a subcategory of <span class="inlinecode"><span class="id" title="keyword">Set</span>̂ᴬ</span>. Therefore,
+    Yoneda embedding implies that the category <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a>ᵒᵖ</span> is isomorphic to
+    the category {<span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ᵃ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a></span> in <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span>}.
 
 <div class="paragraph"> </div>
 
@@ -463,22 +463,22 @@ the natural transformations from <span class="inlinecode"><a class="idref" href=
 
 <div class="paragraph"> </div>
 
-    <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>ₐ,</span> <span class="inlinecode"><span class="id" title="var">h_b</span>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a>)</span>.
+    <span class="inlinecode"><span class="id" title="library">Nat</span>(<a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>ₐ,</span> <span class="inlinecode"><span class="id" title="var">h_b</span>)</span> <span class="inlinecode">≅</span> <span class="inlinecode"><a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="projection">Hom</span></a>(<a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.a"><span class="id" title="projection">a</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.b"><span class="id" title="projection">b</span></a>)</span>.
 
 <div class="paragraph"> </div>
 
-    Therefore, <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>₋</span> gives rise to a covariant functor from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to the
+    Therefore, <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>₋</span> gives rise to a covariant functor from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to the
     category of contravariant functors to <span class="inlinecode"><span class="id" title="keyword">Set</span></span>:
 
 <div class="paragraph"> </div>
 
-    <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>₋</span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Set</span>⁽⁽ᴬ⁾ᵒᵖ⁾</span>.
+    <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>₋</span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Set</span>⁽⁽ᴬ⁾ᵒᵖ⁾</span>.
 
 <div class="paragraph"> </div>
 
-    Yoneda's lemma then states that any locally small category <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> can
-    be embedded in the category of contravariant functors from <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.A"><span class="id" title="variable">A</span></a></span> to
-    <span class="inlinecode"><span class="id" title="keyword">Set</span></span> via <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.h"><span class="id" title="projection">h</span></a>₋</span>. This is called the Yoneda embedding. 
+    Yoneda's lemma then states that any locally small category <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> can
+    be embedded in the category of contravariant functors from <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.A"><span class="id" title="inductive">A</span></a></span> to
+    <span class="inlinecode"><span class="id" title="keyword">Set</span></span> via <span class="inlinecode"><a class="idref" href="HoTT.Categories.Structure.Core.html#PreCategoryOfStructures.h"><span class="id" title="projection">h</span></a>₋</span>. This is called the Yoneda embedding. 
 </div>
 <div class="code">
 

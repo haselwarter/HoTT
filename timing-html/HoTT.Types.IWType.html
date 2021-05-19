@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: IWType.v
 Line: 1
-Time: 0.032s">
-<div class="time" style="width: 45.714285714286%"></div>
+Time: 0.034s">
+<div class="time" style="width: 48.571428571429%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 11.428571428571%"></div>
+Time: 0.009s">
+<div class="time" style="width: 12.857142857143%"></div>
 <pre>
 Require Import Types.Forall Types.Sigma Types.Prod Types.Paths Types.WType.</pre>
 </div>
@@ -57,8 +57,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 9
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>Inductive IW
   (I : Type) (** The indexing type *)
   (A : Type) (** The type of labels / constructors / data *)
@@ -203,8 +203,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 47
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pointwise_paths_ind `{Funext} {A : Type} {B : A -&gt; Type}
@@ -223,8 +223,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 55
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre>
   refine (equiv_ind apD10 (P b) _ p).</pre>
 </div>
@@ -282,8 +282,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 71
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Fixpoint IsIndexedBy (x : I) (w : W A B) : Type :=
@@ -319,8 +319,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 84
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>Definition IW'_ind (P : forall i, IW' i -&gt; Type)
     (S : forall x y, (forall c, P _ (y c)) -&gt; P _ (iw_sup' x y))
     : forall x w, P x w.</pre>
@@ -355,15 +355,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 90
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
     intros x [p IH].</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 91
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct p.</pre>
 </div>
@@ -390,8 +390,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 95
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -452,8 +452,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 109
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rapply (IW'_ind (fun l _ =&gt; IW I A B i j l)).</pre>
 </div>
 <div class="code" title="File: IWType.v
@@ -499,8 +499,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 114
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rapply (IW_rect I A B i j (fun l _ =&gt; IW' l)).</pre>
 </div>
 <div class="code" title="File: IWType.v
@@ -546,28 +546,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 119
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre> rapply (IW_rect I A B i j (fun x y =&gt; IW'_ind _ _ x _ = y)).</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 119
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       cbn; intros a b c.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 120
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
       apply ap.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 121
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       funext y.</pre>
 </div>
@@ -600,29 +600,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 125
-Time: 0.011s">
-<div class="time" style="width: 15.714285714286%"></div>
+Time: 0.01s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
     rapply (IW'_ind (fun x y =&gt; IW_rect I A B i j _ _ x _ = y)).</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 126
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     cbn; intros a b c.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 127
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 128
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     funext d.</pre>
 </div>
@@ -635,8 +635,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 130
-Time: 0.007s">
-<div class="time" style="width: 10%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.5714285714286%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -706,8 +706,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 146
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Let i' : A' -&gt; I' := functor_sigma i (fun a : A =&gt; functor_prod (iw_sup I A B i j a) (iw_sup I A B i j a)).</pre>
 </div>
@@ -720,8 +720,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 148
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
 
   Let IWPath : I' -&gt; Type := fun x =&gt; fst (pr2 x) = snd (pr2 x).</pre>
@@ -816,8 +816,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 166
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre>
     rewrite path_forall_1.</pre>
 </div>
@@ -870,8 +870,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 178
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre>
       rapply (IW_rect I A B i j (fun l a =&gt; P (l; (a, a)) idpath)).</pre>
 </div>
@@ -898,8 +898,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 182
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (transport (P (i x; (iw_sup I A B i j x a, iw_sup I A B i j x a))) _ p).</pre>
 </div>
@@ -927,8 +927,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 187
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -949,8 +949,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 191
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       intros [x [a b]].</pre>
 </div>
@@ -977,8 +977,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 195
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -1022,8 +1022,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 204
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (_ @ _).</pre>
 </div>
@@ -1036,14 +1036,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 206
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre> refine (_ @ ap _ (eisadj (path_forall _ _) h)).</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 206
-Time: 0.016s">
-<div class="time" style="width: 22.857142857143%"></div>
+Time: 0.017s">
+<div class="time" style="width: 24.285714285714%"></div>
 <pre>
         refine (paths_ind _
           (fun b p' =&gt;
@@ -1059,8 +1059,8 @@ Time: 0.016s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 217
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.2857142857143%"></div>
 <pre>
         exact (transport_compose _ _ _ _)^.</pre>
 </div>
@@ -1072,22 +1072,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 218
-Time: 0.068s">
-<div class="time" style="width: 97.142857142857%"></div>
+Time: 0.07s">
+<div class="time" style="width: 100%"></div>
 <pre>
       by cbn; destruct (eisretr apD10 h).</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 219
-Time: 0.044s">
-<div class="time" style="width: 62.857142857143%"></div>
+Time: 0.038s">
+<div class="time" style="width: 54.285714285714%"></div>
 <pre>
     Defined.</pre>
 </div>
 <div class="code" title="File: IWType.v
 Line: 220
-Time: 0.004s">
-<div class="time" style="width: 5.7142857142857%"></div>
+Time: 0.005s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
   End Ind.</pre>
@@ -1314,8 +1314,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 250
-Time: 0.008s">
-<div class="time" style="width: 11.428571428571%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.5714285714286%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1340,8 +1340,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 258
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Local Definition adjust_hfiber_idpath {X Y} {f : X -&gt; Y} {y xp}
@@ -1625,8 +1625,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 315
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
     intros l a b [[x [y z]] p].</pre>
 </div>
@@ -1646,8 +1646,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 318
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
     refine (equiv_ind (equiv_path_sigma _ _ _) _ _).</pre>
 </div>
@@ -1660,8 +1660,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 320
-Time: 0.003s">
-<div class="time" style="width: 4.2857142857143%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.7142857142857%"></div>
 <pre>
     destruct p.</pre>
 </div>
@@ -1688,8 +1688,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 324
-Time: 0.006s">
-<div class="time" style="width: 8.5714285714286%"></div>
+Time: 0.005s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
     destruct p, q.</pre>
 </div>
@@ -1702,8 +1702,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 326
-Time: 0.011s">
-<div class="time" style="width: 15.714285714286%"></div>
+Time: 0.009s">
+<div class="time" style="width: 12.857142857143%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1720,8 +1720,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 332
-Time: 0.007s">
-<div class="time" style="width: 10%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.5714285714286%"></div>
 <pre>
 
   Local Definition hfiber_to_path_iw l a b
@@ -1770,8 +1770,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 346
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1910,8 +1910,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 366
-Time: 0.038s">
-<div class="time" style="width: 54.285714285714%"></div>
+Time: 0.04s">
+<div class="time" style="width: 57.142857142857%"></div>
 <pre>
 
 End Paths.</pre>
@@ -2149,8 +2149,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 413
-Time: 0.012s">
-<div class="time" style="width: 17.142857142857%"></div>
+Time: 0.011s">
+<div class="time" style="width: 15.714285714286%"></div>
 <pre>
   refine (istrunc_equiv_istrunc _
     (equiv_path_iwtype I A B i j l x y) (n := n.+1)).</pre>
@@ -2179,8 +2179,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 419
-Time: 0.006s">
-<div class="time" style="width: 8.5714285714286%"></div>
+Time: 0.005s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>apply (istrunc_equiv_istrunc _
     (equiv_path_hfiber_index I A B i j k a b)).</pre>
 </div>
@@ -2233,8 +2233,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 431
-Time: 0.003s">
-<div class="time" style="width: 4.2857142857143%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
   assert (r : idpath = p) by apply path_ishprop.</pre>
 </div>
@@ -2295,8 +2295,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 445
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Let getfib {x} (a : IW I A B i j x) : hfiber i x
     := match a with iw_sup x _ =&gt; (x ; idpath) end.</pre>
@@ -2323,8 +2323,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 455
-Time: 0.003s">
-<div class="time" style="width: 4.2857142857143%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
   Let children_eq (x : A) (c1 c2 : forall c, IW I A B i j (j x c))
     : iw_sup I A B i j x c1 = iw_sup I A B i j x c2 -&gt; c1 = c2
@@ -2362,8 +2362,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 464
-Time: 0.07s">
-<div class="time" style="width: 100%"></div>
+Time: 0.066s">
+<div class="time" style="width: 94.285714285714%"></div>
 <pre>
     transparent assert (decide_children : (forall c2, Decidable (c1 = c2))).</pre>
 </div>
@@ -2382,8 +2382,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 466
-Time: 0.003s">
-<div class="time" style="width: 4.2857142857143%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
       destruct (liftP x (fun c =&gt; c1 c = c2 c) (fun c =&gt; decide_eq _ (c1 c) (c2 c)))
         as [p|p].</pre>
@@ -2410,8 +2410,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 470
-Time: 0.005s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.7142857142857%"></div>
 <pre> right; intro h; by apply p, apD10.</pre>
 </div>
 <div class="code" title="File: IWType.v
@@ -2435,8 +2435,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 477
-Time: 0.005s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.7142857142857%"></div>
 <pre>
     destruct (fibers_dec (i x) (x ; idpath) (y ; iy)) as [feq|fneq].</pre>
 </div>
@@ -2572,8 +2572,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IWType.v
 Line: 500
-Time: 0.003s">
-<div class="time" style="width: 4.2857142857143%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
 
 End DecidablePaths.</pre>

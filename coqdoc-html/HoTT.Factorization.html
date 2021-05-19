@@ -24,7 +24,7 @@
 </div>
 
 <div class="doc">
-<a id="lab628"></a><h1 class="section">Factorizations and factorization systems.</h1>
+<a id="lab826"></a><h1 class="section">Factorizations and factorization systems.</h1>
 
 </div>
 <div class="code">
@@ -38,7 +38,7 @@
 </div>
 
 <div class="doc">
-<a id="lab629"></a><h2 class="section">Factorizations</h2>
+<a id="lab827"></a><h2 class="section">Factorizations</h2>
 
 </div>
 <div class="code">
@@ -61,7 +61,7 @@ It's important that these are all declared with a single <span class="inlinecode
 </div>
 
 <div class="doc">
-A factorization of <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> into a first factor lying in <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class1"><span class="id" title="projection">class1</span></a></span> and a second factor lying in <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class2"><span class="id" title="projection">class2</span></a></span>. 
+A factorization of <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> into a first factor lying in <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class1"><span class="id" title="projection">class1</span></a></span> and a second factor lying in <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class2"><span class="id" title="projection">class2</span></a></span>. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Record</span> <a id="Factorization" class="idref" href="#Factorization"><span class="id" title="record">Factorization</span></a> :=<br/>
@@ -160,7 +160,7 @@ A path between factorizations is equivalent to a structure of the following sort
 </div>
 
 <div class="doc">
-<a id="lab630"></a><h2 class="section">Factorization Systems</h2>
+<a id="lab828"></a><h2 class="section">Factorization Systems</h2>
 
 <div class="paragraph"> </div>
 
@@ -181,7 +181,7 @@ A path between factorizations is equivalent to a structure of the following sort
 &nbsp;&nbsp;&nbsp;&nbsp;</div>
 
 <div class="doc">
-Morally, the uniqueness of factorizations says that <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#Factorization"><span class="id" title="record">Factorization</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class1"><span class="id" title="projection">class1</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class2"><span class="id" title="projection">class2</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> is contractible.  However, in practice we always *prove* that by way of <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#path_factorization"><span class="id" title="definition">path_factorization</span></a></span>, and we frequently want to *use* the components of a <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#PathFactorization"><span class="id" title="record">PathFactorization</span></a></span> as well.  Thus, as data we store the canonical factorization and a <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#PathFactorization"><span class="id" title="record">PathFactorization</span></a></span> between any two such, and prove in a moment that this implies contractibility of the space of factorizations. 
+Morally, the uniqueness of factorizations says that <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#Factorization"><span class="id" title="record">Factorization</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class1"><span class="id" title="projection">class1</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#class2"><span class="id" title="projection">class2</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> is contractible.  However, in practice we always *prove* that by way of <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#path_factorization"><span class="id" title="definition">path_factorization</span></a></span>, and we frequently want to *use* the components of a <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#PathFactorization"><span class="id" title="record">PathFactorization</span></a></span> as well.  Thus, as data we store the canonical factorization and a <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#PathFactorization"><span class="id" title="record">PathFactorization</span></a></span> between any two such, and prove in a moment that this implies contractibility of the space of factorizations. 
 </div>
 <div class="code">
 &nbsp;&nbsp;&nbsp;&nbsp;<a id="factor" class="idref" href="#factor"><span class="id" title="projection">factor</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">{</span></a><a id="X:95" class="idref" href="#X:95"><span class="id" title="binder">X</span></a> <a id="Y:96" class="idref" href="#Y:96"><span class="id" title="binder">Y</span></a> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}} (<a id="f:97" class="idref" href="#f:97"><span class="id" title="binder">f</span></a>:<a class="idref" href="HoTT.Factorization.html#X:95"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a><a class="idref" href="HoTT.Factorization.html#Y:96"><span class="id" title="variable">Y</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Factorization.html#Factorization"><span class="id" title="record">Factorization@</span></a>{<span class="id" title="var">i</span>} (@<a class="idref" href="HoTT.Factorization.html#class1:61"><span class="id" title="method">class1</span></a>) (@<a class="idref" href="HoTT.Factorization.html#class2:79"><span class="id" title="method">class2</span></a>) <a class="idref" href="HoTT.Factorization.html#f:97"><span class="id" title="variable">f</span></a> ;<br/>
@@ -288,7 +288,7 @@ The two classes of maps are automatically orthogonal, i.e. any commutative squar
 </div>
 
 <div class="doc">
-First we factor <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> 
+First we factor <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Let</span> <a id="FactSys.C" class="idref" href="#FactSys.C"><span class="id" title="variable">C</span></a>  : <span class="id" title="keyword">Type</span>         := <a class="idref" href="HoTT.Factorization.html#intermediate"><span class="id" title="projection">intermediate</span></a> (<a class="idref" href="HoTT.Factorization.html#factor"><span class="id" title="projection">factor</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.factsys"><span class="id" title="variable">factsys</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.f"><span class="id" title="variable">f</span></a>).<br/>
@@ -300,7 +300,7 @@ First we factor <span class="inlinecode"><a class="idref" href="HoTT.Classes.the
 </div>
 
 <div class="doc">
-and <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> 
+and <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Let</span> <a id="FactSys.D" class="idref" href="#FactSys.D"><span class="id" title="variable">D</span></a>  : <span class="id" title="keyword">Type</span>         := <a class="idref" href="HoTT.Factorization.html#intermediate"><span class="id" title="projection">intermediate</span></a> (<a class="idref" href="HoTT.Factorization.html#factor"><span class="id" title="projection">factor</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.factsys"><span class="id" title="variable">factsys</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.g"><span class="id" title="variable">g</span></a>).<br/>
@@ -312,7 +312,7 @@ and <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetri
 </div>
 
 <div class="doc">
-Now we observe that <span class="inlinecode"><a class="idref" href="HoTT.Categories.KanExtensions.Functors.html#kan_extension_functors.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.f2"><span class="id" title="variable">f2</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.f1"><span class="id" title="variable">f1</span></a></span>, and <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.g2"><span class="id" title="variable">g2</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.g1"><span class="id" title="variable">g1</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>, are both factorizations of the common diagonal of the commutative square (for which we use <span class="inlinecode"><a class="idref" href="HoTT.Categories.KanExtensions.Functors.html#kan_extension_functors.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span>, but we could equally well use <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>. 
+Now we observe that <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.p"><span class="id" title="projection">p</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.f2"><span class="id" title="variable">f2</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.f1"><span class="id" title="variable">f1</span></a></span>, and <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.g2"><span class="id" title="variable">g2</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.g1"><span class="id" title="variable">g1</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>, are both factorizations of the common diagonal of the commutative square (for which we use <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreParts.html#LaxCommaCategoryParts.p"><span class="id" title="projection">p</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span>, but we could equally well use <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Let</span> <a id="FactSys.fact" class="idref" href="#FactSys.fact"><span class="id" title="variable">fact</span></a>  : <a class="idref" href="HoTT.Factorization.html#Factorization"><span class="id" title="record">Factorization</span></a> (@<a class="idref" href="HoTT.Factorization.html#class1"><span class="id" title="projection">class1</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.factsys"><span class="id" title="variable">factsys</span></a>) (@<a class="idref" href="HoTT.Factorization.html#class2"><span class="id" title="projection">class2</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.factsys"><span class="id" title="variable">factsys</span></a>) (<a class="idref" href="HoTT.Factorization.html#FactSys.p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.f"><span class="id" title="variable">f</span></a>)<br/>
@@ -333,7 +333,7 @@ Now we observe that <span class="inlinecode"><a class="idref" href="HoTT.Categor
 </div>
 
 <div class="doc">
-Therefore, by the uniqueness of factorizations, we have an equivalence <span class="inlinecode"><a class="idref" href="HoTT.Contrib.HoTTBookExercises.html#Book_2_1_Proofs_Are_Equal.q"><span class="id" title="variable">q</span></a></span> relating them. 
+Therefore, by the uniqueness of factorizations, we have an equivalence <span class="inlinecode"><a class="idref" href="HoTT.Factorization.html#FactSys.q"><span class="id" title="variable">q</span></a></span> relating them. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Let</span> <a id="FactSys.q" class="idref" href="#FactSys.q"><span class="id" title="variable">q</span></a>  : <a class="idref" href="HoTT.Factorization.html#FactSys.C"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Factorization.html#FactSys.D"><span class="id" title="variable">D</span></a>          := <a class="idref" href="HoTT.Factorization.html#path_intermediate"><span class="id" title="projection">path_intermediate</span></a><br/>

@@ -40,7 +40,7 @@
 </div>
 
 <div class="doc">
-<a id="lab667"></a><h1 class="section">We define the Classifying space of a group to be the following HIT:</h1>
+<a id="lab877"></a><h1 class="section">We define the Classifying space of a group to be the following HIT:</h1>
 
 
 <div class="paragraph"> </div>
@@ -339,7 +339,7 @@ We can show that <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.C
 </div>
 
 <div class="doc">
-Here we prove that <span class="inlinecode"><span class="id" title="var">BG</span></span> is the delooping of <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span>, in that <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops"><span class="id" title="definition">loops</span></a></span> <span class="inlinecode"><span class="id" title="var">BG</span></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Pointwise.html#AdjointPointwise.r.G"><span class="id" title="variable">G</span></a></span>. 
+Here we prove that <span class="inlinecode"><span class="id" title="var">BG</span></span> is the delooping of <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span>, in that <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops"><span class="id" title="definition">loops</span></a></span> <span class="inlinecode"><span class="id" title="var">BG</span></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#G"><span class="id" title="definition">G</span></a></span>. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Section</span> <a id="EncodeDecode" class="idref" href="#EncodeDecode"><span class="id" title="section">EncodeDecode</span></a>.<br/>
@@ -712,7 +712,7 @@ B(Pi 1 X) &lt;~&gt;* X for a 0-connected 1-truncated X.
 </div>
 
 <div class="doc">
-The pointed map <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> is the adjunct to the inverse of the natural map <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops"><span class="id" title="definition">loops</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi1"><span class="id" title="definition">Pi1</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>. We define it first, to make the later goals easier to read. 
+The pointed map <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> is the adjunct to the inverse of the natural map <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops"><span class="id" title="definition">loops</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi1"><span class="id" title="definition">Pi1</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>. We define it first, to make the later goals easier to read. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="var">transparent</span> <span class="id" title="tactic">assert</span> (<span class="id" title="var">f</span> : (<a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#B"><span class="id" title="definition">B</span></a> (<a class="idref" href="HoTT.Homotopy.HomotopyGroup.html#Pi1"><span class="id" title="definition">Pi1</span></a> <span class="id" title="var">X</span>) <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <span class="id" title="var">X</span>)).<br/>
@@ -726,7 +726,7 @@ The pointed map <span class="inlinecode"><a class="idref" href="HoTT.Classes.the
 </div>
 
 <div class="doc">
-<span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> is an equivalence since <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#ClassifyingSpace.bloop"><span class="id" title="axiom">bloop</span></a></span> <span class="inlinecode">==</span> <span class="inlinecode"><a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>^-1</span>, and the other two maps are equivalences. 
+<span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> is an equivalence since <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.ClassifyingSpace.html#ClassifyingSpace.bloop"><span class="id" title="axiom">bloop</span></a></span> <span class="inlinecode">==</span> <span class="inlinecode"><a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a>^-1</span>, and the other two maps are equivalences. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Homotopy.WhiteheadsPrinciple.html#isequiv_is0connected_isequiv_loops"><span class="id" title="definition">isequiv_is0connected_isequiv_loops</span></a>.<br/>

@@ -41,7 +41,7 @@
 </div>
 
 <div class="doc">
-<a id="lab242"></a><h2 class="section">Definition of general finite sets</h2>
+<a id="lab1071"></a><h2 class="section">Definition of general finite sets</h2>
 
 </div>
 <div class="code">
@@ -82,7 +82,7 @@ Note that the sigma over cardinalities is not truncated.  Nevertheless, because 
 </div>
 
 <div class="doc">
-<a id="lab243"></a><h2 class="section">Preservation of finiteness by equivalences</h2>
+<a id="lab1072"></a><h2 class="section">Preservation of finiteness by equivalences</h2>
 
 </div>
 <div class="code">
@@ -131,7 +131,7 @@ Note that the sigma over cardinalities is not truncated.  Nevertheless, because 
 </div>
 
 <div class="doc">
-<a id="lab244"></a><h2 class="section">Simple examples of finite sets</h2>
+<a id="lab1073"></a><h2 class="section">Simple examples of finite sets</h2>
 
 <div class="paragraph"> </div>
 
@@ -230,7 +230,7 @@ Finite sets are closed under path-spaces.
 </div>
 
 <div class="doc">
-If we assume <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>, then typeclass inference produces this automatically, since <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> has decidable equality and (hence) is a set, so <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a>=<a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> is a decidable hprop.  But we can also deduce it without funext, since <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Finite.html#Finite"><span class="id" title="record">Finite</span></a></span> is an hprop even without funext. 
+If we assume <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>, then typeclass inference produces this automatically, since <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> has decidable equality and (hence) is a set, so <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a>=<a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> is a decidable hprop.  But we can also deduce it without funext, since <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Finite.html#Finite"><span class="id" title="record">Finite</span></a></span> is an hprop even without funext. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="tactic">assert</span> (<span class="id" title="var">e</span> := <a class="idref" href="HoTT.Spaces.Finite.Finite.html#merely_equiv_fin"><span class="id" title="method">merely_equiv_fin</span></a> <span class="id" title="var">X</span>).<br/>
@@ -265,7 +265,7 @@ Finite sets are also closed under successors.
 </div>
 
 <div class="doc">
-<a id="lab245"></a><h2 class="section">Decidability</h2>
+<a id="lab1074"></a><h2 class="section">Decidability</h2>
 
 <div class="paragraph"> </div>
 
@@ -296,7 +296,7 @@ However, contrary to what you might expect, we cannot assert that "every finite 
 </div>
 
 <div class="doc">
-To avoid having to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>, we case on the cardinality of <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> before stripping the truncation from its equivalence to <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span>; if we did things in the other order then we'd have to know that <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Reflective_Subuniverse.Decidable"><span class="id" title="section">Decidable</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is an hprop, which requires funext. 
+To avoid having to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>, we case on the cardinality of <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> before stripping the truncation from its equivalence to <span class="inlinecode"><a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin"><span class="id" title="definition">Fin</span></a></span> <span class="inlinecode"><span class="id" title="var">n</span></span>; if we did things in the other order then we'd have to know that <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Reflective_Subuniverse.Decidable"><span class="id" title="section">Decidable</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is an hprop, which requires funext. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">fX</span> <span class="id" title="keyword">as</span> [[|<span class="id" title="var">n</span>] <span class="id" title="var">e</span>].<br/>
@@ -310,7 +310,7 @@ To avoid having to use <span class="inlinecode"><a class="idref" href="HoTT.Basi
 </div>
 
 <div class="doc">
-It follows that if <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is finite, then its propositional truncation is decidable. 
+It follows that if <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is finite, then its propositional truncation is decidable. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Global Instance</span> <a id="decidable_merely_finite" class="idref" href="#decidable_merely_finite"><span class="id" title="instance">decidable_merely_finite</span></a> <a id="X:50" class="idref" href="#X:50"><span class="id" title="binder">X</span></a> {<a id="fX:51" class="idref" href="#fX:51"><span class="id" title="binder">fX</span></a> : <a class="idref" href="HoTT.Spaces.Finite.Finite.html#Finite"><span class="id" title="class">Finite</span></a> <a class="idref" href="HoTT.Spaces.Finite.Finite.html#X:50"><span class="id" title="variable">X</span></a>}<br/>
@@ -336,7 +336,7 @@ From this, it follows that any finite set is *merely* decidable.
 </div>
 
 <div class="doc">
-<a id="lab246"></a><h2 class="section">Induction over finite sets</h2>
+<a id="lab1075"></a><h2 class="section">Induction over finite sets</h2>
 
 <div class="paragraph"> </div>
 
@@ -365,7 +365,7 @@ From this, it follows that any finite set is *merely* decidable.
 </div>
 
 <div class="doc">
-<a id="lab247"></a><h2 class="section">The finite axiom of choice, and projectivity</h2>
+<a id="lab1076"></a><h2 class="section">The finite axiom of choice, and projectivity</h2>
 
 </div>
 <div class="code">
@@ -402,14 +402,14 @@ From this, it follows that any finite set is *merely* decidable.
 </div>
 
 <div class="doc">
-<a id="lab248"></a><h2 class="section">Constructions on finite sets</h2>
+<a id="lab1077"></a><h2 class="section">Constructions on finite sets</h2>
 
 <div class="paragraph"> </div>
 
  Finite sets are closed under sums, products, function spaces, and equivalence spaces.  There are multiple choices we could make regarding how to prove these facts.  Since we know what the cardinalities ought to be in all cases (since we know how to add, multiply, exponentiate, and take factorials of natural numbers), we could specify those off the bat, and then reduce to the case of canonical finite sets.  However, it's more amusing to instead prove finiteness of these constructions by "finite-set induction", and then *deduce* that their cardinalities are given by the corresponding operations on natural numbers (because they satisfy the same recurrences). 
 <div class="paragraph"> </div>
 
-<a id="lab249"></a><h3 class="section">Binary sums</h3>
+<a id="lab1078"></a><h3 class="section">Binary sums</h3>
 
 </div>
 <div class="code">
@@ -458,7 +458,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 
 <div class="doc">
-<a id="lab250"></a><h3 class="section">Binary products</h3>
+<a id="lab1079"></a><h3 class="section">Binary products</h3>
 
 </div>
 <div class="code">
@@ -501,7 +501,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 
 <div class="doc">
-<a id="lab251"></a><h3 class="section">Function types</h3>
+<a id="lab1080"></a><h3 class="section">Function types</h3>
 
 <div class="paragraph"> </div>
 
@@ -564,7 +564,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 
 <div class="doc">
-<a id="lab252"></a><h3 class="section">Automorphism types (i.e. symmetric groups)</h3>
+<a id="lab1081"></a><h3 class="section">Automorphism types (i.e. symmetric groups)</h3>
 
 </div>
 <div class="code">
@@ -616,7 +616,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 
 <div class="doc">
-<a id="lab253"></a><h2 class="section">Finite sums of natural numbers</h2>
+<a id="lab1082"></a><h2 class="section">Finite sums of natural numbers</h2>
 
 <div class="paragraph"> </div>
 
@@ -637,7 +637,7 @@ Note that the cardinality function <span class="inlinecode"><a class="idref" hre
 </div>
 
 <div class="doc">
-Unfortunately, because <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#compose"><span class="id" title="definition">compose</span></a></span> is currently beta-expanded, <span class="inlinecode"><span class="id" title="tactic">set</span></span> <span class="inlinecode">(<span class="id" title="var">Y'</span></span> <span class="inlinecode">:=</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.V.html#AssumingUA.MonicSetPresent_Uniqueness.e"><span class="id" title="variable">e</span></a>^-1)</span> doesn't change the goal. 
+Unfortunately, because <span class="inlinecode"><a class="idref" href="HoTT.Tactics.RewriteModuloAssociativity.html#examples.compose"><span class="id" title="section">compose</span></a></span> is currently beta-expanded, <span class="inlinecode"><span class="id" title="tactic">set</span></span> <span class="inlinecode">(<span class="id" title="var">Y'</span></span> <span class="inlinecode">:=</span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> <span class="inlinecode"><span class="id" title="var">o</span></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.V.html#AssumingUA.MonicSetPresent_Uniqueness.e"><span class="id" title="variable">e</span></a>^-1)</span> doesn't change the goal. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="tactic">set</span> (<span class="id" title="var">Y'</span> := <span class="id" title="keyword">fun</span> <a id="x:139" class="idref" href="#x:139"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="var">Y</span> (<span class="id" title="var">e</span><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">x</span></a>)).<br/>
@@ -737,7 +737,7 @@ In particular, the image of a map between finite sets is finite.
 </div>
 
 <div class="doc">
-<a id="lab254"></a><h2 class="section">Finite products of natural numbers</h2>
+<a id="lab1083"></a><h2 class="section">Finite products of natural numbers</h2>
 
 <div class="paragraph"> </div>
 
@@ -779,7 +779,7 @@ The product of a finite constant family is the exponential by its cardinality.
 </div>
 
 <div class="doc">
-<a id="lab255"></a><h2 class="section">Finite subsets</h2>
+<a id="lab1084"></a><h2 class="section">Finite subsets</h2>
 
 <div class="paragraph"> </div>
 
@@ -832,7 +832,7 @@ Why doesn't Coq find this?
 </div>
 
 <div class="doc">
-<a id="lab256"></a><h2 class="section">Quotients</h2>
+<a id="lab1085"></a><h2 class="section">Quotients</h2>
 
 <div class="paragraph"> </div>
 
@@ -928,7 +928,7 @@ Why doesn't Coq find this?
 </div>
 
 <div class="doc">
-Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is the sum of the cardinalities of its equivalence classes. 
+Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is the sum of the cardinalities of its equivalence classes. 
 </div>
 <div class="code">
 &nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="fcard_quotient" class="idref" href="#fcard_quotient"><span class="id" title="definition">fcard_quotient</span></a><br/>
@@ -951,7 +951,7 @@ Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="Ho
 </div>
 
 <div class="doc">
-<a id="lab257"></a><h2 class="section">Injections</h2>
+<a id="lab1086"></a><h2 class="section">Injections</h2>
 
 <div class="paragraph"> </div>
 
@@ -1011,7 +1011,7 @@ Therefore, the cardinality of <span class="inlinecode"><a class="idref" href="Ho
 </div>
 
 <div class="doc">
-<a id="lab258"></a><h2 class="section">Enumerations</h2>
+<a id="lab1087"></a><h2 class="section">Enumerations</h2>
 
 <div class="paragraph"> </div>
 

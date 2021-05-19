@@ -693,12 +693,12 @@
           
 
             i = 135;
-            data = "1 goal (ID 548)	  	  Y, F : pType	  ============================	  {a : Type &	  {a0 : a &	  {a1 : a -> Y &	  {a2 : a1 a0 = point Y &	  {a3 : hfiber a1 (point Y) <~> F & a3 (a0; a2) = point F}}}}} <~>	  {p : pSlice Y & pfiber p.2 <~>* F}	No more goals.	";
+            data = "1 goal (ID 548)	  	  Y, F : pType	  ============================	  {a : Type &	  {a0 : a &	  {a1 : a -> Y &	  {a2 : a1 a0 = point Y &	  {a3 : hfiber a1 (point Y) <~> F & a3 (a0; a2) = point F}}}}} <~>	  {p : pSlice Y & pfiber p.2 <~>* F}	";
             responses[i]=data;
           
 
             i = 136;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1339,13 +1339,13 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab610"></a><h1 class="section">The object classifier</h1>
+<a id="lab1001"></a><h1 class="section">The object classifier</h1>
 <div class="doc" scenenumber="4"> </div>
 
  We prove that type families correspond to fibrations <span class="inlinecode"><a class="idref" href="HoTT.ObjectClassifier.html#equiv_sigma_fibration"><span class="id" title="definition">equiv_sigma_fibration</span></a></span> (Theorem 4.8.3) and the projection <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#pointed_type"><span class="id" title="projection">pointed_type</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span> is an object classifier <span class="inlinecode"><span class="id" title="var">ispullback_square_objectclassifier</span></span> (Theorem 4.8.4). 
 <div class="doc" scenenumber="20"> </div>
 
- We denote the type of all maps into a type <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> as follows, and refer to them "bundles over Y". 
+ We denote the type of all maps into a type <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> as follows, and refer to them "bundles over Y". 
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -1570,7 +1570,7 @@ Theorem 4.8.4.
 </div>
 <div class="goal" id="goal0_3_23"><pre><span></span></pre></div>
 <div class="doc" scenenumber="25">
-<a id="lab611"></a><h2 class="section">Classifying bundles with specified fiber</h2>
+<a id="lab1002"></a><h2 class="section">Classifying bundles with specified fiber</h2>
 </div>
 <div scenenumber="27" class="code">
 <span class="command" onmouseout="
@@ -1589,7 +1589,7 @@ Theorem 4.8.4.
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-Bundles over <span class="inlinecode"><a class="idref" href="HoTT.Categories.LaxComma.CoreLaws.html#LaxCommaCategory.lax_comma_category_parts.B"><span class="id" title="variable">B</span></a></span> with fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> correspond to pointed maps into the universe pointed at <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>. 
+Bundles over <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#PR_1382.B"><span class="id" title="constructor">B</span></a></span> with fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> correspond to pointed maps into the universe pointed at <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>. 
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
@@ -1643,7 +1643,7 @@ Bundles over <span class="inlinecode"><a class="idref" href="HoTT.Categories.Lax
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-If the fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> is pointed we may upgrade the right-hand side to pointed fiber sequences. 
+If the fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> is pointed we may upgrade the right-hand side to pointed fiber sequences. 
 </div>
 <div scenenumber="35" class="code">
 <span class="command" onmouseout="
@@ -1732,7 +1732,7 @@ If the fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implem
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<a id="lab612"></a><h1 class="section">The classifier for O-local types</h1>
+<a id="lab1003"></a><h1 class="section">The classifier for O-local types</h1>
 <div class="doc" scenenumber="4"> </div>
 
  Families of O-local types correspond to bundles with O-local fibers. 
@@ -1779,13 +1779,13 @@ If the fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implem
 </div>
 <div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 <div class="doc" scenenumber="41">
-<a id="lab613"></a><h2 class="section">Classifying O-local bundles with specified fiber</h2>
+<a id="lab1004"></a><h2 class="section">Classifying O-local bundles with specified fiber</h2>
 <div class="doc" scenenumber="4"> </div>
 
- We consider a pointed base <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span>, and the universe of O-local types <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Type_"><span class="id" title="definition">Type_</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> pointed at some O-local type <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>. 
+ We consider a pointed base <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span>, and the universe of O-local types <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Type_"><span class="id" title="definition">Type_</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> pointed at some O-local type <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>. 
 <div class="doc" scenenumber="14"> </div>
 
- Pointed maps into <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Type_"><span class="id" title="definition">Type_</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> correspond to O-local bundles with fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> over the base point of <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span>. 
+ Pointed maps into <span class="inlinecode"><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Type_"><span class="id" title="definition">Type_</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> correspond to O-local bundles with fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> over the base point of <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span>. 
 </div>
 <div scenenumber="43" class="code">
 <span class="command" onmouseout="
@@ -1846,7 +1846,7 @@ If the fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implem
 </div>
 <div class="goal" id="goal0_3_43"><pre><span></span></pre></div>
 <div class="doc" scenenumber="45">
-When the base <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> is connected, the fibers being O-local follow from the fact that the fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> over the base point is. 
+When the base <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> is connected, the fibers being O-local follow from the fact that the fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> over the base point is. 
 </div>
 <div scenenumber="47" class="code">
 <span class="command" onmouseout="
@@ -1917,10 +1917,10 @@ When the base <span class="inlinecode"><a class="idref" href="HoTT.Categories.Ad
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-<a id="lab614"></a><h3 class="section">Classifying O-local bundles with specified pointed fiber</h3>
+<a id="lab1005"></a><h3 class="section">Classifying O-local bundles with specified pointed fiber</h3>
 <div class="doc" scenenumber="4"> </div>
 
- When the fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> is pointed, the right-hand side can be upgraded to pointed fiber sequences with O-local fibers.  
+ When the fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> is pointed, the right-hand side can be upgraded to pointed fiber sequences with O-local fibers.  
 </div>
 <div scenenumber="51" class="code">
 <span class="command" onmouseout="
@@ -1971,7 +1971,7 @@ When the base <span class="inlinecode"><a class="idref" href="HoTT.Categories.Ad
 </div>
 <div class="goal" id="goal0_3_51"><pre><span></span></pre></div>
 <div class="doc" scenenumber="53">
-When moreover the base <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> is connected, the right-hand side is exactly the type of pointed fiber sequences, since the fibers being O-local follow from <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> being O-local and <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> connected. 
+When moreover the base <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> is connected, the right-hand side is exactly the type of pointed fiber sequences, since the fibers being O-local follow from <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> being O-local and <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> connected. 
 </div>
 <div scenenumber="55" class="code">
 <span class="command" onmouseout="
@@ -1993,7 +1993,7 @@ When moreover the base <span class="inlinecode"><a class="idref" href="HoTT.Cate
 </div>
 <div class="goal" id="goal0_3_55"><pre><span></span></pre></div>
 <div class="doc" scenenumber="57">
-As a corollary, pointed maps into the unverse of O-local types are just pointed maps into the universe, when the base <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> is connected. 
+As a corollary, pointed maps into the unverse of O-local types are just pointed maps into the universe, when the base <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> is connected. 
 </div>
 <div scenenumber="59" class="code">
 <span class="command" onmouseout="

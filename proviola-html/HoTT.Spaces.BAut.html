@@ -1493,12 +1493,12 @@
           
 
             i = 295;
-            data = "";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 817) is:	 path2_universe (fun x : X => f (g x)) =	 ((concat_p1 (path_universe g))^ @	  whiskerL (path_universe g)	    ((path_universe_1^ @ equiv_path2_universe 1 1 f) @ path_universe_1)) @	 concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 296;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 817) is:	 path2_universe (fun x : X => f (g x)) =	 ((concat_p1 (path_universe g))^ @	  whiskerL (path_universe g)	    ((path_universe_1^ @ equiv_path2_universe 1 1 f) @ path_universe_1)) @	 concat_p1 (path_universe g)	1 goal (ID 817)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  path2_universe (fun x : X => f (g x)) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ equiv_path2_universe 1 1 f) @ path_universe_1)) @	  concat_p1 (path_universe g)	1 goal (ID 926)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  ((((concat_p1 (path_universe g))^ @	     whiskerL (path_universe g) path_universe_1^) @	    whiskerL (path_universe g) (equiv_path2_universe 1 1 f)) @	   whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ equiv_path2_universe 1 1 f) @ path_universe_1)) @	  concat_p1 (path_universe g)	";
+            data = "1 goal (ID 817)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  path2_universe (fun x : X => f (g x)) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ equiv_path2_universe 1 1 f) @ path_universe_1)) @	  concat_p1 (path_universe g)	1 goal (ID 926)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  ((((concat_p1 (path_universe g))^ @	     whiskerL (path_universe g) path_universe_1^) @	    whiskerL (path_universe g) (equiv_path2_universe 1 1 f)) @	   whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ equiv_path2_universe 1 1 f) @ path_universe_1)) @	  concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
@@ -2254,11 +2254,11 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab357"></a><h1 class="section">BAut(X)</h1>
+<a id="lab1035"></a><h1 class="section">BAut(X)</h1>
 <div class="doc" scenenumber="4"> </div>
-<a id="lab358"></a><h2 class="section">Basics</h2>
+<a id="lab1036"></a><h2 class="section">Basics</h2>
 <div class="doc" scenenumber="9"> </div>
-<span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is the type of types that are merely equal to <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>. It is connected, by <span class="inlinecode"><a class="idref" href="HoTT.Truncations.Connectedness.html#is0connected_component"><span class="id" title="instance">is0connected_component</span></a></span>. 
+<span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is the type of types that are merely equal to <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>. It is connected, by <span class="inlinecode"><a class="idref" href="HoTT.Truncations.Connectedness.html#is0connected_component"><span class="id" title="instance">is0connected_component</span></a></span>. 
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -2288,7 +2288,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-We also define a pointed version <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#pBAut"><span class="id" title="definition">pBAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>, since the coercion <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut_pr1"><span class="id" title="definition">BAut_pr1</span></a></span> doesn't work if <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is a <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a></span>. 
+We also define a pointed version <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#pBAut"><span class="id" title="definition">pBAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>, since the coercion <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut_pr1"><span class="id" title="definition">BAut_pr1</span></a></span> doesn't work if <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is a <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a></span>. 
 </div>
 <div scenenumber="11" class="code">
 <span class="command" onmouseout="
@@ -2376,10 +2376,10 @@ We also define a pointed version <span class="inlinecode"><a class="idref" href=
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-<a id="lab359"></a><h2 class="section">Truncation</h2>
+<a id="lab1037"></a><h2 class="section">Truncation</h2>
 <div class="doc" scenenumber="4"> </div>
 
- If <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is an <span class="inlinecode"><span class="id" title="var">n</span>.+1</span>-type, then <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is an <span class="inlinecode"><span class="id" title="var">n</span>.+2</span>-type. 
+ If <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is an <span class="inlinecode"><span class="id" title="var">n</span>.+1</span>-type, then <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is an <span class="inlinecode"><span class="id" title="var">n</span>.+2</span>-type. 
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -2458,7 +2458,7 @@ Since it is 0-connected, any two points in it are merely equal.
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-The following tactic, which applies when trying to prove an hprop, replaces all assumed elements of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> by <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> itself. 
+The following tactic, which applies when trying to prove an hprop, replaces all assumed elements of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> by <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> itself. 
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="
@@ -2486,7 +2486,7 @@ The following tactic, which applies when trying to prove an hprop, replaces all 
 </div>
 <div class="goal" id="goal0_3_23"><pre><span></span></pre></div>
 <div class="doc" scenenumber="25">
-If <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is truncated, then so is every element of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>. 
+If <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is truncated, then so is every element of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>. 
 </div>
 <div scenenumber="27" class="code">
 <span class="command" onmouseout="
@@ -2530,7 +2530,7 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProp
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a id="lab360"></a><h2 class="section">Operations on <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span>
+<a id="lab1038"></a><h2 class="section">Operations on <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span>
 </h2>
 <div class="doc" scenenumber="4"> </div>
 
@@ -2611,10 +2611,10 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProp
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a id="lab361"></a><h2 class="section">Centers</h2>
+<a id="lab1039"></a><h2 class="section">Centers</h2>
 <div class="doc" scenenumber="4"> </div>
 
- The following lemma says that to define a section of a family <span class="inlinecode"><a class="idref" href="HoTT.Analysis.Locator.html#P"><span class="id" title="definition">P</span></a></span> of hsets over <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>, it is equivalent to define an element of <span class="inlinecode"><a class="idref" href="HoTT.Analysis.Locator.html#P"><span class="id" title="definition">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> which is fixed by all automorphisms of <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>. 
+ The following lemma says that to define a section of a family <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#BoolForall.P"><span class="id" title="variable">P</span></a></span> of hsets over <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>, it is equivalent to define an element of <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#BoolForall.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> which is fixed by all automorphisms of <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>. 
 </div>
 <div scenenumber="35" class="code"><span class="command" onmouseout="
       mouseout('0_3_35');
@@ -2625,7 +2625,7 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProp
       </span></div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-It ought to be possible to allow more generally <span class="inlinecode"><a class="idref" href="HoTT.Analysis.Locator.html#P"><span class="id" title="definition">P</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span>, but the proof would get more complicated, and this version suffices for present applications. 
+It ought to be possible to allow more generally <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#BoolForall.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span>, but the proof would get more complicated, and this version suffices for present applications. 
 </div>
 <div scenenumber="39" class="code">
 <span class="command" onmouseout="
@@ -2767,7 +2767,7 @@ Now we peel away a bunch of contractible types.
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-This implies that if <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is a set, then the center of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is the set of automorphisms of <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> that commute with every other automorphism (i.e. the center, in the usual sense, of the group of automorphisms of <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>). 
+This implies that if <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is a set, then the center of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is the set of automorphisms of <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> that commute with every other automorphism (i.e. the center, in the usual sense, of the group of automorphisms of <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>). 
 </div>
 <div scenenumber="51" class="code">
 <span class="command" onmouseout="
@@ -2951,7 +2951,7 @@ We show that this equivalence takes the identity equivalence to the identity in 
 </div>
 <div class="goal" id="goal0_3_55"><pre><span></span></pre></div>
 <div class="doc" scenenumber="57">
-Similarly, if <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span> is a 1-type, we can characterize the 2-center of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.UniversalProperties.html#UniversalMorphism.TerminalMorphism.X"><span class="id" title="variable">X</span></a></span>. 
+Similarly, if <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is a 1-type, we can characterize the 2-center of <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span>. 
 <div class="doc" scenenumber="7"> </div>
 
  Coq is too eager about unfolding some things appearing in this proof. 
@@ -3194,11 +3194,11 @@ Once again we compute it on the identity.  In this case it seems to be unavoidab
 </div>
 <div class="goal" id="goal0_3_63"><pre><span></span></pre></div>
 <div class="doc" scenenumber="65">
-<a id="lab362"></a><h2 class="section">Maps into <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> classify bundles with fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>
+<a id="lab1040"></a><h2 class="section">Maps into <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> classify bundles with fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>
 </h2>
 <div class="doc" scenenumber="4"> </div>
 
- The property of being merely equivalent to a given type <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> defines a subuniverse. 
+ The property of being merely equivalent to a given type <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> defines a subuniverse. 
 </div>
 <div scenenumber="67" class="code">
 <span class="command" onmouseout="
@@ -3251,7 +3251,7 @@ Once again we compute it on the identity.  In this case it seems to be unavoidab
 </div>
 <div class="goal" id="goal0_3_67"><pre><span></span></pre></div>
 <div class="doc" scenenumber="69">
-The universe of O-local types for <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#subuniverse_merely_equiv"><span class="id" title="definition">subuniverse_merely_equiv</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> is equivalent to <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>. 
+The universe of O-local types for <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#subuniverse_merely_equiv"><span class="id" title="definition">subuniverse_merely_equiv</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> is equivalent to <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>. 
 </div>
 <div scenenumber="71" class="code">
 <span class="command" onmouseout="
@@ -3295,7 +3295,7 @@ The universe of O-local types for <span class="inlinecode"><a class="idref" href
 </div>
 <div class="goal" id="goal0_3_71"><pre><span></span></pre></div>
 <div class="doc" scenenumber="73">
-Consequently, maps into <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> correspond to bundles with fibers merely equivalent to <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>. 
+Consequently, maps into <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#BAut"><span class="id" title="definition">BAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> correspond to bundles with fibers merely equivalent to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>. 
 </div>
 <div scenenumber="75" class="code">
 <span class="command" onmouseout="
@@ -3403,7 +3403,7 @@ The pointed version of <span class="inlinecode"><a class="idref" href="HoTT.Spac
 </div>
 <div class="goal" id="goal0_3_79"><pre><span></span></pre></div>
 <div class="doc" scenenumber="81">
-When <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> is connected, pointed maps into <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#pBAut"><span class="id" title="definition">pBAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> correspond to maps into the universe sending the base point to <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>. 
+When <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> is connected, pointed maps into <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#pBAut"><span class="id" title="definition">pBAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> correspond to maps into the universe sending the base point to <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>. 
 </div>
 <div scenenumber="83" class="code">
 <span class="command" onmouseout="
@@ -3443,7 +3443,7 @@ When <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Uni
 </div>
 <div class="goal" id="goal0_3_83"><pre><span></span></pre></div>
 <div class="doc" scenenumber="85">
-When <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> is connected, <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#pBAut"><span class="id" title="definition">pBAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span> classifies fiber sequences over <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.UniversalMorphisms.Core.html#adjunction_universal.initial.Y"><span class="id" title="variable">Y</span></a></span> with fiber <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.field_of_fractions.html#FracField.F"><span class="id" title="definition">F</span></a></span>. 
+When <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> is connected, <span class="inlinecode"><a class="idref" href="HoTT.Spaces.BAut.html#pBAut"><span class="id" title="definition">pBAut</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span> classifies fiber sequences over <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.Y"><span class="id" title="variable">Y</span></a></span> with fiber <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Sequential.html#F"><span class="id" title="definition">F</span></a></span>. 
 </div>
 <div scenenumber="87" class="code">
 <span class="command" onmouseout="

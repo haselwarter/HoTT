@@ -33,11 +33,11 @@
 </div>
 
 <div class="doc">
-<a id="lab40"></a><h1 class="section">Decidability</h1>
+<a id="lab43"></a><h1 class="section">Decidability</h1>
 
 <div class="paragraph"> </div>
 
-<a id="lab41"></a><h2 class="section">Definitions</h2>
+<a id="lab44"></a><h2 class="section">Definitions</h2>
 
 </div>
 <div class="code">
@@ -91,9 +91,9 @@ compute.
 <div class="doc">
   Because <span class="inlinecode"><span class="id" title="keyword">vm_compute</span></span> evaluates terms in <span class="inlinecode"><span class="id" title="var">PROP</span></span> eagerly
   and does not remove dead code we
-  need the decide_rel hack. Suppose we have <span class="inlinecode">(<a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span> <span class="inlinecode">=<span class="id" title="var">def</span></span>  <span class="inlinecode">(<a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span>, now:
+  need the decide_rel hack. Suppose we have <span class="inlinecode">(<a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span> <span class="inlinecode">=<span class="id" title="var">def</span></span>  <span class="inlinecode">(<a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a>)</span>, now:
      bool_decide (x = y) -&gt; bool_decide (f x = f y) -&gt; ...
-  As we see, the dead code <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.premetric.html#contents.map2.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> is actually evaluated,
+  As we see, the dead code <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.ToSet.Core.html#x"><span class="id" title="projection">x</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#EquivBoolEquiv.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> is actually evaluated,
   which is of course an utter waste.
   Therefore we introduce decide_rel and bool_decide_rel.
      bool_decide_rel (=) x y -&gt; bool_decide_rel (fun a b =&gt; f a = f b) x y -&gt; ...
@@ -111,7 +111,7 @@ compute.
 </div>
 
 <div class="doc">
-<a id="lab42"></a><h2 class="section">Decidable hprops</h2>
+<a id="lab45"></a><h2 class="section">Decidable hprops</h2>
 
 <div class="paragraph"> </div>
 
@@ -151,7 +151,7 @@ Empty types are trivial.
 </div>
 
 <div class="doc">
-<a id="lab43"></a><h2 class="section">Transfer along equivalences</h2>
+<a id="lab46"></a><h2 class="section">Transfer along equivalences</h2>
 
 </div>
 <div class="code">
@@ -190,7 +190,7 @@ Empty types are trivial.
 </div>
 
 <div class="doc">
-<a id="lab44"></a><h2 class="section">Hedberg's theorem: any type with decidable equality is a set.</h2>
+<a id="lab47"></a><h2 class="section">Hedberg's theorem: any type with decidable equality is a set.</h2>
 
 <div class="paragraph"> </div>
 
@@ -295,7 +295,7 @@ We give this a relatively high-numbered priority so that in deducing <span class
 </div>
 
 <div class="doc">
-<a id="lab45"></a><h2 class="section">Truncation</h2>
+<a id="lab48"></a><h2 class="section">Truncation</h2>
 
 <div class="paragraph"> </div>
 

@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: ua_subalgebra.v
 Line: 1
-Time: 0.125s">
+Time: 0.116s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Basics
@@ -88,7 +88,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>Fixpoint ClosedUnderOp {w : SymbolType σ} : Operation A w → Type :=
     match w with
     | [:s:] =&gt; P s
@@ -116,14 +116,14 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 38
 Time: 0.003s">
-<div class="time" style="width: 2.4%"></div>
+<div class="time" style="width: 2.5862068965517%"></div>
 <pre>
     induction w; cbn; exact _.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -156,7 +156,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 48
 Time: 0.002s">
-<div class="time" style="width: 1.6%"></div>
+<div class="time" style="width: 1.7241379310345%"></div>
 <pre>
     apply istrunc_forall.</pre>
 </div>
@@ -201,7 +201,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 56
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
 
   Class IsSubalgebraPredicate
@@ -241,22 +241,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 67
-Time: 0.016s">
-<div class="time" style="width: 12.8%"></div>
+Time: 0.014s">
+<div class="time" style="width: 12.068965517241%"></div>
 <pre>
     by destruct (path_ishprop x1 y1), (path_ishprop x2 y2).</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 68
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 69
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
 End subalgebra_predicate.</pre>
 </div>
@@ -294,8 +294,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 77
-Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Context
     {σ : Signature} (A : Algebra σ)
@@ -339,8 +339,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 98
-Time: 0.002s">
-<div class="time" style="width: 1.6%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.5862068965517%"></div>
 <pre>Fixpoint op_subalgebra {w : SymbolType σ}
     : ∀ (α : Operation A w),
       ClosedUnderOp A P α → Operation carriers_subalgebra w
@@ -379,8 +379,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 114
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7241379310345%"></div>
 <pre>
 
   Global Instance trunc_subalgebra {n : trunc_index}
@@ -424,7 +424,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 122
 Time: 0.003s">
-<div class="time" style="width: 2.4%"></div>
+<div class="time" style="width: 2.5862068965517%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
@@ -443,7 +443,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 123
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre> induction n; exact _.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
@@ -456,7 +456,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 124
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
 End subalgebra.</pre>
 </div>
@@ -521,7 +521,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
 
   Definition def_inc_subalgebra (s : Sort σ) : (A&amp;&amp;P) s → A s
@@ -546,8 +546,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     induction w.</pre>
 </div>
@@ -629,7 +629,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 158
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
 
   Definition hom_inc_subalgebra : Homomorphism (A&amp;&amp;P) A
@@ -700,14 +700,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 170
-Time: 0.003s">
-<div class="time" style="width: 2.4%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7241379310345%"></div>
 <pre> by apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 170
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -739,7 +739,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 177
 Time: 0.001s">
-<div class="time" style="width: 0.8%"></div>
+<div class="time" style="width: 0.86206896551724%"></div>
 <pre>
   Context
     {σ : Signature} (A : Algebra σ)
@@ -763,8 +763,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_subalgebra.v
 Line: 184
-Time: 0.003s">
-<div class="time" style="width: 2.4%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7241379310345%"></div>
 <pre>
     by destruct p, (path_ishprop CP CQ).</pre>
 </div>
@@ -815,7 +815,7 @@ Time: 0s">
 <div class="code" title="File: ua_subalgebra.v
 Line: 193
 Time: 0.002s">
-<div class="time" style="width: 1.6%"></div>
+<div class="time" style="width: 1.7241379310345%"></div>
 <pre>
     apply (equiv_equiv_iff_hprop _ _ (R s x)).</pre>
 </div>

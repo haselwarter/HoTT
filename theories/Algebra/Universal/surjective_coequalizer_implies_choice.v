@@ -401,7 +401,7 @@ Section choose_representatives.
   Proof.
     intro g'.
     set (σ := Build_Signature (X + Unit) Unit
-                (fun _ : Unit => Build_SymbolTypeOf X inl (inr tt)) _ _).
+                (fun _ : Unit => Build_SymbolType X inl (inr tt))).
     set (f' := fun x => @var_term_algebra σ (fun x => Quotient (R x)) (inl x) (g' x)).
     set (op' := @ops_term_algebra σ (fun x => Quotient (R x)) tt f').
     pose proof (@issurjection_termQ _ σ Y _ R _ _ (inr tt) op') as S.

@@ -52,13 +52,13 @@ Section path_map_term_algebra_prod_algebra.
 
 End path_map_term_algebra_prod_algebra.
 
-Section is_equational_prod_algebra.
+Section model_prod_algebra.
   Context `{Funext} {σ : Signature} (I : Type) (A : I -> Algebra σ)
           (J : Type) (e : Equations σ J)
-          {E : forall i, IsEquationalModel (A i) e}.
+          {E : forall i, IsModelAlgebra (A i) e}.
 
-  Global Instance equational_theory_prod_algebra
-    : IsEquationalModel (ProdAlgebra I A) e.
+  Global Instance is_model_prod_algebra
+    : IsModelAlgebra (ProdAlgebra I A) e.
   Proof.
     intros j a.
     funext i.
@@ -69,7 +69,10 @@ Section is_equational_prod_algebra.
            @ (path_map_term_algebra_prod_algebra I A C _ _ _ i)^).
   Defined.
 
-End is_equational_prod_algebra.
+  Definition model_prod_algebra : ModelAlgebra e
+    := Build_ModelAlgebra e (ProdAlgebra I A).
+
+End model_prod_algebra.
 
 (** The next section defines the product projection homomorphisms. *)
 
@@ -159,7 +162,7 @@ Section bin_prod_algebra.
     := hom_proj_prod_algebra Bool bin_prod_algebras true.
 End bin_prod_algebra.
 
-Infix "×" := BinProdAlgebra : Algebra_scope.
+Infix "*" := BinProdAlgebra : Algebra_scope.
 
 (** Specialisation of the product algebra univarsal mapping property
     to binary product. *)
@@ -169,7 +172,7 @@ Section ump_bin_prod_algebra.
     `{Funext} {σ : Signature} (A B C : Algebra σ).
 
  Lemma ump_bin_prod_algebra
-   : (C $-> A) * (C $-> B) <~> (C $-> A × B).
+   : (C $-> A) * (C $-> B) <~> (C $-> A * B).
   Proof.
     set (k := fun (b:Bool) => C $-> bin_prod_algebras A B b).
     exact (equiv_compose
@@ -177,4 +180,3 @@ Section ump_bin_prod_algebra.
             (equiv_bool_forall_prod k)^-1).
   Defined.
 End ump_bin_prod_algebra.
-

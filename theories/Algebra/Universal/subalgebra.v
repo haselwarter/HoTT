@@ -158,15 +158,15 @@ Section path_map_term_algebra_subalgebra.
   Defined.
 End path_map_term_algebra_subalgebra.
 
-Section is_equational_subalgebra.
+Section model_subalgebra.
   Context
     `{Funext} {σ : Signature} (A : Algebra σ)
     (P : forall s, A s -> Type) `{!IsSubalgebraPredicate A P}
     {I : Type} (e : Equations σ I)
-    {E : IsEquationalModel A e}.
+    {E : IsModelAlgebra A e}.
 
-  Global Instance is_equational_subalgebra
-    : IsEquationalModel (A && P) e.
+  Global Instance is_model_subalgebra
+    : IsModelAlgebra (A && P) e.
   Proof.
     intros i f.
     apply (isinj_embedding (hom_inc_subalgebra A P _)); [exact _|].
@@ -174,7 +174,11 @@ Section is_equational_subalgebra.
            @ E i _
            @ path_map_term_algebra_subalgebra A P _ _ _ _).
   Qed.
-End is_equational_subalgebra.
+
+  Definition model_subalgebra : ModelAlgebra e
+    := Build_ModelAlgebra e (A && P).
+
+End model_subalgebra.
 
 (** The next section provides paths between subalgebras. These paths
     are convenient to have because the implicit type-class argument

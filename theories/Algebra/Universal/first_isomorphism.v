@@ -98,7 +98,7 @@ Section first_isomorphism.
   Context
     `{Univalence} {σ} {A B : Algebra σ}
     {I : Type} (e : Equations σ I)
-    `{EqB : !IsEquationalModel B e}
+    `{EqB : !IsModelAlgebra B e}
     (f : forall s, A s -> B s) {IsH : IsHomomorphism f}
     `{surj : !forall s, IsSurjection (f s)}.
 

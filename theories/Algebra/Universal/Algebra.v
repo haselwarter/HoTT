@@ -17,13 +17,13 @@ Delimit Scope Algebra_scope with Algebra.
 (** The below definition [SymbolTypeOf] is used to specify algebra
     operations. See [SymbolType] and [Operation] below. *)
 
-Record SymbolTypeOf {Sort : Type} := Build_SymbolTypeOf
+Record SymbolTypeOf {Sort : Type} := Build_SymbolType
   { Arity : Type
   ; sorts_dom : Arity -> Sort
   ; sort_cod : Sort }.
 
 Arguments SymbolTypeOf : clear implicits.
-Arguments Build_SymbolTypeOf {Sort}.
+Arguments Build_SymbolType {Sort}.
 
 (** A [Signature] is used to specify [Algebra]s. A signature describes
     which operations (functions) an algebra for the signature is
@@ -43,6 +43,9 @@ Record Signature := Build_Signature
   ; hset_sort : IsHSet Sort
   ; hset_symbol : IsHSet Symbol }.
 
+Arguments Build_Signature Sort Symbol symbol_types
+            {hset_sort} {hset_symbol}.
+
 Notation SymbolType σ := (SymbolTypeOf (Sort σ)).
 
 Global Existing Instance hset_sort.
@@ -50,6 +53,15 @@ Global Existing Instance hset_sort.
 Global Existing Instance hset_symbol.
 
 Global Coercion symbol_types : Signature >-> Funclass.
+
+Definition Build_SingleSortedSymbolType (Ari : Type)
+  : SymbolTypeOf Unit
+  := Build_SymbolType Ari (fun _ => tt) tt.
+
+Definition Build_SingleSortedSignature
+  (Sym : Type) `{!IsHSet Sym} (Aris : Sym -> Type)
+  : Signature
+  := Build_Signature Unit Sym (Build_SingleSortedSymbolType o Aris).
 
 (** Each [Algebra] has a collection of carrier types [Carriers σ],
     indexed by the type of sorts [Sort σ]. *)

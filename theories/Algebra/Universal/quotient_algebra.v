@@ -168,21 +168,24 @@ Proof.
   apply path_ops_quotient_algebra.
 Defined.
 
-Section is_equational_quotient_algebra.
+Section model_quotient_algebra.
   Context {σ : Signature} (A : Algebra σ) (Φ : forall s, Relation (A s))
           {I : Type} (e : Equations σ I).
 
-  Global Instance is_equational_quotient_algebra
-    : IsEquationalModel (e/Φ) e.
+  Global Instance is_model_quotient_algebra
+    : IsModelAlgebra (e/Φ) e.
   Proof.
     intros i f. apply equations_quotient_algebra.
   Defined.
 
-End is_equational_quotient_algebra.
+  Definition model_quotient_algebra : ModelAlgebra e
+    := Build_ModelAlgebra e (e / Φ).
+
+End model_quotient_algebra.
 
 Definition in_class_quotient_algebra `{Univalence} {σ} (A : Algebra σ)
   (Φ : forall s, Relation (A s)) `{!IsCongruence A Φ}
-  {I : Type} (e : Equations σ I) `{isA : !IsEquationalModel A e}
+  {I : Type} (e : Equations σ I) `{isA : !IsModelAlgebra A e}
   : forall (s : Sort σ), (e / Φ) s -> A s -> HProp.
 Proof.
   srefine (carriers_quotient_algebra_rec A Φ e _ _ _ _ _ _).
@@ -233,7 +236,7 @@ Section hom_quotient.
   Context
     `{Funext} {σ} {A : Algebra σ}
     (Φ : forall s, Relation (A s)) `{!IsCongruence A Φ}
-    {I : Type} (e : Equations σ I)  {IsA : IsEquationalModel A e}.
+    {I : Type} (e : Equations σ I)  {IsA : IsModelAlgebra A e}.
 
   Definition def_hom_quotient : forall (s : Sort σ), A s -> (e/Φ) s :=
     fun s x => class_quotient_algebra A Φ e x.
@@ -277,7 +280,7 @@ Section ump_quotient_algebra.
     `{Univalence} {σ} {A B : Algebra σ}
     (Φ : forall s, Relation (A s)) `{!IsCongruence A Φ}
     {I : Type} (e : Equations σ I)
-    {IsA : IsEquationalModel A e} {IsB : IsEquationalModel B e}.
+    {IsA : IsModelAlgebra A e} {IsB : IsModelAlgebra B e}.
 
 (** In the nested section below we show that if [f : A $-> B]
     maps elements related by [Φ] to equal elements, there is a
@@ -402,7 +405,7 @@ End ump_quotient_algebra.
 
 Global Instance is_isomorphism_quotient `{Univalence}
   {σ : Signature} {A : Algebra σ} (Φ : forall s, Relation (A s))
-  {I : Type} (e : Equations σ I) {IsA : IsEquationalModel A e}
+  {I : Type} (e : Equations σ I) {IsA : IsModelAlgebra A e}
   `{!IsCongruence A Φ} (P : forall s x y, Φ s x y -> x = y)
   : IsIsomorphism (hom_quotient Φ e).
 Proof.

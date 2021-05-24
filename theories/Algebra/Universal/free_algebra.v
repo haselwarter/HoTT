@@ -118,21 +118,24 @@ Section CarriersFreeAlgebra_rec.
 
 End CarriersFreeAlgebra_rec.
 
-Section is_equational_free_algebra.
+Section model_free_algebra.
   Context `{Funext} {σ} (C : Carriers σ) {I : Type} (e : Equations σ I).
 
-  Global Instance is_equational_free_algebra
-    : IsEquationalModel (FreeAlgebra C e) e.
+  Global Instance is_model_free_algebra
+    : IsModelAlgebra (FreeAlgebra C e) e.
   Proof.
     intros i f. apply equations_free_algebra.
   Defined.
 
-End is_equational_free_algebra.
+  Definition model_free_algebra : ModelAlgebra e
+    := Build_ModelAlgebra e (FreeAlgebra C e).
+
+End model_free_algebra.
 
 Section hom_free_algebra.
   Context `{Funext} {σ : Signature} (C : Carriers σ)
     {I : Type} (e : Equations σ I)
-    (A : Algebra σ) `{!IsEquationalModel A e} (f : forall s, C s -> A s).
+    (A : Algebra σ) `{!IsModelAlgebra A e} (f : forall s, C s -> A s).
 
   Definition map_free_algebra : forall s, FreeAlgebra C e s -> A s
     := CarriersFreeAlgebra_rec C e A f (fun u _ r => u.#A r)
@@ -157,7 +160,7 @@ Section ump_free_algebra.
   Context
     `{Funext} {σ} (C : Carriers σ) `{forall s, IsHSet (C s)}
     {I : Type} (e : Equations σ I)
-    (A : Algebra σ) `{!IsEquationalModel A e}.
+    (A : Algebra σ) `{!IsModelAlgebra A e}.
 
   Lemma sect_inv_hom_free_algebra' (f : Homomorphism (FreeAlgebra C e) A)
     : forall (s : Sort σ) (a : FreeAlgebra C e s),
@@ -211,7 +214,7 @@ Section term_algebra_is_free.
     := Build_Equations σ Empty (Empty_ind (fun _ => Equation σ)).
 
   Global Instance is_equational_equations_term_algebra {σ} (A : Algebra σ)
-    : IsEquationalModel A (trivial_equations σ).
+    : IsModelAlgebra A (trivial_equations σ).
   Proof.
     intro e. elim e.
   Defined.

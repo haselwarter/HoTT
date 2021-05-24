@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: EMSpace.v
 Line: 1
-Time: 0.124s">
+Time: 0.139s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics Types Pointed.</pre>
 </div>
@@ -43,15 +43,15 @@ Require Import Cubical.DPath.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 2
-Time: 0.072s">
-<div class="time" style="width: 58.064516129032%"></div>
+Time: 0.076s">
+<div class="time" style="width: 54.676258992806%"></div>
 <pre>
 Require Import Algebra.AbGroups.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -64,15 +64,15 @@ Require Import Homotopy.Suspension.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 5
-Time: 0.013s">
-<div class="time" style="width: 10.483870967742%"></div>
+Time: 0.016s">
+<div class="time" style="width: 11.510791366906%"></div>
 <pre>
 Require Import Homotopy.ClassifyingSpace.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 6
-Time: 0.012s">
-<div class="time" style="width: 9.6774193548387%"></div>
+Time: 0.015s">
+<div class="time" style="width: 10.791366906475%"></div>
 <pre>
 Require Import Homotopy.HSpace.</pre>
 </div>
@@ -146,8 +146,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 25
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
 
   Context `{Univalence} (X : pType)
@@ -166,8 +166,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>Local Definition P : Susp X -&gt; Type
     := fun x =&gt; Tr 1 (North = x).</pre>
 </div>
@@ -189,7 +189,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 37
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     srapply Susp_rec.</pre>
 </div>
@@ -223,22 +223,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     apply (equiv_hspace_left_op x).</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 44
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
 
   Local Definition transport_codes_merid x y
@@ -260,50 +260,50 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.8776978417266%"></div>
 <pre>
     rewrite transport_idmap_ap.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 50
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.3165467625899%"></div>
 <pre>
     rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 51
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
     rewrite Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 52
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
     rewrite ap_trunctype.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 53
-Time: 0.003s">
-<div class="time" style="width: 2.4193548387097%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.8776978417266%"></div>
 <pre>
     by rewrite transport_path_universe_uncurried.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 54
-Time: 0.013s">
-<div class="time" style="width: 10.483870967742%"></div>
+Time: 0.014s">
+<div class="time" style="width: 10.071942446043%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 55
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
 
   Local Definition transport_codes_merid_V x
@@ -325,78 +325,78 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 60
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     rewrite transport_idmap_ap.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 61
 Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+<div class="time" style="width: 2.8776978417266%"></div>
 <pre>
     rewrite ap_V.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 62
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
     rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 63
 Time: 0.005s">
-<div class="time" style="width: 4.0322580645161%"></div>
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
     rewrite Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 64
-Time: 0.006s">
-<div class="time" style="width: 4.8387096774194%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
     rewrite ap_trunctype.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 65
 Time: 0.003s">
-<div class="time" style="width: 2.4193548387097%"></div>
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     rewrite transport_path_universe_V_uncurried.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     apply moveR_equiv_V.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     symmetry.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 68
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     cbn; apply left_identity.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 69
-Time: 0.017s">
-<div class="time" style="width: 13.709677419355%"></div>
+Time: 0.023s">
+<div class="time" style="width: 16.546762589928%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 70
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
 
   Local Definition encode : forall x, P x -&gt; codes x.</pre>
@@ -417,8 +417,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 74
-Time: 0.045s">
-<div class="time" style="width: 36.290322580645%"></div>
+Time: 0.048s">
+<div class="time" style="width: 34.532374100719%"></div>
 <pre>
     srapply Trunc_rec.</pre>
 </div>
@@ -431,8 +431,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 76
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     exact (transport codes p mon_unit).</pre>
 </div>
@@ -445,8 +445,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Local Definition decode' : X -&gt; Tr 1 (@North X = North).</pre>
@@ -468,7 +468,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     exact (tr (merid x @ (merid mon_unit)^)).</pre>
 </div>
@@ -482,7 +482,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 84
 Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
 
   Local Definition transport_decode' x y
@@ -513,21 +513,21 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 91
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite transport_compose.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 92
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
     generalize (merid x).</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 93
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     generalize (merid y @ (merid mon_unit)^).</pre>
 </div>
@@ -540,8 +540,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 95
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     cbn; apply ap.</pre>
 </div>
@@ -561,8 +561,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 98
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -598,84 +598,84 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 105
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     rewrite ap_pp.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 106
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite ap_V.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 107
-Time: 0.008s">
-<div class="time" style="width: 6.4516129032258%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.0359712230216%"></div>
 <pre>
     rewrite 2 Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 108
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite &lt;- path_trunctype_V.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 109
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     rewrite &lt;- path_trunctype_pp.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 110
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite ap_trunctype.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 111
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite transport_path_universe_uncurried.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 112
 Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+<div class="time" style="width: 2.8776978417266%"></div>
 <pre>
     apply moveR_equiv_V; cbn.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     exact (right_identity _ @ (left_identity _)^).</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 114
-Time: 0.011s">
-<div class="time" style="width: 8.8709677419355%"></div>
+Time: 0.013s">
+<div class="time" style="width: 9.3525179856115%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 115
 Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
 
   Local Definition merid_mu (x y : X)
@@ -690,16 +690,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 119
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.3165467625899%"></div>
 <pre>
     set (Q := fun a b : X =&gt; tr (n:=1) (merid (a * b))
       = tr (merid b @ (merid mon_unit)^ @ merid a)).</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 121
-Time: 0.022s">
-<div class="time" style="width: 17.741935483871%"></div>
+Time: 0.025s">
+<div class="time" style="width: 17.985611510791%"></div>
 <pre>
     srapply (@wedge_incl_elim_uncurried _ (-1) (-1) _
       mon_unit _ _ mon_unit _ Q _ _ x y);
@@ -818,7 +818,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
       refine (ap (fun x =&gt; concat x (merid a)) (concat_pV _) @ _).</pre>
 </div>
@@ -851,57 +851,57 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 142
-Time: 0.003s">
-<div class="time" style="width: 2.4193548387097%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.8776978417266%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 143
 Time: 0.003s">
-<div class="time" style="width: 2.4193548387097%"></div>
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     apply ap, ap.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 144
 Time: 0.005s">
-<div class="time" style="width: 4.0322580645161%"></div>
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
     rewrite &lt;- coh.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 145
-Time: 0.032s">
-<div class="time" style="width: 25.806451612903%"></div>
+Time: 0.036s">
+<div class="time" style="width: 25.89928057554%"></div>
 <pre>
     rewrite ? concat_p_pp.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 146
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     apply whiskerR.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 147
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     generalize (merid (mon_unit : X)).</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 148
-Time: 0.008s">
-<div class="time" style="width: 6.4516129032258%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
     by intros [].</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 149
-Time: 0.037s">
-<div class="time" style="width: 29.838709677419%"></div>
+Time: 0.035s">
+<div class="time" style="width: 25.179856115108%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -922,15 +922,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 153
-Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.3165467625899%"></div>
 <pre>
     srapply Susp_ind; cbn.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 154
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     1: apply decode'.</pre>
 </div>
@@ -969,15 +969,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 158
-Time: 0.009s">
-<div class="time" style="width: 7.258064516129%"></div>
+Time: 0.012s">
+<div class="time" style="width: 8.6330935251799%"></div>
 <pre>
     srapply dp_path_transport^-1.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     apply dp_arrow.</pre>
 </div>
@@ -998,14 +998,14 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 162
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite transport_codes_merid.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 163
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     rewrite transport_decode'.</pre>
 </div>
@@ -1026,7 +1026,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 166
 Time: 0.003s">
-<div class="time" style="width: 2.4193548387097%"></div>
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1055,8 +1055,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 172
-Time: 0.04s">
-<div class="time" style="width: 32.258064516129%"></div>
+Time: 0.044s">
+<div class="time" style="width: 31.654676258993%"></div>
 <pre>
     srapply Trunc_ind.</pre>
 </div>
@@ -1070,21 +1070,21 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 174
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     destruct p; cbv.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 175
-Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
     apply ap, concat_pV.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 176
 Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1153,8 +1153,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 186
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
       intro; apply decode_encode.</pre>
 </div>
@@ -1174,14 +1174,14 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 188
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 189
-Time: 0.055s">
-<div class="time" style="width: 44.354838709677%"></div>
+Time: 0.06s">
+<div class="time" style="width: 43.165467625899%"></div>
 <pre>
 
 End LicataFinsterLemma.</pre>
@@ -1204,8 +1204,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 195
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
 
   Fixpoint EilenbergMacLane (G : Group) (n : nat) : pType
@@ -1241,7 +1241,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 207
 Time: 0.014s">
-<div class="time" style="width: 11.290322580645%"></div>
+<div class="time" style="width: 10.071942446043%"></div>
 <pre>
     destruct n as [|[]]; exact _.</pre>
 </div>
@@ -1270,15 +1270,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 213
-Time: 0.024s">
-<div class="time" style="width: 19.354838709677%"></div>
+Time: 0.015s">
+<div class="time" style="width: 10.791366906475%"></div>
 <pre>
     induction n; exact _.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 214
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1301,8 +1301,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 220
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>Local Definition trunc_lemma (n : nat) X
     : pTr n.+2 X &lt;~&gt;* pTr n.+2 (pTr (n +2+ n) X).</pre>
 </div>
@@ -1370,8 +1370,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 229
-Time: 0.008s">
-<div class="time" style="width: 6.4516129032258%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       rewrite 2 trunc_index_add_succ.</pre>
 </div>
@@ -1399,7 +1399,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 233
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre> induction n; try reflexivity; cbn.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
@@ -1458,8 +1458,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 239
-Time: 0.009s">
-<div class="time" style="width: 7.258064516129%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.158273381295%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1523,14 +1523,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 250
-Time: 0.011s">
-<div class="time" style="width: 8.8709677419355%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre> srapply licata_finster.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 250
-Time: 0.002s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
       reflexivity.</pre>
 </div>
@@ -1562,8 +1562,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 253
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
       transitivity (pTr n.+2 (pTr (n +2+ n) (K(G, n.+2)))).</pre>
 </div>
@@ -1576,8 +1576,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 255
-Time: 0.008s">
-<div class="time" style="width: 6.4516129032258%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       transitivity (pTr n.+2 (pTr (n +2+ n) (loops (psusp (K(G, n.+2)))))).</pre>
 </div>
@@ -1596,8 +1596,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 257
-Time: 0.018s">
-<div class="time" style="width: 14.516129032258%"></div>
+Time: 0.011s">
+<div class="time" style="width: 7.9136690647482%"></div>
 <pre>
         srapply (pequiv_ptr_loop_psusp (K(G, n.+2)) n).</pre>
 </div>
@@ -1609,8 +1609,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 258
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
       symmetry.</pre>
 </div>
@@ -1651,7 +1651,7 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 263
 Time: 0.001s">
-<div class="time" style="width: 0.80645161290323%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
     1: srapply equiv_tr.</pre>
 </div>
@@ -1665,14 +1665,14 @@ Time: 0s">
 <div class="code" title="File: EMSpace.v
 Line: 265
 Time: 0.004s">
-<div class="time" style="width: 3.2258064516129%"></div>
+<div class="time" style="width: 2.8776978417266%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EMSpace.v
 Line: 266
-Time: 0.012s">
-<div class="time" style="width: 9.6774193548387%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.5971223021583%"></div>
 <pre>
 
 End EilenbergMacLane.</pre>

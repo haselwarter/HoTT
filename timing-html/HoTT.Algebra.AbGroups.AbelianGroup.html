@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: AbelianGroup.v
 Line: 1
-Time: 0.04s">
-<div class="time" style="width: 54.054054054054%"></div>
+Time: 0.045s">
+<div class="time" style="width: 50%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 1
-Time: 0.055s">
-<div class="time" style="width: 74.324324324324%"></div>
+Time: 0.063s">
+<div class="time" style="width: 70%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -50,8 +50,8 @@ Require Import HIT.Coeq.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 3
-Time: 0.069s">
-<div class="time" style="width: 93.243243243243%"></div>
+Time: 0.076s">
+<div class="time" style="width: 84.444444444444%"></div>
 <pre>
 Require Export Algebra.Groups.</pre>
 </div>
@@ -65,7 +65,7 @@ Require Import Cubical.</pre>
 <div class="code" title="File: AbelianGroup.v
 Line: 5
 Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -92,138 +92,59 @@ Time: 0s">
 <div class="code" title="File: AbelianGroup.v
 Line: 13
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>Record AbGroup := {
-  abgroup_type : Type;
-  abgroup_sgop : SgOp abgroup_type;
-  abgroup_unit : MonUnit abgroup_type;
-  abgroup_inverse : Negate abgroup_type;
-  abgroup_isabgroup : IsAbGroup abgroup_type;
+  abgroup_group : Group;
+  abgroup_commutative : Commutative (@group_sgop abgroup_group);
 }.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 19
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Existing Instances abgroup_sgop abgroup_unit abgroup_inverse abgroup_isabgroup.</pre>
+Coercion abgroup_group : AbGroup &gt;-&gt; Group.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 21
+Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-(** We want abelian groups to be coerced to the underlying type. *)</pre>
+Global Existing Instance abgroup_commutative.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Global Instance isabgroup_abgroup {A : AbGroup} : IsAbGroup A.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 22
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 23
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Coercion abgroup_type : AbGroup &gt;-&gt; Sortclass.</pre>
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
+<pre>
+  split; exact _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 23
+Line: 24
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Definition Build_AbGroup' (G : Group) {H : Commutative (@group_sgop G)} : AbGroup.</pre>
+Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 26
-Time: 0.006s">
-<div class="time" style="width: 8.1081081081081%"></div>
-<pre>
-  srapply (Build_AbGroup G).</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 27
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  4: split.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 28
-Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
-<pre>
-  1-5: exact _.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(** The underlying group of an abelian group. *)</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 32
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Definition group_abgroup : AbGroup -&gt; Group.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 32
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  intros [G ? ? ? [l ?]].</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 34
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  nrapply (Build_Group G _ _ _ l).</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(** We also want abelian groups to be coerced to the underlying group. *)</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Coercion group_abgroup : AbGroup &gt;-&gt; Group.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -233,69 +154,69 @@ Time: 0s">
 (** Subgroups of abelian groups are abelian *)</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 42
-Time: 0.005s">
-<div class="time" style="width: 6.7567567567568%"></div>
+Line: 29
+Time: 0.003s">
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>Global Instance isabgroup_subgroup (G : AbGroup) (H : Subgroup G)
   : IsAbGroup H.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 43
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 44
+Line: 31
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   nrapply Build_IsAbGroup.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 45
-Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+Line: 32
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   1: exact _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 46
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x y.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 47
-Time: 0.004s">
-<div class="time" style="width: 5.4054054054054%"></div>
+Line: 34
+Time: 0.007s">
+<div class="time" style="width: 7.7777777777778%"></div>
 <pre>
   apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 48
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 49
-Time: 0.005s">
-<div class="time" style="width: 6.7567567567568%"></div>
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply commutativity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 36
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 50
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -304,56 +225,56 @@ Global Instance isnormal_ab_subgroup (G : AbGroup) (H : Subgroup G)
   : IsNormalSubgroup H.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 53
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 54
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x y; unfold in_cosetL, in_cosetR.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 55
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine (_ oE equiv_subgroup_inverse _ _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 56
+Line: 43
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   rewrite negate_sg_op.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 57
-Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+Line: 44
+Time: 0.003s">
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
   rewrite negate_involutive.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 58
-Time: 0.008s">
-<div class="time" style="width: 10.810810810811%"></div>
+Line: 45
+Time: 0.003s">
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
   by rewrite (commutativity (-y) x).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 59
+Line: 46
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 60
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -363,102 +284,102 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 63
+Line: 50
 Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>Global Instance isabgroup_quotient (G : AbGroup) (H : Subgroup G)
   : IsAbGroup (QuotientGroup' G H (isnormal_ab_subgroup G H)).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 64
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 65
+Line: 52
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   nrapply Build_IsAbGroup.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 66
+Line: 53
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   1: exact _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 67
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro x.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 68
-Time: 0.025s">
-<div class="time" style="width: 33.783783783784%"></div>
+Line: 55
+Time: 0.027s">
+<div class="time" style="width: 30%"></div>
 <pre>
   srapply Quotient_ind_hprop.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 69
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro y; revert x.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 70
-Time: 0.026s">
-<div class="time" style="width: 35.135135135135%"></div>
+Line: 57
+Time: 0.028s">
+<div class="time" style="width: 31.111111111111%"></div>
 <pre>
   srapply Quotient_ind_hprop.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 71
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro x.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 72
-Time: 0.046s">
-<div class="time" style="width: 62.162162162162%"></div>
+Line: 59
+Time: 0.015s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
   apply (ap (tr o coeq)).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 73
-Time: 0.004s">
-<div class="time" style="width: 5.4054054054054%"></div>
+Line: 60
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply commutativity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 74
-Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+Line: 61
+Time: 0.004s">
+<div class="time" style="width: 4.4444444444444%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 75
-Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+Line: 62
+Time: 0.09s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
-Definition QuotientAbGroup (G : AbGroup) (H : Subgroup G) : AbGroup :=
-  Build_AbGroup (QuotientGroup' G H (isnormal_ab_subgroup G H)) _ _ _ _.</pre>
+Definition QuotientAbGroup (G : AbGroup) (H : Subgroup G) : AbGroup
+  := (Build_AbGroup (QuotientGroup' G H (isnormal_ab_subgroup G H)) _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 78
+Line: 65
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 
 Theorem equiv_quotient_abgroup_ump {F : Funext} {G : AbGroup}
@@ -467,28 +388,28 @@ Theorem equiv_quotient_abgroup_ump {F : Funext} {G : AbGroup}
     &lt;~&gt; (GroupHomomorphism (QuotientAbGroup G N) H).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 83
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 84
+Line: 71
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (equiv_grp_quotient_ump (Build_NormalSubgroup G N _) _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 85
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 86
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -498,41 +419,41 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 89
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance isgraph_abgroup : IsGraph AbGroup
-  := induced_graph group_abgroup.</pre>
+  := induced_graph abgroup_group.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 90
+Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance is01cat_AbGroup : Is01Cat AbGroup
-  := induced_01cat group_abgroup.</pre>
+  := induced_01cat abgroup_group.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 93
-Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+Line: 80
+Time: 0.002s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 
 Global Instance is01cat_GroupHomomorphism {A B : AbGroup} : Is01Cat (A $-&gt; B)
   := induced_01cat (@grp_homo_map A B).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 96
+Line: 83
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 
 Global Instance is0gpd_GroupHomomorphism {A B : AbGroup}: Is0Gpd (A $-&gt; B)
   := induced_0gpd (@grp_homo_map A B).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 99
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -540,32 +461,32 @@ Time: 0s">
 (** AbGroup forms a 1Cat *)</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 101
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance is1cat_abgroup : Is1Cat AbGroup
   := induced_1cat _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 102
+Line: 89
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 
 Instance hasmorext_abgroup `{Funext} : HasMorExt AbGroup
   := induced_hasmorext _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 105
+Line: 92
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 
 Global Instance hasequivs_abgroup : HasEquivs AbGroup
   := induced_hasequivs _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 108
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -575,41 +496,41 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 111
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition abgroup_trivial : AbGroup.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 111
+Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 112
-Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+Line: 99
+Time: 0.005s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
-  rapply (Build_AbGroup' grp_trivial).</pre>
+  rapply (Build_AbGroup grp_trivial).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 113
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   by intros [].</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 114
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 115
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -617,182 +538,182 @@ Time: 0s">
 (** AbGroup is a pointed category *)</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 117
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance ispointedcat_abgroup : IsPointedCat AbGroup.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 117
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 118
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   snrapply Build_IsPointedCat.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 119
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   1: exact abgroup_trivial.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 120
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 121
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro A.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 121
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     snrefine (Build_GroupHomomorphism (fun _ =&gt; mon_unit); _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 122
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     1: exact _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 123
+Line: 110
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     {</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 124
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [] [].</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 124
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       symmetry.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 125
+Line: 112
 Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
       apply left_identity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 126
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 126
+Line: 113
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
     intros g []; cbn.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 127
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exact (grp_homo_unit g).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 128
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 128
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro A.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 129
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 116
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   snrefine (Build_GroupHomomorphism (fun _ =&gt; mon_unit); _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 130
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   1: exact _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 131
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 132
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x y; symmetry.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 132
+Line: 119
 Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
     apply left_identity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 133
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 133
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros g x; cbn.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 134
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply path_unit.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 135
+Line: 122
 Time: 0.005s">
-<div class="time" style="width: 6.7567567567568%"></div>
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 136
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -800,14 +721,14 @@ Time: 0s">
 (** Image of group homomorphisms between abelian groups *)</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 138
-Time: 0.004s">
-<div class="time" style="width: 5.4054054054054%"></div>
+Line: 125
+Time: 0.059s">
+<div class="time" style="width: 65.555555555556%"></div>
 <pre>Definition abgroup_image {A B : AbGroup} (f : A $-&gt; B) : AbGroup
-  := Build_AbGroup (grp_image f) _ _ _ _.</pre>
+  := Build_AbGroup (grp_image f) _.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 139
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -815,49 +736,49 @@ Time: 0s">
 (** First isomorphism theorem of abelian groups *)</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 141
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition abgroup_first_iso `{Funext} {A B : AbGroup} (f : A $-&gt; B)
   : GroupIsomorphism (QuotientAbGroup A (grp_kernel f)) (abgroup_image f).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 142
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 143
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   etransitivity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 144
-Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   2: rapply grp_first_iso.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 145
-Time: 0.01s">
-<div class="time" style="width: 13.513513513514%"></div>
+Line: 132
+Time: 0.009s">
+<div class="time" style="width: 10%"></div>
 <pre>
   apply grp_iso_quotient_normal.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 146
-Time: 0.008s">
-<div class="time" style="width: 10.810810810811%"></div>
+Line: 133
+Time: 0.005s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 147
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -867,63 +788,63 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 150
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition ab_biprod (A B : AbGroup) : AbGroup.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 150
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 151
+Line: 138
 Time: 0.009s">
-<div class="time" style="width: 12.162162162162%"></div>
+<div class="time" style="width: 10%"></div>
 <pre>
-  rapply (Build_AbGroup' (grp_prod A B)).</pre>
+  rapply (Build_AbGroup (grp_prod A B)).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 152
+Line: 139
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   intros [a b] [a' b'].</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 153
-Time: 0.01s">
-<div class="time" style="width: 13.513513513514%"></div>
+Line: 140
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   apply path_prod; simpl; apply commutativity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 154
+Line: 141
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 155
-Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+Line: 142
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition ab_biprod_inl {A B : AbGroup} : A $-&gt; ab_biprod A B := grp_prod_inl.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 157
-Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+Line: 144
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition ab_biprod_inr {A B : AbGroup} : B $-&gt; ab_biprod A B := grp_prod_inr.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 158
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -931,7 +852,7 @@ Time: 0s">
 (** Recursion principle *)</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 160
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Proposition ab_biprod_rec {A B Y : AbGroup}
@@ -939,103 +860,103 @@ Time: 0s">
   : (ab_biprod A B) $-&gt; Y.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 162
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 163
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   snrapply Build_GroupHomomorphism.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 164
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 165
+Line: 152
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre> intros [a b]; exact (f a + g b).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 165
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 166
-Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+Line: 153
+Time: 0.002s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre> intros [a b] [a' b']; simpl.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 166
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite (grp_homo_op f).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 167
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite (grp_homo_op g).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 168
+Line: 155
 Time: 0.007s">
-<div class="time" style="width: 9.4594594594595%"></div>
+<div class="time" style="width: 7.7777777777778%"></div>
 <pre>
     rewrite (associativity _ (g b) _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 169
+Line: 156
 Time: 0.007s">
-<div class="time" style="width: 9.4594594594595%"></div>
+<div class="time" style="width: 7.7777777777778%"></div>
 <pre>
     rewrite &lt;- (associativity _ (f a') _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 170
-Time: 0.006s">
-<div class="time" style="width: 8.1081081081081%"></div>
+Line: 157
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
     rewrite (commutativity (f a') _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 171
-Time: 0.01s">
-<div class="time" style="width: 13.513513513514%"></div>
+Line: 158
+Time: 0.007s">
+<div class="time" style="width: 7.7777777777778%"></div>
 <pre>
     rewrite (associativity _ (g b) _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 172
-Time: 0.007s">
-<div class="time" style="width: 9.4594594594595%"></div>
+Line: 159
+Time: 0.006s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
     exact (associativity _ (f a') _)^.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 173
-Time: 0.004s">
-<div class="time" style="width: 5.4054054054054%"></div>
+Line: 160
+Time: 0.01s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 174
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1044,7 +965,7 @@ Definition ab_biprod_pr1 {A B : AbGroup} : ab_biprod A B $-&gt; A
   := ab_biprod_rec grp_homo_id grp_homo_const.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 177
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1053,7 +974,7 @@ Definition ab_biprod_pr2 {A B : AbGroup} : ab_biprod A B $-&gt; B
   := ab_biprod_rec grp_homo_const grp_homo_id.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 180
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1063,36 +984,36 @@ Corollary ab_biprod_rec_uncurried {A B Y : AbGroup}
     -&gt; (ab_biprod A B) $-&gt; Y.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 184
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 185
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros [f g].</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 186
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (ab_biprod_rec f g).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 186
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 187
+Line: 174
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 
 Proposition ab_biprod_rec_beta' {A B Y : AbGroup}
@@ -1100,77 +1021,77 @@ Proposition ab_biprod_rec_beta' {A B Y : AbGroup}
   : ab_biprod_rec (u $o ab_biprod_inl) (u $o ab_biprod_inr) == u.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 191
+Line: 178
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 192
+Line: 179
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
   intros [a b]; simpl.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 193
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine ((grp_homo_op u _ _)^ @ _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 194
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (ap u).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 195
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply path_prod.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 196
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 197
+Line: 184
 Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre> exact (right_identity a).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 197
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 198
+Line: 185
 Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre> exact (left_identity b).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 198
+Line: 185
 Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 199
+Line: 186
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
 
 Proposition ab_biprod_rec_beta `{Funext} {A B Y : AbGroup}
@@ -1178,35 +1099,35 @@ Proposition ab_biprod_rec_beta `{Funext} {A B Y : AbGroup}
   : ab_biprod_rec (u $o ab_biprod_inl) (u $o ab_biprod_inr) = u.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 203
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 204
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply equiv_path_grouphomomorphism.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 205
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (ab_biprod_rec_beta' u).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 206
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 207
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1216,49 +1137,49 @@ Proposition ab_biprod_rec_inl_beta `{Funext} {A B Y : AbGroup}
   : (ab_biprod_rec a b) $o ab_biprod_inl = a.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 211
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 212
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply equiv_path_grouphomomorphism.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 213
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro x; simpl.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 214
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite (grp_homo_unit b).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 215
+Line: 202
 Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
   exact (right_identity (a x)).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 216
+Line: 203
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 217
+Line: 204
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1268,49 +1189,49 @@ Proposition ab_biprod_rec_inr_beta `{Funext} {A B Y : AbGroup}
   : (ab_biprod_rec a b) $o ab_biprod_inr = b.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 221
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 222
+Line: 209
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply equiv_path_grouphomomorphism.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 223
+Line: 210
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intro y; simpl.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 224
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite (grp_homo_unit a).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 225
+Line: 212
 Time: 0.003s">
-<div class="time" style="width: 4.0540540540541%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
   exact (left_identity (b y)).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 226
+Line: 213
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 227
+Line: 214
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1319,58 +1240,155 @@ Theorem isequiv_ab_biprod_rec `{Funext} {A B Y : AbGroup}
   : IsEquiv (@ab_biprod_rec_uncurried A B Y).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 230
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 231
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   srapply isequiv_adjointify.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 232
+Line: 219
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 233
+Line: 220
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro phi.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 233
+Line: 220
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exact (phi $o ab_biprod_inl, phi $o ab_biprod_inr).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 234
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 235
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intro phi.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 222
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact (ab_biprod_rec_beta phi).</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 223
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 224
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros [a b].</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 224
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    apply path_prod.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 225
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 226
+Time: 0.042s">
+<div class="time" style="width: 46.666666666667%"></div>
+<pre> apply ab_biprod_rec_inl_beta.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 226
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 227
+Time: 0.044s">
+<div class="time" style="width: 48.888888888889%"></div>
+<pre> apply ab_biprod_rec_inr_beta.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 227
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 228
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Corecursion principle, inherited from Groups/Group.v. *)</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 230
+Time: 0.001s">
+<div class="time" style="width: 1.1111111111111%"></div>
+<pre>Definition ab_biprod_corec {A B X : AbGroup}
+           (f : X $-&gt; A) (g : X $-&gt; B)
+  : X $-&gt; ab_biprod A B := grp_prod_corec f g.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 232
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** The negation automorphism of an abelian group *)</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 234
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition ab_homo_negation {A : AbGroup} : GroupIsomorphism A A.</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 234
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 235
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    exact (ab_biprod_rec_beta phi).</pre>
+  snrapply Build_GroupIsomorphism.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 236
@@ -1383,14 +1401,20 @@ Time: 0s">
 Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> intros [a b].</pre>
+<pre> snrapply Build_GroupHomomorphism.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    apply path_prod.</pre>
+    +</pre>
+</div>
+<div class="code" title="File: AbelianGroup.v
+Line: 238
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (fun a =&gt; -a).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 238
@@ -1401,149 +1425,60 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 239
-Time: 0.074s">
-<div class="time" style="width: 100%"></div>
-<pre> apply ab_biprod_rec_inl_beta.</pre>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros x y.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 239
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
+      refine (grp_inv_op x y @ _).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 240
-Time: 0.07s">
-<div class="time" style="width: 94.594594594595%"></div>
-<pre> apply ab_biprod_rec_inr_beta.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 240
-Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+      apply commutativity.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
 Line: 241
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-(** Corecursion principle, inherited from Groups/Group.v. *)</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 243
-Time: 0.002s">
-<div class="time" style="width: 2.7027027027027%"></div>
-<pre>Definition ab_biprod_corec {A B X : AbGroup}
-           (f : X $-&gt; A) (g : X $-&gt; B)
-  : X $-&gt; ab_biprod A B := grp_prod_corec f g.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 245
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(** The negation automorphism of an abelian group *)</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 247
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Definition ab_homo_negation { A : AbGroup } : GroupIsomorphism A A.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 247
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 248
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  snrapply Build_GroupIsomorphism.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 249
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
   -</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 250
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> snrapply Build_GroupHomomorphism.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 250
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 251
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (fun a =&gt; -a).</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 251
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    +</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 252
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact negate_sg_op_distr.</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 252
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: AbelianGroup.v
-Line: 253
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> srapply isequiv_adjointify.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 253
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     1: exact (fun a =&gt; -a).</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 254
+Line: 243
 Time: 0.001s">
-<div class="time" style="width: 1.3513513513514%"></div>
+<div class="time" style="width: 1.1111111111111%"></div>
 <pre>
     1-2: exact negate_involutive.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 255
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbelianGroup.v
-Line: 257
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

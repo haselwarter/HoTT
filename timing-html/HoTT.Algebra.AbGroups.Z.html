@@ -30,20 +30,20 @@ pre {
 
 <div class="code" title="File: Z.v
 Line: 1
-Time: 0.048s">
-<div class="time" style="width: 40.677966101695%"></div>
+Time: 0.052s">
+<div class="time" style="width: 38.805970149254%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 1
 Time: 0.002s">
-<div class="time" style="width: 1.6949152542373%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Require Import Spaces.Int.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 2
-Time: 0.118s">
+Time: 0.134s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Algebra.AbGroups.AbelianGroup.</pre>
@@ -81,220 +81,111 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 9
-Time: 0.007s">
-<div class="time" style="width: 5.9322033898305%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
-  srapply (Build_AbGroup Int); repeat split.</pre>
+  snrapply Build_AbGroup.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 10
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+  -</pre>
+</div>
+<div class="code" title="File: Z.v
+Line: 11
+Time: 0.003s">
+<div class="time" style="width: 2.2388059701493%"></div>
+<pre> refine (Build_Group Int int_add 0 int_negation _); repeat split.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> (** Operation *)
-   </pre>
+<pre>
+    +</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>exact int_add.</pre>
+<pre> exact _.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    +</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> (** Unit *)
-   </pre>
+<pre> exact int_add_assoc.</pre>
+</div>
+<div class="code" title="File: Z.v
+Line: 13
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>exact 0.</pre>
+<pre> exact int_add_0_r.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    +</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> (** Negation *)
-   </pre>
+<pre> exact int_add_negation_l.</pre>
+</div>
+<div class="code" title="File: Z.v
+Line: 15
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>exact int_negation.</pre>
+<pre> exact int_add_negation_r.</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Z.v
 Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> (** IsHSet *)
-   </pre>
+<pre> exact int_add_comm.</pre>
 </div>
 <div class="code" title="File: Z.v
-Line: 18
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact _.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 18
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 19
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (** Associativity *)
-   </pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 20
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact int_add_assoc.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 20
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (** Left identity *)
-   </pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact int_add_0_l.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 23
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (** Right identity *)
-   </pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact int_add_0_r.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (** Left inverse *)
-   </pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact int_add_negation_l.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 27
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (** Right inverse *)
-   </pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact int_add_negation_r.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> (** Commutativity *)
-   </pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>exact int_add_comm.</pre>
-</div>
-<div class="code" title="File: Z.v
-Line: 30
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Z.v
-Line: 32
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

@@ -39,14 +39,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 3
-Time: 0.115s">
+Time: 0.128s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export HoTT.Classes.theory.ua_homomorphism.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 3
-Time: 0.008s">
-<div class="time" style="width: 6.9565217391304%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.03125%"></div>
 <pre>
 
 Require Import
@@ -68,8 +68,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 13
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.34375%"></div>
 <pre>Record Isomorphic {σ : Signature} (A B : Algebra σ) := BuildIsomorphic
   { def_isomorphic : ∀ s, A s → B s
   ; is_homomorphism_isomorphic : IsHomomorphism def_isomorphic
@@ -153,8 +153,8 @@ Import isomorphic_notations.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 32
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.78125%"></div>
 <pre>
 
 Definition SigIsomorphic {σ : Signature} (A B : Algebra σ) :=
@@ -179,15 +179,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 40
-Time: 0.019s">
-<div class="time" style="width: 16.521739130435%"></div>
+Time: 0.021s">
+<div class="time" style="width: 16.40625%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 41
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.34375%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -218,7 +218,7 @@ Proof.</pre>
 <div class="code" title="File: ua_isomorphic.v
 Line: 47
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
   exact (path_isomorphism (def_isomorphic e)).</pre>
 </div>
@@ -254,15 +254,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.78125%"></div>
 <pre>
   destruct p.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 54
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.34375%"></div>
 <pre> exact (BuildIsomorphic (hom_id A)).</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
@@ -287,7 +287,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 60
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>Lemma path_isomorphic `{Funext} {σ : Signature} {A B : Algebra σ}
   (F G : A ≅ B) (a : def_isomorphic F = def_isomorphic G)
   (b : a#(is_homomorphism_isomorphic F) = is_homomorphism_isomorphic G)
@@ -302,15 +302,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 64
-Time: 0.014s">
-<div class="time" style="width: 12.173913043478%"></div>
+Time: 0.016s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
   apply (ap (issig_isomorphic A B)^-1)^-1.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 65
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
   srapply path_sigma.</pre>
 </div>
@@ -336,14 +336,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 68
-Time: 0.006s">
-<div class="time" style="width: 5.2173913043478%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.46875%"></div>
 <pre> apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 68
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
     refine (ap _ (transport_sigma _ _) @ _).</pre>
 </div>
@@ -357,7 +357,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 70
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.125%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -376,7 +376,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 76
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>Lemma path_hset_isomorphic `{Funext} {σ : Signature} {A B : Algebra σ}
   `{IsHSetAlgebra B} (F G : A ≅ B)
   (a : def_isomorphic F = def_isomorphic G)
@@ -399,7 +399,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 81
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.5625%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
@@ -427,7 +427,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
 
   Lemma path_def_isomorphic_id_transport_dom (p : A = B)
@@ -443,8 +443,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 90
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     by path_induction.</pre>
 </div>
@@ -458,7 +458,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 92
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
 
   Lemma path_def_isomorphic_id_transport_cod (p : A = B)
@@ -474,8 +474,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 97
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     by path_induction.</pre>
 </div>
@@ -511,7 +511,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 108
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.5625%"></div>
 <pre>Lemma path_path_isomorphism_hom_id_hset `{Univalence} {σ : Signature}
   (A : Algebra σ) `{IsHSetAlgebra A}
   : path_isomorphism (hom_id A) = idpath.</pre>
@@ -525,22 +525,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 111
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.78125%"></div>
 <pre>
   apply path_path_hset_algebra.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 112
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
   rewrite path_ap_carriers_path_algebra.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
   apply (paths_ind (λ s, idpath) (λ f _, path_forall A A f = idpath)).</pre>
 </div>
@@ -580,14 +580,14 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 117
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
     symmetry.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 118
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.125%"></div>
 <pre>
     rewrite (path_ishprop _ (isequiv_idmap (A s))).</pre>
 </div>
@@ -601,7 +601,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 120
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.34375%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -632,7 +632,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 126
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
 
   Lemma sect_id_isomorphic : (@isomorphic_id σ A B) o id_isomorphic == idmap.</pre>
@@ -661,35 +661,35 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 131
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
     rewrite path_def_isomorphic_id_transport_cod.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 132
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
     funext s x.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 133
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.90625%"></div>
 <pre>
     rewrite !transport_forall_constant.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 134
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
     rewrite path_ap_carriers_path_algebra.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 135
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.90625%"></div>
 <pre>
     transport_path_forall_hammer.</pre>
 </div>
@@ -702,15 +702,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 137
-Time: 0.006s">
-<div class="time" style="width: 5.2173913043478%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 138
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.78125%"></div>
 <pre>
 
   Lemma sect_isomorphic_id : id_isomorphic o (@isomorphic_id σ A B) == idmap.</pre>
@@ -738,8 +738,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 143
-Time: 0.008s">
-<div class="time" style="width: 6.9565217391304%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.03125%"></div>
 <pre>
     apply path_path_isomorphism_hom_id_hset.</pre>
 </div>
@@ -760,7 +760,7 @@ Time: 0s">
 <div class="code" title="File: ua_isomorphic.v
 Line: 146
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.78125%"></div>
 <pre>
 
   Global Instance isequiv_isomorphic_id : IsEquiv (@isomorphic_id σ A B)
@@ -772,8 +772,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ua_isomorphic.v
 Line: 153
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 End isequiv_isomorphic_id.</pre>

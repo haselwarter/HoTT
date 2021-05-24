@@ -93,7 +93,7 @@
           
 
             i = 15;
-            data = "1 goal (ID 48)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  ============================	  Commutative group_sgop	";
+            data = "1 goal (ID 46)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  ============================	  Commutative group_sgop	";
             responses[i]=data;
           
 
@@ -103,27 +103,27 @@
           
 
             i = 17;
-            data = "1 goal (ID 49)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  ============================	  forall x y : grp_pullback f g, group_sgop x y = group_sgop y x	";
+            data = "1 goal (ID 47)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  ============================	  forall x y : grp_pullback f g, group_sgop x y = group_sgop y x	";
             responses[i]=data;
           
 
             i = 18;
-            data = "1 goal (ID 67)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  group_sgop (b; c; p) (d; e; q) = group_sgop (d; e; q) (b; c; p)	";
+            data = "1 goal (ID 65)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  group_sgop (b; c; p) (d; e; q) = group_sgop (d; e; q) (b; c; p)	";
             responses[i]=data;
           
 
             i = 19;
-            data = "1 goal (ID 75)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  {p0 : sg_op b d = sg_op d b &	  {q0 : sg_op c e = sg_op e c &	  PathSquare (ap f p0) (ap g q0)	    ((grp_homo_op f b d @	      (ap (fun y : A => sg_op (f b) y) q @ ap (fun x : A => sg_op x (g e)) p)) @	     (grp_homo_op g c e)^)	    ((grp_homo_op f d b @	      (ap (fun y : A => sg_op (f d) y) p @ ap (fun x : A => sg_op x (g c)) q)) @	     (grp_homo_op g e c)^)}}	";
+            data = "1 goal (ID 73)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  {p0 : sg_op b d = sg_op d b &	  {q0 : sg_op c e = sg_op e c &	  PathSquare (ap f p0) (ap g q0)	    ((grp_homo_op f b d @	      (ap (fun y : A => sg_op (f b) y) q @ ap (fun x : A => sg_op x (g e)) p)) @	     (grp_homo_op g c e)^)	    ((grp_homo_op f d b @	      (ap (fun y : A => sg_op (f d) y) p @ ap (fun x : A => sg_op x (g c)) q)) @	     (grp_homo_op g e c)^)}}	";
             responses[i]=data;
           
 
             i = 20;
-            data = "1 goal (ID 364)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  PathSquare (ap f (commutativity b d)) (ap g (commutativity c e))	    ((grp_homo_op f b d @	      (ap (fun y : A => sg_op (f b) y) q @ ap (fun x : A => sg_op x (g e)) p)) @	     (grp_homo_op g c e)^)	    ((grp_homo_op f d b @	      (ap (fun y : A => sg_op (f d) y) p @ ap (fun x : A => sg_op x (g c)) q)) @	     (grp_homo_op g e c)^)	";
+            data = "1 goal (ID 98)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  PathSquare (ap f (commutativity b d)) (ap g (commutativity c e))	    ((grp_homo_op f b d @	      (ap (fun y : A => sg_op (f b) y) q @ ap (fun x : A => sg_op x (g e)) p)) @	     (grp_homo_op g c e)^)	    ((grp_homo_op f d b @	      (ap (fun y : A => sg_op (f d) y) p @ ap (fun x : A => sg_op x (g c)) q)) @	     (grp_homo_op g e c)^)	";
             responses[i]=data;
           
 
             i = 21;
-            data = "1 goal (ID 377)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  ap f (commutativity b d) @	  ((grp_homo_op f d b @	    (ap (fun y : A => sg_op (f d) y) p @ ap (fun x : A => sg_op x (g c)) q)) @	   (grp_homo_op g e c)^) =	  ((grp_homo_op f b d @	    (ap (fun y : A => sg_op (f b) y) q @ ap (fun x : A => sg_op x (g e)) p)) @	   (grp_homo_op g c e)^) @ ap g (commutativity c e)	";
+            data = "1 goal (ID 111)	  	  A, B, C : AbGroup	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  ap f (commutativity b d) @	  ((grp_homo_op f d b @	    (ap (fun y : A => sg_op (f d) y) p @ ap (fun x : A => sg_op x (g c)) q)) @	   (grp_homo_op g e c)^) =	  ((grp_homo_op f b d @	    (ap (fun y : A => sg_op (f b) y) q @ ap (fun x : A => sg_op x (g e)) p)) @	   (grp_homo_op g c e)^) @ ap g (commutativity c e)	";
             responses[i]=data;
           
 
@@ -348,7 +348,7 @@ Pullbacks of abelian groups.
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a id="ab_pullback" class="idref" href="#ab_pullback"><span class="id" title="definition">ab_pullback</span></a><br>
-    : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a> := <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a> (<a class="idref" href="HoTT.Algebra.Groups.GrpPullback.html#grp_pullback"><span class="id" title="definition">grp_pullback</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbPullback.html#AbPullback.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbPullback.html#AbPullback.g"><span class="id" title="variable">g</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+    : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a> := <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a> (<a class="idref" href="HoTT.Algebra.Groups.GrpPullback.html#grp_pullback"><span class="id" title="definition">grp_pullback</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbPullback.html#AbPullback.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbPullback.html#AbPullback.g"><span class="id" title="variable">g</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(26, '0_3_7');

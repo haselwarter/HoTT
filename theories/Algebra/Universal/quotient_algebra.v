@@ -84,7 +84,7 @@ Section context_carriers_quotient_algebra.
             path_class_quotient_algebra x y R # cas s x = cas s y)
     (ops : forall (u : Symbol σ)
              (a : DomOperation (carriers_quotient_algebra A Φ e) (σ u))
-             (aP : forall I, P (sorts_dom (σ u) I) (a I)),
+             (aP : forall i, P (sorts_dom (σ u) i) (a i)),
            P (sort_cod (σ u)) (ops_quotient_algebra A Φ e u a))
     (pops : forall (u : Symbol σ) (a : DomOperation A (σ u)),
             path_ops_quotient_algebra u a
@@ -114,12 +114,55 @@ End carriers_quotient_algebra.
 
 Import carriers_quotient_algebra.
 
+Definition carriers_quotient_algebra_rec {σ} (A : Algebra σ)
+  (Φ : forall s, Relation (A s)) {I : Type} (e : Equations σ I)
+  (P : Sort σ -> Type) `{forall (s : Sort σ), IsHSet (P s)}
+  (cas : forall (s : Sort σ), A s -> P s)
+  (pcas : forall (s : Sort σ) (x y : A s) (R : Φ s x y),
+          cas s x = cas s y)
+  (ops : forall (u : Symbol σ),
+         DomOperation (carriers_quotient_algebra A Φ e) (σ u) ->
+         (forall i, P (sorts_dom (σ u) i)) ->
+         P (sort_cod (σ u)))
+  (pops : forall (u : Symbol σ) (a : DomOperation A (σ u)),
+          ops u (fun i => class_quotient_algebra A Φ e (a i)) (fun i => cas (sorts_dom (σ u) i) (a i))
+          = cas (sort_cod (σ u)) (u.#A a))
+  (pes : forall (i : I)
+           (f : forall t, context_equation (e i) t ->
+                carriers_quotient_algebra A Φ e t)
+           (F : forall t, context_equation (e i) t -> P t),
+      param_map_term_algebra (QuotientAlgebra A Φ e) f (fun s _ => P s) F ops
+        (sort_equation (e i)) (left_equation (e i))
+    = param_map_term_algebra (QuotientAlgebra A Φ e) f (fun s _ => P s) F ops
+        (sort_equation (e i)) (right_equation (e i)))
+  : forall (s : Sort σ), carriers_quotient_algebra A Φ e s -> P s
+  := carriers_quotient_algebra_ind A Φ e (fun s _ => P s)
+      cas (fun t a b r => transport_const _ _ @ pcas t a b r)
+      ops (fun u α => transport_const _ _ @ pops u α)
+      (fun i f F => transport_const _ _ @ pes i f F).
+
+Definition carriers_quotient_algebra_ind_hprop {σ} (A : Algebra σ)
+  (Φ : forall s, Relation (A s)) {I : Type} (e : Equations σ I)
+    (P : forall (s : Sort σ), carriers_quotient_algebra A Φ e s -> Type)
+    `{forall (s : Sort σ) (Q : carriers_quotient_algebra A Φ e s), IsHProp (P s Q)}
+    (cas : forall (s : Sort σ) (x : A s), P s (class_quotient_algebra A Φ e x))
+    (ops : forall (u : Symbol σ)
+             (a : DomOperation (carriers_quotient_algebra A Φ e) (σ u))
+             (aP : forall i, P (sorts_dom (σ u) i) (a i)),
+           P (sort_cod (σ u)) (ops_quotient_algebra A Φ e u a))
+    (s : Sort σ) (Q : carriers_quotient_algebra A Φ e s)
+    : P s Q.
+Proof.
+  refine (carriers_quotient_algebra_ind A Φ e P cas _ ops _ _ s Q);
+    intros; apply path_ishprop.
+Defined.
+
 Notation "e / Φ" := (QuotientAlgebra _ Φ e) : Algebra_scope.
 
 Lemma compute_op_quotient {σ} (A : Algebra σ) (Φ : forall s, Relation (A s))
   `{!IsCongruence A Φ} (u : Symbol σ) (a : DomOperation A (σ u))
   {I : Type} (e : Equations σ I)
-  : (u.#(e/Φ)) (fun i => class_quotient_algebra A Φ e (a i))
+  : u.#(e/Φ) (fun i => class_quotient_algebra A Φ e (a i))
     = class_quotient_algebra A Φ e (u.#A a).
 Proof.
   apply path_ops_quotient_algebra.
@@ -136,6 +179,52 @@ Section is_equational_quotient_algebra.
   Defined.
 
 End is_equational_quotient_algebra.
+
+Definition in_class_quotient_algebra `{Univalence} {σ} (A : Algebra σ)
+  (Φ : forall s, Relation (A s)) `{!IsCongruence A Φ}
+  {I : Type} (e : Equations σ I) `{isA : !IsEquationalModel A e}
+  : forall (s : Sort σ), (e / Φ) s -> A s -> HProp.
+Proof.
+  srefine (carriers_quotient_algebra_rec A Φ e _ _ _ _ _ _).
+  - intros s a b.
+    exists (Build_HProp (Φ s a b)).
+    exact _.
+  - intros s a b rab.
+    funext c.
+    apply path_hprop.
+    srapply equiv_iff_hprop; cbn.
+    + apply (transitivity (symmetry _ _ rab)).
+    + apply (transitivity rab).
+  - cbn. intros u γ r a.
+    exact (hexists (fun α => {_ : Φ _ (u.#A α) a | forall i, r i (α i)})).
+  - cbn. intros u α.
+    funext a.
+    cbn.
+    apply path_hprop.
+    Search IsHProp IsEquiv.
+    srefine (equiv_adjointify _ _ _ _).
+    + intro h. strip_truncations.
+      destruct h as [α0 [p1 p2]].
+      cbn.
+      transitivity (u.#A α0).
+      * apply ops_compatible; try exact _. apply p2.
+      * apply p1.
+    + cbn. intro rαa.
+      apply tr.
+      exists α.
+      exists rαa.
+      intros. reflexivity.
+    + cbn. intro r. apply path_ishprop.
+    + cbn. intro r. apply path_ishprop.
+  - cbn. intros i f F.
+    funext a.
+    apply path_hprop.
+    unfold param_map_term_algebra.
+    cbn.
+    specialize (isA i).
+    destruct (e i) as [Γ isΓ s L R].
+    cbn in *.
+Abort.
 
 (** The following section defines the quotient homomorphism
     [hom_quotient : A $-> A/Φ]. *)

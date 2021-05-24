@@ -1,26 +1,22 @@
-(*
 (** This file defines the kernel of a homomorphism [cong_ker], the
     image of a homomorphism [in_image_hom], and it proves the first
     isomorphism theorem [isomorphic_first_isomorphism]. The first
     identification theorem [id_first_isomorphism] follows. *)
 
 Require Import
-  HoTT.Types.Forall
-  HoTT.Types.Sigma
-  HoTT.Types.Universe
+  HoTT.Types
   HoTT.HSet
   HoTT.HIT.quotient
   HoTT.Classes.interfaces.canonical_names
-  HoTT.Algebra.Universal.isomorphic
+  HoTT.Algebra.Universal.Isomorphism
   HoTT.Algebra.Universal.subalgebra
   HoTT.Algebra.Universal.quotient_algebra
-  HoTT.Algebra.Universal.hsetprojective.
+  HoTT.Projective
+  HoTT.Algebra.Universal.Equations.
 
-Import
-  algebra_notations
-  quotient_algebra_notations
-  subalgebra_notations
-  isomorphic_notations.
+Import carriers_quotient_algebra. (* TODO: Why is this necessary? *)
+
+Local Open Scope Algebra_scope.
 
 (** The following section defines the kernel of a homomorphism
     [cong_ker], and shows that it is a congruence.*)
@@ -28,10 +24,10 @@ Import
 Section cong_ker.
   Context
     `{Funext} {σ : Signature} {A B : Algebra σ}
-    (f : ∀ s, A s → B s) {IsH : IsHomomorphism f}.
+    (f : forall s, A s -> B s) {IsH : IsHomomorphism f}.
 
   Definition cong_ker (s : Sort σ) : Relation (A s)
-    := λ (x y : A s), f s x = f s y.
+    := fun (x y : A s) => f s x = f s y.
 
   Global Instance equiv_rel_ker (s : Sort σ) : EquivRel (cong_ker s).
   Proof.
@@ -53,24 +49,23 @@ Section cong_ker.
 
 End cong_ker.
 
-(** The next section defines an "in image predicate", [in_image_hom].
-    It gives rise to the homomorphic image of a homomorphism. *)
+(*
 
 Section in_image_hom.
   Context
     `{Funext} {σ : Signature} {A B : Algebra σ}
-    (f : ∀ s, A s → B s) {IsH : IsHomomorphism f}
-    `{!∀ u, IsHSetProjective (Arity (σ u))}.
+    (f : forall s, A s -> B s) {IsH : IsHomomorphism f}.
 
-  Definition in_image_hom (s : Sort σ) (y : B s) : hProp
+  Definition in_image_hom (s : Sort σ) (y : B s) : HProp
     := merely (hfiber (f s) y).
 
   Lemma closed_under_op_in_image_hom
-    {w : SymbolType σ} `{!IsHSetProjective (Arity w)}
+    {w : SymbolType σ} `{ch : HasTrChoice 0 (Arity w)}
     (α : Operation A w) (β : Operation B w) (P : OpPreserving f α β)
     : ClosedUnderOp B in_image_hom β.
   Proof.
     intros b a.
+    Print HasOChoice.
     pose proof (is_hsetprojective _ _ a) as a'.
     strip_truncations.
     apply tr.
@@ -93,6 +88,8 @@ Section in_image_hom.
 
 End in_image_hom.
 
+*)
+
 (** The folowing section proves the first isomorphism theorem,
     [isomorphic_first_isomorphism] and the first identification
     theorem [id_first_isomorphism]. *)
@@ -100,8 +97,10 @@ End in_image_hom.
 Section first_isomorphism.
   Context
     `{Univalence} {σ} {A B : Algebra σ}
-    (f : ∀ s, A s → B s) {IsH : IsHomomorphism f}
-    `{!∀ u, IsHSetProjective (Arity (σ u))}.
+    {I : Type} (e : Equations σ I)
+    `{EqB : !IsEquationalModel B e}
+    (f : forall s, A s -> B s) {IsH : IsHomomorphism f}
+    `{surj : !forall s, IsSurjection (f s)}.
 
 (** The homomorphism [def_first_isomorphism] is informally given by
 
@@ -110,32 +109,18 @@ Section first_isomorphism.
     >>
 *)
 
-  Definition def_first_isomorphism (s : Sort σ)
-    : (A / cong_ker f) s → (B & in_image_hom f) s.
+  Definition def_first_isomorphism
+    : forall s : Sort σ, (e / cong_ker f) s -> B s.
   Proof.
-    refine (quotient_rec (cong_ker f s) (λ x, (f s x; tr (x; idpath))) _).
-    intros x y p.
-    now apply path_sigma_hprop.
+    srefine (carriers_quotient_algebra_rec A (cong_ker f) e
+              (fun s => B s)
+              _ _ _ _ _).
+    - intros s a. exact (f s a).
+    - intros s a b r. apply r.
+    - intros u α β. exact (u.#B β).
+    - intros u a. symmetry. apply IsH.
+    - intros. apply EqB.
   Defined.
-
-  Lemma oppreserving_first_isomorphism
-    {w : SymbolType σ} `{!IsHSetProjective (Arity w)}
-    (α : Operation A w)
-    (β : Operation B w)
-    (γ : Operation (A / cong_ker f) w)
-    (C : ClosedUnderOp B (in_image_hom f) β)
-    (P : OpPreserving f α β)
-    (G : ∀ a, γ (λ i, class_of _ (a i)) = class_of _ (α a))
-    : OpPreserving def_first_isomorphism γ
-        (op_subalgebra B (in_image_hom f) β C).
-  Proof.
-    refine (choice_fun_quotient_ind_prop (λ i, cong_ker f (sorts_dom _ i)) _ _).
-    cbn in *.
-    intro a.
-    induction (G a)^.
-    apply path_sigma_hprop.
-    apply P.
-  Qed.
 
 (* Leave [is_homomorphism_first_isomorphism] opaque because
    [IsHomomorphism] is an hprop when [B] is a set algebra. *)
@@ -143,36 +128,139 @@ Section first_isomorphism.
   Global Instance is_homomorphism_first_isomorphism
     : IsHomomorphism def_first_isomorphism.
   Proof.
-    intro u. apply (oppreserving_first_isomorphism (u^^A)).
-    - apply IsH.
-    - apply compute_op_quotient.
-  Qed.
+    done.
+  Defined.
 
   Definition hom_first_isomorphism
-    : Homomorphism (A / cong_ker f) (B & in_image_hom f)
+    : Homomorphism (e / cong_ker f) B
     := Build_Homomorphism def_first_isomorphism.
 
-  Global Instance embedding_first_isomorphism (s : Sort σ)
+  Definition def_inv_first_isomorphism'
+    : forall s : Sort σ, forall b : B s,
+        {q : (e / cong_ker f) s |
+          hexists (fun a : A s => {_ : class_quotient_algebra A (cong_ker f) e a = q | f s a = b})}.
+  Proof.
+    intros s b.
+    assert (IsHProp 
+      {q : (e / cong_ker f) s &
+      hexists
+        (fun a : A s =>
+         {_ : class_quotient_algebra A (cong_ker f) e a = q & f s a = b})}).
+    - apply ishprop_sigma_disjoint.
+      intros r1 r2 E1 E2.
+      strip_truncations.
+      destruct E1 as [a1 [p1 q1]], E2 as [a2 [p2 q2]].
+      refine (p1^ @ _ @ p2).
+      apply path_class_quotient_algebra.
+      exact (q1 @ q2^).
+    - specialize (surj s b).
+      destruct surj as [surj' _].
+      generalize dependent surj'.
+      cbn.
+      refine (Trunc_rec _).
+      intros [a p].
+      exists (class_quotient_algebra A (cong_ker f) e a).
+      apply tr.
+      exists a.
+      done.
+  Defined.
+
+  Definition def_inv_first_isomorphism
+    : forall s : Sort σ, B s -> (e / cong_ker f) s
+    := fun s b => (def_inv_first_isomorphism' s b).1.
+
+  Global Instance is_homomorphism_inf_first_isomorphism
+    : IsHomomorphism def_inv_first_isomorphism.
+  Proof.
+    intros u β.
+    cbn.
+    unfold def_inv_first_isomorphism.
+    unfold def_inv_first_isomorphism'.
+    cbn in *.
+    set (surj0 := surj (sort_cod (σ u))).
+    destruct surj0 as [surj' ps].
+    generalize dependent surj'.
+    refine (Trunc_ind _ _).
+    intros [a p].
+    intro ptr.
+    cbn in *.
+  Abort.
+
+
+  Global Instance isequiv_first_isomorphism (s : Sort σ)
+    : IsEquiv (hom_first_isomorphism s).
+  Proof.
+    refine (isequiv_adjointify
+              (def_first_isomorphism s)
+              (def_inv_first_isomorphism s)
+              _ _).
+    - intro b.
+      unfold def_inv_first_isomorphism.
+      unfold def_inv_first_isomorphism'.
+      cbn.
+      Locate Trunc_rec.
+      cbn.
+      set (surj0 := surj s b).
+      destruct surj0 as [surj1 sp].
+      generalize dependent sp.
+      generalize dependent surj1.
+      refine (Trunc_ind _ _).
+      intros [a p].
+      intros ptr.
+      exact p.
+    - cbn. intro q.
+      generalize dependent s.
+      refine (carriers_quotient_algebra_ind_hprop A (cong_ker f) e _ _ _).
+      + intros s a. cbn.
+        unfold def_inv_first_isomorphism.
+        destruct (def_inv_first_isomorphism' s (f s a)) as [r p0].
+        cbn in *.
+        strip_truncations.
+        destruct p0 as [a' [p1 p2]].
+        refine (p1^ @ _).
+        apply path_class_quotient_algebra.
+        exact p2.
+      + cbn. intros u α h.
+        assert (IsHomomorphism def_inv_first_isomorphism) by admit.
+        rewrite X.
+        set (h' := path_forall _ _ h).
+        rewrite h'.
+        reflexivity.
+  Abort.
+
+  Global Instance isembedding_first_isomorphism (s : Sort σ)
     : IsEmbedding (hom_first_isomorphism s).
   Proof.
     apply isembedding_isinj_hset.
-    refine (quotient_ind_prop (cong_ker f s) _ _). intro x.
-    refine (quotient_ind_prop (cong_ker f s) _ _). intros y p.
-    apply related_classes_eq.
-    exact (p..1).
-  Qed.
+    intros p q.
+    generalize dependent s.
+    refine (carriers_quotient_algebra_ind_hprop A (cong_ker f) e _ _ _).
+    - intros s a q.
+      + refine (carriers_quotient_algebra_ind_hprop A (cong_ker f) e
+                  (fun s q => forall (a : A s), _) _ _ s q a).
+        * clear q a s.
+          cbn. intros s a b p.
+          apply path_class_quotient_algebra.
+          exact p.
+        * cbn in *.
+          intros u α cs c p.
+          assert ({β | forall i, α i = class_quotient_algebra A (cong_ker f) e (β i)}) by admit.
+          destruct X as [β pβ].
+          rewrite (path_forall _ _ pβ).
+          rewrite path_ops_quotient_algebra.
+          apply path_class_quotient_algebra.
+          unfold cong_ker.
+          cbn.
+          rewrite p.
+          rewrite IsH.
+          f_ap.
+          funext i.
+          rewrite pβ.
+          cbn.
+          reflexivity.
+  Abort.
 
-  Global Instance surjection_first_isomorphism (s : Sort σ)
-    : IsSurjection (hom_first_isomorphism s).
-  Proof.
-    apply BuildIsSurjection.
-    intros [x M].
-    refine (Trunc_rec _ M). intros [y Y].
-    apply tr.
-    exists (class_of _ y).
-    now apply path_sigma_hprop.
-  Qed.
-
+(*
   Global Instance is_isomorphism_first_isomorphism
     : IsIsomorphism hom_first_isomorphism.
   Proof.
@@ -192,16 +280,17 @@ Section first_isomorphism.
   Proof.
     exact (id_isomorphic isomorphic_first_isomorphism).
   Qed.
+*)
 End first_isomorphism.
 
 (** The next section gives a specialization of the first isomorphism
     theorem, where the homomorphism is surjective. *)
-
+(*
 Section first_isomorphism_surjection.
   Context
     `{Univalence} {σ} {A B : Algebra σ}
-    (f : ∀ s, A s → B s) `{!IsHomomorphism f} {S : ∀ s, IsSurjection (f s)}
-    `{!∀ u, IsHSetProjective (Arity (σ u))}.
+    (f : forall s, A s -> B s) `{!IsHomomorphism f} {S : forall s, IsSurjection (f s)}
+    `{!forall u, IsHSetProjective (Arity (σ u))}.
 
   Global Instance is_isomorphism_inc_first_isomorphism_surjection
     : IsIsomorphism (hom_inc_subalgebra B (in_image_hom f)).
@@ -237,8 +326,8 @@ End first_isomorphism_surjection.
 Section first_isomorphism_inj.
   Context
     `{Univalence} {σ} {A B : Algebra σ}
-    (f : ∀ s, A s → B s) `{!IsHomomorphism f} (inj : ∀ s, isinj (f s))
-    `{!∀ u, IsHSetProjective (Arity (σ u))}.
+    (f : forall s, A s -> B s) `{!IsHomomorphism f} (inj : forall s, isinj (f s))
+    `{!forall u, IsHSetProjective (Arity (σ u))}.
 
   Global Instance is_isomorphism_quotient_first_isomorphism_inj
     : IsIsomorphism (hom_quotient (cong_ker f)).

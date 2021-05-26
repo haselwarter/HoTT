@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: integers.v
 Line: 1
-Time: 0.146s">
+Time: 0.134s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -40,8 +40,8 @@ Time: 0.146s">
 </div>
 <div class="code" title="File: integers.v
 Line: 5
-Time: 0.003s">
-<div class="time" style="width: 2.0547945205479%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
 Class IntegersToRing@{i j} (A:Type@{i})
@@ -56,8 +56,8 @@ Arguments integers_to_ring A {_} R {_ _ _ _ _ _} _.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 9
-Time: 0.018s">
-<div class="time" style="width: 12.328767123288%"></div>
+Time: 0.015s">
+<div class="time" style="width: 11.194029850746%"></div>
 <pre>
 
 Class Integers A {Aap:Apart A} {Aplus Amult Azero Aone Anegate Ale Alt}
@@ -78,15 +78,15 @@ Section specializable.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   Context (Z N : Type) `{Integers Z} `{Naturals N}.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 20
-Time: 0.012s">
-<div class="time" style="width: 8.2191780821918%"></div>
+Time: 0.01s">
+<div class="time" style="width: 7.4626865671642%"></div>
 <pre>
 
   Class IntAbs := int_abs_sig : forall x,
@@ -96,7 +96,7 @@ Time: 0.012s">
 <div class="code" title="File: integers.v
 Line: 24
 Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
   Definition int_abs `{ia : IntAbs} (x : Z) : N :=
@@ -107,8 +107,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: integers.v
 Line: 30
-Time: 0.002s">
-<div class="time" style="width: 1.3698630136986%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
   Definition int_to_nat `{Zero N} `{ia : IntAbs} (x : Z) : N :=
@@ -120,7 +120,7 @@ Time: 0.002s">
 <div class="code" title="File: integers.v
 Line: 36
 Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 End specializable.</pre>
 </div>

@@ -24,7 +24,7 @@
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="HoTT.HProp.html#"><span class="id" title="library">HProp</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Generalizable</span> <span class="id" title="keyword">Variables</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.<br/>
+<span class="id" title="keyword">Generalizable Variables</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.<br/>
 
 <br/>
 
@@ -37,7 +37,7 @@
 &nbsp;&nbsp;; <a id="tight_apart" class="idref" href="#tight_apart"><span class="id" title="projection">tight_apart</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:8" class="idref" href="#x:8"><span class="id" title="binder">x</span></a> <a id="y:9" class="idref" href="#y:9"><span class="id" title="binder">y</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#63a68285c81db8f9bc456233bb9ed181"><span class="id" title="notation">~(</span></a><a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#x:8"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#670ea3ea8354d970116be861b7880a1b"><span class="id" title="notation">≶</span></a> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#y:9"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Basics.Overture.html#63a68285c81db8f9bc456233bb9ed181"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">↔</span></a> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#x:8"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#y:9"><span class="id" title="variable">y</span></a> }.<br/>
 
 <br/>
-<span class="id" title="keyword">Instance</span> <a id="apart_irrefl" class="idref" href="#apart_irrefl"><span class="id" title="instance">apart_irrefl</span></a> `{<a id="H:13" class="idref" href="#H:13"><span class="id" title="binder">IsApart</span></a> <a id="H:13" class="idref" href="#H:13"><span class="id" title="binder">A</span></a>} : <a class="idref" href="HoTT.Basics.Overture.html#Irreflexive"><span class="id" title="class">Irreflexive</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#298aff1a65b758e847772f38ce6d28c4"><span class="id" title="notation">(≶)</span></a>.<br/>
+<span class="id" title="keyword">Global Instance</span> <a id="apart_irrefl" class="idref" href="#apart_irrefl"><span class="id" title="instance">apart_irrefl</span></a> `{<a id="H:13" class="idref" href="#H:13"><span class="id" title="binder">IsApart</span></a> <a id="H:13" class="idref" href="#H:13"><span class="id" title="binder">A</span></a>} : <a class="idref" href="HoTT.Basics.Overture.html#Irreflexive"><span class="id" title="class">Irreflexive</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#298aff1a65b758e847772f38ce6d28c4"><span class="id" title="notation">(≶)</span></a>.<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">ap</span>.<br/>
 <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#tight_apart"><span class="id" title="method">tight_apart</span></a> <span class="id" title="var">x</span> <span class="id" title="var">x</span>).<br/>
@@ -46,7 +46,7 @@
 <span class="id" title="keyword">Qed</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#tight_apart"><span class="id" title="method">tight_apart</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">Aap</span> <span class="id" title="var">IsApart</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#tight_apart"><span class="id" title="method">tight_apart</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">Aap</span> <span class="id" title="var">IsApart</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="setoid_morphisms" class="idref" href="#setoid_morphisms"><span class="id" title="section">setoid_morphisms</span></a>.<br/>
@@ -72,7 +72,7 @@
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="upper_classes" class="idref" href="#upper_classes"><span class="id" title="section">upper_classes</span></a>.<br/>
-&nbsp;&nbsp;<span class="id" title="var">Universe</span> <span class="id" title="var">i</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Universe</span> <span class="id" title="var">i</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Context</span> (<a id="A:36" class="idref" href="#A:36"><span class="id" title="binder">A</span></a> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}).<br/>
 
 <br/>
@@ -191,10 +191,10 @@
 <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Extern</span> 10 (<a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#IsRing"><span class="id" title="class">IsRing</span></a> <span class="id" title="var">_</span>) ⇒ <span class="id" title="tactic">apply</span> @<a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#intdom_ring"><span class="id" title="method">intdom_ring</span></a> : <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#recip_inverse"><span class="id" title="method">recip_inverse</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">Aplus</span> <span class="id" title="var">Amult</span> <span class="id" title="var">Azero</span> <span class="id" title="var">Aone</span> <span class="id" title="var">Anegate</span> <span class="id" title="var">Aap</span> <span class="id" title="var">Arecip</span> <span class="id" title="var">IsField</span>} <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#dec_recip_inverse"><span class="id" title="method">dec_recip_inverse</span></a><br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#recip_inverse"><span class="id" title="method">recip_inverse</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">Aplus</span> <span class="id" title="var">Amult</span> <span class="id" title="var">Azero</span> <span class="id" title="var">Aone</span> <span class="id" title="var">Anegate</span> <span class="id" title="var">Aap</span> <span class="id" title="var">Arecip</span> <span class="id" title="var">IsField</span>} <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#dec_recip_inverse"><span class="id" title="method">dec_recip_inverse</span></a><br/>
 &nbsp;&nbsp;{<span class="id" title="var">A</span> <span class="id" title="var">Aplus</span> <span class="id" title="var">Amult</span> <span class="id" title="var">Azero</span> <span class="id" title="var">Aone</span> <span class="id" title="var">Anegate</span> <span class="id" title="var">Adec_recip</span> <span class="id" title="var">IsDecField</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#dec_recip_0"><span class="id" title="method">dec_recip_0</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">Aplus</span> <span class="id" title="var">Amult</span> <span class="id" title="var">Azero</span> <span class="id" title="var">Aone</span> <span class="id" title="var">Anegate</span> <span class="id" title="var">Adec_recip</span> <span class="id" title="var">IsDecField</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#dec_recip_0"><span class="id" title="method">dec_recip_0</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">Aplus</span> <span class="id" title="var">Amult</span> <span class="id" title="var">Azero</span> <span class="id" title="var">Aone</span> <span class="id" title="var">Anegate</span> <span class="id" title="var">Adec_recip</span> <span class="id" title="var">IsDecField</span>}.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a id="lattice" class="idref" href="#lattice"><span class="id" title="section">lattice</span></a>.<br/>

@@ -1618,12 +1618,12 @@
           
 
             i = 320;
-            data = "1 goal (ID 1158)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e + L2 * e) (f u1 u2) (f v1 v2)	";
+            data = "";
             responses[i]=data;
           
 
             i = 321;
-            data = "2 goals (ID 1164)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e) (f u1 u2) (f u1 v2)		goal 2 (ID 1165) is:	 close (L2 * e) (f u1 v2) (f v1 v2)	";
+            data = "1 goal (ID 1158)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e + L2 * e) (f u1 u2) (f v1 v2)	2 goals (ID 1164)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e) (f u1 u2) (f u1 v2)		goal 2 (ID 1165) is:	 close (L2 * e) (f u1 v2) (f v1 v2)	";
             responses[i]=data;
           
 
@@ -2353,12 +2353,12 @@
           
 
             i = 467;
-            data = "1 goal (ID 1430)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  a, b : A	  E : a ≤ b	  x : A	  E' : a ≤ x ≤ b	  ============================	  (a ⊔ (x ⊓ b); (join_ub_l a (x ⊓ b), join_le a (x ⊓ b) b E (meet_lb_r x b))).1 =	  (x; E').1	";
+            data = "";
             responses[i]=data;
           
 
             i = 468;
-            data = "1 goal (ID 1431)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  a, b : A	  E : a ≤ b	  x : A	  E' : a ≤ x ≤ b	  ============================	  a ⊔ (x ⊓ b) = x	";
+            data = "1 goal (ID 1430)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  a, b : A	  E : a ≤ b	  x : A	  E' : a ≤ x ≤ b	  ============================	  (a ⊔ (x ⊓ b); (join_ub_l a (x ⊓ b), join_le a (x ⊓ b) b E (meet_lb_r x b))).1 =	  (x; E').1	1 goal (ID 1431)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  a, b : A	  E : a ≤ b	  x : A	  E' : a ≤ x ≤ b	  ============================	  a ⊔ (x ⊓ b) = x	";
             responses[i]=data;
           
 
@@ -2438,12 +2438,12 @@
           
 
             i = 484;
-            data = "1 goal (ID 1511)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  H : Closeness A	  PreMetric0 : PreMetric A	  a, b : A	  u, v : Interval a b	  E : forall e : Q+, close e u v	  ============================	  u.1 = v.1	";
+            data = "";
             responses[i]=data;
           
 
             i = 485;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 254) is:	 Triangular (Interval a b)	goal 2 (ID 255) is:	 Rounded (Interval a b)	";
+            data = "1 goal (ID 1511)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  H : Closeness A	  PreMetric0 : PreMetric A	  a, b : A	  u, v : Interval a b	  E : forall e : Q+, close e u v	  ============================	  u.1 = v.1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 254) is:	 Triangular (Interval a b)	goal 2 (ID 255) is:	 Rounded (Interval a b)	";
             responses[i]=data;
           
 
@@ -2773,12 +2773,12 @@
           
 
             i = 551;
-            data = "1 goal (ID 783)	  	  funext : Funext	  univalence : Univalence	  q, r : Q	  e : Q+	  E1 : - ' e < q - r	  E1' : q - r < ' e	  s : Q	  n : Q+	  E2 : s - q < ' n	  E2' : q - s < ' n	  E : q - r + (s - q) < ' e + ' n	  Hrw : s - r = q - r + (s - q)	  ============================	  s - r < ' (e + n)	";
+            data = "";
             responses[i]=data;
           
 
             i = 552;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 299) is:	 r - s < ' (e + n)	";
+            data = "1 goal (ID 783)	  	  funext : Funext	  univalence : Univalence	  q, r : Q	  e : Q+	  E1 : - ' e < q - r	  E1' : q - r < ' e	  s : Q	  n : Q+	  E2 : s - q < ' n	  E2' : q - s < ' n	  E : q - r + (s - q) < ' e + ' n	  Hrw : s - r = q - r + (s - q)	  ============================	  s - r < ' (e + n)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 299) is:	 r - s < ' (e + n)	";
             responses[i]=data;
           
 
@@ -2798,12 +2798,12 @@
           
 
             i = 556;
-            data = "1 goal (ID 1671)	  	  funext : Funext	  univalence : Univalence	  q, r : Q	  e : Q+	  E1 : r - q < ' e	  E1' : q - r < ' e	  s : Q	  n : Q+	  E2 : - ' n < q - s	  E2' : q - s < ' n	  E : r - q + (q - s) < ' e + ' n	  Hrw : r - s = r - q + (q - s)	  ============================	  r - s < ' (e + n)	";
+            data = "";
             responses[i]=data;
           
 
             i = 557;
-            data = "No more goals.	";
+            data = "1 goal (ID 1671)	  	  funext : Funext	  univalence : Univalence	  q, r : Q	  e : Q+	  E1 : r - q < ' e	  E1' : q - r < ' e	  s : Q	  n : Q+	  E2 : - ' n < q - s	  E2' : q - s < ' n	  E : r - q + (q - s) < ' e + ' n	  Hrw : r - s = r - q + (q - s)	  ============================	  r - s < ' (e + n)	No more goals.	";
             responses[i]=data;
           
 
@@ -4360,7 +4360,7 @@
       " onmouseover="
       mouseover(9, '0_3_3');
       "><br>
-<span class="id" title="keyword">Generalizable</span> <span class="id" title="keyword">Variables</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Generalizable Variables</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(10, '0_3_3');
@@ -4626,7 +4626,7 @@
       " onmouseover="
       mouseover(55, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#rounded_le"><span class="id" title="definition">rounded_le</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">_</span> <span class="id" title="var">d</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#rounded_le"><span class="id" title="definition">rounded_le</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">_</span> <span class="id" title="var">d</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(56, '0_3_3');
@@ -4637,7 +4637,7 @@
       " onmouseover="
       mouseover(57, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span> <span class="id" title="var">UB</span> <span class="id" title="var">i</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span> <span class="id" title="var">UB</span> <span class="id" title="var">i</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(58, '0_3_3');
@@ -4861,7 +4861,7 @@
       " onmouseover="
       mouseover(97, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#close_prod_rounded"><span class="id" title="definition">close_prod_rounded</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#close_prod_rounded"><span class="id" title="definition">close_prod_rounded</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(98, '0_3_3');
@@ -5266,7 +5266,7 @@
       " onmouseover="
       mouseover(178, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#arrow_lim"><span class="id" title="instance">arrow_lim</span></a> <span class="id" title="var">_</span> / <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#arrow_lim"><span class="id" title="instance">arrow_lim</span></a> <span class="id" title="var">_</span> / <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(179, '0_3_3');
@@ -5355,7 +5355,7 @@
       " onmouseover="
       mouseover(195, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#non_expanding"><span class="id" title="definition">non_expanding</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#non_expanding"><span class="id" title="definition">non_expanding</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(196, '0_3_3');
@@ -5367,7 +5367,7 @@
       " onmouseover="
       mouseover(197, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#lipschitz"><span class="id" title="definition">lipschitz</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">L</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#lipschitz"><span class="id" title="definition">lipschitz</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">L</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(198, '0_3_3');
@@ -5379,7 +5379,7 @@
       " onmouseover="
       mouseover(199, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#uniform"><span class="id" title="definition">uniform</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">mu</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#uniform"><span class="id" title="definition">uniform</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">mu</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(200, '0_3_3');
@@ -5395,7 +5395,7 @@
       " onmouseover="
       mouseover(201, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#continuous"><span class="id" title="definition">continuous</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#continuous"><span class="id" title="definition">continuous</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(202, '0_3_3');
@@ -5424,7 +5424,7 @@
       " onmouseover="
       mouseover(206, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(207, '0_3_3');
@@ -5477,7 +5477,7 @@
       mouseover(216, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(217, '0_3_3');
@@ -5707,7 +5707,7 @@
       " onmouseover="
       mouseover(259, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(260, '0_3_3');
@@ -5717,7 +5717,7 @@
       " onmouseover="
       mouseover(261, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(262, '0_3_3');
@@ -5727,7 +5727,7 @@
       " onmouseover="
       mouseover(263, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(264, '0_3_3');
@@ -5981,7 +5981,7 @@
       " onmouseover="
       mouseover(309, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(310, '0_3_3');
@@ -5991,7 +5991,7 @@
       " onmouseover="
       mouseover(311, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(312, '0_3_3');
@@ -6001,7 +6001,7 @@
       " onmouseover="
       mouseover(313, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(314, '0_3_3');
@@ -6166,7 +6166,7 @@
       " onmouseover="
       mouseover(344, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(345, '0_3_3');
@@ -6176,7 +6176,7 @@
       " onmouseover="
       mouseover(346, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(347, '0_3_3');
@@ -6303,7 +6303,7 @@
       " onmouseover="
       mouseover(370, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(371, '0_3_3');
@@ -6313,7 +6313,7 @@
       " onmouseover="
       mouseover(372, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(373, '0_3_3');
@@ -6368,7 +6368,7 @@
       mouseover(382, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(383, '0_3_3');
@@ -6434,7 +6434,7 @@
       " onmouseover="
       mouseover(394, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(395, '0_3_3');
@@ -6444,7 +6444,7 @@
       " onmouseover="
       mouseover(396, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UB</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(397, '0_3_3');
@@ -6454,7 +6454,7 @@
       " onmouseover="
       mouseover(398, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UC</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(399, '0_3_3');
@@ -6464,7 +6464,7 @@
       " onmouseover="
       mouseover(400, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UD</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UD</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(401, '0_3_3');
@@ -6508,7 +6508,7 @@
       " onmouseover="
       mouseover(408, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_nonexpanding"><span class="id" title="definition">map2_nonexpanding</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_nonexpanding"><span class="id" title="definition">map2_nonexpanding</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(409, '0_3_3');
@@ -6591,7 +6591,7 @@
       " onmouseover="
       mouseover(424, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_lipschitz"><span class="id" title="definition">map2_lipschitz</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">Lf</span> <span class="id" title="var">Lg</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_lipschitz"><span class="id" title="definition">map2_lipschitz</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">Lf</span> <span class="id" title="var">Lg</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(425, '0_3_3');
@@ -6692,7 +6692,7 @@
       " onmouseover="
       mouseover(444, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_continuous"><span class="id" title="definition">map2_continuous</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">u</span> <span class="id" title="var">e</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_continuous"><span class="id" title="definition">map2_continuous</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">u</span> <span class="id" title="var">e</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(445, '0_3_3');
@@ -6714,7 +6714,7 @@
       " onmouseover="
       mouseover(448, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span> <span class="id" title="var">UALE</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span> <span class="id" title="var">UALE</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(449, '0_3_3');
@@ -6848,7 +6848,7 @@
       " onmouseover="
       mouseover(473, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Interval_close"><span class="id" title="instance">Interval_close</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> /.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Interval_close"><span class="id" title="instance">Interval_close</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> /.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(474, '0_3_3');
@@ -8115,7 +8115,7 @@
       " onmouseover="
       mouseover(726, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Qpos_upper_close"><span class="id" title="instance">Qpos_upper_close</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> /.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Qpos_upper_close"><span class="id" title="instance">Qpos_upper_close</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> /.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(727, '0_3_3');
@@ -8307,7 +8307,7 @@
       " onmouseover="
       mouseover(764, '0_3_3');
       "><br>
-<span class="id" title="var">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Universe</span> <span class="id" title="var">UA</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(765, '0_3_3');
@@ -8640,93 +8640,93 @@
       mouseover(828, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#rounded_le"><span class="id" title="definition">rounded_le</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">_</span> <span class="id" title="var">d</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#rounded_le"><span class="id" title="definition">rounded_le</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">_</span> <span class="id" title="var">d</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(829, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#non_expanding"><span class="id" title="definition">non_expanding</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#non_expanding"><span class="id" title="definition">non_expanding</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(830, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#lipschitz"><span class="id" title="definition">lipschitz</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">L</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#lipschitz"><span class="id" title="definition">lipschitz</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">L</span> {<span class="id" title="var">_</span> <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(831, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#uniform"><span class="id" title="definition">uniform</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">mu</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#uniform"><span class="id" title="definition">uniform</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">mu</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(832, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#continuous"><span class="id" title="definition">continuous</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#continuous"><span class="id" title="definition">continuous</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(833, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_nonexpanding"><span class="id" title="definition">map2_nonexpanding</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">C</span> <span class="id" title="var">_</span> <span class="id" title="var">D</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_nonexpanding"><span class="id" title="definition">map2_nonexpanding</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">C</span> <span class="id" title="var">_</span> <span class="id" title="var">D</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(834, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_lipschitz"><span class="id" title="definition">map2_lipschitz</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">C</span> <span class="id" title="var">_</span> <span class="id" title="var">D</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">Lf</span> <span class="id" title="var">Lg</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_lipschitz"><span class="id" title="definition">map2_lipschitz</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">C</span> <span class="id" title="var">_</span> <span class="id" title="var">D</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">Lf</span> <span class="id" title="var">Lg</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">e</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">xi</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(835, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_continuous"><span class="id" title="definition">map2_continuous</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">C</span> <span class="id" title="var">_</span> <span class="id" title="var">D</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">u</span> <span class="id" title="var">e</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#map2_continuous"><span class="id" title="definition">map2_continuous</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">C</span> <span class="id" title="var">_</span> <span class="id" title="var">D</span> <span class="id" title="var">_</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">u</span> <span class="id" title="var">e</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(836, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Interval_close"><span class="id" title="instance">Interval_close</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> /.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Interval_close"><span class="id" title="instance">Interval_close</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> /.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(837, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Lim"><span class="id" title="class">Lim</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Lim"><span class="id" title="class">Lim</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(838, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#lim"><span class="id" title="definition">lim</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#lim"><span class="id" title="definition">lim</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(839, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Approximation"><span class="id" title="record">Approximation</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Approximation"><span class="id" title="record">Approximation</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(840, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Build_Approximation"><span class="id" title="constructor">Build_Approximation</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#Build_Approximation"><span class="id" title="constructor">Build_Approximation</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(841, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#approximate"><span class="id" title="projection">approximate</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#approximate"><span class="id" title="projection">approximate</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(842, '0_3_3');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#approx_equiv"><span class="id" title="projection">approx_equiv</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#approx_equiv"><span class="id" title="projection">approx_equiv</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(843, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#CauchyComplete"><span class="id" title="class">CauchyComplete</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>}.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#CauchyComplete"><span class="id" title="class">CauchyComplete</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>}.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(844, '0_3_3');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#arrow_lim"><span class="id" title="instance">arrow_lim</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> / <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Classes.theory.premetric.html#arrow_lim"><span class="id" title="instance">arrow_lim</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> / <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(845, '0_3_3');

@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.033s">
+Time: 0.027s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Interval.v
 Line: 4
-Time: 0.01s">
-<div class="time" style="width: 30.30303030303%"></div>
+Time: 0.007s">
+<div class="time" style="width: 25.925925925926%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall Types.Paths.</pre>
 </div>
@@ -136,7 +136,7 @@ reflexivity.
 <div class="code" title="File: Interval.v
 Line: 38
 Time: 0.001s">
-<div class="time" style="width: 3.030303030303%"></div>
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>Definition interval_rec (P : Type) (a b : P) (p : a = b)
   : interval -&gt; P
   := interval_ind (fun _ =&gt; P) a b (transport_const _ _ @ p).</pre>
@@ -167,7 +167,7 @@ Time: 0s">
 <div class="code" title="File: Interval.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 3.030303030303%"></div>
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
   refine ((apD_const (interval_ind (fun _ =&gt; P) a b _) seg)^ @ _).</pre>
 </div>
@@ -180,8 +180,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Interval.v
 Line: 47
-Time: 0.002s">
-<div class="time" style="width: 6.0606060606061%"></div>
+Time: 0.003s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
 Defined.</pre>
 </div>

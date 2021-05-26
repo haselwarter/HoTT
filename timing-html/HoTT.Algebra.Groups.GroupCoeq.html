@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: GroupCoeq.v
 Line: 1
-Time: 0.07s">
-<div class="time" style="width: 15.590200445434%"></div>
+Time: 0.068s">
+<div class="time" style="width: 13.991769547325%"></div>
 <pre>Require Import Basics Types WildCat.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 1
-Time: 0.074s">
-<div class="time" style="width: 16.481069042316%"></div>
+Time: 0.071s">
+<div class="time" style="width: 14.609053497942%"></div>
 <pre>
 Require Import Algebra.Groups.Group.</pre>
 </div>
@@ -50,8 +50,8 @@ Require Import HIT.Coeq.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 3
-Time: 0.004s">
-<div class="time" style="width: 0.89086859688196%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.61728395061728%"></div>
 <pre>
 Require Import Algebra.Groups.FreeProduct.</pre>
 </div>
@@ -95,8 +95,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 11
-Time: 0.001s">
-<div class="time" style="width: 0.22271714922049%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   rapply (AmalgamatedFreeProduct (FreeProduct A A) A B).</pre>
 </div>
@@ -169,7 +169,7 @@ Defined.</pre>
 <div class="code" title="File: GroupCoeq.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 0.44543429844098%"></div>
+<div class="time" style="width: 0.41152263374486%"></div>
 <pre>
 
 Definition equiv_groupcoeq_rec `{Funext} {A B C : Group} (f g : GroupHomomorphism A B)
@@ -185,7 +185,7 @@ Proof.</pre>
 <div class="code" title="File: GroupCoeq.v
 Line: 22
 Time: 0.001s">
-<div class="time" style="width: 0.22271714922049%"></div>
+<div class="time" style="width: 0.20576131687243%"></div>
 <pre>
   refine (equiv_amalgamatedfreeproduct_rec _ _ _ _ _ _ oE _).</pre>
 </div>
@@ -213,7 +213,7 @@ Time: 0s">
 <div class="code" title="File: GroupCoeq.v
 Line: 26
 Time: 0.004s">
-<div class="time" style="width: 0.89086859688196%"></div>
+<div class="time" style="width: 0.82304526748971%"></div>
 <pre>
   snrapply equiv_adjointify.</pre>
 </div>
@@ -261,21 +261,21 @@ Time: 0s">
 <div class="code" title="File: GroupCoeq.v
 Line: 32
 Time: 0.052s">
-<div class="time" style="width: 11.581291759465%"></div>
+<div class="time" style="width: 10.699588477366%"></div>
 <pre>
     rapply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 0.22271714922049%"></div>
+<div class="time" style="width: 0.20576131687243%"></div>
 <pre>
     srapply Coeq_ind.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 34
-Time: 0.027s">
-<div class="time" style="width: 6.0133630289532%"></div>
+Time: 0.026s">
+<div class="time" style="width: 5.3497942386831%"></div>
 <pre>
     2: intros; apply path_ishprop.</pre>
 </div>
@@ -294,50 +294,50 @@ Time: 0s">
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 0.44543429844098%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.20576131687243%"></div>
 <pre>
     induction w.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 37
 Time: 0.044s">
-<div class="time" style="width: 9.7995545657016%"></div>
+<div class="time" style="width: 9.0534979423868%"></div>
 <pre>
     1: apply ap, grp_homo_unit.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 38
-Time: 0.01s">
-<div class="time" style="width: 2.2271714922049%"></div>
+Time: 0.009s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 0.22271714922049%"></div>
+<div class="time" style="width: 0.20576131687243%"></div>
 <pre>
     destruct a as [a|a].</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 0.22271714922049%"></div>
+<div class="time" style="width: 0.20576131687243%"></div>
 <pre>
     1,2: refine (ap _ (grp_homo_op _ _ _) @ _).</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 41
-Time: 0.04s">
-<div class="time" style="width: 8.9086859688196%"></div>
+Time: 0.041s">
+<div class="time" style="width: 8.4362139917695%"></div>
 <pre>
     1,2: refine (grp_homo_op _ _ _ @ _ @ (grp_homo_op _ _ _)^); f_ap.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 0.22271714922049%"></div>
+<div class="time" style="width: 0.20576131687243%"></div>
 <pre>
     symmetry.</pre>
 </div>
@@ -383,15 +383,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 47
-Time: 0.013s">
-<div class="time" style="width: 2.8953229398664%"></div>
+Time: 0.012s">
+<div class="time" style="width: 2.4691358024691%"></div>
 <pre>
     simpl in q1, q2.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 48
-Time: 0.016s">
-<div class="time" style="width: 3.5634743875278%"></div>
+Time: 0.018s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
     rewrite 2 right_identity in q1, q2.</pre>
 </div>
@@ -417,20 +417,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 51
-Time: 0.003s">
-<div class="time" style="width: 0.66815144766147%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.41152263374486%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 51
-Time: 0.112s">
-<div class="time" style="width: 24.944320712695%"></div>
+Time: 0.12s">
+<div class="time" style="width: 24.691358024691%"></div>
 <pre> intros [k p].</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 51
-Time: 0.044s">
-<div class="time" style="width: 9.7995545657016%"></div>
+Time: 0.049s">
+<div class="time" style="width: 10.082304526749%"></div>
 <pre>
     apply path_sigma_hprop.</pre>
 </div>
@@ -465,14 +465,14 @@ Time: 0s">
 <div class="code" title="File: GroupCoeq.v
 Line: 56
 Time: 0.006s">
-<div class="time" style="width: 1.3363028953229%"></div>
+<div class="time" style="width: 1.2345679012346%"></div>
 <pre>
     simpl in q1.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 57
-Time: 0.021s">
-<div class="time" style="width: 4.6770601336303%"></div>
+Time: 0.024s">
+<div class="time" style="width: 4.9382716049383%"></div>
 <pre>
     rewrite 2 right_identity in q1.</pre>
 </div>
@@ -491,14 +491,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 59
-Time: 0.043s">
-<div class="time" style="width: 9.5768374164811%"></div>
+Time: 0.046s">
+<div class="time" style="width: 9.4650205761317%"></div>
 <pre>
   hnf; intros; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: GroupCoeq.v
 Line: 60
-Time: 0.449s">
+Time: 0.486s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>

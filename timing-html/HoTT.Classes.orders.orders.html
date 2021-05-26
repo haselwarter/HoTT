@@ -30,13 +30,13 @@ pre {
 
 <div class="code" title="File: orders.v
 Line: 1
-Time: 0.023s">
-<div class="time" style="width: 20%"></div>
+Time: 0.022s">
+<div class="time" style="width: 21.56862745098%"></div>
 <pre>Require Import HoTT.Basics.Decidable HoTT.Basics.Trunc.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 1
-Time: 0.115s">
+Time: 0.102s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import
@@ -90,8 +90,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 13
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma le_flip `{Le A} `{!TotalRelation (≤)} x y : ~(y ≤ x) -&gt; x ≤ y.</pre>
@@ -113,7 +113,7 @@ intros nle.</pre>
 <div class="code" title="File: orders.v
 Line: 17
 Time: 0.009s">
-<div class="time" style="width: 7.8260869565217%"></div>
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
 destruct (total _ x y) as [?|le];auto.</pre>
 </div>
@@ -178,7 +178,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   apply reflexivity.</pre>
 </div>
@@ -221,7 +221,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 35
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   apply reflexivity.</pre>
 </div>
@@ -234,8 +234,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 37
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma not_le_ne x y : ~(x ≤ y) -&gt; x &lt;&gt; y.</pre>
@@ -270,8 +270,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 43
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   apply reflexivity.</pre>
 </div>
@@ -285,7 +285,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Lemma eq_iff_le x y : x = y &lt;-&gt; x ≤ y /\ y ≤ x.</pre>
@@ -320,7 +320,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 50
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> split;apply reflexivity.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -333,7 +333,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 51
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply (antisymmetry (≤) x y);apply E.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -397,7 +397,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 61
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   transitivity y;assumption.</pre>
 </div>
@@ -567,8 +567,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 88
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (irreflexivity (&lt;)).</pre>
 </div>
@@ -611,8 +611,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma apart_total_lt x y : x ≶ y -&gt; x &lt; y |_| y &lt; x.</pre>
@@ -654,8 +654,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 103
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma pseudo_order_lt_apart x y : x &lt; y -&gt; x ≶ y.</pre>
@@ -698,7 +698,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 110
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
 
   Lemma pseudo_order_lt_apart_flip x y : x &lt; y -&gt; y ≶ x.</pre>
@@ -719,8 +719,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 114
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply apart_iff_total_lt.</pre>
 </div>
@@ -740,8 +740,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 117
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma not_lt_apart_lt_flip x y : ~(x &lt; y) -&gt; x ≶ y -&gt; y &lt; x.</pre>
@@ -762,8 +762,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 121
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply apart_iff_total_lt in neq.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -808,8 +808,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 125
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Lemma pseudo_order_cotrans_twice x₁ y₁ x₂ y₂
@@ -832,7 +832,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 130
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.921568627451%"></div>
 <pre>
   apply (merely_destruct (cotransitive E1 x₂));intros [?|E2];
   try solve [apply tr;auto].</pre>
@@ -840,21 +840,21 @@ Time: 0.004s">
 <div class="code" title="File: orders.v
 Line: 132
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   apply (merely_destruct (cotransitive E2 y₂));intros [?|?];apply tr;auto.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 133
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 134
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Lemma pseudo_order_lt_ext x₁ y₁ x₂ y₂ : x₁ &lt; y₁ -&gt;
@@ -877,7 +877,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 139
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.9019607843137%"></div>
 <pre>
   apply (merely_destruct (pseudo_order_cotrans_twice x₁ y₁ x₂ y₂ E));
   intros [?|[?|?]];apply tr;
@@ -885,8 +885,8 @@ Time: 0.005s">
 </div>
 <div class="code" title="File: orders.v
 Line: 142
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -921,8 +921,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 148
-Time: 0.015s">
-<div class="time" style="width: 13.04347826087%"></div>
+Time: 0.013s">
+<div class="time" style="width: 12.745098039216%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -960,15 +960,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 151
-Time: 0.014s">
-<div class="time" style="width: 12.173913043478%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.8039215686275%"></div>
 <pre>
     apply (merely_destruct (cotransitive E1 z));intros [?|?]; trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 152
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
     destruct (pseudo_order_antisym y z); auto.</pre>
 </div>
@@ -1011,7 +1011,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 159
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   apply (merely_destruct (cotransitive E3 y));
   intros [?|?]; contradiction.</pre>
@@ -1047,8 +1047,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 166
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   apply tight_apart.</pre>
 </div>
@@ -1060,28 +1060,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 167
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply apart_iff_total_lt in nap.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 167
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   destruct nap;auto.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 168
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 169
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Lemma ne_total_lt `{!TrivialApart A} x y : x &lt;&gt; y -&gt; x &lt; y |_| y &lt; x.</pre>
@@ -1096,7 +1096,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 172
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   intros neq;apply trivial_apart in neq.</pre>
 </div>
@@ -1145,29 +1145,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 180
-Time: 0.015s">
-<div class="time" style="width: 13.04347826087%"></div>
+Time: 0.013s">
+<div class="time" style="width: 12.745098039216%"></div>
 <pre>
   destruct (dec (x = y)) as [?|?]; try auto.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 181
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   destruct (ne_total_lt x y); auto.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 182
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 183
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
 End pseudo_order.</pre>
 </div>
@@ -1206,8 +1206,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 193
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Instance strict_po_apart_ne x y : PropHolds (x ≶ y) -&gt; PropHolds (x &lt;&gt; y).</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1220,7 +1220,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 194
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   intros; apply _.</pre>
 </div>
@@ -1248,8 +1248,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 199
-Time: 0.069s">
-<div class="time" style="width: 60%"></div>
+Time: 0.066s">
+<div class="time" style="width: 64.705882352941%"></div>
 <pre>
   split; try apply _.</pre>
 </div>
@@ -1287,8 +1287,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 202
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros E;apply lt_iff_le_apart in E.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1301,7 +1301,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 203
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
     apply (irreflexivity (≶) x).</pre>
 </div>
@@ -1343,8 +1343,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 210
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   apply lt_iff_le_apart.</pre>
 </div>
@@ -1435,7 +1435,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 223
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   apply lt_iff_le_apart.</pre>
 </div>
@@ -1477,8 +1477,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 230
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   apply symmetry, lt_iff_le_apart.</pre>
 </div>
@@ -1513,8 +1513,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 236
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   intros E1 E2;apply lt_iff_le_apart in E2.</pre>
 </div>
@@ -1535,13 +1535,13 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 239
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply tight_apart.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 239
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   apply (antisymmetry (≤));assumption.</pre>
 </div>
@@ -1613,14 +1613,14 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 251
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   apply lt_iff_le_apart.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 252
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply lt_iff_le_apart in E1.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1646,8 +1646,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 255
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.9019607843137%"></div>
 <pre> transitivity y;assumption.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1660,7 +1660,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 256
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.921568627451%"></div>
 <pre> apply (merely_destruct (cotransitive E1b z));intros [E3 | E3]; trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1673,13 +1673,13 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 257
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply symmetry in E3.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 257
-Time: 0.009s">
-<div class="time" style="width: 7.8260869565217%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.8039215686275%"></div>
 <pre>
     transitivity y;apply lt_iff_le_apart; auto.</pre>
 </div>
@@ -1715,7 +1715,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 263
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   apply lt_iff_le_apart.</pre>
 </div>
@@ -1749,7 +1749,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 267
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.9019607843137%"></div>
 <pre> transitivity y;auto.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1762,7 +1762,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 268
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.921568627451%"></div>
 <pre> apply (merely_destruct (cotransitive E1b x));intros [E3 | E3]; trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1775,13 +1775,13 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 269
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply symmetry in E3.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 269
-Time: 0.009s">
-<div class="time" style="width: 7.8260869565217%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.8039215686275%"></div>
 <pre>
     transitivity y; apply lt_iff_le_apart; auto.</pre>
 </div>
@@ -1810,7 +1810,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 274
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
    transitivity (x &lt;= y /\ apart x y).</pre>
 </div>
@@ -1837,7 +1837,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 277
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre> split;intros [E1 E2];split;trivial;apply trivial_apart;trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1849,8 +1849,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 278
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Lemma le_equiv_lt `{!TrivialApart A} `{forall x y : A, Decidable (x = y)} x y
@@ -1872,8 +1872,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 283
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   destruct (dec (x = y)); try auto.</pre>
 </div>
@@ -1887,7 +1887,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 285
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   apply lt_iff_le_ne; auto.</pre>
 </div>
@@ -1924,7 +1924,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 292
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   destruct (decide_rel (&lt;=) x y) as [E1|E1];
   [destruct (decide_rel (&lt;=) y x) as [E2|E2]|].</pre>
@@ -1945,7 +1945,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 295
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre> apply (antisymmetry (&lt;=));assumption.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -1983,7 +1983,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 297
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
     apply reflexivity.</pre>
 </div>
@@ -2016,7 +2016,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 300
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
     apply reflexivity.</pre>
 </div>
@@ -2052,8 +2052,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 307
-Time: 0.016s">
-<div class="time" style="width: 13.913043478261%"></div>
+Time: 0.018s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
   destruct (dec (x ≤ y));
   [destruct (dec (x = y))|].</pre>
@@ -2142,8 +2142,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 313
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 End full_partial_order.</pre>
 </div>
@@ -2278,8 +2278,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 341
-Time: 0.011s">
-<div class="time" style="width: 9.5652173913043%"></div>
+Time: 0.013s">
+<div class="time" style="width: 12.745098039216%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2291,8 +2291,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 342
-Time: 0.024s">
-<div class="time" style="width: 20.869565217391%"></div>
+Time: 0.021s">
+<div class="time" style="width: 20.588235294118%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2311,7 +2311,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 343
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply not_lt_le_flip, (irreflexivity (&lt;)).</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2330,7 +2330,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 344
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
     apply le_iff_not_lt_flip;
     apply le_iff_not_lt_flip in E1;
@@ -2345,8 +2345,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 348
-Time: 0.008s">
-<div class="time" style="width: 6.9565217391304%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
     transitivity y;assumption.</pre>
 </div>
@@ -2366,15 +2366,15 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 350
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
     apply le_iff_not_lt_flip in E1;
     apply le_iff_not_lt_flip in E2.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 352
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.921568627451%"></div>
 <pre>
     apply (antisymmetry (complement (&lt;)));assumption.</pre>
 </div>
@@ -2403,7 +2403,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 357
 Time: 0.009s">
-<div class="time" style="width: 7.8260869565217%"></div>
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
   split; try apply _.</pre>
 </div>
@@ -2493,8 +2493,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 364
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply not_lt_apart_lt_flip;[|symmetry;trivial].</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2583,8 +2583,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 376
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   intros E';apply le_iff_not_lt_flip in E';auto.</pre>
 </div>
@@ -2613,7 +2613,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 381
 Time: 0.01s">
-<div class="time" style="width: 8.695652173913%"></div>
+<div class="time" style="width: 9.8039215686275%"></div>
 <pre>
   destruct (trichotomy (&lt;) x y) as [|[|]]; try auto.</pre>
 </div>
@@ -2652,7 +2652,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 384
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre> apply eq_le;trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2681,7 +2681,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 389
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   split; try apply _.</pre>
 </div>
@@ -2694,8 +2694,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 391
-Time: 0.013s">
-<div class="time" style="width: 11.304347826087%"></div>
+Time: 0.011s">
+<div class="time" style="width: 10.78431372549%"></div>
 <pre>
   destruct (le_or_lt x y); auto.</pre>
 </div>
@@ -2752,7 +2752,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 400
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   destruct (le_or_lt y x); auto.</pre>
 </div>
@@ -2804,7 +2804,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 410
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   destruct (decide_rel (&lt;=) y x).</pre>
 </div>
@@ -2817,8 +2817,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 412
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> right;apply le_not_lt_flip;assumption.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2830,8 +2830,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 413
-Time: 0.011s">
-<div class="time" style="width: 9.5652173913043%"></div>
+Time: 0.012s">
+<div class="time" style="width: 11.764705882353%"></div>
 <pre> left; apply not_le_lt_flip;assumption.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -2844,7 +2844,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 414
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 End full_pseudo_order.</pre>
 </div>
@@ -2892,8 +2892,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 432
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Instance: IsApart A := dec_strong_setoid.</pre>
@@ -2923,8 +2923,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 439
-Time: 0.006s">
-<div class="time" style="width: 5.2173913043478%"></div>
+Time: 0.007s">
+<div class="time" style="width: 6.8627450980392%"></div>
 <pre>
   split; try apply _.</pre>
 </div>
@@ -2943,8 +2943,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 441
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct (lt_antisym x y); auto.</pre>
 </div>
@@ -2964,7 +2964,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 443
 Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+<div class="time" style="width: 3.921568627451%"></div>
 <pre>
     destruct (trichotomy (&lt;) x z) as [? | [Exz | Exz]];apply tr; try auto.</pre>
 </div>
@@ -3003,7 +3003,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 446
 Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+<div class="time" style="width: 4.9019607843137%"></div>
 <pre> transitivity (x &lt;&gt; y);[split;apply trivial_apart|].</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -3023,7 +3023,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 448
 Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre> destruct (trichotomy (&lt;) x y) as [?|[?|?]]; auto.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -3043,13 +3043,13 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 450
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> intros [?|?];[apply lt_ne|apply lt_ne_flip];trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 450
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -3086,7 +3086,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 457
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Context `{Alt : Lt A} `{is_mere_relation A lt}
@@ -3148,8 +3148,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 466
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> destruct E as [_ []];trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -3168,7 +3168,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 467
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
     apply lt_correct;
     apply lt_correct in E1;
@@ -3197,8 +3197,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 473
-Time: 0.005s">
-<div class="time" style="width: 4.3478260869565%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.921568627451%"></div>
 <pre> transitivity y;trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -3222,8 +3222,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 474
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
       apply (antisymmetry (≤)); trivial.</pre>
 </div>
@@ -3281,7 +3281,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 484
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   split;try apply _.</pre>
 </div>
@@ -3294,8 +3294,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 486
-Time: 0.008s">
-<div class="time" style="width: 6.9565217391304%"></div>
+Time: 0.007s">
+<div class="time" style="width: 6.8627450980392%"></div>
 <pre> transitivity (x &lt;= y /\ x &lt;&gt; y);[|
   split;intros [? ?];split;trivial;apply trivial_apart;trivial].</pre>
 </div>
@@ -3346,14 +3346,14 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 495
 Time: 0.013s">
-<div class="time" style="width: 11.304347826087%"></div>
+<div class="time" style="width: 12.745098039216%"></div>
 <pre>
   destruct (dec (x = y)); try auto.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 496
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.921568627451%"></div>
 <pre>
   destruct (total (≤) x y);[left|right;right];
   apply lt_correct;auto.</pre>
@@ -3382,7 +3382,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 501
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Instance dec_pseudo_order: PseudoOrder (&lt;) := dec_strict_pseudo_order.</pre>
@@ -3404,8 +3404,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 506
-Time: 0.013s">
-<div class="time" style="width: 11.304347826087%"></div>
+Time: 0.014s">
+<div class="time" style="width: 13.725490196078%"></div>
 <pre>
   split; try apply _.</pre>
 </div>
@@ -3464,15 +3464,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 512
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9607843137255%"></div>
 <pre>
     destruct (total (≤) x y); trivial.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 513
-Time: 0.012s">
-<div class="time" style="width: 10.434782608696%"></div>
+Time: 0.014s">
+<div class="time" style="width: 13.725490196078%"></div>
 <pre>
     destruct (dec (x = y)) as [E2|E2].</pre>
 </div>
@@ -3492,7 +3492,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 515
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply reflexivity.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -3511,7 +3511,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 516
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre> apply lt_correct;split;auto.</pre>
 </div>
 <div class="code" title="File: orders.v
@@ -3524,7 +3524,7 @@ Time: 0s">
 <div class="code" title="File: orders.v
 Line: 517
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -3617,8 +3617,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 533
-Time: 0.027s">
-<div class="time" style="width: 23.478260869565%"></div>
+Time: 0.033s">
+<div class="time" style="width: 32.352941176471%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -3664,8 +3664,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 538
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.98039215686275%"></div>
 <pre>
 
   Lemma lt_nlt_trans {x y z : A} : x &lt; y -&gt; ~ (z &lt; y) -&gt; x &lt; z.</pre>
@@ -3693,8 +3693,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 543
-Time: 0.035s">
-<div class="time" style="width: 30.434782608696%"></div>
+Time: 0.041s">
+<div class="time" style="width: 40.196078431373%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -3769,15 +3769,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: orders.v
 Line: 553
-Time: 0.027s">
-<div class="time" style="width: 23.478260869565%"></div>
+Time: 0.032s">
+<div class="time" style="width: 31.372549019608%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: orders.v
 Line: 554
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct ltxyz as [ltxz|ltzy].</pre>
 </div>

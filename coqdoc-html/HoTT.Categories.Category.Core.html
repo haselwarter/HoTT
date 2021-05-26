@@ -31,13 +31,13 @@
 <br/>
 <span class="id" title="keyword">Set</span> <span class="id" title="var">Universe</span> <span class="id" title="var">Polymorphism</span>.<br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
-<span class="id" title="keyword">Generalizable</span> <span class="id" title="keyword">All</span> <span class="id" title="keyword">Variables</span>.<br/>
+<span class="id" title="keyword">Generalizable All Variables</span>.<br/>
 <span class="id" title="keyword">Set</span> <span class="id" title="var">Asymmetric</span> <span class="id" title="var">Patterns</span>.<br/>
 
 <br/>
-<span class="id" title="var">Declare</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">morphism_scope</span>.<br/>
-<span class="id" title="var">Declare</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">category_scope</span>.<br/>
-<span class="id" title="var">Declare</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">object_scope</span>.<br/>
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">morphism_scope</span>.<br/>
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">category_scope</span>.<br/>
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">object_scope</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">morphism_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">morphism</span>.<br/>
@@ -137,9 +137,9 @@ Ask for the double-identity version so that <span class="inlinecode"><span class
 &nbsp;&nbsp;&nbsp;&nbsp;}.<br/>
 
 <br/>
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">category_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">PreCategory</span>.<br/>
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">object_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">object</span>.<br/>
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">morphism_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">morphism</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">category_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">PreCategory</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">object_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">object</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">morphism_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">morphism</span>.<br/>
 
 <br/>
 </div>
@@ -148,10 +148,10 @@ Ask for the double-identity version so that <span class="inlinecode"><span class
 We want eta-expanded primitive projections to <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> away. 
 </div>
 <div class="code">
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#object"><span class="id" title="projection">object</span></a> !<span class="id" title="var">C</span>%<span class="id" title="var">category</span> / : <span class="id" title="tactic">rename</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#morphism"><span class="id" title="projection">morphism</span></a> !<span class="id" title="var">C</span>%<span class="id" title="var">category</span> / <span class="id" title="var">s</span> <span class="id" title="var">d</span> : <span class="id" title="tactic">rename</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#identity"><span class="id" title="projection">identity</span></a> {!<span class="id" title="var">C</span>%<span class="id" title="var">category</span>} / <span class="id" title="var">x</span>%<span class="id" title="var">object</span> : <span class="id" title="tactic">rename</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#compose"><span class="id" title="projection">compose</span></a> {!<span class="id" title="var">C</span>%<span class="id" title="var">category</span>} / {<span class="id" title="var">s</span> <span class="id" title="var">d</span> <span class="id" title="var">d'</span>}%<span class="id" title="var">object</span> (<span class="id" title="var">m1</span> <span class="id" title="var">m2</span>)%<span class="id" title="var">morphism</span> : <span class="id" title="tactic">rename</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#object"><span class="id" title="projection">object</span></a> !<span class="id" title="var">C</span>%<span class="id" title="var">category</span> / : <span class="id" title="tactic">rename</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#morphism"><span class="id" title="projection">morphism</span></a> !<span class="id" title="var">C</span>%<span class="id" title="var">category</span> / <span class="id" title="var">s</span> <span class="id" title="var">d</span> : <span class="id" title="tactic">rename</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#identity"><span class="id" title="projection">identity</span></a> {!<span class="id" title="var">C</span>%<span class="id" title="var">category</span>} / <span class="id" title="var">x</span>%<span class="id" title="var">object</span> : <span class="id" title="tactic">rename</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Categories.Category.Core.html#compose"><span class="id" title="projection">compose</span></a> {!<span class="id" title="var">C</span>%<span class="id" title="var">category</span>} / {<span class="id" title="var">s</span> <span class="id" title="var">d</span> <span class="id" title="var">d'</span>}%<span class="id" title="var">object</span> (<span class="id" title="var">m1</span> <span class="id" title="var">m2</span>)%<span class="id" title="var">morphism</span> : <span class="id" title="tactic">rename</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Local</span> <span class="id" title="keyword">Infix</span> "o" := <a class="idref" href="HoTT.Categories.Category.Core.html#compose"><span class="id" title="projection">compose</span></a> : <span class="id" title="var">morphism_scope</span>.<br/>
@@ -196,14 +196,14 @@ Define a convenience wrapper for building a precategory without
 create a hint db for all category theory things 
 </div>
 <div class="code">
-<span class="id" title="var">Create</span> <span class="id" title="var">HintDb</span> <span class="id" title="var">category</span> <span class="id" title="var">discriminated</span>.<br/>
+<span class="id" title="keyword">Create HintDb</span> <span class="id" title="var">category</span> <span class="id" title="var">discriminated</span>.<br/>
 </div>
 
 <div class="doc">
 create a hint db for morphisms in categories 
 </div>
 <div class="code">
-<span class="id" title="var">Create</span> <span class="id" title="var">HintDb</span> <span class="id" title="var">morphism</span> <span class="id" title="var">discriminated</span>.<br/>
+<span class="id" title="keyword">Create HintDb</span> <span class="id" title="var">morphism</span> <span class="id" title="var">discriminated</span>.<br/>
 
 <br/>
 #[<span class="id" title="var">export</span>]<br/>

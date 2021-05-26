@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: Type.v
 Line: 1
-Time: 0.03s">
-<div class="time" style="width: 35.294117647059%"></div>
+Time: 0.031s">
+<div class="time" style="width: 32.631578947368%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 1
-Time: 0.002s">
-<div class="time" style="width: 2.3529411764706%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.1052631578947%"></div>
 <pre>
 Require Import WildCat.Equiv.</pre>
 </div>
@@ -122,8 +122,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 14
-Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance isgraph_arrow {A B : Type} : IsGraph (A $-&gt; B)
@@ -186,8 +186,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 
 Global Instance is0gpd_arrow {A B : Type}: Is0Gpd (A $-&gt; B).</pre>
@@ -223,7 +223,7 @@ Defined.</pre>
 <div class="code" title="File: Type.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 
 Global Instance is0functor_type_postcomp {A B C : Type} (h : B $-&gt; C):
@@ -259,8 +259,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 37
-Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance is0functor_type_precomp {A B C : Type} (h : A $-&gt; B):
@@ -289,8 +289,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -311,7 +311,7 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 47
-Time: 0.085s">
+Time: 0.095s">
 <div class="time" style="width: 100%"></div>
 <pre>
   srapply Build_Is1Cat_Strong; cbn; intros; reflexivity.</pre>
@@ -326,7 +326,7 @@ Defined.</pre>
 <div class="code" title="File: Type.v
 Line: 49
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 
 Global Instance hasmorext_type `{Funext} : HasMorExt Type.</pre>
@@ -341,7 +341,7 @@ Proof.</pre>
 <div class="code" title="File: Type.v
 Line: 52
 Time: 0.015s">
-<div class="time" style="width: 17.647058823529%"></div>
+<div class="time" style="width: 15.789473684211%"></div>
 <pre>
   srapply Build_HasMorExt.</pre>
 </div>
@@ -355,7 +355,7 @@ Time: 0s">
 <div class="code" title="File: Type.v
 Line: 54
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
   refine (isequiv_homotopic (@apD10 A (fun _ =&gt; B) f g) _).</pre>
 </div>
@@ -369,14 +369,14 @@ Time: 0s">
 <div class="code" title="File: Type.v
 Line: 56
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
   destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 57
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -397,8 +397,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 61
-Time: 0.007s">
-<div class="time" style="width: 8.2352941176471%"></div>
+Time: 0.008s">
+<div class="time" style="width: 8.4210526315789%"></div>
 <pre>
   srefine (Build_HasEquivs Type _ _ _ Equiv (@IsEquiv) _ _ _ _ _ _ _ _); intros A B.</pre>
 </div>
@@ -458,7 +458,7 @@ Time: 0s">
 <div class="code" title="File: Type.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre> intros; reflexivity.</pre>
 </div>
 <div class="code" title="File: Type.v
@@ -528,14 +528,14 @@ Time: 0s">
 <div class="code" title="File: Type.v
 Line: 71
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 
 Definition catie_isequiv {A B : Type} {f : A $-&gt; B}
@@ -573,8 +573,8 @@ Hint Immediate catie_isequiv : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
 
 Global Instance isinitial_zero : IsInitial Empty.</pre>
@@ -623,8 +623,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 89
-Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance isterminal_unit : IsTerminal Unit.</pre>
@@ -645,8 +645,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 93
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
   exists (fun _ =&gt; tt).</pre>
 </div>
@@ -659,15 +659,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 95
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0526315789474%"></div>
 <pre>
   by destruct (f x).</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 1.1764705882353%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>

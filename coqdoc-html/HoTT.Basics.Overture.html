@@ -43,9 +43,18 @@ Keywords for blacklisting from search function
 <span class="id" title="keyword">Add</span> <span class="id" title="keyword">Search</span> <span class="id" title="var">Blacklist</span> "_admitted" "_subproof" "Private_".<br/>
 
 <br/>
-<span class="id" title="var">Create</span> <span class="id" title="var">HintDb</span> <span class="id" title="tactic">rewrite</span> <span class="id" title="var">discriminated</span>.<br/>
+<span class="id" title="keyword">Create HintDb</span> <span class="id" title="tactic">rewrite</span> <span class="id" title="var">discriminated</span>.<br/>
 #[<span class="id" title="var">export</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Variables</span> <span class="id" title="keyword">Opaque</span> : <span class="id" title="tactic">rewrite</span>.<br/>
-<span class="id" title="var">Create</span> <span class="id" title="var">HintDb</span> <span class="id" title="var">typeclass_instances</span> <span class="id" title="var">discriminated</span>.<br/>
+<span class="id" title="keyword">Create HintDb</span> <span class="id" title="var">typeclass_instances</span> <span class="id" title="var">discriminated</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We disable the <span class="inlinecode"><span class="id" title="var">deprecated</span>-<span class="id" title="var">hint</span>-<span class="id" title="tactic">rewrite</span>-<span class="id" title="var">without</span>-<span class="id" title="var">locality</span></span> warning until we update to coq V8.14.0 
+</div>
+<div class="code">
+<span class="id" title="keyword">Global</span> <span class="id" title="keyword">Set</span> <span class="id" title="var">Warnings</span> <span class="id" title="var">Append</span> "-deprecated-hint-rewrite-without-locality".<br/>
 
 <br/>
 </div>
@@ -138,17 +147,17 @@ Apply using the same opacity information as typeclass proof search.
 <br/>
 <span class="id" title="keyword">Class</span> <a id="Reflexive" class="idref" href="#Reflexive"><span class="id" title="record">Reflexive</span></a> {<a id="A:2" class="idref" href="#A:2"><span class="id" title="binder">A</span></a>} (<a id="R:3" class="idref" href="#R:3"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Relation"><span class="id" title="definition">Relation</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:2"><span class="id" title="variable">A</span></a>) :=<br/>
 &nbsp;&nbsp;<a id="reflexivity" class="idref" href="#reflexivity"><span class="id" title="projection">reflexivity</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:5" class="idref" href="#x:5"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:2"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#R:3"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:5"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:5"><span class="id" title="variable">x</span></a>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexivity"><span class="id" title="definition">reflexivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span>} <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexivity"><span class="id" title="definition">reflexivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span>} <span class="id" title="var">_</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Class</span> <a id="Symmetric" class="idref" href="#Symmetric"><span class="id" title="record">Symmetric</span></a> {<a id="A:7" class="idref" href="#A:7"><span class="id" title="binder">A</span></a>} (<a id="R:8" class="idref" href="#R:8"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Relation"><span class="id" title="definition">Relation</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:7"><span class="id" title="variable">A</span></a>) :=<br/>
 &nbsp;&nbsp;<a id="symmetry" class="idref" href="#symmetry"><span class="id" title="projection">symmetry</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:10" class="idref" href="#x:10"><span class="id" title="binder">x</span></a> <a id="y:11" class="idref" href="#y:11"><span class="id" title="binder">y</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#R:8"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:10"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:11"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#R:8"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:11"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:10"><span class="id" title="variable">x</span></a>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetry"><span class="id" title="definition">symmetry</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetry"><span class="id" title="definition">symmetry</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>}.<br/>
 
 <br/>
 <span class="id" title="keyword">Class</span> <a id="Transitive" class="idref" href="#Transitive"><span class="id" title="record">Transitive</span></a> {<a id="A:13" class="idref" href="#A:13"><span class="id" title="binder">A</span></a>} (<a id="R:14" class="idref" href="#R:14"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Relation"><span class="id" title="definition">Relation</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:13"><span class="id" title="variable">A</span></a>) :=<br/>
 &nbsp;&nbsp;<a id="transitivity" class="idref" href="#transitivity"><span class="id" title="projection">transitivity</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:16" class="idref" href="#x:16"><span class="id" title="binder">x</span></a> <a id="y:17" class="idref" href="#y:17"><span class="id" title="binder">y</span></a> <a id="z:18" class="idref" href="#z:18"><span class="id" title="binder">z</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#R:14"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:16"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:17"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#R:14"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:17"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Basics.Overture.html#z:18"><span class="id" title="variable">z</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#R:14"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:16"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#z:18"><span class="id" title="variable">z</span></a>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitivity"><span class="id" title="definition">transitivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitivity"><span class="id" title="definition">transitivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>}.<br/>
 
 <br/>
 </div>
@@ -166,9 +175,9 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#PreO
 <span class="id" title="keyword">Global</span> <span class="id" title="var">Existing</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">PreOrder_Transitive</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexivity"><span class="id" title="definition">reflexivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span>} / <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetry"><span class="id" title="definition">symmetry</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span>} / <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitivity"><span class="id" title="definition">transitivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span>} / {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexivity"><span class="id" title="definition">reflexivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span>} / <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetry"><span class="id" title="definition">symmetry</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span>} / <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitivity"><span class="id" title="definition">transitivity</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">R</span> <span class="id" title="var">_</span>} / {<span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
 
 <br/>
 </div>
@@ -250,7 +259,7 @@ Define <span class="inlinecode"><span class="id" title="var">Type₁</span></spa
 </div>
 <div class="code">
 <span class="id" title="keyword">Definition</span> <a id="Type1" class="idref" href="#Type1"><span class="id" title="definition">Type1@</span></a>{<span class="id" title="var">i</span>} := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <a id="gt:26" class="idref" href="#gt:26"><span class="id" title="binder">gt</span></a> := (<span class="id" title="keyword">Set</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type1"><span class="id" title="definition">Type1</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type1"><span class="id" title="definition">Type1</span></a> / .<br/>
 <span class="id" title="keyword">Identity</span> <span class="id" title="keyword">Coercion</span> <span class="id" title="var">unfold_Type1</span> : <span class="id" title="var">Type1</span> &gt;-&gt; <span class="id" title="var">Sortclass</span>.<br/>
 
 <br/>
@@ -261,12 +270,12 @@ We also define "the next couple of universes", which are actually an arbitrary u
 </div>
 <div class="code">
 <span class="id" title="keyword">Definition</span> <a id="Type2" class="idref" href="#Type2"><span class="id" title="definition">Type2@</span></a>{<span class="id" title="var">i</span> <span class="id" title="var">j</span>} := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <a id="gt:27" class="idref" href="#gt:27"><span class="id" title="binder">gt</span></a> := (<a class="idref" href="HoTT.Basics.Overture.html#Type1"><span class="id" title="definition">Type1@</span></a>{<span class="id" title="var">j</span>} : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type2"><span class="id" title="definition">Type2</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type2"><span class="id" title="definition">Type2</span></a> / .<br/>
 <span class="id" title="keyword">Identity</span> <span class="id" title="keyword">Coercion</span> <span class="id" title="var">unfold_Type2</span> : <span class="id" title="var">Type2</span> &gt;-&gt; <span class="id" title="var">Sortclass</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="Type3" class="idref" href="#Type3"><span class="id" title="definition">Type3@</span></a>{<span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">k</span>} := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <a id="gt:28" class="idref" href="#gt:28"><span class="id" title="binder">gt</span></a> := (<a class="idref" href="HoTT.Basics.Overture.html#Type2"><span class="id" title="definition">Type2@</span></a>{<span class="id" title="var">j</span> <span class="id" title="var">k</span>} : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type3"><span class="id" title="definition">Type3</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type3"><span class="id" title="definition">Type3</span></a> / .<br/>
 <span class="id" title="keyword">Identity</span> <span class="id" title="keyword">Coercion</span> <span class="id" title="var">unfold_Type3</span> : <span class="id" title="var">Type3</span> &gt;-&gt; <span class="id" title="var">Sortclass</span>.<br/>
 
 <br/>
@@ -281,7 +290,7 @@ Along the same lines, here is a universe with an extra universe parameter that's
 &nbsp;&nbsp;<span class="id" title="keyword">let</span> <a id="gt:29" class="idref" href="#gt:29"><span class="id" title="binder">gt</span></a> := (<span class="id" title="keyword">Set</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span><br/>
 &nbsp;&nbsp;<span class="id" title="keyword">let</span> <a id="ge:31" class="idref" href="#ge:31"><span class="id" title="binder">ge</span></a> := ((<span class="id" title="keyword">fun</span> <a id="x:30" class="idref" href="#x:30"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#x:30"><span class="id" title="variable">x</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#Type1"><span class="id" title="definition">Type1@</span></a>{<span class="id" title="var">j</span>} <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span><br/>
 &nbsp;&nbsp;<span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type2le"><span class="id" title="definition">Type2le</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type2le"><span class="id" title="definition">Type2le</span></a> / .<br/>
 <span class="id" title="keyword">Identity</span> <span class="id" title="keyword">Coercion</span> <span class="id" title="var">unfold_Type2le</span> : <span class="id" title="var">Type2le</span> &gt;-&gt; <span class="id" title="var">Sortclass</span>.<br/>
 
 <br/>
@@ -290,7 +299,7 @@ Along the same lines, here is a universe with an extra universe parameter that's
 &nbsp;&nbsp;<span class="id" title="keyword">let</span> <a id="gt:32" class="idref" href="#gt:32"><span class="id" title="binder">gt</span></a> := (<span class="id" title="keyword">Set</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span><br/>
 &nbsp;&nbsp;<span class="id" title="keyword">let</span> <a id="ge:34" class="idref" href="#ge:34"><span class="id" title="binder">ge</span></a> := ((<span class="id" title="keyword">fun</span> <a id="x:33" class="idref" href="#x:33"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#x:33"><span class="id" title="variable">x</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#Type2le"><span class="id" title="definition">Type2le@</span></a>{<span class="id" title="var">j</span> <span class="id" title="var">k</span>} <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span><br/>
 &nbsp;&nbsp;<span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type3le"><span class="id" title="definition">Type3le</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#Type3le"><span class="id" title="definition">Type3le</span></a> / .<br/>
 <span class="id" title="keyword">Identity</span> <span class="id" title="keyword">Coercion</span> <span class="id" title="var">unfold_Type3le</span> : <span class="id" title="var">Type3le</span> &gt;-&gt; <span class="id" title="var">Sortclass</span>.<br/>
 
 <br/>
@@ -335,7 +344,7 @@ We make the identity map a notation so we do not have to unfold it,
 <span class="id" title="keyword">Scheme</span> <a id="sig_rec" class="idref" href="#sig_rec"><span class="id" title="definition">sig_rec</span></a> := <span class="id" title="var">Minimality</span> <span class="id" title="keyword">for</span> <a class="idref" href="HoTT.Basics.Overture.html#sig"><span class="id" title="record">sig</span></a> <span class="id" title="keyword">Sort</span> <span class="id" title="keyword">Type</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#sig_ind"><span class="id" title="definition">sig_ind</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#sig_ind"><span class="id" title="definition">sig_ind</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>}.<br/>
 
 <br/>
 </div>
@@ -346,12 +355,12 @@ We make the parameters maximally inserted so that we can pass around <span class
 <div class="code">
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#exist"><span class="id" title="constructor">exist</span></a> {<span class="id" title="var">A</span>}%<span class="id" title="keyword">type</span> <span class="id" title="var">P</span>%<span class="id" title="keyword">type</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#proj1"><span class="id" title="projection">proj1</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">P</span>} <span class="id" title="var">_</span> / .<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#proj2"><span class="id" title="projection">proj2</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">P</span>} <span class="id" title="var">_</span> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#exist"><span class="id" title="constructor">exist</span></a> {<span class="id" title="var">A</span>}%<span class="id" title="keyword">type</span> <span class="id" title="var">P</span>%<span class="id" title="keyword">type</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#proj1"><span class="id" title="projection">proj1</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">P</span>} <span class="id" title="var">_</span> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#proj2"><span class="id" title="projection">proj2</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">P</span>} <span class="id" title="var">_</span> / .<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#sig"><span class="id" title="record">sig</span></a> (<span class="id" title="var">A</span> <span class="id" title="var">P</span>)%<span class="id" title="keyword">type</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#sig"><span class="id" title="record">sig</span></a> (<span class="id" title="var">A</span> <span class="id" title="var">P</span>)%<span class="id" title="keyword">type</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a id="bc4528e836ab0e91ea7e942fb09e898f" class="idref" href="#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">&quot;</span></a>{ x | P }" := (<a class="idref" href="HoTT.Basics.Overture.html#sig"><span class="id" title="record">sig</span></a> (<span class="id" title="keyword">fun</span> <a id="x:45" class="idref" href="#x:45"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="var">P</span>)) : <span class="id" title="var">type_scope</span>.<br/>
@@ -386,7 +395,7 @@ We define notation for dependent pairs because it is too annoying to write and s
 We bind <span class="inlinecode"><span class="id" title="var">fibration_scope</span></span> with <span class="inlinecode"><a class="idref" href="HoTT.Categories.Category.Sigma.Core.html#sig"><span class="id" title="definition">sig</span></a></span> so that we are automatically in <span class="inlinecode"><span class="id" title="var">fibration_scope</span></span> when we are passing an argument of type <span class="inlinecode"><a class="idref" href="HoTT.Categories.Category.Sigma.Core.html#sig"><span class="id" title="definition">sig</span></a></span>. 
 </div>
 <div class="code">
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">fibration_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">sig</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">fibration_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">sig</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a id="pr1" class="idref" href="#pr1"><span class="id" title="abbreviation">pr1</span></a> := <a class="idref" href="HoTT.Basics.Overture.html#proj1"><span class="id" title="projection">proj1</span></a>.<br/>
@@ -446,9 +455,9 @@ This definition helps guide typeclass inference.
 Composition of logical equivalences 
 </div>
 <div class="code">
-<span class="id" title="keyword">Instance</span> <a id="iff_compose" class="idref" href="#iff_compose"><span class="id" title="instance">iff_compose</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Transitive"><span class="id" title="class">Transitive</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#iff"><span class="id" title="definition">iff</span></a> | 1<br/>
+<span class="id" title="keyword">Global Instance</span> <a id="iff_compose" class="idref" href="#iff_compose"><span class="id" title="instance">iff_compose</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Transitive"><span class="id" title="class">Transitive</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#iff"><span class="id" title="definition">iff</span></a> | 1<br/>
 &nbsp;&nbsp;:= <span class="id" title="keyword">fun</span> <a id="A:63" class="idref" href="#A:63"><span class="id" title="binder">A</span></a> <a id="B:64" class="idref" href="#B:64"><span class="id" title="binder">B</span></a> <a id="C:65" class="idref" href="#C:65"><span class="id" title="binder">C</span></a> <a id="f:66" class="idref" href="#f:66"><span class="id" title="binder">f</span></a> <a id="g:67" class="idref" href="#g:67"><span class="id" title="binder">g</span></a> ⇒ <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="HoTT.Basics.Overture.html#g:67"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:66"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:66"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> <a class="idref" href="HoTT.Basics.Overture.html#g:67"><span class="id" title="variable">g</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#iff_compose"><span class="id" title="instance">iff_compose</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> : <span class="id" title="tactic">rename</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#iff_compose"><span class="id" title="instance">iff_compose</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>} <span class="id" title="var">f</span> <span class="id" title="var">g</span> : <span class="id" title="tactic">rename</span>.<br/>
 
 <br/>
 </div>
@@ -457,9 +466,9 @@ Composition of logical equivalences
 While we're at it, inverses of logical equivalences 
 </div>
 <div class="code">
-<span class="id" title="keyword">Instance</span> <a id="iff_inverse" class="idref" href="#iff_inverse"><span class="id" title="instance">iff_inverse</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Symmetric"><span class="id" title="class">Symmetric</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#iff"><span class="id" title="definition">iff</span></a> | 1<br/>
+<span class="id" title="keyword">Global Instance</span> <a id="iff_inverse" class="idref" href="#iff_inverse"><span class="id" title="instance">iff_inverse</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Symmetric"><span class="id" title="class">Symmetric</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#iff"><span class="id" title="definition">iff</span></a> | 1<br/>
 &nbsp;&nbsp;:= <span class="id" title="keyword">fun</span> <a id="A:68" class="idref" href="#A:68"><span class="id" title="binder">A</span></a> <a id="B:69" class="idref" href="#B:69"><span class="id" title="binder">B</span></a> <a id="f:70" class="idref" href="#f:70"><span class="id" title="binder">f</span></a> ⇒ <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:70"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:70"><span class="id" title="variable">f</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#iff_inverse"><span class="id" title="instance">iff_inverse</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span> : <span class="id" title="tactic">rename</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#iff_inverse"><span class="id" title="instance">iff_inverse</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span> : <span class="id" title="tactic">rename</span>.<br/>
 
 <br/>
 </div>
@@ -468,7 +477,7 @@ While we're at it, inverses of logical equivalences
 And reflexivity of them 
 </div>
 <div class="code">
-<span class="id" title="keyword">Instance</span> <a id="iff_reflexive" class="idref" href="#iff_reflexive"><span class="id" title="instance">iff_reflexive</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Reflexive"><span class="id" title="class">Reflexive</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#iff"><span class="id" title="definition">iff</span></a> | 1<br/>
+<span class="id" title="keyword">Global Instance</span> <a id="iff_reflexive" class="idref" href="#iff_reflexive"><span class="id" title="instance">iff_reflexive</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Reflexive"><span class="id" title="class">Reflexive</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#iff"><span class="id" title="definition">iff</span></a> | 1<br/>
 &nbsp;&nbsp;:= <span class="id" title="keyword">fun</span> <a id="A:71" class="idref" href="#A:71"><span class="id" title="binder">A</span></a> ⇒ <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.<br/>
 
 <br/>
@@ -481,7 +490,7 @@ Dependent composition of functions.
 <span class="id" title="keyword">Definition</span> <a id="composeD" class="idref" href="#composeD"><span class="id" title="definition">composeD</span></a> {<a id="A:72" class="idref" href="#A:72"><span class="id" title="binder">A</span></a> <a id="B:73" class="idref" href="#B:73"><span class="id" title="binder">B</span></a> <a id="C:74" class="idref" href="#C:74"><span class="id" title="binder">C</span></a>} (<a id="g:76" class="idref" href="#g:76"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="b:75" class="idref" href="#b:75"><span class="id" title="binder">b</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#C:74"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b:75"><span class="id" title="variable">b</span></a>) (<a id="f:77" class="idref" href="#f:77"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:72"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#B:73"><span class="id" title="variable">B</span></a>) := <span class="id" title="keyword">fun</span> <a id="x:78" class="idref" href="#x:78"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:72"><span class="id" title="variable">A</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#g:76"><span class="id" title="variable">g</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#f:77"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:78"><span class="id" title="variable">x</span></a>).<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#composeD"><span class="id" title="definition">composeD</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>}%<span class="id" title="var">type_scope</span> (<span class="id" title="var">g</span> <span class="id" title="var">f</span>)%<span class="id" title="var">function_scope</span> <span class="id" title="var">x</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#composeD"><span class="id" title="definition">composeD</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>}%<span class="id" title="var">type_scope</span> (<span class="id" title="var">g</span> <span class="id" title="var">f</span>)%<span class="id" title="var">function_scope</span> <span class="id" title="var">x</span>.<br/>
 
 <br/>
 #[<span class="id" title="var">export</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#composeD"><span class="id" title="definition">composeD</span></a> : <span class="id" title="var">core</span>.<br/>
@@ -507,22 +516,22 @@ Dependent composition of functions.
 &nbsp;&nbsp;<a id="idpath" class="idref" href="#idpath"><span class="id" title="constructor">idpath</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#paths:81"><span class="id" title="inductive">paths</span></a> <a class="idref" href="HoTT.Basics.Overture.html#a:80"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Basics.Overture.html#a:80"><span class="id" title="variable">a</span></a>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">a</span>} , [<span class="id" title="var">A</span>] <span class="id" title="var">a</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">a</span>} , [<span class="id" title="var">A</span>] <span class="id" title="var">a</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Scheme</span> <a id="paths_ind" class="idref" href="#paths_ind"><span class="id" title="definition">paths_ind</span></a> := <span class="id" title="keyword">Induction</span> <span class="id" title="keyword">for</span> <a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a> <span class="id" title="keyword">Sort</span> <span class="id" title="keyword">Type</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#paths_ind"><span class="id" title="definition">paths_ind</span></a> [<span class="id" title="var">A</span>] <span class="id" title="var">a</span> <span class="id" title="var">P</span> <span class="id" title="var">f</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#paths_ind"><span class="id" title="definition">paths_ind</span></a> [<span class="id" title="var">A</span>] <span class="id" title="var">a</span> <span class="id" title="var">P</span> <span class="id" title="var">f</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.<br/>
 <span class="id" title="keyword">Scheme</span> <a id="paths_rec" class="idref" href="#paths_rec"><span class="id" title="definition">paths_rec</span></a> := <span class="id" title="var">Minimality</span> <span class="id" title="keyword">for</span> <a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a> <span class="id" title="keyword">Sort</span> <span class="id" title="keyword">Type</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#paths_rec"><span class="id" title="definition">paths_rec</span></a> [<span class="id" title="var">A</span>] <span class="id" title="var">a</span> <span class="id" title="var">P</span> <span class="id" title="var">f</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#paths_rec"><span class="id" title="definition">paths_rec</span></a> [<span class="id" title="var">A</span>] <span class="id" title="var">a</span> <span class="id" title="var">P</span> <span class="id" title="var">f</span> <span class="id" title="var">y</span> <span class="id" title="var">p</span>.<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">idpath</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.refl</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">idpath</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.refl</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="paths_rect" class="idref" href="#paths_rect"><span class="id" title="definition">paths_rect</span></a> := <a class="idref" href="HoTT.Basics.Overture.html#paths_ind"><span class="id" title="definition">paths_ind</span></a>.<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">paths_rect</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.ind</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">paths_rect</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.ind</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a id="b8b2ebc8e1a8b9aa935c0702efb5dccf" class="idref" href="#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">&quot;</span></a>x = y :&gt; A" := (@<a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a> <span class="id" title="var">A</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) : <span class="id" title="var">type_scope</span>.<br/>
@@ -543,11 +552,11 @@ Ensure <span class="inlinecode"><span class="id" title="var">internal_paths_rew<
 <span class="id" title="keyword">Proof</span>. <span class="id" title="tactic">rewrite</span> → <span class="id" title="var">H</span>. <span class="id" title="tactic">exact</span> <span class="id" title="var">X</span>. <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">paths</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.type</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">paths</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.type</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Global Instance</span> <a id="reflexive_paths" class="idref" href="#reflexive_paths"><span class="id" title="instance">reflexive_paths</span></a> {<a id="A:95" class="idref" href="#A:95"><span class="id" title="binder">A</span></a>} : <a class="idref" href="HoTT.Basics.Overture.html#Reflexive"><span class="id" title="class">Reflexive</span></a> (@<a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:95"><span class="id" title="variable">A</span></a>) | 0 := @<a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> <span class="id" title="var">A</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexive_paths"><span class="id" title="instance">reflexive_paths</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexive_paths"><span class="id" title="instance">reflexive_paths</span></a> / .<br/>
 
 <br/>
 </div>
@@ -593,7 +602,7 @@ We declare a scope in which we shall place path notations. This way they can be 
  We bind <span class="inlinecode"><span class="id" title="var">path_scope</span></span> to <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a></span> so that when we are constructing arguments to things like <span class="inlinecode"><a class="idref" href="HoTT.Tactics.RewriteModuloAssociativity.html#examples.concat"><span class="id" title="section">concat</span></a></span>, we automatically are in <span class="inlinecode"><span class="id" title="var">path_scope</span></span>. 
 </div>
 <div class="code">
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">path_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">paths</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">path_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">paths</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">path_scope</span>.<br/>
@@ -609,7 +618,7 @@ The inverse of a path.
 &nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#p:114"><span class="id" title="variable">p</span></a> <span class="id" title="keyword">with</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> <span class="id" title="keyword">end</span>.<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">inverse</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.sym</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">inverse</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.sym</span>.<br/>
 
 <br/>
 </div>
@@ -618,11 +627,11 @@ The inverse of a path.
 Declaring this as <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> <span class="inlinecode"><span class="id" title="var">nomatch</span></span> prevents the tactic <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> from expanding it out into <span class="inlinecode"><span class="id" title="keyword">match</span></span> statements.  We only want <span class="inlinecode"><a class="idref" href="HoTT.Categories.ProductLaws.html#Law1.inverse"><span class="id" title="definition">inverse</span></a></span> to simplify when applied to an identity path. 
 </div>
 <div class="code">
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Global Instance</span> <a id="symmetric_paths" class="idref" href="#symmetric_paths"><span class="id" title="instance">symmetric_paths</span></a> {<a id="A:116" class="idref" href="#A:116"><span class="id" title="binder">A</span></a>} : <a class="idref" href="HoTT.Basics.Overture.html#Symmetric"><span class="id" title="class">Symmetric</span></a> (@<a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:116"><span class="id" title="variable">A</span></a>) | 0 := @<a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a> <span class="id" title="var">A</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetric_paths"><span class="id" title="instance">symmetric_paths</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetric_paths"><span class="id" title="instance">symmetric_paths</span></a> / .<br/>
 
 <br/>
 </div>
@@ -676,14 +685,14 @@ Module Export symmetric_paths := inverseSymmetric inverse.
 See above for the meaning of <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> <span class="inlinecode"><span class="id" title="var">nomatch</span></span>. 
 </div>
 <div class="code">
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>} <span class="id" title="var">p</span> <span class="id" title="var">q</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>} <span class="id" title="var">p</span> <span class="id" title="var">q</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Global Instance</span> <a id="transitive_paths" class="idref" href="#transitive_paths"><span class="id" title="instance">transitive_paths</span></a> {<a id="A:133" class="idref" href="#A:133"><span class="id" title="binder">A</span></a>} : <a class="idref" href="HoTT.Basics.Overture.html#Transitive"><span class="id" title="class">Transitive</span></a> (@<a class="idref" href="HoTT.Basics.Overture.html#paths"><span class="id" title="inductive">paths</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:133"><span class="id" title="variable">A</span></a>) | 0 := @<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> <span class="id" title="var">A</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitive_paths"><span class="id" title="instance">transitive_paths</span></a> / .<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitive_paths"><span class="id" title="instance">transitive_paths</span></a> / .<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">concat</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.trans</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">concat</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.trans</span>.<br/>
 
 <br/>
 </div>
@@ -745,7 +754,7 @@ An important instance of <span class="inlinecode"><a class="idref" href="HoTT.Ba
 See above for the meaning of <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> <span class="inlinecode"><span class="id" title="var">nomatch</span></span>. 
 </div>
 <div class="code">
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> {<span class="id" title="var">A</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">P</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span> <span class="id" title="var">u</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> {<span class="id" title="var">A</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">P</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span> <span class="id" title="var">u</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
 
 <br/>
 </div>
@@ -782,10 +791,10 @@ We will first see this appearing in the type of <span class="inlinecode"><a clas
 &nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#p:146"><span class="id" title="variable">p</span></a> <span class="id" title="keyword">with</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> <span class="id" title="keyword">end</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span>.<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">ap</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.congr</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">ap</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.identity.congr</span>.<br/>
 
 <br/>
 </div>
@@ -830,10 +839,10 @@ We introduce the convention that <span class="inlinecode"><span class="id" title
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#pointwise_paths"><span class="id" title="definition">pointwise_paths</span></a> {<span class="id" title="var">A</span>}%<span class="id" title="var">type_scope</span> {<span class="id" title="var">P</span>} (<span class="id" title="var">f</span> <span class="id" title="var">g</span>)%<span class="id" title="var">function_scope</span>.<br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexive_pointwise_paths"><span class="id" title="instance">reflexive_pointwise_paths</span></a> /.<br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitive_pointwise_paths"><span class="id" title="instance">transitive_pointwise_paths</span></a> /.<br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetric_pointwise_paths"><span class="id" title="instance">symmetric_pointwise_paths</span></a> /.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#pointwise_paths"><span class="id" title="definition">pointwise_paths</span></a> {<span class="id" title="var">A</span>}%<span class="id" title="var">type_scope</span> {<span class="id" title="var">P</span>} (<span class="id" title="var">f</span> <span class="id" title="var">g</span>)%<span class="id" title="var">function_scope</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#reflexive_pointwise_paths"><span class="id" title="instance">reflexive_pointwise_paths</span></a> /.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#transitive_pointwise_paths"><span class="id" title="instance">transitive_pointwise_paths</span></a> /.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#symmetric_pointwise_paths"><span class="id" title="instance">symmetric_pointwise_paths</span></a> /.<br/>
 
 <br/>
 #[<span class="id" title="var">export</span>]<br/>
@@ -848,14 +857,14 @@ We introduce the convention that <span class="inlinecode"><span class="id" title
 &nbsp;&nbsp;:= <span class="id" title="keyword">fun</span> <a id="x:175" class="idref" href="#x:175"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#h:174"><span class="id" title="variable">h</span></a> <span class="id" title="keyword">with</span> <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a> ⇒ 1 <span class="id" title="keyword">end</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> {<span class="id" title="var">A</span>%<span class="id" title="var">type_scope</span> <span class="id" title="var">B</span>} {<span class="id" title="var">f</span> <span class="id" title="var">g</span>}%<span class="id" title="var">function_scope</span> <span class="id" title="var">h</span>%<span class="id" title="var">path_scope</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> {<span class="id" title="var">A</span>%<span class="id" title="var">type_scope</span> <span class="id" title="var">B</span>} {<span class="id" title="var">f</span> <span class="id" title="var">g</span>}%<span class="id" title="var">function_scope</span> <span class="id" title="var">h</span>%<span class="id" title="var">path_scope</span> <span class="id" title="var">_</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="ap10" class="idref" href="#ap10"><span class="id" title="definition">ap10</span></a> {<a id="A:177" class="idref" href="#A:177"><span class="id" title="binder">A</span></a> <a id="B:178" class="idref" href="#B:178"><span class="id" title="binder">B</span></a>} {<a id="f:179" class="idref" href="#f:179"><span class="id" title="binder">f</span></a> <a id="g:180" class="idref" href="#g:180"><span class="id" title="binder">g</span></a>:<a class="idref" href="HoTT.Basics.Overture.html#A:177"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a><a class="idref" href="HoTT.Basics.Overture.html#B:178"><span class="id" title="variable">B</span></a>} (<a id="h:181" class="idref" href="#h:181"><span class="id" title="binder">h</span></a>:<a class="idref" href="HoTT.Basics.Overture.html#f:179"><span class="id" title="variable">f</span></a><a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a><a class="idref" href="HoTT.Basics.Overture.html#g:180"><span class="id" title="variable">g</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#f:179"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#g:180"><span class="id" title="variable">g</span></a><br/>
 &nbsp;&nbsp;:= <a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> <a class="idref" href="HoTT.Basics.Overture.html#h:181"><span class="id" title="variable">h</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> {<span class="id" title="var">f</span> <span class="id" title="var">g</span>}%<span class="id" title="var">function_scope</span> <span class="id" title="var">h</span>%<span class="id" title="var">path_scope</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> {<span class="id" title="var">f</span> <span class="id" title="var">g</span>}%<span class="id" title="var">function_scope</span> <span class="id" title="var">h</span>%<span class="id" title="var">path_scope</span> <span class="id" title="var">_</span>.<br/>
 
 <br/>
 </div>
@@ -873,7 +882,7 @@ For the benefit of readers of the HoTT Book:
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap11"><span class="id" title="definition">ap11</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> {<span class="id" title="var">f</span> <span class="id" title="var">g</span>}%<span class="id" title="var">function_scope</span> <span class="id" title="var">h</span>%<span class="id" title="var">path_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap11"><span class="id" title="definition">ap11</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> {<span class="id" title="var">f</span> <span class="id" title="var">g</span>}%<span class="id" title="var">function_scope</span> <span class="id" title="var">h</span>%<span class="id" title="var">path_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span>.<br/>
 
 <br/>
 </div>
@@ -882,7 +891,7 @@ For the benefit of readers of the HoTT Book:
 See above for the meaning of <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> <span class="inlinecode"><span class="id" title="var">nomatch</span></span>. 
 </div>
 <div class="code">
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
 
 <br/>
 </div>
@@ -909,7 +918,7 @@ Similarly, dependent functions act on paths; but the type is a bit more subtle. 
 See above for the meaning of <span class="inlinecode"><span class="id" title="tactic">simpl</span></span> <span class="inlinecode"><span class="id" title="var">nomatch</span></span>. 
 </div>
 <div class="code">
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#apD"><span class="id" title="definition">apD</span></a> {<span class="id" title="var">A</span>%<span class="id" title="var">type_scope</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#apD"><span class="id" title="definition">apD</span></a> {<span class="id" title="var">A</span>%<span class="id" title="var">type_scope</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">x</span> <span class="id" title="var">y</span>} <span class="id" title="var">p</span>%<span class="id" title="var">path_scope</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
 
 <br/>
 </div>
@@ -956,10 +965,10 @@ See above for the meaning of <span class="inlinecode"><span class="id" title="ta
 }.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="method">eissect</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#eisadj"><span class="id" title="method">eisadj</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="method">eissect</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#eisadj"><span class="id" title="method">eisadj</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span>.<br/>
 
 <br/>
 </div>
@@ -989,11 +998,11 @@ A record that includes all the data of an adjoint equivalence.
 <span class="id" title="keyword">Global</span> <span class="id" title="var">Existing</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">equiv_isequiv</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#equiv_isequiv"><span class="id" title="projection">equiv_isequiv</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#equiv_isequiv"><span class="id" title="projection">equiv_isequiv</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">_</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">equiv_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Equiv</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">equiv_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Equiv</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a id="068136b784cb569aaadfa01f234d5c01" class="idref" href="#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&quot;</span></a>A &lt;~&gt; B" := (<a class="idref" href="HoTT.Basics.Overture.html#Equiv"><span class="id" title="record">Equiv</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span>) : <span class="id" title="var">type_scope</span>.<br/>
@@ -1068,7 +1077,7 @@ In order to achieve moderate coverage and speedy resolution, we currently follow
 }.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="method">center</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="method">center</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.<br/>
 
 <br/>
 </div>
@@ -1110,8 +1119,8 @@ In order to achieve moderate coverage and speedy resolution, we currently follow
 We will use <span class="inlinecode"><span class="id" title="keyword">Notation</span></span> for <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a></span>es, so define a scope for them here. 
 </div>
 <div class="code">
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">trunc_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">trunc_index</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#trunc_S"><span class="id" title="constructor">trunc_S</span></a> <span class="id" title="var">_</span>%<span class="id" title="var">trunc_scope</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">trunc_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">trunc_index</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#trunc_S"><span class="id" title="constructor">trunc_S</span></a> <span class="id" title="var">_</span>%<span class="id" title="var">trunc_scope</span>.<br/>
 
 <br/>
 </div>
@@ -1146,7 +1155,7 @@ Further notation for truncation levels is introducted in Trunc.v.
 &nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc_internal"><span class="id" title="definition">IsTrunc_internal</span></a> <span class="id" title="var">n</span> <span class="id" title="var">A</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc_internal"><span class="id" title="definition">IsTrunc_internal</span></a> <span class="id" title="var">n</span> <span class="id" title="var">A</span> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">nomatch</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Class</span> <a id="IsTrunc" class="idref" href="#IsTrunc"><span class="id" title="record">IsTrunc</span></a> (<a id="n:230" class="idref" href="#n:230"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a>) (<a id="A:231" class="idref" href="#A:231"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) : <span class="id" title="keyword">Type</span> :=<br/>
@@ -1161,15 +1170,15 @@ We use the principle that we should always be doing typeclass resolution on trun
 <div class="code">
 
 <br/>
-<span class="id" title="keyword">Type</span><span class="id" title="var">classes</span> <span class="id" title="keyword">Opaque</span> <span class="id" title="var">IsTrunc</span>. 
+<span class="id" title="keyword">Typeclasses Opaque</span> <span class="id" title="var">IsTrunc</span>. 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">never</span>. 
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> : <span class="id" title="tactic">simpl</span> <span class="id" title="var">never</span>. 
 <br/>
 <span class="id" title="keyword">Global Instance</span> <a id="istrunc_paths" class="idref" href="#istrunc_paths"><span class="id" title="instance">istrunc_paths</span></a> (<a id="A:234" class="idref" href="#A:234"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) <a id="n:235" class="idref" href="#n:235"><span class="id" title="binder">n</span></a> `{<a id="H:236" class="idref" href="#H:236"><span class="id" title="binder">H</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <a class="idref" href="HoTT.Basics.Overture.html#n:235"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:234"><span class="id" title="variable">A</span></a>} (<a id="x:237" class="idref" href="#x:237"><span class="id" title="binder">x</span></a> <a id="y:238" class="idref" href="#y:238"><span class="id" title="binder">y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:234"><span class="id" title="variable">A</span></a>)<br/>
 : <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <a class="idref" href="HoTT.Basics.Overture.html#n:235"><span class="id" title="variable">n</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#x:237"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:238"><span class="id" title="variable">y</span></a>)<br/>
 &nbsp;&nbsp;:= <span class="id" title="var">H</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>. 
 <br/>
-<span class="id" title="var">Existing</span> <span class="id" title="keyword">Class</span> <span class="id" title="var">IsTrunc_internal</span>.<br/>
+<span class="id" title="keyword">Existing Class</span> <span class="id" title="var">IsTrunc_internal</span>.<br/>
 
 <br/>
 #[<span class="id" title="var">export</span>]<br/>
@@ -1265,7 +1274,7 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 </div>
 <div class="code">
 <span class="id" title="var">Monomorphic</span> <span class="id" title="keyword">Axiom</span> <a id="Funext" class="idref" href="#Funext"><span class="id" title="axiom">Funext</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a>.<br/>
-<span class="id" title="var">Existing</span> <span class="id" title="keyword">Class</span> <span class="id" title="var">Funext</span>.<br/>
+<span class="id" title="keyword">Existing Class</span> <span class="id" title="var">Funext</span>.<br/>
 <span class="id" title="keyword">Axiom</span> <a id="isequiv_apD10" class="idref" href="#isequiv_apD10"><span class="id" title="axiom">isequiv_apD10</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">`{</span></a><a id="H:292" class="idref" href="#H:292"><span class="id" title="binder">Funext</span></a>} (<a id="A:293" class="idref" href="#A:293"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="P:294" class="idref" href="#P:294"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:293"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) <a id="f:295" class="idref" href="#f:295"><span class="id" title="binder">f</span></a> <a id="g:296" class="idref" href="#g:296"><span class="id" title="binder">g</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (@<a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:293"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#P:294"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:295"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#g:296"><span class="id" title="variable">g</span></a>).<br/>
 <span class="id" title="keyword">Global</span> <span class="id" title="var">Existing</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">isequiv_apD10</span>.<br/>
 
@@ -1276,7 +1285,7 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 &nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">(</span></a>@<a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:299"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#P:300"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:302"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#g:303"><span class="id" title="variable">g</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">)^-1</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">A</span>%<span class="id" title="var">type_scope</span> <span class="id" title="var">P</span>} (<span class="id" title="var">f</span> <span class="id" title="var">g</span>)%<span class="id" title="var">function_scope</span> <span class="id" title="var">_</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> {<span class="id" title="var">_</span> <span class="id" title="var">A</span>%<span class="id" title="var">type_scope</span> <span class="id" title="var">P</span>} (<span class="id" title="var">f</span> <span class="id" title="var">g</span>)%<span class="id" title="var">function_scope</span> <span class="id" title="var">_</span>.<br/>
 
 <br/>
 </div>
@@ -1345,10 +1354,10 @@ These schemes are therefore defined in Spaces.Nat
 <div class="code">
 
 <br/>
-<span class="id" title="var">Declare</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">nat_scope</span>.<br/>
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">nat_scope</span>.<br/>
 <span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">nat_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">nat</span>.<br/>
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">nat_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">nat</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">_</span>%<span class="id" title="var">nat</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">nat_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">nat</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">_</span>%<span class="id" title="var">nat</span>.<br/>
 
 <br/>
 </div>
@@ -1358,7 +1367,7 @@ We put <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html
 </div>
 <div class="code">
 <span class="id" title="keyword">Inductive</span> <a id="Empty" class="idref" href="#Empty"><span class="id" title="inductive">Empty</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a> := .<br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">Empty</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.False.type</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">Empty</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.False.type</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Scheme</span> <a id="Empty_ind" class="idref" href="#Empty_ind"><span class="id" title="definition">Empty_ind</span></a> := <span class="id" title="keyword">Induction</span> <span class="id" title="keyword">for</span> <a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a> <span class="id" title="keyword">Sort</span> <span class="id" title="keyword">Type</span>.<br/>
@@ -1383,7 +1392,7 @@ We put <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html
 &nbsp;&nbsp;<span class="id" title="keyword">fun</span> <a id="x:316" class="idref" href="#x:316"><span class="id" title="binder">x</span></a> <a id="y:317" class="idref" href="#y:317"><span class="id" title="binder">y</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#63a68285c81db8f9bc456233bb9ed181"><span class="id" title="notation">¬</span></a> <a class="idref" href="HoTT.Basics.Overture.html#63a68285c81db8f9bc456233bb9ed181"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#R:315"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:316"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:317"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Basics.Overture.html#63a68285c81db8f9bc456233bb9ed181"><span class="id" title="notation">)</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Type</span><span class="id" title="var">classes</span> <span class="id" title="keyword">Opaque</span> <span class="id" title="var">complement</span>.<br/>
+<span class="id" title="keyword">Typeclasses Opaque</span> <span class="id" title="var">complement</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Class</span> <a id="Irreflexive" class="idref" href="#Irreflexive"><span class="id" title="record">Irreflexive</span></a> {<a id="A:318" class="idref" href="#A:318"><span class="id" title="binder">A</span></a>} (<a id="R:319" class="idref" href="#R:319"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Relation"><span class="id" title="definition">Relation</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:318"><span class="id" title="variable">A</span></a>) :=<br/>
@@ -1418,10 +1427,10 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Resolve</span> <span class="id" title="var">tt</span> : <span class="id" title="var">core</span>.<br/>
 
 <br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">Unit</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.IDProp.type</span>.<br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">Unit</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.True.type</span>.<br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">tt</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.IDProp.idProp</span>.<br/>
-<span class="id" title="var">Register</span> <span class="id" title="var">tt</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.True.I</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">Unit</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.IDProp.type</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">Unit</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.True.type</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">tt</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.IDProp.idProp</span>.<br/>
+<span class="id" title="keyword">Register</span> <span class="id" title="var">tt</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.True.I</span>.<br/>
 
 <br/>
 </div>
@@ -1437,7 +1446,7 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 <span class="id" title="keyword">Class</span> <a id="IsPointed" class="idref" href="#IsPointed"><span class="id" title="record">IsPointed</span></a> (<a id="A:330" class="idref" href="#A:330"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) := <a id="point" class="idref" href="#point"><span class="id" title="projection">point</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:330"><span class="id" title="variable">A</span></a>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">A</span> {<span class="id" title="var">_</span>}.<br/>
 
 <br/>
 <span class="id" title="var">Cumulative</span> <span class="id" title="keyword">Record</span> <a id="pType" class="idref" href="#pType"><span class="id" title="record">pType</span></a> :=<br/>
@@ -1466,7 +1475,7 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 <span class="id" title="keyword">Definition</span> <a id="hfiber" class="idref" href="#hfiber"><span class="id" title="definition">hfiber</span></a> {<a id="A:336" class="idref" href="#A:336"><span class="id" title="binder">A</span></a> <a id="B:337" class="idref" href="#B:337"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span>} (<a id="f:338" class="idref" href="#f:338"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#A:336"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#B:337"><span class="id" title="variable">B</span></a>) (<a id="y:339" class="idref" href="#y:339"><span class="id" title="binder">y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#B:337"><span class="id" title="variable">B</span></a>) := <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <a id="x:340" class="idref" href="#x:340"><span class="id" title="binder">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Overture.html#A:336"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f:338"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x:340"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y:339"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Global</span> <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> <span class="id" title="var">y</span>.<br/>
+<span class="id" title="keyword">Global Arguments</span> <a class="idref" href="HoTT.Basics.Overture.html#hfiber"><span class="id" title="definition">hfiber</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">type_scope</span> <span class="id" title="var">f</span>%<span class="id" title="var">function_scope</span> <span class="id" title="var">y</span>.<br/>
 
 <br/>
 </div>
@@ -1499,8 +1508,6 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 
 <br/>
 <span class="id" title="keyword">Tactic Notation</span> "now" <span class="id" title="var">tactic</span>(<span class="id" title="var">t</span>) := <span class="id" title="var">t</span>; <span class="id" title="var">easy</span>.<br/>
-
-<br/>
 </div>
 </div>
 

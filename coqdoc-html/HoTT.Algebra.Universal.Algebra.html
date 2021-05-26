@@ -41,9 +41,8 @@ This file defines <span class="inlinecode"><a class="idref" href="HoTT.Classes.i
 &nbsp;&nbsp;<a class="idref" href="HoTT.HSet.html#"><span class="id" title="library">HoTT.HSet</span></a>.<br/>
 
 <br/>
-<span class="id" title="var">Declare</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span>.<br/>
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">Algebra_scope</span>.<br/>
 <span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Algebra</span>.<br/>
-<span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span>.<br/>
 
 <br/>
 </div>
@@ -61,8 +60,8 @@ The below definition <span class="inlinecode"><a class="idref" href="HoTT.Algebr
 &nbsp;&nbsp;; <a id="sort_cod" class="idref" href="#sort_cod"><span class="id" title="projection">sort_cod</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Sort:1"><span class="id" title="variable">Sort</span></a> }.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#SymbolTypeOf"><span class="id" title="record">SymbolTypeOf</span></a> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.<br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Build_SymbolTypeOf"><span class="id" title="constructor">Build_SymbolTypeOf</span></a> {<span class="id" title="keyword">Sort</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#SymbolTypeOf"><span class="id" title="record">SymbolTypeOf</span></a> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Build_SymbolTypeOf"><span class="id" title="constructor">Build_SymbolTypeOf</span></a> {<span class="id" title="keyword">Sort</span>}.<br/>
 
 <br/>
 </div>
@@ -162,9 +161,8 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
     carriers <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a></span> <span class="inlinecode">σ</span>, and for each symbol <span class="inlinecode"><span class="id" title="var">u</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span> <span class="inlinecode">σ</span>, an
     operation/function of type <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">carriers</span></a></span> <span class="inlinecode">(σ</span> <span class="inlinecode"><span class="id" title="var">u</span>)</span>,
     where <span class="inlinecode">σ</span> <span class="inlinecode"><span class="id" title="var">u</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span> is the symbol type of <span class="inlinecode"><span class="id" title="var">u</span></span>.
-    Notice that <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span> cannot specify equations involving the
-    carriers and operations. See <span class="inlinecode"><span class="id" title="var">HoTT.Algebra.Universal.Equational</span></span>
-    for equations. 
+    Notice that <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span> does not specify equations involving
+    carriers and operations. Equations are defined elsewhere. 
 </div>
 <div class="code">
 
@@ -175,10 +173,10 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
 &nbsp;&nbsp;; <a id="hset_algebra" class="idref" href="#hset_algebra"><span class="id" title="projection">hset_algebra</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="s:21" class="idref" href="#s:21"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#dd0f8ee13b043696963f589a3a566f8e"><span class="id" title="variable">σ</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHSet"><span class="id" title="abbreviation">IsHSet</span></a> (<a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers:18"><span class="id" title="method">carriers</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#s:21"><span class="id" title="variable">s</span></a>) }.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Build_Algebra"><span class="id" title="constructor">Build_Algebra</span></a> {σ} <span class="id" title="var">carriers</span> <span class="id" title="var">operations</span> {<span class="id" title="var">hset_algebra</span>}.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Build_Algebra"><span class="id" title="constructor">Build_Algebra</span></a> {σ} <span class="id" title="var">carriers</span> <span class="id" title="var">operations</span> {<span class="id" title="var">hset_algebra</span>}.<br/>
 
 <br/>
 <span class="id" title="keyword">Global</span> <span class="id" title="var">Existing</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">hset_algebra</span>.<br/>
@@ -187,7 +185,7 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
 <span class="id" title="keyword">Global</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers"><span class="id" title="projection">Coercion</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers"><span class="id" title="projection">carriers</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers"><span class="id" title="projection">:</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers"><span class="id" title="projection">Algebra</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers"><span class="id" title="projection">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#carriers"><span class="id" title="projection">Funclass</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Bind</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Algebra</span>.<br/>
+<span class="id" title="keyword">Bind Scope</span> <span class="id" title="var">Algebra_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Algebra</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="SigAlgebra" class="idref" href="#SigAlgebra"><span class="id" title="definition">SigAlgebra</span></a> (<a id="ae0c06ba32431cba6651bad87205f6d2" class="idref" href="#ae0c06ba32431cba6651bad87205f6d2"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Signature"><span class="id" title="record">Signature</span></a>) : <span class="id" title="keyword">Type</span><br/>
@@ -216,7 +214,7 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_algebra"><span class="id" title="lemma">path_algebra</span></a> {<span class="id" title="var">_</span>} {<span class="id" title="var">_</span>} (<span class="id" title="var">A</span> <span class="id" title="var">B</span>)%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span>)%<span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_algebra"><span class="id" title="lemma">path_algebra</span></a> {<span class="id" title="var">_</span>} {<span class="id" title="var">_</span>} (<span class="id" title="var">A</span> <span class="id" title="var">B</span>)%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span>)%<span class="id" title="var">path_scope</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a id="path_ap_carriers_path_algebra" class="idref" href="#path_ap_carriers_path_algebra"><span class="id" title="lemma">path_ap_carriers_path_algebra</span></a> `{<a id="H:36" class="idref" href="#H:36"><span class="id" title="binder">Funext</span></a>} {<a id="94078804e95e06d93abd3f704373ee2e" class="idref" href="#94078804e95e06d93abd3f704373ee2e"><span class="id" title="binder">σ</span></a>} (<a id="A:38" class="idref" href="#A:38"><span class="id" title="binder">A</span></a> <a id="B:39" class="idref" href="#B:39"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#94078804e95e06d93abd3f704373ee2e"><span class="id" title="variable">σ</span></a>)<br/>
@@ -232,7 +230,7 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_ap_carriers_path_algebra"><span class="id" title="lemma">path_ap_carriers_path_algebra</span></a> {<span class="id" title="var">_</span>} {<span class="id" title="var">_</span>} (<span class="id" title="var">A</span> <span class="id" title="var">B</span>)%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span>)%<span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_ap_carriers_path_algebra"><span class="id" title="lemma">path_ap_carriers_path_algebra</span></a> {<span class="id" title="var">_</span>} {<span class="id" title="var">_</span>} (<span class="id" title="var">A</span> <span class="id" title="var">B</span>)%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span>)%<span class="id" title="var">path_scope</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a id="path_path_algebra_issig" class="idref" href="#path_path_algebra_issig"><span class="id" title="lemma">path_path_algebra_issig</span></a> {<a id="3b2ad139708e05f42dd73db16efefbb8" class="idref" href="#3b2ad139708e05f42dd73db16efefbb8"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Signature"><span class="id" title="record">Signature</span></a>} {<a id="A:45" class="idref" href="#A:45"><span class="id" title="binder">A</span></a> <a id="B:46" class="idref" href="#B:46"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#3b2ad139708e05f42dd73db16efefbb8"><span class="id" title="variable">σ</span></a>} (<a id="p:47" class="idref" href="#p:47"><span class="id" title="binder">p</span></a> <a id="q:48" class="idref" href="#q:48"><span class="id" title="binder">q</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#A:45"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#B:46"><span class="id" title="variable">B</span></a>)<br/>
@@ -244,7 +242,7 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_path_algebra_issig"><span class="id" title="lemma">path_path_algebra_issig</span></a> {<span class="id" title="var">_</span>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span> <span class="id" title="var">r</span>)%<span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_path_algebra_issig"><span class="id" title="lemma">path_path_algebra_issig</span></a> {<span class="id" title="var">_</span>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span> <span class="id" title="var">r</span>)%<span class="id" title="var">path_scope</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a id="path_path_algebra" class="idref" href="#path_path_algebra"><span class="id" title="lemma">path_path_algebra</span></a> `{<a id="H:50" class="idref" href="#H:50"><span class="id" title="binder">Funext</span></a>} {<a id="aabbb3071490a3e89c35c54fc4d8b7c4" class="idref" href="#aabbb3071490a3e89c35c54fc4d8b7c4"><span class="id" title="binder">σ</span></a>} {<a id="A:52" class="idref" href="#A:52"><span class="id" title="binder">A</span></a> <a id="B:53" class="idref" href="#B:53"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#aabbb3071490a3e89c35c54fc4d8b7c4"><span class="id" title="variable">σ</span></a>}<br/>
@@ -259,16 +257,10 @@ An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_al
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_path_algebra"><span class="id" title="lemma">path_path_algebra</span></a> {<span class="id" title="var">_</span>} {σ} {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span> <span class="id" title="var">r</span>)%<span class="id" title="var">path_scope</span>.<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#path_path_algebra"><span class="id" title="lemma">path_path_algebra</span></a> {<span class="id" title="var">_</span>} {σ} {<span class="id" title="var">A</span> <span class="id" title="var">B</span>}%<span class="id" title="var">Algebra_scope</span> (<span class="id" title="var">p</span> <span class="id" title="var">q</span> <span class="id" title="var">r</span>)%<span class="id" title="var">path_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Module</span> <a id="notations_algebra" class="idref" href="#notations_algebra"><span class="id" title="module">notations_algebra</span></a>.<br/>
-
-<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Global</span> <span class="id" title="keyword">Notation</span> "u .# A" := (<a class="idref" href="HoTT.Algebra.Universal.Algebra.html#operations"><span class="id" title="projection">operations</span></a> <span class="id" title="var">A</span> <span class="id" title="var">u</span>) : <span class="id" title="var">Algebra_scope</span>.<br/>
-
-<br/>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#notations_algebra"><span class="id" title="module">notations_algebra</span></a>.<br/>
+<span class="id" title="keyword">Global</span> <span class="id" title="keyword">Notation</span> "u .# A" := (<a class="idref" href="HoTT.Algebra.Universal.Algebra.html#operations"><span class="id" title="projection">operations</span></a> <span class="id" title="var">A</span> <span class="id" title="var">u</span>) : <span class="id" title="var">Algebra_scope</span>.<br/>
 </div>
 </div>
 

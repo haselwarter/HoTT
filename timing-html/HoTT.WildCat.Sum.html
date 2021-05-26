@@ -39,13 +39,13 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 2
 Time: 0.032s">
-<div class="time" style="width: 12.59842519685%"></div>
+<div class="time" style="width: 10.666666666667%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 0.78740157480315%"></div>
+<div class="time" style="width: 0.66666666666667%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
@@ -82,8 +82,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 9
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.33333333333333%"></div>
 <pre>
   intros [a1 | b1] [a2 | b2].</pre>
 </div>
@@ -165,7 +165,7 @@ Proof.</pre>
 <div class="code" title="File: Sum.v
 Line: 19
 Time: 0.001s">
-<div class="time" style="width: 0.39370078740157%"></div>
+<div class="time" style="width: 0.33333333333333%"></div>
 <pre>
   srapply Build_Is01Cat.</pre>
 </div>
@@ -191,15 +191,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 22
-Time: 0.005s">
-<div class="time" style="width: 1.9685039370079%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2%"></div>
 <pre> intros [a | b] [a1 | b1] [a2 | b2];
     try contradiction; cbn; apply cat_comp.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 23
-Time: 0.003s">
-<div class="time" style="width: 1.1811023622047%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.66666666666667%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -214,7 +214,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 0.39370078740157%"></div>
+<div class="time" style="width: 0.33333333333333%"></div>
 <pre>Global Instance is1cat_sum A B `{ Is1Cat A } `{ Is1Cat B}
   : Is1Cat (A + B).</pre>
 </div>
@@ -227,8 +227,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 28
-Time: 0.045s">
-<div class="time" style="width: 17.716535433071%"></div>
+Time: 0.046s">
+<div class="time" style="width: 15.333333333333%"></div>
 <pre>
   srapply Build_Is1Cat.</pre>
 </div>
@@ -248,7 +248,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 30
 Time: 0.003s">
-<div class="time" style="width: 1.1811023622047%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
     destruct x as [a1 | b1], y as [a2 | b2];
     try contradiction; cbn; apply Hom.</pre>
@@ -269,7 +269,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 33
 Time: 0.021s">
-<div class="time" style="width: 8.2677165354331%"></div>
+<div class="time" style="width: 7%"></div>
 <pre>
     srapply Build_Is01Cat;
     destruct x as [a1 | b1], y as [a2 | b2];
@@ -285,14 +285,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 38
-Time: 0.015s">
-<div class="time" style="width: 5.9055118110236%"></div>
+Time: 0.016s">
+<div class="time" style="width: 5.3333333333333%"></div>
 <pre> intros x y; srapply Build_Is0Gpd.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 38
-Time: 0.008s">
-<div class="time" style="width: 3.1496062992126%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
     destruct x as [a1 | b1], y as [a2 | b2];
     try contradiction; cbn; intros f g; apply gpd_rev.</pre>
@@ -307,7 +307,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 41
 Time: 0.007s">
-<div class="time" style="width: 2.755905511811%"></div>
+<div class="time" style="width: 2.3333333333333%"></div>
 <pre> intros x y z h; srapply Build_Is0Functor.</pre>
 </div>
 <div class="code" title="File: Sum.v
@@ -320,7 +320,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 42
 Time: 0.022s">
-<div class="time" style="width: 8.6614173228346%"></div>
+<div class="time" style="width: 7.3333333333333%"></div>
 <pre>
     destruct x as [a1 | b1], y as [a2 | b2], z as [a3 | b3];
     try contradiction; cbn in *; change (f $== g) in p; exact (h $@L p).</pre>
@@ -335,7 +335,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 45
 Time: 0.007s">
-<div class="time" style="width: 2.755905511811%"></div>
+<div class="time" style="width: 2.3333333333333%"></div>
 <pre> intros x y z h; srapply Build_Is0Functor.</pre>
 </div>
 <div class="code" title="File: Sum.v
@@ -347,8 +347,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 46
-Time: 0.026s">
-<div class="time" style="width: 10.236220472441%"></div>
+Time: 0.025s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
     destruct x as [a1 | b1], y as [a2 | b2], z as [a3 | b3];
     try contradiction; cbn in *; change (f $== g) in p; exact (p $@R h).</pre>
@@ -362,8 +362,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 49
-Time: 0.245s">
-<div class="time" style="width: 96.456692913386%"></div>
+Time: 0.284s">
+<div class="time" style="width: 94.666666666667%"></div>
 <pre> intros [a1 | b1] [a2 | b2] [a3 | b3] [a4 | b4] f g h;
     try contradiction; cbn; apply cat_assoc.</pre>
 </div>
@@ -376,8 +376,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 51
-Time: 0.065s">
-<div class="time" style="width: 25.590551181102%"></div>
+Time: 0.075s">
+<div class="time" style="width: 25%"></div>
 <pre> intros [a1 | b1] [a2 | b2] f; try contradiction;
     cbn; apply cat_idl.</pre>
 </div>
@@ -390,14 +390,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 53
-Time: 0.062s">
-<div class="time" style="width: 24.409448818898%"></div>
+Time: 0.074s">
+<div class="time" style="width: 24.666666666667%"></div>
 <pre> intros [a1 | b1] [a2 | b2] f; try contradiction;
     cbn; apply cat_idr.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 54
-Time: 0.254s">
+Time: 0.3s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>

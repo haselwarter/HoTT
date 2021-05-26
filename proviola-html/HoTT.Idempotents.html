@@ -3418,12 +3418,12 @@
           
 
             i = 680;
-            data = "1 goal (ID 510)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  split_idem (s o r) <~> A	";
+            data = "";
             responses[i]=data;
           
 
             i = 681;
-            data = "3 goals (ID 564)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x))	  o (split_idem_retr (s o r) o s) == idmap		goal 2 (ID 566) is:	 split_idem_retr (s o r) o s	 o (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x)) == idmap	goal 3 (ID 568) is:	 forall x : split_idem (s o r),	 ?eisretr ((fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0)) x) =	 ap (fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0))	   (?eissect x)	";
+            data = "1 goal (ID 510)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  split_idem (s o r) <~> A	3 goals (ID 564)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x))	  o (split_idem_retr (s o r) o s) == idmap		goal 2 (ID 566) is:	 split_idem_retr (s o r) o s	 o (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x)) == idmap	goal 3 (ID 568) is:	 forall x : split_idem (s o r),	 ?eisretr ((fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0)) x) =	 ap (fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0))	   (?eissect x)	";
             responses[i]=data;
           
 
@@ -3788,12 +3788,12 @@
           
 
             i = 754;
-            data = "1 goal (ID 804)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) (s (r x)))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) x)))) @	  ((ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))^ @	   (isidem (fun x0 : X => s (r x0)) (s (r x)) @	    isidem (fun x0 : X => s (r x0)) x)) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 808)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r (s (r x)))))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x)))))) @	  ((ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^ @	   (ap s (H (r (s (r x)))) @ ap s (H (r x)))) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 826)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0)))	          (ap s (H (r (s (r x))))))	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x))))	  @' (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 867)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 874)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x)))) = ap s (H (r (s (r x))))	1 goal (ID 893)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^ = 1	1 goal (ID 921)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x)))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 954)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 1003)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	";
+            data = "";
             responses[i]=data;
           
 
             i = 755;
-            data = "1 goal (ID 1036)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x))) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x)))	";
+            data = "1 goal (ID 804)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) (s (r x)))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) x)))) @	  ((ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))^ @	   (isidem (fun x0 : X => s (r x0)) (s (r x)) @	    isidem (fun x0 : X => s (r x0)) x)) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 808)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r (s (r x)))))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x)))))) @	  ((ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^ @	   (ap s (H (r (s (r x)))) @ ap s (H (r x)))) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 826)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0)))	          (ap s (H (r (s (r x))))))	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x))))	  @' (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 867)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 874)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x)))) = ap s (H (r (s (r x))))	1 goal (ID 893)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^ = 1	1 goal (ID 921)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x)))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 954)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 1003)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 1036)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x))) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x)))	";
             responses[i]=data;
           
 
@@ -3958,7 +3958,7 @@
           
 
             i = 788;
-            data = "<infomsg>ua is declared</infomsg>	<infomsg>X is declared</infomsg>	1 goal (ID 367)	  	  ua : Univalence	  X : Type	  ============================	  RetractOf (QuasiIdempotent X)	1 goal (ID 376)	  	  ua : Univalence	  X : Type	  ============================	  (fun x : RetractOf X => split_idem_retract' (qidem_retract x)) == idmap	1 goal (ID 378)	  	  ua : Univalence	  X : Type	  R : RetractOf X	  ============================	  split_idem_retract' (qidem_retract R) = R	No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -3993,7 +3993,7 @@
           
 
             i = 795;
-            data = "1 goal (ID 373)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  RetractOf {I : IsPreIdempotent f & IsQuasiIdempotent f}	";
+            data = "<infomsg>ua is declared</infomsg>	<infomsg>X is declared</infomsg>	1 goal (ID 367)	  	  ua : Univalence	  X : Type	  ============================	  RetractOf (QuasiIdempotent X)	1 goal (ID 376)	  	  ua : Univalence	  X : Type	  ============================	  (fun x : RetractOf X => split_idem_retract' (qidem_retract x)) == idmap	1 goal (ID 378)	  	  ua : Univalence	  X : Type	  R : RetractOf X	  ============================	  split_idem_retract' (qidem_retract R) = R	No more goals.	1 goal (ID 373)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  RetractOf {I : IsPreIdempotent f & IsQuasiIdempotent f}	";
             responses[i]=data;
           
 
@@ -5251,28 +5251,28 @@
       mouseover(65, '0_3_7');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#RetractOf"><span class="id" title="record">RetractOf</span></a> <span class="id" title="var">X</span> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#RetractOf"><span class="id" title="record">RetractOf</span></a> <span class="id" title="var">X</span> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(66, '0_3_7');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_type"><span class="id" title="projection">retract_type</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_type"><span class="id" title="projection">retract_type</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(67, '0_3_7');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_retr"><span class="id" title="projection">retract_retr</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_retr"><span class="id" title="projection">retract_retr</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(68, '0_3_7');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_sect"><span class="id" title="projection">retract_sect</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_sect"><span class="id" title="projection">retract_sect</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(69, '0_3_7');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_issect"><span class="id" title="projection">retract_issect</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_issect"><span class="id" title="projection">retract_issect</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(70, '0_3_7');
@@ -5682,7 +5682,7 @@ Like any record type, <span class="inlinecode"><a class="idref" href="HoTT.Idemp
       mouseover(178, '0_3_31');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_idem"><span class="id" title="definition">retract_idem</span></a> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> / <span class="id" title="var">x</span> .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#retract_idem"><span class="id" title="definition">retract_idem</span></a> {<span class="id" title="var">_</span>} <span class="id" title="var">_</span> / <span class="id" title="var">x</span> .</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
       mouseover(179, '0_3_31');
@@ -5737,7 +5737,7 @@ For example, here is the canonical splitting of the identity.
       mouseover(221, '0_3_39');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#isidem"><span class="id" title="definition">isidem</span></a> {<span class="id" title="var">X</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#isidem"><span class="id" title="definition">isidem</span></a> {<span class="id" title="var">X</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
       mouseover(222, '0_3_39');
@@ -5776,7 +5776,7 @@ For example, here is the canonical splitting of the identity.
       mouseover(228, '0_3_39');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#ispreidem_homotopic"><span class="id" title="definition">ispreidem_homotopic</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#ispreidem_homotopic"><span class="id" title="definition">ispreidem_homotopic</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
       mouseover(229, '0_3_39');
@@ -6167,7 +6167,7 @@ Conversely, if <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.h
       mouseover(345, '0_3_67');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#isidem2"><span class="id" title="definition">isidem2</span></a> {<span class="id" title="var">X</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#isidem2"><span class="id" title="definition">isidem2</span></a> {<span class="id" title="var">X</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span> <span class="id" title="var">_</span>} <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
       mouseover(346, '0_3_67');
@@ -6373,12 +6373,12 @@ We have made <span class="inlinecode"><a class="idref" href="HoTT.Idempotents.ht
       mouseover(404, '0_3_75');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#ispreidem_retract"><span class="id" title="instance">ispreidem_retract</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#ispreidem_retract"><span class="id" title="instance">ispreidem_retract</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
       mouseover(405, '0_3_75');
       "><br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#preidem_retract"><span class="id" title="definition">preidem_retract</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#preidem_retract"><span class="id" title="definition">preidem_retract</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
       mouseover(406, '0_3_75');
@@ -6479,7 +6479,7 @@ In particular, it follows that any split function is quasi-idempotent.
       mouseover(425, '0_3_79');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#ispreidem_split"><span class="id" title="instance">ispreidem_split</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#ispreidem_split"><span class="id" title="instance">ispreidem_split</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
       mouseover(426, '0_3_79');
@@ -6512,7 +6512,7 @@ In particular, it follows that any split function is quasi-idempotent.
       mouseover(431, '0_3_79');
       "><br>
 <br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#isqidem_split"><span class="id" title="instance">isqidem_split</span></a> / .</span><span class="command" onmouseout="
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#isqidem_split"><span class="id" title="instance">isqidem_split</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
       mouseover(432, '0_3_79');
@@ -6609,7 +6609,7 @@ The splitting will be the sequential limit of the sequence <span class="inlineco
       " onmouseover="
       mouseover(472, '0_3_91');
       "><br>
-  <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">split_idem_pr1</span></a> / .</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">split_idem_pr1</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_91');
       " onmouseover="
       mouseover(473, '0_3_91');
@@ -6634,7 +6634,7 @@ The section, retraction, and the fact that the composite in one direction is <sp
       " onmouseover="
       mouseover(480, '0_3_95');
       "><br>
-  <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_sect"><span class="id" title="definition">split_idem_sect</span></a> / .</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_sect"><span class="id" title="definition">split_idem_sect</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_95');
       " onmouseover="
       mouseover(481, '0_3_95');
@@ -6670,7 +6670,7 @@ The section, retraction, and the fact that the composite in one direction is <sp
       " onmouseover="
       mouseover(487, '0_3_95');
       "><br>
-  <span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_retr"><span class="id" title="definition">split_idem_retr</span></a> / .</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_retr"><span class="id" title="definition">split_idem_retr</span></a> / .</span><span class="command" onmouseout="
       mouseout('0_3_95');
       " onmouseover="
       mouseover(488, '0_3_95');

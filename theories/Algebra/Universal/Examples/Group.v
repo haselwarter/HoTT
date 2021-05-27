@@ -33,7 +33,7 @@ Coercion group_type : Group >-> Sortclass.
 (* NOTE: with this below we should be able to use notations [mon_unit], [_ * _], [- _], but I have not tested it. *)
 Global Existing Instances group_sgop group_unit group_inverse group_isgroup.
 
-Variant GroupSymbol := 
+Variant GroupSymbol :=
   group_sgop_sym | group_unit_sym | group_inverse_sym.
 
 Lemma equiv_fin3_group_symbol : Fin 3 <~> GroupSymbol.
@@ -84,9 +84,53 @@ Defined.
 
 Definition ModelAlgebraGroup : Type := ModelAlgebra equations_group.
 
+Theorem ModelAlgebraGroup_Group_equiv : ModelAlgebraGroup <~> Group.
+  srapply equiv_adjointify.
+  - intros [alg isModel].
+    destruct alg as [carriers operations hset_carriers].
+    pose signature_group.
+    destruct s.
+    pose (carriers tt) as T.
+    assert (SgOp T) as group_op.
+    { unfold SgOp.
+      pose (operations group_sgop_sym) as op.
+      (* simpl in op. *)
+      unfold Operation in op.
+      cbn in op.
+      change (carriers tt) with T in op.
+      intros x1 x2.
+      apply op.
+      intros [ [?|l] | r].
+      * destruct e.
+      * exact x1.
+      * exact x2. }
+    assert (MonUnit T) as group_unit.
+    { apply (operations group_unit_sym).
+      intros F.
+      destruct F. }
+    assert (Negate T) as group_inverse.
+    { exact (fun x =>
+               operations
+                group_inverse_sym
+                (fun y => match y with inl F => ltac:(contradiction F) | inr tt => x end)).
+    }
+    apply (@Build_Group T group_op group_unit group_inverse).
+    apply Build_IsGroup.
+    + admit.
+    + admit.
+    + admit.
+  - (* Group -> ModelAlgebraGroup *)
+    admit.
+  - (* (fun x : ?B => f (g x)) == idmap *)
+    admit.
+  - (* (fun x : ?A => g (f x)) == idmap *)
+    admit.
+Admitted.
+
 (* Here I list some of the missing results for this file. Remember that univalence is an axiom, so try to use it only for h-props.
    1. Show that [ModelAlgebraGroup] is equivalent to [Group], [ModelAlgebraGroup <~> Group].
-   2. Define group homomorphism and isomorphism, see HoTT.Algebra.Groups.Group. Show group homomorphism/isomorphism is equivalent to algebra homomorphism/isomorphism. If a function preserves multiplication, then it also preserves unit and inverse.
+   2. Define group homomorphism and isomorphism, see HoTT.Algebra.Groups.Group. Show group
+   homomorphism/isomorphism is equivalent to algebra homomorphism/isomorphism. If a function preserves multiplication and unit, then it also preserves inverse.
    3. Show that group isomorphism is equivalent to equality by applying [equiv_path_isomorphism] from HoTT.Algebra.Universal.Isomorphism.
    4. Define the product group and projection homomorphisms by using [model_prod_algebra].
    5. Prove the universal property for product group using that for [prod_algebra].

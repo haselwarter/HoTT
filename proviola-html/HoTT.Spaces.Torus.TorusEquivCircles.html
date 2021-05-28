@@ -323,12 +323,12 @@
           
 
             i = 61;
-            data = "";
+            data = "1 goal (ID 255)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C	  g : C -> D	  a, a' : A	  p : a = a'	  b, b' : B	  q : b = b'	  ============================	  PathCube (sq_ap011 (fun (x : A) (y : B) => g (f x y)) p q)	    (sq_ap g (sq_ap011 f p q)) apcs apcs apcs apcs	No more goals.	1 goal (ID 268)	  	  H : Funext	  ============================	  t2c o c2t == idmap	1 goal (ID 281)	  	  H : Funext	  ============================	  forall fst snd : Circle, t2c (c2t (fst, snd)) = (fst, snd)	2 goals (ID 289)	  	  H : Funext	  ============================	  DPath (fun x : Circle => t2c (c2t (base, x)) = (base, x)) loop 1 1		goal 2 (ID 291) is:	 DPath (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	   loop	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 goal (ID 255)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C	  g : C -> D	  a, a' : A	  p : a = a'	  b, b' : B	  q : b = b'	  ============================	  PathCube (sq_ap011 (fun (x : A) (y : B) => g (f x y)) p q)	    (sq_ap g (sq_ap011 f p q)) apcs apcs apcs apcs	No more goals.	1 goal (ID 268)	  	  H : Funext	  ============================	  t2c o c2t == idmap	1 goal (ID 281)	  	  H : Funext	  ============================	  forall fst snd : Circle, t2c (c2t (fst, snd)) = (fst, snd)	2 goals (ID 289)	  	  H : Funext	  ============================	  DPath (fun x : Circle => t2c (c2t (base, x)) = (base, x)) loop 1 1		goal 2 (ID 291) is:	 DPath (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	   loop	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	1 focused goal	(shelved: 1) (ID 291)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	    loop	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	";
+            data = "1 focused goal	(shelved: 1) (ID 291)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	    loop	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	";
             responses[i]=data;
           
 

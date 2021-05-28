@@ -653,12 +653,12 @@
           
 
             i = 127;
-            data = "1 focused goal	(shelved: 1) (ID 1221)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  O_rec	    (functor_pullback f g (O_functor O f) (O_functor O g) 	       (to O A) (to O B) (to O C) (to_O_natural O f) 	       (to_O_natural O g)) (to O (Pullback f g) (b; c; e)) =	  pullback_corec	    (O_functor_square O pullback_pr1 pullback_pr2 f g (pullback_commsq f g))	    (to O (Pullback f g) (b; c; e))	";
+            data = "";
             responses[i]=data;
           
 
             i = 128;
-            data = "1 focused goal	(shelved: 1) (ID 1238)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  functor_pullback f g (O_functor O f) (O_functor O g) 	    (to O A) (to O B) (to O C) (to_O_natural O f) 	    (to_O_natural O g) (b; c; e) =	  pullback_corec	    (O_functor_square O pullback_pr1 pullback_pr2 f g (pullback_commsq f g))	    (to O (Pullback f g) (b; c; e))	";
+            data = "1 focused goal	(shelved: 1) (ID 1221)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  O_rec	    (functor_pullback f g (O_functor O f) (O_functor O g) 	       (to O A) (to O B) (to O C) (to_O_natural O f) 	       (to_O_natural O g)) (to O (Pullback f g) (b; c; e)) =	  pullback_corec	    (O_functor_square O pullback_pr1 pullback_pr2 f g (pullback_commsq f g))	    (to O (Pullback f g) (b; c; e))	1 focused goal	(shelved: 1) (ID 1238)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  functor_pullback f g (O_functor O f) (O_functor O g) 	    (to O A) (to O B) (to O C) (to_O_natural O f) 	    (to_O_natural O g) (b; c; e) =	  pullback_corec	    (O_functor_square O pullback_pr1 pullback_pr2 f g (pullback_commsq f g))	    (to O (Pullback f g) (b; c; e))	";
             responses[i]=data;
           
 
@@ -733,12 +733,12 @@
           
 
             i = 143;
-            data = "";
+            data = "1 goal (ID 1824)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  (O_functor_compose O pullback_pr1 f (to O (Pullback f g) (b; c; e)))^	  @' (to_O_natural O (fun x : Pullback f g => f (pullback_pr1 x)) (b; c; e)	      @' (ap (to (modality_subuniv O) A) e	          @' ((to_O_natural O g c)^	              @' ap (O_functor O g) (to_O_natural O pullback_pr2 (b; c; e))^))) =	  (O_functor_compose O pullback_pr1 f	     (to (modality_subuniv O) (Pullback f g) (b; c; e)))^	  @' (to_O_natural O (fun x : Pullback f g => f (pullback_pr1 x)) (b; c; e)	      @' (ap (to (modality_subuniv O) A) e	          @' ((to_O_natural O (fun x : Pullback f g => g (pullback_pr2 x))	                 (b; c; e))^	              @' O_functor_compose O pullback_pr2 g	                   (to (modality_subuniv O) (Pullback f g) (b; c; e)))))	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 goal (ID 1824)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  (O_functor_compose O pullback_pr1 f (to O (Pullback f g) (b; c; e)))^	  @' (to_O_natural O (fun x : Pullback f g => f (pullback_pr1 x)) (b; c; e)	      @' (ap (to (modality_subuniv O) A) e	          @' ((to_O_natural O g c)^	              @' ap (O_functor O g) (to_O_natural O pullback_pr2 (b; c; e))^))) =	  (O_functor_compose O pullback_pr1 f	     (to (modality_subuniv O) (Pullback f g) (b; c; e)))^	  @' (to_O_natural O (fun x : Pullback f g => f (pullback_pr1 x)) (b; c; e)	      @' (ap (to (modality_subuniv O) A) e	          @' ((to_O_natural O (fun x : Pullback f g => g (pullback_pr2 x))	                 (b; c; e))^	              @' O_functor_compose O pullback_pr2 g	                   (to (modality_subuniv O) (Pullback f g) (b; c; e)))))	1 goal (ID 1849)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  (to_O_natural O g c)^	  @' ap (O_functor O g) (to_O_natural O pullback_pr2 (b; c; e))^ =	  (to_O_natural O (fun x : Pullback f g => g (pullback_pr2 x)) (b; c; e))^	  @' O_functor_compose O pullback_pr2 g	       (to (modality_subuniv O) (Pullback f g) (b; c; e))	";
+            data = "1 goal (ID 1849)	  	  O : Modality	  Lex0 : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  (to_O_natural O g c)^	  @' ap (O_functor O g) (to_O_natural O pullback_pr2 (b; c; e))^ =	  (to_O_natural O (fun x : Pullback f g => g (pullback_pr2 x)) (b; c; e))^	  @' O_functor_compose O pullback_pr2 g	       (to (modality_subuniv O) (Pullback f g) (b; c; e))	";
             responses[i]=data;
           
 
@@ -1788,17 +1788,17 @@
           
 
             i = 354;
-            data = "";
+            data = "2 goals (ID 334)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  hfiber pr1 (g x) <~> hfiber g (g x)		goal 2 (ID 1005) is:	 IsEquiv	   (fun	      x0 : hfiber	             (fun x0 : {z : O_reflector O A' & B z} =>	              g (to O {z : O_reflector O A' & B z} x0)) 	             (g x) => (to O {z : O_reflector O A' & B z} x0.1; x0.2))	1 goal (ID 334)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  hfiber pr1 (g x) <~> hfiber g (g x)	1 goal (ID 1403)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  O (hfiber pr1 (g x)) <~> hfiber g (g x)	";
             responses[i]=data;
           
 
             i = 355;
-            data = "2 goals (ID 334)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  hfiber pr1 (g x) <~> hfiber g (g x)		goal 2 (ID 1005) is:	 IsEquiv	   (fun	      x0 : hfiber	             (fun x0 : {z : O_reflector O A' & B z} =>	              g (to O {z : O_reflector O A' & B z} x0)) 	             (g x) => (to O {z : O_reflector O A' & B z} x0.1; x0.2))	1 goal (ID 334)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  hfiber pr1 (g x) <~> hfiber g (g x)	";
+            data = "1 goal (ID 1417)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  hfiber (O_functor O pr1) (to O A (g x)) <~> hfiber g (g x)	";
             responses[i]=data;
           
 
             i = 356;
-            data = "1 goal (ID 1403)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  O (hfiber pr1 (g x)) <~> hfiber g (g x)	1 goal (ID 1417)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  hfiber (O_functor O pr1) (to O A (g x)) <~> hfiber g (g x)	1 goal (ID 1418)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  {x0 : O {x : _ & B x} & O_functor O pr1 x0 = to O A (g x)} <~>	  {x0 : O {x0 : A & B x0} & g x0 = g x}	";
+            data = "1 goal (ID 1418)	  	  O : ReflectiveSubuniverse	  H : forall (A B : Type) (f : A -> B) (b : B),	      IsEquiv (O_functor_hfiber O f b)	  A' : Type	  B : O_reflector O A' -> Type	  B_inO : forall oa : O_reflector O A', In O (B oa)	  A := O A' : Type	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.1	  x : O_reflector O {z : O_reflector O A' & B z}	  ============================	  {x0 : O {x : _ & B x} & O_functor O pr1 x0 = to O A (g x)} <~>	  {x0 : O {x0 : A & B x0} & g x0 = g x}	";
             responses[i]=data;
           
 
@@ -2399,7 +2399,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab947"></a><h1 class="section">Lex modalities</h1>
+<a id="lab956"></a><h1 class="section">Lex modalities</h1>
 <div class="doc" scenenumber="4"> </div>
 
  A lex modality is one that preserves finite limits, or equivalently pullbacks.  Many equivalent characterizations of this can be found in Theorem 3.1 of RSS.
@@ -2428,7 +2428,7 @@ Note that since this includes <span class="inlinecode"><a class="idref" href="Ho
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab948"></a><h2 class="section">Properties of lex modalities</h2>
+<a id="lab957"></a><h2 class="section">Properties of lex modalities</h2>
 <div class="doc" scenenumber="4"> </div>
 
  We now show that lex modalities have all the other properties from RSS Theorem 3.1 (which are equivalent to lex-ness).  All of them are simple specializations of properties from <span class="inlinecode"><span class="id" title="var">Descent.v</span></span> to the case <span class="inlinecode"><span class="id" title="var">O'</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> (although in the general case they are not known to be equivalent). 
@@ -3113,7 +3113,7 @@ Already proven for all modalities.
 </div>
 <div class="goal" id="goal0_3_71"><pre><span></span></pre></div>
 <div class="doc" scenenumber="73">
-<a id="lab949"></a><h2 class="section">Equivalent characterizations of lex-ness</h2>
+<a id="lab958"></a><h2 class="section">Equivalent characterizations of lex-ness</h2>
 <div class="doc" scenenumber="4"> </div>
 
  We will not prove that *all* of the above properties from RSS Theorem 3.1 are equivalent to lex-ness, but we will do it for some of them. 
@@ -3672,7 +3672,7 @@ RSS Theorem 3.1 (vii) implies lex-ness
 </div>
 <div class="goal" id="goal0_3_103"><pre><span></span></pre></div>
 <div class="doc" scenenumber="105">
-<a id="lab950"></a><h2 class="section">Lex reflective subuniverses</h2>
+<a id="lab959"></a><h2 class="section">Lex reflective subuniverses</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A reflective subuniverse that preserves fibers is in fact a modality (and hence lex). 
@@ -3912,7 +3912,7 @@ RSS Theorem 3.1 (vii) implies lex-ness
 </div>
 <div class="goal" id="goal0_3_107"><pre><span></span></pre></div>
 <div class="doc" scenenumber="109">
-<a id="lab951"></a><h2 class="section">Lexness via generators</h2>
+<a id="lab960"></a><h2 class="section">Lexness via generators</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Here the characterization of when an accessible presentation yields a lex modality from Anel-Biederman-Finster-Joyal ("Higher Sheaves and Left-Exact Localizations of ∞-Topoi", arXiv:2101.02791): it's enough for path spaces of the generators to be connected. 
@@ -4018,7 +4018,7 @@ Here we use the hypothesis <span class="inlinecode"><span class="id" title="var"
 </div>
 <div class="goal" id="goal0_3_115"><pre><span></span></pre></div>
 <div class="doc" scenenumber="117">
-<a id="lab952"></a><h2 class="section">n-fold separation</h2>
+<a id="lab961"></a><h2 class="section">n-fold separation</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A type is <span class="inlinecode"><span class="id" title="var">n</span></span>-<span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-separated, for n &gt;= -2, if all its (n+2)-fold iterated identity types are <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-modal.  Inductively, this means that it is (-2)-O-separated if it is O-modal, and (n+1)-O-separated if its identity types are n-O-separated. 

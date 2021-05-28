@@ -138,52 +138,52 @@
           
 
             i = 24;
-            data = "4 goals (ID 81)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x : B, IsHProp (hexists (fun a : A => f a = x))		goal 2 (ID 82) is:	 hexists (fun a : A => f a = mon_unit)	goal 3 (ID 83) is:	 forall x y : B,	 hexists (fun a : A => f a = x) ->	 hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)	goal 4 (ID 84) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	";
+            data = "4 goals (ID 83)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x : B, IsHProp (hexists (fun a : A => f a = x))		goal 2 (ID 84) is:	 hexists (fun a : A => f a = mon_unit)	goal 3 (ID 85) is:	 forall x y : B,	 hexists (fun a : A => f a = x) ->	 hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)	goal 4 (ID 86) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	";
             responses[i]=data;
           
 
             i = 25;
-            data = "3 goals (ID 82)	  	  A, B : Group	  f : A $-> B	  ============================	  hexists (fun a : A => f a = mon_unit)		goal 2 (ID 83) is:	 forall x y : B,	 hexists (fun a : A => f a = x) ->	 hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)	goal 3 (ID 84) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	";
+            data = "3 goals (ID 84)	  	  A, B : Group	  f : A $-> B	  ============================	  hexists (fun a : A => f a = mon_unit)		goal 2 (ID 85) is:	 forall x y : B,	 hexists (fun a : A => f a = x) ->	 hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)	goal 3 (ID 86) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	";
             responses[i]=data;
           
 
             i = 26;
-            data = "2 goals (ID 83)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x y : B,	  hexists (fun a : A => f a = x) ->	  hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)		goal 2 (ID 84) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	";
+            data = "2 goals (ID 85)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x y : B,	  hexists (fun a : A => f a = x) ->	  hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)		goal 2 (ID 86) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	";
             responses[i]=data;
           
 
             i = 27;
-            data = "1 goal (ID 83)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x y : B,	  hexists (fun a : A => f a = x) ->	  hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)	1 goal (ID 257)	  	  A, B : Group	  f : A $-> B	  x, y : B	  q : {a : A & f a = y}	  p : {a : A & f a = x}	  ============================	  {a : A & f a = x + y}	";
+            data = "1 goal (ID 85)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x y : B,	  hexists (fun a : A => f a = x) ->	  hexists (fun a : A => f a = y) -> hexists (fun a : A => f a = x + y)	1 goal (ID 268)	  	  A, B : Group	  f : A $-> B	  x, y : B	  q : {a : A & f a = y}	  p : {a : A & f a = x}	  ============================	  {a : A & f a = x + y}	";
             responses[i]=data;
           
 
             i = 28;
-            data = "1 goal (ID 273)	  	  A, B : Group	  f : A $-> B	  x, y : B	  b, a : A	  ============================	  {a0 : A & f a0 = f a + f b}	";
+            data = "1 goal (ID 284)	  	  A, B : Group	  f : A $-> B	  x, y : B	  b, a : A	  ============================	  {a0 : A & f a0 = f a + f b}	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 goal (ID 277)	  	  A, B : Group	  f : A $-> B	  x, y : B	  b, a : A	  ============================	  f (a + b) = f a + f b	";
+            data = "1 goal (ID 288)	  	  A, B : Group	  f : A $-> B	  x, y : B	  b, a : A	  ============================	  f (a + b) = f a + f b	";
             responses[i]=data;
           
 
             i = 30;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 84) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	1 goal (ID 84)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x : B,	  hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	1 goal (ID 281)	  	  A, B : Group	  f : A $-> B	  b : B	  p : hexists (fun a : A => f a = b)	  ============================	  hexists (fun a : A => f a = - b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 86) is:	 forall x : B,	 hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	1 goal (ID 86)	  	  A, B : Group	  f : A $-> B	  ============================	  forall x : B,	  hexists (fun a : A => f a = x) -> hexists (fun a : A => f a = - x)	1 goal (ID 292)	  	  A, B : Group	  f : A $-> B	  b : B	  p : hexists (fun a : A => f a = b)	  ============================	  hexists (fun a : A => f a = - b)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 goal (ID 309)	  	  A, B : Group	  f : A $-> B	  b : B	  p : {a : A & f a = b}	  ============================	  hexists (fun a : A => f a = - b)	";
+            data = "1 goal (ID 321)	  	  A, B : Group	  f : A $-> B	  b : B	  p : {a : A & f a = b}	  ============================	  hexists (fun a : A => f a = - b)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 goal (ID 347)	  	  A, B : Group	  f : A $-> B	  b : B	  a : A	  ============================	  hexists (fun a0 : A => f a0 = - f a)	";
+            data = "1 goal (ID 361)	  	  A, B : Group	  f : A $-> B	  b : B	  a : A	  ============================	  hexists (fun a0 : A => f a0 = - f a)	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 goal (ID 354)	  	  A, B : Group	  f : A $-> B	  b : B	  a : A	  ============================	  f (- a) = - f a	";
+            data = "1 goal (ID 368)	  	  A, B : Group	  f : A $-> B	  b : B	  a : A	  ============================	  f (- a) = - f a	";
             responses[i]=data;
           
 
@@ -213,27 +213,27 @@
           
 
             i = 39;
-            data = "1 goal (ID 74)	  	  A, B : Group	  f : A $-> B	  ============================	  A -> grp_image f	1 goal (ID 87)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  grp_image f	";
+            data = "1 goal (ID 74)	  	  A, B : Group	  f : A $-> B	  ============================	  A -> grp_image f	1 goal (ID 89)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  grp_image f	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 goal (ID 89)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  grp_image f (f x)	";
+            data = "1 goal (ID 91)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  grp_image f (f x)	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 goal (ID 97)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  {a : A & f a = f x}	";
+            data = "1 goal (ID 99)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  {a : A & f a = f x}	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 goal (ID 101)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  f x = f x	";
+            data = "1 goal (ID 103)	  	  A, B : Group	  f : A $-> B	  x : A	  ============================	  f x = f x	";
             responses[i]=data;
           
 
             i = 43;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 76) is:	 IsSemiGroupPreserving (fun x : A => (f x; tr (x; 1%path)))	1 goal (ID 76)	  	  A, B : Group	  f : A $-> B	  ============================	  IsSemiGroupPreserving (fun x : A => (f x; tr (x; 1%path)))	1 goal (ID 103)	  	  A, B : Group	  f : A $-> B	  ============================	  IsSemiGroupPreserving (fun x : A => (f x; tr (x; 1%path)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 76) is:	 IsSemiGroupPreserving (fun x : A => (f x; tr (x; 1%path)))	1 goal (ID 76)	  	  A, B : Group	  f : A $-> B	  ============================	  IsSemiGroupPreserving (fun x : A => (f x; tr (x; 1%path)))	1 goal (ID 105)	  	  A, B : Group	  f : A $-> B	  ============================	  IsSemiGroupPreserving (fun x : A => (f x; tr (x; 1%path)))	";
             responses[i]=data;
           
 

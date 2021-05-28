@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a id="lab1246"></a><h1 class="section">Connectedness</h1>
+<a id="lab1255"></a><h1 class="section">Connectedness</h1>
 
 </div>
 <div class="code">
@@ -78,7 +78,7 @@ One reason for our choice is that this way, the n-truncated and n-connected maps
 </div>
 
 <div class="doc">
-<a id="lab1247"></a><h2 class="section">Truncatedness of the type of extensions</h2>
+<a id="lab1256"></a><h2 class="section">Truncatedness of the type of extensions</h2>
 
 <div class="paragraph"> </div>
 
@@ -109,7 +109,7 @@ This lemma is most useful via corollaries like the wedge-inclusion, the wiggly w
 </div>
 
 <div class="doc">
-<a id="lab1248"></a><h2 class="section">Connectedness of path spaces</h2>
+<a id="lab1257"></a><h2 class="section">Connectedness of path spaces</h2>
 
 </div>
 <div class="code">
@@ -126,7 +126,7 @@ This lemma is most useful via corollaries like the wedge-inclusion, the wiggly w
 </div>
 
 <div class="doc">
-<a id="lab1249"></a><h2 class="section">Connectivity of pointed types</h2>
+<a id="lab1258"></a><h2 class="section">Connectivity of pointed types</h2>
 
 <div class="paragraph"> </div>
 
@@ -194,7 +194,7 @@ Note that <span class="inlinecode"><a class="idref" href="HoTT.Modalities.Descen
 </div>
 
 <div class="doc">
-<a id="lab1250"></a><h2 class="section">Decreasing connectedness</h2>
+<a id="lab1259"></a><h2 class="section">Decreasing connectedness</h2>
 
 <div class="paragraph"> </div>
 
@@ -238,7 +238,7 @@ By induction, an <span class="inlinecode"><span class="id" title="var">n</span>.
 </div>
 
 <div class="doc">
-<a id="lab1251"></a><h2 class="section">0-connectedness</h2>
+<a id="lab1260"></a><h2 class="section">0-connectedness</h2>
 
 <div class="paragraph"> </div>
 
@@ -353,7 +353,7 @@ The path component of a point <span class="inlinecode"><a class="idref" href="Ho
 </div>
 
 <div class="doc">
-<a id="lab1252"></a><h2 class="section">Connectivity of the wedge into the product.</h2>
+<a id="lab1261"></a><h2 class="section">Connectivity of the wedge into the product.</h2>
 
 
 <div class="paragraph"> </div>
@@ -444,6 +444,25 @@ It is easier to apply the above result with its components separated.
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">fs</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">f_a0</span> [<span class="id" title="var">f_b0</span> <span class="id" title="var">f_a0b0</span>]].<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Connectedness.html#wedge_incl_elim"><span class="id" title="definition">wedge_incl_elim</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">f_a0b0</span>).<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a id="lab1262"></a><h2 class="section">Connectivity of maps</h2>
+
+<div class="paragraph"> </div>
+
+ Retractions are surjective. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="issurj_retr" class="idref" href="#issurj_retr"><span class="id" title="definition">issurj_retr</span></a> {<a id="X:127" class="idref" href="#X:127"><span class="id" title="binder">X</span></a> <a id="Y:128" class="idref" href="#Y:128"><span class="id" title="binder">Y</span></a> : <span class="id" title="keyword">Type</span>} {<a id="r:129" class="idref" href="#r:129"><span class="id" title="binder">r</span></a> : <a class="idref" href="HoTT.Truncations.Connectedness.html#X:127"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Connectedness.html#Y:128"><span class="id" title="variable">Y</span></a>} (<a id="s:130" class="idref" href="#s:130"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Truncations.Connectedness.html#Y:128"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Connectedness.html#X:127"><span class="id" title="variable">X</span></a>) (<a id="h:132" class="idref" href="#h:132"><span class="id" title="binder">h</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="y:131" class="idref" href="#y:131"><span class="id" title="binder">y</span></a>:<a class="idref" href="HoTT.Truncations.Connectedness.html#Y:128"><span class="id" title="variable">Y</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Truncations.Connectedness.html#r:129"><span class="id" title="variable">r</span></a> (<a class="idref" href="HoTT.Truncations.Connectedness.html#s:130"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Truncations.Connectedness.html#y:131"><span class="id" title="variable">y</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Truncations.Connectedness.html#y:131"><span class="id" title="variable">y</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Truncations.Connectedness.html#r:129"><span class="id" title="variable">r</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">y</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><span class="id" title="var">s</span> <span class="id" title="var">y</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">h</span> <span class="id" title="var">y</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>).<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
 </div>
 </div>

@@ -39,14 +39,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 3
-Time: 0.029s">
-<div class="time" style="width: 69.047619047619%"></div>
+Time: 0.03s">
+<div class="time" style="width: 71.428571428571%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 3
-Time: 0.009s">
-<div class="time" style="width: 21.428571428571%"></div>
+Time: 0.01s">
+<div class="time" style="width: 23.809523809524%"></div>
 <pre>
 Require Import Types.Sigma Types.Forall Types.Arrow Types.Paths Types.Equiv Types.Bool Types.Prod.</pre>
 </div>
@@ -78,8 +78,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 11
-Time: 0.014s">
-<div class="time" style="width: 33.333333333333%"></div>
+Time: 0.015s">
+<div class="time" style="width: 35.714285714286%"></div>
 <pre>Global Instance isequiv_path {A B : Type} (p : A = B)
   : IsEquiv (transport (fun X:Type =&gt; X) p) | 0
   := Build_IsEquiv _ _ _ (transport (fun X:Type =&gt; X) p^)
@@ -93,8 +93,8 @@ Time: 0.014s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition equiv_path (A B : Type) (p : A = B) : A &lt;~&gt; B
@@ -102,8 +102,8 @@ Definition equiv_path (A B : Type) (p : A = B) : A &lt;~&gt; B
 </div>
 <div class="code" title="File: Universe.v
 Line: 23
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition equiv_path_V `{Funext} (A B : Type) (p : A = B) :
@@ -143,8 +143,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -156,8 +156,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -249,8 +249,8 @@ Context `{Univalence}.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 44
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition path_universe_uncurried {A B : Type} (f : A &lt;~&gt; B) : A = B
@@ -258,8 +258,8 @@ Definition path_universe_uncurried {A B : Type} (f : A &lt;~&gt; B) : A = B
 </div>
 <div class="code" title="File: Universe.v
 Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition path_universe {A B : Type} (f : A -&gt; B) {feq : IsEquiv f} : (A = B)
@@ -285,8 +285,8 @@ Definition eta_path_universe {A B : Type} (p : A = B)
 </div>
 <div class="code" title="File: Universe.v
 Line: 56
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition eta_path_universe_uncurried {A B : Type} (p : A = B)
@@ -305,8 +305,8 @@ Definition isequiv_path_universe {A B : Type}
 </div>
 <div class="code" title="File: Universe.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition equiv_path_universe (A B : Type) : (A &lt;~&gt; B) &lt;~&gt; (A = B)
@@ -349,8 +349,8 @@ Definition path_universe_uncurried_equiv_path {A B : Type} (p : A = B)
 </div>
 <div class="code" title="File: Universe.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
 Definition path_universe_transport_idmap {A B : Type} (p : A = B)
   : path_universe (transport idmap p) = p
@@ -358,8 +358,8 @@ Definition path_universe_transport_idmap {A B : Type} (p : A = B)
 </div>
 <div class="code" title="File: Universe.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 Definition path_universe_uncurried_transport_idmap {A B : Type} (p : A = B)
   : path_universe_uncurried (equiv_transport idmap p) = p
@@ -376,8 +376,8 @@ Definition equiv_path_path_universe {A B : Type} (f : A &lt;~&gt; B)
 </div>
 <div class="code" title="File: Universe.v
 Line: 87
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition equiv_path_path_universe_uncurried {A B : Type} (f : A &lt;~&gt; B)
   : equiv_path A B (path_universe_uncurried f) = f
@@ -413,8 +413,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 99
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Definition equiv_path_pp `{Funext} {A B C : Type} (p : A = B) (q : B = C)
 : equiv_path A C (p @ q) = equiv_path B C q oE equiv_path A B p.</pre>
 </div>
@@ -454,8 +454,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 104
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -486,8 +486,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 112
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre> equiv_intro (equiv_path A B) f.</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -505,15 +505,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 113
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine ((ap path_universe_uncurried (equiv_path_pp f g))^ @ _).</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 114
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
   refine (eta_path_universe (f @ g) @ _).</pre>
 </div>
@@ -533,8 +533,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 117
-Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.008s">
+<div class="time" style="width: 19.047619047619%"></div>
 <pre>
 
 Definition path_universe_compose `{Funext} {A B C : Type}
@@ -614,8 +614,8 @@ Definition path_universe_1 {A : Type}
 </div>
 <div class="code" title="File: Universe.v
 Line: 132
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition path_universe_V_uncurried `{Funext} {A B : Type} (f : A &lt;~&gt; B)
@@ -643,14 +643,14 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 137
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 137
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   transitivity (p^).</pre>
 </div>
@@ -751,29 +751,29 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 155
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
   rewrite (eissect (equiv_path B C) f : path_universe (equiv_path B C f) = f).</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 156
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct f; simpl.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 157
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
   apply path_equiv, path_forall; intros g.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 158
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply path_equiv, path_forall; intros a.</pre>
 </div>
@@ -786,8 +786,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 160
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -823,8 +823,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 167
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> equiv_intro (equiv_path B C) f.</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -843,15 +843,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 169
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
   apply path_equiv, path_arrow; intros x; reflexivity.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 170
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.006s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -865,8 +865,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 173
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>Definition ap_prod_r_path_universe `{Funext} A {B C} (f : B &lt;~&gt; C)
   : equiv_path (B * A) (C * A) (ap (fun Z =&gt; Z * A) (path_universe f))
     = equiv_functor_prod_r f.</pre>
@@ -893,8 +893,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 177
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
   rewrite (eissect (equiv_path B C) f : path_universe (equiv_path B C f) = f).</pre>
 </div>
@@ -914,8 +914,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 180
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -959,8 +959,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 189
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact (ap (fun s =&gt; transport idmap s z) (eissect _ p)).</pre>
 </div>
@@ -993,8 +993,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 198
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition transport_path_universe_equiv_path
            {A B : Type} (p : A = B) (z : A)
   : transport_path_universe (equiv_path A B p) z =
@@ -1011,8 +1011,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 204
-Time: 0.004s">
-<div class="time" style="width: 9.5238095238095%"></div>
+Time: 0.005s">
+<div class="time" style="width: 11.904761904762%"></div>
 <pre>Definition transport_path_universe'
   {A : Type} (P : A -&gt; Type) {x y : A} (p : x = y)
   (f : P x &lt;~&gt; P y) (q : ap P p = path_universe f) (u : P x)
@@ -1055,8 +1055,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 217
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> equiv_intro (equiv_path A B) p.</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -1068,8 +1068,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 218
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1095,8 +1095,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 226
-Time: 0.006s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0.005s">
+<div class="time" style="width: 11.904761904762%"></div>
 <pre>Definition transport_path_universe_V_equiv_path `{Funext}
            {A B : Type} (p : A = B) (z : B)
   : transport_path_universe_V (equiv_path A B p) z =
@@ -1155,8 +1155,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 243
-Time: 0.003s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>refine (_ @ ap_transport_Vp_idmap p (path_universe (equiv_path A B p))
             (eissect (equiv_path A B) p) z).</pre>
 </div>
@@ -1169,8 +1169,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 245
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre> apply concat2.</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -1182,8 +1182,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 246
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -1207,8 +1207,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 247
-Time: 0.035s">
-<div class="time" style="width: 83.333333333333%"></div>
+Time: 0.034s">
+<div class="time" style="width: 80.952380952381%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1346,8 +1346,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 276
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition path2_universe `{Funext}
@@ -1357,8 +1357,8 @@ Definition path2_universe `{Funext}
 </div>
 <div class="code" title="File: Universe.v
 Line: 281
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition equiv_path2_universe_1 `{Funext}
@@ -1395,8 +1395,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 289
-Time: 0.004s">
-<div class="time" style="width: 9.5238095238095%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1464,8 +1464,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 328
-Time: 0.005s">
-<div class="time" style="width: 11.904761904762%"></div>
+Time: 0.004s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre>
 
   Definition path2_universe_postcompose_idmap `{Funext}
@@ -1488,8 +1488,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 340
-Time: 0.005s">
-<div class="time" style="width: 11.904761904762%"></div>
+Time: 0.004s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre>
     transitivity ((eta_path_universe (path_universe g))^
                   @ equiv_path2_universe
@@ -1563,8 +1563,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 355
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre> symmetry; refine (eisadj (equiv_path A C)^-1 g).</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -1643,8 +1643,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 363
-Time: 0.029s">
-<div class="time" style="width: 69.047619047619%"></div>
+Time: 0.026s">
+<div class="time" style="width: 61.904761904762%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1701,8 +1701,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 385
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     refine (transport_paths_FlFr (eisretr (equiv_path A B) g) _ @ _).</pre>
 </div>
@@ -1749,8 +1749,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 391
-Time: 0.003s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre> symmetry; refine (eisadj (equiv_path A B)^-1 g).</pre>
 </div>
 <div class="code" title="File: Universe.v
@@ -1787,8 +1787,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 393
-Time: 0.017s">
-<div class="time" style="width: 40.47619047619%"></div>
+Time: 0.015s">
+<div class="time" style="width: 35.714285714286%"></div>
 <pre>
     rewrite !concat_p1.</pre>
 </div>
@@ -1822,8 +1822,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 398
-Time: 0.026s">
-<div class="time" style="width: 61.904761904762%"></div>
+Time: 0.024s">
+<div class="time" style="width: 57.142857142857%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1876,8 +1876,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 409
-Time: 0.008s">
-<div class="time" style="width: 19.047619047619%"></div>
+Time: 0.007s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
   refine (_ oE equiv_ap (equiv_path_equiv f g) _ _).</pre>
 </div>
@@ -1910,8 +1910,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 413
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 
 Definition path3_universe `{Funext}
@@ -1921,8 +1921,8 @@ Definition path3_universe `{Funext}
 </div>
 <div class="code" title="File: Universe.v
 Line: 418
-Time: 0.004s">
-<div class="time" style="width: 9.5238095238095%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition transport_path_universe_pV_uncurried `{Funext}
@@ -1970,8 +1970,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 431
-Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
   refine ((concat_Ap _ _)^ @ _).</pre>
 </div>
@@ -2024,21 +2024,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 437
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre> apply transport_path_universe_equiv_path.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 437
-Time: 0.018s">
-<div class="time" style="width: 42.857142857143%"></div>
+Time: 0.02s">
+<div class="time" style="width: 47.619047619048%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Universe.v
 Line: 438
-Time: 0.003s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.004s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre>
 
 Definition transport_path_universe_pV `{Funext}
@@ -2198,8 +2198,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universe.v
 Line: 479
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (equiv_ind (equiv_path V U)).</pre>
 </div>

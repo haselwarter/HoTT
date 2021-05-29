@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: rings.v
 Line: 1
-Time: 0.034s">
-<div class="time" style="width: 38.202247191011%"></div>
+Time: 0.035s">
+<div class="time" style="width: 39.325842696629%"></div>
 <pre>Require Import
   HoTT.Types.Universe
   HoTT.Types.Sigma
@@ -64,8 +64,8 @@ Module SemiRings.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 11
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
 
 Class Operations
@@ -105,8 +105,8 @@ Global Instance SR_mult (s : Operations) : Mult s := snd (fst (fst s.2)).</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 22
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Global Instance SR_zero (s : Operations) : Zero s := snd (fst s.2).</pre>
 </div>
@@ -215,8 +215,8 @@ destruct A as [TA [[[plA mlA] zA] uA]], B as [TB [[[plB mlB] zB] uB]];simpl in *
 </div>
 <div class="code" title="File: rings.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 change plA with (@plus TA plA);change plB with (@plus TB plB);
 change mlA with (@mult TA mlA);change mlB with (@mult TB mlB);
@@ -404,8 +404,8 @@ Class Operations
 </div>
 <div class="code" title="File: rings.v
 Line: 75
-Time: 0.002s">
-<div class="time" style="width: 2.247191011236%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.3707865168539%"></div>
 <pre>
 
 Definition BuildOperations (T : Type)

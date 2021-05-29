@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: AbExt.v
 Line: 1
-Time: 0.051s">
-<div class="time" style="width: 20%"></div>
+Time: 0.052s">
+<div class="time" style="width: 20.15503875969%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types HSet.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 1
-Time: 0.135s">
-<div class="time" style="width: 52.941176470588%"></div>
+Time: 0.138s">
+<div class="time" style="width: 53.488372093023%"></div>
 <pre>
 Require Import Groups AbGroups.AbelianGroup WildCat.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
 Require Import Homotopy.ExactSequence Pointed.</pre>
 </div>
@@ -83,7 +83,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 11
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>Record AbExt (B A : AbGroup) : Type := {
   abext_E : AbGroup;
   abext_i : A $-&gt; abext_E;
@@ -155,7 +155,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 30
-Time: 0.255s">
+Time: 0.258s">
 <div class="time" style="width: 100%"></div>
 <pre>Local Definition issig_abext_do_not_print {B A : AbGroup} : _ &lt;~&gt; AbExt B A := ltac:(issig).</pre>
 </div>
@@ -169,8 +169,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 32
-Time: 0.04s">
-<div class="time" style="width: 15.686274509804%"></div>
+Time: 0.041s">
+<div class="time" style="width: 15.891472868217%"></div>
 <pre>Local Definition issig_abext_helper {AG : Type} {P : AG -&gt; Type} {Q : AG -&gt; Type}
            {R : forall E, P E -&gt; Type} {S : forall E, Q E -&gt; Type} {T : forall E, P E -&gt; Q E -&gt; Type}
   : {X : {E : AG &amp; P E * Q E} &amp; R _ (fst X.2) * S _ (snd X.2) * T _ (fst X.2) (snd X.2)}
@@ -188,7 +188,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 38
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>Definition issig_abext {B A : AbGroup}
   : {X : {E : AbGroup &amp; (A $-&gt; E) * (E $-&gt; B)} &amp;
           (IsEmbedding (fst X.2)
@@ -220,15 +220,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 47
-Time: 0.01s">
-<div class="time" style="width: 3.921568627451%"></div>
+Time: 0.011s">
+<div class="time" style="width: 4.2635658914729%"></div>
 <pre>
   rapply (Build_AbExt (ab_biprod A B) ab_biprod_inl ab_biprod_pr2).</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 48
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
   snrapply Build_IsExact.</pre>
 </div>
@@ -255,7 +255,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 51
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -267,8 +267,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 52
-Time: 0.02s">
-<div class="time" style="width: 7.843137254902%"></div>
+Time: 0.021s">
+<div class="time" style="width: 8.1395348837209%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -280,14 +280,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 53
-Time: 0.008s">
-<div class="time" style="width: 3.1372549019608%"></div>
+Time: 0.009s">
+<div class="time" style="width: 3.4883720930233%"></div>
 <pre> intros [[a b] p]; cbn; cbn in p.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 53
-Time: 0.01s">
-<div class="time" style="width: 3.921568627451%"></div>
+Time: 0.011s">
+<div class="time" style="width: 4.2635658914729%"></div>
 <pre>
     rapply contr_inhabited_hprop.</pre>
 </div>
@@ -307,8 +307,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 56
-Time: 0.032s">
-<div class="time" style="width: 12.549019607843%"></div>
+Time: 0.033s">
+<div class="time" style="width: 12.790697674419%"></div>
 <pre>
     rapply path_sigma_hprop; cbn.</pre>
 </div>
@@ -322,7 +322,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 58
 Time: 0.008s">
-<div class="time" style="width: 3.1372549019608%"></div>
+<div class="time" style="width: 3.1007751937984%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -337,7 +337,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 61
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>Proposition equiv_path_abext `{Univalence} {B A : AbGroup} (E F : AbExt B A)
   : (E = F) &lt;~&gt; {phi : GroupIsomorphism E F &amp;
                        (phi $o abext_i = abext_i)
@@ -353,14 +353,14 @@ Proof.</pre>
 <div class="code" title="File: AbExt.v
 Line: 65
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
   refine (_ oE equiv_ap issig_abext^-1 _ _).</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 66
 Time: 0.03s">
-<div class="time" style="width: 11.764705882353%"></div>
+<div class="time" style="width: 11.627906976744%"></div>
 <pre>
   refine (_ oE (equiv_path_sigma_hprop _ _)^-1).</pre>
 </div>
@@ -381,7 +381,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 69
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   1: exact equiv_path_abgroup^-1%equiv.</pre>
 </div>
@@ -395,14 +395,14 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 71
 Time: 0.03s">
-<div class="time" style="width: 11.764705882353%"></div>
+<div class="time" style="width: 11.627906976744%"></div>
 <pre>
   snrefine (_ oE equiv_concat_l _ _); only 3: symmetry.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 72
-Time: 0.027s">
-<div class="time" style="width: 10.588235294118%"></div>
+Time: 0.03s">
+<div class="time" style="width: 11.627906976744%"></div>
 <pre>
   2: exact (grp_homo_compose (equiv_path_abgroup^-1 q) abext_i,
             (grp_homo_compose abext_p (grp_iso_inverse (equiv_path_abgroup^-1 q)))).</pre>
@@ -410,14 +410,14 @@ Time: 0.027s">
 <div class="code" title="File: AbExt.v
 Line: 74
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   1: exact (equiv_path_prod _ _)^-1%equiv.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 75
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
   refine (transport_prod _ _ @ _).</pre>
 </div>
@@ -438,7 +438,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 78
 Time: 0.003s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.1627906976744%"></div>
 <pre> apply transport_abgrouphomomorphism_from_const.</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -451,13 +451,13 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 79
 Time: 0.004s">
-<div class="time" style="width: 1.5686274509804%"></div>
+<div class="time" style="width: 1.5503875968992%"></div>
 <pre> apply transport_abgrouphomomorphism_to_const.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 79
-Time: 0.044s">
-<div class="time" style="width: 17.254901960784%"></div>
+Time: 0.045s">
+<div class="time" style="width: 17.441860465116%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -477,7 +477,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 87
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>Definition abext_p_split_to_kernel {B A : AbGroup} (E : AbExt B A)
       {s : GroupHomomorphism B E} (h : abext_p $o s == idmap)
   : GroupHomomorphism E (@ab_kernel E B abext_p).</pre>
@@ -492,7 +492,7 @@ Proof.</pre>
 <div class="code" title="File: AbExt.v
 Line: 90
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   snrapply (grp_kernel_corec (G:=E) (A:=E)).</pre>
 </div>
@@ -506,7 +506,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 92
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre> exact (ab_homo_add grp_homo_id (ab_homo_negation $o s $o abext_p)).</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -532,7 +532,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 94
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
     refine (ap (fun y =&gt; abext_p x + y) _ @ right_inverse (abext_p x)).</pre>
 </div>
@@ -553,7 +553,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 97
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -568,7 +568,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 100
 Time: 0.003s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.1627906976744%"></div>
 <pre>Lemma abext_p_split_to_kernel_beta {B A : AbGroup} (E : AbExt B A)
       {s : GroupHomomorphism B E} (h : abext_p $o s == idmap)
   : abext_p_split_to_kernel E h $o abext_i == grp_cxfib cx_isexact.</pre>
@@ -590,7 +590,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 104
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
   apply path_sigma_hprop; cbn.</pre>
 </div>
@@ -611,21 +611,21 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   1: rapply cx_isexact.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 108
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   exact (ap _ (grp_homo_unit _) @ negate_mon_unit).</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 109
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -640,7 +640,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 112
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>Definition abext_p_split_iso1 {B A : AbGroup} (E : AbExt B A)
       {s : GroupHomomorphism B E} (h : abext_p $o s == idmap)
   : GroupIsomorphism E (ab_biprod (@ab_kernel E B abext_p) B).</pre>
@@ -655,7 +655,7 @@ Proof.</pre>
 <div class="code" title="File: AbExt.v
 Line: 115
 Time: 0.01s">
-<div class="time" style="width: 3.921568627451%"></div>
+<div class="time" style="width: 3.8759689922481%"></div>
 <pre>
   srapply Build_GroupIsomorphism.</pre>
 </div>
@@ -722,13 +722,13 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 122
 Time: 0.009s">
-<div class="time" style="width: 3.5294117647059%"></div>
+<div class="time" style="width: 3.4883720930233%"></div>
 <pre> intros [a b]; simpl.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 122
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
       apply path_prod'.</pre>
 </div>
@@ -741,14 +741,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 124
-Time: 0.067s">
-<div class="time" style="width: 26.274509803922%"></div>
+Time: 0.068s">
+<div class="time" style="width: 26.356589147287%"></div>
 <pre> srapply path_sigma_hprop; cbn.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 124
 Time: 0.008s">
-<div class="time" style="width: 3.1372549019608%"></div>
+<div class="time" style="width: 3.1007751937984%"></div>
 <pre>
         refine ((associativity _ _ _)^ @ _).</pre>
 </div>
@@ -762,7 +762,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 126
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
         refine (ap _ _ @ right_inverse _).</pre>
 </div>
@@ -790,7 +790,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 130
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
         exact (ap (fun y =&gt; y + _) a.2 @ left_identity _ @ h b).</pre>
 </div>
@@ -810,7 +810,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 132
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
         exact (ap (fun y =&gt; y + _) a.2 @ left_identity _ @ h b).</pre>
 </div>
@@ -836,8 +836,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 135
-Time: 0.019s">
-<div class="time" style="width: 7.4509803921569%"></div>
+Time: 0.02s">
+<div class="time" style="width: 7.7519379844961%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -852,7 +852,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>Definition abext_p_split_iso {B A : AbGroup} (E : AbExt B A)
       {s : GroupHomomorphism B E} (h : abext_p $o s == idmap)
   : GroupIsomorphism E (ab_biprod A B).</pre>
@@ -893,14 +893,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 144
-Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre> srapply (equiv_functor_ab_biprod (grp_iso_inverse _) grp_iso_id).</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 144
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
     rapply grp_iso_cxfib.</pre>
 </div>
@@ -914,7 +914,7 @@ Defined.</pre>
 <div class="code" title="File: AbExt.v
 Line: 146
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
 
 Proposition abext_p_split_beta {B A : AbGroup} (E : AbExt B A)
@@ -938,28 +938,28 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 152
 Time: 0.004s">
-<div class="time" style="width: 1.5686274509804%"></div>
+<div class="time" style="width: 1.5503875968992%"></div>
 <pre>
   refine (ap _ (ab_corec_beta _ _ _ _) @ _).</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 153
-Time: 0.004s">
-<div class="time" style="width: 1.5686274509804%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.937984496124%"></div>
 <pre>
   refine (ab_biprod_functor_beta _ _ _ _ _ @ _).</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 154
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   nrapply path_prod'.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 155
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
   2: rapply cx_isexact.</pre>
 </div>
@@ -980,7 +980,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 158
 Time: 0.006s">
-<div class="time" style="width: 2.3529411764706%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -995,7 +995,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 161
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>Proposition iff_abext_trivial_split `{Univalence} {B A : AbGroup} (E : AbExt B A)
   : (E = point (AbExt B A))
       &lt;-&gt; {s : GroupHomomorphism B E &amp; abext_p $o s == idmap}.</pre>
@@ -1010,7 +1010,7 @@ Proof.</pre>
 <div class="code" title="File: AbExt.v
 Line: 164
 Time: 0.003s">
-<div class="time" style="width: 1.1764705882353%"></div>
+<div class="time" style="width: 1.1627906976744%"></div>
 <pre>
   refine (iff_compose (iff_equiv (equiv_path_abext _ _)) _); split.</pre>
 </div>
@@ -1024,13 +1024,13 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 166
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre> intros [phi [g h]].</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 166
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
     exists (grp_homo_compose (grp_iso_inverse phi) ab_biprod_inr).</pre>
 </div>
@@ -1044,7 +1044,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 168
 Time: 0.012s">
-<div class="time" style="width: 4.7058823529412%"></div>
+<div class="time" style="width: 4.6511627906977%"></div>
 <pre>
     exact (equiv_path_grouphomomorphism^-1 h (ab_biprod_inr x)).</pre>
 </div>
@@ -1058,7 +1058,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 170
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre> intros [s h].</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -1071,7 +1071,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 171
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
     split; apply equiv_path_grouphomomorphism.</pre>
 </div>
@@ -1085,7 +1085,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 173
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre> apply abext_p_split_beta.</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -1097,8 +1097,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 174
-Time: 0.004s">
-<div class="time" style="width: 1.5686274509804%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.937984496124%"></div>
 <pre> intros [a b]; simpl.</pre>
 </div>
 <div class="code" title="File: AbExt.v
@@ -1118,21 +1118,21 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 176
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>
       1: rapply cx_isexact.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 177
 Time: 0.005s">
-<div class="time" style="width: 1.9607843137255%"></div>
+<div class="time" style="width: 1.937984496124%"></div>
 <pre>
       apply left_identity.</pre>
 </div>
 <div class="code" title="File: AbExt.v
 Line: 178
-Time: 0.011s">
-<div class="time" style="width: 4.3137254901961%"></div>
+Time: 0.012s">
+<div class="time" style="width: 4.6511627906977%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1172,7 +1172,7 @@ Time: 0s">
 <div class="code" title="File: AbExt.v
 Line: 187
 Time: 0.001s">
-<div class="time" style="width: 0.3921568627451%"></div>
+<div class="time" style="width: 0.38759689922481%"></div>
 <pre>Proposition iff_ab_ext_trivial_split `{Univalence} {B A : AbGroup} (E : AbExt B A)
   : (tr E = point (Ext B A))
       &lt;~&gt; merely { s : GroupHomomorphism B E &amp; abext_p $o s == idmap }.</pre>
@@ -1193,8 +1193,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbExt.v
 Line: 191
-Time: 0.057s">
-<div class="time" style="width: 22.352941176471%"></div>
+Time: 0.056s">
+<div class="time" style="width: 21.705426356589%"></div>
 <pre>
   srapply equiv_iff_hprop;
     apply Trunc_functor;
@@ -1203,7 +1203,7 @@ Time: 0.057s">
 <div class="code" title="File: AbExt.v
 Line: 194
 Time: 0.002s">
-<div class="time" style="width: 0.7843137254902%"></div>
+<div class="time" style="width: 0.77519379844961%"></div>
 <pre>
 Defined.</pre>
 </div>

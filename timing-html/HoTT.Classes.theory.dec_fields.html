@@ -121,15 +121,15 @@ rewrite &lt;-(mult_1_r y), &lt;-(dec_recip_inverse x) by assumption.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 19
-Time: 0.016s">
-<div class="time" style="width: 12.698412698413%"></div>
+Time: 0.015s">
+<div class="time" style="width: 11.904761904762%"></div>
 <pre>
 rewrite associativity, (commutativity y), E.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 0.79365079365079%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 apply mult_0_l.</pre>
 </div>
@@ -157,8 +157,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 25
-Time: 0.003s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.1746031746032%"></div>
 <pre>
 split; try apply _.</pre>
 </div>
@@ -171,8 +171,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 0.79365079365079%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma dec_recip_1: / 1 = 1.</pre>
@@ -186,8 +186,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 30
-Time: 0.002s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.79365079365079%"></div>
 <pre>
 rewrite &lt;-(rings.mult_1_l (/1)).</pre>
 </div>
@@ -275,8 +275,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 41
-Time: 0.007s">
-<div class="time" style="width: 5.5555555555556%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.3492063492063%"></div>
 <pre> rewrite Ey, dec_recip_0, !mult_0_r.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -300,8 +300,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 42
-Time: 0.005s">
-<div class="time" style="width: 3.968253968254%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
     apply (left_cancellation_ne_0 (.*.) (x * y)); trivial.</pre>
 </div>
@@ -327,8 +327,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 45
-Time: 0.003s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.1746031746032%"></div>
 <pre> rewrite mult_1_l;apply reflexivity.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -490,8 +490,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 64
-Time: 0.002s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.79365079365079%"></div>
 <pre>
 split; intros E1 E2; destruct E1; apply dec_recip_zero;trivial.</pre>
 </div>
@@ -609,8 +609,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 0.79365079365079%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply mult_0_r.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -813,8 +813,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 99
-Time: 0.001s">
-<div class="time" style="width: 0.79365079365079%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -906,8 +906,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 108
-Time: 0.001s">
-<div class="time" style="width: 0.79365079365079%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite dec_recip_inverse by assumption.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -1001,8 +1001,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 119
-Time: 0.002s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.79365079365079%"></div>
 <pre>
   transitivity (a * d * (b * /b));[|
   transitivity (c * b * (d * /d))].</pre>
@@ -1136,8 +1136,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 134
-Time: 0.002s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.79365079365079%"></div>
 <pre> rewrite (mult_comm _ d).</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -1309,8 +1309,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 151
-Time: 0.002s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.79365079365079%"></div>
 <pre>
     apply symmetry, simple_distribute_r.</pre>
 </div>
@@ -1474,8 +1474,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 172
-Time: 0.001s">
-<div class="time" style="width: 0.79365079365079%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite dec_recip_inverse.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -1607,8 +1607,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 191
-Time: 0.015s">
-<div class="time" style="width: 11.904761904762%"></div>
+Time: 0.014s">
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
   split; try apply _.</pre>
 </div>
@@ -1968,8 +1968,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 269
-Time: 0.014s">
-<div class="time" style="width: 11.111111111111%"></div>
+Time: 0.012s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre> apply isinjective_ne_0.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -2013,8 +2013,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 272
-Time: 0.013s">
-<div class="time" style="width: 10.31746031746%"></div>
+Time: 0.012s">
+<div class="time" style="width: 9.5238095238095%"></div>
 <pre> apply isinjective_ne_0.</pre>
 </div>
 <div class="code" title="File: dec_fields.v
@@ -2081,8 +2081,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 280
-Time: 0.002s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.79365079365079%"></div>
 <pre>
     destruct (apart_ne (f x) 0 Pfx).</pre>
 </div>
@@ -2108,8 +2108,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: dec_fields.v
 Line: 283
-Time: 0.044s">
-<div class="time" style="width: 34.920634920635%"></div>
+Time: 0.043s">
+<div class="time" style="width: 34.126984126984%"></div>
 <pre> apply (left_cancellation_ne_0 (.*.) (f x)).</pre>
 </div>
 <div class="code" title="File: dec_fields.v

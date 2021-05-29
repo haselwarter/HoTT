@@ -1553,8 +1553,8 @@ We will first see this appearing in the type of [apD]. *)
 </div>
 <div class="code" title="File: Overture.v
 Line: 334
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition ap {A B:Type} (f:A -&gt; B) {x y:A} (p:x = y) : f x = f y
   := match p with idpath =&gt; idpath end.</pre>
 </div>
@@ -1694,8 +1694,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 366
-Time: 0.001s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros ? ? p ?; symmetry; apply p.</pre>
 </div>
@@ -1754,8 +1754,8 @@ Notation "f == g" := (pointwise_paths f g) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 378
-Time: 0.001s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition apD10 {A} {B:A-&gt;Type} {f g : forall x, B x} (h:f=g)
@@ -1772,8 +1772,8 @@ Global Arguments apD10 {A%type_scope B} {f g}%function_scope h%path_scope _.</pr
 </div>
 <div class="code" title="File: Overture.v
 Line: 384
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition ap10 {A B} {f g:A-&gt;B} (h:f=g) : f == g
@@ -1818,8 +1818,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 394
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
   case h, p; reflexivity.</pre>
 </div>
@@ -1975,8 +1975,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 442
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Cumulative Record Equiv A B := {
   equiv_fun : A -&gt; B ;
   equiv_isequiv : IsEquiv equiv_fun
@@ -2057,8 +2057,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 462
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition ap10_equiv {A B : Type} {f g : A &lt;~&gt; B} (h : f = g) : f == g
   := ap10 (ap equiv_fun h).</pre>
 </div>
@@ -2306,8 +2306,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 532
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Global Instance istrunc_paths (A : Type) n `{H : IsTrunc n.+1 A} (x y : A)
 : IsTrunc n (x = y)
   := H x y.</pre>
@@ -2360,8 +2360,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 542
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>#[export]
 Hint Extern 10 =&gt;
 progress match goal with
@@ -2575,8 +2575,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 617
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Inductive nat : Type :=
 | O : nat
 | S : nat -&gt; nat.</pre>
@@ -2720,8 +2720,8 @@ Notation "x &lt;&gt; y" := (x &lt;&gt; y :&gt; _) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 647
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition symmetric_neq {A} {x y : A} : x &lt;&gt; y -&gt; y &lt;&gt; x

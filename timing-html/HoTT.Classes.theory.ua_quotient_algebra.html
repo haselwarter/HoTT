@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 1
-Time: 0.122s">
+Time: 0.117s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export HoTT.Classes.interfaces.ua_congruence.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 1
-Time: 0.021s">
-<div class="time" style="width: 17.213114754098%"></div>
+Time: 0.018s">
+<div class="time" style="width: 15.384615384615%"></div>
 <pre>
 
 Require Import
@@ -89,8 +89,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 24
-Time: 0.006s">
-<div class="time" style="width: 4.9180327868852%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.2735042735043%"></div>
 <pre>Definition carriers_quotient_algebra : Carriers σ
     := λ s, quotient (Φ s).</pre>
 </div>
@@ -111,8 +111,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 34
-Time: 0.037s">
-<div class="time" style="width: 30.327868852459%"></div>
+Time: 0.034s">
+<div class="time" style="width: 29.059829059829%"></div>
 <pre>Fixpoint quotient_ind_prop_family_prod {w : list (Sort σ)}
     : ∀ (P : FamilyProd carriers_quotient_algebra w → Type)
         `{!∀ a, IsHProp (P a)}
@@ -150,7 +150,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 60
 Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+<div class="time" style="width: 1.7094017094017%"></div>
 <pre>Definition ComputeOpQuotient {w : SymbolType σ}
     (f : Operation A w) (g : Operation carriers_quotient_algebra w)
     := ∀ (a : FamilyProd A (dom_symboltype w)),
@@ -181,7 +181,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 73
 Time: 0.003s">
-<div class="time" style="width: 2.4590163934426%"></div>
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
 
   Lemma op_quotient_algebra_well_def
@@ -207,7 +207,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 81
 Time: 0.008s">
-<div class="time" style="width: 6.5573770491803%"></div>
+<div class="time" style="width: 6.8376068376068%"></div>
 <pre>
     apply quotient_ind_prop_family_prod; try exact _.</pre>
 </div>
@@ -220,22 +220,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 83
-Time: 0.004s">
-<div class="time" style="width: 3.2786885245902%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.2735042735043%"></div>
 <pre>
     destruct (q _ _ (op_compatible_cons Φ s w f x P)) as [g1 P1].</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 84
 Time: 0.005s">
-<div class="time" style="width: 4.0983606557377%"></div>
+<div class="time" style="width: 4.2735042735043%"></div>
 <pre>
     destruct (q _ _ (op_compatible_cons Φ s w f y P)) as [g2 P2].</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
     refine ((P1 a) @ _ @ (P2 a)^).</pre>
 </div>
@@ -248,15 +248,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 87
-Time: 0.003s">
-<div class="time" style="width: 2.4590163934426%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.4188034188034%"></div>
 <pre>
     exact (P (x,a) (y,a) (C, reflexive_for_all_2_family_prod A Φ a)).</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 88
-Time: 0.005s">
-<div class="time" style="width: 4.0983606557377%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.5641025641026%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -292,8 +292,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 113
-Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Fixpoint op_quotient_algebra {w : SymbolType σ} : QuotOp w.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
@@ -306,7 +306,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 114
 Time: 0.02s">
-<div class="time" style="width: 16.393442622951%"></div>
+<div class="time" style="width: 17.094017094017%"></div>
 <pre> refine (
       match w return QuotOp w with
       | [:s:] =&gt; λ (f : A s) P, (class_of (Φ s) f; λ a, idpath)
@@ -321,28 +321,28 @@ Time: 0.02s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 123
 Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+<div class="time" style="width: 1.7094017094017%"></div>
 <pre>
     intros [x a].</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 124
-Time: 0.003s">
-<div class="time" style="width: 2.4590163934426%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7094017094017%"></div>
 <pre>
     apply (op_quotient_algebra w' (f x) (op_compatible_cons Φ s w' f x P)).</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 125
-Time: 0.003s">
-<div class="time" style="width: 2.4590163934426%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.4188034188034%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 126
-Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Definition ops_quotient_algebra (u : Symbol σ)
@@ -447,8 +447,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 160
-Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply op_quotient_algebra.</pre>
 </div>
@@ -462,7 +462,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 162
 Time: 0.006s">
-<div class="time" style="width: 4.9180327868852%"></div>
+<div class="time" style="width: 5.1282051282051%"></div>
 <pre>
 End quotient_algebra.</pre>
 </div>
@@ -515,8 +515,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 173
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
   Context
     {σ : Signature} (A : Algebra σ)
@@ -541,21 +541,21 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 180
 Time: 0.005s">
-<div class="time" style="width: 4.0983606557377%"></div>
+<div class="time" style="width: 4.2735042735043%"></div>
 <pre>
     by destruct p, (path_ishprop CΦ CΨ).</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 181
-Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 182
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Lemma path_quotient_algebra_iff `{Univalence}
@@ -579,7 +579,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 188
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
     funext s x y.</pre>
 </div>
@@ -592,22 +592,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 190
-Time: 0.007s">
-<div class="time" style="width: 5.7377049180328%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.8376068376068%"></div>
 <pre>
     apply equiv_iff_hprop; apply R.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 191
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 192
-Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 End path_quotient_algebra.</pre>
 </div>
@@ -640,7 +640,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 200
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Definition def_hom_quotient : ∀ (s : Sort σ), A s → (A/Φ) s :=
@@ -649,7 +649,7 @@ Time: 0.001s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 203
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Lemma oppreserving_quotient `{Funext} (w : SymbolType σ)
@@ -673,8 +673,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 210
-Time: 0.004s">
-<div class="time" style="width: 3.2786885245902%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.2735042735043%"></div>
 <pre>
     induction w; cbn in *.</pre>
 </div>
@@ -687,8 +687,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 212
-Time: 0.04s">
-<div class="time" style="width: 32.786885245902%"></div>
+Time: 0.031s">
+<div class="time" style="width: 26.495726495726%"></div>
 <pre> by destruct (G tt)^.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
@@ -724,8 +724,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 213
-Time: 0.003s">
-<div class="time" style="width: 2.4590163934426%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7094017094017%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -768,7 +768,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 220
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Definition hom_quotient : Homomorphism A (A/Φ)
@@ -813,7 +813,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 229
 Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+<div class="time" style="width: 1.7094017094017%"></div>
 <pre>
 End hom_quotient.</pre>
 </div>
@@ -831,7 +831,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 234
 Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+<div class="time" style="width: 1.7094017094017%"></div>
 <pre>Global Instance is_isomorphism_quotient `{Univalence}
   {σ : Signature} {A : Algebra σ} (Φ : ∀ s, Relation (A s))
   `{!IsCongruence A Φ} (P : ∀ s x y, Φ s x y → x = y)
@@ -874,15 +874,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 242
-Time: 0.009s">
-<div class="time" style="width: 7.3770491803279%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.982905982906%"></div>
 <pre>
   by apply P, (classes_eq_related (Φ s)).</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 243
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -942,8 +942,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 261
-Time: 0.015s">
-<div class="time" style="width: 12.295081967213%"></div>
+Time: 0.012s">
+<div class="time" style="width: 10.25641025641%"></div>
 <pre>
 
     Definition def_hom_quotient_algebra_mapout
@@ -952,8 +952,8 @@ Time: 0.015s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 265
-Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
     Lemma oppreserving_quotient_algebra_mapout {w : SymbolType σ}
@@ -977,8 +977,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 272
-Time: 0.005s">
-<div class="time" style="width: 4.0983606557377%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.4188034188034%"></div>
 <pre>
       induction w; cbn in *.</pre>
 </div>
@@ -991,8 +991,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 274
-Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre> destruct (G tt)^.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
@@ -1010,8 +1010,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 275
-Time: 0.019s">
-<div class="time" style="width: 15.573770491803%"></div>
+Time: 0.015s">
+<div class="time" style="width: 12.820512820513%"></div>
 <pre> refine (quotient_ind_prop (Φ t) _ _).</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
@@ -1061,8 +1061,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 278
-Time: 0.005s">
-<div class="time" style="width: 4.0983606557377%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.4188034188034%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -1132,7 +1132,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 288
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
     Definition hom_quotient_algebra_mapout
@@ -1194,7 +1194,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 308
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Definition hom_quotient_algebra_mapin (g : Homomorphism (A/Φ) B)
@@ -1204,7 +1204,7 @@ Time: 0.001s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 312
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Lemma ump_quotient_algebra_lr :
@@ -1247,7 +1247,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 319
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
 
   Lemma ump_quotient_algebra_rl :
@@ -1318,7 +1318,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 342
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>Lemma ump_quotient_algebra
     : {f : Homomorphism A B | ∀ s (x y : A s), Φ s x y → f s x = f s y}
      &lt;~&gt;
@@ -1369,7 +1369,7 @@ Time: 0s">
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 351
 Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
       exact (eissect (quotient_ump (Φ s) _) (G s)).</pre>
 </div>
@@ -1388,29 +1388,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 353
-Time: 0.037s">
-<div class="time" style="width: 30.327868852459%"></div>
+Time: 0.029s">
+<div class="time" style="width: 24.786324786325%"></div>
 <pre>
       apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 354
-Time: 0.001s">
-<div class="time" style="width: 0.81967213114754%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       by apply path_hset_homomorphism.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 355
-Time: 0.002s">
-<div class="time" style="width: 1.6393442622951%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.85470085470085%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_quotient_algebra.v
 Line: 356
 Time: 0.005s">
-<div class="time" style="width: 4.0983606557377%"></div>
+<div class="time" style="width: 4.2735042735043%"></div>
 <pre>
 End ump_quotient_algebra.</pre>
 </div>

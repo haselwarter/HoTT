@@ -558,12 +558,12 @@
           
 
             i = 108;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 203) is:	 forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo S)	 (xR : R -> GenNo S),	 (forall (l : L) (r : R), xL l < xR r) ->	 forall	 (fxL : L ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fxR : R ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fxcut : forall (l : L) (r : R) (x : No), (fxL l).1 x < (fxR r).1 x)	 (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo S)	 (yR : R' -> GenNo S) (ycut : forall (l : L') (r : R'), yL l < yR r)	 (fyL : L' ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fyR : R' ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fycut : forall (l : L') (r : R') (x : No), (fyL l).1 x < (fyR r).1 x)	 (r : R),	 xR r <= {{ yL | yR // ycut }} ->	 (forall x : No,	  (fxR r).1 x <=	  (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x) ->	 forall x : No,	 (let g := plus_inner fxL fxR fxcut in (fun y : No => (g.1 y).1; g.2)).1 x <	 (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x	1 goal (ID 203)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  ============================	  forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo S)	  (xR : R -> GenNo S),	  (forall (l : L) (r : R), xL l < xR r) ->	  forall	  (fxL : L ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fxR : R ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fxcut : forall (l : L) (r : R) (x : No), (fxL l).1 x < (fxR r).1 x)	  (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo S)	  (yR : R' -> GenNo S) (ycut : forall (l : L') (r : R'), yL l < yR r)	  (fyL : L' ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fyR : R' ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fycut : forall (l : L') (r : R') (x : No), (fyL l).1 x < (fyR r).1 x)	  (r : R),	  xR r <= {{ yL | yR // ycut }} ->	  (forall x : No,	   (fxR r).1 x <=	   (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x) ->	  forall x : No,	  (let g := plus_inner fxL fxR fxcut in (fun y : No => (g.1 y).1; g.2)).1 x <	  (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 203) is:	 forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo S)	 (xR : R -> GenNo S),	 (forall (l : L) (r : R), xL l < xR r) ->	 forall	 (fxL : L ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fxR : R ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fxcut : forall (l : L) (r : R) (x : No), (fxL l).1 x < (fxR r).1 x)	 (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo S)	 (yR : R' -> GenNo S) (ycut : forall (l : L') (r : R'), yL l < yR r)	 (fyL : L' ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fyR : R' ->	        {g : No -> No &	        (forall x y : GenNo S, x <= y -> g x <= g y) *	        (forall x y : GenNo S, x < y -> g x < g y)})	 (fycut : forall (l : L') (r : R') (x : No), (fyL l).1 x < (fyR r).1 x)	 (r : R),	 xR r <= {{ yL | yR // ycut }} ->	 (forall x : No,	  (fxR r).1 x <=	  (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x) ->	 forall x : No,	 (let g := plus_inner fxL fxR fxcut in (fun y : No => (g.1 y).1; g.2)).1 x <	 (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x	1 goal (ID 203)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  ============================	  forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo S)	  (xR : R -> GenNo S),	  (forall (l : L) (r : R), xL l < xR r) ->	  forall	  (fxL : L ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fxR : R ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fxcut : forall (l : L) (r : R) (x : No), (fxL l).1 x < (fxR r).1 x)	  (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo S)	  (yR : R' -> GenNo S) (ycut : forall (l : L') (r : R'), yL l < yR r)	  (fyL : L' ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fyR : R' ->	         {g : No -> No &	         (forall x y : GenNo S, x <= y -> g x <= g y) *	         (forall x y : GenNo S, x < y -> g x < g y)})	  (fycut : forall (l : L') (r : R') (x : No), (fyL l).1 x < (fyR r).1 x)	  (r : R),	  xR r <= {{ yL | yR // ycut }} ->	  (forall x : No,	   (fxR r).1 x <=	   (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x) ->	  forall x : No,	  (let g := plus_inner fxL fxR fxcut in (fun y : No => (g.1 y).1; g.2)).1 x <	  (let g := plus_inner fyL fyR fycut in (fun y : No => (g.1 y).1; g.2)).1 x	No more goals.	";
             responses[i]=data;
           
 
             i = 109;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -803,12 +803,12 @@
           
 
             i = 157;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 158;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -833,12 +833,12 @@
           
 
             i = 163;
-            data = "";
+            data = "1 goal (ID 155)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  x + zero = x	1 goal (ID 156)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  x + {{ Empty_rec | Empty_rec // lempty_cut }} = x	No more goals.	1 goal (ID 164)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  zero + x = x	1 goal (ID 165)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  {{ Empty_rec | Empty_rec // lempty_cut }} + x = x	No more goals.	<infomsg>H1 is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 164;
-            data = "1 goal (ID 155)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  x + zero = x	1 goal (ID 156)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  x + {{ Empty_rec | Empty_rec // lempty_cut }} = x	No more goals.	1 goal (ID 164)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  zero + x = x	1 goal (ID 165)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  x : No	  ============================	  {{ Empty_rec | Empty_rec // lempty_cut }} + x = x	No more goals.	<infomsg>H1 is declared</infomsg>	1 goal (ID 175)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  H1 : HasNegation S	  x : No	  ============================	  x + negate x = zero	";
+            data = "1 goal (ID 175)	  	  H : Univalence	  S : OptionSort	  H0 : HasAddition S	  No := GenNo S : Type	  H1 : HasNegation S	  x : No	  ============================	  x + negate x = zero	";
             responses[i]=data;
           
 

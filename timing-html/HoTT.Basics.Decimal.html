@@ -50,7 +50,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 14
-Time: 0.017s">
+Time: 0.016s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.Overture.</pre>
 </div>
@@ -76,7 +76,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 26
 Time: 0.002s">
-<div class="time" style="width: 11.764705882353%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>Inductive uint :=
  | Nil
  | D0 (_:uint)
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Variant int := Pos (d:uint) | Neg (d:uint).</pre>
 </div>
 <div class="code" title="File: Decimal.v
@@ -213,8 +213,8 @@ Register decimal as num.decimal.type.</pre>
 </div>
 <div class="code" title="File: Decimal.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint nb_digits d :=
@@ -354,8 +354,8 @@ Definition rev d := revapp d Nil.</pre>
 </div>
 <div class="code" title="File: Decimal.v
 Line: 129
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition app d d' := revapp (rev d) d'.</pre>
@@ -383,7 +383,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>Definition nztail d :=
   let fix aux d_rev :=
     match d_rev with
@@ -394,8 +394,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 144
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
 
 Definition nztail_int d :=
@@ -425,7 +425,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 155
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>Fixpoint succ d :=
   match d with
   | Nil =&gt; D1 Nil
@@ -454,7 +454,7 @@ Time: 0s">
 <div class="code" title="File: Decimal.v
 Line: 171
 Time: 0.001s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>Fixpoint double d :=
   match d with
   | Nil =&gt; Nil

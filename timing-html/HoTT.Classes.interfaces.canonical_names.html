@@ -268,8 +268,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 47
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition sig_apart `{Apart A} (P: A -&gt; Type) : Apart (sig P) := fun x y =&gt; x.1 ≶ y.1.</pre>
@@ -376,15 +376,15 @@ Class DecRecip A := dec_recip: A -&gt; A.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition ApartZero R `{Zero R} `{Apart R} := sig (≶ zero).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Class Recip A `{Apart A} `{Zero A} := recip: ApartZero A -&gt; A.</pre>
 </div>
@@ -455,8 +455,8 @@ Typeclasses Transparent Le Lt.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 78
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Definition NonNeg R `{Zero R} `{Le R} := sig (le zero).</pre>
@@ -470,8 +470,8 @@ Definition Pos R `{Zero R} `{Lt R} := sig (lt zero).</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition NonPos R `{Zero R} `{Le R} := sig (fun y =&gt; le y zero).</pre>
 </div>
@@ -1085,8 +1085,8 @@ Class Abs A `{Le A} `{Zero A} `{Negate A}
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 192
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Definition abs `{Abs A} := fun x : A =&gt; (abs_sig x).1.</pre>
 </div>
@@ -1193,8 +1193,8 @@ Class BinaryIdempotent `(op: A -&gt; A -&gt; A) : Type
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 215
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class LeftIdentity {A B} (op : A -&gt; B -&gt; B) (x : A): Type
@@ -1202,8 +1202,8 @@ Class LeftIdentity {A B} (op : A -&gt; B -&gt; B) (x : A): Type
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 218
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Class RightIdentity {A B} (op : A -&gt; B -&gt; A) (y : B): Type
   := right_identity: forall x, op x y = x.</pre>
@@ -1219,8 +1219,8 @@ Class Absorption {A B C} (op1: A -&gt; C -&gt; A) (op2: A -&gt; B -&gt; C) : Typ
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 223
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class LeftAbsorb {A B} (op : A -&gt; B -&gt; A) (x : A): Type
@@ -1236,8 +1236,8 @@ Class RightAbsorb {A B} (op : A -&gt; B -&gt; B) (y : B): Type
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 228
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class LeftInverse {A} {B} {C} (op : A -&gt; B -&gt; C) (inv : B -&gt; A) (unit : C)
@@ -1270,8 +1270,8 @@ Global Hint Unfold Commutative : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 238
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class HeteroAssociative {A B C AB BC ABC}
@@ -1312,8 +1312,8 @@ Arguments total {A} _ {TotalRelation} _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 250
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class Trichotomy `(R : Relation A)
@@ -1352,8 +1352,8 @@ Arguments cotransitive {A R CoTransitive x y} _ _.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 260
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class AntiSymmetric `(R : Relation A) : Type
@@ -1444,8 +1444,8 @@ Time: 0.011s">
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 280
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1467,15 +1467,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 285
-Time: 0.017s">
-<div class="time" style="width: 16.831683168317%"></div>
+Time: 0.016s">
+<div class="time" style="width: 15.841584158416%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 286
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1529,8 +1529,8 @@ Class DistrOpp {A} `(SgOp A) `(Conjugate A)
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 299
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class SwapOp {A} `(Negate A) `(Conjugate A)
@@ -1575,16 +1575,16 @@ Class RightHeteroDistribute {A B C}
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 315
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Class LeftDistribute {A} (f g: A -&gt; A -&gt; A)
   := simple_distribute_l :&gt; LeftHeteroDistribute f g g.</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 317
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Class RightDistribute {A} (f g: A -&gt; A -&gt; A)
   := simple_distribute_r :&gt; RightHeteroDistribute f g g.</pre>
@@ -1655,8 +1655,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 335
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   Class StrongRightCancellation := strong_right_cancellation
     : forall x y, x ≶ y -&gt; op x z ≶ op y z.</pre>
@@ -1685,8 +1685,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 341
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class ZeroDivisor {R} `{Zero R} `{Mult R} (x : R) : Type
@@ -1726,8 +1726,8 @@ intros x [? [? [? E]]].</pre>
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 352
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 destruct (zero_product _ _ E); auto.</pre>
 </div>
@@ -1967,8 +1967,8 @@ Class Bind (M : Type -&gt; Type) := bind : forall {A B}, M A -&gt; (A -&gt; M B)
 </div>
 <div class="code" title="File: canonical_names.v
 Line: 395
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Class Enumerable@{i} (A : Type@{i}) :=

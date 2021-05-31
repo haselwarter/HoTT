@@ -2327,10 +2327,10 @@ RetractOf X</span></div></blockquote></div></div></small><span class="alectryon-
 </span></span><span class="alectryon-wsp"><span class="highlight">
   <span class="sd">(** For instance, here is the standard coherent idempotent structure on the identity map. *)</span>
 </span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">isidem_idmap</span> (<span class="nv">X</span> : <span class="kt">Type</span>@{i})
-  : @IsIdempotent@{i i j k} X idmap
+  : @IsIdempotent@{i i j} X idmap
     := Build_IsIdempotent idmap (splitting_idmap X).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
-</span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Definition</span> <span class="nf">idem_idmap</span> (<span class="nv">X</span> : <span class="kt">Type</span>@{i}) : Idempotent@{i i j k} X
+</span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Definition</span> <span class="nf">idem_idmap</span> (<span class="nv">X</span> : <span class="kt">Type</span>@{i}) : Idempotent@{i i j} X
   := (idmap ; isidem_idmap X).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
   <span class="sd">(** Note that [Idempotent X], unlike [RetractOf X], lives in the same universe as [X], even if we demand that it contain the identity. *)</span>
@@ -2343,9 +2343,9 @@ In environment
 ua : Univalence
 X : <span class="kt">Type</span>
 The term <span class="s2">&quot;idmap_retractof X&quot;</span> has type
- <span class="s2">&quot;RetractOf@{SerTop.8015 SerTop.8015} X&quot;</span>
+ <span class="s2">&quot;RetractOf@{SerTop.7983 SerTop.7983} X&quot;</span>
 while it <span class="kr">is</span> expected to <span class="nb">have</span> type
- <span class="s2">&quot;RetractOf@{SerTop.8013 SerTop.8014} X&quot;</span>.</span></blockquote></div></div></small><span class="alectryon-wsp">
+ <span class="s2">&quot;RetractOf@{SerTop.7981 SerTop.7982} X&quot;</span>.</span></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">End</span> <span class="nf">CoherentIdempotents</span>.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">

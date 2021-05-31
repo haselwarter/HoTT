@@ -30,28 +30,28 @@ pre {
 
 <div class="code" title="File: pTrunc.v
 Line: 1
-Time: 0.032s">
-<div class="time" style="width: 57.142857142857%"></div>
+Time: 0.031s">
+<div class="time" style="width: 57.407407407407%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 1
-Time: 0.018s">
-<div class="time" style="width: 32.142857142857%"></div>
+Time: 0.015s">
+<div class="time" style="width: 27.777777777778%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 2
 Time: 0.019s">
-<div class="time" style="width: 33.928571428571%"></div>
+<div class="time" style="width: 35.185185185185%"></div>
 <pre>
 Require Import Pointed.Core.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 3
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 Require Import Pointed.pMap.</pre>
 </div>
@@ -64,15 +64,15 @@ Require Import Pointed.pEquiv.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 5
-Time: 0.043s">
-<div class="time" style="width: 76.785714285714%"></div>
+Time: 0.039s">
+<div class="time" style="width: 72.222222222222%"></div>
 <pre>
 Require Import Pointed.Loops.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 6
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -97,7 +97,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 12
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>Global Instance ispointed_tr (n : trunc_index) (A : Type) `{IsPointed A}
   : IsPointed (Tr n A) := tr (point A).</pre>
 </div>
@@ -168,7 +168,7 @@ Defined.</pre>
 <div class="code" title="File: pTrunc.v
 Line: 23
 Time: 0.005s">
-<div class="time" style="width: 8.9285714285714%"></div>
+<div class="time" style="width: 9.2592592592593%"></div>
 <pre>
 
 Global Instance isequiv_ptr n (A : pType) `{IsTrunc n A}
@@ -177,7 +177,7 @@ Global Instance isequiv_ptr n (A : pType) `{IsTrunc n A}
 <div class="code" title="File: pTrunc.v
 Line: 26
 Time: 0.004s">
-<div class="time" style="width: 7.1428571428571%"></div>
+<div class="time" style="width: 7.4074074074074%"></div>
 <pre>
 
 Definition pequiv_ptr {n : trunc_index} {A : pType} `{IsTrunc n A}
@@ -186,7 +186,7 @@ Definition pequiv_ptr {n : trunc_index} {A : pType} `{IsTrunc n A}
 <div class="code" title="File: pTrunc.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 
 Definition pTr_rec n {X Y : pType} `{IsTrunc n Y} (f : X -&gt;* Y)
@@ -195,8 +195,8 @@ Definition pTr_rec n {X Y : pType} `{IsTrunc n Y} (f : X -&gt;* Y)
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition equiv_ptr_rec `{Funext} {n} {X Y : pType} `{IsTrunc n Y}
@@ -245,7 +245,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
   1: srapply pTr_rec.</pre>
 </div>
@@ -265,7 +265,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
     destruct f as [f p].</pre>
 </div>
@@ -312,36 +312,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 48
-Time: 0.037s">
-<div class="time" style="width: 66.071428571429%"></div>
+Time: 0.036s">
+<div class="time" style="width: 66.666666666667%"></div>
 <pre>
   1: intro; by strip_truncations.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 50
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
   symmetry; apply concat_pp_V.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 51
 Time: 0.005s">
-<div class="time" style="width: 8.9285714285714%"></div>
+<div class="time" style="width: 9.2592592592593%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 52
-Time: 0.002s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 
 Definition ptr_functor {X Y : pType} (n : trunc_index) (f : X -&gt;* Y)
@@ -351,8 +351,8 @@ Definition ptr_functor {X Y : pType} (n : trunc_index) (f : X -&gt;* Y)
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 57
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 
 Definition ptr_functor_pmap_idmap {X : pType} n
@@ -387,8 +387,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 63
-Time: 0.023s">
-<div class="time" style="width: 41.071428571429%"></div>
+Time: 0.022s">
+<div class="time" style="width: 40.740740740741%"></div>
 <pre>
     by strip_truncations.</pre>
 </div>
@@ -401,14 +401,14 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 64
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 65
 Time: 0.002s">
-<div class="time" style="width: 3.5714285714286%"></div>
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -430,8 +430,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 70
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
   srapply Build_pHomotopy.</pre>
 </div>
@@ -444,7 +444,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 72
-Time: 0.028s">
+Time: 0.027s">
 <div class="time" style="width: 50%"></div>
 <pre> intros x; strip_truncations; reflexivity.</pre>
 </div>
@@ -464,14 +464,14 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 73
 Time: 0.002s">
-<div class="time" style="width: 3.5714285714286%"></div>
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 74
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 
 Definition ptr_functor_pmap_compose n {X Y Z : pType} (f : X -&gt;* Y) (g : Y -&gt;* Z)
@@ -506,7 +506,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 80
-Time: 0.056s">
+Time: 0.054s">
 <div class="time" style="width: 100%"></div>
 <pre>
     by strip_truncations.</pre>
@@ -519,15 +519,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 81
-Time: 0.023s">
-<div class="time" style="width: 41.071428571429%"></div>
+Time: 0.022s">
+<div class="time" style="width: 40.740740740741%"></div>
 <pre>
   by pointed_reduce.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 82
 Time: 0.014s">
-<div class="time" style="width: 25%"></div>
+<div class="time" style="width: 25.925925925926%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -564,8 +564,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 90
-Time: 0.02s">
-<div class="time" style="width: 35.714285714286%"></div>
+Time: 0.021s">
+<div class="time" style="width: 38.888888888889%"></div>
 <pre> intros x; strip_truncations; cbn.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
@@ -591,21 +591,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 93
-Time: 0.002s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre> exact (ap _ (dpoint_eq p) @ ap_pp (@tr n _) _ _ @ whiskerL _ (ap_V _ _)).</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 93
 Time: 0.004s">
-<div class="time" style="width: 7.1428571428571%"></div>
+<div class="time" style="width: 7.4074074074074%"></div>
 <pre> 
 Defined.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 94
 Time: 0.007s">
-<div class="time" style="width: 12.5%"></div>
+<div class="time" style="width: 12.962962962963%"></div>
 <pre>
 
 Definition ptr_pequiv {X Y : pType} (n : trunc_index) (f : X &lt;~&gt;* Y)
@@ -789,8 +789,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 129
-Time: 0.017s">
-<div class="time" style="width: 30.357142857143%"></div>
+Time: 0.016s">
+<div class="time" style="width: 29.62962962963%"></div>
 <pre>
   srapply Build_pEquiv.</pre>
 </div>
@@ -816,7 +816,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 131
 Time: 0.006s">
-<div class="time" style="width: 10.714285714286%"></div>
+<div class="time" style="width: 11.111111111111%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -838,7 +838,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 135
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>Definition path_Tr_commutes (n : trunc_index) (A : Type) (a0 a1 : A)
   : (@path_Tr n A a0 a1) o tr == ap tr.</pre>
 </div>
@@ -866,7 +866,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 139
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -949,7 +949,7 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 150
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre> symmetry; refine (_ @ _).</pre>
 </div>
 <div class="code" title="File: pTrunc.v
@@ -988,20 +988,20 @@ Time: 0s">
 <div class="code" title="File: pTrunc.v
 Line: 153
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 153
 Time: 0.001s">
-<div class="time" style="width: 1.7857142857143%"></div>
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: pTrunc.v
 Line: 154
-Time: 0.01s">
-<div class="time" style="width: 17.857142857143%"></div>
+Time: 0.009s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
 Defined.</pre>
 </div>

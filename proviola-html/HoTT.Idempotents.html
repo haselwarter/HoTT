@@ -3418,12 +3418,12 @@
           
 
             i = 680;
-            data = "1 goal (ID 510)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  split_idem (s o r) <~> A	";
+            data = "";
             responses[i]=data;
           
 
             i = 681;
-            data = "3 goals (ID 564)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x))	  o (split_idem_retr (s o r) o s) == idmap		goal 2 (ID 566) is:	 split_idem_retr (s o r) o s	 o (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x)) == idmap	goal 3 (ID 568) is:	 forall x : split_idem (s o r),	 ?eisretr ((fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0)) x) =	 ap (fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0))	   (?eissect x)	";
+            data = "1 goal (ID 510)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  split_idem (s o r) <~> A	3 goals (ID 564)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  ============================	  (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x))	  o (split_idem_retr (s o r) o s) == idmap		goal 2 (ID 566) is:	 split_idem_retr (s o r) o s	 o (fun x : split_idem (s o r) => r (split_idem_sect (s o r) x)) == idmap	goal 3 (ID 568) is:	 forall x : split_idem (s o r),	 ?eisretr ((fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0)) x) =	 ap (fun x0 : split_idem (s o r) => r (split_idem_sect (s o r) x0))	   (?eissect x)	";
             responses[i]=data;
           
 
@@ -3688,12 +3688,12 @@
           
 
             i = 734;
-            data = "1 goal (ID 678)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  split_idem_splits (s o r) x =	  (ap (split_idem_sect (s o r))	     (eissect equiv_split_idem_retract (split_idem_retr (s o r) x))^ @	   equiv_split_idem_retract_sect	     (equiv_split_idem_retract (split_idem_retr (s o r) x))) @	  ap s (equiv_split_idem_retract_retr x)	1 goal (ID 679)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  split_idem_splits (fun x0 : X => s (r x0)) x =	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (1 @	         ap (split_idem_sect (fun x0 : X => s (r x0)))	           (split_idem_issect (fun x0 : X => s (r x0))	              (split_idem_retr (fun x0 : X => s (r x0)) x))) @	      split_idem_issect (fun x0 : X => s (r x0))	        (split_idem_retr (fun x0 : X => s (r x0)) x))^ @	   equiv_split_idem_retract_sect (r (s (r x)))) @	  ap s (equiv_split_idem_retract_retr x)	1 goal (ID 680)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  1 =	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (1 @	         ap (split_idem_sect (fun x0 : X => s (r x0)))	           (split_idem_issect (fun x0 : X => s (r x0))	              (split_idem_retr (fun x0 : X => s (r x0)) x))) @	      split_idem_issect (fun x0 : X => s (r x0))	        (split_idem_retr (fun x0 : X => s (r x0)) x))^ @	   ap s (H (r (s (r x))))) @ ap s (H (r x))	";
+            data = "1 goal (ID 678)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  split_idem_splits (s o r) x =	  (ap (split_idem_sect (s o r))	     (eissect equiv_split_idem_retract (split_idem_retr (s o r) x))^ @	   equiv_split_idem_retract_sect	     (equiv_split_idem_retract (split_idem_retr (s o r) x))) @	  ap s (equiv_split_idem_retract_retr x)	";
             responses[i]=data;
           
 
             i = 735;
-            data = "1 goal (ID 712)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (split_idem_sect (fun x0 : X => s (r x0)))	    (ap (split_idem_retr (fun x0 : X => s (r x0)))	       (ap (split_idem_sect (fun x0 : X => s (r x0)))	          (split_idem_issect (fun x0 : X => s (r x0))	             (split_idem_retr (fun x0 : X => s (r x0)) x))) @	     split_idem_issect (fun x0 : X => s (r x0))	       (split_idem_retr (fun x0 : X => s (r x0)) x)) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	";
+            data = "1 goal (ID 679)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  split_idem_splits (fun x0 : X => s (r x0)) x =	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (1 @	         ap (split_idem_sect (fun x0 : X => s (r x0)))	           (split_idem_issect (fun x0 : X => s (r x0))	              (split_idem_retr (fun x0 : X => s (r x0)) x))) @	      split_idem_issect (fun x0 : X => s (r x0))	        (split_idem_retr (fun x0 : X => s (r x0)) x))^ @	   equiv_split_idem_retract_sect (r (s (r x)))) @	  ap s (equiv_split_idem_retract_retr x)	1 goal (ID 680)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  1 =	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (1 @	         ap (split_idem_sect (fun x0 : X => s (r x0)))	           (split_idem_issect (fun x0 : X => s (r x0))	              (split_idem_retr (fun x0 : X => s (r x0)) x))) @	      split_idem_issect (fun x0 : X => s (r x0))	        (split_idem_retr (fun x0 : X => s (r x0)) x))^ @	   ap s (H (r (s (r x))))) @ ap s (H (r x))	1 goal (ID 712)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (split_idem_sect (fun x0 : X => s (r x0)))	    (ap (split_idem_retr (fun x0 : X => s (r x0)))	       (ap (split_idem_sect (fun x0 : X => s (r x0)))	          (split_idem_issect (fun x0 : X => s (r x0))	             (split_idem_retr (fun x0 : X => s (r x0)) x))) @	     split_idem_issect (fun x0 : X => s (r x0))	       (split_idem_retr (fun x0 : X => s (r x0)) x)) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	";
             responses[i]=data;
           
 
@@ -3788,17 +3788,17 @@
           
 
             i = 754;
-            data = "1 goal (ID 804)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) (s (r x)))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) x)))) @	  ((ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))^ @	   (isidem (fun x0 : X => s (r x0)) (s (r x)) @	    isidem (fun x0 : X => s (r x0)) x)) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 808)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r (s (r x)))))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x)))))) @	  ((ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^ @	   (ap s (H (r (s (r x)))) @ ap s (H (r x)))) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 826)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0)))	          (ap s (H (r (s (r x))))))	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x))))	  @' (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 867)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 874)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x)))) = ap s (H (r (s (r x))))	1 goal (ID 893)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^ = 1	1 goal (ID 921)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x)))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 954)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 1003)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	";
+            data = "";
             responses[i]=data;
           
 
             i = 755;
-            data = "1 goal (ID 1036)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x))) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x)))	";
+            data = "";
             responses[i]=data;
           
 
             i = 756;
-            data = "1 goal (ID 1087)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x))) =	  ap s (ap (fun x0 : retract_type R => r (s (r (s x0)))) (H (r x)))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x)))	";
+            data = "1 goal (ID 804)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) (s (r x)))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (isidem (fun x0 : X => s (r x0)) x)))) @	  ((ap (fun x0 : X => s (r x0)) (isidem (fun x0 : X => s (r x0)) x))^ @	   (isidem (fun x0 : X => s (r x0)) (s (r x)) @	    isidem (fun x0 : X => s (r x0)) x)) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 808)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ((ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0)))	         (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^ @	   (ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r (s (r x)))))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x)))))) @	  ((ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^ @	   (ap s (H (r (s (r x)))) @ ap s (H (r x)))) =	  ap s (H (r (s (r x)))) @ ap s (H (r x))	1 goal (ID 826)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0)))	          (ap s (H (r (s (r x))))))	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x))))	  @' (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 867)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	1 goal (ID 874)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x)))) = ap s (H (r (s (r x))))	1 goal (ID 893)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^ = 1	1 goal (ID 921)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x)))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 954)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 1003)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x)) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	1 goal (ID 1036)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x))) =	  ap (fun x0 : retract_type R => s (r (s (r (s x0))))) (H (r x))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x)))	1 goal (ID 1087)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := retract_type R : Type	  r := retract_retr R : X -> retract_type R	  s := retract_sect R : retract_type R -> X	  H := retract_issect R : retract_retr R o retract_sect R == idmap	  x : X	  ============================	  ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r (s (r x)))))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x))) =	  ap s (ap (fun x0 : retract_type R => r (s (r (s x0)))) (H (r x)))	  @' ap s (ap (fun x0 : retract_type R => r (s x0)) (H (r x)))	";
             responses[i]=data;
           
 
@@ -3958,7 +3958,7 @@
           
 
             i = 788;
-            data = "<infomsg>ua is declared</infomsg>	<infomsg>X is declared</infomsg>	1 goal (ID 367)	  	  ua : Univalence	  X : Type	  ============================	  RetractOf (QuasiIdempotent X)	1 goal (ID 376)	  	  ua : Univalence	  X : Type	  ============================	  (fun x : RetractOf X => split_idem_retract' (qidem_retract x)) == idmap	1 goal (ID 378)	  	  ua : Univalence	  X : Type	  R : RetractOf X	  ============================	  split_idem_retract' (qidem_retract R) = R	No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -3993,7 +3993,7 @@
           
 
             i = 795;
-            data = "1 goal (ID 373)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  RetractOf {I : IsPreIdempotent f & IsQuasiIdempotent f}	";
+            data = "<infomsg>ua is declared</infomsg>	<infomsg>X is declared</infomsg>	1 goal (ID 367)	  	  ua : Univalence	  X : Type	  ============================	  RetractOf (QuasiIdempotent X)	1 goal (ID 376)	  	  ua : Univalence	  X : Type	  ============================	  (fun x : RetractOf X => split_idem_retract' (qidem_retract x)) == idmap	1 goal (ID 378)	  	  ua : Univalence	  X : Type	  R : RetractOf X	  ============================	  split_idem_retract' (qidem_retract R) = R	No more goals.	1 goal (ID 373)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  RetractOf {I : IsPreIdempotent f & IsQuasiIdempotent f}	";
             responses[i]=data;
           
 
@@ -4098,7 +4098,7 @@
           
 
             i = 816;
-            data = "1 goal (ID 449)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  hfiber pr1 f <~> IsQuasiIdempotent f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 456) is:	 preidem_retract o retract_retr retract_retractof_qidem == pr1	goal 2 (ID 458) is:	 retract_type	   (retractof_equiv'	      (symmetric_equiv (IsQuasiIdempotent f) (hfiber pr1 f)	         (hfiber_fibration f	            (fun fi : {x : _ & IsPreIdempotent x} => IsQuasiIdempotent fi.1)))	      (retractof_hfiber retract_retractof_qidem pr1 preidem_retract ?p f)) <~>	 Splitting_PreIdempotent f	";
+            data = "1 goal (ID 449)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  hfiber pr1 f <~> IsQuasiIdempotent f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 456) is:	 preidem_retract o retract_retr retract_retractof_qidem == pr1	goal 2 (ID 458) is:	 retract_type	   (retractof_equiv'	      (hfiber_fibration f	         (fun fi : {x : _ & IsPreIdempotent x} => IsQuasiIdempotent fi.1))^-1	      (retractof_hfiber retract_retractof_qidem pr1 preidem_retract ?p f)) <~>	 Splitting_PreIdempotent f	";
             responses[i]=data;
           
 
@@ -4113,12 +4113,12 @@
           
 
             i = 819;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 458) is:	 retract_type	   (retractof_equiv'	      (symmetric_equiv (IsQuasiIdempotent f) (hfiber pr1 f)	         (hfiber_fibration f	            (fun fi : {x : _ & IsPreIdempotent x} => IsQuasiIdempotent fi.1)))	      (retractof_hfiber retract_retractof_qidem pr1 preidem_retract	         (fun x : QuasiIdempotent X =>	          (fun proj1 : PreIdempotent X =>	           (fun (g : X -> X) (I : IsPreIdempotent g)	              (J : IsQuasiIdempotent (g; I)) =>	            path_sigma' (fun f0 : X -> X => IsPreIdempotent f0) 1	              (path_forall	                 (fun x0 : X =>	                  ap (split_idem_sect ((g; I); J))	                    (split_idem_issect ((g; I); J)	                       (split_idem_retr ((g; I); J) x0))) I	                 (fun x0 : X => split_idem_preidem ((g; I); J) x0))) proj1.1	             proj1.2) x.1 x.2) f)) <~> Splitting_PreIdempotent f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 458) is:	 retract_type	   (retractof_equiv'	      (hfiber_fibration f	         (fun fi : {x : _ & IsPreIdempotent x} => IsQuasiIdempotent fi.1))^-1	      (retractof_hfiber retract_retractof_qidem pr1 preidem_retract	         (fun x : QuasiIdempotent X =>	          (fun proj1 : PreIdempotent X =>	           (fun (g : X -> X) (I : IsPreIdempotent g)	              (J : IsQuasiIdempotent (g; I)) =>	            path_sigma' (fun f0 : X -> X => IsPreIdempotent f0) 1	              (path_forall	                 (fun x0 : X =>	                  ap (split_idem_sect ((g; I); J))	                    (split_idem_issect ((g; I); J)	                       (split_idem_retr ((g; I); J) x0))) I	                 (fun x0 : X => split_idem_preidem ((g; I); J) x0))) proj1.1	             proj1.2) x.1 x.2) f)) <~> Splitting_PreIdempotent f	";
             responses[i]=data;
           
 
             i = 820;
-            data = "1 goal (ID 458)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  retract_type	    (retractof_equiv'	       (symmetric_equiv (IsQuasiIdempotent f) (hfiber pr1 f)	          (hfiber_fibration f	             (fun fi : {x : _ & IsPreIdempotent x} => IsQuasiIdempotent fi.1)))	       (retractof_hfiber retract_retractof_qidem pr1 preidem_retract	          (fun x : QuasiIdempotent X =>	           (fun proj1 : PreIdempotent X =>	            (fun (g : X -> X) (I : IsPreIdempotent g)	               (J : IsQuasiIdempotent (g; I)) =>	             path_sigma' (fun f0 : X -> X => IsPreIdempotent f0) 1	               (path_forall	                  (fun x0 : X =>	                   ap (split_idem_sect ((g; I); J))	                     (split_idem_issect ((g; I); J)	                        (split_idem_retr ((g; I); J) x0))) I	                  (fun x0 : X => split_idem_preidem ((g; I); J) x0))) proj1.1	              proj1.2) x.1 x.2) f)) <~> Splitting_PreIdempotent f	1 goal (ID 507)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  {x : RetractOf X &	  (fun x0 : X => retract_sect x (retract_retr x x0);	  fun x0 : X => ap (retract_sect x) (retract_issect x (retract_retr x x0))) =	  f} <~> Splitting_PreIdempotent f	";
+            data = "1 goal (ID 458)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  retract_type	    (retractof_equiv'	       (hfiber_fibration f	          (fun fi : {x : _ & IsPreIdempotent x} => IsQuasiIdempotent fi.1))^-1	       (retractof_hfiber retract_retractof_qidem pr1 preidem_retract	          (fun x : QuasiIdempotent X =>	           (fun proj1 : PreIdempotent X =>	            (fun (g : X -> X) (I : IsPreIdempotent g)	               (J : IsQuasiIdempotent (g; I)) =>	             path_sigma' (fun f0 : X -> X => IsPreIdempotent f0) 1	               (path_forall	                  (fun x0 : X =>	                   ap (split_idem_sect ((g; I); J))	                     (split_idem_issect ((g; I); J)	                        (split_idem_retr ((g; I); J) x0))) I	                  (fun x0 : X => split_idem_preidem ((g; I); J) x0))) proj1.1	              proj1.2) x.1 x.2) f)) <~> Splitting_PreIdempotent f	1 goal (ID 507)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  {x : RetractOf X &	  (fun x0 : X => retract_sect x (retract_retr x x0);	  fun x0 : X => ap (retract_sect x) (retract_issect x (retract_retr x x0))) =	  f} <~> Splitting_PreIdempotent f	";
             responses[i]=data;
           
 
@@ -4523,37 +4523,37 @@
           
 
             i = 901;
-            data = "2 goals (ID 432)	  	  ua : Univalence	  X : Type	  ============================	  Idempotent X <~> {f : X -> X & Splitting f}		goal 2 (ID 433) is:	 {f : X -> X & Splitting f} <~> RetractOf X	";
+            data = "2 goals (ID 434)	  	  ua : Univalence	  X : Type	  ============================	  Idempotent X <~> {f : X -> X & Splitting f}		goal 2 (ID 435) is:	 {f : X -> X & Splitting f} <~> RetractOf X	";
             responses[i]=data;
           
 
             i = 902;
-            data = "1 goal (ID 432)	  	  ua : Univalence	  X : Type	  ============================	  Idempotent X <~> {f : X -> X & Splitting f}	1 goal (ID 434)	  	  ua : Univalence	  X : Type	  ============================	  {f : X -> X & IsIdempotent f} <~> {f : X -> X & Splitting f}	";
+            data = "1 goal (ID 434)	  	  ua : Univalence	  X : Type	  ============================	  Idempotent X <~> {f : X -> X & Splitting f}	1 goal (ID 436)	  	  ua : Univalence	  X : Type	  ============================	  {f : X -> X & IsIdempotent f} <~> {f : X -> X & Splitting f}	";
             responses[i]=data;
           
 
             i = 903;
-            data = "1 goal (ID 445)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  IsIdempotent f <~> Splitting f	";
+            data = "1 goal (ID 447)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  IsIdempotent f <~> Splitting f	";
             responses[i]=data;
           
 
             i = 904;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 433) is:	 {f : X -> X & Splitting f} <~> RetractOf X	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 435) is:	 {f : X -> X & Splitting f} <~> RetractOf X	";
             responses[i]=data;
           
 
             i = 905;
-            data = "1 goal (ID 433)	  	  ua : Univalence	  X : Type	  ============================	  {f : X -> X & Splitting f} <~> RetractOf X	1 goal (ID 453)	  	  ua : Univalence	  X : Type	  ============================	  {f : X -> X & {R : RetractOf X & retract_idem R == f}} <~> RetractOf X	";
+            data = "1 goal (ID 435)	  	  ua : Univalence	  X : Type	  ============================	  {f : X -> X & Splitting f} <~> RetractOf X	1 goal (ID 455)	  	  ua : Univalence	  X : Type	  ============================	  {f : X -> X & {R : RetractOf X & retract_idem R == f}} <~> RetractOf X	";
             responses[i]=data;
           
 
             i = 906;
-            data = "1 goal (ID 463)	  	  ua : Univalence	  X : Type	  ============================	  {b : RetractOf X & {a : X -> X & retract_idem b == a}} <~> RetractOf X	";
+            data = "1 goal (ID 465)	  	  ua : Univalence	  X : Type	  ============================	  {b : RetractOf X & {a : X -> X & retract_idem b == a}} <~> RetractOf X	";
             responses[i]=data;
           
 
             i = 907;
-            data = "1 goal (ID 466)	  	  ua : Univalence	  X : Type	  R : RetractOf X	  ============================	  Contr {a : X -> X & retract_idem R == a}	";
+            data = "1 goal (ID 468)	  	  ua : Univalence	  X : Type	  R : RetractOf X	  ============================	  Contr {a : X -> X & retract_idem R == a}	";
             responses[i]=data;
           
 
@@ -4723,7 +4723,7 @@
           
 
             i = 941;
-            data = "The command has indeed failed with message:	In environment	ua : Univalence	X : Type	The term \"idmap_retractof X\" has type \"RetractOf@{Top.7983 Top.7983} X\"	while it is expected to have type \"RetractOf@{Top.7981 Top.7982} X\".	";
+            data = "The command has indeed failed with message:	In environment	ua : Univalence	X : Type	The term \"idmap_retractof X\" has type \"RetractOf@{Top.7952 Top.7952} X\"	while it is expected to have type \"RetractOf@{Top.7950 Top.7951} X\".	";
             responses[i]=data;
           
 
@@ -4873,87 +4873,87 @@
           
 
             i = 971;
-            data = "2 goals (ID 411)	  	  ua : Univalence	  X : Type	  ============================	  {Y : Type & X <~> Y} <~>	  {S : Splitting (preidem_idmap X) &	  forall x : X,	  retract_issect S.1 (retract_retr S.1 x) = ap (retract_retr S.1) (S.2 x)}		goal 2 (ID 412) is:	 {S : Splitting (preidem_idmap X) &	 forall x : X,	 retract_issect S.1 (retract_retr S.1 x) = ap (retract_retr S.1) (S.2 x)} <~>	 Splitting_PreIdempotent (preidem_idmap X)	";
+            data = "2 goals (ID 413)	  	  ua : Univalence	  X : Type	  ============================	  {Y : Type & X <~> Y} <~>	  {S : Splitting (preidem_idmap X) &	  forall x : X,	  retract_issect S.1 (retract_retr S.1 x) = ap (retract_retr S.1) (S.2 x)}		goal 2 (ID 414) is:	 {S : Splitting (preidem_idmap X) &	 forall x : X,	 retract_issect S.1 (retract_retr S.1 x) = ap (retract_retr S.1) (S.2 x)} <~>	 Splitting_PreIdempotent (preidem_idmap X)	";
             responses[i]=data;
           
 
             i = 972;
-            data = "1 goal (ID 412)	  	  ua : Univalence	  X : Type	  ============================	  {S : Splitting (preidem_idmap X) &	  forall x : X,	  retract_issect S.1 (retract_retr S.1 x) = ap (retract_retr S.1) (S.2 x)} <~>	  Splitting_PreIdempotent (preidem_idmap X)	";
+            data = "1 goal (ID 414)	  	  ua : Univalence	  X : Type	  ============================	  {S : Splitting (preidem_idmap X) &	  forall x : X,	  retract_issect S.1 (retract_retr S.1 x) = ap (retract_retr S.1) (S.2 x)} <~>	  Splitting_PreIdempotent (preidem_idmap X)	";
             responses[i]=data;
           
 
             i = 973;
-            data = "1 goal (ID 585)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  ============================	  (forall x : X, eta (r x) = ap r (ep x)) <~>	  (forall x : X,	   ((ap idmap (ep x)^ @ (ep (s (r x)))^) @ ap s (eta (r x))) @ ep x =	   ispreidem_idmap X x)	";
+            data = "1 goal (ID 587)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  ============================	  (forall x : X, eta (r x) = ap r (ep x)) <~>	  (forall x : X,	   ((ap idmap (ep x)^ @ (ep (s (r x)))^) @ ap s (eta (r x))) @ ep x =	   ispreidem_idmap X x)	";
             responses[i]=data;
           
 
             i = 974;
-            data = "1 goal (ID 594)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ap idmap (ep x)^ @ (ep (s (r x)))^) @ ap s (eta (r x))) @ ep x =	  ispreidem_idmap X x	";
+            data = "1 goal (ID 596)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ap idmap (ep x)^ @ (ep (s (r x)))^) @ ap s (eta (r x))) @ ep x =	  ispreidem_idmap X x	";
             responses[i]=data;
           
 
             i = 975;
-            data = "1 goal (ID 596)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ap idmap (ep x)^ @ (ep (s (r x)))^) @ ap s (eta (r x))) @ ep x = 1	";
+            data = "1 goal (ID 598)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ap idmap (ep x)^ @ (ep (s (r x)))^) @ ap s (eta (r x))) @ ep x = 1	";
             responses[i]=data;
           
 
             i = 976;
-            data = "1 goal (ID 615)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  (ep x)^ @ ((ep (s (r x)))^ @ (ap s (eta (r x)) @ ep x)) = 1	";
+            data = "1 goal (ID 617)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  (ep x)^ @ ((ep (s (r x)))^ @ (ap s (eta (r x)) @ ep x)) = 1	";
             responses[i]=data;
           
 
             i = 977;
-            data = "1 goal (ID 641)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  (ep (s (r x)))^ @ (ap s (eta (r x)) @ ep x) = ep x @ 1	";
+            data = "1 goal (ID 643)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  (ep (s (r x)))^ @ (ap s (eta (r x)) @ ep x) = ep x @ 1	";
             responses[i]=data;
           
 
             i = 978;
-            data = "1 goal (ID 654)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ep (s (r x)))^ @ ap s (eta (r x))) @ ep x = ep x	";
+            data = "1 goal (ID 656)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ep (s (r x)))^ @ ap s (eta (r x))) @ ep x = ep x	";
             responses[i]=data;
           
 
             i = 979;
-            data = "1 goal (ID 675)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ep (s (r x)))^ @ ap s (eta (r x))) @ ep x = 1 @ ep x	";
+            data = "1 goal (ID 677)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~>	  ((ep (s (r x)))^ @ ap s (eta (r x))) @ ep x = 1 @ ep x	";
             responses[i]=data;
           
 
             i = 980;
-            data = "1 goal (ID 691)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~> (ep (s (r x)))^ @ ap s (eta (r x)) = 1	";
+            data = "1 goal (ID 693)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~> (ep (s (r x)))^ @ ap s (eta (r x)) = 1	";
             responses[i]=data;
           
 
             i = 981;
-            data = "1 goal (ID 707)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~> ap s (eta (r x)) = ep (s (r x)) @ 1	";
+            data = "1 goal (ID 709)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~> ap s (eta (r x)) = ep (s (r x)) @ 1	";
             responses[i]=data;
           
 
             i = 982;
-            data = "1 goal (ID 711)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~> ap s (eta (r x)) = ep (s (r x))	";
+            data = "1 goal (ID 713)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  ============================	  eta (r x) = ap r (ep x) <~> ap s (eta (r x)) = ep (s (r x))	";
             responses[i]=data;
           
 
             i = 983;
-            data = "1 goal (ID 717)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  eta (r x) = ap r (ep x) <~> ap s (eta (r x)) = ep (s (r x))	";
+            data = "1 goal (ID 719)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  eta (r x) = ap r (ep x) <~> ap s (eta (r x)) = ep (s (r x))	";
             responses[i]=data;
           
 
             i = 984;
-            data = "1 goal (ID 833)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap s (eta (r x)) = ap s (ap r (ep x)) <~> ap s (eta (r x)) = ep (s (r x))	";
+            data = "1 goal (ID 835)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap s (eta (r x)) = ap s (ap r (ep x)) <~> ap s (eta (r x)) = ep (s (r x))	";
             responses[i]=data;
           
 
             i = 985;
-            data = "1 goal (ID 837)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap s (ap r (ep x)) = ep (s (r x))	";
+            data = "1 goal (ID 839)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap s (ap r (ep x)) = ep (s (r x))	";
             responses[i]=data;
           
 
             i = 986;
-            data = "1 goal (ID 847)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap s (ap r (ep x)) @ ep x = ep (s (r x)) @ ep x	";
+            data = "1 goal (ID 849)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap s (ap r (ep x)) @ ep x = ep (s (r x)) @ ep x	";
             responses[i]=data;
           
 
             i = 987;
-            data = "1 goal (ID 851)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap (fun x0 : X => s (r x0)) (ep x) @ ep x = ep (s (r x)) @ ep x	";
+            data = "1 goal (ID 853)	  	  ua : Univalence	  X : Type	  Y : Type	  r : X -> Y	  s : Y -> X	  eta : (fun x : Y => r (s x)) == idmap	  ep : (fun x : X => s (r x)) == idmap	  x : X	  i := isequiv_adjointify s r ep eta : IsEquiv s	  ============================	  ap (fun x0 : X => s (r x0)) (ep x) @ ep x = ep (s (r x)) @ ep x	";
             responses[i]=data;
           
 

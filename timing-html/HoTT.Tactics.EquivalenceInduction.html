@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 1
-Time: 0.045s">
-<div class="time" style="width: 56.25%"></div>
+Time: 0.046s">
+<div class="time" style="width: 57.5%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -67,8 +67,8 @@ Class RespectsEquivalenceL@{i j k s0 s1} (A : Type@{i}) (P : forall (B : Type@{j
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 7
-Time: 0.002s">
-<div class="time" style="width: 2.5%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.25%"></div>
 <pre>
 Class RespectsEquivalenceR@{i j k s0 s1} (A : Type@{i}) (P : forall (B : Type@{j}), (B &lt;~&gt; A) -&gt; Type@{k})
   := respects_equivalenceR : sig@{s0 s1} (fun e' : forall B (e : B &lt;~&gt; A), P A (equiv_idmap A) &lt;~&gt; P B e =&gt; Funext -&gt; equiv_idmap _ = e' A (equiv_idmap _) ).</pre>
@@ -297,8 +297,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.25%"></div>
 <pre>
     refine (fun B e =&gt; equiv_inverse e; fun _ =&gt; path_equiv _).</pre>
 </div>
@@ -389,15 +389,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 70
-Time: 0.003s">
-<div class="time" style="width: 3.75%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5%"></div>
 <pre>
     refine ((fun B e =&gt; equiv_functor_prod' (respects_equivalenceL.1 B e) (respects_equivalenceL.1 B e)); _).</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 71
-Time: 0.033s">
-<div class="time" style="width: 41.25%"></div>
+Time: 0.035s">
+<div class="time" style="width: 43.75%"></div>
 <pre>
     exact (fun fs =&gt;
              transport
@@ -600,15 +600,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 131
-Time: 0.032s">
-<div class="time" style="width: 40%"></div>
+Time: 0.033s">
+<div class="time" style="width: 41.25%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 132
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5%"></div>
 <pre>
 
   Global Instance forall_respects_equivalenceR `{Funext} {A} {P : forall B, (B &lt;~&gt; A) -&gt; Type} {Q : forall B e, P B e -&gt; Type}
@@ -678,8 +678,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 149
-Time: 0.052s">
-<div class="time" style="width: 65%"></div>
+Time: 0.057s">
+<div class="time" style="width: 71.25%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -712,8 +712,8 @@ Section sigma.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 153
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5%"></div>
 <pre>
   Global Instance sigma_respects_equivalenceL `{Funext} {A} {P : forall B, (A &lt;~&gt; B) -&gt; Type} {Q : forall B e, P B e -&gt; Type}
          `{HP : RespectsEquivalenceL A P}
@@ -772,8 +772,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 165
-Time: 0.043s">
-<div class="time" style="width: 53.75%"></div>
+Time: 0.049s">
+<div class="time" style="width: 61.25%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -791,8 +791,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 166
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5%"></div>
 <pre>
 
   Global Instance sigma_respects_equivalenceR `{Funext} {A} {P : forall B, (B &lt;~&gt; A) -&gt; Type} {Q : forall B e, P B e -&gt; Type}
@@ -832,8 +832,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 177
-Time: 0.001s">
-<div class="time" style="width: 1.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (ap10 (ap equiv_fun (respects_equivalenceR.2 _)) _).</pre>
 </div>
@@ -852,8 +852,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 179
-Time: 0.04s">
-<div class="time" style="width: 50%"></div>
+Time: 0.041s">
+<div class="time" style="width: 51.25%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -879,8 +879,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 182
-Time: 0.009s">
-<div class="time" style="width: 11.25%"></div>
+Time: 0.007s">
+<div class="time" style="width: 8.75%"></div>
 <pre>
 End sigma.</pre>
 </div>
@@ -894,8 +894,8 @@ Section equiv_transfer.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 185
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5%"></div>
 <pre>
   Definition respects_equivalenceL_equiv {A A'} {P : forall B, (A &lt;~&gt; B) -&gt; Type} {P' : forall B, A' &lt;~&gt; B -&gt; Type}
              (eA : A &lt;~&gt; A')
@@ -951,8 +951,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 200
-Time: 0.013s">
-<div class="time" style="width: 16.25%"></div>
+Time: 0.014s">
+<div class="time" style="width: 17.5%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1028,8 +1028,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 217
-Time: 0.013s">
-<div class="time" style="width: 16.25%"></div>
+Time: 0.014s">
+<div class="time" style="width: 17.5%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1199,8 +1199,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 250
-Time: 0.008s">
-<div class="time" style="width: 10%"></div>
+Time: 0.009s">
+<div class="time" style="width: 11.25%"></div>
 <pre>
 End equiv_transfer.</pre>
 </div>
@@ -1265,8 +1265,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 262
-Time: 0.02s">
-<div class="time" style="width: 25%"></div>
+Time: 0.022s">
+<div class="time" style="width: 27.5%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1336,8 +1336,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 273
-Time: 0.021s">
-<div class="time" style="width: 26.25%"></div>
+Time: 0.024s">
+<div class="time" style="width: 30%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1434,8 +1434,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 287
-Time: 0.019s">
-<div class="time" style="width: 23.75%"></div>
+Time: 0.018s">
+<div class="time" style="width: 22.5%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1446,15 +1446,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 287
-Time: 0.002s">
-<div class="time" style="width: 2.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.75%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 288
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.25%"></div>
 <pre>
 
   Global Instance equiv_ap_inv_respects_equivalenceL {A} {P Q : forall B, (A &lt;~&gt; B) -&gt; B}
@@ -1510,8 +1510,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 297
-Time: 0.015s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.016s">
+<div class="time" style="width: 20%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1529,8 +1529,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 298
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.25%"></div>
 <pre>
 
   Global Instance equiv_ap_respects_equivalenceR {A} {P Q : forall B, (B &lt;~&gt; A) -&gt; B}
@@ -1586,8 +1586,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 307
-Time: 0.015s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.016s">
+<div class="time" style="width: 20%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
@@ -1674,15 +1674,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 317
-Time: 0.015s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.007s">
+<div class="time" style="width: 8.75%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: EquivalenceInduction.v
 Line: 318
-Time: 0.008s">
-<div class="time" style="width: 10%"></div>
+Time: 0.006s">
+<div class="time" style="width: 7.5%"></div>
 <pre>
 End ap.</pre>
 </div>

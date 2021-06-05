@@ -139,6 +139,9 @@ We put <span class="inlinecode"><a class="idref" href="HoTT.Types.Bool.html#Equi
 &nbsp;&nbsp;<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a id="f:33" class="idref" href="#f:33"><span class="id" title="binder">f</span></a> <a id="g:34" class="idref" href="#g:34"><span class="id" title="binder">g</span></a> ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g:34"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f:33"><span class="id" title="variable">f</span></a>.<br/>
 
 <br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Equivalences.html#transitive_equiv"><span class="id" title="instance">transitive_equiv</span></a> /.<br/>
+
+<br/>
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">change_apply_equiv_compose</span> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="keyword">goal</span> <span class="id" title="keyword">with</span><br/>
 &nbsp;&nbsp;| [ |- <span class="id" title="keyword">context</span> [ <a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a> (?<span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Equivalences.html#::equiv_scope:x_'oE'_x"><span class="id" title="notation">oE</span></a> ?<span class="id" title="var">g</span>) ?<span class="id" title="var">x</span> ] ] ⇒<br/>
@@ -590,6 +593,9 @@ If the goal is <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overt
 
 <br/>
 <span class="id" title="keyword">Global Instance</span> <a id="symmetric_equiv" class="idref" href="#symmetric_equiv"><span class="id" title="instance">symmetric_equiv</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Symmetric"><span class="id" title="class">Symmetric</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Equiv"><span class="id" title="record">Equiv</span></a> | 0 := @<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_inverse"><span class="id" title="lemma">equiv_inverse</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Arguments</span> <a class="idref" href="HoTT.Basics.Equivalences.html#symmetric_equiv"><span class="id" title="instance">symmetric_equiv</span></a> /.<br/>
 
 <br/>
 </div>

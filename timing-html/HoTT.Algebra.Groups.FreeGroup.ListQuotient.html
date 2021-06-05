@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: ListQuotient.v
 Line: 1
-Time: 0.05s">
-<div class="time" style="width: 39.0625%"></div>
+Time: 0.052s">
+<div class="time" style="width: 40%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 1
-Time: 0.09s">
-<div class="time" style="width: 70.3125%"></div>
+Time: 0.091s">
+<div class="time" style="width: 70%"></div>
 <pre>
 Require Import Groups.Group.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 18
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>Local Definition change_sign : A + A -&gt; A + A
     := fun x =&gt; match x with
                 | inl a =&gt; inr a
@@ -233,8 +233,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     cbn; f_ap.</pre>
 </div>
@@ -283,8 +283,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 49
-Time: 0.003s">
-<div class="time" style="width: 2.34375%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre> f_ap; symmetry.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
@@ -310,7 +310,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 51
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     induction x; trivial.</pre>
 </div>
@@ -323,8 +323,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     simpl; f_ap.</pre>
 </div>
@@ -337,8 +337,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 55
-Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -377,7 +377,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 64
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>Inductive Red : Words -&gt; Type :=
     | red_zero : Red nil
     | red_step (y z : Words) (a : A + A)
@@ -496,8 +496,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>Definition freegroup_eta : Words -&gt; freegroup_type := tr o coeq.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
@@ -525,8 +525,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 99
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     apply path_Tr, tr.</pre>
 </div>
@@ -576,7 +576,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 107
 Time: 0.031s">
-<div class="time" style="width: 24.21875%"></div>
+<div class="time" style="width: 23.846153846154%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -590,8 +590,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 110
-Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>revert x; snrapply Coeq_rec.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
@@ -609,8 +609,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 111
-Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       snrapply Coeq_rec.</pre>
 </div>
@@ -643,7 +643,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
       intros [[y a] z]; cbn.</pre>
 </div>
@@ -703,8 +703,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 121
-Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (concat _ (ap _ _^)).</pre>
 </div>
@@ -731,14 +731,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 124
 Time: 0.019s">
-<div class="time" style="width: 14.84375%"></div>
+<div class="time" style="width: 14.615384615385%"></div>
 <pre>
     intros [[c b] d].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 125
-Time: 0.057s">
-<div class="time" style="width: 44.53125%"></div>
+Time: 0.059s">
+<div class="time" style="width: 45.384615384615%"></div>
 <pre>
     simpl.</pre>
 </div>
@@ -751,8 +751,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 127
-Time: 0.059s">
-<div class="time" style="width: 46.09375%"></div>
+Time: 0.058s">
+<div class="time" style="width: 44.615384615385%"></div>
 <pre>
     snrapply Coeq_ind.</pre>
 </div>
@@ -779,14 +779,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
       rewrite &lt;- word_concat_w_ww.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 131
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
       rewrite &lt;- (word_concat_w_ww _ _ a).</pre>
 </div>
@@ -806,14 +806,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 133
 Time: 0.046s">
-<div class="time" style="width: 35.9375%"></div>
+<div class="time" style="width: 35.384615384615%"></div>
 <pre>
     intro; rapply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 134
-Time: 0.021s">
-<div class="time" style="width: 16.40625%"></div>
+Time: 0.024s">
+<div class="time" style="width: 18.461538461538%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -983,7 +983,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 160
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     f_ap.</pre>
 </div>
@@ -1047,7 +1047,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 170
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
     cbn; f_ap.</pre>
 </div>
@@ -1253,7 +1253,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 202
 Time: 0.006s">
-<div class="time" style="width: 4.6875%"></div>
+<div class="time" style="width: 4.6153846153846%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
@@ -1403,14 +1403,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 220
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
     refine (concat (word_concat_w_ww _ _ _) _); f_ap.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 221
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
     refine (concat (word_concat_w_ww _ _ _) _); f_ap.</pre>
 </div>
@@ -1430,8 +1430,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 224
-Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1468,36 +1468,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 232
-Time: 0.048s">
-<div class="time" style="width: 37.5%"></div>
+Time: 0.053s">
+<div class="time" style="width: 40.769230769231%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 233
 Time: 0.007s">
-<div class="time" style="width: 5.46875%"></div>
+<div class="time" style="width: 5.3846153846154%"></div>
 <pre>
     revert x; snrapply Coeq_ind; intro x; [ | apply path_ishprop].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 234
 Time: 0.008s">
-<div class="time" style="width: 6.25%"></div>
+<div class="time" style="width: 6.1538461538462%"></div>
 <pre>
     revert y; snrapply Coeq_ind; intro y; [ | apply path_ishprop].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 235
 Time: 0.013s">
-<div class="time" style="width: 10.15625%"></div>
+<div class="time" style="width: 10%"></div>
 <pre>
     revert z; snrapply Coeq_ind; intro z; [ | apply path_ishprop].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 236
 Time: 0.01s">
-<div class="time" style="width: 7.8125%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
     cbn; apply ap.</pre>
 </div>
@@ -1510,8 +1510,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 238
-Time: 0.048s">
-<div class="time" style="width: 37.5%"></div>
+Time: 0.051s">
+<div class="time" style="width: 39.230769230769%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1540,14 +1540,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 243
 Time: 0.012s">
-<div class="time" style="width: 9.375%"></div>
+<div class="time" style="width: 9.2307692307692%"></div>
 <pre>
     rapply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 244
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0769230769231%"></div>
 <pre>
     srapply Coeq_ind; intro x; [ | apply path_ishprop].</pre>
 </div>
@@ -1561,7 +1561,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 246
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1590,21 +1590,21 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 251
 Time: 0.01s">
-<div class="time" style="width: 7.8125%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
     rapply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 252
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0769230769231%"></div>
 <pre>
     srapply Coeq_ind; intro x; [ | apply path_ishprop].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 253
 Time: 0.024s">
-<div class="time" style="width: 18.75%"></div>
+<div class="time" style="width: 18.461538461538%"></div>
 <pre>
     apply (ap tr), ap.</pre>
 </div>
@@ -1617,8 +1617,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 255
-Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.3076923076923%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1647,28 +1647,28 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 260
 Time: 0.01s">
-<div class="time" style="width: 7.8125%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
     rapply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 261
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0769230769231%"></div>
 <pre>
     srapply Coeq_ind; intro x; [ | apply path_ishprop].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 262
 Time: 0.009s">
-<div class="time" style="width: 7.03125%"></div>
+<div class="time" style="width: 6.9230769230769%"></div>
 <pre>
     apply word_concat_Vw.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 263
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1697,28 +1697,28 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 268
 Time: 0.01s">
-<div class="time" style="width: 7.8125%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
     rapply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 269
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0769230769231%"></div>
 <pre>
     srapply Coeq_ind; intro x; [ | apply path_ishprop].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 270
-Time: 0.013s">
-<div class="time" style="width: 10.15625%"></div>
+Time: 0.009s">
+<div class="time" style="width: 6.9230769230769%"></div>
 <pre>
     apply word_concat_wV.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 271
-Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.3846153846154%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1747,14 +1747,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 276
 Time: 0.004s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.0769230769231%"></div>
 <pre>
     snrapply (Build_Group freegroup_type); repeat split; exact _.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 277
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1855,14 +1855,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 294
 Time: 0.003s">
-<div class="time" style="width: 2.34375%"></div>
+<div class="time" style="width: 2.3076923076923%"></div>
 <pre>
     1: symmetry; apply left_identity.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 295
 Time: 0.012s">
-<div class="time" style="width: 9.375%"></div>
+<div class="time" style="width: 9.2307692307692%"></div>
 <pre>
     cbn; rewrite &lt;- simple_associativity.</pre>
 </div>
@@ -1876,7 +1876,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 297
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1913,14 +1913,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 304
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
     refine (concat (words_rec_pp G s _ _) _); f_ap.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 305
 Time: 0.003s">
-<div class="time" style="width: 2.34375%"></div>
+<div class="time" style="width: 2.3076923076923%"></div>
 <pre>
     refine (concat _ (right_identity _)).</pre>
 </div>
@@ -1941,14 +1941,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 308
 Time: 0.008s">
-<div class="time" style="width: 6.25%"></div>
+<div class="time" style="width: 6.1538461538462%"></div>
 <pre>
     refine (concat (concat (simple_associativity _ _ _) _) (left_identity mon_unit)).</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 309
 Time: 0.005s">
-<div class="time" style="width: 3.90625%"></div>
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
     destruct a; simpl; f_ap.</pre>
 </div>
@@ -1980,8 +1980,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 312
-Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -2025,7 +2025,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 320
 Time: 0.011s">
-<div class="time" style="width: 8.59375%"></div>
+<div class="time" style="width: 8.4615384615385%"></div>
 <pre> rapply Trunc_rec.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
@@ -2064,29 +2064,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 324
-Time: 0.072s">
-<div class="time" style="width: 56.25%"></div>
+Time: 0.074s">
+<div class="time" style="width: 56.923076923077%"></div>
 <pre>
     intros x y; strip_truncations.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 325
-Time: 0.02s">
-<div class="time" style="width: 15.625%"></div>
+Time: 0.021s">
+<div class="time" style="width: 16.153846153846%"></div>
 <pre>
     revert x; snrapply Coeq_ind; hnf; intro x; [ | apply path_ishprop ].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 326
 Time: 0.02s">
-<div class="time" style="width: 15.625%"></div>
+<div class="time" style="width: 15.384615384615%"></div>
 <pre>
     revert y; snrapply Coeq_ind; hnf; intro y; [ | apply path_ishprop ].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 327
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
     simpl.</pre>
 </div>
@@ -2099,8 +2099,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 329
-Time: 0.082s">
-<div class="time" style="width: 64.0625%"></div>
+Time: 0.086s">
+<div class="time" style="width: 66.153846153846%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -2138,7 +2138,7 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 337
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     snrapply Build_Contr.</pre>
 </div>
@@ -2165,14 +2165,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 340
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
       intro x; simpl.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 341
 Time: 0.002s">
-<div class="time" style="width: 1.5625%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
       apply right_identity.</pre>
 </div>
@@ -2185,14 +2185,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 342
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     intros [g h].</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 343
-Time: 0.02s">
-<div class="time" style="width: 15.625%"></div>
+Time: 0.021s">
+<div class="time" style="width: 16.153846153846%"></div>
 <pre>
     nrapply path_sigma_hprop; [ exact _ |].</pre>
 </div>
@@ -2226,15 +2226,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 348
-Time: 0.042s">
-<div class="time" style="width: 32.8125%"></div>
+Time: 0.044s">
+<div class="time" style="width: 33.846153846154%"></div>
 <pre>
     strip_truncations; revert x.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 349
-Time: 0.016s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.017s">
+<div class="time" style="width: 13.076923076923%"></div>
 <pre>
     snrapply Coeq_ind; intro x; [|apply path_ishprop].</pre>
 </div>
@@ -2254,8 +2254,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 352
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     1: apply (grp_homo_unit g).</pre>
 </div>
@@ -2269,14 +2269,14 @@ Time: 0s">
 <div class="code" title="File: ListQuotient.v
 Line: 354
 Time: 0.001s">
-<div class="time" style="width: 0.78125%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 355
 Time: 0.007s">
-<div class="time" style="width: 5.46875%"></div>
+<div class="time" style="width: 5.3846153846154%"></div>
 <pre>
     f_ap.</pre>
 </div>
@@ -2303,8 +2303,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 359
-Time: 0.029s">
-<div class="time" style="width: 22.65625%"></div>
+Time: 0.03s">
+<div class="time" style="width: 23.076923076923%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -2325,7 +2325,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: ListQuotient.v
 Line: 363
-Time: 0.128s">
+Time: 0.13s">
 <div class="time" style="width: 100%"></div>
 <pre>
 

@@ -188,22 +188,22 @@
           
 
             i = 34;
-            data = "1 goal (ID 43)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (pfib f) <~> loops B	2 goals (ID 64)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (pfib f) <~> f (point A) = point B		goal 2 (ID 65) is:	 f (point A) = point B <~> loops B	";
+            data = "1 goal (ID 43)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (pfib f) <~> loops B	2 goals (ID 66)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (pfib f) <~> f (point A) = point B		goal 2 (ID 67) is:	 f (point A) = point B <~> loops B	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 goal (ID 65)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  f (point A) = point B <~> loops B	";
+            data = "1 goal (ID 67)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  f (point A) = point B <~> loops B	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 goal (ID 170)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  point B = f (point A)	";
+            data = "1 goal (ID 172)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  point B = f (point A)	";
             responses[i]=data;
           
 
             i = 37;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 45) is:	 (fun f0 : pfiber (pfib f) <~> loops B =>	  f0 (point (pfiber (pfib f))) = point (loops B))	   (transitive_equiv (pfiber (pfib f)) (f (point A) = point B) 	      (loops B)	      (equiv_adjointify	         (fun H : pfiber (pfib f) =>	          (fun H0 : hfiber f (point B) =>	           (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A) =>	            paths_ind_r (point A)	              (fun (y : A) (_ : y = point A) =>	               f y = point B -> f (point A) = point B) idmap H1 H3 H2) H0.1	             H0.2) H.1 H.2)	         (fun H : f (point A) = point B => ((let H0 := point A in H0; H); 1))	         (fun H : f (point A) = point B => 1)	         (fun H : pfiber (pfib f) =>	          (fun H0 : hfiber f (point B) =>	           (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A) =>	            paths_ind_r (point A)	              (fun (y : A) (p : y = point A) =>	               forall H4 : f y = point B,	               ((let H5 := point A in H5;	                paths_ind_r (point A)	                  (fun (y0 : A) (_ : y0 = point A) =>	                   f y0 = point B -> f (point A) = point B) idmap y p H4); 1) =	               ((y; H4); p)) (fun H4 : f (point A) = point B => 1) H1 H3 H2)	             H0.1 H0.2) H.1 H.2)) (equiv_concat_l (point_eq f)^ (point B)))	1 goal (ID 45)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  (fun f0 : pfiber (pfib f) <~> loops B =>	   f0 (point (pfiber (pfib f))) = point (loops B))	    (transitive_equiv (pfiber (pfib f)) (f (point A) = point B) 	       (loops B)	       (equiv_adjointify	          (fun H : pfiber (pfib f) =>	           (fun H0 : hfiber f (point B) =>	            (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A)	             =>	             paths_ind_r (point A)	               (fun (y : A) (_ : y = point A) =>	                f y = point B -> f (point A) = point B) idmap H1 H3 H2) H0.1	              H0.2) H.1 H.2)	          (fun H : f (point A) = point B => ((let H0 := point A in H0; H); 1))	          (fun H : f (point A) = point B => 1)	          (fun H : pfiber (pfib f) =>	           (fun H0 : hfiber f (point B) =>	            (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A)	             =>	             paths_ind_r (point A)	               (fun (y : A) (p : y = point A) =>	                forall H4 : f y = point B,	                ((let H5 := point A in H5;	                 paths_ind_r (point A)	                   (fun (y0 : A) (_ : y0 = point A) =>	                    f y0 = point B -> f (point A) = point B) idmap y p H4);	                1) = ((y; H4); p)) (fun H4 : f (point A) = point B => 1) H1	               H3 H2) H0.1 H0.2) H.1 H.2))	       (equiv_concat_l (point_eq f)^ (point B)))	No more goals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 45) is:	 (fun f0 : pfiber (pfib f) <~> loops B =>	  f0 (point (pfiber (pfib f))) = point (loops B))	   ((fun (x y z : Type) (f0 : x <~> y) (g : y <~> z) => equiv_compose g f0)	      (pfiber (pfib f)) (f (point A) = point B) (loops B)	      (equiv_adjointify	         (fun H : pfiber (pfib f) =>	          (fun H0 : hfiber f (point B) =>	           (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A) =>	            paths_ind_r (point A)	              (fun (y : A) (_ : y = point A) =>	               f y = point B -> f (point A) = point B) idmap H1 H3 H2) H0.1	             H0.2) H.1 H.2)	         (fun H : f (point A) = point B => ((let H0 := point A in H0; H); 1))	         (fun H : f (point A) = point B => 1)	         (fun H : pfiber (pfib f) =>	          (fun H0 : hfiber f (point B) =>	           (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A) =>	            paths_ind_r (point A)	              (fun (y : A) (p : y = point A) =>	               forall H4 : f y = point B,	               ((let H5 := point A in H5;	                paths_ind_r (point A)	                  (fun (y0 : A) (_ : y0 = point A) =>	                   f y0 = point B -> f (point A) = point B) idmap y p H4); 1) =	               ((y; H4); p)) (fun H4 : f (point A) = point B => 1) H1 H3 H2)	             H0.1 H0.2) H.1 H.2)) (equiv_concat_l (point_eq f)^ (point B)))	1 goal (ID 45)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  (fun f0 : pfiber (pfib f) <~> loops B =>	   f0 (point (pfiber (pfib f))) = point (loops B))	    ((fun (x y z : Type) (f0 : x <~> y) (g : y <~> z) => equiv_compose g f0)	       (pfiber (pfib f)) (f (point A) = point B) (loops B)	       (equiv_adjointify	          (fun H : pfiber (pfib f) =>	           (fun H0 : hfiber f (point B) =>	            (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A)	             =>	             paths_ind_r (point A)	               (fun (y : A) (_ : y = point A) =>	                f y = point B -> f (point A) = point B) idmap H1 H3 H2) H0.1	              H0.2) H.1 H.2)	          (fun H : f (point A) = point B => ((let H0 := point A in H0; H); 1))	          (fun H : f (point A) = point B => 1)	          (fun H : pfiber (pfib f) =>	           (fun H0 : hfiber f (point B) =>	            (fun (H1 : A) (H2 : f H1 = point B) (H3 : (H1; H2).1 = point A)	             =>	             paths_ind_r (point A)	               (fun (y : A) (p : y = point A) =>	                forall H4 : f y = point B,	                ((let H5 := point A in H5;	                 paths_ind_r (point A)	                   (fun (y0 : A) (_ : y0 = point A) =>	                    f y0 = point B -> f (point A) = point B) idmap y p H4);	                1) = ((y; H4); p)) (fun H4 : f (point A) = point B => 1) H1	               H3 H2) H0.1 H0.2) H.1 H.2))	       (equiv_concat_l (point_eq f)^ (point B)))	No more goals.	";
             responses[i]=data;
           
 
@@ -228,57 +228,57 @@
           
 
             i = 42;
-            data = "1 goal (ID 55)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (loops_functor f) <~> loops (pfiber f)	2 focused goals	(shelved: 1) (ID 72)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (loops_functor f) <~> ?Goal		goal 2 (ID 73) is:	 ?Goal <~> loops (pfiber f)	";
+            data = "1 goal (ID 55)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (loops_functor f) <~> loops (pfiber f)	2 focused goals	(shelved: 1) (ID 74)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (loops_functor f) <~> ?Goal		goal 2 (ID 75) is:	 ?Goal <~> loops (pfiber f)	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 goal (ID 72)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (loops_functor f) <~>	  {p : (point (pfiber f)).1 = (point (pfiber f)).1 &	  transport (fun x : A => f x = point B) p (point (pfiber f)).2 =	  (point (pfiber f)).2}	";
+            data = "1 goal (ID 74)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (loops_functor f) <~>	  {p : (point (pfiber f)).1 = (point (pfiber f)).1 &	  transport (fun x : A => f x = point B) p (point (pfiber f)).2 =	  (point (pfiber f)).2}	";
             responses[i]=data;
           
 
             i = 44;
-            data = "1 goal (ID 91)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  {x : point A = point A &	  (point_eq f)^ @ (ap f x @ point_eq f) = point (point B = point B)} <~>	  {p : point A = point A &	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f}	";
+            data = "1 goal (ID 93)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  {x : point A = point A &	  (point_eq f)^ @ (ap f x @ point_eq f) = point (point B = point B)} <~>	  {p : point A = point A &	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f}	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 goal (ID 99)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  forall a : point A = point A,	  (fun x : point A = point A =>	   (point_eq f)^ @ (ap f x @ point_eq f) = point (point B = point B)) a <~>	  (fun p : point A = point A =>	   transport (fun x : A => f x = point B) p (point_eq f) = point_eq f) a	";
+            data = "1 goal (ID 101)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  forall a : point A = point A,	  (fun x : point A = point A =>	   (point_eq f)^ @ (ap f x @ point_eq f) = point (point B = point B)) a <~>	  (fun p : point A = point A =>	   transport (fun x : A => f x = point B) p (point_eq f) = point_eq f) a	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 goal (ID 101)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  (point_eq f)^ @ (ap f p @ point_eq f) = point (point B = point B) <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
+            data = "1 goal (ID 103)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  (point_eq f)^ @ (ap f p @ point_eq f) = point (point B = point B) <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 goal (ID 117)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  ap f p @ point_eq f = point_eq f @ point (point B = point B) <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
+            data = "1 goal (ID 119)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  ap f p @ point_eq f = point_eq f @ point (point B = point B) <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 goal (ID 133)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  ap f p @ point_eq f = point_eq f <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
+            data = "1 goal (ID 135)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  ap f p @ point_eq f = point_eq f <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 goal (ID 149)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  point_eq f = (ap f p)^ @ point_eq f <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
+            data = "1 goal (ID 151)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  point_eq f = (ap f p)^ @ point_eq f <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 goal (ID 160)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  (ap f p)^ @ point_eq f = point_eq f <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
+            data = "1 goal (ID 162)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  (ap f p)^ @ point_eq f = point_eq f <~>	  transport (fun x : A => f x = point B) p (point_eq f) = point_eq f	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 goal (ID 164)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  transport (fun x : A => f x = point B) p (point_eq f) =	  (ap f p)^ @ point_eq f	";
+            data = "1 goal (ID 166)	  	  A : pType	  B : pType	  f : A ->* B	  p : point A = point A	  ============================	  transport (fun x : A => f x = point B) p (point_eq f) =	  (ap f p)^ @ point_eq f	";
             responses[i]=data;
           
 
             i = 52;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 57) is:	 transitive_equiv (pfiber (loops_functor f))	   {p : (point (pfiber f)).1 = (point (pfiber f)).1 &	   transport (fun x : A => f x = point B) p (point (pfiber f)).2 =	   (point (pfiber f)).2} (loops (pfiber f))	   (equiv_functor_sigma_id	      (fun p : point A = point A =>	       equiv_concat_l (transport_paths_Fl p (point_eq f)) (point_eq f)	       oE equiv_path_inverse (point_eq f) ((ap f p)^ @ point_eq f)	       oE equiv_moveL_Vp (point_eq f) (point_eq f) (ap f p)	       oE equiv_concat_r (concat_p1 (point_eq f)) (ap f p @ point_eq f)	       oE equiv_moveL_Mp (point (point B = point B)) 	            (ap f p @ point_eq f) (point_eq f)))	   (equiv_path_sigma (fun x : A => f x = point B) 	      (point (pfiber f)) (point (pfiber f)))	   (point (pfiber (loops_functor f))) = point (loops (pfiber f))	1 goal (ID 57)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  transitive_equiv (pfiber (loops_functor f))	    {p : (point (pfiber f)).1 = (point (pfiber f)).1 &	    transport (fun x : A => f x = point B) p (point (pfiber f)).2 =	    (point (pfiber f)).2} (loops (pfiber f))	    (equiv_functor_sigma_id	       (fun p : point A = point A =>	        equiv_concat_l (transport_paths_Fl p (point_eq f)) (point_eq f)	        oE equiv_path_inverse (point_eq f) ((ap f p)^ @ point_eq f)	        oE equiv_moveL_Vp (point_eq f) (point_eq f) (ap f p)	        oE equiv_concat_r (concat_p1 (point_eq f)) (ap f p @ point_eq f)	        oE equiv_moveL_Mp (point (point B = point B)) 	             (ap f p @ point_eq f) (point_eq f)))	    (equiv_path_sigma (fun x : A => f x = point B) 	       (point (pfiber f)) (point (pfiber f)))	    (point (pfiber (loops_functor f))) = point (loops (pfiber f))	No more goals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 57) is:	 (fun (x y z : Type) (f0 : x <~> y) (g : y <~> z) => equiv_compose g f0)	   (pfiber (loops_functor f))	   {p : (point (pfiber f)).1 = (point (pfiber f)).1 &	   transport (fun x : A => f x = point B) p (point (pfiber f)).2 =	   (point (pfiber f)).2} (loops (pfiber f))	   (equiv_functor_sigma_id	      (fun p : point A = point A =>	       equiv_concat_l (transport_paths_Fl p (point_eq f)) (point_eq f)	       oE equiv_path_inverse (point_eq f) ((ap f p)^ @ point_eq f)	       oE equiv_moveL_Vp (point_eq f) (point_eq f) (ap f p)	       oE equiv_concat_r (concat_p1 (point_eq f)) (ap f p @ point_eq f)	       oE equiv_moveL_Mp (point (point B = point B)) 	            (ap f p @ point_eq f) (point_eq f)))	   (equiv_path_sigma (fun x : A => f x = point B) 	      (point (pfiber f)) (point (pfiber f)))	   (point (pfiber (loops_functor f))) = point (loops (pfiber f))	1 goal (ID 57)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  (fun (x y z : Type) (f0 : x <~> y) (g : y <~> z) => equiv_compose g f0)	    (pfiber (loops_functor f))	    {p : (point (pfiber f)).1 = (point (pfiber f)).1 &	    transport (fun x : A => f x = point B) p (point (pfiber f)).2 =	    (point (pfiber f)).2} (loops (pfiber f))	    (equiv_functor_sigma_id	       (fun p : point A = point A =>	        equiv_concat_l (transport_paths_Fl p (point_eq f)) (point_eq f)	        oE equiv_path_inverse (point_eq f) ((ap f p)^ @ point_eq f)	        oE equiv_moveL_Vp (point_eq f) (point_eq f) (ap f p)	        oE equiv_concat_r (concat_p1 (point_eq f)) (ap f p @ point_eq f)	        oE equiv_moveL_Mp (point (point B = point B)) 	             (ap f p @ point_eq f) (point_eq f)))	    (equiv_path_sigma (fun x : A => f x = point B) 	       (point (pfiber f)) (point (pfiber f)))	    (point (pfiber (loops_functor f))) = point (loops (pfiber f))	No more goals.	";
             responses[i]=data;
           
 
@@ -353,12 +353,12 @@
           
 
             i = 67;
-            data = "No more goals.	1 goal (ID 79)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  ============================	  pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	2 goals (ID 83)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (iterated_loops_functor 0 f) <~>* iterated_loops 0 (pfiber f)		goal 2 (ID 87) is:	 pfiber (iterated_loops_functor n.+1 f) <~>* iterated_loops n.+1 (pfiber f)	1 goal (ID 87)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  IHn : pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	  ============================	  pfiber (iterated_loops_functor n.+1 f) <~>* iterated_loops n.+1 (pfiber f)	1 goal (ID 102)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  IHn : pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	  ============================	  loops	    (pfiber	       ((fix F (n0 : nat) :	             (A ->* B) -> iterated_loops n0 A ->* iterated_loops n0 B :=	           match	             n0 as n1	             return	               ((A ->* B) -> iterated_loops n1 A ->* iterated_loops n1 B)	           with	           | 0%nat => idmap	           | (n1.+1)%nat => fun x : A ->* B => loops_functor (F n1 x)	           end) n f)) <~>* iterated_loops n.+1 (pfiber f)	1 goal (ID 105)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  IHn : pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	  ============================	  pfiber	    ((fix F (n0 : nat) :	          (A ->* B) -> iterated_loops n0 A ->* iterated_loops n0 B :=	        match	          n0 as n1	          return ((A ->* B) -> iterated_loops n1 A ->* iterated_loops n1 B)	        with	        | 0%nat => idmap	        | (n1.+1)%nat => fun x : A ->* B => loops_functor (F n1 x)	        end) n f) <~>*	  (fix iterated_loops (n0 : nat) (A0 : pType) {struct n0} : pType :=	     match n0 with	     | 0%nat => A0	     | (p.+1)%nat => loops (iterated_loops p A0)	     end) n (pfiber f)	";
+            data = "";
             responses[i]=data;
           
 
             i = 68;
-            data = "No more goals.	";
+            data = "No more goals.	1 goal (ID 79)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  ============================	  pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	2 goals (ID 83)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  pfiber (iterated_loops_functor 0 f) <~>* iterated_loops 0 (pfiber f)		goal 2 (ID 87) is:	 pfiber (iterated_loops_functor n.+1 f) <~>* iterated_loops n.+1 (pfiber f)	1 goal (ID 87)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  IHn : pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	  ============================	  pfiber (iterated_loops_functor n.+1 f) <~>* iterated_loops n.+1 (pfiber f)	1 goal (ID 102)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  IHn : pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	  ============================	  loops	    (pfiber	       ((fix F (n0 : nat) :	             (A ->* B) -> iterated_loops n0 A ->* iterated_loops n0 B :=	           match	             n0 as n1	             return	               ((A ->* B) -> iterated_loops n1 A ->* iterated_loops n1 B)	           with	           | 0%nat => idmap	           | (n1.+1)%nat => fun x : A ->* B => loops_functor (F n1 x)	           end) n f)) <~>* iterated_loops n.+1 (pfiber f)	1 goal (ID 105)	  	  A : pType	  B : pType	  n : nat	  f : A ->* B	  IHn : pfiber (iterated_loops_functor n f) <~>* iterated_loops n (pfiber f)	  ============================	  pfiber	    ((fix F (n0 : nat) :	          (A ->* B) -> iterated_loops n0 A ->* iterated_loops n0 B :=	        match	          n0 as n1	          return ((A ->* B) -> iterated_loops n1 A ->* iterated_loops n1 B)	        with	        | 0%nat => idmap	        | (n1.+1)%nat => fun x : A ->* B => loops_functor (F n1 x)	        end) n f) <~>*	  (fix iterated_loops (n0 : nat) (A0 : pType) {struct n0} : pType :=	     match n0 with	     | 0%nat => A0	     | (p.+1)%nat => loops (iterated_loops p A0)	     end) n (pfiber f)	No more goals.	";
             responses[i]=data;
           
 

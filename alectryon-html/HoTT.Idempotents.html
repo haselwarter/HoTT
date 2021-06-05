@@ -2125,11 +2125,9 @@ ap (split_idem_sect ((g; I); J))
 </span></span><span class="alectryon-wsp">      </span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="nb">apply</span> path_forall; <span class="nb">intros</span> x; <span class="nb">apply</span> split_idem_preidem.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="idempotents-v-chk135" style="display: none" type="checkbox"><label class="alectryon-input" for="idempotents-v-chk135"><span class="highlight">-</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">ua</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Univalence</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">X</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kt">Type</span></span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">PreIdempotent X</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">retract_type
   (retractof_equiv&#39;
-     (symmetric_equiv (IsQuasiIdempotent f)
-        (hfiber pr1 f)
-        (hfiber_fibration f
-           (<span class="kr">fun</span> <span class="nv">fi</span> : {x : _ &amp; IsPreIdempotent x} =&gt;
-            IsQuasiIdempotent fi.<span class="mi">1</span>)))
+     (hfiber_fibration f
+        (<span class="kr">fun</span> <span class="nv">fi</span> : {x : _ &amp; IsPreIdempotent x} =&gt;
+         IsQuasiIdempotent fi.<span class="mi">1</span>))^-<span class="mi">1</span>
      (retractof_hfiber retract_retractof_qidem pr1
         preidem_retract
         (<span class="kr">fun</span> <span class="nv">x</span> : QuasiIdempotent X =&gt;
@@ -2343,9 +2341,9 @@ In environment
 ua : Univalence
 X : <span class="kt">Type</span>
 The term <span class="s2">&quot;idmap_retractof X&quot;</span> has type
- <span class="s2">&quot;RetractOf@{SerTop.7983 SerTop.7983} X&quot;</span>
+ <span class="s2">&quot;RetractOf@{SerTop.7952 SerTop.7952} X&quot;</span>
 while it <span class="kr">is</span> expected to <span class="nb">have</span> type
- <span class="s2">&quot;RetractOf@{SerTop.7981 SerTop.7982} X&quot;</span>.</span></blockquote></div></div></small><span class="alectryon-wsp">
+ <span class="s2">&quot;RetractOf@{SerTop.7950 SerTop.7951} X&quot;</span>.</span></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">End</span> <span class="nf">CoherentIdempotents</span>.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">

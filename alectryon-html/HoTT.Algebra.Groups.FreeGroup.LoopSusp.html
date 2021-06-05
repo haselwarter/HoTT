@@ -303,49 +303,32 @@ IsEquiv
  f (freegroup_incl S x))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="loopsusp-v-chk57" style="display: none" type="checkbox"><label class="alectryon-input" for="loopsusp-v-chk57"><span class="highlight"><span class="nb">intro</span> f.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Univalence</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">S</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kt">Type</span></span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">FreeGroup S $-&gt; G</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">equiv_freegroup_rec S G f =
 (<span class="kr">fun</span> <span class="nv">x</span> : S =&gt; f (freegroup_incl S x))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
-</span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="loopsusp-v-chk58" style="display: none" type="checkbox"><label class="alectryon-input" for="loopsusp-v-chk58"><span class="highlight"><span class="nb">unfold</span> equiv_freegroup_rec.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Univalence</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">S</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kt">Type</span></span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">FreeGroup S $-&gt; G</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">transitive_equiv (Pi1 (psusp (pointify S)) $-&gt; G)
-  (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S))) $-&gt; G) (S -&gt; G)
-  (equiv_precompose_cat_equiv
-     (grp_iso_pi1_Tr (psusp (pointify S))))
-  (transitive_equiv
-     (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S))) $-&gt; G)
-     (B (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S)))) -&gt;* B G)
-     (S -&gt; G)
-     (equiv_grp_homo_pmap_bg
-        (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S)))) G)
-     (transitive_equiv
-        (B (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S)))) -&gt;* B G)
-        (pTr <span class="mi">1</span> (psusp (pointify S)) -&gt;* B G) (S -&gt; G)
-        (equiv_pequiv_precompose
-           (pequiv_symmetric
-              (B (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S)))))
-              (pTr <span class="mi">1</span> (psusp (pointify S)))
-              (pequiv_pclassifyingspace_pi1
-                 (pTr <span class="mi">1</span> (psusp (pointify S))))))
-        (transitive_equiv
-           (pTr <span class="mi">1</span> (psusp (pointify S)) -&gt;* B G)
-           (psusp (pointify S) -&gt;* B G) (S -&gt; G)
-           equiv_ptr_rec
-           (transitive_equiv
-              (psusp (pointify S) -&gt;* B G)
-              (pointify S -&gt;* loops (B G)) (S -&gt; G)
-              (loop_susp_adjoint (pointify S) (B G))
-              (transitive_equiv
-                 (pointify S -&gt;* loops (B G))
-                 (pointify S -&gt;*
-                  {|
-                    pointed_type := G;
-                    ispointed_type :=
-                      ispointed_group G
-                  |}) (S -&gt; G)
-                 (equiv_pequiv_postcompose
-                    pequiv_loops_bg_g)
+</span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="loopsusp-v-chk58" style="display: none" type="checkbox"><label class="alectryon-input" for="loopsusp-v-chk58"><span class="highlight"><span class="nb">unfold</span> equiv_freegroup_rec.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Univalence</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">S</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kt">Type</span></span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">FreeGroup S $-&gt; G</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">equiv_compose
+  (equiv_compose
+     (equiv_compose
+        (equiv_compose
+           (equiv_compose
+              (equiv_compose
                  (equiv_pointify_map S
                     {|
                       pointed_type := G;
                       ispointed_type :=
                         ispointed_group G
-                    |})))))) f =
+                    |})
+                 (equiv_pequiv_postcompose
+                    pequiv_loops_bg_g))
+              (loop_susp_adjoint (pointify S) (B G)))
+           equiv_ptr_rec)
+        (equiv_pequiv_precompose
+           (pequiv_symmetric
+              (B (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S)))))
+              (pTr <span class="mi">1</span> (psusp (pointify S)))
+              (pequiv_pclassifyingspace_pi1
+                 (pTr <span class="mi">1</span> (psusp (pointify S)))))))
+     (equiv_grp_homo_pmap_bg
+        (Pi1 (pTr <span class="mi">1</span> (psusp (pointify S)))) G))
+  (equiv_precompose_cat_equiv
+     (grp_iso_pi1_Tr (psusp (pointify S)))) f =
 (<span class="kr">fun</span> <span class="nv">x</span> : S =&gt; f (freegroup_incl S x))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="loopsusp-v-chk59" style="display: none" type="checkbox"><label class="alectryon-input" for="loopsusp-v-chk59"><span class="highlight"><span class="nb">unfold</span> transitive_equiv.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Univalence</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">S</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kt">Type</span></span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">FreeGroup S $-&gt; G</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">equiv_compose
   (equiv_compose

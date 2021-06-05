@@ -95,6 +95,8 @@
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">transitive_equiv</span> : Transitive Equiv | <span class="mi">0</span> :=
   <span class="kr">fun</span> <span class="nv">_</span> <span class="nv">_</span> <span class="nv">_</span> <span class="nv">f</span> <span class="nv">g</span> =&gt; equiv_compose g f.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Arguments</span> transitive_equiv /.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Ltac</span> <span class="nf">change_apply_equiv_compose</span> :=
   <span class="kr">match goal with</span>
   | [ |- <span class="kp">context</span> [ equiv_fun (<span class="nl">?f</span> oE <span class="nl">?g</span>) <span class="nl">?x</span> ] ] =&gt;
@@ -541,6 +543,8 @@ ap f (ap f^-<span class="mi">1</span> (eisretr f b))</span></div></blockquote></
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Notation</span> <span class="s2">&quot;e ^-1&quot;</span> := (@equiv_inverse _ _ e) : equiv_scope.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">symmetric_equiv</span> : Symmetric Equiv | <span class="mi">0</span> := @equiv_inverse.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-wsp"><span class="highlight">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Arguments</span> symmetric_equiv /.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** Inversion respects composition *)</span>
 </span></span><span class="alectryon-sentence"><input class="alectryon-toggle" id="equivalences-v-chk4a" style="display: none" type="checkbox"><label class="alectryon-input" for="equivalences-v-chk4a"><span class="highlight"><span class="kn">Definition</span> <span class="nf">equiv_inverse_compose</span> {<span class="nv">A</span> <span class="nv">B</span> <span class="nv">C</span>} (<span class="nv">f</span> : A &lt;~&gt; B) (<span class="nv">g</span> : B &lt;~&gt; C)

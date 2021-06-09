@@ -640,7 +640,20 @@ In O B -&gt; <span class="kr">forall</span> <span class="nv">z</span> <span clas
 </span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight">srapply (isequiv_oD_to_O O O).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Defined</span>.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
-
+<span class="sd">(** A tactic that extends [strip_reflections] to modalities. It handles non-dependent elimination for reflective subuniverses and dependent elimination for modalities. [strip_truncations] does the same for truncations, but introduces fewer universe variables, so tends to work better when removing truncations. *)</span>
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Ltac</span> <span class="nf">strip_modalities</span> :=
+  <span class="sd">(** Search for hypotheses of type [O X] for some [O] such that the goal is [O]-local. *)</span>
+  <span class="kp">progress</span> <span class="kp">repeat</span>
+    <span class="kr">match goal with</span>
+    | [ T : _ |- _ ]
+      =&gt; revert_opaque T;
+        <span class="sd">(** Handle the non-dependent and dependent cases.  The last case requires that [O] be a modality. *)</span>
+        <span class="nb">refine</span> (@O_rec _ _ _ _ _ _ _) || <span class="nb">refine</span> (@O_indpaths _ _ _ _ _ _ _ _ _) || <span class="nb">refine</span> (@O_ind _ _ _ _ _ _ _);
+        <span class="sd">(** Ensure that we didn&#39;t generate more than one subgoal, i.e. that the goal was appropriately local. *)</span>
+        [];
+        <span class="nb">intro</span> T
+  <span class="kr">end</span>.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** ** Dependent sums *)</span>
 
 <span class="sd">(** A dependent elimination of a reflective subuniverse [O&#39;] into [O] implies that the sum of a family of [O]-modal types over an [O&#39;]-modal type is [O&#39;]-modal.  More specifically, for a particular such sum it suffices for the [O&#39;]-reflection of that sum to dependently eliminate into [O]. *)</span>

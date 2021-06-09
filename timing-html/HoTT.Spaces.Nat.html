@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1
-Time: 0.044s">
-<div class="time" style="width: 69.84126984127%"></div>
+Time: 0.042s">
+<div class="time" style="width: 62.686567164179%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -56,8 +56,8 @@ Require Import HoTT.TruncType.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 3
-Time: 0.048s">
-<div class="time" style="width: 76.190476190476%"></div>
+Time: 0.047s">
+<div class="time" style="width: 70.149253731343%"></div>
 <pre>
 Require Export HoTT.DProp.</pre>
 </div>
@@ -299,7 +299,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 80
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>Fixpoint divmod x y q u : nat * nat :=
   match x with
   | 0 =&gt; (q , u)
@@ -926,8 +926,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 262
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   induction n; simpl; auto.</pre>
 </div>
@@ -963,14 +963,14 @@ Proof.</pre>
 <div class="code" title="File: Nat.v
 Line: 268
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   intros; induction n as [| p H]; simpl; auto.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 269
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   destruct H; rewrite &lt;- add_n_Sm; apply ap.</pre>
 </div>
@@ -1064,7 +1064,7 @@ Fixpoint idcode_nat {n} : (n =n n) :=
 <div class="code" title="File: Nat.v
 Line: 295
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 
 Fixpoint path_nat {n m} : (n =n m) -&gt; (n = m) :=
@@ -1091,8 +1091,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 305
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   refine (isequiv_adjointify
             (@path_nat n m)
@@ -1115,14 +1115,14 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 310
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     induction n; simpl; trivial.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 311
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     by destruct (IHn^)%path.</pre>
 </div>
@@ -1148,7 +1148,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 313
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1159,15 +1159,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 313
-Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 314
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 
 Definition equiv_path_nat {n m} : (n =n m) &lt;~&gt; (n = m)
@@ -1199,7 +1199,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 322
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>Global Instance hset_nat : IsHSet nat := _.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1304,8 +1304,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 343
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   induction 2; auto.</pre>
 </div>
@@ -1348,8 +1348,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 351
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   destruct m; simpl; auto.</pre>
 </div>
@@ -1496,8 +1496,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 373
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1539,7 +1539,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 379
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre> assert (c : idpath = r) by apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1566,7 +1566,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 382
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre> destruct r^.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1579,7 +1579,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 383
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1685,7 +1685,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 399
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
     assert (t : idpath = r) by apply path_ishprop.</pre>
 </div>
@@ -1712,7 +1712,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 402
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     destruct q.</pre>
 </div>
@@ -1732,8 +1732,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 405
-Time: 0.005s">
-<div class="time" style="width: 7.9365079365079%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.955223880597%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1817,8 +1817,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 418
-Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     rapply leq_S_inj.</pre>
 </div>
@@ -1853,8 +1853,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 424
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1918,8 +1918,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 435
-Time: 0.028s">
-<div class="time" style="width: 44.444444444444%"></div>
+Time: 0.031s">
+<div class="time" style="width: 46.268656716418%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
 </div>
@@ -2054,14 +2054,14 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 450
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
       apply equiv_leq_S_n.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 451
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2126,7 +2126,7 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 463
-Time: 0.063s">
+Time: 0.067s">
 <div class="time" style="width: 100%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
@@ -2154,7 +2154,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 466
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
     apply path_sigma_hprop.</pre>
 </div>
@@ -2362,7 +2362,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 488
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2472,7 +2472,7 @@ Defined.</pre>
 <div class="code" title="File: Nat.v
 Line: 502
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 
 Global Instance decidable_lt n m : Decidable (lt n m) := _.</pre>
@@ -2531,7 +2531,7 @@ Global Instance transitive_ge : Transitive ge := fun x y z p q =&gt; leq_trans q
 <div class="code" title="File: Nat.v
 Line: 513
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 Global Instance decidable_ge n m : Decidable (ge n m) := _.</pre>
 </div>
@@ -2583,7 +2583,7 @@ Global Instance transitive_gt : Transitive gt
 <div class="code" title="File: Nat.v
 Line: 523
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 Global Instance decidable_gt n m : Decidable (gt n m) := _.</pre>
 </div>
@@ -2688,8 +2688,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 543
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   induction n; cbn; auto.</pre>
 </div>
@@ -2761,7 +2761,7 @@ Proof.</pre>
 <div class="code" title="File: Nat.v
 Line: 555
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
   revert m; induction n; destruct m; cbn; auto.</pre>
 </div>
@@ -2861,8 +2861,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 572
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   intros n m; revert n; induction m; auto.</pre>
 </div>
@@ -2940,8 +2940,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 585
-Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
   induction n; destruct m; cbn; auto.</pre>
 </div>
@@ -2970,7 +2970,7 @@ Proof.</pre>
 <div class="code" title="File: Nat.v
 Line: 590
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   intros n m; revert m; induction n; auto.</pre>
 </div>
@@ -3070,7 +3070,7 @@ Proof.</pre>
 <div class="code" title="File: Nat.v
 Line: 611
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   induction n; intros; simpl; rewrite &lt;- ?IHn; trivial.</pre>
 </div>
@@ -3101,7 +3101,7 @@ Proof.</pre>
 <div class="code" title="File: Nat.v
 Line: 618
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   induction n; intros; simpl; rewrite ?IHn; trivial.</pre>
 </div>
@@ -3458,8 +3458,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 677
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   destruct x; [inversion q|].</pre>
 </div>
@@ -3480,7 +3480,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 680
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   by apply not_leq_Sn_n in r.</pre>
 </div>
@@ -3617,8 +3617,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 698
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 Defined.</pre>
 </div>

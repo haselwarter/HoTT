@@ -339,6 +339,41 @@ When combined with <span class="inlinecode"><a class="idref" href="HoTT.Modaliti
 </div>
 
 <div class="doc">
+A tactic that extends <span class="inlinecode"><span class="id" title="var">strip_reflections</span></span> to modalities. It handles non-dependent elimination for reflective subuniverses and dependent elimination for modalities. <span class="inlinecode"><span class="id" title="var">strip_truncations</span></span> does the same for truncations, but introduces fewer universe variables, so tends to work better when removing truncations. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">strip_modalities</span> :=<br/>
+&nbsp;&nbsp;</div>
+
+<div class="doc">
+Search for hypotheses of type <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> for some <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> such that the goal is <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-local. 
+</div>
+<div class="code">
+&nbsp;&nbsp;<span class="id" title="tactic">progress</span> <span class="id" title="tactic">repeat</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="keyword">goal</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| [ <span class="id" title="var">T</span> : <span class="id" title="var">_</span> |- <span class="id" title="var">_</span> ]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ <span class="id" title="var">revert_opaque</span> <span class="id" title="var">T</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<div class="doc">
+Handle the non-dependent and dependent cases.  The last case requires that <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> be a modality. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (@<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_rec"><span class="id" title="definition">O_rec</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) || <span class="id" title="tactic">refine</span> (@<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#O_indpaths"><span class="id" title="definition">O_indpaths</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) || <span class="id" title="tactic">refine</span> (@<a class="idref" href="HoTT.Modalities.Modality.html#O_ind"><span class="id" title="definition">O_ind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<div class="doc">
+Ensure that we didn't generate more than one subgoal, i.e. that the goal was appropriately local. 
+</div>
+<div class="code">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[];<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intro</span> <span class="id" title="var">T</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
 <a id="lab971"></a><h2 class="section">Dependent sums</h2>
 
 <div class="paragraph"> </div>

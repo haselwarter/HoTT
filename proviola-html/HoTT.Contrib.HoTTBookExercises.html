@@ -2903,7 +2903,7 @@
           
 
             i = 577;
-            data = "1 goal (ID 528)	  	  H : Univalence	  C : Type -> Type	  all_contr : forall A : Type, Contr (C A -> C A)	  g : forall A : Type, C A -> A	  A : Type	  e : A <~> A	  x : C A	  p := path_universe_uncurried e : A = A	  ============================	  transport idmap (path_universe_uncurried e) (g A x) = g A x	";
+            data = "1 goal (ID 528)	  	  H : Univalence	  C : Type -> Type	  all_contr : forall A : Type, Contr (C A -> C A)	  g : forall A : Type, C A -> A	  A : Type	  e : A <~> A	  x : C A	  p := path_universe_uncurried e : A = A	  ============================	  coe (path_universe_uncurried e) (g A x) = g A x	";
             responses[i]=data;
           
 
@@ -3118,7 +3118,7 @@
           
 
             i = 620;
-            data = "1 goal (ID 562)	  	  H : Univalence	  C : Type -> Type	  all_contr : forall A : Type, Contr (C A -> C A)	  g : forall A : Type, C A -> A	  A : Type	  e : A <~> A	  x : C A	  p := path_universe_uncurried e : A = A	  ============================	  transport idmap (path_universe_uncurried e) (g A (transport C p^ x)) =	  g A x	";
+            data = "1 goal (ID 562)	  	  H : Univalence	  C : Type -> Type	  all_contr : forall A : Type, Contr (C A -> C A)	  g : forall A : Type, C A -> A	  A : Type	  e : A <~> A	  x : C A	  p := path_universe_uncurried e : A = A	  ============================	  coe (path_universe_uncurried e) (g A (transport C p^ x)) = g A x	";
             responses[i]=data;
           
 
@@ -4163,12 +4163,12 @@
           
 
             i = 829;
-            data = "";
+            data = "1 goal (ID 1682)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => fst x.1)	";
             responses[i]=data;
           
 
             i = 830;
-            data = "1 goal (ID 1682)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => fst x.1)	No more goals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -4188,12 +4188,12 @@
           
 
             i = 834;
-            data = "1 goal (ID 1729)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => snd x.1)	";
+            data = "";
             responses[i]=data;
           
 
             i = 835;
-            data = "No more goals.	";
+            data = "1 goal (ID 1729)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => snd x.1)	No more goals.	";
             responses[i]=data;
           
 

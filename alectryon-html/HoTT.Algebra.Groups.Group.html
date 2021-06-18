@@ -577,14 +577,17 @@ IsMonoidPreserving f.<span class="mi">1</span>}</span></div></blockquote></div><
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_group</span> : Is01Cat Group :=
   (Build_Is01Cat Group _ (@grp_homo_id) (@grp_homo_compose)).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is2graph_group</span> : Is2Graph Group
+  := <span class="kr">fun</span> <span class="nv">A</span> <span class="nv">B</span> =&gt; isgraph_induced (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">isgraph_grouphomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : Group} : IsGraph (A $-&gt; B)
-  := induced_graph (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+  := isgraph_induced (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_grouphomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : Group} : Is01Cat (A $-&gt; B)
-  := induced_01cat (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+  := is01cat_induced (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is0gpd_grouphomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : Group}: Is0Gpd (A $-&gt; B)
-  := induced_0gpd (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+  := is0gpd_induced (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><input class="alectryon-toggle" id="group-v-chk95" style="display: none" type="checkbox"><label class="alectryon-input" for="group-v-chk95"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is0functor_postcomp_grouphomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> <span class="nv">C</span> : Group} (<span class="nv">h</span> : B $-&gt; C)
   : Is0Functor (@cat_postcomp Group _ _ A B C h).</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">A, B, C</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">h</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">B $-&gt; C</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">Is0Functor (cat_postcomp A h)</span></div></blockquote></div></div></small><span class="alectryon-wsp">

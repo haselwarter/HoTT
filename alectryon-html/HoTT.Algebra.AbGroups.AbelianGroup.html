@@ -226,26 +226,29 @@ GroupHomomorphism (QuotientAbGroup G N) H</span></div></blockquote></div></div><
 <span class="sd">(** ** The wild category of abelian groups *)</span>
 
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">isgraph_abgroup</span> : IsGraph AbGroup
-  := induced_graph abgroup_group.</span></span><span class="alectryon-wsp">
+  := isgraph_induced abgroup_group.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_AbGroup</span> : Is01Cat AbGroup
-  := induced_01cat abgroup_group.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_abgroup</span> : Is01Cat AbGroup
+  := is01cat_induced abgroup_group.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_GroupHomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : AbGroup} : Is01Cat (A $-&gt; B)
-  := induced_01cat (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_grouphomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : AbGroup} : Is01Cat (A $-&gt; B)
+  := is01cat_induced (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is0gpd_GroupHomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : AbGroup}: Is0Gpd (A $-&gt; B)
-  := induced_0gpd (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is0gpd_grouphomomorphism</span> {<span class="nv">A</span> <span class="nv">B</span> : AbGroup} : Is0Gpd (A $-&gt; B)
+  := is0gpd_induced (@grp_homo_map A B).</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-wsp"><span class="highlight">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is2graph_abgroup</span> : Is2Graph AbGroup
+  := is2graph_induced abgroup_group.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** AbGroup forms a 1Cat *)</span>
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is1cat_abgroup</span> : Is1Cat AbGroup
-  := induced_1cat _.</span></span><span class="alectryon-wsp">
+  := is1cat_induced _.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">hasmorext_abgroup</span> `{Funext} : HasMorExt AbGroup
-  := induced_hasmorext _.</span></span><span class="alectryon-wsp">
+  := hasmorext_induced _.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 </span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">hasequivs_abgroup</span> : HasEquivs AbGroup
-  := induced_hasequivs _.</span></span><span class="alectryon-wsp">
+  := hasequivs_induced _.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** Zero object of AbGroup *)</span>
 

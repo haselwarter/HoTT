@@ -25,7 +25,7 @@
 </span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** * Wild (2,1)-categories *)</span>
 
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Class</span> <span class="nf">Is21Cat</span> (<span class="nv">A</span> : <span class="kt">Type</span>) `{Is1Cat A} :=
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Class</span> <span class="nf">Is21Cat</span> (<span class="nv">A</span> : <span class="kt">Type</span>) `{Is1Cat A, !Is3Graph A} :=
 {
   is1cat_hom : <span class="kr">forall</span> (<span class="nv">a</span> <span class="nv">b</span> : A), Is1Cat (a $-&gt; b) ;
   is1gpd_hom : <span class="kr">forall</span> (<span class="nv">a</span> <span class="nv">b</span> : A), Is1Gpd (a $-&gt; b) ;

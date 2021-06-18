@@ -595,9 +595,14 @@ o (<span class="kr">fun</span> <span class="nv">X</span> : {g&#39; : G &amp; in_
 </span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** The wild category of oo-groups is induced by the wild category of pTypes *)</span>
 
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">isgraph_oogroup</span> : IsGraph ooGroup := Build_IsGraph _ ooGroupHom.</span></span><span class="alectryon-wsp">
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_oogroup</span> : Is01Cat ooGroup := Build_Is01Cat _ _ grouphom_idmap (@grouphom_compose).</span></span><span class="alectryon-wsp">
-</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is1cat_oogroup</span> : Is1Cat ooGroup := induced_1cat classifying_space.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">isgraph_oogroup</span> : IsGraph ooGroup
+  := Build_IsGraph _ ooGroupHom.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is01cat_oogroup</span> : Is01Cat ooGroup
+  := Build_Is01Cat _ _ grouphom_idmap (@grouphom_compose).</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is2graph_oogroup</span> : Is2Graph ooGroup
+  := is2graph_induced classifying_space.</span></span><span class="alectryon-wsp">
+</span></span><span class="alectryon-sentence"><span class="alectryon-input"><span class="highlight"><span class="kn">Instance</span> <span class="nf">is1cat_oogroup</span> : Is1Cat ooGroup
+  := is1cat_induced classifying_space.</span></span><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp"><span class="highlight">
 <span class="sd">(** ** 1-groups as oo-groups *)</span>
 

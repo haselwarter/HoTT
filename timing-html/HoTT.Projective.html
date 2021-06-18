@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Projective.v
 Line: 1
-Time: 0.047s">
-<div class="time" style="width: 69.117647058824%"></div>
+Time: 0.057s">
+<div class="time" style="width: 74.025974025974%"></div>
 <pre>Require Import Basics Types HProp HFiber HSet.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 1
-Time: 0.048s">
-<div class="time" style="width: 70.588235294118%"></div>
+Time: 0.055s">
+<div class="time" style="width: 71.428571428571%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -85,7 +85,7 @@ Time: 0s">
 <div class="code" title="File: Projective.v
 Line: 12
 Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>Definition IsOProjective (O : Modality) (X : Type) : Type
   := forall A, In O A -&gt; forall B, In O B -&gt;
      forall f : X -&gt; B, forall p : A -&gt; B,
@@ -150,8 +150,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
   split.</pre>
 </div>
@@ -203,29 +203,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 33
-Time: 0.063s">
-<div class="time" style="width: 92.647058823529%"></div>
+Time: 0.067s">
+<div class="time" style="width: 87.012987012987%"></div>
 <pre>
     pose proof (splits (Pullback p f) _ pullback_pr2 _) as s'.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 34
-Time: 0.049s">
-<div class="time" style="width: 72.058823529412%"></div>
+Time: 0.055s">
+<div class="time" style="width: 71.428571428571%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct s' as [s E].</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
     refine (tr (pullback_pr1 o s; _)).</pre>
 </div>
@@ -238,8 +238,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 38
-Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (pullback_commsq p f (s x) @ _).</pre>
 </div>
@@ -259,15 +259,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 41
-Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 
 Corollary equiv_isoprojective_surjections_split
@@ -285,15 +285,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 49
-Time: 0.068s">
+Time: 0.077s">
 <div class="time" style="width: 100%"></div>
 <pre>
   exact (equiv_iff_hprop_uncurried (iff_isoprojective_surjections_split O X)).</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 50
-Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -313,7 +313,7 @@ Time: 0s">
 <div class="code" title="File: Projective.v
 Line: 57
 Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>Class HasOChoice (O : Modality) (A : Type) :=
   hasochoice :
     forall (B : A -&gt; Type), (forall x, In O (B x)) -&gt;
@@ -380,21 +380,21 @@ Time: 0s">
 <div class="code" title="File: Projective.v
 Line: 74
 Time: 0.002s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
   set (f' := fun a =&gt; chB a (fun b =&gt; C (a; b)) _ (fun b =&gt; f (a; b))).</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 75
-Time: 0.017s">
-<div class="time" style="width: 25%"></div>
+Time: 0.018s">
+<div class="time" style="width: 23.376623376623%"></div>
 <pre>
   specialize (chA (fun a =&gt; forall b, C (a; b)) _ f').</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 76
-Time: 0.015s">
-<div class="time" style="width: 22.058823529412%"></div>
+Time: 0.017s">
+<div class="time" style="width: 22.077922077922%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
@@ -421,8 +421,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 80
-Time: 0.002s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -465,8 +465,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 88
-Time: 0.029s">
-<div class="time" style="width: 42.647058823529%"></div>
+Time: 0.034s">
+<div class="time" style="width: 44.155844155844%"></div>
 <pre> rapply chX.</pre>
 </div>
 <div class="code" title="File: Projective.v
@@ -478,8 +478,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 89
-Time: 0.003s">
-<div class="time" style="width: 4.4117647058824%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>
     exact (center _).</pre>
 </div>
@@ -492,8 +492,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 91
-Time: 0.029s">
-<div class="time" style="width: 42.647058823529%"></div>
+Time: 0.033s">
+<div class="time" style="width: 42.857142857143%"></div>
 <pre> strip_truncations; apply tr.</pre>
 </div>
 <div class="code" title="File: Projective.v
@@ -519,8 +519,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 94
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -543,7 +543,7 @@ Proof.</pre>
 <div class="code" title="File: Projective.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
   refine (_ o fst (iff_isoprojective_surjections_split O X)).</pre>
 </div>
@@ -563,8 +563,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 102
-Time: 0.009s">
-<div class="time" style="width: 13.235294117647%"></div>
+Time: 0.01s">
+<div class="time" style="width: 12.987012987013%"></div>
 <pre>
   pose proof (splits _ (fst (iff_merely_issurjection P) S)) as M.</pre>
 </div>
@@ -577,8 +577,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 104
-Time: 0.019s">
-<div class="time" style="width: 27.941176470588%"></div>
+Time: 0.022s">
+<div class="time" style="width: 28.571428571429%"></div>
 <pre>
   strip_truncations; apply tr.</pre>
 </div>
@@ -606,7 +606,7 @@ Time: 0s">
 <div class="code" title="File: Projective.v
 Line: 108
 Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -691,22 +691,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 122
-Time: 0.028s">
-<div class="time" style="width: 41.176470588235%"></div>
+Time: 0.034s">
+<div class="time" style="width: 44.155844155844%"></div>
 <pre>
   refine (equiv_iff_hprop_uncurried (iff_isoprojective_hasochoice O X)).</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 123
-Time: 0.006s">
-<div class="time" style="width: 8.8235294117647%"></div>
+Time: 0.007s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   apply istrunc_forall.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 124
 Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -748,8 +748,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 131
-Time: 0.011s">
-<div class="time" style="width: 16.176470588235%"></div>
+Time: 0.012s">
+<div class="time" style="width: 15.584415584416%"></div>
 <pre>
   strip_truncations; apply tr.</pre>
 </div>
@@ -830,29 +830,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 147
-Time: 0.011s">
-<div class="time" style="width: 16.176470588235%"></div>
+Time: 0.01s">
+<div class="time" style="width: 12.987012987013%"></div>
 <pre>
     pose proof ((equiv_isoprojective_hasochoice _ X)^-1 (AC X)) as P.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 148
-Time: 0.011s">
-<div class="time" style="width: 16.176470588235%"></div>
+Time: 0.013s">
+<div class="time" style="width: 16.883116883117%"></div>
 <pre>
     pose proof (P A _ X _ idmap tr _) as F; clear P.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 149
-Time: 0.016s">
-<div class="time" style="width: 23.529411764706%"></div>
+Time: 0.021s">
+<div class="time" style="width: 27.272727272727%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 150
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
     destruct F as [f p].</pre>
 </div>
@@ -887,7 +887,7 @@ Time: 0s">
 <div class="code" title="File: Projective.v
 Line: 155
 Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
     rapply (equiv_path_Tr _ _)^-1%equiv.</pre>
 </div>
@@ -906,8 +906,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 157
-Time: 0.006s">
-<div class="time" style="width: 8.8235294117647%"></div>
+Time: 0.008s">
+<div class="time" style="width: 10.38961038961%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -936,8 +936,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 163
-Time: 0.024s">
-<div class="time" style="width: 35.294117647059%"></div>
+Time: 0.029s">
+<div class="time" style="width: 37.662337662338%"></div>
 <pre>
     apply equiv_iff_hprop.</pre>
 </div>
@@ -962,8 +962,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 165
-Time: 0.023s">
-<div class="time" style="width: 33.823529411765%"></div>
+Time: 0.027s">
+<div class="time" style="width: 35.064935064935%"></div>
 <pre>
       pose proof (projective_cover_AC X) as P; strip_truncations.</pre>
 </div>
@@ -976,8 +976,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 167
-Time: 0.038s">
-<div class="time" style="width: 55.882352941176%"></div>
+Time: 0.043s">
+<div class="time" style="width: 55.844155844156%"></div>
 <pre>
       pose proof (isprojX P _ X _ idmap p issurj_p) as S; strip_truncations.</pre>
 </div>
@@ -990,8 +990,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 169
-Time: 0.002s">
-<div class="time" style="width: 2.9411764705882%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
       rapply (istrunc_embedding_trunc s).</pre>
 </div>
@@ -1025,7 +1025,7 @@ Time: 0s">
 <div class="code" title="File: Projective.v
 Line: 173
 Time: 0.003s">
-<div class="time" style="width: 4.4117647058824%"></div>
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
       apply (equiv_isoprojective_hasochoice purely X)^-1.</pre>
 </div>
@@ -1038,15 +1038,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Projective.v
 Line: 175
-Time: 0.001s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Projective.v
 Line: 176
 Time: 0.002s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
 
 End AC_oo_neg1.</pre>

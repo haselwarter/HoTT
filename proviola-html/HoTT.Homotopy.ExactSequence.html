@@ -378,12 +378,12 @@
           
 
             i = 72;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 73;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1123,12 +1123,12 @@
           
 
             i = 221;
-            data = "1 goal (ID 1099)	  	  n : Modality	  F : pType	  F' : pType	  X : pType	  X' : pType	  Y : pType	  Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  ((eisretr k (k (f' (i' u))))^ @	   ap k (ap k^-1 (q (i' u) @ (ap f (p u) @ cx_isexact (g u))))) @	  ((ap k (ap k^-1 (point_eq k)^) @ eisretr k (k (point Y'))) @ point_eq k)	";
+            data = "";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 goal (ID 1123)	  	  n : Modality	  F : pType	  F' : pType	  X : pType	  X' : pType	  Y : pType	  Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  (eisretr k (k (f' (i' u))))^ @	  (ap (fun x : Y => k (k^-1 x)) (q (i' u) @ (ap f (p u) @ cx_isexact (g u))) @	   ((ap (fun x : Y => k (k^-1 x)) (point_eq k)^ @ eisretr k (k (point Y'))) @	    point_eq k))	";
+            data = "1 goal (ID 1099)	  	  n : Modality	  F : pType	  F' : pType	  X : pType	  X' : pType	  Y : pType	  Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  ((eisretr k (k (f' (i' u))))^ @	   ap k (ap k^-1 (q (i' u) @ (ap f (p u) @ cx_isexact (g u))))) @	  ((ap k (ap k^-1 (point_eq k)^) @ eisretr k (k (point Y'))) @ point_eq k)	1 goal (ID 1123)	  	  n : Modality	  F : pType	  F' : pType	  X : pType	  X' : pType	  Y : pType	  Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  (eisretr k (k (f' (i' u))))^ @	  (ap (fun x : Y => k (k^-1 x)) (q (i' u) @ (ap f (p u) @ cx_isexact (g u))) @	   ((ap (fun x : Y => k (k^-1 x)) (point_eq k)^ @ eisretr k (k (point Y'))) @	    point_eq k))	";
             responses[i]=data;
           
 
@@ -2617,7 +2617,7 @@ This induces a map from the domain of <span class="inlinecode"><a class="idref" 
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-...whose composite with the projection <span class="inlinecode"><a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Pointed.pFiber.html#pfiber"><span class="id" title="definition">pfiber</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> is <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>.  
+...whose composite with the projection <span class="inlinecode"><a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Pointed.pFiber.html#pfiber"><span class="id" title="definition">pfiber</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Sets.GCH.html#LEM.X"><span class="id" title="variable">X</span></a></span> is <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>.  
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="

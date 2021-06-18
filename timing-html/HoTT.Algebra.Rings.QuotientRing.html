@@ -30,35 +30,35 @@ pre {
 
 <div class="code" title="File: QuotientRing.v
 Line: 1
-Time: 0.062s">
-<div class="time" style="width: 17.613636363636%"></div>
+Time: 0.074s">
+<div class="time" style="width: 18.316831683168%"></div>
 <pre>Require Import Basics Types WildCat.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 1
-Time: 0.053s">
-<div class="time" style="width: 15.056818181818%"></div>
+Time: 0.058s">
+<div class="time" style="width: 14.356435643564%"></div>
 <pre>
 Require Import Algebra.Congruence.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 2
-Time: 0.065s">
-<div class="time" style="width: 18.465909090909%"></div>
+Time: 0.071s">
+<div class="time" style="width: 17.574257425743%"></div>
 <pre>
 Require Import Algebra.AbGroups.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 3
-Time: 0.017s">
-<div class="time" style="width: 4.8295454545455%"></div>
+Time: 0.021s">
+<div class="time" style="width: 5.1980198019802%"></div>
 <pre>
 Require Import Algebra.Rings.CRing.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 4
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Algebra.Rings.Ideal.</pre>
 </div>
@@ -96,8 +96,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 
   Instance plus_quotient_group : Plus (QuotientAbGroup R I) := group_sgop.</pre>
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 18
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
     snrapply Build_IsCongruence.</pre>
 </div>
@@ -134,8 +134,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     change (I ( - (x * y) + (x' * y'))).</pre>
 </div>
@@ -155,92 +155,92 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 23
-Time: 0.007s">
-<div class="time" style="width: 1.9886363636364%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
     rewrite &lt;- (left_identity (op:=(+)) (x' * y') : 0 + (x' * y') = x' * y').</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 24
-Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.2376237623762%"></div>
 <pre>
     rewrite &lt;- (right_inverse (op:=(+)) (x' * y) : (x' * y) - (x' * y) = 0).</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 25
-Time: 0.035s">
-<div class="time" style="width: 9.9431818181818%"></div>
+Time: 0.04s">
+<div class="time" style="width: 9.9009900990099%"></div>
 <pre>
     rewrite 2 simple_associativity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     rewrite negate_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 27
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
     rewrite &lt;- simple_distribute_r.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 28
-Time: 0.019s">
-<div class="time" style="width: 5.3977272727273%"></div>
+Time: 0.021s">
+<div class="time" style="width: 5.1980198019802%"></div>
 <pre>
     rewrite &lt;- simple_associativity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     rewrite negate_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 30
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
     rewrite &lt;- simple_distribute_l.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 31
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     rapply subgroup_op.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 32
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.7326732673267%"></div>
 <pre>
     1: rewrite (commutativity _ y).</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 33
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
     all: by rapply isideal.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Instance mult_quotient_group : Mult (QuotientAbGroup R I).</pre>
@@ -261,8 +261,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 39
-Time: 0.049s">
-<div class="time" style="width: 13.920454545455%"></div>
+Time: 0.056s">
+<div class="time" style="width: 13.861386138614%"></div>
 <pre>
     srapply Quotient_rec.</pre>
 </div>
@@ -281,8 +281,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 41
-Time: 0.013s">
-<div class="time" style="width: 3.6931818181818%"></div>
+Time: 0.015s">
+<div class="time" style="width: 3.7128712871287%"></div>
 <pre>
       srapply Quotient_rec.</pre>
 </div>
@@ -335,8 +335,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 47
-Time: 0.007s">
-<div class="time" style="width: 1.9886363636364%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
       by rapply iscong.</pre>
 </div>
@@ -362,8 +362,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 50
-Time: 0.031s">
-<div class="time" style="width: 8.8068181818182%"></div>
+Time: 0.036s">
+<div class="time" style="width: 8.9108910891089%"></div>
 <pre>
     srapply Quotient_ind_hprop.</pre>
 </div>
@@ -390,22 +390,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 54
-Time: 0.011s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0.012s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
     by rapply iscong.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 55
 Time: 0.004s">
-<div class="time" style="width: 1.1363636363636%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 
   Instance zero_quotient_abgroup : Zero (QuotientAbGroup R I) := class_of _ zero.</pre>
@@ -420,7 +420,7 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 
   Instance isring_quotient_abgroup : IsRing (QuotientAbGroup R I).</pre>
@@ -442,14 +442,14 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     1: exact _.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 64
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     1: repeat split.</pre>
 </div>
@@ -482,29 +482,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 68
-Time: 0.015s">
-<div class="time" style="width: 4.2613636363636%"></div>
+Time: 0.02s">
+<div class="time" style="width: 4.950495049505%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro z; revert y].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 69
-Time: 0.018s">
-<div class="time" style="width: 5.1136363636364%"></div>
+Time: 0.02s">
+<div class="time" style="width: 4.950495049505%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro y; revert x].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 70
-Time: 0.019s">
-<div class="time" style="width: 5.3977272727273%"></div>
+Time: 0.021s">
+<div class="time" style="width: 5.1980198019802%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro x ].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 71
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
       unfold sg_op, mult_is_sg_op, mult_quotient_group; simpl.</pre>
 </div>
@@ -518,7 +518,7 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 73
 Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+<div class="time" style="width: 1.2376237623762%"></div>
 <pre>
       apply associativity.</pre>
 </div>
@@ -538,14 +538,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 76
-Time: 0.027s">
-<div class="time" style="width: 7.6704545454545%"></div>
+Time: 0.029s">
+<div class="time" style="width: 7.1782178217822%"></div>
 <pre>1,2: snrapply Quotient_ind_hprop; [exact _ | intro x].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 76
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     1-2: unfold sg_op, mult_is_sg_op, mult_quotient_group; simpl.</pre>
 </div>
@@ -558,15 +558,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 78
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
     1: apply left_identity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 79
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     1: apply right_identity.</pre>
 </div>
@@ -592,22 +592,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 82
-Time: 0.012s">
-<div class="time" style="width: 3.4090909090909%"></div>
+Time: 0.014s">
+<div class="time" style="width: 3.4653465346535%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro y; revert x].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 83
-Time: 0.014s">
-<div class="time" style="width: 3.9772727272727%"></div>
+Time: 0.015s">
+<div class="time" style="width: 3.7128712871287%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro x].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 84
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
       unfold sg_op, mult_is_sg_op, mult_quotient_group; simpl.</pre>
 </div>
@@ -621,7 +621,7 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 86
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
       apply commutativity.</pre>
 </div>
@@ -653,29 +653,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 89
-Time: 0.013s">
-<div class="time" style="width: 3.6931818181818%"></div>
+Time: 0.015s">
+<div class="time" style="width: 3.7128712871287%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro z; revert y].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 90
-Time: 0.015s">
-<div class="time" style="width: 4.2613636363636%"></div>
+Time: 0.016s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro y; revert x].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 91
-Time: 0.024s">
-<div class="time" style="width: 6.8181818181818%"></div>
+Time: 0.027s">
+<div class="time" style="width: 6.6831683168317%"></div>
 <pre>
       snrapply Quotient_ind_hprop; [exact _ | intro x ].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 92
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
       unfold sg_op, mult_is_sg_op, mult_quotient_group,
         plus, mult, plus_quotient_group; simpl.</pre>
@@ -690,7 +690,7 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 95
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
       apply simple_distribute_l.</pre>
 </div>
@@ -702,15 +702,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 96
-Time: 0.051s">
-<div class="time" style="width: 14.488636363636%"></div>
+Time: 0.057s">
+<div class="time" style="width: 14.108910891089%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 97
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
 
   Definition QuotientRing : CRing 
@@ -718,8 +718,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 100
-Time: 0.029s">
-<div class="time" style="width: 8.2386363636364%"></div>
+Time: 0.031s">
+<div class="time" style="width: 7.6732673267327%"></div>
 <pre>
 
 End QuotientRing.</pre>
@@ -735,7 +735,7 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 104
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>Definition Build_CRing' (R : AbGroup)
   `(Mult R, One R, LeftDistribute R mult (@group_sgop R))
   (iscomm : @IsCommutativeMonoid R mult one)
@@ -766,8 +766,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 112
-Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre>
   snrapply (Build_CRing' (abgroup_image f)).</pre>
 </div>
@@ -800,15 +800,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 116
-Time: 0.03s">
-<div class="time" style="width: 8.5227272727273%"></div>
+Time: 0.031s">
+<div class="time" style="width: 7.6732673267327%"></div>
 <pre>
     strip_truncations; apply tr.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 117
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     destruct p as [p p'], q as [q q'].</pre>
 </div>
@@ -828,8 +828,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 120
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     f_ap.</pre>
 </div>
@@ -889,84 +889,84 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 127
-Time: 0.005s">
-<div class="time" style="width: 1.4204545454545%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre>2: repeat split.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 127
-Time: 0.043s">
-<div class="time" style="width: 12.215909090909%"></div>
+Time: 0.047s">
+<div class="time" style="width: 11.633663366337%"></div>
 <pre>
   2: exact _.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 128
-Time: 0.034s">
-<div class="time" style="width: 9.6590909090909%"></div>
+Time: 0.036s">
+<div class="time" style="width: 8.9108910891089%"></div>
 <pre>
   all: intros [].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 129
-Time: 0.06s">
-<div class="time" style="width: 17.045454545455%"></div>
+Time: 0.074s">
+<div class="time" style="width: 18.316831683168%"></div>
 <pre>
   1,2,5: intros [].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 130
-Time: 0.02s">
-<div class="time" style="width: 5.6818181818182%"></div>
+Time: 0.023s">
+<div class="time" style="width: 5.6930693069307%"></div>
 <pre>
   1,2: intros [].</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 131
-Time: 0.028s">
-<div class="time" style="width: 7.9545454545455%"></div>
+Time: 0.032s">
+<div class="time" style="width: 7.9207920792079%"></div>
 <pre>
   all: apply path_sigma_hprop; cbn.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 132
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   1: apply distribute_l.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 133
 Time: 0.008s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   1: apply associativity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 134
 Time: 0.006s">
-<div class="time" style="width: 1.7045454545455%"></div>
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre>
   1: apply commutativity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 135
-Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   1: apply left_identity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 136
 Time: 0.003s">
-<div class="time" style="width: 0.85227272727273%"></div>
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
   apply right_identity.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 137
-Time: 0.062s">
-<div class="time" style="width: 17.613636363636%"></div>
+Time: 0.076s">
+<div class="time" style="width: 18.811881188119%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -981,7 +981,7 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Definition rng_first_iso `{Funext} {A B : CRing} (phi : A $-&gt; B)
   : QuotientRing A (ideal_kernel phi) ≅ rng_image phi.</pre>
 </div>
@@ -994,8 +994,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 142
-Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   snrapply Build_CRingIsomorphism''.</pre>
 </div>
@@ -1015,14 +1015,14 @@ Time: 0s">
 <div class="code" title="File: QuotientRing.v
 Line: 144
 Time: 0.002s">
-<div class="time" style="width: 0.56818181818182%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     2: exact (grp_first_iso phi).</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 145
-Time: 0.009s">
-<div class="time" style="width: 2.5568181818182%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.7227722772277%"></div>
 <pre>
     apply grp_iso_quotient_normal.</pre>
 </div>
@@ -1034,8 +1034,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 146
-Time: 0.017s">
-<div class="time" style="width: 4.8295454545455%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   split.</pre>
 </div>
@@ -1048,35 +1048,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 148
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.017s">
+<div class="time" style="width: 4.2079207920792%"></div>
 <pre> intros x.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 148
-Time: 0.242s">
-<div class="time" style="width: 68.75%"></div>
+Time: 0.272s">
+<div class="time" style="width: 67.326732673267%"></div>
 <pre>
     srapply Quotient_ind_hprop; intro y; revert x.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 149
-Time: 0.233s">
-<div class="time" style="width: 66.193181818182%"></div>
+Time: 0.252s">
+<div class="time" style="width: 62.376237623762%"></div>
 <pre>
     srapply Quotient_ind_hprop; intro x.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 150
-Time: 0.025s">
-<div class="time" style="width: 7.1022727272727%"></div>
+Time: 0.03s">
+<div class="time" style="width: 7.4257425742574%"></div>
 <pre>
     srapply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 151
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     exact (rng_homo_mult _ _ _).</pre>
 </div>
@@ -1088,21 +1088,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 152
-Time: 0.018s">
-<div class="time" style="width: 5.1136363636364%"></div>
+Time: 0.021s">
+<div class="time" style="width: 5.1980198019802%"></div>
 <pre>
   srapply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 153
 Time: 0.001s">
-<div class="time" style="width: 0.28409090909091%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   exact (rng_homo_one _).</pre>
 </div>
 <div class="code" title="File: QuotientRing.v
 Line: 154
-Time: 0.352s">
+Time: 0.404s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>

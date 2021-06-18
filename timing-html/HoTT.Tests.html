@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Tests.v
 Line: 1
-Time: 0.342s">
+Time: 0.391s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
@@ -44,15 +44,15 @@ Fail Check Type0 : Type0.</pre>
 </div>
 <div class="code" title="File: Tests.v
 Line: 3
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>
 Check Susp nat : Type0.</pre>
 </div>
 <div class="code" title="File: Tests.v
 Line: 4
-Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Fail Check Susp Type0 : Type0.</pre>
 </div>
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.51150895140665%"></div>
 <pre>Check (fun A : Type =&gt; _ : IsPointed (Susp A)).</pre>
 </div>
 <div class="code" title="File: Tests.v
@@ -168,8 +168,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 25
-Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Inductive nat : Type1 :=
   | O : nat
@@ -255,7 +255,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 51
 Time: 0.003s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.76726342710997%"></div>
 <pre>
     equiv_induction (@equiv_path_nat O (S n)).</pre>
 </div>
@@ -269,7 +269,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -321,8 +321,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>
     reflexivity.</pre>
 </div>
@@ -381,7 +381,7 @@ Module Issue_973.</pre>
 <div class="code" title="File: Tests.v
 Line: 75
 Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>
 
   Inductive vec (A : Type) : nat -&gt; Type :=
@@ -400,7 +400,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>Definition hd (A : Type) (n : nat) (v : vec A (S n)) : A :=
   match v in (vec _ (S n)) return A with
   | cons _ h _ =&gt; h
@@ -469,8 +469,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 98
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -614,7 +614,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 116
 Time: 0.001s">
-<div class="time" style="width: 0.29239766081871%"></div>
+<div class="time" style="width: 0.25575447570332%"></div>
 <pre>Inductive A := B (T := Unit) (x y : Bool) (z := x).</pre>
 </div>
 <div class="code" title="File: Tests.v

@@ -5448,12 +5448,12 @@
           
 
             i = 1086;
-            data = "1 goal (ID 1910)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  H0 : In O A	  H1 : In O B	  c := fun X : (A -> B) * ((B -> A) * (B -> A)) =>	       (fun (f : A -> B) (snd : (B -> A) * (B -> A)) =>	        (fun g h : B -> A => (h o f, f o g)) (fst snd) (Datatypes.snd snd))	         (fst X) (snd X)	   : (A -> B) * ((B -> A) * (B -> A)) -> (A -> A) * (B -> B)	  U := hfiber c (idmap, idmap) : Type	  ============================	  U <~> {x : _ & BiInv x}	1 goal (ID 1913)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  H0 : In O A	  H1 : In O B	  c := fun X : (A -> B) * ((B -> A) * (B -> A)) =>	       (fun x : A => snd (snd X) (fst X x),	       fun x : B => fst X (fst (snd X) x))	   : (A -> B) * ((B -> A) * (B -> A)) -> (A -> A) * (B -> B)	  U := hfiber c (idmap, idmap) : Type	  ============================	  U <~>	  {f : A -> B &	  {g : B -> A & (fun x : A => g (f x)) == idmap} *	  {h : B -> A & (fun x : B => f (h x)) == idmap}}	";
+            data = "";
             responses[i]=data;
           
 
             i = 1087;
-            data = "4 goals (ID 1917)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  H0 : In O A	  H1 : In O B	  c := fun X : (A -> B) * ((B -> A) * (B -> A)) =>	       (fun x : A => snd (snd X) (fst X x),	       fun x : B => fst X (fst (snd X) x))	   : (A -> B) * ((B -> A) * (B -> A)) -> (A -> A) * (B -> B)	  U := hfiber c (idmap, idmap) : Type	  ============================	  U ->	  {f : A -> B &	  {g : B -> A & (fun x : A => g (f x)) == idmap} *	  {h : B -> A & (fun x : B => f (h x)) == idmap}}		goal 2 (ID 1919) is:	 {f : A -> B &	 {g : B -> A & (fun x : A => g (f x)) == idmap} *	 {h : B -> A & (fun x : B => f (h x)) == idmap}} -> U	goal 3 (ID 1921) is:	 ?f o ?g == idmap	goal 4 (ID 1923) is:	 ?g o ?f == idmap	";
+            data = "1 goal (ID 1910)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  H0 : In O A	  H1 : In O B	  c := fun X : (A -> B) * ((B -> A) * (B -> A)) =>	       (fun (f : A -> B) (snd : (B -> A) * (B -> A)) =>	        (fun g h : B -> A => (h o f, f o g)) (fst snd) (Datatypes.snd snd))	         (fst X) (snd X)	   : (A -> B) * ((B -> A) * (B -> A)) -> (A -> A) * (B -> B)	  U := hfiber c (idmap, idmap) : Type	  ============================	  U <~> {x : _ & BiInv x}	1 goal (ID 1913)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  H0 : In O A	  H1 : In O B	  c := fun X : (A -> B) * ((B -> A) * (B -> A)) =>	       (fun x : A => snd (snd X) (fst X x),	       fun x : B => fst X (fst (snd X) x))	   : (A -> B) * ((B -> A) * (B -> A)) -> (A -> A) * (B -> B)	  U := hfiber c (idmap, idmap) : Type	  ============================	  U <~>	  {f : A -> B &	  {g : B -> A & (fun x : A => g (f x)) == idmap} *	  {h : B -> A & (fun x : B => f (h x)) == idmap}}	4 goals (ID 1917)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  H0 : In O A	  H1 : In O B	  c := fun X : (A -> B) * ((B -> A) * (B -> A)) =>	       (fun x : A => snd (snd X) (fst X x),	       fun x : B => fst X (fst (snd X) x))	   : (A -> B) * ((B -> A) * (B -> A)) -> (A -> A) * (B -> B)	  U := hfiber c (idmap, idmap) : Type	  ============================	  U ->	  {f : A -> B &	  {g : B -> A & (fun x : A => g (f x)) == idmap} *	  {h : B -> A & (fun x : B => f (h x)) == idmap}}		goal 2 (ID 1919) is:	 {f : A -> B &	 {g : B -> A & (fun x : A => g (f x)) == idmap} *	 {h : B -> A & (fun x : B => f (h x)) == idmap}} -> U	goal 3 (ID 1921) is:	 ?f o ?g == idmap	goal 4 (ID 1923) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
@@ -6218,12 +6218,12 @@
           
 
             i = 1240;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 1241;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -7993,12 +7993,12 @@
           
 
             i = 1595;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 1596;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -12808,7 +12808,7 @@ A tactic that generalizes <span class="inlinecode"><span class="id" title="var">
   </span></div>
 <div class="goal" id="goal0_3_87"><pre><span></span></pre></div>
 <div class="doc" scenenumber="89">
-Search for hypotheses of type <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.HIT.iso.html#iso.X"><span class="id" title="variable">X</span></a></span> for some <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> such that the goal is <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-local. 
+Search for hypotheses of type <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Sets.GCH.html#LEM.X"><span class="id" title="variable">X</span></a></span> for some <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span> such that the goal is <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.O"><span class="id" title="constructor">O</span></a></span>-local. 
 </div>
 <div scenenumber="91" class="code"><span class="command" onmouseout="
       mouseout('0_3_91');

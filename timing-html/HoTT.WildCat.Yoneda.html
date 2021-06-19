@@ -38,42 +38,42 @@ Time: 0s">
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 2
-Time: 0.035s">
-<div class="time" style="width: 79.545454545455%"></div>
+Time: 0.034s">
+<div class="time" style="width: 57.627118644068%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 2
-Time: 0.003s">
-<div class="time" style="width: 6.8181818181818%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 Require Import WildCat.Equiv.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 4
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
 Require Import WildCat.Type.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 5
-Time: 0.003s">
-<div class="time" style="width: 6.8181818181818%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 Require Import WildCat.Opposite.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 6
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 Require Import WildCat.FunctorCat.</pre>
 </div>
@@ -87,7 +87,7 @@ Require Import WildCat.NatTrans.</pre>
 <div class="code" title="File: Yoneda.v
 Line: 8
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
 Require Import WildCat.Prod.</pre>
 </div>
@@ -103,8 +103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 12
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>Global Instance is0functor_hom {A} `{Is01Cat A}
   : @Is0Functor (A^op * A) Type _ _ (uncurry (@Hom A _)).</pre>
 </div>
@@ -125,14 +125,14 @@ Time: 0s">
 <div class="code" title="File: Yoneda.v
 Line: 15
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
   intros [a1 a2] [b1 b2] [f1 f2] g; cbn in *.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 16
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
   exact (f2 $o g $o f1).</pre>
 </div>
@@ -153,10 +153,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 20
-Time: 0.008s">
-<div class="time" style="width: 18.181818181818%"></div>
+Time: 0.01s">
+<div class="time" style="width: 16.949152542373%"></div>
 <pre>Global Instance is1functor_hom {A} `{HasMorExt A}
-  : @Is1Functor (A^op * A) Type _ _ _ _ _ _ (uncurry (@Hom A _)) _.</pre>
+  : @Is1Functor (A^op * A) Type _ _ _ _ _ _ _ _ (uncurry (@Hom A _)) _.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 21
@@ -181,122 +181,123 @@ Time: 0s">
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 24
-Time: 0.013s">
-<div class="time" style="width: 29.545454545455%"></div>
-<pre> intros [a1 a2] [b1 b2] [f1 f2] [g1 g2] [p1 p2] q; cbn in *.</pre>
-</div>
-<div class="code" title="File: Yoneda.v
-Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    apply path_hom.</pre>
+Time: 0.012s">
+<div class="time" style="width: 20.338983050847%"></div>
+<pre> intros [a1 a2] [b1 b2] [f1 f2] [g1 g2] [p1 p2] q;
+      unfold fst, snd in *.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
-    exact (((p2 $@R q) $@R _) $@ (_ $@L p1)).</pre>
+    apply path_hom.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 26
+Time: 0.003s">
+<div class="time" style="width: 5.0847457627119%"></div>
+<pre>
+    refine (((p2 $@R q) $@R _) $@ ((g2 $o q) $@L p1)).</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 27
+Line: 28
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre> intros [a1 a2] f; cbn in *.</pre>
-</div>
-<div class="code" title="File: Yoneda.v
-Line: 27
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    apply path_hom.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
-    exact (cat_idr _ $@ cat_idl f).</pre>
+    apply path_hom.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+    exact (cat_idr _ $@ cat_idl f).</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
   -</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 30
-Time: 0.012s">
-<div class="time" style="width: 27.272727272727%"></div>
+Line: 31
+Time: 0.011s">
+<div class="time" style="width: 18.64406779661%"></div>
 <pre> intros [a1 a2] [b1 b2] [c1 c2] [f1 f2] [g1 g2] h; cbn in *.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 30
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply path_hom.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 31
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
-<pre>
-    refine (cat_assoc _ _ _ $@ _).</pre>
-</div>
-<div class="code" title="File: Yoneda.v
 Line: 32
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
     refine (cat_assoc _ _ _ $@ _).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
-    refine (_ $@ cat_assoc_opp _ _ _).</pre>
+    refine (cat_assoc _ _ _ $@ _).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
-<pre>
-    refine (g2 $@L _).</pre>
-</div>
-<div class="code" title="File: Yoneda.v
-Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (_ $@ cat_assoc_opp _ _ _).</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 35
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
+<pre>
+    refine (g2 $@L _).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    refine (cat_assoc_opp _ _ _).</pre>
+    refine (_ $@ cat_assoc_opp _ _ _).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 37
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
+<pre>
+    refine (cat_assoc_opp _ _ _).</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 38
 Time: 0.014s">
-<div class="time" style="width: 31.818181818182%"></div>
+<div class="time" style="width: 23.728813559322%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 38
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -308,171 +309,171 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 43
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition opyon {A : Type} `{IsGraph A} (a : A) : A -&gt; Type
   := fun b =&gt; (a $-&gt; b).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 44
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance is0functor_opyon {A : Type} `{Is01Cat A} (a : A)
   : Is0Functor (opyon a).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Yoneda.v
 Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply Build_Is0Functor.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  unfold opyon; intros b c f g; cbn in *.</pre>
+  apply Build_Is0Functor.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  exact (f $o g).</pre>
+  unfold opyon; intros b c f g; cbn in *.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+  exact (f $o g).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 52
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 53
+Time: 0.004s">
+<div class="time" style="width: 6.7796610169492%"></div>
 <pre>
 
 Global Instance is1functor_opyon {A : Type} `{Is1Cat A} `{!HasMorExt A} (a : A)
   : Is1Functor (opyon a).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 55
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 56
-Time: 0.01s">
-<div class="time" style="width: 22.727272727273%"></div>
+Line: 57
+Time: 0.015s">
+<div class="time" style="width: 25.423728813559%"></div>
 <pre>
   rapply Build_Is1Functor.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 57
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 58
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x y f g p h.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 58
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply path_hom.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 59
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Line: 60
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
     apply (cat_prewhisker p).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 60
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 61
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x h.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 61
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply path_hom.</pre>
-</div>
-<div class="code" title="File: Yoneda.v
-Line: 62
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
-<pre>
-    apply cat_idl.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    apply cat_idl.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 65
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros x y z f g h.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 64
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply path_hom.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 65
+Line: 66
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
     apply cat_assoc.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 66
+Line: 67
 Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 67
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Line: 68
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition opyoneda {A : Type} `{Is01Cat A} (a : A)
@@ -480,37 +481,37 @@ Definition opyoneda {A : Type} `{Is01Cat A} (a : A)
   : F a -&gt; (opyon a $=&gt; F).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 71
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 72
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x b f.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 73
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (fmap F f x).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 74
+Line: 75
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 75
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Line: 76
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
 
 Definition un_opyoneda {A : Type} `{Is01Cat A}
@@ -519,9 +520,9 @@ Definition un_opyoneda {A : Type} `{Is01Cat A}
   := fun alpha =&gt; alpha a (Id a).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 80
+Line: 81
 Time: 0.007s">
-<div class="time" style="width: 15.909090909091%"></div>
+<div class="time" style="width: 11.864406779661%"></div>
 <pre>
 
 Global Instance is1natural_opyoneda {A : Type} `{Is1Cat A}
@@ -529,37 +530,37 @@ Global Instance is1natural_opyoneda {A : Type} `{Is1Cat A}
   : Is1Natural (opyon a) F (opyoneda a F x).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 84
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 85
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   unfold opyon, opyoneda; intros b c f g; cbn in *.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 86
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Line: 87
+Time: 0.003s">
+<div class="time" style="width: 5.0847457627119%"></div>
 <pre>
   exact (fmap_comp F g f x).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 87
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Line: 88
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 88
-Time: 0.005s">
-<div class="time" style="width: 11.363636363636%"></div>
+Line: 89
+Time: 0.007s">
+<div class="time" style="width: 11.864406779661%"></div>
 <pre>
 
 Definition opyoneda_issect {A : Type} `{Is1Cat A} (a : A)
@@ -569,7 +570,7 @@ Definition opyoneda_issect {A : Type} `{Is1Cat A} (a : A)
   := fmap_id F a x.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 94
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -577,9 +578,9 @@ Time: 0s">
 (** We assume for the converse that the coherences in [A] are equalities (this is a weak funext-type assumption).  Note that we do not in general recover the witness of 1-naturality.  Indeed, if [A] is fully coherent, then a transformation of the form [opyoneda a F x] is always also fully coherently natural, so an incoherent witness of 1-naturality could not be recovered in this way.  *)</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 96
-Time: 0.009s">
-<div class="time" style="width: 20.454545454545%"></div>
+Line: 97
+Time: 0.01s">
+<div class="time" style="width: 16.949152542373%"></div>
 <pre>Definition opyoneda_isretr {A : Type} `{Is1Cat_Strong A} (a : A)
            (F : A -&gt; Type) `{!Is0Functor F, !Is1Functor F}
            (alpha : opyon a $=&gt; F) {alnat : Is1Natural (opyon a) F alpha}
@@ -587,56 +588,56 @@ Time: 0.009s">
   : opyoneda a F (un_opyoneda a F alpha) b $== alpha b.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 100
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 101
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   unfold opyoneda, un_opyoneda, opyon; intros f.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 102
+Line: 103
 Time: 0.004s">
-<div class="time" style="width: 9.0909090909091%"></div>
+<div class="time" style="width: 6.7796610169492%"></div>
 <pre>
   refine ((isnat alpha f (Id a))^ @ _).</pre>
-</div>
-<div class="code" title="File: Yoneda.v
-Line: 103
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  cbn.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply ap.</pre>
+  cbn.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  exact (cat_idr_strong f).</pre>
+  apply ap.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 106
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  exact (cat_idr_strong f).</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 107
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 107
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -644,44 +645,44 @@ Time: 0s">
 (** Specialization to "full-faithfulness" of the Yoneda embedding.  (In quotes because, again, incoherence means we can't recover the witness of naturality.)  *)</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 109
+Line: 110
 Time: 0.003s">
-<div class="time" style="width: 6.8181818181818%"></div>
+<div class="time" style="width: 5.0847457627119%"></div>
 <pre>Definition opyon_cancel {A : Type} `{Is01Cat A} (a b : A)
   : (opyon a $=&gt; opyon b) -&gt; (b $-&gt; a)
   := un_opyoneda a (opyon b).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 111
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Line: 112
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition opyon1 {A : Type} `{Is01Cat A} (a : A) : Fun01 A Type.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 113
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 114
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Line: 115
+Time: 0.001s">
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
   rapply (Build_Fun01 _ _ _ _ (opyon a)).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 115
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 116
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -689,31 +690,31 @@ Time: 0s">
 (** We can also deduce "full-faithfulness" on equivalences. *)</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 118
-Time: 0.005s">
-<div class="time" style="width: 11.363636363636%"></div>
+Line: 119
+Time: 0.006s">
+<div class="time" style="width: 10.169491525424%"></div>
 <pre>Definition opyon_equiv {A : Type} `{HasEquivs A} `{!Is1Cat_Strong A}
            (a b : A)
   : (opyon1 a $&lt;~&gt; opyon1 b) -&gt; (b $&lt;~&gt; a).</pre>
-</div>
-<div class="code" title="File: Yoneda.v
-Line: 120
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  intros f.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
 Line: 122
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros f.</pre>
+</div>
+<div class="code" title="File: Yoneda.v
+Line: 123
 Time: 0.031s">
-<div class="time" style="width: 70.454545454545%"></div>
+<div class="time" style="width: 52.542372881356%"></div>
 <pre>
   refine (cate_adjointify (f a (Id a)) (f^-1$ b (Id b)) _ _) ;
     apply GpdHom_path;
@@ -722,82 +723,82 @@ Time: 0.031s">
       cbn in *.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 127
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 128
-Time: 0.044s">
+Line: 129
+Time: 0.059s">
 <div class="time" style="width: 100%"></div>
 <pre> refine ((isnat (fun a =&gt; (f a)^-1$) (f a (Id a)) (Id b))^ @ _); cbn.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 128
-Time: 0.004s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 129
+Time: 0.003s">
+<div class="time" style="width: 5.0847457627119%"></div>
 <pre>
     refine (_ @ cate_issect (f a) (Id a)); cbn.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 129
+Line: 130
 Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 130
-Time: 0.039s">
-<div class="time" style="width: 88.636363636364%"></div>
+Line: 131
+Time: 0.01s">
+<div class="time" style="width: 16.949152542373%"></div>
 <pre>
     srapply cat_idr_strong.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 131
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 132
-Time: 0.042s">
-<div class="time" style="width: 95.454545454545%"></div>
+Line: 133
+Time: 0.044s">
+<div class="time" style="width: 74.576271186441%"></div>
 <pre> refine ((isnat (cat_equiv_natequiv _ _ f) (f^-1$ b (Id b)) (Id a))^ @ _); cbn.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 132
-Time: 0.004s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 133
+Time: 0.003s">
+<div class="time" style="width: 5.0847457627119%"></div>
 <pre>
     refine (_ @ cate_isretr (f b) (Id b)); cbn.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 133
+Line: 134
 Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 134
-Time: 0.014s">
-<div class="time" style="width: 31.818181818182%"></div>
+Line: 135
+Time: 0.012s">
+<div class="time" style="width: 20.338983050847%"></div>
 <pre>
     srapply cat_idr_strong.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 135
-Time: 0.031s">
-<div class="time" style="width: 70.454545454545%"></div>
+Line: 136
+Time: 0.03s">
+<div class="time" style="width: 50.847457627119%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 136
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -809,46 +810,46 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 141
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition yon {A : Type} `{IsGraph A} (a : A) : A^op -&gt; Type
   := @opyon (A^op) _ a.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 142
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Line: 143
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance is0functor_yon {A : Type} `{H : Is01Cat A} (a : A)
   : Is0Functor (yon a).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 145
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 146
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply is0functor_opyon.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 147
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 148
+Line: 149
 Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 
 Definition yoneda {A : Type} `{Is01Cat A} (a : A)
@@ -857,9 +858,9 @@ Definition yoneda {A : Type} `{Is01Cat A} (a : A)
   := @opyoneda (A^op) _ _ a F _.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 153
-Time: 0.003s">
-<div class="time" style="width: 6.8181818181818%"></div>
+Line: 154
+Time: 0.002s">
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 
 Definition un_yoneda {A : Type} `{Is01Cat A} (a : A)
@@ -868,46 +869,46 @@ Definition un_yoneda {A : Type} `{Is01Cat A} (a : A)
   := @un_opyoneda (A^op) _ _ a F _.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 158
+Line: 159
 Time: 0.011s">
-<div class="time" style="width: 25%"></div>
+<div class="time" style="width: 18.64406779661%"></div>
 <pre>
 
 Global Instance is1natural_yoneda {A : Type} `{Is1Cat A} (a : A)
        (F : A^op -&gt; Type) `{!Is0Functor F, !Is1Functor F} (x : F a)
   : Is1Natural (yon a) F (yoneda a F x)
-  := @is1natural_opyoneda (A^op) _ _ _ a F _ _ x.</pre>
+  := @is1natural_opyoneda (A^op) _ _ _ _ a F _ _ x.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 163
+Line: 164
 Time: 0.006s">
-<div class="time" style="width: 13.636363636364%"></div>
+<div class="time" style="width: 10.169491525424%"></div>
 <pre>
 
 Definition yoneda_issect {A : Type} `{Is1Cat A} (a : A)
            (F : A^op -&gt; Type) `{!Is0Functor F, !Is1Functor F} (x : F a)
   : un_yoneda a F (yoneda a F x) = x
-  := @opyoneda_issect (A^op) _ _ _ a F _ _ x.</pre>
+  := @opyoneda_issect (A^op) _ _ _ _ a F _ _ x.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 168
+Line: 169
 Time: 0.013s">
-<div class="time" style="width: 29.545454545455%"></div>
+<div class="time" style="width: 22.033898305085%"></div>
 <pre>
 
 Definition yoneda_isretr {A : Type} `{Is1Cat_Strong A} (a : A)
            (F : A^op -&gt; Type) `{!Is0Functor F}
            (* Without the hint here, Coq guesses to first project from [Is1Cat_Strong A] and then pass to opposites, whereas what we need is to first pass to opposites and then project. *)
-           `{@Is1Functor _ _ _ _ (is1cat_is1cat_strong A^op) _ _ _ F _}
+           `{@Is1Functor _ _ _ _ _ (is1cat_is1cat_strong A^op) _ _ _ _ F _}
            (alpha : yon a $=&gt; F) {alnat : Is1Natural (yon a) F alpha}
            (b : A)
   : yoneda a F (un_yoneda a F alpha) b $== alpha b
-  := @opyoneda_isretr A^op _ _ (is1cat_strong_op A) a F _ _ alpha alnat b.</pre>
+  := @opyoneda_isretr A^op _ _ _ (is1cat_strong_op A) a F _ _ alpha alnat b.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 177
+Line: 178
 Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+<div class="time" style="width: 3.3898305084746%"></div>
 <pre>
 
 Definition yon_cancel {A : Type} `{Is01Cat A} (a b : A)
@@ -915,27 +916,27 @@ Definition yon_cancel {A : Type} `{Is01Cat A} (a b : A)
   := un_yoneda a (yon b).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 181
+Line: 182
 Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
 
 Definition yon1 {A : Type} `{Is01Cat A} (a : A) : Fun01 A^op Type
   := @opyon1 A^op _ _ a.</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 184
+Line: 185
 Time: 0.012s">
-<div class="time" style="width: 27.272727272727%"></div>
+<div class="time" style="width: 20.338983050847%"></div>
 <pre>
 
 Definition yon_equiv {A : Type} `{HasEquivs A} `{!Is1Cat_Strong A}
            (a b : A)
   : (yon1 a $&lt;~&gt; yon1 b) -&gt; (a $&lt;~&gt; b)
-  := (@opyon_equiv A^op _ _ _ _ _ a b).</pre>
+  := (@opyon_equiv A^op _ _ _ _ _ _ a b).</pre>
 </div>
 <div class="code" title="File: Yoneda.v
-Line: 190
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

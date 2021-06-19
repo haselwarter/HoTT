@@ -568,12 +568,12 @@
           
 
             i = 110;
-            data = "<infomsg>isgraph_homomorphism is defined</infomsg>	";
+            data = "<infomsg>is2graph_algebra is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 goal (ID 180)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  Is01Cat (A $-> B)	";
+            data = "1 goal (ID 185)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  Is01Cat (A $-> B)	";
             responses[i]=data;
           
 
@@ -583,17 +583,17 @@
           
 
             i = 113;
-            data = "2 goals (ID 181)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a : A $-> B, a $-> a		goal 2 (ID 182) is:	 forall a b c : A $-> B, (b $-> c) -> (a $-> b) -> a $-> c	";
+            data = "2 goals (ID 186)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a : A $-> B, a $-> a		goal 2 (ID 187) is:	 forall a b c : A $-> B, (b $-> c) -> (a $-> b) -> a $-> c	";
             responses[i]=data;
           
 
             i = 114;
-            data = "1 goal (ID 181)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a : A $-> B, a $-> a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 182) is:	 forall a b c : A $-> B, (b $-> c) -> (a $-> b) -> a $-> c	";
+            data = "1 goal (ID 186)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a : A $-> B, a $-> a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 187) is:	 forall a b c : A $-> B, (b $-> c) -> (a $-> b) -> a $-> c	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 goal (ID 182)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a b c : A $-> B, (b $-> c) -> (a $-> b) -> a $-> c	No more goals.	";
+            data = "1 goal (ID 187)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a b c : A $-> B, (b $-> c) -> (a $-> b) -> a $-> c	No more goals.	";
             responses[i]=data;
           
 
@@ -603,7 +603,7 @@
           
 
             i = 117;
-            data = "1 goal (ID 189)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  Is0Gpd (A $-> B)	";
+            data = "1 goal (ID 198)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  Is0Gpd (A $-> B)	";
             responses[i]=data;
           
 
@@ -613,12 +613,12 @@
           
 
             i = 119;
-            data = "1 goal (ID 190)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a b : A $-> B, (a $-> b) -> b $-> a	";
+            data = "1 goal (ID 199)	  	  σ : Signature	  A, B : Algebra σ	  ============================	  forall a b : A $-> B, (a $-> b) -> b $-> a	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 goal (ID 197)	  	  σ : Signature	  A, B : Algebra σ	  f, g : A $-> B	  P : f $-> g	  s : Sort σ	  x : A s	  ============================	  g s x = f s x	";
+            data = "1 goal (ID 206)	  	  σ : Signature	  A, B : Algebra σ	  f, g : A $-> B	  P : f $-> g	  s : Sort σ	  x : A s	  ============================	  g s x = f s x	";
             responses[i]=data;
           
 
@@ -633,7 +633,7 @@
           
 
             i = 123;
-            data = "1 goal (ID 206)	  	  σ : Signature	  A, B, C : Algebra σ	  h : B $-> C	  ============================	  Is0Functor (cat_postcomp A h)	";
+            data = "1 goal (ID 223)	  	  σ : Signature	  A, B, C : Algebra σ	  h : B $-> C	  ============================	  Is0Functor (cat_postcomp A h)	";
             responses[i]=data;
           
 
@@ -643,12 +643,12 @@
           
 
             i = 125;
-            data = "1 goal (ID 207)	  	  σ : Signature	  A, B, C : Algebra σ	  h : B $-> C	  ============================	  forall a b : A $-> B,	  (a $-> b) -> cat_postcomp A h a $-> cat_postcomp A h b	";
+            data = "1 goal (ID 224)	  	  σ : Signature	  A, B, C : Algebra σ	  h : B $-> C	  ============================	  forall a b : A $-> B,	  (a $-> b) -> cat_postcomp A h a $-> cat_postcomp A h b	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 goal (ID 222)	  	  σ : Signature	  A, B, C : Algebra σ	  h : B $-> C	  f : forall s : Sort σ, A s -> B s	  is_homomorphism0 : IsHomomorphism f	  g : forall s : Sort σ, A s -> B s	  is_homomorphism1 : IsHomomorphism g	  p : {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} $->	      {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |}	  s : Sort σ	  x : A s	  ============================	  cat_postcomp A h	    {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} s x =	  cat_postcomp A h	    {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |} s x	";
+            data = "1 goal (ID 239)	  	  σ : Signature	  A, B, C : Algebra σ	  h : B $-> C	  f : forall s : Sort σ, A s -> B s	  is_homomorphism0 : IsHomomorphism f	  g : forall s : Sort σ, A s -> B s	  is_homomorphism1 : IsHomomorphism g	  p : {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} $->	      {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |}	  s : Sort σ	  x : A s	  ============================	  cat_postcomp A h	    {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} s x =	  cat_postcomp A h	    {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |} s x	";
             responses[i]=data;
           
 
@@ -663,7 +663,7 @@
           
 
             i = 129;
-            data = "1 goal (ID 223)	  	  σ : Signature	  A, B : Algebra σ	  h : A $-> B	  C : Algebra σ	  ============================	  Is0Functor (cat_precomp C h)	";
+            data = "1 goal (ID 248)	  	  σ : Signature	  A, B : Algebra σ	  h : A $-> B	  C : Algebra σ	  ============================	  Is0Functor (cat_precomp C h)	";
             responses[i]=data;
           
 
@@ -673,12 +673,12 @@
           
 
             i = 131;
-            data = "1 goal (ID 224)	  	  σ : Signature	  A, B : Algebra σ	  h : A $-> B	  C : Algebra σ	  ============================	  forall a b : B $-> C, (a $-> b) -> cat_precomp C h a $-> cat_precomp C h b	";
+            data = "1 goal (ID 249)	  	  σ : Signature	  A, B : Algebra σ	  h : A $-> B	  C : Algebra σ	  ============================	  forall a b : B $-> C, (a $-> b) -> cat_precomp C h a $-> cat_precomp C h b	";
             responses[i]=data;
           
 
             i = 132;
-            data = "1 goal (ID 239)	  	  σ : Signature	  A, B : Algebra σ	  h : A $-> B	  C : Algebra σ	  f : forall s : Sort σ, B s -> C s	  is_homomorphism0 : IsHomomorphism f	  g : forall s : Sort σ, B s -> C s	  is_homomorphism1 : IsHomomorphism g	  p : {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} $->	      {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |}	  s : Sort σ	  x : A s	  ============================	  cat_precomp C h	    {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} s x =	  cat_precomp C h	    {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |} s x	";
+            data = "1 goal (ID 264)	  	  σ : Signature	  A, B : Algebra σ	  h : A $-> B	  C : Algebra σ	  f : forall s : Sort σ, B s -> C s	  is_homomorphism0 : IsHomomorphism f	  g : forall s : Sort σ, B s -> C s	  is_homomorphism1 : IsHomomorphism g	  p : {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} $->	      {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |}	  s : Sort σ	  x : A s	  ============================	  cat_precomp C h	    {| def_homomorphism := f; is_homomorphism := is_homomorphism0 |} s x =	  cat_precomp C h	    {| def_homomorphism := g; is_homomorphism := is_homomorphism1 |} s x	";
             responses[i]=data;
           
 
@@ -693,7 +693,7 @@
           
 
             i = 135;
-            data = "1 goal (ID 227)	  	  σ : Signature	  ============================	  Is1Cat (Algebra σ)	";
+            data = "1 goal (ID 253)	  	  σ : Signature	  ============================	  Is1Cat (Algebra σ)	";
             responses[i]=data;
           
 
@@ -703,17 +703,17 @@
           
 
             i = 137;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 138;
             data = "No more goals.	";
             responses[i]=data;
           
 
+            i = 138;
+            data = "";
+            responses[i]=data;
+          
+
             i = 139;
-            data = "1 goal (ID 232)	  	  H : Funext	  σ : Signature	  ============================	  Is1Cat_Strong (Algebra σ)	";
+            data = "1 goal (ID 259)	  	  H : Funext	  σ : Signature	  ============================	  Is1Cat_Strong (Algebra σ)	";
             responses[i]=data;
           
 
@@ -723,32 +723,32 @@
           
 
             i = 141;
-            data = "";
+            data = "3 goals (ID 667)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b c d : Algebra σ) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f = h $o (g $o f)		goal 2 (ID 668) is:	 forall (a b : Algebra σ) (f : a $-> b), Id b $o f = f	goal 3 (ID 669) is:	 forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	";
             responses[i]=data;
           
 
             i = 142;
-            data = "3 goals (ID 973)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b c d : Algebra σ) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f = h $o (g $o f)		goal 2 (ID 974) is:	 forall (a b : Algebra σ) (f : a $-> b), Id b $o f = f	goal 3 (ID 975) is:	 forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	1 goal (ID 973)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b c d : Algebra σ) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f = h $o (g $o f)	1 goal (ID 982)	  	  H : Funext	  σ : Signature	  a, b, c, d : Algebra σ	  f : a $-> b	  g : b $-> c	  h : c $-> d	  ============================	  h $o g $o f = h $o (g $o f)	";
+            data = "1 goal (ID 667)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b c d : Algebra σ) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f = h $o (g $o f)	1 goal (ID 676)	  	  H : Funext	  σ : Signature	  a, b, c, d : Algebra σ	  f : a $-> b	  g : b $-> c	  h : c $-> d	  ============================	  h $o g $o f = h $o (g $o f)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 974) is:	 forall (a b : Algebra σ) (f : a $-> b), Id b $o f = f	goal 2 (ID 975) is:	 forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 668) is:	 forall (a b : Algebra σ) (f : a $-> b), Id b $o f = f	goal 2 (ID 669) is:	 forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 goal (ID 974)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b : Algebra σ) (f : a $-> b), Id b $o f = f	1 goal (ID 991)	  	  H : Funext	  σ : Signature	  a, b : Algebra σ	  f : a $-> b	  ============================	  Id b $o f = f	";
+            data = "1 goal (ID 668)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b : Algebra σ) (f : a $-> b), Id b $o f = f	1 goal (ID 685)	  	  H : Funext	  σ : Signature	  a, b : Algebra σ	  f : a $-> b	  ============================	  Id b $o f = f	";
             responses[i]=data;
           
 
             i = 145;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 975) is:	 forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 669) is:	 forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 goal (ID 975)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	1 goal (ID 998)	  	  H : Funext	  σ : Signature	  a, b : Algebra σ	  f : a $-> b	  ============================	  f $o Id a = f	";
+            data = "1 goal (ID 669)	  	  H : Funext	  σ : Signature	  ============================	  forall (a b : Algebra σ) (f : a $-> b), f $o Id a = f	1 goal (ID 692)	  	  H : Funext	  σ : Signature	  a, b : Algebra σ	  f : a $-> b	  ============================	  f $o Id a = f	";
             responses[i]=data;
           
 
@@ -1325,9 +1325,9 @@ Composition of homomorphisms.
       mouseover(110, '0_3_15');
       "><br>
 <br>
-<span class="id" title="keyword">Global Instance</span> <a id="isgraph_homomorphism" class="idref" href="#isgraph_homomorphism"><span class="id" title="instance">isgraph_homomorphism</span></a> {<a id="ab2738b9d9b1507f91028eefee5968da" class="idref" href="#ab2738b9d9b1507f91028eefee5968da"><span class="id" title="binder">σ</span></a>} (<a id="A:93" class="idref" href="#A:93"><span class="id" title="binder">A</span></a> <a id="B:94" class="idref" href="#B:94"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#ab2738b9d9b1507f91028eefee5968da"><span class="id" title="variable">σ</span></a>)<br>
-  : <a class="idref" href="HoTT.WildCat.Core.html#IsGraph"><span class="id" title="class">IsGraph</span></a> (<a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#A:93"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#B:94"><span class="id" title="variable">B</span></a>)<br>
-  := <a class="idref" href="HoTT.WildCat.Core.html#Build_IsGraph"><span class="id" title="constructor">Build_IsGraph</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> (<a id="f:95" class="idref" href="#f:95"><span class="id" title="binder">f</span></a> <a id="g:96" class="idref" href="#g:96"><span class="id" title="binder">g</span></a> : <span class="id" title="var">A</span> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <span class="id" title="var">B</span>) ⇒ <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="s:97" class="idref" href="#s:97"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#f:95"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#s:97"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#g:96"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#s:97"><span class="id" title="variable">s</span></a>).</span><span class="command" onmouseout="
+<span class="id" title="keyword">Global Instance</span> <a id="is2graph_algebra" class="idref" href="#is2graph_algebra"><span class="id" title="instance">is2graph_algebra</span></a> {<a id="ab2738b9d9b1507f91028eefee5968da" class="idref" href="#ab2738b9d9b1507f91028eefee5968da"><span class="id" title="binder">σ</span></a>} : <a class="idref" href="HoTT.WildCat.Core.html#Is2Graph"><span class="id" title="class">Is2Graph</span></a> (<a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#ab2738b9d9b1507f91028eefee5968da"><span class="id" title="variable">σ</span></a>)<br>
+  := <span class="id" title="keyword">fun</span> <a id="A:93" class="idref" href="#A:93"><span class="id" title="binder">A</span></a> <a id="B:94" class="idref" href="#B:94"><span class="id" title="binder">B</span></a><br>
+    ⇒ <a class="idref" href="HoTT.WildCat.Core.html#Build_IsGraph"><span class="id" title="constructor">Build_IsGraph</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> (<a id="f:95" class="idref" href="#f:95"><span class="id" title="binder">f</span></a> <a id="g:96" class="idref" href="#g:96"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#A:93"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#B:94"><span class="id" title="variable">B</span></a>) ⇒ <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="s:97" class="idref" href="#s:97"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#f:95"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#s:97"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#g:96"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#s:97"><span class="id" title="variable">s</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(111, '0_3_15');

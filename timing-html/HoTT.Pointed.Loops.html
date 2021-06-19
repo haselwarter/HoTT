@@ -30,28 +30,28 @@ pre {
 
 <div class="code" title="File: Loops.v
 Line: 1
-Time: 0.05s">
-<div class="time" style="width: 11.933174224344%"></div>
+Time: 0.047s">
+<div class="time" style="width: 11.633663366337%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 1
-Time: 0.064s">
-<div class="time" style="width: 15.27446300716%"></div>
+Time: 0.065s">
+<div class="time" style="width: 16.089108910891%"></div>
 <pre>
 Require Import HSet HFiber Factorization HoTT.Truncations HProp.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 2
 Time: 0.004s">
-<div class="time" style="width: 0.95465393794749%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Require Import Pointed.Core Pointed.pMap Pointed.pEquiv Pointed.pHomotopy.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 3
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -88,8 +88,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 11
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition loops (A : pType) : pType
@@ -153,8 +153,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   by refine (ap loops IHn @ _).</pre>
 </div>
@@ -176,7 +176,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 32
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Definition istrunc_loops {n} (A : pType) `{IsTrunc n.+1 A}
   : IsTrunc n (loops A) := _.</pre>
 </div>
@@ -190,8 +190,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 35
-Time: 0.021s">
-<div class="time" style="width: 5.0119331742243%"></div>
+Time: 0.02s">
+<div class="time" style="width: 4.950495049505%"></div>
 <pre>Definition isconnected_loops `{Univalence} {n} (A : pType)
   `{IsConnected n.+1 A} : IsConnected n (loops A) := _.</pre>
 </div>
@@ -207,8 +207,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 39
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition loops_functor {A B : pType} (f : A -&gt;* B)
   : (loops A) -&gt;* (loops B).</pre>
 </div>
@@ -221,8 +221,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   refine (Build_pMap (loops A) (loops B)
             (fun p =&gt; (point_eq f)^ @ (ap f p @ point_eq f)) _).</pre>
@@ -250,7 +250,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 45
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -287,7 +287,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 52
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   refine (loops_functor o _).</pre>
 </div>
@@ -300,8 +300,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 54
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -316,7 +316,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 57
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Definition loops_functor_compose {A B C : pType} (g : B -&gt;* C) (f : A -&gt;* B)
   : (loops_functor (pmap_compose g f))
   ==* (pmap_compose (loops_functor g) (loops_functor f)).</pre>
@@ -331,7 +331,7 @@ Proof.</pre>
 <div class="code" title="File: Loops.v
 Line: 60
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   srapply Build_pHomotopy.</pre>
 </div>
@@ -351,13 +351,13 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 62
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 62
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     refine ((inv_pp _ _ @@ 1) @ concat_pp_p _ _ _ @ _).</pre>
 </div>
@@ -370,22 +370,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 64
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
     refine (((ap_V _ _)^ @@ 1) @ _ @ concat_p_pp _ _ _ @ ((ap_pp _ _ _)^ @@ 1)).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 65
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     apply whiskerL.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 66
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     refine (_ @ concat_p_pp _ _ _ @ ((ap_pp _ _ _)^ @@ 1)).</pre>
 </div>
@@ -398,8 +398,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 68
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     apply ap_compose.</pre>
 </div>
@@ -411,15 +411,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 69
-Time: 0.419s">
+Time: 0.404s">
 <div class="time" style="width: 100%"></div>
 <pre>
   by pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 70
-Time: 0.228s">
-<div class="time" style="width: 54.415274463007%"></div>
+Time: 0.22s">
+<div class="time" style="width: 54.455445544554%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -488,7 +488,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 79
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -503,7 +503,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Lemma loops_functor_pp {X Y : pType} (f : X -&gt;* Y) (x y : loops X)
   : loops_functor f (x @ y) = loops_functor f x @ loops_functor f y.</pre>
 </div>
@@ -516,8 +516,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 84
-Time: 0.02s">
-<div class="time" style="width: 4.7732696897375%"></div>
+Time: 0.015s">
+<div class="time" style="width: 3.7128712871287%"></div>
 <pre>
   pointed_reduce_rewrite.</pre>
 </div>
@@ -531,7 +531,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 86
 Time: 0.007s">
-<div class="time" style="width: 1.6706443914081%"></div>
+<div class="time" style="width: 1.7326732673267%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -573,7 +573,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 92
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> refine (concat_1p _ @ concat_p1 _ @ ap_const _ _).</pre>
 </div>
 <div class="code" title="File: Loops.v
@@ -591,8 +591,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 93
-Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -621,14 +621,14 @@ Proof.</pre>
 <div class="code" title="File: Loops.v
 Line: 98
 Time: 0.009s">
-<div class="time" style="width: 2.1479713603819%"></div>
+<div class="time" style="width: 2.2277227722772%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 99
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   srapply Build_pHomotopy; cbn.</pre>
 </div>
@@ -675,26 +675,26 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   simpl.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 105
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> generalize (p point0).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 105
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> generalize (g point0).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 105
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   intros _ [].</pre>
 </div>
@@ -706,8 +706,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 106
-Time: 0.018s">
-<div class="time" style="width: 4.2959427207637%"></div>
+Time: 0.022s">
+<div class="time" style="width: 5.4455445544554%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -722,7 +722,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 109
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Lemma iterated_loops_functor_compose n A B C (f : B -&gt;* C)
   (g : A -&gt;* B) : iterated_loops_functor n (f o* g)
   ==* (iterated_loops_functor n f) o* (iterated_loops_functor n g).</pre>
@@ -736,8 +736,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 112
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   induction n as [|n IHn]; cbn.</pre>
 </div>
@@ -751,7 +751,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   refine (_ @* (loops_functor_compose _ _)).</pre>
 </div>
@@ -764,8 +764,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 116
-Time: 0.005s">
-<div class="time" style="width: 1.1933174224344%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -788,7 +788,7 @@ Proof.</pre>
 <div class="code" title="File: Loops.v
 Line: 121
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   induction n; cbn.</pre>
 </div>
@@ -802,7 +802,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 123
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   etransitivity.</pre>
 </div>
@@ -822,15 +822,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 126
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 127
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.2277227722772%"></div>
 <pre>
 
 Lemma iterated_loops_functor_pp {X Y : pType} (f : X -&gt;* Y) n
@@ -846,37 +846,37 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 132
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   induction n.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 133
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   1: apply loops_functor_pp.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 134
-Time: 0.028s">
-<div class="time" style="width: 6.6825775656325%"></div>
+Time: 0.027s">
+<div class="time" style="width: 6.6831683168317%"></div>
 <pre>
   change (iterated_loops_functor n.+2 f)
     with (loops_functor (iterated_loops_functor n.+1 f)).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 136
-Time: 0.005s">
-<div class="time" style="width: 1.1933174224344%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
   apply loops_functor_pp.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 137
-Time: 0.014s">
-<div class="time" style="width: 3.3412887828162%"></div>
+Time: 0.013s">
+<div class="time" style="width: 3.2178217821782%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -891,7 +891,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Definition iterated_loops_2functor n {A B : pType}
            {f g : A -&gt;* B} (p : f ==* g)
   : (iterated_loops_functor n f) ==* (iterated_loops_functor n g).</pre>
@@ -906,14 +906,14 @@ Proof.</pre>
 <div class="code" title="File: Loops.v
 Line: 143
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   induction n as [|n IHn]; [ assumption | apply loops_2functor, IHn ].</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 144
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -927,8 +927,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 147
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>Definition hfiber_loops_functor {A B : pType} (f : A -&gt;* B) (p : loops B)
   : {q : loops A &amp; ap f q = (point_eq f @ p) @ (point_eq f)^}
     &lt;~&gt; hfiber (loops_functor f) p.</pre>
@@ -963,8 +963,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 153
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -979,7 +979,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 156
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Global Instance istrunc_loops_functor {n} (A B : pType) (f : A -&gt;* B)
   `{IsTruncMap n.+1 _ _ f} : IsTruncMap n (loops_functor f).</pre>
 </div>
@@ -999,14 +999,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 159
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre> apply (istrunc_equiv_istrunc _ (hfiber_loops_functor f p)).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 159
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1021,7 +1021,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 162
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Global Instance isconnected_loops_functor `{Univalence} {n : trunc_index}
   (A B : pType) (f : A -&gt;* B) `{IsConnMap n.+1 _ _ f}
   : IsConnMap n (loops_functor f).</pre>
@@ -1056,7 +1056,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 167
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     symmetry; apply hfiber_ap.</pre>
 </div>
@@ -1069,21 +1069,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 169
-Time: 0.096s">
-<div class="time" style="width: 22.91169451074%"></div>
+Time: 0.081s">
+<div class="time" style="width: 20.049504950495%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 169
 Time: 0.004s">
-<div class="time" style="width: 0.95465393794749%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 170
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition isconnected_iterated_loops_functor `{Univalence}
@@ -1128,7 +1128,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 179
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> apply isconnected_loops_functor.</pre>
 </div>
 <div class="code" title="File: Loops.v
@@ -1148,7 +1148,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 181
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1163,7 +1163,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 184
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>Definition equiv_loops_image `{Univalence} n {A B : pType} (f : A -&gt;* B)
   : loops (Build_pType (image n.+1 f) (factor1 (image n.+1 f) (point A)))
   &lt;~&gt; image n (loops_functor f).</pre>
@@ -1178,7 +1178,7 @@ Proof.</pre>
 <div class="code" title="File: Loops.v
 Line: 187
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   set (C := (Build_pType (image n.+1 f) (factor1 (image n.+1 f) (point A)))).</pre>
 </div>
@@ -1191,8 +1191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 189
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   pose (h := Build_pMap C B (factor2 (image n.+1 f)) (point_eq f)).</pre>
 </div>
@@ -1213,8 +1213,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 193
-Time: 0.086s">
-<div class="time" style="width: 20.525059665871%"></div>
+Time: 0.068s">
+<div class="time" style="width: 16.831683168317%"></div>
 <pre> refine (@Build_Factorization (@IsConnMap n) (@MapIn n)
       (loops A) (loops B) (loops_functor f) (loops C)
       (loops_functor g) (loops_functor h) _ _ _).</pre>
@@ -1222,28 +1222,28 @@ Time: 0.086s">
 <div class="code" title="File: Loops.v
 Line: 195
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     intros x; symmetry.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 196
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (_ @ loops_functor_compose h g x).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 197
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 198
-Time: 0.008s">
-<div class="time" style="width: 1.909307875895%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.7326732673267%"></div>
 <pre>
     abstract (rewrite !concat_1p; reflexivity).</pre>
 </div>
@@ -1255,8 +1255,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 199
-Time: 0.012s">
-<div class="time" style="width: 2.8639618138425%"></div>
+Time: 0.013s">
+<div class="time" style="width: 3.2178217821782%"></div>
 <pre>
   exact (path_intermediate (path_factor (O_factsys n) (loops_functor f) I
     (image n (loops_functor f)))).</pre>
@@ -1264,7 +1264,7 @@ Time: 0.012s">
 <div class="code" title="File: Loops.v
 Line: 201
 Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+<div class="time" style="width: 0.74257425742574%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1291,8 +1291,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 205
-Time: 0.024s">
-<div class="time" style="width: 5.727923627685%"></div>
+Time: 0.019s">
+<div class="time" style="width: 4.7029702970297%"></div>
 <pre>
   srapply Build_pEquiv.</pre>
 </div>
@@ -1369,8 +1369,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 217
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   1,2: refine ((loops_functor_compose _ _)^* @* _ @* loops_functor_idmap _).</pre>
 </div>
@@ -1398,7 +1398,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 221
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1471,7 +1471,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 234
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Definition unfold_iterated_loops_functor {A B : pType} (n : nat) (f : A -&gt;* B)
   : (unfold_iterated_loops' n B) o* (iterated_loops_functor n.+1 f)
     ==* (iterated_loops_functor n (loops_functor f)) o* (unfold_iterated_loops' n A).</pre>
@@ -1513,7 +1513,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 240
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Loops.v
@@ -1525,34 +1525,34 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 241
-Time: 0.033s">
-<div class="time" style="width: 7.8758949880668%"></div>
+Time: 0.028s">
+<div class="time" style="width: 6.9306930693069%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 241
-Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> apply moveL_pV.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 241
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (concat_1p _ @ _).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 242
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (concat_1p _ @ _).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 243
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (_ @ (concat_p1 _)^).</pre>
 </div>
@@ -1573,34 +1573,34 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 246
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre> refine ((loops_functor_compose _ _)^* @* _).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 246
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     refine (_ @* (loops_functor_compose _ _)).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 247
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply loops_2functor.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 248
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     apply IHn.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 249
-Time: 0.052s">
-<div class="time" style="width: 12.410501193317%"></div>
+Time: 0.046s">
+<div class="time" style="width: 11.386138613861%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1635,8 +1635,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 255
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   induction n.</pre>
 </div>
@@ -1715,13 +1715,13 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 267
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> apply loops_2functor, IHn.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 267
-Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1736,7 +1736,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 270
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Lemma loops_prod (X Y : pType) : loops (X * Y) &lt;~&gt;* loops X * loops Y.</pre>
 </div>
 <div class="code" title="File: Loops.v
@@ -1748,15 +1748,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 271
-Time: 0.005s">
-<div class="time" style="width: 1.1933174224344%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   srefine (Build_pEquiv _ _ (Build_pMap _ _ (_ : Equiv _ _) _) _).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 272
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   1: symmetry; refine (equiv_path_prod (point _) (point (X * Y))).</pre>
 </div>
@@ -1770,7 +1770,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 274
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1785,7 +1785,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 277
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Lemma iterated_loops_prod (X Y : pType) {n}
   : iterated_loops n (X * Y) &lt;~&gt;* (iterated_loops n X) * (iterated_loops n Y).</pre>
 </div>
@@ -1827,7 +1827,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 283
 Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1842,7 +1842,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 286
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Definition loopsD {A} : pFam A -&gt; pFam (loops A)
   := fun Pp =&gt; (fun q =&gt; transport Pp.1 q Pp.2 = Pp.2; 1).</pre>
 </div>
@@ -1913,8 +1913,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 298
-Time: 0.005s">
-<div class="time" style="width: 1.1933174224344%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   srefine (Build_pEquiv _ _ (Build_pMap _ _ (_ : Equiv _ _) _) _).</pre>
 </div>
@@ -1935,7 +1935,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 301
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1963,8 +1963,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 306
-Time: 0.008s">
-<div class="time" style="width: 1.909307875895%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.7326732673267%"></div>
 <pre>
   srefine (Build_pEquiv _ _ (Build_pMap _ _ (_ : Equiv _ _) _) _).</pre>
 </div>
@@ -2092,8 +2092,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 327
-Time: 0.005s">
-<div class="time" style="width: 1.1933174224344%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
     srefine (Build_pEquiv _ _ (Build_pMap _ _ (_ : Equiv _ _) _) _).</pre>
 </div>
@@ -2273,7 +2273,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 357
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     exists (equiv_inverse (equiv_path_arrow 1%equiv 1%equiv)
             oE equiv_inverse (equiv_path_equiv 1%equiv 1%equiv)).</pre>
@@ -2293,15 +2293,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 360
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact (loops_pproduct_commute _ _ o*E pequiv_loops_functor IHn).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 361
-Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2329,8 +2329,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 366
-Time: 0.051s">
-<div class="time" style="width: 12.171837708831%"></div>
+Time: 0.038s">
+<div class="time" style="width: 9.4059405940594%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
 </div>
@@ -2423,7 +2423,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 381
 Time: 0.004s">
-<div class="time" style="width: 0.95465393794749%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
     refine (equiv_iff_hprop (fun K a =&gt; Build_Contr _ 1 (fun x =&gt; (K a x)^)) _).</pre>
 </div>
@@ -2449,22 +2449,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 384
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   transitivity (forall x, IsTrunc n (loops (A, x))).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 385
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   1: destruct n; apply equiv_istrunc_istrunc_loops.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 386
-Time: 0.002s">
-<div class="time" style="width: 0.47732696897375%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   srapply equiv_functor_forall_id.</pre>
 </div>
@@ -2484,8 +2484,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 389
-Time: 0.127s">
-<div class="time" style="width: 30.310262529833%"></div>
+Time: 0.102s">
+<div class="time" style="width: 25.247524752475%"></div>
 <pre>
   cbn; refine (equiv_iff_hprop _ _).</pre>
 </div>
@@ -2529,7 +2529,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 397
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   rewrite !unfold_iterated_loops.</pre>
 </div>
@@ -2556,8 +2556,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 401
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   transitivity (p @ p^ = p @ p^, 1).</pre>
 </div>
@@ -2576,8 +2576,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 403
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
     1: exact (equiv_ap (equiv_concat_r _ _) _ _).</pre>
 </div>
@@ -2617,7 +2617,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 407
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     1: symmetry; apply concat_pV.</pre>
 </div>
@@ -2636,15 +2636,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 409
-Time: 0.003s">
-<div class="time" style="width: 0.71599045346062%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.4950495049505%"></div>
 <pre>
   cbn; by rewrite concat_p1, concat_Vp.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 410
 Time: 0.006s">
-<div class="time" style="width: 1.4319809069212%"></div>
+<div class="time" style="width: 1.4851485148515%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2699,7 +2699,7 @@ Defined.</pre>
 <div class="code" title="File: Loops.v
 Line: 417
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 
 Global Instance is1functor_loops : Is1Functor loops.</pre>
@@ -2826,8 +2826,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 431
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
 
 Global Instance is1functor_iterated_loops (n : nat)
@@ -2922,7 +2922,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 442
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>Global Instance is1natural_loops_inv : Is1Natural loops loops loops_inv.</pre>
 </div>
 <div class="code" title="File: Loops.v
@@ -2962,13 +2962,13 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 446
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre> refine (inv_Vp _ _ @ whiskerR _ (point_eq f) @ concat_pp_p _ _ _).</pre>
 </div>
 <div class="code" title="File: Loops.v
 Line: 446
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
     refine (inv_pp _ _ @ whiskerL (point_eq f)^ (ap_V f p)^).</pre>
 </div>
@@ -2981,8 +2981,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 448
-Time: 0.064s">
-<div class="time" style="width: 15.27446300716%"></div>
+Time: 0.057s">
+<div class="time" style="width: 14.108910891089%"></div>
 <pre> pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Loops.v
@@ -2993,8 +2993,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 448
-Time: 0.052s">
-<div class="time" style="width: 12.410501193317%"></div>
+Time: 0.046s">
+<div class="time" style="width: 11.386138613861%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -3033,7 +3033,7 @@ Time: 0s">
 <div class="code" title="File: Loops.v
 Line: 457
 Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+<div class="time" style="width: 0.24752475247525%"></div>
 <pre>
   1: symmetry; exact (equiv_path_pforall (point_pforall B) (point_pforall B)).</pre>
 </div>
@@ -3046,8 +3046,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Loops.v
 Line: 459
-Time: 0.001s">
-<div class="time" style="width: 0.23866348448687%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>

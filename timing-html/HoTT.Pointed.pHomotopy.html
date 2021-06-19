@@ -30,28 +30,28 @@ pre {
 
 <div class="code" title="File: pHomotopy.v
 Line: 1
-Time: 0.033s">
-<div class="time" style="width: 80.487804878049%"></div>
+Time: 0.034s">
+<div class="time" style="width: 89.473684210526%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 1
-Time: 0.015s">
-<div class="time" style="width: 36.585365853659%"></div>
+Time: 0.017s">
+<div class="time" style="width: 44.736842105263%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 2
 Time: 0.021s">
-<div class="time" style="width: 51.219512195122%"></div>
+<div class="time" style="width: 55.263157894737%"></div>
 <pre>
 Require Import Pointed.Core.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -89,8 +89,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 11
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   srapply Build_pHomotopy.</pre>
 </div>
@@ -103,8 +103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 13
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
@@ -116,7 +116,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 14
-Time: 0.041s">
+Time: 0.038s">
 <div class="time" style="width: 100%"></div>
 <pre> pointed_reduce.</pre>
 </div>
@@ -129,7 +129,7 @@ Time: 0s">
 <div class="code" title="File: pHomotopy.v
 Line: 14
 Time: 0.028s">
-<div class="time" style="width: 68.292682926829%"></div>
+<div class="time" style="width: 73.684210526316%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -143,8 +143,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 17
-Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>Definition phomotopy_path_pp {A : pType} {P : pFam A}
   {f g h : pForall A P} (p : f = g) (q : g = h)
   : phomotopy_path (p @ q) ==* phomotopy_path p @* phomotopy_path q.</pre>
@@ -158,33 +158,33 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   induction p.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre> induction q.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 21
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre> apply phomotopy_compose_p1.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -201,7 +201,7 @@ Time: 0s">
 <div class="code" title="File: pHomotopy.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>Definition pmap_postwhisker {A B C : pType} {f g : A -&gt;* B}
   (h : B -&gt;* C) (p : f ==* g) : h o* f ==* h o* g.</pre>
 </div>
@@ -214,8 +214,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 27
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
   snrapply Build_pHomotopy; cbn.</pre>
 </div>
@@ -228,8 +228,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 29
-Time: 0.024s">
-<div class="time" style="width: 58.536585365854%"></div>
+Time: 0.025s">
+<div class="time" style="width: 65.789473684211%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -249,8 +249,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 32
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (concat_p1 _ @ concat_p1 _ @ ap _ _).</pre>
 </div>
@@ -263,15 +263,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 34
-Time: 0.016s">
-<div class="time" style="width: 39.024390243902%"></div>
+Time: 0.014s">
+<div class="time" style="width: 36.842105263158%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 35
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
 
 Definition pmap_prewhisker {A B C : pType} (f : A -&gt;* B)
@@ -287,7 +287,7 @@ Proof.</pre>
 <div class="code" title="File: pHomotopy.v
 Line: 39
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
   snrapply Build_pHomotopy; cbn.</pre>
 </div>
@@ -300,8 +300,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 41
-Time: 0.024s">
-<div class="time" style="width: 58.536585365854%"></div>
+Time: 0.022s">
+<div class="time" style="width: 57.894736842105%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
@@ -314,15 +314,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 43
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (concat_p1 _ @ concat_1p _ @ concat_p1 _).</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 44
 Time: 0.013s">
-<div class="time" style="width: 31.707317073171%"></div>
+<div class="time" style="width: 34.210526315789%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -336,8 +336,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 47
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.019s">
+<div class="time" style="width: 50%"></div>
 <pre>Definition phomotopy_path2 {A : pType} {P : pFam A}
   {f g : pForall A P} {p p' : f = g} (q : p = p')
   : phomotopy_path p ==* phomotopy_path p'.</pre>
@@ -351,8 +351,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 50
-Time: 0.018s">
-<div class="time" style="width: 43.90243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   induction q.</pre>
 </div>
@@ -435,7 +435,7 @@ Time: 0s">
 <div class="code" title="File: pHomotopy.v
 Line: 61
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>Definition phomotopy_hcompose `{Funext} {A : pType} {P : pFam A} {f g h : pForall A P}
  {p p' : f ==* g} {q q' : g ==* h} (r : p ==* p') (s : q ==* q') :
   p @* q ==* p' @* q'.</pre>
@@ -449,15 +449,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 64
-Time: 0.008s">
-<div class="time" style="width: 19.512195121951%"></div>
+Time: 0.005s">
+<div class="time" style="width: 13.157894736842%"></div>
 <pre>
   exact ((s $@R p) $@ (q' $@L r)).</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 65
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -493,22 +493,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 72
-Time: 0.027s">
-<div class="time" style="width: 65.853658536585%"></div>
+Time: 0.022s">
+<div class="time" style="width: 57.894736842105%"></div>
 <pre>
   rapply (transport IsHProp (x := {p : f == g &amp; p (point X) = dpoint_eq f @ (dpoint_eq g)^})).</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 73
-Time: 0.025s">
-<div class="time" style="width: 60.975609756098%"></div>
+Time: 0.021s">
+<div class="time" style="width: 55.263157894737%"></div>
 <pre>
   apply path_universe_uncurried; issig.</pre>
 </div>
 <div class="code" title="File: pHomotopy.v
 Line: 74
-Time: 0.009s">
-<div class="time" style="width: 21.951219512195%"></div>
+Time: 0.008s">
+<div class="time" style="width: 21.052631578947%"></div>
 <pre>
 Defined.</pre>
 </div>

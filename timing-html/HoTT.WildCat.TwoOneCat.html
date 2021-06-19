@@ -31,27 +31,27 @@ pre {
 <div class="code" title="File: TwoOneCat.v
 Line: 1
 Time: 0.034s">
-<div class="time" style="width: 21.794871794872%"></div>
+<div class="time" style="width: 13.438735177866%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: TwoOneCat.v
 Line: 1
 Time: 0.002s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 0.79051383399209%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
 <div class="code" title="File: TwoOneCat.v
 Line: 2
-Time: 0.003s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.5810276679842%"></div>
 <pre>
 Require Import WildCat.Prod.</pre>
 </div>
 <div class="code" title="File: TwoOneCat.v
 Line: 3
 Time: 0.001s">
-<div class="time" style="width: 0.64102564102564%"></div>
+<div class="time" style="width: 0.39525691699605%"></div>
 <pre>
 Require Import WildCat.NatTrans.</pre>
 </div>
@@ -67,9 +67,9 @@ Time: 0s">
 </div>
 <div class="code" title="File: TwoOneCat.v
 Line: 7
-Time: 0.156s">
+Time: 0.253s">
 <div class="time" style="width: 100%"></div>
-<pre>Class Is21Cat (A : Type) `{Is1Cat A} :=
+<pre>Class Is21Cat (A : Type) `{Is1Cat A, !Is3Graph A} :=
 {
   is1cat_hom : forall (a b : A), Is1Cat (a $-&gt; b) ;
   is1gpd_hom : forall (a b : A), Is1Gpd (a $-&gt; b) ;
@@ -116,8 +116,8 @@ Global Existing Instance is1cat_hom.</pre>
 </div>
 <div class="code" title="File: TwoOneCat.v
 Line: 44
-Time: 0.001s">
-<div class="time" style="width: 0.64102564102564%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance is1gpd_hom.</pre>
 </div>
@@ -144,8 +144,8 @@ Global Existing Instance is1natural_cat_assoc_l.</pre>
 </div>
 <div class="code" title="File: TwoOneCat.v
 Line: 48
-Time: 0.001s">
-<div class="time" style="width: 0.64102564102564%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance is1natural_cat_assoc_m.</pre>
 </div>

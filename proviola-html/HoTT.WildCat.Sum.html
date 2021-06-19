@@ -168,7 +168,7 @@
           
 
             i = 30;
-            data = "1 goal (ID 48)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  Is1Cat (A + B)	";
+            data = "1 goal (ID 39)	  	  A : Type	  B : Type	  H : IsGraph A	  H0 : Is2Graph A	  H1 : IsGraph B	  H2 : Is2Graph B	  ============================	  Is2Graph (A + B)	";
             responses[i]=data;
           
 
@@ -178,97 +178,97 @@
           
 
             i = 32;
-            data = "8 goals (ID 504)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, IsGraph (a $-> b)		goal 2 (ID 506) is:	 forall a b : A + B, Is01Cat (a $-> b)	goal 3 (ID 508) is:	 forall a b : A + B, Is0Gpd (a $-> b)	goal 4 (ID 510) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 5 (ID 512) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 6 (ID 514) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 7 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 8 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
+            data = "1 goal (ID 43)	  	  A : Type	  B : Type	  H : IsGraph A	  H0 : Is2Graph A	  H1 : IsGraph B	  H2 : Is2Graph B	  x, y : A + B	  ============================	  (x $-> y) -> (x $-> y) -> Type	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 goal (ID 504)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, IsGraph (a $-> b)	1 goal (ID 546)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y : A + B	  ============================	  (x $-> y) -> (x $-> y) -> Type	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 34;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	7 goals		goal 1 (ID 506) is:	 forall a b : A + B, Is01Cat (a $-> b)	goal 2 (ID 508) is:	 forall a b : A + B, Is0Gpd (a $-> b)	goal 3 (ID 510) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 4 (ID 512) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 5 (ID 514) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 6 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 7 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
+            data = "";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 goal (ID 506)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, Is01Cat (a $-> b)	1 goal (ID 593)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y : A + B	  ============================	  Is01Cat (x $-> y)	";
+            data = "1 goal (ID 73)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  Is1Cat (A + B)	";
             responses[i]=data;
           
 
             i = 36;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	6 goals		goal 1 (ID 508) is:	 forall a b : A + B, Is0Gpd (a $-> b)	goal 2 (ID 510) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 3 (ID 512) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 4 (ID 514) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 5 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 6 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
+            data = "";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 goal (ID 508)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, Is0Gpd (a $-> b)	1 goal (ID 739)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y : A + B	  ============================	  forall a b : x $-> y, (a $-> b) -> b $-> a	";
+            data = "7 goals (ID 453)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, Is01Cat (a $-> b)		goal 2 (ID 455) is:	 forall a b : A + B, Is0Gpd (a $-> b)	goal 3 (ID 457) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 4 (ID 459) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 5 (ID 461) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 6 (ID 463) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 7 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 38;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	5 goals		goal 1 (ID 510) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 2 (ID 512) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 3 (ID 514) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 4 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 5 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
+            data = "1 goal (ID 453)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, Is01Cat (a $-> b)	1 goal (ID 556)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y : A + B	  ============================	  Is01Cat (x $-> y)	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 goal (ID 510)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	1 goal (ID 838)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : y $-> z	  ============================	  forall a b : x $-> y,	  (a $-> b) -> cat_postcomp x h a $-> cat_postcomp x h b	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	6 goals		goal 1 (ID 455) is:	 forall a b : A + B, Is0Gpd (a $-> b)	goal 2 (ID 457) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 3 (ID 459) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 4 (ID 461) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 5 (ID 463) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 6 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 goal (ID 841)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : y $-> z	  f, g : x $-> y	  p : f $-> g	  ============================	  cat_postcomp x h f $-> cat_postcomp x h g	";
+            data = "1 goal (ID 455)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall a b : A + B, Is0Gpd (a $-> b)	1 goal (ID 718)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y : A + B	  ============================	  forall a b : x $-> y, (a $-> b) -> b $-> a	";
             responses[i]=data;
           
 
             i = 41;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	4 goals		goal 1 (ID 512) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 2 (ID 514) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 3 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 4 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	5 goals		goal 1 (ID 457) is:	 forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	goal 2 (ID 459) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 3 (ID 461) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 4 (ID 463) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 5 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 goal (ID 512)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	1 goal (ID 1065)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : x $-> y	  ============================	  forall a b : y $-> z, (a $-> b) -> cat_precomp z h a $-> cat_precomp z h b	";
+            data = "1 goal (ID 457)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b c : A + B) (g : b $-> c), Is0Functor (cat_postcomp a g)	1 goal (ID 825)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : y $-> z	  ============================	  forall a b : x $-> y,	  (a $-> b) -> cat_postcomp x h a $-> cat_postcomp x h b	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 goal (ID 1068)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : x $-> y	  f, g : y $-> z	  p : f $-> g	  ============================	  cat_precomp z h f $-> cat_precomp z h g	";
+            data = "1 goal (ID 828)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : y $-> z	  f, g : x $-> y	  p : f $-> g	  ============================	  cat_postcomp x h f $-> cat_postcomp x h g	";
             responses[i]=data;
           
 
             i = 44;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 goals		goal 1 (ID 514) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 2 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 3 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	4 goals		goal 1 (ID 459) is:	 forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 2 (ID 461) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 3 (ID 463) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 4 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 goal (ID 514)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f $== h $o (g $o f)	";
+            data = "1 goal (ID 459)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b c : A + B) (f : a $-> b), Is0Functor (cat_precomp c f)	1 goal (ID 1062)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : x $-> y	  ============================	  forall a b : y $-> z, (a $-> b) -> cat_precomp z h a $-> cat_precomp z h b	";
             responses[i]=data;
           
 
             i = 46;
-            data = "";
+            data = "1 goal (ID 1065)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  x, y, z : A + B	  h : x $-> y	  f, g : y $-> z	  p : f $-> g	  ============================	  cat_precomp z h f $-> cat_precomp z h g	";
             responses[i]=data;
           
 
             i = 47;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 516) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 2 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	1 goal (ID 516)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b : A + B) (f : a $-> b), Id b $o f $== f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 518) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	1 goal (ID 518)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b : A + B) (f : a $-> b), f $o Id a $== f	No more goals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 goals		goal 1 (ID 461) is:	 forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 2 (ID 463) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 3 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 48;
-            data = "";
+            data = "1 goal (ID 461)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b c d : A + B) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f $== h $o (g $o f)	";
             responses[i]=data;
           
 
             i = 49;
-            data = "";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 463) is:	 forall (a b : A + B) (f : a $-> b), Id b $o f $== f	goal 2 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	1 goal (ID 463)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b : A + B) (f : a $-> b), Id b $o f $== f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 465) is:	 forall (a b : A + B) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 50;
-            data = "";
+            data = "1 goal (ID 465)	  	  A : Type	  B : Type	  IsGraph0 : IsGraph A	  Is2Graph0 : Is2Graph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  IsGraph1 : IsGraph B	  Is2Graph1 : Is2Graph B	  Is01Cat1 : Is01Cat B	  H0 : Is1Cat B	  ============================	  forall (a b : A + B) (f : a $-> b), f $o Id a $== f	No more goals.	";
             responses[i]=data;
           
 
@@ -313,6 +313,21 @@
           
 
             i = 59;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 60;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 61;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 62;
             data = "";
             responses[i]=data;
           
@@ -448,8 +463,8 @@
       mouseover(30, '0_3_7');
       "><br>
 <br>
-<span class="id" title="keyword">Global Instance</span> <a id="is1cat_sum" class="idref" href="#is1cat_sum"><span class="id" title="instance">is1cat_sum</span></a> <a id="A:11" class="idref" href="#A:11"><span class="id" title="binder">A</span></a> <a id="B:12" class="idref" href="#B:12"><span class="id" title="binder">B</span></a> `{ <a id="H:15" class="idref" href="#H:15"><span class="id" title="binder">Is1Cat</span></a> <a id="H:15" class="idref" href="#H:15"><span class="id" title="binder">A</span></a> } `{ <a id="H0:18" class="idref" href="#H0:18"><span class="id" title="binder">Is1Cat</span></a> <a id="H0:18" class="idref" href="#H0:18"><span class="id" title="binder">B</span></a>}<br>
-  : <a class="idref" href="HoTT.WildCat.Core.html#Is1Cat"><span class="id" title="class">Is1Cat</span></a> (<a class="idref" href="HoTT.WildCat.Sum.html#A:11"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.WildCat.Sum.html#B:12"><span class="id" title="variable">B</span></a>).</span><span class="command" onmouseout="
+<span class="id" title="keyword">Global Instance</span> <a id="is2graph_sum" class="idref" href="#is2graph_sum"><span class="id" title="instance">is2graph_sum</span></a> <a id="A:11" class="idref" href="#A:11"><span class="id" title="binder">A</span></a> <a id="B:12" class="idref" href="#B:12"><span class="id" title="binder">B</span></a> `{<a id="H0:14" class="idref" href="#H0:14"><span class="id" title="binder">Is2Graph</span></a> <a id="H0:14" class="idref" href="#H0:14"><span class="id" title="binder">A</span></a>, <a id="H2:16" class="idref" href="#H2:16"><span class="id" title="binder">Is2Graph</span></a> <a id="H2:16" class="idref" href="#H2:16"><span class="id" title="binder">B</span></a>}<br>
+  : <a class="idref" href="HoTT.WildCat.Core.html#Is2Graph"><span class="id" title="class">Is2Graph</span></a> (<a class="idref" href="HoTT.WildCat.Sum.html#A:11"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.WildCat.Sum.html#B:12"><span class="id" title="variable">B</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(31, '0_3_7');
@@ -459,26 +474,43 @@
       " onmouseover="
       mouseover(32, '0_3_7');
       "><br>
-  <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is1Cat"><span class="id" title="constructor">Build_Is1Cat</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_IsGraph"><span class="id" title="constructor">Build_IsGraph</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(33, '0_3_7');
       "><br>
-  - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_IsGraph"><span class="id" title="constructor">Build_IsGraph</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>];<br>
+  <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="method">Hom</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(34, '0_3_7');
       "><br>
-    <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>];<br>
-    <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Hom"><span class="id" title="method">Hom</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(35, '0_3_7');
       "><br>
-  - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
+<br>
+<span class="id" title="keyword">Global Instance</span> <a id="is1cat_sum" class="idref" href="#is1cat_sum"><span class="id" title="instance">is1cat_sum</span></a> <a id="A:17" class="idref" href="#A:17"><span class="id" title="binder">A</span></a> <a id="B:18" class="idref" href="#B:18"><span class="id" title="binder">B</span></a> `{ <a id="H:22" class="idref" href="#H:22"><span class="id" title="binder">Is1Cat</span></a> <a id="H:22" class="idref" href="#H:22"><span class="id" title="binder">A</span></a> } `{ <a id="H0:26" class="idref" href="#H0:26"><span class="id" title="binder">Is1Cat</span></a> <a id="H0:26" class="idref" href="#H0:26"><span class="id" title="binder">B</span></a>}<br>
+  : <a class="idref" href="HoTT.WildCat.Core.html#Is1Cat"><span class="id" title="class">Is1Cat</span></a> (<a class="idref" href="HoTT.WildCat.Sum.html#A:17"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.WildCat.Sum.html#B:18"><span class="id" title="variable">B</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(36, '0_3_7');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(37, '0_3_7');
+      "><br>
+  <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is1Cat"><span class="id" title="constructor">Build_Is1Cat</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(38, '0_3_7');
+      "><br>
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(39, '0_3_7');
       "><br>
     <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is01Cat"><span class="id" title="constructor">Build_Is01Cat</span></a>;<br>
     <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>];<br>
@@ -486,31 +518,15 @@
     (<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Id"><span class="id" title="method">Id</span></a> || <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_comp"><span class="id" title="method">cat_comp</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(37, '0_3_7');
+      mouseover(40, '0_3_7');
       "><br>
   - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is0Gpd"><span class="id" title="constructor">Build_Is0Gpd</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(38, '0_3_7');
+      mouseover(41, '0_3_7');
       "><br>
     <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>];<br>
     <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#gpd_rev"><span class="id" title="method">gpd_rev</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_7');
-      " onmouseover="
-      mouseover(39, '0_3_7');
-      "><br>
-  - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span> <span class="id" title="var">h</span>; <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is0Functor"><span class="id" title="constructor">Build_Is0Functor</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_7');
-      " onmouseover="
-      mouseover(40, '0_3_7');
-      "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_7');
-      " onmouseover="
-      mouseover(41, '0_3_7');
-      "><br>
-    <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>], <span class="id" title="var">z</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a3</span> | <span class="id" title="var">b3</span>];<br>
-    <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">change</span> (<span class="id" title="var">f</span> <a class="idref" href="HoTT.WildCat.Core.html#96ad82935041c71951ddbfbeea7fcc62"><span class="id" title="notation">$==</span></a> <span class="id" title="var">g</span>) <span class="id" title="tactic">in</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">exact</span> (<span class="id" title="var">h</span> <a class="idref" href="HoTT.WildCat.Core.html#02ce7f76ad68f0bcea9d2d5ee0244bd4"><span class="id" title="notation">$@</span></a><a class="idref" href="HoTT.WildCat.Core.html#02ce7f76ad68f0bcea9d2d5ee0244bd4"><span class="id" title="notation">L</span></a> <span class="id" title="var">p</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(42, '0_3_7');
@@ -526,33 +542,49 @@
       mouseover(44, '0_3_7');
       "><br>
     <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>], <span class="id" title="var">z</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a3</span> | <span class="id" title="var">b3</span>];<br>
-    <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">change</span> (<span class="id" title="var">f</span> <a class="idref" href="HoTT.WildCat.Core.html#96ad82935041c71951ddbfbeea7fcc62"><span class="id" title="notation">$==</span></a> <span class="id" title="var">g</span>) <span class="id" title="tactic">in</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">exact</span> (<span class="id" title="var">p</span> <a class="idref" href="HoTT.WildCat.Core.html#1725408234aafc096d19d4ed837fdba5"><span class="id" title="notation">$@</span></a><a class="idref" href="HoTT.WildCat.Core.html#1725408234aafc096d19d4ed837fdba5"><span class="id" title="notation">R</span></a> <span class="id" title="var">h</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">change</span> (<span class="id" title="var">f</span> <a class="idref" href="HoTT.WildCat.Core.html#96ad82935041c71951ddbfbeea7fcc62"><span class="id" title="notation">$==</span></a> <span class="id" title="var">g</span>) <span class="id" title="tactic">in</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">exact</span> (<span class="id" title="var">h</span> <a class="idref" href="HoTT.WildCat.Core.html#02ce7f76ad68f0bcea9d2d5ee0244bd4"><span class="id" title="notation">$@</span></a><a class="idref" href="HoTT.WildCat.Core.html#02ce7f76ad68f0bcea9d2d5ee0244bd4"><span class="id" title="notation">L</span></a> <span class="id" title="var">p</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(45, '0_3_7');
+      "><br>
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span> <span class="id" title="var">h</span>; <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is0Functor"><span class="id" title="constructor">Build_Is0Functor</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(46, '0_3_7');
+      "><br>
+    <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(47, '0_3_7');
+      "><br>
+    <span class="id" title="tactic">destruct</span> <span class="id" title="var">x</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>], <span class="id" title="var">y</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>], <span class="id" title="var">z</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">a3</span> | <span class="id" title="var">b3</span>];<br>
+    <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span> <span class="id" title="tactic">in</span> *; <span class="id" title="tactic">change</span> (<span class="id" title="var">f</span> <a class="idref" href="HoTT.WildCat.Core.html#96ad82935041c71951ddbfbeea7fcc62"><span class="id" title="notation">$==</span></a> <span class="id" title="var">g</span>) <span class="id" title="tactic">in</span> <span class="id" title="var">p</span>; <span class="id" title="tactic">exact</span> (<span class="id" title="var">p</span> <a class="idref" href="HoTT.WildCat.Core.html#1725408234aafc096d19d4ed837fdba5"><span class="id" title="notation">$@</span></a><a class="idref" href="HoTT.WildCat.Core.html#1725408234aafc096d19d4ed837fdba5"><span class="id" title="notation">R</span></a> <span class="id" title="var">h</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(48, '0_3_7');
       "><br>
   - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>] [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>] [<span class="id" title="var">a3</span> | <span class="id" title="var">b3</span>] [<span class="id" title="var">a4</span> | <span class="id" title="var">b4</span>] <span class="id" title="var">f</span> <span class="id" title="var">g</span> <span class="id" title="var">h</span>;<br>
     <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>; <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_assoc"><span class="id" title="method">cat_assoc</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(46, '0_3_7');
+      mouseover(49, '0_3_7');
       "><br>
   - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>] [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>] <span class="id" title="var">f</span>; <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>;<br>
     <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_idl"><span class="id" title="method">cat_idl</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(47, '0_3_7');
+      mouseover(50, '0_3_7');
       "><br>
   - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a1</span> | <span class="id" title="var">b1</span>] [<span class="id" title="var">a2</span> | <span class="id" title="var">b2</span>] <span class="id" title="var">f</span>; <span class="id" title="tactic">try</span> <span class="id" title="var">contradiction</span>;<br>
     <span class="id" title="var">cbn</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_idr"><span class="id" title="method">cat_idr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(48, '0_3_7');
+      mouseover(51, '0_3_7');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(49, '0_3_7');
+      mouseover(52, '0_3_7');
       "><br>
 </span>
 </div>

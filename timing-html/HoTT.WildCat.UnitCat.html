@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: UnitCat.v
 Line: 1
-Time: 0.038s">
+Time: 0.034s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: UnitCat.v
 Line: 1
 Time: 0.002s">
-<div class="time" style="width: 5.2631578947368%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
@@ -102,8 +102,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: UnitCat.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
   srapply Build_Is01Cat.</pre>
 </div>
@@ -156,45 +156,54 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Global Instance is1cat_unit : Is1Cat Unit.</pre>
-</div>
-<div class="code" title="File: UnitCat.v
-Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
+Global Instance is2graph_unit : Is2Graph Unit
+  := fun f g =&gt; isgraph_unit.</pre>
 </div>
 <div class="code" title="File: UnitCat.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
-<pre>
-  econstructor.</pre>
-</div>
-<div class="code" title="File: UnitCat.v
-Line: 24
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  1,2:econstructor.</pre>
+
+Global Instance is1cat_unit : Is1Cat Unit.</pre>
 </div>
 <div class="code" title="File: UnitCat.v
 Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  all:intros; exact tt.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: UnitCat.v
 Line: 26
+Time: 0.001s">
+<div class="time" style="width: 2.9411764705882%"></div>
+<pre>
+  econstructor.</pre>
+</div>
+<div class="code" title="File: UnitCat.v
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  1,2:econstructor.</pre>
+</div>
+<div class="code" title="File: UnitCat.v
+Line: 28
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  all:intros; exact tt.</pre>
+</div>
+<div class="code" title="File: UnitCat.v
+Line: 29
+Time: 0.001s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: UnitCat.v
-Line: 28
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

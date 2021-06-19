@@ -148,32 +148,32 @@
           
 
             i = 26;
-            data = "1 goal (ID 9)	  	  ============================	  Is1Cat Unit	";
+            data = "<infomsg>is2graph_unit is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 27;
-            data = "";
+            data = "1 goal (ID 13)	  	  ============================	  Is1Cat Unit	";
             responses[i]=data;
           
 
             i = 28;
-            data = "5 goals (ID 39)	  	  ============================	  forall (a b c : Unit) (g : b $-> c), Is0Functor (cat_postcomp a g)		goal 2 (ID 40) is:	 forall (a b c : Unit) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 3 (ID 41) is:	 forall (a b c d : Unit) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 4 (ID 42) is:	 forall (a b : Unit) (f : a $-> b), Id b $o f $== f	goal 5 (ID 43) is:	 forall (a b : Unit) (f : a $-> b), f $o Id a $== f	";
+            data = "";
             responses[i]=data;
           
 
             i = 29;
-            data = "5 goals (ID 49)	  	  a, b, c : Unit	  g : b $-> c	  ============================	  forall a0 b0 : a $-> b,	  (a0 $-> b0) -> cat_postcomp a g a0 $-> cat_postcomp a g b0		goal 2 (ID 55) is:	 forall a0 b0 : b $-> c,	 (a0 $-> b0) -> cat_precomp c f a0 $-> cat_precomp c f b0	goal 3 (ID 41) is:	 forall (a b c d : Unit) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 4 (ID 42) is:	 forall (a b : Unit) (f : a $-> b), Id b $o f $== f	goal 5 (ID 43) is:	 forall (a b : Unit) (f : a $-> b), f $o Id a $== f	";
+            data = "5 goals (ID 33)	  	  ============================	  forall (a b c : Unit) (g : b $-> c), Is0Functor (cat_postcomp a g)		goal 2 (ID 34) is:	 forall (a b c : Unit) (f : a $-> b), Is0Functor (cat_precomp c f)	goal 3 (ID 35) is:	 forall (a b c d : Unit) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 4 (ID 36) is:	 forall (a b : Unit) (f : a $-> b), Id b $o f $== f	goal 5 (ID 37) is:	 forall (a b : Unit) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 30;
-            data = "No more goals.	";
+            data = "5 goals (ID 43)	  	  a, b, c : Unit	  g : b $-> c	  ============================	  forall a0 b0 : a $-> b,	  (a0 $-> b0) -> cat_postcomp a g a0 $-> cat_postcomp a g b0		goal 2 (ID 49) is:	 forall a0 b0 : b $-> c,	 (a0 $-> b0) -> cat_precomp c f a0 $-> cat_precomp c f b0	goal 3 (ID 35) is:	 forall (a b c d : Unit) (f : a $-> b) (g : b $-> c) 	 (h : c $-> d), h $o g $o f $== h $o (g $o f)	goal 4 (ID 36) is:	 forall (a b : Unit) (f : a $-> b), Id b $o f $== f	goal 5 (ID 37) is:	 forall (a b : Unit) (f : a $-> b), f $o Id a $== f	";
             responses[i]=data;
           
 
             i = 31;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -228,6 +228,11 @@
           
 
             i = 42;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 43;
             data = "";
             responses[i]=data;
           
@@ -355,35 +360,42 @@ Unit category
       mouseover(26, '0_3_7');
       "><br>
 <br>
-<span class="id" title="keyword">Global Instance</span> <a id="is1cat_unit" class="idref" href="#is1cat_unit"><span class="id" title="instance">is1cat_unit</span></a> : <a class="idref" href="HoTT.WildCat.Core.html#Is1Cat"><span class="id" title="class">Is1Cat</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Global Instance</span> <a id="is2graph_unit" class="idref" href="#is2graph_unit"><span class="id" title="instance">is2graph_unit</span></a> : <a class="idref" href="HoTT.WildCat.Core.html#Is2Graph"><span class="id" title="class">Is2Graph</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a><br>
+  := <span class="id" title="keyword">fun</span> <a id="f:1" class="idref" href="#f:1"><span class="id" title="binder">f</span></a> <a id="g:2" class="idref" href="#g:2"><span class="id" title="binder">g</span></a> ⇒ <a class="idref" href="HoTT.WildCat.UnitCat.html#isgraph_unit"><span class="id" title="instance">isgraph_unit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(27, '0_3_7');
       "><br>
-<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+<br>
+<span class="id" title="keyword">Global Instance</span> <a id="is1cat_unit" class="idref" href="#is1cat_unit"><span class="id" title="instance">is1cat_unit</span></a> : <a class="idref" href="HoTT.WildCat.Core.html#Is1Cat"><span class="id" title="class">Is1Cat</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(28, '0_3_7');
       "><br>
-  <span class="id" title="tactic">econstructor</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(29, '0_3_7');
       "><br>
-  1,2:<span class="id" title="tactic">econstructor</span>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">econstructor</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(30, '0_3_7');
       "><br>
-  <span class="id" title="var">all</span>:<span class="id" title="tactic">intros</span>; <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>.</span><span class="command" onmouseout="
+  1,2:<span class="id" title="tactic">econstructor</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(31, '0_3_7');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  <span class="id" title="var">all</span>:<span class="id" title="tactic">intros</span>; <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(32, '0_3_7');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(33, '0_3_7');
       "><br>
 </span>
 </div>

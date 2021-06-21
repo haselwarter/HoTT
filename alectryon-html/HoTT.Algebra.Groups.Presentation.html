@@ -261,9 +261,8 @@ FreeGroup_rec (gp_generators P) H f
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk12" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk12"><span class="highlight">rapply Trunc_ind.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">r</span> : gp_rel_index P,
 FreeGroup_rec (gp_generators P) H f
   (gp_relators P r) = group_unit</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight"><span class="kr">forall</span>
-<span class="nv">a</span> : Coeq.Coeq.Coeq
-      (ListQuotient.map1 (gp_rel_index P))
-      (ListQuotient.map2 (gp_rel_index P)),
+<span class="nv">a</span> : Coeq.Coeq.Coeq (FreeGroup.map1 (gp_rel_index P))
+      (FreeGroup.map2 (gp_rel_index P)),
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv f
   (FreeGroup_rec (gp_rel_index P)
      (FreeGroup (gp_generators P)) 
@@ -275,11 +274,11 @@ FreeGroup_rec (gp_generators P) H f
      (tr a))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk13" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk13"><span class="highlight">srapply Coeq.Coeq.Coeq_ind.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">r</span> : gp_rel_index P,
 FreeGroup_rec (gp_generators P) H f
-  (gp_relators P r) = group_unit</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight"><span class="kr">forall</span> <span class="nv">a</span> : ListQuotient.Words (gp_rel_index P),
+  (gp_relators P r) = group_unit</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight"><span class="kr">forall</span> <span class="nv">a</span> : FreeGroup.Words (gp_rel_index P),
 (<span class="kr">fun</span>
    <span class="nv">w</span> : Coeq.Coeq.Coeq
-         (ListQuotient.map1 (gp_rel_index P))
-         (ListQuotient.map2 (gp_rel_index P)) =&gt;
+         (FreeGroup.map1 (gp_rel_index P))
+         (FreeGroup.map2 (gp_rel_index P)) =&gt;
  ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
    f
    (FreeGroup_rec (gp_rel_index P)
@@ -293,14 +292,14 @@ FreeGroup_rec (gp_generators P) H f
       (tr w))) (Coeq.Coeq.coeq a)</span></div></blockquote><div class="alectryon-extra-goals"><input class="alectryon-extra-goal-toggle" id="presentation-v-chk14" style="display: none" type="checkbox"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">r</span> : gp_rel_index P,
 FreeGroup_rec (gp_generators P) H f
   (gp_relators P r) = group_unit</span></span></span></span></div></div><label class="goal-separator alectryon-extra-goal-label" for="presentation-v-chk14"><hr></label><div class="goal-conclusion"><span class="highlight"><span class="kr">forall</span>
-<span class="nv">b</span> : ListQuotient.Words (gp_rel_index P) *
+<span class="nv">b</span> : FreeGroup.Words (gp_rel_index P) *
     (gp_rel_index P + gp_rel_index P) *
-    ListQuotient.Words (gp_rel_index P),
+    FreeGroup.Words (gp_rel_index P),
 transport
   (<span class="kr">fun</span>
      <span class="nv">w</span> : Coeq.Coeq.Coeq
-           (ListQuotient.map1 (gp_rel_index P))
-           (ListQuotient.map2 (gp_rel_index P)) =&gt;
+           (FreeGroup.map1 (gp_rel_index P))
+           (FreeGroup.map2 (gp_rel_index P)) =&gt;
    ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
      f
      (FreeGroup_rec (gp_rel_index P)
@@ -313,15 +312,15 @@ transport
         (FreeGroup (gp_generators P))
         (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit) 
         (tr w))) (Coeq.Coeq.cglue b)
-  (<span class="nl">?coeq&#39;</span> (ListQuotient.map1 (gp_rel_index P) b)) =
-<span class="nl">?coeq&#39;</span> (ListQuotient.map2 (gp_rel_index P) b)</span></div></blockquote></div></div></div></small><span class="alectryon-wsp">
+  (<span class="nl">?coeq&#39;</span> (FreeGroup.map1 (gp_rel_index P) b)) =
+<span class="nl">?coeq&#39;</span> (FreeGroup.map2 (gp_rel_index P) b)</span></div></blockquote></div></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk15" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk15"><span class="highlight"><span class="mi">2</span>: <span class="nb">intros</span>; <span class="nb">apply</span> path_ishprop.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">r</span> : gp_rel_index P,
 FreeGroup_rec (gp_generators P) H f
-  (gp_relators P r) = group_unit</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight"><span class="kr">forall</span> <span class="nv">a</span> : ListQuotient.Words (gp_rel_index P),
+  (gp_relators P r) = group_unit</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight"><span class="kr">forall</span> <span class="nv">a</span> : FreeGroup.Words (gp_rel_index P),
 (<span class="kr">fun</span>
    <span class="nv">w</span> : Coeq.Coeq.Coeq
-         (ListQuotient.map1 (gp_rel_index P))
-         (ListQuotient.map2 (gp_rel_index P)) =&gt;
+         (FreeGroup.map1 (gp_rel_index P))
+         (FreeGroup.map2 (gp_rel_index P)) =&gt;
  ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
    f
    (FreeGroup_rec (gp_rel_index P)
@@ -335,7 +334,7 @@ FreeGroup_rec (gp_generators P) H f
       (tr w))) (Coeq.Coeq.coeq a)</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">    </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk16" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk16"><span class="highlight"><span class="nb">intros</span> w; <span class="nb">hnf</span>.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">r</span> : gp_rel_index P,
 FreeGroup_rec (gp_generators P) H f
-  (gp_relators P r) = group_unit</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">w</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">ListQuotient.Words (gp_rel_index P)</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv f
+  (gp_relators P r) = group_unit</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">w</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">FreeGroup.Words (gp_rel_index P)</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv f
   (FreeGroup_rec (gp_rel_index P)
      (FreeGroup (gp_generators P)) 
      (gp_relators P) (tr (Coeq.Coeq.coeq w))) =
@@ -413,9 +412,9 @@ FreeGroup_rec (gp_generators P) H f
      (tr (Coeq.Coeq.coeq w)))</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">Trunc_rec
   (Coeq.Coeq_rec H (words_rec (gp_generators P) H f)
      (<span class="kr">fun</span>
-        <span class="nv">b0</span> : ListQuotient.Words (gp_generators P) *
+        <span class="nv">b0</span> : FreeGroup.Words (gp_generators P) *
              (gp_generators P + gp_generators P) *
-             ListQuotient.Words (gp_generators P) =&gt;
+             FreeGroup.Words (gp_generators P) =&gt;
       words_rec_coh (gp_generators P) H f
         (snd (fst b0)) (fst (fst b0)) 
         (snd b0)))
@@ -430,9 +429,9 @@ FreeGroup_rec (gp_generators P) H f
 Trunc_rec
   (Coeq.Coeq_rec H (words_rec (gp_generators P) H f)
      (<span class="kr">fun</span>
-        <span class="nv">b0</span> : ListQuotient.Words (gp_generators P) *
+        <span class="nv">b0</span> : FreeGroup.Words (gp_generators P) *
              (gp_generators P + gp_generators P) *
-             ListQuotient.Words (gp_generators P) =&gt;
+             FreeGroup.Words (gp_generators P) =&gt;
       words_rec_coh (gp_generators P) H f
         (snd (fst b0)) (fst (fst b0)) 
         (snd b0)))
@@ -462,9 +461,9 @@ FreeGroup_rec (gp_generators P) H f
      (tr (Coeq.Coeq.coeq w)))</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">Trunc_rec
   (Coeq.Coeq_rec H (words_rec (gp_generators P) H f)
      (<span class="kr">fun</span>
-        <span class="nv">b0</span> : ListQuotient.Words (gp_generators P) *
+        <span class="nv">b0</span> : FreeGroup.Words (gp_generators P) *
              (gp_generators P + gp_generators P) *
-             ListQuotient.Words (gp_generators P) =&gt;
+             FreeGroup.Words (gp_generators P) =&gt;
       words_rec_coh (gp_generators P) H f
         (snd (fst b0)) (fst (fst b0)) 
         (snd b0)))
@@ -503,9 +502,9 @@ FreeGroup_rec (gp_generators P) H f
      (tr (Coeq.Coeq.coeq w)))</span></span></span></span></div></div><label class="goal-separator alectryon-extra-goal-label" for="presentation-v-chk1d"><hr></label><div class="goal-conclusion"><span class="highlight">Trunc_rec
   (Coeq.Coeq_rec H (words_rec (gp_generators P) H f)
      (<span class="kr">fun</span>
-        <span class="nv">b0</span> : ListQuotient.Words (gp_generators P) *
+        <span class="nv">b0</span> : FreeGroup.Words (gp_generators P) *
              (gp_generators P + gp_generators P) *
-             ListQuotient.Words (gp_generators P) =&gt;
+             FreeGroup.Words (gp_generators P) =&gt;
       words_rec_coh (gp_generators P) H f
         (snd (fst b0)) (fst (fst b0)) 
         (snd b0)))
@@ -690,7 +689,7 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
   f
   (FreeGroup_rec (gp_rel_index P)
      (FreeGroup (gp_generators P))
-     (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit) x)</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p'</span><span><span class="hyp-body-block"><span class="hyp-punct">:=</span><span class="hyp-body"><span class="highlight">p o freegroup_eta (gp_rel_index P)</span></span></span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">x</span> : ListQuotient.Words (gp_rel_index P),
+     (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit) x)</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p'</span><span><span class="hyp-body-block"><span class="hyp-punct">:=</span><span class="hyp-body"><span class="highlight">p o freegroup_eta (gp_rel_index P)</span></span></span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">x</span> : FreeGroup.Words (gp_rel_index P),
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
   f
   (FreeGroup_rec (gp_rel_index P)
@@ -704,7 +703,7 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
      (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit)
      (freegroup_eta (gp_rel_index P) x))</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">FreeGroup_rec (gp_generators P) H f (gp_relators P r) =
 group_unit</span></div></blockquote></div></div></small><span class="alectryon-wsp">
-</span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk28" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk28"><span class="highlight"><span class="nb">clearbody</span> p&#39;; <span class="nb">clear</span> p.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p'</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">x</span> : ListQuotient.Words (gp_rel_index P),
+</span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk28" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk28"><span class="highlight"><span class="nb">clearbody</span> p&#39;; <span class="nb">clear</span> p.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p'</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight"><span class="kr">forall</span> <span class="nv">x</span> : FreeGroup.Words (gp_rel_index P),
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
   f
   (FreeGroup_rec (gp_rel_index P)
@@ -718,13 +717,13 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
      (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit)
      (freegroup_eta (gp_rel_index P) x))</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">FreeGroup_rec (gp_generators P) H f (gp_relators P r) =
 group_unit</span></div></blockquote></div></div></small><span class="alectryon-wsp">
-</span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk29" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk29"><span class="highlight"><span class="nb">specialize</span> (p&#39; (ListQuotient.word_sing _ (inl r))).</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p'</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
+</span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk29" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk29"><span class="highlight"><span class="nb">specialize</span> (p&#39; (FreeGroup.word_sing _ (inl r))).</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">p'</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
   f
   (FreeGroup_rec (gp_rel_index P)
      (FreeGroup (gp_generators P))
      (gp_relators P)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
+        (FreeGroup.word_sing 
            (gp_rel_index P) 
            (inl r)))) =
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
@@ -733,7 +732,7 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
      (FreeGroup (gp_generators P))
      (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
+        (FreeGroup.word_sing 
            (gp_rel_index P) 
            (inl r))))</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">FreeGroup_rec (gp_generators P) H f (gp_relators P r) =
 group_unit</span></div></blockquote></div></div></small><span class="alectryon-wsp">
@@ -743,7 +742,7 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
      (FreeGroup (gp_generators P))
      (gp_relators P)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
+        (FreeGroup.word_sing 
            (gp_rel_index P) 
            (inl r)))) =
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv
@@ -752,7 +751,7 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
      (FreeGroup (gp_generators P))
      (<span class="kr">fun</span> <span class="nv">_</span> : gp_rel_index P =&gt; group_unit)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
+        (FreeGroup.word_sing 
            (gp_rel_index P) 
            (inl r))))</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">FreeGroup_rec (gp_generators P) H f (gp_relators P r) =
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv f
@@ -760,26 +759,20 @@ group_unit</span></div></blockquote></div></div></small><span class="alectryon-w
      (FreeGroup (gp_generators P)) 
      (gp_relators P)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
-           (gp_rel_index P) 
-           (inl r))))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
+        (FreeGroup.word_sing (gp_rel_index P) (inl r))))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk2b" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk2b"><span class="highlight"><span class="nb">clear</span> p&#39;.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">FreeGroup_rec (gp_generators P) H f (gp_relators P r) =
 ((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv f
   (FreeGroup_rec (gp_rel_index P)
      (FreeGroup (gp_generators P)) 
      (gp_relators P)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
-           (gp_rel_index P) 
-           (inl r))))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
+        (FreeGroup.word_sing (gp_rel_index P) (inl r))))</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk2c" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk2c"><span class="highlight"><span class="nb">symmetry</span>.</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv f
   (FreeGroup_rec (gp_rel_index P)
      (FreeGroup (gp_generators P)) 
      (gp_relators P)
      (freegroup_eta (gp_rel_index P)
-        (ListQuotient.word_sing 
-           (gp_rel_index P) 
-           (inl r)))) =
+        (FreeGroup.word_sing (gp_rel_index P) (inl r)))) =
 FreeGroup_rec (gp_generators P) H f (gp_relators P r)</span></div></blockquote></div></div></small><span class="alectryon-wsp">
 </span></span><span class="alectryon-wsp">  </span><span class="alectryon-sentence"><input class="alectryon-toggle" id="presentation-v-chk2d" style="display: none" type="checkbox"><label class="alectryon-input" for="presentation-v-chk2d"><span class="highlight"><span class="nb">refine</span> (grp_homo_op _ _ _ @ _).</span></label><small class="alectryon-output"><div class="alectryon-output-sticky-wrapper"><div class="alectryon-goals"><blockquote class="alectryon-goal"><div class="goal-hyps"><div class="goal-hyp"><span class="hyp-names">funext</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Funext</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">G</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">P</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">HasPresentation G</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">H</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">Group</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">f</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_generators P -&gt; H</span></span></span></span></div><div class="goal-hyp"><span class="hyp-names">r</span><span><span class="hyp-type-block"><span class="hyp-punct">:</span><span class="hyp-type"><span class="highlight">gp_rel_index P</span></span></span></span></div></div><span class="goal-separator"><hr></span><div class="goal-conclusion"><span class="highlight">sg_op
   (((equiv_freegroup_rec H (gp_generators P))^-<span class="mi">1</span>)%equiv

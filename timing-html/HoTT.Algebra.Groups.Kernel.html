@@ -30,28 +30,28 @@ pre {
 
 <div class="code" title="File: Kernel.v
 Line: 1
-Time: 0.051s">
-<div class="time" style="width: 55.434782608696%"></div>
+Time: 0.047s">
+<div class="time" style="width: 55.952380952381%"></div>
 <pre>Require Import Basics Types HSet.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 1
-Time: 0.092s">
+Time: 0.084s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Algebra.Groups.Group.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 2.1739130434783%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
 Require Import Algebra.Groups.Subgroup.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -95,8 +95,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 11
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   snrapply Build_NormalSubgroup.</pre>
 </div>
@@ -109,8 +109,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 13
-Time: 0.062s">
-<div class="time" style="width: 67.391304347826%"></div>
+Time: 0.057s">
+<div class="time" style="width: 67.857142857143%"></div>
 <pre> srapply (Build_Subgroup' (fun x =&gt; f x = group_unit)).</pre>
 </div>
 <div class="code" title="File: Kernel.v
@@ -143,8 +143,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 17
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
     rewrite q; apply right_inverse.</pre>
 </div>
@@ -157,28 +157,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros x y; cbn.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 19
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
     rewrite 2 grp_homo_op.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
     rewrite 2 grp_homo_inv.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (_^-1 oE grp_moveL_M1).</pre>
 </div>
@@ -198,8 +198,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 24
-Time: 0.005s">
-<div class="time" style="width: 5.4347826086957%"></div>
+Time: 0.004s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -216,7 +216,7 @@ Time: 0s">
 <div class="code" title="File: Kernel.v
 Line: 28
 Time: 0.002s">
-<div class="time" style="width: 2.1739130434783%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Proposition grp_kernel_corec {A B G : Group} {f : A $-&gt; B} {g : G $-&gt; A}
             (h : f $o g == grp_homo_const) : G $-&gt; grp_kernel f.</pre>
 </div>
@@ -229,8 +229,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 30
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   snrapply Build_GroupHomomorphism.</pre>
 </div>
@@ -243,8 +243,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 32
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre> exact (fun x:G =&gt; (g x; h x)).</pre>
 </div>
 <div class="code" title="File: Kernel.v
@@ -262,8 +262,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 33
-Time: 0.007s">
-<div class="time" style="width: 7.6086956521739%"></div>
+Time: 0.006s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
     apply path_sigma_hprop; cbn.</pre>
 </div>
@@ -277,14 +277,14 @@ Time: 0s">
 <div class="code" title="File: Kernel.v
 Line: 35
 Time: 0.002s">
-<div class="time" style="width: 2.1739130434783%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 2.1739130434783%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
 
 Theorem equiv_grp_kernel_corec `{Funext} {A B G : Group} {f : A $-&gt; B}
@@ -299,8 +299,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
   srapply equiv_adjointify.</pre>
 </div>
@@ -319,8 +319,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     srefine (_ $o k; _).</pre>
 </div>
@@ -375,20 +375,20 @@ Time: 0s">
 <div class="code" title="File: Kernel.v
 Line: 49
 Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre> intros [g p].</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 49
-Time: 0.039s">
-<div class="time" style="width: 42.391304347826%"></div>
+Time: 0.033s">
+<div class="time" style="width: 39.285714285714%"></div>
 <pre>
     apply path_sigma_hprop; unfold pr1.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
     apply equiv_path_grouphomomorphism; intro; reflexivity.</pre>
 </div>
@@ -407,22 +407,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 52
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply equiv_path_grouphomomorphism; intro x.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 53
 Time: 0.007s">
-<div class="time" style="width: 7.6086956521739%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
     apply path_sigma_hprop; reflexivity.</pre>
 </div>
 <div class="code" title="File: Kernel.v
 Line: 54
-Time: 0.006s">
-<div class="time" style="width: 6.5217391304348%"></div>
+Time: 0.005s">
+<div class="time" style="width: 5.952380952381%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -436,8 +436,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 57
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Proposition equiv_kernel_isembedding `{Univalence} {A B : Group} (f : A $-&gt; B)
   : (grp_kernel f = trivial_subgroup :&gt; Subgroup A) &lt;~&gt; IsEmbedding f.</pre>
 </div>
@@ -457,8 +457,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 60
-Time: 0.074s">
-<div class="time" style="width: 80.434782608696%"></div>
+Time: 0.057s">
+<div class="time" style="width: 67.857142857143%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
 </div>
@@ -498,8 +498,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 65
-Time: 0.023s">
-<div class="time" style="width: 25%"></div>
+Time: 0.016s">
+<div class="time" style="width: 19.047619047619%"></div>
 <pre>
     apply path_sigma_hprop; cbn.</pre>
 </div>
@@ -519,8 +519,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 68
-Time: 0.001s">
-<div class="time" style="width: 1.0869565217391%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     rewrite grp_homo_op, grp_homo_inv.</pre>
 </div>
@@ -621,8 +621,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Kernel.v
 Line: 80
-Time: 0.003s">
-<div class="time" style="width: 3.2608695652174%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
 Defined.</pre>
 </div>

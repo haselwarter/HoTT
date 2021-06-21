@@ -30,13 +30,13 @@ pre {
 
 <div class="code" title="File: ring_tac.v
 Line: 1
-Time: 0.038s">
-<div class="time" style="width: 33.333333333333%"></div>
+Time: 0.035s">
+<div class="time" style="width: 33.653846153846%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.Bool.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 1
-Time: 0.114s">
+Time: 0.104s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import
@@ -83,8 +83,8 @@ Context `{DecidablePaths C}.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 18
-Time: 0.003s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre>
 
 Context `(phi : C -&gt; R) `{AlmostRingPreserving C R phi}
@@ -92,8 +92,8 @@ Context `(phi : C -&gt; R) `{AlmostRingPreserving C R phi}
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 21
-Time: 0.012s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.6153846153846%"></div>
 <pre>
 
 Lemma normalize_eq `{Q : @Quoting.EqQuote R _ _ _ _ _ V l n m V' l'}
@@ -120,21 +120,21 @@ intros E.</pre>
 <div class="code" title="File: ring_tac.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
 eapply Quoting.eval_eqquote.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 31
-Time: 0.032s">
-<div class="time" style="width: 28.070175438596%"></div>
+Time: 0.03s">
+<div class="time" style="width: 28.846153846154%"></div>
 <pre>
 etransitivity;[symmetry;apply (eval_toPol _)|].</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 32
-Time: 0.028s">
-<div class="time" style="width: 24.561403508772%"></div>
+Time: 0.027s">
+<div class="time" style="width: 25.961538461538%"></div>
 <pre>
 etransitivity;[|apply (eval_toPol _)].</pre>
 </div>
@@ -147,15 +147,15 @@ exact E.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 34
-Time: 0.002s">
-<div class="time" style="width: 1.7543859649123%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 35
-Time: 0.036s">
-<div class="time" style="width: 31.578947368421%"></div>
+Time: 0.034s">
+<div class="time" style="width: 32.692307692308%"></div>
 <pre>
 
 Lemma by_quoting `{Q : @Quoting.EqQuote R _ _ _ _ _ V l n m V' l'}
@@ -188,21 +188,21 @@ apply normalize_eq.</pre>
 <div class="code" title="File: ring_tac.v
 Line: 44
 Time: 0.002s">
-<div class="time" style="width: 1.7543859649123%"></div>
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre>
 apply eval_eqb,E.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 46
-Time: 0.005s">
-<div class="time" style="width: 4.3859649122807%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.7692307692308%"></div>
 <pre>
 
 Lemma normalize_prequoted `{Trichotomy V Vlt} (a b : Quoting.Expr V) vs
@@ -219,7 +219,7 @@ Proof.</pre>
 <div class="code" title="File: ring_tac.v
 Line: 51
 Time: 0.007s">
-<div class="time" style="width: 6.140350877193%"></div>
+<div class="time" style="width: 6.7307692307692%"></div>
 <pre>
 rewrite !(eval_toPol _).</pre>
 </div>
@@ -239,8 +239,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 54
-Time: 0.05s">
-<div class="time" style="width: 43.859649122807%"></div>
+Time: 0.047s">
+<div class="time" style="width: 45.192307692308%"></div>
 <pre>
 
 Lemma prove_prequoted `{Trichotomy V Vlt} (a b : Quoting.Expr V) vs
@@ -269,8 +269,8 @@ apply normalize_prequoted.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 60
-Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 apply eval_eqb;trivial.</pre>
 </div>
@@ -283,8 +283,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 62
-Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 End content.</pre>
@@ -323,8 +323,8 @@ Arguments negate_almostneg _ _ _ /.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 72
-Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance semiring_almostring `{IsSemiRing A} : AlmostRing A | 10.</pre>
@@ -372,8 +372,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 79
-Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance ring_almostring `{IsRing A} : AlmostRing A.</pre>
@@ -421,8 +421,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 86
-Time: 0.003s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre>
 
 Global Instance sr_mor_almostring_mor `{IsSemiRingPreserving A B f}
@@ -478,15 +478,15 @@ Section VarSec.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 95
-Time: 0.003s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
 Context `{IsRing A} `{IsRing B} {f : A -&gt; B} `{!IsSemiRingPreserving f}.</pre>
 </div>
 <div class="code" title="File: ring_tac.v
 Line: 96
-Time: 0.002s">
-<div class="time" style="width: 1.7543859649123%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
 
 Global Instance ring_mor_almostring_mor : AlmostRingPreserving f.</pre>
@@ -515,7 +515,7 @@ unfold almost_negate;simpl.</pre>
 <div class="code" title="File: ring_tac.v
 Line: 101
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre> apply preserves_negate.</pre>
 </div>
 <div class="code" title="File: ring_tac.v

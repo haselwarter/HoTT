@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: GrpPullback.v
 Line: 1
-Time: 0.064s">
-<div class="time" style="width: 45.390070921986%"></div>
+Time: 0.053s">
+<div class="time" style="width: 53%"></div>
 <pre>Require Import Basics Types Limits.Pullback Cubical.PathSquare.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 1
-Time: 0.105s">
-<div class="time" style="width: 74.468085106383%"></div>
+Time: 0.083s">
+<div class="time" style="width: 83%"></div>
 <pre>
 Require Import Algebra.Groups.Group.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -112,21 +112,21 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 15
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
     intros [b [c p]] [d [e q]].</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 16
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
     refine (b * d; c * e; _).</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 17
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (grp_homo_op f b d @ (_ @ _) @ (grp_homo_op g c e)^).</pre>
 </div>
@@ -158,8 +158,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -181,49 +181,49 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 25
-Time: 0.009s">
-<div class="time" style="width: 6.3829787234043%"></div>
+Time: 0.005s">
+<div class="time" style="width: 5%"></div>
 <pre>
     intros [x1 [x2 p]] [y1 [y2 q]] [z1 [z2 u]].</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 26
-Time: 0.01s">
-<div class="time" style="width: 7.0921985815603%"></div>
+Time: 0.008s">
+<div class="time" style="width: 8%"></div>
 <pre>
     apply equiv_path_pullback; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 27
-Time: 0.041s">
-<div class="time" style="width: 29.078014184397%"></div>
+Time: 0.024s">
+<div class="time" style="width: 24%"></div>
 <pre>
     refine (associativity _ _ _; associativity _ _ _; _).</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
     apply equiv_sq_path.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 29
-Time: 0.029s">
-<div class="time" style="width: 20.567375886525%"></div>
+Time: 0.024s">
+<div class="time" style="width: 24%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 30
-Time: 0.025s">
-<div class="time" style="width: 17.730496453901%"></div>
+Time: 0.018s">
+<div class="time" style="width: 18%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 31
-Time: 0.141s">
+Time: 0.1s">
 <div class="time" style="width: 100%"></div>
 <pre>
 
@@ -232,7 +232,7 @@ Time: 0.141s">
 <div class="code" title="File: GrpPullback.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
   
   Local Instance grp_pullback_mon_unit : MonUnit (Pullback f g)
@@ -256,22 +256,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 40
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intros [b [c p]]; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 41
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
     apply equiv_path_pullback; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 42
-Time: 0.01s">
-<div class="time" style="width: 7.0921985815603%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7%"></div>
 <pre>
     refine (left_identity _; left_identity _; _).</pre>
 </div>
@@ -284,15 +284,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 44
-Time: 0.017s">
-<div class="time" style="width: 12.056737588652%"></div>
+Time: 0.012s">
+<div class="time" style="width: 12%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 45
-Time: 0.006s">
-<div class="time" style="width: 4.2553191489362%"></div>
+Time: 0.005s">
+<div class="time" style="width: 5%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -314,22 +314,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 50
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intros [b [c p]]; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 51
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
     apply equiv_path_pullback; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 52
-Time: 0.009s">
-<div class="time" style="width: 6.3829787234043%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7%"></div>
 <pre>
     refine (right_identity _; right_identity _; _).</pre>
 </div>
@@ -342,22 +342,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 54
-Time: 0.017s">
-<div class="time" style="width: 12.056737588652%"></div>
+Time: 0.012s">
+<div class="time" style="width: 12%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 55
-Time: 0.006s">
-<div class="time" style="width: 4.2553191489362%"></div>
+Time: 0.005s">
+<div class="time" style="width: 5%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 56
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Local Instance ismonoid_grp_pullback : IsMonoid (Pullback f g) := {}.</pre>
@@ -430,29 +430,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 70
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intros [b [c p]].</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 71
-Time: 0.003s">
-<div class="time" style="width: 2.1276595744681%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2%"></div>
 <pre>
     unfold grp_pullback_sgop; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 72
 Time: 0.003s">
-<div class="time" style="width: 2.1276595744681%"></div>
+<div class="time" style="width: 3%"></div>
 <pre>
     apply equiv_path_pullback; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 73
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
     refine (left_inverse _; left_inverse _; _).</pre>
 </div>
@@ -465,15 +465,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 75
-Time: 0.017s">
-<div class="time" style="width: 12.056737588652%"></div>
+Time: 0.012s">
+<div class="time" style="width: 12%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 76
-Time: 0.015s">
-<div class="time" style="width: 10.63829787234%"></div>
+Time: 0.01s">
+<div class="time" style="width: 10%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -495,29 +495,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intros [b [c p]].</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 82
-Time: 0.005s">
-<div class="time" style="width: 3.5460992907801%"></div>
+Time: 0.004s">
+<div class="time" style="width: 4%"></div>
 <pre>
     unfold grp_pullback_sgop; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 83
-Time: 0.008s">
-<div class="time" style="width: 5.6737588652482%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7%"></div>
 <pre>
     apply equiv_path_pullback; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 84
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
     refine (right_inverse _; right_inverse _; _).</pre>
 </div>
@@ -530,22 +530,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 86
-Time: 0.016s">
-<div class="time" style="width: 11.347517730496%"></div>
+Time: 0.012s">
+<div class="time" style="width: 12%"></div>
 <pre>
     apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 87
-Time: 0.012s">
-<div class="time" style="width: 8.5106382978723%"></div>
+Time: 0.011s">
+<div class="time" style="width: 11%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 88
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance isgroup_grp_pullback : IsGroup (Pullback f g) := {}.</pre>
@@ -576,8 +576,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     snrapply Build_GroupHomomorphism.</pre>
 </div>
@@ -683,8 +683,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 107
-Time: 0.003s">
-<div class="time" style="width: 2.1276595744681%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
 
   Proposition grp_pullback_corec {X : Group}
@@ -701,8 +701,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 113
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     snrapply Build_GroupHomomorphism.</pre>
 </div>
@@ -734,8 +734,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       srapply path_sigma.</pre>
 </div>
@@ -775,7 +775,7 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 120
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
         refine (transport_sigma' _ _ @ _).</pre>
 </div>
@@ -787,8 +787,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 121
-Time: 0.024s">
-<div class="time" style="width: 17.021276595745%"></div>
+Time: 0.019s">
+<div class="time" style="width: 19%"></div>
 <pre>
         apply path_sigma_hprop.</pre>
 </div>
@@ -808,15 +808,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 124
-Time: 0.017s">
-<div class="time" style="width: 12.056737588652%"></div>
+Time: 0.014s">
+<div class="time" style="width: 14%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 125
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
 
   Corollary grp_pullback_corec' (X : Group)
@@ -832,8 +832,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 130
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intros [b [c p]]; exact (grp_pullback_corec b c p).</pre>
 </div>
@@ -846,8 +846,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 132
-Time: 0.052s">
-<div class="time" style="width: 36.879432624113%"></div>
+Time: 0.045s">
+<div class="time" style="width: 45%"></div>
 <pre>
 
 End GrpPullback.</pre>
@@ -878,7 +878,7 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 139
 Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+<div class="time" style="width: 2%"></div>
 <pre>
 
   Lemma grp_pullback_corec_pr1 {X : Group}
@@ -896,7 +896,7 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 145
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
     apply equiv_path_grouphomomorphism; reflexivity.</pre>
 </div>
@@ -909,8 +909,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 147
-Time: 0.003s">
-<div class="time" style="width: 2.1276595744681%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre>
 
   Lemma grp_pullback_corec_pr2 {X : Group}
@@ -928,7 +928,7 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 153
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
     apply equiv_path_grouphomomorphism; reflexivity.</pre>
 </div>
@@ -957,8 +957,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 159
-Time: 0.003s">
-<div class="time" style="width: 2.1276595744681%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2%"></div>
 <pre>
     snrapply isequiv_adjointify.</pre>
 </div>
@@ -977,8 +977,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 161
-Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi; _).</pre>
 </div>
@@ -1005,7 +1005,7 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 164
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
       apply equiv_path_grouphomomorphism; reflexivity.</pre>
 </div>
@@ -1018,14 +1018,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 166
-Time: 0.002s">
-<div class="time" style="width: 1.4184397163121%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1%"></div>
 <pre> intro bcp; simpl.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 166
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre>
       srapply path_sigma.</pre>
 </div>
@@ -1058,13 +1058,13 @@ Time: 0s">
 <div class="code" title="File: GrpPullback.v
 Line: 169
 Time: 0.001s">
-<div class="time" style="width: 0.70921985815603%"></div>
+<div class="time" style="width: 1%"></div>
 <pre> refine (transport_sigma' _ _ @ _).</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 169
-Time: 0.03s">
-<div class="time" style="width: 21.276595744681%"></div>
+Time: 0.022s">
+<div class="time" style="width: 22%"></div>
 <pre>
         apply path_sigma_hprop; simpl pr1.</pre>
 </div>
@@ -1083,15 +1083,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 171
-Time: 0.031s">
-<div class="time" style="width: 21.985815602837%"></div>
+Time: 0.026s">
+<div class="time" style="width: 26%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: GrpPullback.v
 Line: 172
-Time: 0.007s">
-<div class="time" style="width: 4.9645390070922%"></div>
+Time: 0.006s">
+<div class="time" style="width: 6%"></div>
 <pre>
 
 End IsEquivGrpPullbackCorec.</pre>

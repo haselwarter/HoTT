@@ -39,7 +39,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 3
-Time: 0.041s">
+Time: 0.049s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
@@ -86,7 +86,7 @@ Proof.</pre>
 <div class="code" title="File: HProp.v
 Line: 12
 Time: 0.006s">
-<div class="time" style="width: 14.634146341463%"></div>
+<div class="time" style="width: 12.244897959184%"></div>
 <pre>
   apply (equiv_adjointify (@path_ishprop A) (@hprop_allpath A));
   (* The proofs of the two homotopies making up this equivalence are almost identical.  First we start with a thing [f]. *)
@@ -146,7 +146,7 @@ Time: 0s">
 <div class="code" title="File: HProp.v
 Line: 30
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 4.0816326530612%"></div>
 <pre> by_extensionality x.</pre>
 </div>
 <div class="code" title="File: HProp.v
@@ -184,13 +184,13 @@ Time: 0s">
 <div class="code" title="File: HProp.v
 Line: 32
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 4.0816326530612%"></div>
 <pre> by_extensionality x.</pre>
 </div>
 <div class="code" title="File: HProp.v
 Line: 32
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre> by_extensionality y.</pre>
 </div>
 <div class="code" title="File: HProp.v
@@ -202,8 +202,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply contr_contr.</pre>
 </div>
 <div class="code" title="File: HProp.v
@@ -258,7 +258,7 @@ Time: 0s">
 <div class="code" title="File: HProp.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
   transitivity (fst (d (d^-1 (x,y)))).</pre>
 </div>
@@ -285,7 +285,7 @@ Time: 0s">
 <div class="code" title="File: HProp.v
 Line: 43
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre> transitivity (snd (d (d^-1 (x,y)))).</pre>
 </div>
 <div class="code" title="File: HProp.v
@@ -317,7 +317,7 @@ Time: 0s">
 <div class="code" title="File: HProp.v
 Line: 45
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -359,8 +359,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 52
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply path_prod; simpl.</pre>
 </div>
@@ -473,8 +473,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 69
-Time: 0.008s">
-<div class="time" style="width: 19.512195121951%"></div>
+Time: 0.007s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   abstract (rewrite transport_paths_Fl; cbn;
             rewrite (H x1 x2 (p1 @ p2^));
@@ -483,7 +483,7 @@ Time: 0.008s">
 <div class="code" title="File: HProp.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -610,8 +610,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 85
-Time: 0.01s">
-<div class="time" style="width: 24.390243902439%"></div>
+Time: 0.011s">
+<div class="time" style="width: 22.448979591837%"></div>
 <pre> refine (@equiv_iff_hprop _ _ _ _ f g).</pre>
 </div>
 <div class="code" title="File: HProp.v
@@ -651,7 +651,7 @@ Time: 0s">
 <div class="code" title="File: HProp.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre> apply (@contr_inhabited_hprop _ _ (snd p)).</pre>
 </div>
 <div class="code" title="File: HProp.v
@@ -680,7 +680,7 @@ Proof.</pre>
 <div class="code" title="File: HProp.v
 Line: 94
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
   transitivity (A * IsHProp A).</pre>
 </div>
@@ -729,8 +729,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 102
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>Global Instance isequiv_equiv_iff_hprop_uncurried
        `{Funext} {A B} `{IsHProp A} `{IsHProp B}
 : IsEquiv (@equiv_iff_hprop_uncurried A _ B _) | 0.</pre>
@@ -751,8 +751,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HProp.v
 Line: 106
-Time: 0.01s">
-<div class="time" style="width: 24.390243902439%"></div>
+Time: 0.012s">
+<div class="time" style="width: 24.489795918367%"></div>
 <pre>
   refine (isequiv_adjointify
             equiv_iff_hprop_uncurried
@@ -764,7 +764,7 @@ Time: 0.01s">
 <div class="code" title="File: HProp.v
 Line: 112
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -917,7 +917,7 @@ Proof.</pre>
 <div class="code" title="File: HProp.v
 Line: 139
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
   destruct (dec hprop) as [x|nx].</pre>
 </div>

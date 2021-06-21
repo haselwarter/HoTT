@@ -117,8 +117,8 @@ Fixpoint length {A} (l : list A) := match l with
 </div>
 <div class="code" title="File: list.v
 Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Fixpoint fold_left {A B} (f : A -&gt; B -&gt; A) (acc : A) (l : list B) :=
@@ -323,8 +323,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 
 Fixpoint for_all {A} (P : A -&gt; Type) l : Type :=
@@ -365,8 +365,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma for_all_map {A B} P Q (f : A -&gt; B) (Hf : forall x, P x -&gt; Q (f x))
@@ -381,8 +381,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 82
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 intros l;induction l as [|x l IHl];simpl.</pre>
 </div>
@@ -408,8 +408,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 85
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [Hx Hl].</pre>
 </div>
 <div class="code" title="File: list.v
@@ -420,8 +420,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 85
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -467,8 +467,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [|y l2] _; auto.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -512,8 +512,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: list.v
 Line: 99
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma fold_preserves {A B} P Q (f : A -&gt; B -&gt; A)
@@ -588,8 +588,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -657,8 +657,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 118
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: list.v
@@ -697,8 +697,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 128
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8130081300813%"></div>
 <pre>Fixpoint InList {A} (a:A) (l:list A) : Type0 :=
   match l with
     | [] =&gt; False
@@ -707,8 +707,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: list.v
 Line: 132
-Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6260162601626%"></div>
 <pre>
 
 Fixpoint fold_right {A} {B} (f : B -&gt; A -&gt; A) (x : A) (l : list B) : A :=

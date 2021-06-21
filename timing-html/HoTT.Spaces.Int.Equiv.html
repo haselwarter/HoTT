@@ -43,15 +43,15 @@ Require Import Spaces.Pos.</pre>
 </div>
 <div class="code" title="File: Equiv.v
 Line: 2
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre>
 Require Import Spaces.Int.Core.</pre>
 </div>
 <div class="code" title="File: Equiv.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Spaces.Int.Spec.</pre>
 </div>
@@ -69,8 +69,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 9
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre>Definition int_iter {A} (f : A -&gt; A) `{!IsEquiv f} (n : Int) : A -&gt; A
   := match n with
       | neg n =&gt; fun x =&gt; pos_iter f^-1 n x
@@ -106,8 +106,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Equiv.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre>
   destruct n as [n| |n]; trivial.</pre>
 </div>
@@ -265,8 +265,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Equiv.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
    destruct n as [n| |n]; trivial.</pre>
 </div>
@@ -339,8 +339,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 50
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (ap (fun x =&gt; _ x _) _ @ _).</pre>
 </div>
@@ -452,8 +452,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 67
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre>
     by rewrite pos_iter_succ_l.</pre>
 </div>
@@ -486,8 +486,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre> cbn; symmetry; apply eissect.</pre>
 </div>
 <div class="code" title="File: Equiv.v
@@ -535,8 +535,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       rewrite int_iter_succ_l.</pre>
 </div>
@@ -556,15 +556,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 81
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Equiv.v
 Line: 82
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre>
 
 Definition iter_int_pred_r {A} (f : A -&gt; A) `{IsEquiv _ _ f}
@@ -595,15 +595,15 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 90
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.125%"></div>
 <pre>
   2: hnf; intros; apply symmetry, eisretr.</pre>
 </div>
 <div class="code" title="File: Equiv.v
 Line: 91
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   all: rewrite &lt;- pos_add_1_r.</pre>
 </div>
@@ -658,8 +658,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equiv.v
 Line: 99
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   rewrite eisretr.</pre>
 </div>

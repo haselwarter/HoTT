@@ -2868,12 +2868,12 @@
           
 
             i = 570;
-            data = "1 goal (ID 1737)	  	  H : Funext	  A : Type	  point : IsPointed A	  P : A -> Type	  f : forall x : A, P x	  ============================	  1 = 1	";
+            data = "";
             responses[i]=data;
           
 
             i = 571;
-            data = "No more goals.	";
+            data = "1 goal (ID 1737)	  	  H : Funext	  A : Type	  point : IsPointed A	  P : A -> Type	  f : forall x : A, P x	  ============================	  1 = 1	No more goals.	";
             responses[i]=data;
           
 
@@ -3943,12 +3943,12 @@
           
 
             i = 785;
-            data = "";
+            data = "<infomsg>pointify is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 786;
-            data = "";
+            data = "1 goal (ID 1837)	  	  ============================	  Is0Functor pointify	";
             responses[i]=data;
           
 
@@ -3958,21 +3958,226 @@
           
 
             i = 788;
-            data = "";
+            data = "1 goal (ID 1838)	  	  ============================	  forall a b : Type, (a $-> b) -> pointify a $-> pointify b	";
             responses[i]=data;
           
 
             i = 789;
-            data = "";
+            data = "1 goal (ID 1841)	  	  A, B : Type	  f : A $-> B	  ============================	  pointify A $-> pointify B	";
             responses[i]=data;
           
 
             i = 790;
-            data = "";
+            data = "2 goals (ID 1859)	  	  A, B : Type	  f : A $-> B	  ============================	  pointify A -> pointify B		goal 2 (ID 1861) is:	 ?f (point (pointify A)) = point (pointify B)	";
             responses[i]=data;
           
 
             i = 791;
+            data = "1 goal (ID 1861)	  	  A, B : Type	  f : A $-> B	  ============================	  functor_sum f idmap (point (pointify A)) = point (pointify B)	";
+            responses[i]=data;
+          
+
+            i = 792;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 793;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 794;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 795;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 796;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 797;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 798;
+            data = "1 goal (ID 1842)	  	  H : Funext	  A : Type	  X : pType	  ============================	  (pointify A ->* X) <~> (A -> X)	";
+            responses[i]=data;
+          
+
+            i = 799;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 800;
+            data = "4 goals (ID 1866)	  	  H : Funext	  A : Type	  X : pType	  ============================	  (pointify A ->* X) -> A -> X		goal 2 (ID 1868) is:	 (A -> X) -> pointify A ->* X	goal 3 (ID 1870) is:	 ?f o ?g == idmap	goal 4 (ID 1872) is:	 ?g o ?f == idmap	";
+            responses[i]=data;
+          
+
+            i = 801;
+            data = "3 goals (ID 1868)	  	  H : Funext	  A : Type	  X : pType	  ============================	  (A -> X) -> pointify A ->* X		goal 2 (ID 1870) is:	 (fun f : pointify A ->* X => f o inl) o ?g == idmap	goal 3 (ID 1872) is:	 ?g o (fun f : pointify A ->* X => f o inl) == idmap	";
+            responses[i]=data;
+          
+
+            i = 802;
+            data = "1 goal (ID 1868)	  	  H : Funext	  A : Type	  X : pType	  ============================	  (A -> X) -> pointify A ->* X	1 goal (ID 1901)	  	  H : Funext	  A : Type	  X : pType	  f : A -> X	  ============================	  pointify A ->* X	";
+            responses[i]=data;
+          
+
+            i = 803;
+            data = "2 goals (ID 1919)	  	  H : Funext	  A : Type	  X : pType	  f : A -> X	  ============================	  pointify A -> X		goal 2 (ID 1921) is:	 ?f (point (pointify A)) = point X	";
+            responses[i]=data;
+          
+
+            i = 804;
+            data = "1 goal (ID 1919)	  	  H : Funext	  A : Type	  X : pType	  f : A -> X	  ============================	  pointify A -> X	2 goals (ID 1935)	  	  H : Funext	  A : Type	  X : pType	  f : A -> X	  a : A	  ============================	  X		goal 2 (ID 1936) is:	 X	";
+            responses[i]=data;
+          
+
+            i = 805;
+            data = "1 goal (ID 1936)	  	  H : Funext	  A : Type	  X : pType	  f : A -> X	  u : Unit	  ============================	  X	";
+            responses[i]=data;
+          
+
+            i = 806;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 goals		goal 1 (ID 1921) is:	 (fun X0 : pointify A =>	  match X0 with	  | inl a => (fun a0 : A => f a0) a	  | inr b => unit_name (point X) b	  end) (point (pointify A)) = point X	goal 2 (ID 1870) is:	 (fun f : pointify A ->* X => f o inl)	 o (fun f : A -> X =>	    Build_pMap (pointify A) X	      (fun X0 : pointify A =>	       match X0 with	       | inl a => (fun a0 : A => f a0) a	       | inr b => unit_name (point X) b	       end) ?p) == idmap	goal 3 (ID 1872) is:	 (fun f : A -> X =>	  Build_pMap (pointify A) X	    (fun X0 : pointify A =>	     match X0 with	     | inl a => (fun a0 : A => f a0) a	     | inr b => unit_name (point X) b	     end) ?p) o (fun f : pointify A ->* X => f o inl) == idmap	";
+            responses[i]=data;
+          
+
+            i = 807;
+            data = "1 goal (ID 1921)	  	  H : Funext	  A : Type	  X : pType	  f : A -> X	  ============================	  (fun X0 : pointify A =>	   match X0 with	   | inl a => (fun a0 : A => f a0) a	   | inr b => unit_name (point X) b	   end) (point (pointify A)) = point X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 1870) is:	 (fun f : pointify A ->* X => f o inl)	 o (fun f : A -> X =>	    Build_pMap (pointify A) X	      (fun X0 : pointify A =>	       match X0 with	       | inl a => (fun a0 : A => f a0) a	       | inr b => unit_name (point X) b	       end) 1) == idmap	goal 2 (ID 1872) is:	 (fun f : A -> X =>	  Build_pMap (pointify A) X	    (fun X0 : pointify A =>	     match X0 with	     | inl a => (fun a0 : A => f a0) a	     | inr b => unit_name (point X) b	     end) 1) o (fun f : pointify A ->* X => f o inl) == idmap	2 goals (ID 1870)	  	  H : Funext	  A : Type	  X : pType	  ============================	  (fun f : pointify A ->* X => f o inl)	  o (fun f : A -> X =>	     Build_pMap (pointify A) X	       (fun X0 : pointify A =>	        match X0 with	        | inl a => (fun a0 : A => f a0) a	        | inr b => unit_name (point X) b	        end) 1) == idmap		goal 2 (ID 1872) is:	 (fun f : A -> X =>	  Build_pMap (pointify A) X	    (fun X0 : pointify A =>	     match X0 with	     | inl a => (fun a0 : A => f a0) a	     | inr b => unit_name (point X) b	     end) 1) o (fun f : pointify A ->* X => f o inl) == idmap	1 goal (ID 1872)	  	  H : Funext	  A : Type	  X : pType	  ============================	  (fun f : A -> X =>	   Build_pMap (pointify A) X	     (fun X0 : pointify A =>	      match X0 with	      | inl a => (fun a0 : A => f a0) a	      | inr b => unit_name (point X) b	      end) 1) o (fun f : pointify A ->* X => f o inl) == idmap	";
+            responses[i]=data;
+          
+
+            i = 808;
+            data = "1 goal (ID 1947)	  	  H : Funext	  A : Type	  X : pType	  f : pointify A ->* X	  ============================	  Build_pMap (pointify A) X	    (fun X0 : pointify A =>	     match X0 with	     | inl a => f (inl a)	     | inr _ => point X	     end) 1 = f	";
+            responses[i]=data;
+          
+
+            i = 809;
+            data = "1 goal (ID 1948)	  	  H : Funext	  A : Type	  X : pType	  f : pointify A ->* X	  ============================	  {|	    pointed_fun :=	      fun X0 : A + Unit =>	      match X0 with	      | inl a => f (inl a)	      | inr _ => ispointed_type X	      end;	    dpoint_eq := 1	  |} = f	";
+            responses[i]=data;
+          
+
+            i = 810;
+            data = "1 goal (ID 1973)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	    pointed_fun :=	      fun X0 : A + Unit =>	      match X0 with	      | inl a => f (inl a)	      | inr _ => f (inr tt)	      end;	    dpoint_eq := 1	  |} = {| pointed_fun := f; dpoint_eq := 1 |}	";
+            responses[i]=data;
+          
+
+            i = 811;
+            data = "1 goal (ID 1997)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	    pointed_fun :=	      fun X0 : A + Unit =>	      match X0 with	      | inl a => f (inl a)	      | inr _ => f (inr tt)	      end;	    dpoint_eq := 1	  |} ==* {| pointed_fun := f; dpoint_eq := 1 |}	";
+            responses[i]=data;
+          
+
+            i = 812;
+            data = "2 goals (ID 2013)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	    pointed_fun :=	      fun X0 : A + Unit =>	      match X0 with	      | inl a => f (inl a)	      | inr _ => f (inr tt)	      end;	    dpoint_eq := 1	  |} == {| pointed_fun := f; dpoint_eq := 1 |}		goal 2 (ID 2015) is:	 ?p (point {| pointed_type := A + Unit; ispointed_type := inr tt |}) =	 dpoint_eq	   {|	     pointed_fun :=	       fun X0 : A + Unit =>	       match X0 with	       | inl a => f (inl a)	       | inr _ => f (inr tt)	       end;	     dpoint_eq := 1	   |} @ (dpoint_eq {| pointed_fun := f; dpoint_eq := 1 |})^	";
+            responses[i]=data;
+          
+
+            i = 813;
+            data = "1 goal (ID 2015)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  (fun x : {| pointed_type := A + Unit; ispointed_type := inr tt |} =>	   match	     x as s	     return	       ({|	          pointed_fun :=	            fun X0 : A + Unit =>	            match X0 with	            | inl a => f (inl a)	            | inr _ => f (inr tt)	            end;	          dpoint_eq := 1	        |} s = {| pointed_fun := f; dpoint_eq := 1 |} s)	   with	   | inl a => (fun a0 : A => 1) a	   | inr b =>	       (fun u : Unit =>	        match	          u as u0	          return	            ({|	               pointed_fun :=	                 fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	               dpoint_eq := 1	             |} (inr u0) = {| pointed_fun := f; dpoint_eq := 1 |} (inr u0))	        with	        | tt => 1	        end) b	   end) (point {| pointed_type := A + Unit; ispointed_type := inr tt |}) =	  dpoint_eq	    {|	      pointed_fun :=	        fun X0 : A + Unit =>	        match X0 with	        | inl a => f (inl a)	        | inr _ => f (inr tt)	        end;	      dpoint_eq := 1	    |} @ (dpoint_eq {| pointed_fun := f; dpoint_eq := 1 |})^	";
+            responses[i]=data;
+          
+
+            i = 814;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 815;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 816;
+            data = "1 goal (ID 1883)	  	  H : Funext	  A : Type	  ============================	  NatEquiv (opyon (pointify A)) (opyon A o pointed_type)	";
+            responses[i]=data;
+          
+
+            i = 817;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 818;
+            data = "2 goals (ID 2091)	  	  H : Funext	  A : Type	  ============================	  forall a : pType, opyon (pointify A) a $<~> (fun x : pType => opyon A x) a		goal 2 (ID 2093) is:	 Is1Natural (opyon (pointify A)) (fun x : pType => opyon A x)	   (fun a : pType => ?cat_equiv_natequiv a)	";
+            responses[i]=data;
+          
+
+            i = 819;
+            data = "1 goal (ID 2093)	  	  H : Funext	  A : Type	  ============================	  Is1Natural (opyon (pointify A)) (fun x : pType => opyon A x)	    (fun a : pType => equiv_pointify_map A a)	";
+            responses[i]=data;
+          
+
+            i = 820;
+            data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 821;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 822;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 823;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 824;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 825;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 826;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 827;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 828;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 829;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 830;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 831;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 832;
             data = "";
             responses[i]=data;
           
@@ -7142,9 +7347,205 @@ The forgetful map from pType to Type is a 1-functor
       " onmouseover="
       mouseover(781, '0_3_263');
       "><br>
+<br>
 </span>
 </div>
 <div class="goal" id="goal0_3_263"><pre><span></span></pre></div>
+<div class="doc" scenenumber="265">
+The free base point added to a type. This is in fact a functor and left adjoint to the forgetful functor pType to Type. 
+</div>
+<div scenenumber="267" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(785, '0_3_267');
+      ">
+<span class="id" title="keyword">Definition</span> <a id="pointify" class="idref" href="#pointify"><span class="id" title="definition">pointify</span></a> (<a id="S:344" class="idref" href="#S:344"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>) : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a> := <a class="idref" href="HoTT.Basics.Overture.html#Build_pType"><span class="id" title="constructor">Build_pType</span></a> (<a class="idref" href="HoTT.Pointed.Core.html#S:344"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>) (<a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(786, '0_3_267');
+      "><br>
+<br>
+<span class="id" title="keyword">Global Instance</span> <a id="is0functor_pointify" class="idref" href="#is0functor_pointify"><span class="id" title="instance">is0functor_pointify</span></a> : <a class="idref" href="HoTT.WildCat.Core.html#Is0Functor"><span class="id" title="class">Is0Functor</span></a> <a class="idref" href="HoTT.Pointed.Core.html#pointify"><span class="id" title="definition">pointify</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(787, '0_3_267');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(788, '0_3_267');
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is0Functor"><span class="id" title="constructor">Build_Is0Functor</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(789, '0_3_267');
+      "><br>
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(790, '0_3_267');
+      "><br>
+  <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pMap"><span class="id" title="definition">Build_pMap</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(791, '0_3_267');
+      "><br>
+  1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Types.Sum.html#functor_sum"><span class="id" title="definition">functor_sum</span></a> <span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(792, '0_3_267');
+      "><br>
+  <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(793, '0_3_267');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_267');
+      " onmouseover="
+      mouseover(794, '0_3_267');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_267"><pre><span></span></pre></div>
+<div class="doc" scenenumber="269">
+pointify is left adjoint to forgetting the basepoint in the following sense 
+</div>
+<div scenenumber="271" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(798, '0_3_271');
+      ">
+<span class="id" title="keyword">Theorem</span> <a id="equiv_pointify_map" class="idref" href="#equiv_pointify_map"><span class="id" title="lemma">equiv_pointify_map</span></a> `{<a id="H:345" class="idref" href="#H:345"><span class="id" title="binder">Funext</span></a>} (<a id="A:346" class="idref" href="#A:346"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="X:347" class="idref" href="#X:347"><span class="id" title="binder">X</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>)<br>
+  : <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.Core.html#pointify"><span class="id" title="definition">pointify</span></a> <a class="idref" href="HoTT.Pointed.Core.html#A:346"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.Core.html#X:347"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.Core.html#A:346"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Pointed.Core.html#X:347"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(799, '0_3_271');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(800, '0_3_271');
+      "><br>
+  <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_adjointify"><span class="id" title="definition">equiv_adjointify</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(801, '0_3_271');
+      "><br>
+  1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="f:349" class="idref" href="#f:349"><span class="id" title="binder">f</span></a> ⇒ <a class="idref" href="HoTT.Pointed.Core.html#f:348"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(802, '0_3_271');
+      "><br>
+  { <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(803, '0_3_271');
+      "><br>
+    <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pMap"><span class="id" title="definition">Build_pMap</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(804, '0_3_271');
+      "><br>
+    { <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|].</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(805, '0_3_271');
+      "><br>
+      1: <span class="id" title="tactic">exact</span> (<span class="id" title="var">f</span> <span class="id" title="var">a</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(806, '0_3_271');
+      "><br>
+      <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">_</span>). }</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(807, '0_3_271');
+      "><br>
+    <span class="id" title="tactic">reflexivity</span>. }<br>
+  1: <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(808, '0_3_271');
+      "><br>
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(809, '0_3_271');
+      "><br>
+  <span class="id" title="tactic">cbv</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(810, '0_3_271');
+      "><br>
+  <span class="id" title="var">pointed_reduce</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(811, '0_3_271');
+      "><br>
+  <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.Core.html#equiv_path_pforall"><span class="id" title="definition">equiv_path_pforall</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(812, '0_3_271');
+      "><br>
+  <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(813, '0_3_271');
+      "><br>
+  1: <span class="id" title="tactic">by</span> <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|[]].</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(814, '0_3_271');
+      "><br>
+  <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(815, '0_3_271');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(816, '0_3_271');
+      "><br>
+<br>
+<span class="id" title="keyword">Lemma</span> <a id="natequiv_pointify_r" class="idref" href="#natequiv_pointify_r"><span class="id" title="lemma">natequiv_pointify_r</span></a> `{<a id="H:350" class="idref" href="#H:350"><span class="id" title="binder">Funext</span></a>} (<a id="A:351" class="idref" href="#A:351"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>)<br>
+  : <a class="idref" href="HoTT.WildCat.NatTrans.html#NatEquiv"><span class="id" title="record">NatEquiv</span></a> (<a class="idref" href="HoTT.WildCat.Yoneda.html#opyon"><span class="id" title="definition">opyon</span></a> (<a class="idref" href="HoTT.Pointed.Core.html#pointify"><span class="id" title="definition">pointify</span></a> <a class="idref" href="HoTT.Pointed.Core.html#A:351"><span class="id" title="variable">A</span></a>)) (<a class="idref" href="HoTT.WildCat.Yoneda.html#opyon"><span class="id" title="definition">opyon</span></a> <a class="idref" href="HoTT.Pointed.Core.html#A:351"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pointed_type"><span class="id" title="projection">pointed_type</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(817, '0_3_271');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(818, '0_3_271');
+      "><br>
+  <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.WildCat.NatTrans.html#Build_NatEquiv"><span class="id" title="constructor">Build_NatEquiv</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(819, '0_3_271');
+      "><br>
+  1: <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.Core.html#equiv_pointify_map"><span class="id" title="lemma">equiv_pointify_map</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(820, '0_3_271');
+      "><br>
+  <span class="id" title="tactic">cbv</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(821, '0_3_271');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_271');
+      " onmouseover="
+      mouseover(822, '0_3_271');
+      "><br>
+</span>
+</div>
+<div class="goal" id="goal0_3_271"><pre><span></span></pre></div>
 </div>
 <div id="footer" scenenumber="5" class="doc">
 <hr>

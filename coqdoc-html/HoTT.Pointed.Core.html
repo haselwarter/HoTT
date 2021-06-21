@@ -1184,6 +1184,62 @@ The forgetful map from pType to Type is a 1-functor
 &nbsp;&nbsp;+ <span class="id" title="tactic">intros</span>. <span class="id" title="tactic">reflexivity</span>.<br/>
 &nbsp;&nbsp;+ <span class="id" title="tactic">intros</span>. <span class="id" title="tactic">reflexivity</span>.<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The free base point added to a type. This is in fact a functor and left adjoint to the forgetful functor pType to Type. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a id="pointify" class="idref" href="#pointify"><span class="id" title="definition">pointify</span></a> (<a id="S:344" class="idref" href="#S:344"><span class="id" title="binder">S</span></a> : <span class="id" title="keyword">Type</span>) : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a> := <a class="idref" href="HoTT.Basics.Overture.html#Build_pType"><span class="id" title="constructor">Build_pType</span></a> (<a class="idref" href="HoTT.Pointed.Core.html#S:344"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>) (<a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Global Instance</span> <a id="is0functor_pointify" class="idref" href="#is0functor_pointify"><span class="id" title="instance">is0functor_pointify</span></a> : <a class="idref" href="HoTT.WildCat.Core.html#Is0Functor"><span class="id" title="class">Is0Functor</span></a> <a class="idref" href="HoTT.Pointed.Core.html#pointify"><span class="id" title="definition">pointify</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#Build_Is0Functor"><span class="id" title="constructor">Build_Is0Functor</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pMap"><span class="id" title="definition">Build_pMap</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Types.Sum.html#functor_sum"><span class="id" title="definition">functor_sum</span></a> <span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">reflexivity</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+pointify is left adjoint to forgetting the basepoint in the following sense 
+</div>
+<div class="code">
+<span class="id" title="keyword">Theorem</span> <a id="equiv_pointify_map" class="idref" href="#equiv_pointify_map"><span class="id" title="lemma">equiv_pointify_map</span></a> `{<a id="H:345" class="idref" href="#H:345"><span class="id" title="binder">Funext</span></a>} (<a id="A:346" class="idref" href="#A:346"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) (<a id="X:347" class="idref" href="#X:347"><span class="id" title="binder">X</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.Core.html#pointify"><span class="id" title="definition">pointify</span></a> <a class="idref" href="HoTT.Pointed.Core.html#A:346"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.Core.html#X:347"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.Core.html#A:346"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Pointed.Core.html#X:347"><span class="id" title="variable">X</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_adjointify"><span class="id" title="definition">equiv_adjointify</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="f:349" class="idref" href="#f:349"><span class="id" title="binder">f</span></a> ⇒ <a class="idref" href="HoTT.Pointed.Core.html#f:348"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a>).<br/>
+&nbsp;&nbsp;{ <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pMap"><span class="id" title="definition">Build_pMap</span></a>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|].<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: <span class="id" title="tactic">exact</span> (<span class="id" title="var">f</span> <span class="id" title="var">a</span>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">_</span>). }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">reflexivity</span>. }<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">f</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">cbv</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">pointed_reduce</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.Core.html#equiv_path_pforall"><span class="id" title="definition">equiv_path_pforall</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="tactic">by</span> <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|[]].<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">reflexivity</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a id="natequiv_pointify_r" class="idref" href="#natequiv_pointify_r"><span class="id" title="lemma">natequiv_pointify_r</span></a> `{<a id="H:350" class="idref" href="#H:350"><span class="id" title="binder">Funext</span></a>} (<a id="A:351" class="idref" href="#A:351"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.WildCat.NatTrans.html#NatEquiv"><span class="id" title="record">NatEquiv</span></a> (<a class="idref" href="HoTT.WildCat.Yoneda.html#opyon"><span class="id" title="definition">opyon</span></a> (<a class="idref" href="HoTT.Pointed.Core.html#pointify"><span class="id" title="definition">pointify</span></a> <a class="idref" href="HoTT.Pointed.Core.html#A:351"><span class="id" title="variable">A</span></a>)) (<a class="idref" href="HoTT.WildCat.Yoneda.html#opyon"><span class="id" title="definition">opyon</span></a> <a class="idref" href="HoTT.Pointed.Core.html#A:351"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pointed_type"><span class="id" title="projection">pointed_type</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.WildCat.NatTrans.html#Build_NatEquiv"><span class="id" title="constructor">Build_NatEquiv</span></a>.<br/>
+&nbsp;&nbsp;1: <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Pointed.Core.html#equiv_pointify_map"><span class="id" title="lemma">equiv_pointify_map</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">cbv</span>; <span class="id" title="tactic">reflexivity</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
 </div>
 </div>
 

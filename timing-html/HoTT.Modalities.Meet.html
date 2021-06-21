@@ -36,21 +36,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 1
-Time: 0.045s">
-<div class="time" style="width: 10.48951048951%"></div>
+Time: 0.046s">
+<div class="time" style="width: 12.398921832884%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 1
-Time: 0.066s">
-<div class="time" style="width: 15.384615384615%"></div>
+Time: 0.064s">
+<div class="time" style="width: 17.250673854447%"></div>
 <pre>
 Require Import Extensions HFiber Truncations NullHomotopy Pullback.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 2
-Time: 0.005s">
-<div class="time" style="width: 1.1655011655012%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.6172506738544%"></div>
 <pre>
 Require Import ReflectiveSubuniverse Modality Descent Lex Separated.</pre>
 </div>
@@ -135,8 +135,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 21
-Time: 0.009s">
-<div class="time" style="width: 2.0979020979021%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.1563342318059%"></div>
 <pre> intros ? X; exact _.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -149,7 +149,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 22
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre> intros T U [? ?] f feq; split; apply (inO_equiv_inO _ f).</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -192,8 +192,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 30
-Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance inO_plus_l (X : Type) : In L (Plus X) := _.</pre>
@@ -218,7 +218,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 37
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
 
   Definition plus_functor {X Y : Type} (f : X -&gt; Y) : Plus X -&gt; Plus Y
@@ -277,8 +277,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -300,8 +300,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 54
-Time: 0.005s">
-<div class="time" style="width: 1.1655011655012%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.078167115903%"></div>
 <pre>
     rapply (@O_indpaths L).</pre>
 </div>
@@ -336,7 +336,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     revert ox; apply O_indpaths; intros x.</pre>
 </div>
@@ -350,7 +350,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 61
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -380,8 +380,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 68
-Time: 0.005s">
-<div class="time" style="width: 1.1655011655012%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.6172506738544%"></div>
 <pre>
     apply (ooextendable_compose _ (to O X) (to L (O X)));
       rapply extendable_to_O.</pre>
@@ -396,7 +396,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 71
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
 
   Definition plus_rec {P Q : Type} `{In Meet Q} (f : P -&gt; Q)
@@ -405,8 +405,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 75
-Time: 0.008s">
-<div class="time" style="width: 1.8648018648019%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
 
   Definition plus_rec_beta {P Q : Type} `{In Meet Q} (f : P -&gt; Q) (x : P)
@@ -416,7 +416,7 @@ Time: 0.008s">
 <div class="code" title="File: Meet.v
 Line: 79
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
 
   Definition plus_indpaths {P Q : Type} `{In Meet Q} (g h : Plus P -&gt; Q)
@@ -426,8 +426,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 84
-Time: 0.004s">
-<div class="time" style="width: 0.93240093240093%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.8867924528302%"></div>
 <pre>
 
   Definition plus_indpaths_beta {P Q : Type} `{In Meet Q} (g h : Plus P -&gt; Q)
@@ -461,7 +461,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 94
 Time: 0.006s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.6172506738544%"></div>
 <pre>
     apply (@isequiv_compose _ _ (to O X) _ _ (to L (O X))).</pre>
 </div>
@@ -475,7 +475,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 96
 Time: 0.004s">
-<div class="time" style="width: 0.93240093240093%"></div>
+<div class="time" style="width: 1.078167115903%"></div>
 <pre>
     apply (inO_equiv_inO X (to O X)).</pre>
 </div>
@@ -518,7 +518,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 103
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre> apply (inO_equiv_inO (Plus X) (to_plus X)^-1).</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -530,8 +530,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 104
-Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre> srapply inO_to_O_retract.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -620,8 +620,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> split; exact _.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -662,8 +662,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 122
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     constructor; intros; apply ooextendable_plus.</pre>
 </div>
@@ -722,22 +722,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 134
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     refine (_ @ ap (plus_functor f) (e (f^-1 y))).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 135
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     rewrite to_plus_natural.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 136
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     symmetry; apply ap, eisretr.</pre>
 </div>
@@ -767,7 +767,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 142
 Time: 0.005s">
-<div class="time" style="width: 1.1655011655012%"></div>
+<div class="time" style="width: 1.3477088948787%"></div>
 <pre>
 
 End RSUMeet.</pre>
@@ -807,7 +807,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 151
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>Definition plus_path {X : Type} (x y : X)
     : Plus L O (x = y) &lt;~&gt; (to_plus L O X x = to_plus L O X y).</pre>
 </div>
@@ -835,7 +835,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 155
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     rapply equiv_path_O.</pre>
 </div>
@@ -848,8 +848,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 157
-Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
 
   Definition plus_path_to_plus {X : Type} (x y : X)
@@ -872,35 +872,35 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 162
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     cbn.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 163
-Time: 0.005s">
-<div class="time" style="width: 1.1655011655012%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.078167115903%"></div>
 <pre>
     rewrite to_O_natural.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 164
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     rewrite O_rec_beta.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 165
 Time: 0.004s">
-<div class="time" style="width: 0.93240093240093%"></div>
+<div class="time" style="width: 1.078167115903%"></div>
 <pre>
     rewrite (ap_compose (to O X) (to L (O X))).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 166
-Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply ap.</pre>
 </div>
@@ -914,7 +914,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 168
 Time: 0.01s">
-<div class="time" style="width: 2.3310023310023%"></div>
+<div class="time" style="width: 2.6954177897574%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -951,14 +951,14 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 175
 Time: 0.005s">
-<div class="time" style="width: 1.1655011655012%"></div>
+<div class="time" style="width: 1.3477088948787%"></div>
 <pre>
     apply (cancelL_nullhomotopy_equiv _ (plus_path x y)).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 176
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply (nullhomotopy_homotopic (fun u =&gt; (plus_path_to_plus x y u)^)).</pre>
 </div>
@@ -971,8 +971,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 178
-Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -987,8 +987,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 182
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>Definition plusconnmap_diagonal {X Y : Type} (f : X -&gt; Y)
     : PlusConnMap L O f -&gt; PlusConnMap L O (diagonal f).</pre>
 </div>
@@ -1023,7 +1023,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 187
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1038,8 +1038,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 191
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>Definition plus_hfiber {X Y : Type} (f : X -&gt; Y) (y : Y)
     : Plus L O (hfiber f y) &lt;~&gt; hfiber (plus_functor L O f) (to_plus L O Y y).</pre>
 </div>
@@ -1053,7 +1053,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 193
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     refine (equiv_O_functor_hfiber L (O_functor O f) (to O Y y) oE _).</pre>
 </div>
@@ -1067,21 +1067,21 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 195
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     rapply equiv_O_functor_hfiber.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 196
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 197
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
 
   Definition plus_hfiber_to_plus {X Y : Type} (f : X -&gt; Y) (y : Y)
@@ -1098,7 +1098,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 202
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     intros [x q]; unfold plus_hfiber, to_plus.</pre>
 </div>
@@ -1112,35 +1112,35 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 204
 Time: 0.004s">
-<div class="time" style="width: 0.93240093240093%"></div>
+<div class="time" style="width: 1.078167115903%"></div>
 <pre>
     rewrite to_O_natural.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 205
-Time: 0.004s">
-<div class="time" style="width: 0.93240093240093%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.3477088948787%"></div>
 <pre>
     rewrite O_functor_hfiber_natural.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 206
-Time: 0.022s">
-<div class="time" style="width: 5.1282051282051%"></div>
+Time: 0.024s">
+<div class="time" style="width: 6.4690026954178%"></div>
 <pre>
     unfold O_functor_hfiber, functor_hfiber, functor_sigma; cbn.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 207
-Time: 0.032s">
-<div class="time" style="width: 7.4592074592075%"></div>
+Time: 0.034s">
+<div class="time" style="width: 9.1644204851752%"></div>
 <pre>
     rewrite O_rec_beta; cbn.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 208
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply ap.</pre>
 </div>
@@ -1153,22 +1153,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 210
-Time: 0.013s">
-<div class="time" style="width: 3.030303030303%"></div>
+Time: 0.014s">
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>
     rewrite !inv_V, ap_pp, concat_p_pp.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 211
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply whiskerL.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 212
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     rewrite &lt;- ap_compose.</pre>
 </div>
@@ -1181,8 +1181,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 214
-Time: 0.035s">
-<div class="time" style="width: 8.1585081585082%"></div>
+Time: 0.029s">
+<div class="time" style="width: 7.8167115902965%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1197,8 +1197,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 218
-Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition equiv_plus_pullback {A B C : Type} (f : B -&gt; A) (g : C -&gt; A)
     : Plus L O (Pullback f g) &lt;~&gt; Pullback (plus_functor L O f) (plus_functor L O g).</pre>
 </div>
@@ -1212,7 +1212,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 220
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     refine (equiv_O_pullback L (O_functor O f) (O_functor O g) oE _).</pre>
 </div>
@@ -1226,7 +1226,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 222
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     rapply equiv_O_pullback.</pre>
 </div>
@@ -1249,7 +1249,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 227
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre>Definition diagonal_plus_functor {A B : Type} (f : A -&gt; B)
     : diagonal (plus_functor L O f) == equiv_plus_pullback f f o plus_functor L O (diagonal f).</pre>
 </div>
@@ -1270,21 +1270,21 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 230
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     refine (diagonal_O_functor L (O_functor O f) x @ _).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 231
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     apply (ap (equiv_O_pullback L (O_functor O f) (O_functor O f))).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 232
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     refine (O_functor_homotopy L _ _ (diagonal_O_functor O f) x @ _).</pre>
 </div>
@@ -1305,7 +1305,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 235
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1340,15 +1340,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 241
-Time: 0.007s">
-<div class="time" style="width: 1.6317016317016%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.3477088948787%"></div>
 <pre>
     apply (cancelL_nullhomotopy_equiv _ (plus_hfiber (to_plus L O X) y)).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 242
-Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre>
     apply (nullhomotopy_homotopic (fun u =&gt; (plus_hfiber_to_plus (to_plus L O X) y u)^)).</pre>
 </div>
@@ -1387,29 +1387,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 246
-Time: 0.004s">
-<div class="time" style="width: 0.93240093240093%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     intros [x p]; destruct p.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 247
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre>
     unfold functor_hfiber, functor_sigma; cbn.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 248
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 249
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     rewrite inv_V, concat_p1.</pre>
 </div>
@@ -1422,15 +1422,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 251
-Time: 0.014s">
-<div class="time" style="width: 3.2634032634033%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.9649595687332%"></div>
 <pre>
     rewrite !O_indpaths_beta.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 252
-Time: 0.017s">
-<div class="time" style="width: 3.962703962704%"></div>
+Time: 0.015s">
+<div class="time" style="width: 4.0431266846361%"></div>
 <pre>
     rewrite inv_pp, ap_V, !inv_V.</pre>
 </div>
@@ -1443,8 +1443,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 254
-Time: 0.04s">
-<div class="time" style="width: 9.3240093240093%"></div>
+Time: 0.032s">
+<div class="time" style="width: 8.6253369272237%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1513,8 +1513,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 264
-Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       rapply isequiv_contr_map.</pre>
 </div>
@@ -1547,7 +1547,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 268
-Time: 0.429s">
+Time: 0.371s">
 <div class="time" style="width: 100%"></div>
 <pre>
       apply (mapinO_homotopic _ _ (plus_path_to_plus x y)).</pre>
@@ -1588,8 +1588,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 273
-Time: 0.006s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.078167115903%"></div>
 <pre>
       apply (mapinO_homotopic _ ((plus_path x y)^-1 o (@ap _ _ (to_plus L O X) x y))).</pre>
 </div>
@@ -1603,7 +1603,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 275
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre> intros p; apply moveR_equiv_V; symmetry; apply plus_path_to_plus.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -1614,15 +1614,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 275
-Time: 0.016s">
-<div class="time" style="width: 3.7296037296037%"></div>
+Time: 0.014s">
+<div class="time" style="width: 3.7735849056604%"></div>
 <pre>
       rapply mapinO_compose.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 276
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1655,7 +1655,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 285
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>Definition istruncmap_plus_functor {n : trunc_index} {X Y : Type} (f : X -&gt; Y)
              `{MapIn (Tr n.+1) _ _ f} (pc : PlusConnMap L O f)
     : MapIn (Tr n) (plus_functor L O f).</pre>
@@ -1703,14 +1703,14 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 291
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply (mapinO_O_leq (Sep (Tr n)) _), mapinO_from_diagonal.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 292
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
     nrapply (mapinO_homotopic (Tr n) _ (fun u =&gt; (diagonal_plus_functor f u)^)).</pre>
 </div>
@@ -1723,8 +1723,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 294
-Time: 0.007s">
-<div class="time" style="width: 1.6317016317016%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.6172506738544%"></div>
 <pre>
     2:rapply mapinO_isequiv.</pre>
 </div>
@@ -1745,7 +1745,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 297
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre> rapply mapinO_diagonal.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -1757,8 +1757,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 298
-Time: 0.092s">
-<div class="time" style="width: 21.445221445221%"></div>
+Time: 0.081s">
+<div class="time" style="width: 21.832884097035%"></div>
 <pre>
       rapply (mapinO_O_leq _ (Sep (Tr n.+1))).</pre>
 </div>
@@ -1778,7 +1778,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 300
 Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+<div class="time" style="width: 0.53908355795148%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1808,21 +1808,21 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 306
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply nsep_iff_trunc_plus.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 307
-Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     nrefine (mapinO_homotopic _ _ (fun u =&gt; (wellpointed_plus L O X u)^)).</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 308
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply mapinO_tr_istruncmap, istruncmap_plus_functor.</pre>
 </div>
@@ -1855,7 +1855,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 311
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1911,7 +1911,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 319
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     specialize (IHn (Plus L O X) (nsep_plus n X)).</pre>
 </div>
@@ -1964,14 +1964,14 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 324
 Time: 0.003s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 325
-Time: 0.053s">
-<div class="time" style="width: 12.354312354312%"></div>
+Time: 0.044s">
+<div class="time" style="width: 11.859838274933%"></div>
 <pre>
 
   Global Instance reflects_plus_nsep (n : trunc_index) (X : Type) `{In (nSep n (Meet L O)) X}
@@ -2000,8 +2000,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Meet.v
 Line: 331
-Time: 0.002s">
-<div class="time" style="width: 0.46620046620047%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.80862533692722%"></div>
 <pre> rapply reflects_in.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -2013,7 +2013,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 331
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     specialize (IHn (Plus L O X) (nsep_plus n X)).</pre>
 </div>
@@ -2027,7 +2027,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 333
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre>
     apply (ooextendable_compose _ (to_plus L O X) (to (Meet L O) (Plus L O X))).</pre>
 </div>
@@ -2041,7 +2041,7 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 335
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre> apply (@extendable_to_O (Meet L O) (Plus L O X)); assumption.</pre>
 </div>
 <div class="code" title="File: Meet.v
@@ -2054,20 +2054,20 @@ Time: 0s">
 <div class="code" title="File: Meet.v
 Line: 336
 Time: 0.001s">
-<div class="time" style="width: 0.23310023310023%"></div>
+<div class="time" style="width: 0.26954177897574%"></div>
 <pre> rapply ooextendable_plus.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 336
-Time: 0.006s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.8867924528302%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Meet.v
 Line: 337
-Time: 0.059s">
-<div class="time" style="width: 13.752913752914%"></div>
+Time: 0.062s">
+<div class="time" style="width: 16.711590296496%"></div>
 <pre>
 
 End LexMeet.</pre>

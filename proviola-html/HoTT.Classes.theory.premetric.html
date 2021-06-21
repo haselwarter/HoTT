@@ -48,12 +48,12 @@
           
 
             i = 6;
-            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 7;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -1618,12 +1618,12 @@
           
 
             i = 320;
-            data = "";
+            data = "1 goal (ID 1158)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e + L2 * e) (f u1 u2) (f v1 v2)	";
             responses[i]=data;
           
 
             i = 321;
-            data = "1 goal (ID 1158)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e + L2 * e) (f u1 u2) (f v1 v2)	2 goals (ID 1164)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e) (f u1 u2) (f u1 v2)		goal 2 (ID 1165) is:	 close (L2 * e) (f u1 v2) (f v1 v2)	";
+            data = "2 goals (ID 1164)	  	  funext : Funext	  univalence : Univalence	  A : Type	  H : Closeness A	  B : Type	  H0 : Closeness B	  C : Type	  H1 : Closeness C	  Triangular0 : Triangular C	  f : A -> B -> C	  L1, L2 : Q+	  H2 : forall x : A, Lipschitz (f x) L1	  H3 : forall y : B, Lipschitz (fun x : A => f x y) L2	  e : Q+	  u1 : A	  u2 : B	  v1 : A	  v2 : B	  xi1 : close e u1 v1	  xi2 : close e u2 v2	  ============================	  close (L1 * e) (f u1 u2) (f u1 v2)		goal 2 (ID 1165) is:	 close (L2 * e) (f u1 v2) (f v1 v2)	";
             responses[i]=data;
           
 
@@ -2438,12 +2438,12 @@
           
 
             i = 484;
-            data = "";
+            data = "1 goal (ID 1511)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  H : Closeness A	  PreMetric0 : PreMetric A	  a, b : A	  u, v : Interval a b	  E : forall e : Q+, close e u v	  ============================	  u.1 = v.1	";
             responses[i]=data;
           
 
             i = 485;
-            data = "1 goal (ID 1511)	  	  funext : Funext	  univalence : Univalence	  A : Type	  Ale : Le A	  Ameet : Meet A	  Ajoin : Join A	  LatticeOrder0 : LatticeOrder Ale	  H : Closeness A	  PreMetric0 : PreMetric A	  a, b : A	  u, v : Interval a b	  E : forall e : Q+, close e u v	  ============================	  u.1 = v.1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 254) is:	 Triangular (Interval a b)	goal 2 (ID 255) is:	 Rounded (Interval a b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 254) is:	 Triangular (Interval a b)	goal 2 (ID 255) is:	 Rounded (Interval a b)	";
             responses[i]=data;
           
 
@@ -3738,12 +3738,12 @@
           
 
             i = 744;
-            data = "1 goal (ID 1705)	  	  funext : Funext	  univalence : Univalence	  e, n : Q+	  q, r : Q	  xi : close n q r	  E : PropHolds (0 < q ⊔ ' e)	  E' : PropHolds (0 < r ⊔ ' e)	  X := r ⊔ ' e : Q	  Y := q ⊔ ' e : Q	  Hrw : (r ⊔ ' e) * ((q ⊔ ' e) * - / (r ⊔ ' e)) = - Y * (X / X)	  ============================	  abs (r ⊔ ' e + (r ⊔ ' e) * ((q ⊔ ' e) * - / X)) <	  X * (Y * ' (/ (e * e) * n))	";
+            data = "";
             responses[i]=data;
           
 
             i = 745;
-            data = "1 goal (ID 2315)	  	  funext : Funext	  univalence : Univalence	  e, n : Q+	  q, r : Q	  xi : close n q r	  E : PropHolds (0 < q ⊔ ' e)	  E' : PropHolds (0 < r ⊔ ' e)	  X := r ⊔ ' e : Q	  Y := q ⊔ ' e : Q	  ============================	  abs (r ⊔ ' e + - Y * (X / X)) < X * (Y * ' (/ (e * e) * n))	";
+            data = "1 goal (ID 1705)	  	  funext : Funext	  univalence : Univalence	  e, n : Q+	  q, r : Q	  xi : close n q r	  E : PropHolds (0 < q ⊔ ' e)	  E' : PropHolds (0 < r ⊔ ' e)	  X := r ⊔ ' e : Q	  Y := q ⊔ ' e : Q	  Hrw : (r ⊔ ' e) * ((q ⊔ ' e) * - / (r ⊔ ' e)) = - Y * (X / X)	  ============================	  abs (r ⊔ ' e + (r ⊔ ' e) * ((q ⊔ ' e) * - / X)) <	  X * (Y * ' (/ (e * e) * n))	1 goal (ID 2315)	  	  funext : Funext	  univalence : Univalence	  e, n : Q+	  q, r : Q	  xi : close n q r	  E : PropHolds (0 < q ⊔ ' e)	  E' : PropHolds (0 < r ⊔ ' e)	  X := r ⊔ ' e : Q	  Y := q ⊔ ' e : Q	  ============================	  abs (r ⊔ ' e + - Y * (X / X)) < X * (Y * ' (/ (e * e) * n))	";
             responses[i]=data;
           
 

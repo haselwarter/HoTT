@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: naturals.v
 Line: 1
-Time: 0.03s">
-<div class="time" style="width: 33.707865168539%"></div>
+Time: 0.032s">
+<div class="time" style="width: 35.955056179775%"></div>
 <pre>Require Import
   HoTT.Types.Universe
   HoTT.Types.Sigma.</pre>
@@ -46,8 +46,8 @@ Require Import
 </div>
 <div class="code" title="File: naturals.v
 Line: 5
-Time: 0.02s">
-<div class="time" style="width: 22.47191011236%"></div>
+Time: 0.022s">
+<div class="time" style="width: 24.719101123596%"></div>
 <pre>
 Require Import
   HoTT.Classes.theory.apartness
@@ -180,14 +180,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 31
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> destruct E as [z Ez].</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 31
-Time: 0.009s">
-<div class="time" style="width: 10.112359550562%"></div>
+Time: 0.01s">
+<div class="time" style="width: 11.23595505618%"></div>
 <pre>
   apply compose_le with z; [solve_propholds | trivial].</pre>
 </div>
@@ -215,8 +215,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 2.247191011236%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre> apply le_not_lt_flip, nat_nonneg.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -242,8 +242,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 39
-Time: 0.018s">
-<div class="time" style="width: 20.224719101124%"></div>
+Time: 0.015s">
+<div class="time" style="width: 16.85393258427%"></div>
 <pre>
 destruct (trichotomy (&lt;) 0 x) as [?|[?|?]]; auto.</pre>
 </div>
@@ -452,8 +452,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 63
-Time: 0.038s">
-<div class="time" style="width: 42.696629213483%"></div>
+Time: 0.039s">
+<div class="time" style="width: 43.820224719101%"></div>
 <pre> apply pos_ge_1.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -493,8 +493,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 68
-Time: 0.044s">
-<div class="time" style="width: 49.438202247191%"></div>
+Time: 0.039s">
+<div class="time" style="width: 43.820224719101%"></div>
 <pre> apply (order_reflecting_pos (.*.) z).</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -541,8 +541,8 @@ intros x y.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 74
-Time: 0.008s">
-<div class="time" style="width: 8.9887640449438%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7.8651685393258%"></div>
 <pre>
 destruct (nat_le_dec (naturals_to_semiring _ nat x) (naturals_to_semiring _ nat y))
 as [E | E].</pre>
@@ -562,8 +562,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 77
-Time: 0.026s">
-<div class="time" style="width: 29.213483146067%"></div>
+Time: 0.023s">
+<div class="time" style="width: 25.842696629213%"></div>
 <pre>
   apply (order_reflecting (naturals_to_semiring N nat)).</pre>
 </div>
@@ -607,8 +607,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 80
-Time: 0.024s">
-<div class="time" style="width: 26.966292134831%"></div>
+Time: 0.02s">
+<div class="time" style="width: 22.47191011236%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -628,8 +628,8 @@ Section another_ring.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 83
-Time: 0.003s">
-<div class="time" style="width: 3.3707865168539%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.247191011236%"></div>
 <pre>
   Context `{IsRing R} `{Apart R} `{!FullPseudoSemiRingOrder (A:=R) Rle Rlt}
     `{!IsSemiRingPreserving (f : N -&gt; R)}.</pre>
@@ -657,8 +657,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 88
-Time: 0.004s">
-<div class="time" style="width: 4.4943820224719%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.3707865168539%"></div>
 <pre> apply to_semiring_nonneg.</pre>
 </div>
 <div class="code" title="File: naturals.v
@@ -684,14 +684,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: naturals.v
 Line: 91
-Time: 0.003s">
-<div class="time" style="width: 3.3707865168539%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre> apply between_nonneg.</pre>
 </div>
 <div class="code" title="File: naturals.v
 Line: 91
-Time: 0.004s">
-<div class="time" style="width: 4.4943820224719%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.3707865168539%"></div>
 <pre> apply to_semiring_nonneg.</pre>
 </div>
 <div class="code" title="File: naturals.v

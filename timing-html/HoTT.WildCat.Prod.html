@@ -38,21 +38,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 2
-Time: 0.032s">
-<div class="time" style="width: 41.025641025641%"></div>
+Time: 0.028s">
+<div class="time" style="width: 35.443037974684%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 2.5641025641026%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 3
 Time: 0.002s">
-<div class="time" style="width: 2.5641025641026%"></div>
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
 Require Import WildCat.Equiv.</pre>
 </div>
@@ -69,15 +69,15 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 8
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Global Instance isgraph_prod A B `{IsGraph A} `{IsGraph B}
   : IsGraph (A * B)
   := Build_IsGraph (A * B) (fun x y =&gt; (fst x $-&gt; fst y) * (snd x $-&gt; snd y)).</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 10
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
 
 Global Instance is01cat_prod A B `{Is01Cat A} `{Is01Cat B}
@@ -106,8 +106,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 16
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> intros [a b]; exact (Id a, Id b).</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -119,21 +119,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 17
-Time: 0.002s">
-<div class="time" style="width: 2.5641025641026%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> intros [a1 b1] [a2 b2] [a3 b3] [f1 g1] [f2 g2]; cbn in *.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 17
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     exact (f1 $o f2 , g1 $o g2).</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 18
-Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -147,8 +147,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 21
-Time: 0.003s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>Definition fmap11 {A B C : Type} `{IsGraph A} `{IsGraph B} `{IsGraph C}
   (F : A -&gt; B -&gt; C) {H2 : Is0Functor (uncurry F)}
   {a1 a2 : A} {b1 b2 : B} (f1 : a1 $-&gt; a2) (f2 : b1 $-&gt; b2)
@@ -157,8 +157,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 25
-Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
 
 Global Instance is0gpd_prod A B `{Is0Gpd A} `{Is0Gpd B}
@@ -181,7 +181,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
   intros [x1 x2] [y1 y2] [f1 f2].</pre>
 </div>
@@ -195,7 +195,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 32
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
   exact ( (f1^$, f2^$) ).</pre>
 </div>
@@ -209,7 +209,7 @@ Defined.</pre>
 <div class="code" title="File: Prod.v
 Line: 34
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
 
 Global Instance is2graph_prod A B `{Is2Graph A, Is2Graph B}
@@ -232,7 +232,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 39
 Time: 0.002s">
-<div class="time" style="width: 2.5641025641026%"></div>
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
   rapply isgraph_prod.</pre>
 </div>
@@ -246,7 +246,7 @@ Defined.</pre>
 <div class="code" title="File: Prod.v
 Line: 41
 Time: 0.003s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre>
 
 Global Instance is1cat_prod A B `{Is1Cat A} `{Is1Cat B}
@@ -261,7 +261,7 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 45
-Time: 0.078s">
+Time: 0.079s">
 <div class="time" style="width: 100%"></div>
 <pre>
   srapply (Build_Is1Cat).</pre>
@@ -276,27 +276,27 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 47
 Time: 0.003s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre> intros [x1 x2] [y1 y2] [z1 z2] [h1 h2].</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 47
 Time: 0.002s">
-<div class="time" style="width: 2.5641025641026%"></div>
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
     srapply Build_Is0Functor.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 48
-Time: 0.006s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.005s">
+<div class="time" style="width: 6.3291139240506%"></div>
 <pre>  
     intros [f1 f2] [g1 g2] [p1 p2]; cbn in *.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 49
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> 
     exact ( h1 $@L p1 , h2 $@L p2 ).</pre>
 </div>
@@ -309,28 +309,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 51
-Time: 0.004s">
-<div class="time" style="width: 5.1282051282051%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre> intros [x1 x2] [y1 y2] [z1 z2] [h1 h2].</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 51
-Time: 0.003s">
-<div class="time" style="width: 3.8461538461538%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre>
     srapply Build_Is0Functor.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 52
-Time: 0.006s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.007s">
+<div class="time" style="width: 8.8607594936709%"></div>
 <pre>  
     intros [f1 f2] [g1 g2] [p1 p2]; cbn in *.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> 
     exact ( p1 $@R h1 , p2 $@R h2 ).</pre>
 </div>
@@ -343,8 +343,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 55
-Time: 0.019s">
-<div class="time" style="width: 24.358974358974%"></div>
+Time: 0.021s">
+<div class="time" style="width: 26.582278481013%"></div>
 <pre> intros [a1 a2] [b1 b2] [c1 c2] [d1 d2] [f1 f2] [g1 g2] [h1 h2].</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -357,7 +357,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 56
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     exact(cat_assoc f1 g1 h1, cat_assoc f2 g2 h2).</pre>
 </div>
@@ -370,8 +370,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 58
-Time: 0.007s">
-<div class="time" style="width: 8.974358974359%"></div>
+Time: 0.008s">
+<div class="time" style="width: 10.126582278481%"></div>
 <pre> intros [a1 a2] [b1 b2] [f1 f2].</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -384,7 +384,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     exact (cat_idl _, cat_idl _).</pre>
 </div>
@@ -398,7 +398,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 61
 Time: 0.007s">
-<div class="time" style="width: 8.974358974359%"></div>
+<div class="time" style="width: 8.8607594936709%"></div>
 <pre> intros [a1 a2] [b1 b2] [g1 g2].</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -411,14 +411,14 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 62
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
     exact (cat_idr _, cat_idr _).</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 63
-Time: 0.013s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.012s">
+<div class="time" style="width: 15.189873417722%"></div>
 <pre> 
 Defined.</pre>
 </div>
@@ -435,8 +435,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 68
-Time: 0.019s">
-<div class="time" style="width: 24.358974358974%"></div>
+Time: 0.014s">
+<div class="time" style="width: 17.721518987342%"></div>
 <pre>Global Instance hasequivs_prod A B `{HasEquivs A} `{HasEquivs B}
   : HasEquivs (A * B).</pre>
 </div>
@@ -450,7 +450,7 @@ Proof.</pre>
 <div class="code" title="File: Prod.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
   srefine (Build_HasEquivs (A * B) _ _ _ _
              (fun a b =&gt; (fst a $&lt;~&gt; fst b) * (snd a $&lt;~&gt; snd b))
@@ -459,14 +459,14 @@ Time: 0.001s">
 <div class="code" title="File: Prod.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
   1:intros a b f; exact (CatIsEquiv (fst f) * CatIsEquiv (snd f)).</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 74
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>
   all:cbn; intros a b f.</pre>
 </div>
@@ -493,7 +493,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 77
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> split; exact _.</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -545,7 +545,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 81
 Time: 0.004s">
-<div class="time" style="width: 5.1282051282051%"></div>
+<div class="time" style="width: 5.0632911392405%"></div>
 <pre> intros [fe1 fe2]; cbn; split; apply cate_buildequiv_fun.</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -558,7 +558,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> split; [ exact ((fst f)^-1$) | exact ((snd f)^-1$) ].</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -571,7 +571,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> split; apply cate_issect.</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -584,7 +584,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 84
 Time: 0.001s">
-<div class="time" style="width: 1.2820512820513%"></div>
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre> split; apply cate_isretr.</pre>
 </div>
 <div class="code" title="File: Prod.v
@@ -629,14 +629,14 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 87
 Time: 0.007s">
-<div class="time" style="width: 8.974358974359%"></div>
+<div class="time" style="width: 8.8607594936709%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Prod.v
 Line: 88
-Time: 0.01s">
-<div class="time" style="width: 12.820512820513%"></div>
+Time: 0.012s">
+<div class="time" style="width: 15.189873417722%"></div>
 <pre>
 
 Global Instance isequivs_prod A B `{HasEquivs A} `{HasEquivs B}
@@ -657,7 +657,7 @@ Time: 0s">
 <div class="code" title="File: Prod.v
 Line: 96
 Time: 0.027s">
-<div class="time" style="width: 34.615384615385%"></div>
+<div class="time" style="width: 34.177215189873%"></div>
 <pre>Definition fmap22 {A B C : Type} `{Is1Cat A} `{Is1Cat B} `{Is1Cat C}
   (F : A -&gt; B -&gt; C) `{!Is0Functor (uncurry F), !Is1Functor (uncurry F)}
   {a1 a2 : A} {b1 b2 : B} (f1 : a1 $-&gt; a2) (f2 : b1 $-&gt; b2) (g1 : a1 $-&gt; a2) (g2 : b1 $-&gt; b2)
@@ -667,8 +667,8 @@ Time: 0.027s">
 </div>
 <div class="code" title="File: Prod.v
 Line: 101
-Time: 0.029s">
-<div class="time" style="width: 37.179487179487%"></div>
+Time: 0.03s">
+<div class="time" style="width: 37.974683544304%"></div>
 <pre>
 
 Global Instance iemap11 {A B C : Type} `{HasEquivs A} `{HasEquivs B} `{HasEquivs C}
@@ -680,7 +680,7 @@ Global Instance iemap11 {A B C : Type} `{HasEquivs A} `{HasEquivs B} `{HasEquivs
 <div class="code" title="File: Prod.v
 Line: 107
 Time: 0.021s">
-<div class="time" style="width: 26.923076923077%"></div>
+<div class="time" style="width: 26.582278481013%"></div>
 <pre>
 
 Definition emap11 {A B C : Type} `{HasEquivs A} `{HasEquivs B} `{HasEquivs C}

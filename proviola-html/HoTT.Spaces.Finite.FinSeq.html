@@ -888,12 +888,12 @@
           
 
             i = 174;
-            data = "1 goal (ID 282)	  	  H : Funext	  A : Type	  n : nat	  a : A	  v : FinSeq n A	  ============================	  path_expand_fscons (fscons a v) =	  path_fscons (compute_fshead a v) (compute_fstail a v)	1 goal (ID 296)	  	  H : Funext	  A : Type	  n : nat	  a : A	  v : FinSeq n A	  ============================	  (fun i : Fin n.+1 =>	   path_expand_fscons' n.+1 i (leq_S_n' 0 n (leq_0_n n)) (fscons a v)) =	  (fun i : Fin n.+1 =>	   path_fscons' n.+1 (compute_fshead a v)	     (fun j : Fin (pred n.+1) => apD10 (compute_fstail a v) j) i)	";
+            data = "";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 goal (ID 302)	  	  H : Funext	  A : Type	  n : nat	  a : A	  v : FinSeq n A	  i : Fin n.+1	  ============================	  path_expand_fscons' n.+1 i (leq_S_n' 0 n (leq_0_n n)) (fscons a v) =	  path_fscons' n.+1 (compute_fshead a v)	    (fun j : Fin (pred n.+1) => apD10 (compute_fstail a v) j) i	";
+            data = "1 goal (ID 282)	  	  H : Funext	  A : Type	  n : nat	  a : A	  v : FinSeq n A	  ============================	  path_expand_fscons (fscons a v) =	  path_fscons (compute_fshead a v) (compute_fstail a v)	1 goal (ID 296)	  	  H : Funext	  A : Type	  n : nat	  a : A	  v : FinSeq n A	  ============================	  (fun i : Fin n.+1 =>	   path_expand_fscons' n.+1 i (leq_S_n' 0 n (leq_0_n n)) (fscons a v)) =	  (fun i : Fin n.+1 =>	   path_fscons' n.+1 (compute_fshead a v)	     (fun j : Fin (pred n.+1) => apD10 (compute_fstail a v) j) i)	1 goal (ID 302)	  	  H : Funext	  A : Type	  n : nat	  a : A	  v : FinSeq n A	  i : Fin n.+1	  ============================	  path_expand_fscons' n.+1 i (leq_S_n' 0 n (leq_0_n n)) (fscons a v) =	  path_fscons' n.+1 (compute_fshead a v)	    (fun j : Fin (pred n.+1) => apD10 (compute_fstail a v) j) i	";
             responses[i]=data;
           
 
@@ -948,12 +948,12 @@
           
 
             i = 186;
-            data = "";
+            data = "1 goal (ID 297)	  	  H : Funext	  A : Type	  P : forall n : nat, FinSeq n A -> Type	  z : P 0 fsnil	  s : forall (n : nat) (a : A) (v : FinSeq n A), P n v -> P n.+1 (fscons a v)	  n : nat	  v : FinSeq n A	  ============================	  P n v	";
             responses[i]=data;
           
 
             i = 187;
-            data = "1 goal (ID 297)	  	  H : Funext	  A : Type	  P : forall n : nat, FinSeq n A -> Type	  z : P 0 fsnil	  s : forall (n : nat) (a : A) (v : FinSeq n A), P n v -> P n.+1 (fscons a v)	  n : nat	  v : FinSeq n A	  ============================	  P n v	";
+            data = "";
             responses[i]=data;
           
 

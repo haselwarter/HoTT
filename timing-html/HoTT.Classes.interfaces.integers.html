@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: integers.v
 Line: 1
-Time: 0.133s">
+Time: 0.139s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -57,7 +57,7 @@ Arguments integers_to_ring A {_} R {_ _ _ _ _ _} _.</pre>
 <div class="code" title="File: integers.v
 Line: 9
 Time: 0.015s">
-<div class="time" style="width: 11.278195488722%"></div>
+<div class="time" style="width: 10.791366906475%"></div>
 <pre>
 
 Class Integers A {Aap:Apart A} {Aplus Amult Azero Aone Anegate Ale Alt}
@@ -79,14 +79,14 @@ Section specializable.</pre>
 <div class="code" title="File: integers.v
 Line: 19
 Time: 0.002s">
-<div class="time" style="width: 1.5037593984962%"></div>
+<div class="time" style="width: 1.4388489208633%"></div>
 <pre>
   Context (Z N : Type) `{Integers Z} `{Naturals N}.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 20
 Time: 0.01s">
-<div class="time" style="width: 7.5187969924812%"></div>
+<div class="time" style="width: 7.1942446043165%"></div>
 <pre>
 
   Class IntAbs := int_abs_sig : forall x,
@@ -95,8 +95,8 @@ Time: 0.01s">
 </div>
 <div class="code" title="File: integers.v
 Line: 24
-Time: 0.001s">
-<div class="time" style="width: 0.75187969924812%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition int_abs `{ia : IntAbs} (x : Z) : N :=
@@ -108,7 +108,7 @@ Time: 0.001s">
 <div class="code" title="File: integers.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 0.75187969924812%"></div>
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
 
   Definition int_to_nat `{Zero N} `{ia : IntAbs} (x : Z) : N :=
@@ -119,8 +119,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: integers.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 1.5037593984962%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.71942446043165%"></div>
 <pre>
 End specializable.</pre>
 </div>

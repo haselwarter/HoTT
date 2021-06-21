@@ -40,13 +40,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spectrum.v
 Line: 4
-Time: 0.048s">
-<div class="time" style="width: 63.157894736842%"></div>
+Time: 0.044s">
+<div class="time" style="width: 60.27397260274%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Spectrum.v
 Line: 4
-Time: 0.076s">
+Time: 0.073s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Pointed.</pre>
@@ -54,7 +54,7 @@ Require Import Pointed.</pre>
 <div class="code" title="File: Spectrum.v
 Line: 5
 Time: 0.002s">
-<div class="time" style="width: 2.6315789473684%"></div>
+<div class="time" style="width: 2.7397260273973%"></div>
 <pre>
 Require Import HoTT.Truncations.</pre>
 </div>
@@ -100,7 +100,7 @@ Time: 0s">
 <div class="code" title="File: Spectrum.v
 Line: 14
 Time: 0.002s">
-<div class="time" style="width: 2.6315789473684%"></div>
+<div class="time" style="width: 2.7397260273973%"></div>
 <pre>Record Prespectrum :=
   { deloop :&gt; nat -&gt; pType
     ; glue : forall n, deloop n -&gt;* loops (deloop (n .+1)) }.</pre>
@@ -125,7 +125,7 @@ Global Existing Instance is_equiv_glue.</pre>
 <div class="code" title="File: Spectrum.v
 Line: 21
 Time: 0.006s">
-<div class="time" style="width: 7.8947368421053%"></div>
+<div class="time" style="width: 8.2191780821918%"></div>
 <pre>
 
 Definition equiv_glue (E : Prespectrum) `{IsSpectrum E}
@@ -175,8 +175,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Spectrum.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 1.3157894736842%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   simple refine (Build_Spectrum (Build_Prespectrum (fun n =&gt; pTr (trunc_index_inc k n) (E n)) _) _).</pre>
 </div>
@@ -195,8 +195,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spectrum.v
 Line: 37
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.3698630136986%"></div>
 <pre>
     exact ((ptr_loops _ (E n.+1)) o*E (ptr_pequiv _ (equiv_glue E n))).</pre>
 </div>
@@ -222,14 +222,14 @@ Time: 0s">
 <div class="code" title="File: Spectrum.v
 Line: 39
 Time: 0.003s">
-<div class="time" style="width: 3.9473684210526%"></div>
+<div class="time" style="width: 4.1095890410959%"></div>
 <pre>
     srapply isequiv_compose.</pre>
 </div>
 <div class="code" title="File: Spectrum.v
 Line: 40
-Time: 0.002s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0.003s">
+<div class="time" style="width: 4.1095890410959%"></div>
 <pre>
 Defined.</pre>
 </div>

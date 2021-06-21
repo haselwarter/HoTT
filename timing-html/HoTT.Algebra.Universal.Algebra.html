@@ -46,16 +46,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Algebra.v
 Line: 4
-Time: 0.03s">
-<div class="time" style="width: 22.727272727273%"></div>
+Time: 0.026s">
+<div class="time" style="width: 19.259259259259%"></div>
 <pre>
 
 Require Export HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 6
-Time: 0.091s">
-<div class="time" style="width: 68.939393939394%"></div>
+Time: 0.093s">
+<div class="time" style="width: 68.888888888889%"></div>
 <pre>
 
 Require Import
@@ -134,8 +134,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Algebra.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 0.75757575757576%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Record Signature := Build_Signature
   { Sort : Type
   ; Symbol : Type
@@ -251,7 +251,7 @@ Time: 0s">
 <div class="code" title="File: Algebra.v
 Line: 76
 Time: 0.001s">
-<div class="time" style="width: 0.75757575757576%"></div>
+<div class="time" style="width: 0.74074074074074%"></div>
 <pre>Record Algebra {σ : Signature} : Type := Build_Algebra
   { carriers : Carriers σ
   ; operations : forall (u : Symbol σ), Operation carriers (σ u)
@@ -300,7 +300,7 @@ Bind Scope Algebra_scope with Algebra.</pre>
 <div class="code" title="File: Algebra.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 0.75757575757576%"></div>
+<div class="time" style="width: 0.74074074074074%"></div>
 <pre>
 
 Definition SigAlgebra (σ : Signature) : Type
@@ -325,22 +325,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 97
-Time: 0.02s">
-<div class="time" style="width: 15.151515151515%"></div>
+Time: 0.021s">
+<div class="time" style="width: 15.555555555556%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 98
-Time: 0.003s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.962962962963%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.75757575757576%"></div>
+<div class="time" style="width: 0.74074074074074%"></div>
 <pre>
 
 Lemma path_algebra `{Funext} {σ : Signature} (A B : Algebra σ)
@@ -358,8 +358,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 106
-Time: 0.015s">
-<div class="time" style="width: 11.363636363636%"></div>
+Time: 0.016s">
+<div class="time" style="width: 11.851851851852%"></div>
 <pre>
   apply (ap (issig_algebra σ)^-1)^-1; cbn.</pre>
 </div>
@@ -379,8 +379,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Algebra.v
 Line: 109
-Time: 0.009s">
-<div class="time" style="width: 6.8181818181818%"></div>
+Time: 0.01s">
+<div class="time" style="width: 7.4074074074074%"></div>
 <pre>
   apply path_sigma_hprop.</pre>
 </div>
@@ -394,7 +394,7 @@ Time: 0s">
 <div class="code" title="File: Algebra.v
 Line: 111
 Time: 0.004s">
-<div class="time" style="width: 3.030303030303%"></div>
+<div class="time" style="width: 2.962962962963%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -408,8 +408,8 @@ Arguments path_algebra {_} {_} (A B)%Algebra_scope (p q)%path_scope.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 114
-Time: 0.002s">
-<div class="time" style="width: 1.5151515151515%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
 
 Lemma path_ap_carriers_path_algebra `{Funext} {σ} (A B : Algebra σ)
@@ -428,35 +428,35 @@ Proof.</pre>
 <div class="code" title="File: Algebra.v
 Line: 121
 Time: 0.002s">
-<div class="time" style="width: 1.5151515151515%"></div>
+<div class="time" style="width: 1.4814814814815%"></div>
 <pre>
   unfold path_algebra, path_sigma_hprop, path_sigma_uncurried.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 122
-Time: 0.132s">
+Time: 0.135s">
 <div class="time" style="width: 100%"></div>
 <pre>
   destruct A as [A a ha], B as [B b hb]; cbn in *.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 123
-Time: 0.016s">
-<div class="time" style="width: 12.121212121212%"></div>
+Time: 0.017s">
+<div class="time" style="width: 12.592592592593%"></div>
 <pre>
   destruct p, q; cbn.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 124
-Time: 0.01s">
-<div class="time" style="width: 7.5757575757576%"></div>
+Time: 0.011s">
+<div class="time" style="width: 8.1481481481481%"></div>
 <pre>
   now destruct (apD10^-1).</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 125
-Time: 0.036s">
-<div class="time" style="width: 27.272727272727%"></div>
+Time: 0.04s">
+<div class="time" style="width: 29.62962962963%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -471,7 +471,7 @@ Arguments path_ap_carriers_path_algebra {_} {_} (A B)%Algebra_scope (p q)%path_s
 <div class="code" title="File: Algebra.v
 Line: 128
 Time: 0.002s">
-<div class="time" style="width: 1.5151515151515%"></div>
+<div class="time" style="width: 1.4814814814815%"></div>
 <pre>
 
 Lemma path_path_algebra_issig {σ : Signature} {A B : Algebra σ} (p q : A = B)
@@ -488,14 +488,14 @@ Proof.</pre>
 <div class="code" title="File: Algebra.v
 Line: 133
 Time: 0.002s">
-<div class="time" style="width: 1.5151515151515%"></div>
+<div class="time" style="width: 1.4814814814815%"></div>
 <pre>
   set (e := (equiv_ap (issig_algebra σ)^-1 A B)).</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 134
-Time: 0.002s">
-<div class="time" style="width: 1.5151515151515%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
   by apply (@equiv_inv _ _ (ap e) (Equivalences.isequiv_ap _ _)).</pre>
 </div>
@@ -517,7 +517,7 @@ Arguments path_path_algebra_issig {_} {A B}%Algebra_scope (p q r)%path_scope.</p
 <div class="code" title="File: Algebra.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.75757575757576%"></div>
+<div class="time" style="width: 0.74074074074074%"></div>
 <pre>
 
 Lemma path_path_algebra `{Funext} {σ} {A B : Algebra σ}
@@ -555,13 +555,13 @@ Time: 0s">
 <div class="code" title="File: Algebra.v
 Line: 146
 Time: 0.003s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre> transitivity (ap carriers p); [by destruct p |].</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 146
 Time: 0.003s">
-<div class="time" style="width: 2.2727272727273%"></div>
+<div class="time" style="width: 2.2222222222222%"></div>
 <pre>
     transitivity (ap carriers q); [exact r | by destruct q].</pre>
 </div>
@@ -574,20 +574,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: Algebra.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 0.75757575757576%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4814814814815%"></div>
 <pre> apply hprop_allpath.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 148
-Time: 0.023s">
-<div class="time" style="width: 17.424242424242%"></div>
+Time: 0.03s">
+<div class="time" style="width: 22.222222222222%"></div>
 <pre> apply hset_path2.</pre>
 </div>
 <div class="code" title="File: Algebra.v
 Line: 148
-Time: 0.01s">
-<div class="time" style="width: 7.5757575757576%"></div>
+Time: 0.012s">
+<div class="time" style="width: 8.8888888888889%"></div>
 <pre>
 Defined.</pre>
 </div>

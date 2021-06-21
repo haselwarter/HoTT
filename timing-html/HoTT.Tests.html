@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Tests.v
 Line: 1
-Time: 0.38s">
+Time: 0.405s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
@@ -44,8 +44,8 @@ Fail Check Type0 : Type0.</pre>
 </div>
 <div class="code" title="File: Tests.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 0.26315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Check Susp nat : Type0.</pre>
 </div>
@@ -121,7 +121,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 19
 Time: 0.002s">
-<div class="time" style="width: 0.52631578947368%"></div>
+<div class="time" style="width: 0.49382716049383%"></div>
 <pre>Check (fun A : Type =&gt; _ : IsPointed (Susp A)).</pre>
 </div>
 <div class="code" title="File: Tests.v
@@ -169,7 +169,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 0.26315789473684%"></div>
+<div class="time" style="width: 0.24691358024691%"></div>
 <pre>
   Inductive nat : Type1 :=
   | O : nat
@@ -223,8 +223,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 44
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.24691358024691%"></div>
 <pre>
   Axiom equiv_path_nat :
     forall n m : nat,
@@ -255,7 +255,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 51
 Time: 0.003s">
-<div class="time" style="width: 0.78947368421053%"></div>
+<div class="time" style="width: 0.74074074074074%"></div>
 <pre>
     equiv_induction (@equiv_path_nat O (S n)).</pre>
 </div>
@@ -268,8 +268,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.26315789473684%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.49382716049383%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -381,7 +381,7 @@ Module Issue_973.</pre>
 <div class="code" title="File: Tests.v
 Line: 75
 Time: 0.001s">
-<div class="time" style="width: 0.26315789473684%"></div>
+<div class="time" style="width: 0.24691358024691%"></div>
 <pre>
 
   Inductive vec (A : Type) : nat -&gt; Type :=
@@ -400,7 +400,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.26315789473684%"></div>
+<div class="time" style="width: 0.24691358024691%"></div>
 <pre>Definition hd (A : Type) (n : nat) (v : vec A (S n)) : A :=
   match v in (vec _ (S n)) return A with
   | cons _ h _ =&gt; h
@@ -613,8 +613,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 116
-Time: 0.001s">
-<div class="time" style="width: 0.26315789473684%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.49382716049383%"></div>
 <pre>Inductive A := B (T := Unit) (x y : Bool) (z := x).</pre>
 </div>
 <div class="code" title="File: Tests.v

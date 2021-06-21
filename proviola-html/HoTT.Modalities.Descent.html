@@ -1438,12 +1438,12 @@
           
 
             i = 284;
-            data = "1 goal (ID 670)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "";
             responses[i]=data;
           
 
             i = 285;
-            data = "1 goal (ID 680)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall (b : B) (p : P b),	     (fun bp : {x : _ & P x} => O (f x = bp.1)) (b; p)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 670)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	1 goal (ID 680)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall (b : B) (p : P b),	     (fun bp : {x : _ & P x} => O (f x = bp.1)) (b; p)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 

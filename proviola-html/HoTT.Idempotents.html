@@ -723,12 +723,12 @@
           
 
             i = 141;
-            data = "1 goal (ID 411)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  Contr	    {y : {r0 : X -> A & {s0 : A -> X & (fun x : A => r0 (s0 x)) == idmap}} &	    {rp : (fun x : X => r x) == y.1 &	    {sp : (fun x : A => s x) == (y.2).1 &	    forall a : A, ap idmap (H a) @ 1 = (rp (s a) @ ap y.1 (sp a)) @ (y.2).2 a}}}	1 goal (ID 810)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  Contr	    {y : {s0 : A -> X & (fun x : A => r (s0 x)) == idmap} &	    {sp : (fun x : A => s x) == y.1 &	    forall a : A, ap idmap (H a) @ 1 = (1 @ ap r (sp a)) @ y.2 a}}	1 goal (ID 1290)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  Contr	    {y : (fun x : A => r (s x)) == idmap &	    forall a : A, ap idmap (H a) @ 1 = 1 @ y a}	";
+            data = "";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 goal (ID 1318)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  {K : (fun x : A => r (s x)) == idmap & H == K} <~>	  {y : (fun x : A => r (s x)) == idmap &	  forall a : A, ap idmap (H a) @ 1 = 1 @ y a}	";
+            data = "1 goal (ID 411)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  Contr	    {y : {r0 : X -> A & {s0 : A -> X & (fun x : A => r0 (s0 x)) == idmap}} &	    {rp : (fun x : X => r x) == y.1 &	    {sp : (fun x : A => s x) == (y.2).1 &	    forall a : A, ap idmap (H a) @ 1 = (rp (s a) @ ap y.1 (sp a)) @ (y.2).2 a}}}	1 goal (ID 810)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  Contr	    {y : {s0 : A -> X & (fun x : A => r (s0 x)) == idmap} &	    {sp : (fun x : A => s x) == y.1 &	    forall a : A, ap idmap (H a) @ 1 = (1 @ ap r (sp a)) @ y.2 a}}	1 goal (ID 1290)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  Contr	    {y : (fun x : A => r (s x)) == idmap &	    forall a : A, ap idmap (H a) @ 1 = 1 @ y a}	1 goal (ID 1318)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  ============================	  {K : (fun x : A => r (s x)) == idmap & H == K} <~>	  {y : (fun x : A => r (s x)) == idmap &	  forall a : A, ap idmap (H a) @ 1 = 1 @ y a}	";
             responses[i]=data;
           
 

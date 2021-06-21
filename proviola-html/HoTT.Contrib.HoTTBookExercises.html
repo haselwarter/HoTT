@@ -2473,12 +2473,12 @@
           
 
             i = 491;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 468) is:	 Contr (A -> A) -> IsHProp A	1 goal (ID 468)	  	  H : Funext	  A : Type	  ============================	  Contr (A -> A) -> IsHProp A	1 goal (ID 511)	  	  H : Funext	  A : Type	  contr_AA : Contr (A -> A)	  ============================	  IsHProp A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 468) is:	 Contr (A -> A) -> IsHProp A	1 goal (ID 468)	  	  H : Funext	  A : Type	  ============================	  Contr (A -> A) -> IsHProp A	1 goal (ID 509)	  	  H : Funext	  A : Type	  contr_AA : Contr (A -> A)	  ============================	  IsHProp A	";
             responses[i]=data;
           
 
             i = 492;
-            data = "1 goal (ID 514)	  	  H : Funext	  A : Type	  contr_AA : Contr (A -> A)	  a1, a2 : A	  ============================	  a1 = a2	";
+            data = "1 goal (ID 512)	  	  H : Funext	  A : Type	  contr_AA : Contr (A -> A)	  a1, a2 : A	  ============================	  a1 = a2	";
             responses[i]=data;
           
 
@@ -3363,7 +3363,7 @@
           
 
             i = 669;
-            data = "1 goal (ID 589)	  	  H : Funext	  LEM : forall A : Type, A + ~ A	  X : Type	  A : X -> Type	  P : forall x : X, A x -> Type	  HX : IsHSet X	  HA : forall x : X, IsHSet (A x)	  HP : forall (x : X) (a : A x), IsHProp (P x a)	  x : X	  ============================	  {a : A x & P x a} -> ~~ {a : A x & P x a}	";
+            data = "1 goal (ID 587)	  	  H : Funext	  LEM : forall A : Type, A + ~ A	  X : Type	  A : X -> Type	  P : forall x : X, A x -> Type	  HX : IsHSet X	  HA : forall x : X, IsHSet (A x)	  HP : forall (x : X) (a : A x), IsHProp (P x a)	  x : X	  ============================	  {a : A x & P x a} -> ~~ {a : A x & P x a}	";
             responses[i]=data;
           
 
@@ -3418,7 +3418,7 @@
           
 
             i = 680;
-            data = "1 goal (ID 548)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ============================	  forall (A : Type) (P : ~~ A -> Type),	  (forall a : A, P (fun na : ~ A => na a)) ->	  (forall (x y : ~~ A) (z : P x) (w : P y),	   transport P (path_ishprop x y) z = w) -> forall x : ~~ A, P x	";
+            data = "1 goal (ID 546)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ============================	  forall (A : Type) (P : ~~ A -> Type),	  (forall a : A, P (fun na : ~ A => na a)) ->	  (forall (x y : ~~ A) (z : P x) (w : P y),	   transport P (path_ishprop x y) z = w) -> forall x : ~~ A, P x	";
             responses[i]=data;
           
 
@@ -3428,77 +3428,77 @@
           
 
             i = 682;
-            data = "1 goal (ID 553)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  ============================	  P nna	";
+            data = "1 goal (ID 551)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  ============================	  P nna	";
             responses[i]=data;
           
 
             i = 683;
-            data = "2 goals (ID 555)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  ============================	  forall x : ~~ A, IsHProp (P x)		goal 2 (ID 556) is:	 P nna	";
+            data = "2 goals (ID 553)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  ============================	  forall x : ~~ A, IsHProp (P x)		goal 2 (ID 554) is:	 P nna	";
             responses[i]=data;
           
 
             i = 684;
-            data = "1 goal (ID 555)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  ============================	  forall x : ~~ A, IsHProp (P x)	1 goal (ID 557)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  ============================	  IsHProp (P x)	";
+            data = "1 goal (ID 553)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  ============================	  forall x : ~~ A, IsHProp (P x)	1 goal (ID 555)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  ============================	  IsHProp (P x)	";
             responses[i]=data;
           
 
             i = 685;
-            data = "1 goal (ID 558)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  ============================	  forall x0 y : P x, x0 = y	";
+            data = "1 goal (ID 556)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  ============================	  forall x0 y : P x, x0 = y	";
             responses[i]=data;
           
 
             i = 686;
-            data = "1 goal (ID 560)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  ============================	  x' = y'	";
+            data = "1 goal (ID 558)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  ============================	  x' = y'	";
             responses[i]=data;
           
 
             i = 687;
-            data = "1 goal (ID 578)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  ============================	  transport P (path_ishprop x x) y' = y'	";
+            data = "1 goal (ID 576)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  ============================	  transport P (path_ishprop x x) y' = y'	";
             responses[i]=data;
           
 
             i = 688;
-            data = "1 goal (ID 592)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  path := path_ishprop x x : x = x	  ============================	  transport P path y' = y'	";
+            data = "1 goal (ID 590)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  path := path_ishprop x x : x = x	  ============================	  transport P path y' = y'	";
             responses[i]=data;
           
 
             i = 689;
-            data = "1 goal (ID 598)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  path := path_ishprop x x : x = x	  H' : 1 = path	  ============================	  transport P path y' = y'	";
+            data = "1 goal (ID 596)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  path := path_ishprop x x : x = x	  H' : 1 = path	  ============================	  transport P path y' = y'	";
             responses[i]=data;
           
 
             i = 690;
-            data = "1 goal (ID 1104)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  ============================	  transport P 1 y' = y'	";
+            data = "1 goal (ID 1060)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna, x : ~~ A	  x', y' : P x	  ============================	  transport P 1 y' = y'	";
             responses[i]=data;
           
 
             i = 691;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 556) is:	 P nna	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 554) is:	 P nna	";
             responses[i]=data;
           
 
             i = 692;
-            data = "1 goal (ID 556)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  ============================	  P nna	1 goal (ID 1114)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  ============================	  P nna	";
+            data = "1 goal (ID 554)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  ============================	  P nna	1 goal (ID 1070)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  ============================	  P nna	";
             responses[i]=data;
           
 
             i = 693;
-            data = "1 goal (ID 1116)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  ============================	  Empty	";
+            data = "1 goal (ID 1072)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  ============================	  Empty	";
             responses[i]=data;
           
 
             i = 694;
-            data = "1 goal (ID 1117)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  ============================	  ~ A	";
+            data = "1 goal (ID 1073)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  ============================	  ~ A	";
             responses[i]=data;
           
 
             i = 695;
-            data = "1 goal (ID 1119)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  a : A	  ============================	  Empty	";
+            data = "1 goal (ID 1075)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  a : A	  ============================	  Empty	";
             responses[i]=data;
           
 
             i = 696;
-            data = "1 goal (ID 1120)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  a : A	  ============================	  P nna	";
+            data = "1 goal (ID 1076)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  P : ~~ A -> Type	  base : forall a : A, P (fun na : ~ A => na a)	  p : forall (x y : ~~ A) (z : P x) (w : P y),	      transport P (path_ishprop x y) z = w	  nna : ~~ A	  X : forall x : ~~ A, IsHProp (P x)	  npnna : ~ P nna	  a : A	  ============================	  P nna	";
             responses[i]=data;
           
 
@@ -3513,7 +3513,7 @@
           
 
             i = 699;
-            data = "1 goal (ID 551)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  merely A <~> ~~ A	";
+            data = "1 goal (ID 549)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  merely A <~> ~~ A	";
             responses[i]=data;
           
 
@@ -3523,47 +3523,47 @@
           
 
             i = 701;
-            data = "2 goals (ID 598)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  merely A -> ~~ A		goal 2 (ID 599) is:	 ~~ A -> merely A	";
+            data = "2 goals (ID 594)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  merely A -> ~~ A		goal 2 (ID 595) is:	 ~~ A -> merely A	";
             responses[i]=data;
           
 
             i = 702;
-            data = "1 goal (ID 598)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  merely A -> ~~ A	1 goal (ID 642)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  A -> ~~ A	";
+            data = "1 goal (ID 594)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  merely A -> ~~ A	1 goal (ID 636)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  A -> ~~ A	";
             responses[i]=data;
           
 
             i = 703;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 599) is:	 ~~ A -> merely A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 595) is:	 ~~ A -> merely A	";
             responses[i]=data;
           
 
             i = 704;
-            data = "1 goal (ID 599)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  ~~ A -> merely A	1 goal (ID 645)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  merely A	";
+            data = "1 goal (ID 595)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  ============================	  ~~ A -> merely A	1 goal (ID 639)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  merely A	";
             responses[i]=data;
           
 
             i = 705;
-            data = "3 goals (ID 647)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  A -> merely A		goal 2 (ID 648) is:	 forall (x y : ~~ A) (z w : merely A),	 transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	goal 3 (ID 649) is:	 ~~ A	";
+            data = "3 goals (ID 641)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  A -> merely A		goal 2 (ID 642) is:	 forall (x y : ~~ A) (z w : merely A),	 transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	goal 3 (ID 643) is:	 ~~ A	";
             responses[i]=data;
           
 
             i = 706;
-            data = "1 goal (ID 647)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  A -> merely A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 goals		goal 1 (ID 648) is:	 forall (x y : ~~ A) (z w : merely A),	 transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	goal 2 (ID 649) is:	 ~~ A	";
+            data = "1 goal (ID 641)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  A -> merely A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 goals		goal 1 (ID 642) is:	 forall (x y : ~~ A) (z w : merely A),	 transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	goal 2 (ID 643) is:	 ~~ A	";
             responses[i]=data;
           
 
             i = 707;
-            data = "1 goal (ID 648)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  forall (x y : ~~ A) (z w : merely A),	  transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	1 goal (ID 657)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  x, y : ~~ A	  z, w : merely A	  ============================	  transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	";
+            data = "1 goal (ID 642)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  forall (x y : ~~ A) (z w : merely A),	  transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	1 goal (ID 651)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  x, y : ~~ A	  z, w : merely A	  ============================	  transport (fun _ : ~~ A => merely A) (path_ishprop x y) z = w	";
             responses[i]=data;
           
 
             i = 708;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 goal		goal 1 (ID 649) is:	 ~~ A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 goal		goal 1 (ID 643) is:	 ~~ A	";
             responses[i]=data;
           
 
             i = 709;
-            data = "1 goal (ID 649)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  ~~ A	No more goals.	";
+            data = "1 goal (ID 643)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + ~ A	  A : Type	  nna : ~~ A	  ============================	  ~~ A	No more goals.	";
             responses[i]=data;
           
 
@@ -3943,7 +3943,7 @@
           
 
             i = 785;
-            data = "1 goal (ID 773)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  (fun x : A => g^-1 (g (f x))) == f	";
+            data = "1 goal (ID 754)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  (fun x : A => g^-1 (g (f x))) == f	";
             responses[i]=data;
           
 
@@ -3978,12 +3978,12 @@
           
 
             i = 792;
-            data = "";
+            data = "1 goal (ID 3116)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  (fun x : C => h (g (g^-1 x))) == h	No more goals.	";
             responses[i]=data;
           
 
             i = 793;
-            data = "1 goal (ID 3899)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  (fun x : C => h (g (g^-1 x))) == h	No more goals.	1 goal (ID 552)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv (h o g o f)	";
+            data = "1 goal (ID 552)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv (h o g o f)	";
             responses[i]=data;
           
 
@@ -4163,12 +4163,12 @@
           
 
             i = 829;
-            data = "1 goal (ID 1682)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => fst x.1)	";
+            data = "";
             responses[i]=data;
           
 
             i = 830;
-            data = "No more goals.	";
+            data = "1 goal (ID 1598)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => fst x.1)	No more goals.	";
             responses[i]=data;
           
 
@@ -4193,7 +4193,7 @@
           
 
             i = 835;
-            data = "1 goal (ID 1729)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => snd x.1)	No more goals.	";
+            data = "1 goal (ID 1645)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => snd x.1)	No more goals.	";
             responses[i]=data;
           
 
@@ -4528,17 +4528,17 @@
           
 
             i = 902;
-            data = "1 goal (ID 604)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  ============================	  Contr (forall A : {X : Type & X = X}, A = A)	";
+            data = "1 goal (ID 598)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  ============================	  Contr (forall A : {X : Type & X = X}, A = A)	";
             responses[i]=data;
           
 
             i = 903;
-            data = "1 goal (ID 611)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  u : forall A : {X : Type & X = X}, A = A	  ============================	  (fun A : {X : Type & X = X} => 1) = u	";
+            data = "1 goal (ID 605)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  u : forall A : {X : Type & X = X}, A = A	  ============================	  (fun A : {X : Type & X = X} => 1) = u	";
             responses[i]=data;
           
 
             i = 904;
-            data = "1 goal (ID 618)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  B := {X : Type & X = X} : Type	  u : forall A : B, A = A	  ============================	  (fun A : B => 1) = u	";
+            data = "1 goal (ID 612)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  B := {X : Type & X = X} : Type	  u : forall A : B, A = A	  ============================	  (fun A : B => 1) = u	";
             responses[i]=data;
           
 
@@ -5653,37 +5653,37 @@
           
 
             i = 1127;
-            data = "1 goal (ID 590)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  b = negb b	1 goal (ID 896)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	";
+            data = "1 goal (ID 590)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  b = negb b	1 goal (ID 875)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	";
             responses[i]=data;
           
 
             i = 1128;
-            data = "1 goal (ID 913)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  forall y : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)},	  ({| equiv_fun := negb; equiv_isequiv := isequiv_negb |};	  fun H : forall x : Bool, negb x = x => false_ne_true (H true)) = y	";
+            data = "1 goal (ID 892)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  forall y : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)},	  ({| equiv_fun := negb; equiv_isequiv := isequiv_negb |};	  fun H : forall x : Bool, negb x = x => false_ne_true (H true)) = y	";
             responses[i]=data;
           
 
             i = 1129;
-            data = "1 goal (ID 914)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  ({| equiv_fun := negb; equiv_isequiv := isequiv_negb |};	  fun H : forall x : Bool, negb x = x => false_ne_true (H true)) = f	";
+            data = "1 goal (ID 893)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  ({| equiv_fun := negb; equiv_isequiv := isequiv_negb |};	  fun H : forall x : Bool, negb x = x => false_ne_true (H true)) = f	";
             responses[i]=data;
           
 
             i = 1130;
-            data = "1 goal (ID 917)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  {p : {| equiv_fun := negb; equiv_isequiv := isequiv_negb |} = f.1 &	  transport (fun f0 : Bool <~> Bool => ~ (forall x : Bool, f0 x = x)) p	    (fun H : forall x : Bool, negb x = x => false_ne_true (H true)) = f.2}	";
+            data = "1 goal (ID 896)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  {p : {| equiv_fun := negb; equiv_isequiv := isequiv_negb |} = f.1 &	  transport (fun f0 : Bool <~> Bool => ~ (forall x : Bool, f0 x = x)) p	    (fun H : forall x : Bool, negb x = x => false_ne_true (H true)) = f.2}	";
             responses[i]=data;
           
 
             i = 1131;
-            data = "1 goal (ID 992)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  negb = f.1	";
+            data = "1 goal (ID 969)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  ============================	  negb = f.1	";
             responses[i]=data;
           
 
             i = 1132;
-            data = "1 goal (ID 998)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  b' : Bool	  ============================	  negb b' = f.1 b'	";
+            data = "1 goal (ID 975)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  b' : Bool	  ============================	  negb b' = f.1 b'	";
             responses[i]=data;
           
 
             i = 1133;
-            data = "1 goal (ID 1000)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  b' : Bool	  X : f.1 b' <> b'	  ============================	  negb b' = f.1 b'	";
+            data = "1 goal (ID 977)	  	  LEM : forall A : Type, IsHProp A -> A + ~ A	  ua : Univalence	  fs : Funext	  b : Bool	  H' : ~ Contr {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f x = x)}	  b' : Bool	  X : f.1 b' <> b'	  ============================	  negb b' = f.1 b'	";
             responses[i]=data;
           
 
@@ -6013,12 +6013,12 @@
           
 
             i = 1199;
-            data = "1 goal (ID 550)	  	  H : forall A : Type, merely A -> A	  A : Type	  ============================	  Reflexive (fun x y : A => merely (x = y))	1 goal (ID 643)	  	  H : forall A : Type, merely A -> A	  A : Type	  x : A	  ============================	  merely (x = x)	";
+            data = "1 goal (ID 550)	  	  H : forall A : Type, merely A -> A	  A : Type	  ============================	  Reflexive (fun x y : A => merely (x = y))	1 goal (ID 634)	  	  H : forall A : Type, merely A -> A	  A : Type	  x : A	  ============================	  merely (x = x)	";
             responses[i]=data;
           
 
             i = 1200;
-            data = "1 goal (ID 646)	  	  H : forall A : Type, merely A -> A	  A : Type	  x : A	  ============================	  x = x	";
+            data = "1 goal (ID 637)	  	  H : forall A : Type, merely A -> A	  A : Type	  x : A	  ============================	  x = x	";
             responses[i]=data;
           
 
@@ -6028,12 +6028,12 @@
           
 
             i = 1202;
-            data = "1 goal (ID 552)	  	  H : forall A : Type, merely A -> A	  A : Type	  ============================	  forall x y : A, merely (x = y) -> x = y	1 goal (ID 650)	  	  H : forall A : Type, merely A -> A	  A : Type	  x, y : A	  X : merely (x = y)	  ============================	  x = y	";
+            data = "1 goal (ID 552)	  	  H : forall A : Type, merely A -> A	  A : Type	  ============================	  forall x y : A, merely (x = y) -> x = y	1 goal (ID 641)	  	  H : forall A : Type, merely A -> A	  A : Type	  x, y : A	  X : merely (x = y)	  ============================	  x = y	";
             responses[i]=data;
           
 
             i = 1203;
-            data = "1 goal (ID 651)	  	  H : forall A : Type, merely A -> A	  A : Type	  x, y : A	  X : merely (x = y)	  ============================	  merely (x = y)	";
+            data = "1 goal (ID 642)	  	  H : forall A : Type, merely A -> A	  A : Type	  x, y : A	  X : merely (x = y)	  ============================	  merely (x = y)	";
             responses[i]=data;
           
 
@@ -6083,7 +6083,7 @@
           
 
             i = 1213;
-            data = "1 goal (ID 595)	  	  H : forall (A B : Type) (f : A -> B),	      (forall b : B, merely (hfiber f b)) -> forall b : B, hfiber f b	  A : Type	  x : A	  ============================	  {x0 : A & tr x0 = tr x}	";
+            data = "1 goal (ID 594)	  	  H : forall (A B : Type) (f : A -> B),	      (forall b : B, merely (hfiber f b)) -> forall b : B, hfiber f b	  A : Type	  x : A	  ============================	  {x0 : A & tr x0 = tr x}	";
             responses[i]=data;
           
 

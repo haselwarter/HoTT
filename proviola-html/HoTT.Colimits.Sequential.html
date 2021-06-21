@@ -793,12 +793,12 @@
           
 
             i = 155;
-            data = "1 goal (ID 840)	  	  H : Funext	  A : Sequence	  ============================	  forall (n : Graph.graph0 sequence_graph) (a : shift_seq A 0 n),	  ap (colim_shift_seq_to_colim_seq A 0) (glue (shift_seq A 0) n a) @	  (fun (k : Graph.graph0 sequence_graph) (a0 : shift_seq A 0 k) =>	   J (nat_add_n_O k)) n a =	  (fun (k : Graph.graph0 sequence_graph) (a0 : shift_seq A 0 k) =>	   J (nat_add_n_O k)) n.+1 (a) ^+ @	  ap	    (equiv_functor_colimit	       {|	         diag_equiv_map :=	           {|	             DiagramMap_obj :=	               fun k : Graph.graph0 sequence_graph =>	               coe (ap A (nat_add_n_O k)^);	             DiagramMap_comm :=	               fun (k l : Graph.graph0 sequence_graph)	                 (p : Graph.graph1 sequence_graph k l) 	                 (a0 : shift_seq A 0 k) =>	               match	                 p as p0 in (_ = y)	                 return	                   ((A _f p0) (coe (ap A (nat_add_n_O k)^) a0) =	                    coe (ap A (nat_add_n_O y)^) (((shift_seq A 0) _f p0) a0))	               with	               | 1 =>	                   K S (fun (n0 : nat) (a1 : A n0) => (a1) ^+)	                     (nat_add_n_O k)^ @	                   ap10 (ap coe (ap (ap A) (ap_V S (nat_add_n_O k)))) (a0) ^+	               end	           |};	         diag_equiv_isequiv :=	           fun k : Graph.graph0 sequence_graph =>	           isequiv_path (ap A (nat_add_n_O k)^)	       |} (iscolimit_colimit (shift_seq A 0)) (iscolimit_colimit A))	    (glue (shift_seq A 0) n a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 525) is:	 Colimit (shift_seq A n.+1) <~> Colimit A	goal 2 (ID 529) is:	 ?f == colim_shift_seq_to_colim_seq A n.+1	";
+            data = "1 goal (ID 840)	  	  H : Funext	  A : Sequence	  ============================	  forall (n : Graph.graph0 sequence_graph) (a : shift_seq A 0 n),	  ap (colim_shift_seq_to_colim_seq A 0) (glue (shift_seq A 0) n a) @	  (fun (k : Graph.graph0 sequence_graph) (a0 : shift_seq A 0 k) =>	   J (nat_add_n_O k)) n a =	  (fun (k : Graph.graph0 sequence_graph) (a0 : shift_seq A 0 k) =>	   J (nat_add_n_O k)) n.+1 (a) ^+ @	  ap	    (equiv_functor_colimit	       {|	         diag_equiv_map :=	           {|	             DiagramMap_obj :=	               fun k : Graph.graph0 sequence_graph =>	               coe (ap A (nat_add_n_O k)^);	             DiagramMap_comm :=	               fun (k l : Graph.graph0 sequence_graph)	                 (p : Graph.graph1 sequence_graph k l) 	                 (a0 : shift_seq A 0 k) =>	               match	                 p as p0 in (_ = y)	                 return	                   ((A _f p0) (coe (ap A (nat_add_n_O k)^) a0) =	                    coe (ap A (nat_add_n_O y)^) (((shift_seq A 0) _f p0) a0))	               with	               | 1 =>	                   K S (fun (n0 : nat) (a1 : A n0) => (a1) ^+)	                     (nat_add_n_O k)^ @	                   ap10 (ap coe (ap (ap A) (ap_V S (nat_add_n_O k)))) (a0) ^+	               end	           |};	         diag_equiv_isequiv :=	           fun k : Graph.graph0 sequence_graph =>	           isequiv_path (ap A (nat_add_n_O k)^)	       |} (iscolimit_colimit (shift_seq A 0)) (iscolimit_colimit A))	    (glue (shift_seq A 0) n a)	";
             responses[i]=data;
           
 
             i = 156;
-            data = "1 goal (ID 525)	  	  H : Funext	  A : Sequence	  n : nat	  e : IsEquiv (colim_shift_seq_to_colim_seq A n)	  ============================	  Colimit (shift_seq A n.+1) <~> Colimit A	2 goals (ID 889)	  	  H : Funext	  A : Sequence	  n : nat	  e : IsEquiv (colim_shift_seq_to_colim_seq A n)	  ============================	  Colimit (shift_seq A n.+1) <~> Colimit (succ_seq (shift_seq A n))		goal 2 (ID 890) is:	 Colimit (succ_seq (shift_seq A n)) <~> Colimit A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 525) is:	 Colimit (shift_seq A n.+1) <~> Colimit A	goal 2 (ID 529) is:	 ?f == colim_shift_seq_to_colim_seq A n.+1	1 goal (ID 525)	  	  H : Funext	  A : Sequence	  n : nat	  e : IsEquiv (colim_shift_seq_to_colim_seq A n)	  ============================	  Colimit (shift_seq A n.+1) <~> Colimit A	2 goals (ID 889)	  	  H : Funext	  A : Sequence	  n : nat	  e : IsEquiv (colim_shift_seq_to_colim_seq A n)	  ============================	  Colimit (shift_seq A n.+1) <~> Colimit (succ_seq (shift_seq A n))		goal 2 (ID 890) is:	 Colimit (succ_seq (shift_seq A n)) <~> Colimit A	";
             responses[i]=data;
           
 
@@ -1848,12 +1848,12 @@
           
 
             i = 366;
-            data = "1 goal (ID 1464)	  	  H : Univalence	  A : Sequence	  B : FibSequence A	  E : {x : _ & fib_seq_to_type_fam B x} -> Type	  e : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      E (seq_colim_sum_to_sum_seq_colim B (inj (sig_seq B) n (a; b)))	  t : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      transport E	        (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a; b)))	        (e n.+1 (a) ^+ (b) ^+f) = e n a b	  n : Graph.graph0 sequence_graph	  a : A n	  k : Graph.graph0 sequence_graph	  b : fib_seq_to_seq B (n.+1; (a) ^+) k	  ============================	  R k.+1 n a b @ 1 =	  (ap	     (transport	        (fun x : fib_seq_to_type_fam B (inj A n a) => E (inj A n a; x))	        (colimp k.+1 k.+2 1 b)) 1 @	   Epsilon (colimp n n.+1 1 a)	     (colim_succ_seq_to_colim_seq_beta_glue (fib_seq_to_seq B (n; a)) k b)	     (F n.+1 (a) ^+ (inj (succ_seq (fib_seq_to_seq B (n; a))) k.+1 (b) ^+))) @	  ap	    (transport E	       (Delta (colimp n n.+1 1 a) (fib_seq_to_type_fam_beta_glue B n a)	          (inj (succ_seq (fib_seq_to_seq B (n; a))) k b)))	    (R k n.+1 (a) ^+ b)	";
+            data = "";
             responses[i]=data;
           
 
             i = 367;
-            data = "";
+            data = "1 goal (ID 1464)	  	  H : Univalence	  A : Sequence	  B : FibSequence A	  E : {x : _ & fib_seq_to_type_fam B x} -> Type	  e : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      E (seq_colim_sum_to_sum_seq_colim B (inj (sig_seq B) n (a; b)))	  t : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      transport E	        (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a; b)))	        (e n.+1 (a) ^+ (b) ^+f) = e n a b	  n : Graph.graph0 sequence_graph	  a : A n	  k : Graph.graph0 sequence_graph	  b : fib_seq_to_seq B (n.+1; (a) ^+) k	  ============================	  R k.+1 n a b @ 1 =	  (ap	     (transport	        (fun x : fib_seq_to_type_fam B (inj A n a) => E (inj A n a; x))	        (colimp k.+1 k.+2 1 b)) 1 @	   Epsilon (colimp n n.+1 1 a)	     (colim_succ_seq_to_colim_seq_beta_glue (fib_seq_to_seq B (n; a)) k b)	     (F n.+1 (a) ^+ (inj (succ_seq (fib_seq_to_seq B (n; a))) k.+1 (b) ^+))) @	  ap	    (transport E	       (Delta (colimp n n.+1 1 a) (fib_seq_to_type_fam_beta_glue B n a)	          (inj (succ_seq (fib_seq_to_seq B (n; a))) k b)))	    (R k n.+1 (a) ^+ b)	";
             responses[i]=data;
           
 
@@ -2118,12 +2118,12 @@
           
 
             i = 420;
-            data = "";
+            data = "1 goal (ID 1582)	  	  H : Univalence	  A : Sequence	  B : FibSequence A	  E : {x : _ & fib_seq_to_type_fam B x} -> Type	  e : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      E (seq_colim_sum_to_sum_seq_colim B (inj (sig_seq B) n (a; b)))	  t : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      transport E	        (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a; b)))	        (e n.+1 (a) ^+ (b) ^+f) = e n a b	  n : Graph.graph0 sequence_graph	  a : A n	  b : B (n; a)	  h : (ap	         (transport	            (fun x0 : fib_seq_to_type_fam B (inj A n a) => E (inj A n a; x0))	            (colimp 0 1 1 b))	         ((G n a (inj (fib_seq_to_seq B (n.+1; (a) ^+)) 0 (b) ^+))^)^ @	       Eta (seq_colim_sum_to_sum_seq_colim_beta_glue B n a b)	         (seq_colim_sum_ind	            (seq_colim_sum_to_sum_seq_colim B	               (inj (sig_seq B) n.+1 ((a; b)) ^+)))) @	      apD seq_colim_sum_ind	        (ap (seq_colim_sum_to_sum_seq_colim B) (colimp n n.+1 1 (a; b))) =	      R 0 n a b	  ============================	  apD seq_colim_sum_ind	    (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a; b))) =	  t n a b	No more goals.	";
             responses[i]=data;
           
 
             i = 421;
-            data = "1 goal (ID 1582)	  	  H : Univalence	  A : Sequence	  B : FibSequence A	  E : {x : _ & fib_seq_to_type_fam B x} -> Type	  e : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      E (seq_colim_sum_to_sum_seq_colim B (inj (sig_seq B) n (a; b)))	  t : forall (n : Graph.graph0 sequence_graph) (a : A n)	      (b : (fun a0 : A n => B (n; a0)) a),	      transport E	        (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a; b)))	        (e n.+1 (a) ^+ (b) ^+f) = e n a b	  n : Graph.graph0 sequence_graph	  a : A n	  b : B (n; a)	  h : (ap	         (transport	            (fun x0 : fib_seq_to_type_fam B (inj A n a) => E (inj A n a; x0))	            (colimp 0 1 1 b))	         ((G n a (inj (fib_seq_to_seq B (n.+1; (a) ^+)) 0 (b) ^+))^)^ @	       Eta (seq_colim_sum_to_sum_seq_colim_beta_glue B n a b)	         (seq_colim_sum_ind	            (seq_colim_sum_to_sum_seq_colim B	               (inj (sig_seq B) n.+1 ((a; b)) ^+)))) @	      apD seq_colim_sum_ind	        (ap (seq_colim_sum_to_sum_seq_colim B) (colimp n n.+1 1 (a; b))) =	      R 0 n a b	  ============================	  apD seq_colim_sum_ind	    (ap (seq_colim_sum_to_sum_seq_colim B) (glue (sig_seq B) n (a; b))) =	  t n a b	No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -2163,12 +2163,12 @@
           
 
             i = 429;
-            data = "";
+            data = "<infomsg>H is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>E is declared</infomsg>	<infomsg>e is declared</infomsg>	<infomsg>t is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 430;
-            data = "<infomsg>H is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>B is declared</infomsg>	<infomsg>E is declared</infomsg>	<infomsg>e is declared</infomsg>	<infomsg>t is declared</infomsg>	1 goal (ID 760)	  	  H : Univalence	  A : Sequence	  B : FibSequence A	  E : Type	  e : forall (n : Graph.graph0 sequence_graph) (a : A n), B (n; a) -> E	  t : forall (n : Graph.graph0 sequence_graph) (a : A n) 	      (b : B (n; a)), e n.+1 (a) ^+ (b) ^+f = e n a b	  ============================	  {x : _ & fib_seq_to_type_fam B x} -> E	";
+            data = "1 goal (ID 760)	  	  H : Univalence	  A : Sequence	  B : FibSequence A	  E : Type	  e : forall (n : Graph.graph0 sequence_graph) (a : A n), B (n; a) -> E	  t : forall (n : Graph.graph0 sequence_graph) (a : A n) 	      (b : B (n; a)), e n.+1 (a) ^+ (b) ^+f = e n a b	  ============================	  {x : _ & fib_seq_to_type_fam B x} -> E	";
             responses[i]=data;
           
 

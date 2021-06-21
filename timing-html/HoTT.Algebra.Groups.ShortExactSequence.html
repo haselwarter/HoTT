@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: ShortExactSequence.v
 Line: 1
-Time: 0.115s">
+Time: 0.124s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics Types WildCat Pointed.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 1
-Time: 0.035s">
-<div class="time" style="width: 30.434782608696%"></div>
+Time: 0.037s">
+<div class="time" style="width: 29.838709677419%"></div>
 <pre>
 Require Import Groups.Group Groups.Subgroup Groups.Kernel.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 2
-Time: 0.017s">
-<div class="time" style="width: 14.782608695652%"></div>
+Time: 0.016s">
+<div class="time" style="width: 12.903225806452%"></div>
 <pre>
 Require Import Homotopy.ExactSequence Modalities.Identity.</pre>
 </div>
@@ -83,15 +83,15 @@ Time: 0s">
 <div class="code" title="File: ShortExactSequence.v
 Line: 10
 Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>Definition grp_cxfib {A B C : Group} {i : A $-&gt; B} {f : B $-&gt; C} (cx : IsComplex i f)
   : GroupHomomorphism A (grp_kernel f)
   := grp_kernel_corec cx.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 12
-Time: 0.044s">
-<div class="time" style="width: 38.260869565217%"></div>
+Time: 0.048s">
+<div class="time" style="width: 38.709677419355%"></div>
 <pre>
 
 Definition grp_iso_cxfib {A B C : Group} {i : A $-&gt; B} {f : B $-&gt; C}
@@ -109,8 +109,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 19
-Time: 0.003s">
-<div class="time" style="width: 2.6086956521739%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>Proposition grp_iso_cxfib_beta {A B C : Group} {i : A $-&gt; B} {f : B $-&gt; C}
             `{IsEmbedding i} (ex : IsExact (Tr (-1)) i f)
   : i $o (grp_iso_inverse (grp_iso_cxfib ex)) $== subgroup_incl (grp_kernel f).</pre>
@@ -124,15 +124,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 22
-Time: 0.045s">
-<div class="time" style="width: 39.130434782609%"></div>
+Time: 0.048s">
+<div class="time" style="width: 38.709677419355%"></div>
 <pre>
   rapply equiv_ind.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 23
-Time: 0.063s">
-<div class="time" style="width: 54.782608695652%"></div>
+Time: 0.067s">
+<div class="time" style="width: 54.032258064516%"></div>
 <pre>
   1: exact (isequiv_cxfib ex).</pre>
 </div>
@@ -152,8 +152,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -209,14 +209,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 35
-Time: 0.015s">
-<div class="time" style="width: 13.04347826087%"></div>
+Time: 0.02s">
+<div class="time" style="width: 16.129032258065%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 35
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.80645161290323%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -246,7 +246,7 @@ Time: 0s">
 <div class="code" title="File: ShortExactSequence.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.80645161290323%"></div>
 <pre>Lemma equiv_grp_isexact_isembedding `{Univalence} {A B : Group} (f : A $-&gt; B)
   : IsExact purely (@grp_homo_const grp_trivial A) f &lt;~&gt; IsEmbedding f.</pre>
 </div>
@@ -259,8 +259,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 43
-Time: 0.056s">
-<div class="time" style="width: 48.695652173913%"></div>
+Time: 0.07s">
+<div class="time" style="width: 56.451612903226%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
 </div>
@@ -279,8 +279,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 45
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.4193548387097%"></div>
 <pre>
     rapply (transport IsHProp (x:= hfiber f 0)).</pre>
 </div>
@@ -294,7 +294,7 @@ Time: 0s">
 <div class="code" title="File: ShortExactSequence.v
 Line: 47
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.80645161290323%"></div>
 <pre> apply path_universe_uncurried; symmetry.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
@@ -320,8 +320,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 50
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.4193548387097%"></div>
 <pre> rapply (transport IsHProp (x:= grp_trivial)).</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
@@ -333,8 +333,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 51
-Time: 0.004s">
-<div class="time" style="width: 3.4782608695652%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.6451612903226%"></div>
 <pre>
       rapply Build_Equiv.</pre>
 </div>
@@ -360,22 +360,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 54
-Time: 0.089s">
-<div class="time" style="width: 77.391304347826%"></div>
+Time: 0.118s">
+<div class="time" style="width: 95.161290322581%"></div>
 <pre>
     intros y; rapply contr_inhabited_hprop.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 55
-Time: 0.006s">
-<div class="time" style="width: 5.2173913043478%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.6451612903226%"></div>
 <pre>
     exists tt; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ShortExactSequence.v
 Line: 56
-Time: 0.002s">
-<div class="time" style="width: 1.7391304347826%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.4193548387097%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -391,7 +391,7 @@ Time: 0s">
 <div class="code" title="File: ShortExactSequence.v
 Line: 60
 Time: 0.001s">
-<div class="time" style="width: 0.8695652173913%"></div>
+<div class="time" style="width: 0.80645161290323%"></div>
 <pre>Corollary equiv_grp_isexact_kernel `{Univalence} {A B : Group} (f : A $-&gt; B)
   : IsExact purely (@grp_homo_const grp_trivial A) f
             &lt;~&gt; (grp_kernel f = trivial_subgroup :&gt; Subgroup _).</pre>

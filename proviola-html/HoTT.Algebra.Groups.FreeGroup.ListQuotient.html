@@ -223,7 +223,7 @@
           
 
             i = 41;
-            data = "1 goal (ID 67)	  	  A : Type	  a : A + A	  ============================	  (a^)^ = a	";
+            data = "1 goal (ID 66)	  	  A : Type	  a : A + A	  ============================	  (a^)^ = a	";
             responses[i]=data;
           
 
@@ -293,7 +293,7 @@
           
 
             i = 55;
-            data = "1 goal (ID 75)	  	  A : Type	  x : Words	  ============================	  x @ nil = x	";
+            data = "1 goal (ID 74)	  	  A : Type	  x : Words	  ============================	  x @ nil = x	";
             responses[i]=data;
           
 
@@ -303,7 +303,7 @@
           
 
             i = 57;
-            data = "1 goal (ID 83)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : x @ nil = x	  ============================	  (a :: x)%list @ nil = (a :: x)%list	";
+            data = "1 goal (ID 82)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : x @ nil = x	  ============================	  (a :: x)%list @ nil = (a :: x)%list	";
             responses[i]=data;
           
 
@@ -318,7 +318,7 @@
           
 
             i = 60;
-            data = "1 goal (ID 84)	  	  A : Type	  x, y, z : Words	  ============================	  x @ (y @ z) = (x @ y) @ z	";
+            data = "1 goal (ID 83)	  	  A : Type	  x, y, z : Words	  ============================	  x @ (y @ z) = (x @ y) @ z	";
             responses[i]=data;
           
 
@@ -328,37 +328,37 @@
           
 
             i = 62;
-            data = "1 goal (ID 86)	  	  A : Type	  y : Words	  ============================	  forall x z : Words, x @ (y @ z) = (x @ y) @ z	";
+            data = "1 goal (ID 85)	  	  A : Type	  y : Words	  ============================	  forall x z : Words, x @ (y @ z) = (x @ y) @ z	";
             responses[i]=data;
           
 
             i = 63;
-            data = "2 goals (ID 96)	  	  A : Type	  x, z : Words	  ============================	  x @ (nil @ z) = (x @ nil) @ z		goal 2 (ID 98) is:	 x @ ((a :: y)%list @ z) = (x @ (a :: y)%list) @ z	";
+            data = "2 goals (ID 95)	  	  A : Type	  x, z : Words	  ============================	  x @ (nil @ z) = (x @ nil) @ z		goal 2 (ID 97) is:	 x @ ((a :: y)%list @ z) = (x @ (a :: y)%list) @ z	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 goal (ID 96)	  	  A : Type	  x, z : Words	  ============================	  x @ (nil @ z) = (x @ nil) @ z	1 goal (ID 139)	  	  A : Type	  x, z : Words	  ============================	  x @ nil = x	";
+            data = "1 goal (ID 95)	  	  A : Type	  x, z : Words	  ============================	  x @ (nil @ z) = (x @ nil) @ z	1 goal (ID 138)	  	  A : Type	  x, z : Words	  ============================	  x @ nil = x	";
             responses[i]=data;
           
 
             i = 65;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 98) is:	 x @ ((a :: y)%list @ z) = (x @ (a :: y)%list) @ z	1 goal (ID 98)	  	  A : Type	  a : A + A	  y : list (A + A)	  IHy : forall x z : Words, x @ (y @ z) = (x @ y) @ z	  x, z : Words	  ============================	  x @ ((a :: y)%list @ z) = (x @ (a :: y)%list) @ z	1 goal (ID 143)	  	  A : Type	  a : A + A	  x : Words	  ============================	  forall (z : Words) (y : list (A + A)),	  (forall x0 z0 : Words, x0 @ (y @ z0) = (x0 @ y) @ z0) ->	  x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 97) is:	 x @ ((a :: y)%list @ z) = (x @ (a :: y)%list) @ z	1 goal (ID 97)	  	  A : Type	  a : A + A	  y : list (A + A)	  IHy : forall x z : Words, x @ (y @ z) = (x @ y) @ z	  x, z : Words	  ============================	  x @ ((a :: y)%list @ z) = (x @ (a :: y)%list) @ z	1 goal (ID 142)	  	  A : Type	  a : A + A	  x : Words	  ============================	  forall (z : Words) (y : list (A + A)),	  (forall x0 z0 : Words, x0 @ (y @ z0) = (x0 @ y) @ z0) ->	  x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 goal (ID 151)	  	  A : Type	  a, a0 : A + A	  x : list (A + A)	  IHx : forall (z : Words) (y : list (A + A)),	        (forall x z0 : Words, x @ (y @ z0) = (x @ y) @ z0) ->	        x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	  ============================	  forall (z : Words) (y : list (A + A)),	  (forall x0 z0 : Words, x0 @ (y @ z0) = (x0 @ y) @ z0) ->	  (a0 :: x)%list @ (a :: y @ z)%list = ((a0 :: x)%list @ (a :: y)%list) @ z	";
+            data = "1 goal (ID 150)	  	  A : Type	  a, a0 : A + A	  x : list (A + A)	  IHx : forall (z : Words) (y : list (A + A)),	        (forall x z0 : Words, x @ (y @ z0) = (x @ y) @ z0) ->	        x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	  ============================	  forall (z : Words) (y : list (A + A)),	  (forall x0 z0 : Words, x0 @ (y @ z0) = (x0 @ y) @ z0) ->	  (a0 :: x)%list @ (a :: y @ z)%list = ((a0 :: x)%list @ (a :: y)%list) @ z	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 goal (ID 160)	  	  A : Type	  a, a0 : A + A	  x : list (A + A)	  IHx : forall (z : Words) (y : list (A + A)),	        (forall x z0 : Words, x @ (y @ z0) = (x @ y) @ z0) ->	        x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	  z : Words	  y : list (A + A)	  IHy : forall x z : Words, x @ (y @ z) = (x @ y) @ z	  ============================	  (a0 :: x)%list @ (a :: y @ z)%list = ((a0 :: x)%list @ (a :: y)%list) @ z	";
+            data = "1 goal (ID 159)	  	  A : Type	  a, a0 : A + A	  x : list (A + A)	  IHx : forall (z : Words) (y : list (A + A)),	        (forall x z0 : Words, x @ (y @ z0) = (x @ y) @ z0) ->	        x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	  z : Words	  y : list (A + A)	  IHy : forall x z : Words, x @ (y @ z) = (x @ y) @ z	  ============================	  (a0 :: x)%list @ (a :: y @ z)%list = ((a0 :: x)%list @ (a :: y)%list) @ z	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 goal (ID 170)	  	  A : Type	  a, a0 : A + A	  x : list (A + A)	  IHx : forall (z : Words) (y : list (A + A)),	        (forall x z0 : Words, x @ (y @ z0) = (x @ y) @ z0) ->	        x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	  z : Words	  y : list (A + A)	  IHy : forall x z : Words, x @ (y @ z) = (x @ y) @ z	  ============================	  x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	";
+            data = "1 goal (ID 169)	  	  A : Type	  a, a0 : A + A	  x : list (A + A)	  IHx : forall (z : Words) (y : list (A + A)),	        (forall x z0 : Words, x @ (y @ z0) = (x @ y) @ z0) ->	        x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	  z : Words	  y : list (A + A)	  IHy : forall x z : Words, x @ (y @ z) = (x @ y) @ z	  ============================	  x @ (a :: y @ z)%list = (x @ (a :: y)%list) @ z	";
             responses[i]=data;
           
 
@@ -508,7 +508,7 @@
           
 
             i = 98;
-            data = "1 goal (ID 90)	  	  A : Type	  ============================	  Words * (A + A) * Words -> Words	";
+            data = "1 goal (ID 89)	  	  A : Type	  ============================	  Words * (A + A) * Words -> Words	";
             responses[i]=data;
           
 
@@ -518,7 +518,7 @@
           
 
             i = 100;
-            data = "1 goal (ID 99)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  Words	";
+            data = "1 goal (ID 98)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  Words	";
             responses[i]=data;
           
 
@@ -533,7 +533,7 @@
           
 
             i = 103;
-            data = "1 goal (ID 91)	  	  A : Type	  ============================	  Words * (A + A) * Words -> Words	";
+            data = "1 goal (ID 90)	  	  A : Type	  ============================	  Words * (A + A) * Words -> Words	";
             responses[i]=data;
           
 
@@ -543,7 +543,7 @@
           
 
             i = 105;
-            data = "1 goal (ID 100)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  Words	";
+            data = "1 goal (ID 99)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  Words	";
             responses[i]=data;
           
 
@@ -628,7 +628,7 @@
           
 
             i = 122;
-            data = "1 goal (ID 114)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  freegroup_eta (((x @ [a]) @ [a^]) @ y) = freegroup_eta (x @ y)	";
+            data = "1 goal (ID 113)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  freegroup_eta (((x @ [a]) @ [a^]) @ y) = freegroup_eta (x @ y)	";
             responses[i]=data;
           
 
@@ -638,7 +638,7 @@
           
 
             i = 124;
-            data = "1 goal (ID 120)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  coeq (((x @ [a]) @ [a^]) @ y) = coeq (x @ y)	";
+            data = "1 goal (ID 119)	  	  A : Type	  x : Words	  a : A + A	  y : Words	  ============================	  coeq (((x @ [a]) @ [a^]) @ y) = coeq (x @ y)	";
             responses[i]=data;
           
 
@@ -673,7 +673,7 @@
           
 
             i = 131;
-            data = "1 goal (ID 115)	  	  A : Type	  ============================	  SgOp freegroup_type	";
+            data = "1 goal (ID 114)	  	  A : Type	  ============================	  SgOp freegroup_type	";
             responses[i]=data;
           
 
@@ -683,132 +683,132 @@
           
 
             i = 133;
-            data = "1 goal (ID 118)	  	  A : Type	  x, y : freegroup_type	  ============================	  freegroup_type	";
+            data = "1 goal (ID 117)	  	  A : Type	  x, y : freegroup_type	  ============================	  freegroup_type	";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 goal (ID 201)	  	  A : Type	  y, x : Coeq map1 map2	  ============================	  freegroup_type	";
+            data = "1 goal (ID 196)	  	  A : Type	  y, x : Coeq map1 map2	  ============================	  freegroup_type	";
             responses[i]=data;
           
 
             i = 135;
-            data = "2 goals (ID 288)	  	  A : Type	  y : Coeq map1 map2	  ============================	  Words -> freegroup_type		goal 2 (ID 290) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
+            data = "2 goals (ID 279)	  	  A : Type	  y : Coeq map1 map2	  ============================	  Words -> freegroup_type		goal 2 (ID 281) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 goal (ID 288)	  	  A : Type	  y : Coeq map1 map2	  ============================	  Words -> freegroup_type	1 goal (ID 305)	  	  A : Type	  x : Words	  ============================	  Coeq map1 map2 -> freegroup_type	";
+            data = "1 goal (ID 279)	  	  A : Type	  y : Coeq map1 map2	  ============================	  Words -> freegroup_type	1 goal (ID 294)	  	  A : Type	  x : Words	  ============================	  Coeq map1 map2 -> freegroup_type	";
             responses[i]=data;
           
 
             i = 137;
-            data = "2 goals (ID 331)	  	  A : Type	  x : Words	  ============================	  Words -> freegroup_type		goal 2 (ID 333) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
+            data = "2 goals (ID 320)	  	  A : Type	  x : Words	  ============================	  Words -> freegroup_type		goal 2 (ID 322) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 goal (ID 331)	  	  A : Type	  x : Words	  ============================	  Words -> freegroup_type	1 goal (ID 346)	  	  A : Type	  x : Words	  y : Words	  ============================	  freegroup_type	";
+            data = "1 goal (ID 320)	  	  A : Type	  x : Words	  ============================	  Words -> freegroup_type	1 goal (ID 333)	  	  A : Type	  x : Words	  y : Words	  ============================	  freegroup_type	";
             responses[i]=data;
           
 
             i = 139;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 333) is:	 forall b : Words * (A + A) * Words,	 (fun y : Words => freegroup_eta (x @ y)) (map1 b) =	 (fun y : Words => freegroup_eta (x @ y)) (map2 b)	goal 2 (ID 290) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0)) 	    ?cglue'0 y) (map1 b) =	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0)) 	    ?cglue'0 y) (map2 b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 322) is:	 forall b : Words * (A + A) * Words,	 (fun y : Words => freegroup_eta (x @ y)) (map1 b) =	 (fun y : Words => freegroup_eta (x @ y)) (map2 b)	goal 2 (ID 281) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0)) 	    ?cglue'0 y) (map1 b) =	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0)) 	    ?cglue'0 y) (map2 b)	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 goal (ID 333)	  	  A : Type	  x : Words	  ============================	  forall b : Words * (A + A) * Words,	  (fun y : Words => freegroup_eta (x @ y)) (map1 b) =	  (fun y : Words => freegroup_eta (x @ y)) (map2 b)	1 goal (ID 356)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta (x @ (((y @ [a]) @ [a^]) @ z)) = freegroup_eta (x @ (y @ z))	";
+            data = "1 goal (ID 322)	  	  A : Type	  x : Words	  ============================	  forall b : Words * (A + A) * Words,	  (fun y : Words => freegroup_eta (x @ y)) (map1 b) =	  (fun y : Words => freegroup_eta (x @ y)) (map2 b)	1 goal (ID 343)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta (x @ (((y @ [a]) @ [a^]) @ z)) = freegroup_eta (x @ (y @ z))	";
             responses[i]=data;
           
 
             i = 141;
-            data = "2 focused goals	(shelved: 1) (ID 372)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ (((y @ [a]) @ [a^]) @ z) = ?Goal		goal 2 (ID 373) is:	 freegroup_eta ?Goal = freegroup_eta (x @ (y @ z))	";
+            data = "2 focused goals	(shelved: 1) (ID 359)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ (((y @ [a]) @ [a^]) @ z) = ?Goal		goal 2 (ID 360) is:	 freegroup_eta ?Goal = freegroup_eta (x @ (y @ z))	";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 focused goal	(shelved: 1) (ID 372)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ (((y @ [a]) @ [a^]) @ z) = ?Goal	1 focused goal	(shelved: 1) (ID 386)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  (x @ ((y @ [a]) @ [a^])) @ z = ?Goal	";
+            data = "1 focused goal	(shelved: 1) (ID 359)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ (((y @ [a]) @ [a^]) @ z) = ?Goal	1 focused goal	(shelved: 1) (ID 373)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  (x @ ((y @ [a]) @ [a^])) @ z = ?Goal	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 focused goal	(shelved: 1) (ID 402)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ ((y @ [a]) @ [a^]) = ?Goal0	";
+            data = "1 focused goal	(shelved: 1) (ID 389)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ ((y @ [a]) @ [a^]) = ?Goal0	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 focused goal	(shelved: 1) (ID 415)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  (x @ (y @ [a])) @ [a^] = ?Goal0	";
+            data = "1 focused goal	(shelved: 1) (ID 402)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  (x @ (y @ [a])) @ [a^] = ?Goal0	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 focused goal	(shelved: 1) (ID 431)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ (y @ [a]) = ?Goal0	";
+            data = "1 focused goal	(shelved: 1) (ID 418)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  x @ (y @ [a]) = ?Goal0	";
             responses[i]=data;
           
 
             i = 146;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 373) is:	 freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta (x @ (y @ z))	goal 2 (ID 290) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @ ?Goal@{y:=y0})%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map1 b) =	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @ ?Goal@{y:=y0})%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map2 b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 360) is:	 freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta (x @ (y @ z))	goal 2 (ID 281) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @ ?Goal@{y:=y0})%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map1 b) =	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @ ?Goal@{y:=y0})%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map2 b)	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 goal (ID 373)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta (x @ (y @ z))	2 focused goals	(shelved: 1) (ID 455)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta ?Goal0		goal 2 (ID 457) is:	 x @ (y @ z) = ?Goal0	";
+            data = "1 goal (ID 360)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta (x @ (y @ z))	2 focused goals	(shelved: 1) (ID 442)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta ?Goal0		goal 2 (ID 444) is:	 x @ (y @ z) = ?Goal0	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 goal (ID 455)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta ((x @ y) @ z)	";
+            data = "1 goal (ID 442)	  	  A : Type	  x, y : Words	  a : A + A	  z : Words	  ============================	  freegroup_eta ((((x @ y) @ [a]) @ [a^]) @ z) = freegroup_eta ((x @ y) @ z)	";
             responses[i]=data;
           
 
             i = 149;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 290) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @	        (freegroup_tau (word_concat x y0) a z @	         ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map1 b) =	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @	        (freegroup_tau (word_concat x y0) a z @	         ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map2 b)	1 goal (ID 290)	  	  A : Type	  y : Coeq map1 map2	  ============================	  forall b : Words * (A + A) * Words,	  (fun x : Words =>	   Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	     (fun b0 : Words * (A + A) * Words =>	      (fun fst : Words * (A + A) =>	       (fun (y0 : Words) (a : A + A) (z : Words) =>	        (ap freegroup_eta	           (word_concat_w_ww x	              (word_concat (word_concat y0 [a]) [change_sign a]) z @	            ap (fun t : Words => word_concat t z)	              (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	               ap (fun t : Words => word_concat t [change_sign a])	                 (word_concat_w_ww x y0 [a]))) @	         (freegroup_tau (word_concat x y0) a z @	          ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	         (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	    (map1 b) =	  (fun x : Words =>	   Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	     (fun b0 : Words * (A + A) * Words =>	      (fun fst : Words * (A + A) =>	       (fun (y0 : Words) (a : A + A) (z : Words) =>	        (ap freegroup_eta	           (word_concat_w_ww x	              (word_concat (word_concat y0 [a]) [change_sign a]) z @	            ap (fun t : Words => word_concat t z)	              (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	               ap (fun t : Words => word_concat t [change_sign a])	                 (word_concat_w_ww x y0 [a]))) @	         (freegroup_tau (word_concat x y0) a z @	          ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	         (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	    (map2 b)	1 goal (ID 466)	  	  A : Type	  y : Coeq map1 map2	  c : Words	  b : A + A	  d : Words	  ============================	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map1 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map1 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y =	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map2 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map2 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 281) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @	        (freegroup_tau (word_concat x y0) a z @	         ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map1 b) =	 (fun x : Words =>	  Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (fun fst : Words * (A + A) =>	      (fun (y0 : Words) (a : A + A) (z : Words) =>	       (ap freegroup_eta	          (word_concat_w_ww x	             (word_concat (word_concat y0 [a]) [change_sign a]) z @	           ap (fun t : Words => word_concat t z)	             (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	              ap (fun t : Words => word_concat t [change_sign a])	                (word_concat_w_ww x y0 [a]))) @	        (freegroup_tau (word_concat x y0) a z @	         ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	        (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	   (map2 b)	1 goal (ID 281)	  	  A : Type	  y : Coeq map1 map2	  ============================	  forall b : Words * (A + A) * Words,	  (fun x : Words =>	   Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	     (fun b0 : Words * (A + A) * Words =>	      (fun fst : Words * (A + A) =>	       (fun (y0 : Words) (a : A + A) (z : Words) =>	        (ap freegroup_eta	           (word_concat_w_ww x	              (word_concat (word_concat y0 [a]) [change_sign a]) z @	            ap (fun t : Words => word_concat t z)	              (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	               ap (fun t : Words => word_concat t [change_sign a])	                 (word_concat_w_ww x y0 [a]))) @	         (freegroup_tau (word_concat x y0) a z @	          ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	         (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	    (map1 b) =	  (fun x : Words =>	   Coeq_rec freegroup_type (fun y0 : Words => freegroup_eta (x @ y0))	     (fun b0 : Words * (A + A) * Words =>	      (fun fst : Words * (A + A) =>	       (fun (y0 : Words) (a : A + A) (z : Words) =>	        (ap freegroup_eta	           (word_concat_w_ww x	              (word_concat (word_concat y0 [a]) [change_sign a]) z @	            ap (fun t : Words => word_concat t z)	              (word_concat_w_ww x (word_concat y0 [a]) [change_sign a] @	               ap (fun t : Words => word_concat t [change_sign a])	                 (word_concat_w_ww x y0 [a]))) @	         (freegroup_tau (word_concat x y0) a z @	          ap freegroup_eta (word_concat_w_ww x y0 z)^))%path)	         (Datatypes.fst fst) (snd fst)) (fst b0) (snd b0)) y) 	    (map2 b)	1 goal (ID 453)	  	  A : Type	  y : Coeq map1 map2	  c : Words	  b : A + A	  d : Words	  ============================	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map1 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map1 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y =	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map2 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map2 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y	";
             responses[i]=data;
           
 
             i = 150;
-            data = "";
+            data = "1 goal (ID 454)	  	  A : Type	  y : Coeq map1 map2	  c : Words	  b : A + A	  d : Words	  ============================	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map1 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map1 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y =	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map2 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map2 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y	";
             responses[i]=data;
           
 
             i = 151;
-            data = "1 goal (ID 467)	  	  A : Type	  y : Coeq map1 map2	  c : Words	  b : A + A	  d : Words	  ============================	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map1 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map1 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y =	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map2 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map2 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y	1 goal (ID 469)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall y : Coeq map1 map2,	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map1 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map1 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y =	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map2 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map2 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y	";
+            data = "1 goal (ID 456)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall y : Coeq map1 map2,	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map1 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map1 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y =	  Coeq_rec freegroup_type	    (fun y0 : Words => freegroup_eta (map2 (c, b, d) @ y0))	    (fun b0 : Words * (A + A) * Words =>	     (ap freegroup_eta	        (word_concat_w_ww (map2 (c, b, d))	           (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))]) (snd b0) @	         ap (fun t : Words => word_concat t (snd b0))	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (fst (fst b0)) [snd (fst b0)])	              [change_sign (snd (fst b0))] @	            ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	              (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0))	                 [snd (fst b0)]))) @	      (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	         (snd (fst b0)) (snd b0) @	       ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	    y	";
             responses[i]=data;
           
 
             i = 152;
-            data = "2 goals (ID 495)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall a : Words,	  (fun w : Coeq map1 map2 =>	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map1 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map1 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w =	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map2 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map2 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w) (coeq a)		goal 2 (ID 497) is:	 forall b0 : Words * (A + A) * Words,	 transport	   (fun w : Coeq map1 map2 =>	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map1 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map1 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map1 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w =	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map2 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map2 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map2 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w) (cglue b0) (?coeq' (map1 b0)) = ?coeq' (map2 b0)	";
+            data = "2 goals (ID 482)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall a : Words,	  (fun w : Coeq map1 map2 =>	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map1 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map1 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w =	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map2 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map2 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w) (coeq a)		goal 2 (ID 484) is:	 forall b0 : Words * (A + A) * Words,	 transport	   (fun w : Coeq map1 map2 =>	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map1 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map1 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map1 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w =	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map2 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map2 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map2 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w) (cglue b0) (?coeq' (map1 b0)) = ?coeq' (map2 b0)	";
             responses[i]=data;
           
 
             i = 153;
-            data = "1 goal (ID 495)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall a : Words,	  (fun w : Coeq map1 map2 =>	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map1 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map1 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w =	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map2 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map2 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w) (coeq a)	1 goal (ID 540)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall a : Words,	  freegroup_eta (map1 (c, b, d) @ a) = freegroup_eta (map2 (c, b, d) @ a)	";
+            data = "1 goal (ID 482)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall a : Words,	  (fun w : Coeq map1 map2 =>	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map1 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map1 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map1 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w =	   Coeq_rec freegroup_type	     (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	     (fun b0 : Words * (A + A) * Words =>	      (ap freegroup_eta	         (word_concat_w_ww (map2 (c, b, d))	            (word_concat (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))]) (snd b0) @	          ap (fun t : Words => word_concat t (snd b0))	            (word_concat_w_ww (map2 (c, b, d))	               (word_concat (fst (fst b0)) [snd (fst b0)])	               [change_sign (snd (fst b0))] @	             ap (fun t : Words => word_concat t [change_sign (snd (fst b0))])	               (word_concat_w_ww (map2 (c, b, d)) 	                  (fst (fst b0)) [snd (fst b0)]))) @	       (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b0)))	          (snd (fst b0)) (snd b0) @	        ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d)) (fst (fst b0)) (snd b0))^))%path)	     w) (coeq a)	1 goal (ID 511)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall a : Words,	  freegroup_eta (map1 (c, b, d) @ a) = freegroup_eta (map2 (c, b, d) @ a)	";
             responses[i]=data;
           
 
             i = 154;
-            data = "1 goal (ID 541)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  a : Words	  ============================	  freegroup_eta (map1 (c, b, d) @ a) = freegroup_eta (map2 (c, b, d) @ a)	";
+            data = "1 goal (ID 512)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  a : Words	  ============================	  freegroup_eta (map1 (c, b, d) @ a) = freegroup_eta (map2 (c, b, d) @ a)	";
             responses[i]=data;
           
 
             i = 155;
-            data = "1 goal (ID 542)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  a : Words	  ============================	  freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) =	  freegroup_eta (map2 (c, b, d) @ a)	";
+            data = "1 goal (ID 513)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  a : Words	  ============================	  freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) =	  freegroup_eta (map2 (c, b, d) @ a)	";
             responses[i]=data;
           
 
             i = 156;
-            data = "1 goal (ID 547)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  a : Words	  ============================	  freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta (c @ (d @ a))	";
+            data = "1 goal (ID 518)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  a : Words	  ============================	  freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta (c @ (d @ a))	";
             responses[i]=data;
           
 
             i = 157;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 497) is:	 forall b0 : Words * (A + A) * Words,	 transport	   (fun w : Coeq map1 map2 =>	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map1 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map1 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map1 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w =	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map2 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map2 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map2 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w) (cglue b0)	   ((fun a : Words =>	     internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	       (fun w : Words => freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	       (internal_paths_rew Words (c @ (d @ a))	          (fun w : Words =>	           freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	          (freegroup_tau c b (d @ a)) ((c @ d) @ a) 	          (word_concat_w_ww c d a)) ((((c @ [b]) @ [b^]) @ d) @ a)	       (word_concat_w_ww ((c @ [b]) @ [b^]) d a)) 	      (map1 b0)) =	 (fun a : Words =>	  internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	    (fun w : Words => freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	    (internal_paths_rew Words (c @ (d @ a))	       (fun w : Words =>	        freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	       (freegroup_tau c b (d @ a)) ((c @ d) @ a) (word_concat_w_ww c d a))	    ((((c @ [b]) @ [b^]) @ d) @ a) (word_concat_w_ww ((c @ [b]) @ [b^]) d a))	   (map2 b0)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 484) is:	 forall b0 : Words * (A + A) * Words,	 transport	   (fun w : Coeq map1 map2 =>	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map1 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map1 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map1 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map1 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w =	    Coeq_rec freegroup_type	      (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	      (fun b1 : Words * (A + A) * Words =>	       (ap freegroup_eta	          (word_concat_w_ww (map2 (c, b, d))	             (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))]) (snd b1) @	           ap (fun t : Words => word_concat t (snd b1))	             (word_concat_w_ww (map2 (c, b, d))	                (word_concat (fst (fst b1)) [snd (fst b1)])	                [change_sign (snd (fst b1))] @	              ap	                (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                (word_concat_w_ww (map2 (c, b, d)) 	                   (fst (fst b1)) [snd (fst b1)]))) @	        (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b1)))	           (snd (fst b1)) (snd b1) @	         ap freegroup_eta	           (word_concat_w_ww (map2 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	      w) (cglue b0)	   ((fun a : Words =>	     internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	       (fun w : Words => freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	       (internal_paths_rew Words (c @ (d @ a))	          (fun w : Words =>	           freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	          (freegroup_tau c b (d @ a)) ((c @ d) @ a) 	          (word_concat_w_ww c d a)) ((((c @ [b]) @ [b^]) @ d) @ a)	       (word_concat_w_ww ((c @ [b]) @ [b^]) d a)) 	      (map1 b0)) =	 (fun a : Words =>	  internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	    (fun w : Words => freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	    (internal_paths_rew Words (c @ (d @ a))	       (fun w : Words =>	        freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	       (freegroup_tau c b (d @ a)) ((c @ d) @ a) (word_concat_w_ww c d a))	    ((((c @ [b]) @ [b^]) @ d) @ a) (word_concat_w_ww ((c @ [b]) @ [b^]) d a))	   (map2 b0)	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 goal (ID 497)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall b0 : Words * (A + A) * Words,	  transport	    (fun w : Coeq map1 map2 =>	     Coeq_rec freegroup_type	       (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	       (fun b1 : Words * (A + A) * Words =>	        (ap freegroup_eta	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))]) (snd b1) @	            ap (fun t : Words => word_concat t (snd b1))	              (word_concat_w_ww (map1 (c, b, d))	                 (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))] @	               ap	                 (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                 (word_concat_w_ww (map1 (c, b, d)) 	                    (fst (fst b1)) [snd (fst b1)]))) @	         (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b1)))	            (snd (fst b1)) (snd b1) @	          ap freegroup_eta	            (word_concat_w_ww (map1 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	       w =	     Coeq_rec freegroup_type	       (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	       (fun b1 : Words * (A + A) * Words =>	        (ap freegroup_eta	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))]) (snd b1) @	            ap (fun t : Words => word_concat t (snd b1))	              (word_concat_w_ww (map2 (c, b, d))	                 (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))] @	               ap	                 (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                 (word_concat_w_ww (map2 (c, b, d)) 	                    (fst (fst b1)) [snd (fst b1)]))) @	         (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b1)))	            (snd (fst b1)) (snd b1) @	          ap freegroup_eta	            (word_concat_w_ww (map2 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	       w) (cglue b0)	    ((fun a : Words =>	      internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	        (fun w : Words =>	         freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	        (internal_paths_rew Words (c @ (d @ a))	           (fun w : Words =>	            freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	           (freegroup_tau c b (d @ a)) ((c @ d) @ a) 	           (word_concat_w_ww c d a)) ((((c @ [b]) @ [b^]) @ d) @ a)	        (word_concat_w_ww ((c @ [b]) @ [b^]) d a)) 	       (map1 b0)) =	  (fun a : Words =>	   internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	     (fun w : Words => freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	     (internal_paths_rew Words (c @ (d @ a))	        (fun w : Words =>	         freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	        (freegroup_tau c b (d @ a)) ((c @ d) @ a) 	        (word_concat_w_ww c d a)) ((((c @ [b]) @ [b^]) @ d) @ a)	     (word_concat_w_ww ((c @ [b]) @ [b^]) d a)) (map2 b0)	No more goals.	";
+            data = "1 goal (ID 484)	  	  A : Type	  c : Words	  b : A + A	  d : Words	  ============================	  forall b0 : Words * (A + A) * Words,	  transport	    (fun w : Coeq map1 map2 =>	     Coeq_rec freegroup_type	       (fun y : Words => freegroup_eta (map1 (c, b, d) @ y))	       (fun b1 : Words * (A + A) * Words =>	        (ap freegroup_eta	           (word_concat_w_ww (map1 (c, b, d))	              (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))]) (snd b1) @	            ap (fun t : Words => word_concat t (snd b1))	              (word_concat_w_ww (map1 (c, b, d))	                 (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))] @	               ap	                 (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                 (word_concat_w_ww (map1 (c, b, d)) 	                    (fst (fst b1)) [snd (fst b1)]))) @	         (freegroup_tau (word_concat (map1 (c, b, d)) (fst (fst b1)))	            (snd (fst b1)) (snd b1) @	          ap freegroup_eta	            (word_concat_w_ww (map1 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	       w =	     Coeq_rec freegroup_type	       (fun y : Words => freegroup_eta (map2 (c, b, d) @ y))	       (fun b1 : Words * (A + A) * Words =>	        (ap freegroup_eta	           (word_concat_w_ww (map2 (c, b, d))	              (word_concat (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))]) (snd b1) @	            ap (fun t : Words => word_concat t (snd b1))	              (word_concat_w_ww (map2 (c, b, d))	                 (word_concat (fst (fst b1)) [snd (fst b1)])	                 [change_sign (snd (fst b1))] @	               ap	                 (fun t : Words => word_concat t [change_sign (snd (fst b1))])	                 (word_concat_w_ww (map2 (c, b, d)) 	                    (fst (fst b1)) [snd (fst b1)]))) @	         (freegroup_tau (word_concat (map2 (c, b, d)) (fst (fst b1)))	            (snd (fst b1)) (snd b1) @	          ap freegroup_eta	            (word_concat_w_ww (map2 (c, b, d)) (fst (fst b1)) (snd b1))^))%path)	       w) (cglue b0)	    ((fun a : Words =>	      internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	        (fun w : Words =>	         freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	        (internal_paths_rew Words (c @ (d @ a))	           (fun w : Words =>	            freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	           (freegroup_tau c b (d @ a)) ((c @ d) @ a) 	           (word_concat_w_ww c d a)) ((((c @ [b]) @ [b^]) @ d) @ a)	        (word_concat_w_ww ((c @ [b]) @ [b^]) d a)) 	       (map1 b0)) =	  (fun a : Words =>	   internal_paths_rew Words (((c @ [b]) @ [b^]) @ (d @ a))	     (fun w : Words => freegroup_eta w = freegroup_eta (map2 (c, b, d) @ a))	     (internal_paths_rew Words (c @ (d @ a))	        (fun w : Words =>	         freegroup_eta (((c @ [b]) @ [b^]) @ (d @ a)) = freegroup_eta w)	        (freegroup_tau c b (d @ a)) ((c @ d) @ a) 	        (word_concat_w_ww c d a)) ((((c @ [b]) @ [b^]) @ d) @ a)	     (word_concat_w_ww ((c @ [b]) @ [b^]) d a)) (map2 b0)	No more goals.	";
             responses[i]=data;
           
 
@@ -838,7 +838,7 @@
           
 
             i = 164;
-            data = "1 goal (ID 116)	  	  A : Type	  ============================	  MonUnit freegroup_type	";
+            data = "1 goal (ID 115)	  	  A : Type	  ============================	  MonUnit freegroup_type	";
             responses[i]=data;
           
 
@@ -848,7 +848,7 @@
           
 
             i = 166;
-            data = "1 goal (ID 117)	  	  A : Type	  ============================	  Words	";
+            data = "1 goal (ID 116)	  	  A : Type	  ============================	  Words	";
             responses[i]=data;
           
 
@@ -883,7 +883,7 @@
           
 
             i = 173;
-            data = "1 goal (ID 119)	  	  A : Type	  word_change_sign : Words -> Words	  x : Words	  ============================	  Words	";
+            data = "1 goal (ID 118)	  	  A : Type	  word_change_sign : Words -> Words	  x : Words	  ============================	  Words	";
             responses[i]=data;
           
 
@@ -893,12 +893,12 @@
           
 
             i = 175;
-            data = "2 goals (ID 123)	  	  A : Type	  word_change_sign : Words -> Words	  ============================	  Words		goal 2 (ID 126) is:	 Words	";
+            data = "2 goals (ID 122)	  	  A : Type	  word_change_sign : Words -> Words	  ============================	  Words		goal 2 (ID 125) is:	 Words	";
             responses[i]=data;
           
 
             i = 176;
-            data = "1 goal (ID 126)	  	  A : Type	  word_change_sign : Words -> Words	  x : A + A	  xs : list (A + A)	  ============================	  Words	";
+            data = "1 goal (ID 125)	  	  A : Type	  word_change_sign : Words -> Words	  x : A + A	  xs : list (A + A)	  ============================	  Words	";
             responses[i]=data;
           
 
@@ -933,7 +933,7 @@
           
 
             i = 183;
-            data = "1 goal (ID 124)	  	  A : Type	  x, y : Words	  ============================	  word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	";
+            data = "1 goal (ID 123)	  	  A : Type	  x, y : Words	  ============================	  word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	";
             responses[i]=data;
           
 
@@ -943,22 +943,22 @@
           
 
             i = 185;
-            data = "2 goals (ID 128)	  	  A : Type	  y : Words	  ============================	  word_change_sign (nil @ y) = word_change_sign y @ word_change_sign nil		goal 2 (ID 134) is:	 word_change_sign ((a :: x)%list @ y) =	 word_change_sign y @ word_change_sign (a :: x)%list	";
+            data = "2 goals (ID 127)	  	  A : Type	  y : Words	  ============================	  word_change_sign (nil @ y) = word_change_sign y @ word_change_sign nil		goal 2 (ID 133) is:	 word_change_sign ((a :: x)%list @ y) =	 word_change_sign y @ word_change_sign (a :: x)%list	";
             responses[i]=data;
           
 
             i = 186;
-            data = "1 goal (ID 128)	  	  A : Type	  y : Words	  ============================	  word_change_sign (nil @ y) = word_change_sign y @ word_change_sign nil	1 goal (ID 144)	  	  A : Type	  y : Words	  ============================	  word_change_sign y @ word_change_sign nil = word_change_sign (nil @ y)	";
+            data = "1 goal (ID 127)	  	  A : Type	  y : Words	  ============================	  word_change_sign (nil @ y) = word_change_sign y @ word_change_sign nil	1 goal (ID 143)	  	  A : Type	  y : Words	  ============================	  word_change_sign y @ word_change_sign nil = word_change_sign (nil @ y)	";
             responses[i]=data;
           
 
             i = 187;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 134) is:	 word_change_sign ((a :: x)%list @ y) =	 word_change_sign y @ word_change_sign (a :: x)%list	1 goal (ID 134)	  	  A : Type	  a : A + A	  x : list (A + A)	  y : Words	  IHx : word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	  ============================	  word_change_sign ((a :: x)%list @ y) =	  word_change_sign y @ word_change_sign (a :: x)%list	1 goal (ID 148)	  	  A : Type	  a : A + A	  x : list (A + A)	  y : Words	  IHx : word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	  ============================	  word_change_sign (x @ y) @ [a^] =	  word_change_sign y @ (word_change_sign x @ [a^])	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 133) is:	 word_change_sign ((a :: x)%list @ y) =	 word_change_sign y @ word_change_sign (a :: x)%list	1 goal (ID 133)	  	  A : Type	  a : A + A	  x : list (A + A)	  y : Words	  IHx : word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	  ============================	  word_change_sign ((a :: x)%list @ y) =	  word_change_sign y @ word_change_sign (a :: x)%list	1 goal (ID 147)	  	  A : Type	  a : A + A	  x : list (A + A)	  y : Words	  IHx : word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	  ============================	  word_change_sign (x @ y) @ [a^] =	  word_change_sign y @ (word_change_sign x @ [a^])	";
             responses[i]=data;
           
 
             i = 188;
-            data = "1 goal (ID 164)	  	  A : Type	  a : A + A	  x : list (A + A)	  y : Words	  IHx : word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	  ============================	  word_change_sign (x @ y) @ [a^] =	  (word_change_sign y @ word_change_sign x) @ [a^]	";
+            data = "1 goal (ID 163)	  	  A : Type	  a : A + A	  x : list (A + A)	  y : Words	  IHx : word_change_sign (x @ y) = word_change_sign y @ word_change_sign x	  ============================	  word_change_sign (x @ y) @ [a^] =	  (word_change_sign y @ word_change_sign x) @ [a^]	";
             responses[i]=data;
           
 
@@ -993,7 +993,7 @@
           
 
             i = 195;
-            data = "1 goal (ID 129)	  	  A : Type	  x : Words	  ============================	  word_change_sign (word_change_sign x) = x	";
+            data = "1 goal (ID 128)	  	  A : Type	  x : Words	  ============================	  word_change_sign (word_change_sign x) = x	";
             responses[i]=data;
           
 
@@ -1003,27 +1003,27 @@
           
 
             i = 197;
-            data = "2 goals (ID 133)	  	  A : Type	  ============================	  word_change_sign (word_change_sign nil) = nil		goal 2 (ID 137) is:	 word_change_sign (word_change_sign (a :: x)%list) = (a :: x)%list	";
+            data = "2 goals (ID 132)	  	  A : Type	  ============================	  word_change_sign (word_change_sign nil) = nil		goal 2 (ID 136) is:	 word_change_sign (word_change_sign (a :: x)%list) = (a :: x)%list	";
             responses[i]=data;
           
 
             i = 198;
-            data = "1 goal (ID 137)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  word_change_sign (word_change_sign (a :: x)%list) = (a :: x)%list	";
+            data = "1 goal (ID 136)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  word_change_sign (word_change_sign (a :: x)%list) = (a :: x)%list	";
             responses[i]=data;
           
 
             i = 199;
-            data = "1 goal (ID 141)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  word_change_sign (word_change_sign x @ [a^]) = (a :: x)%list	";
+            data = "1 goal (ID 140)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  word_change_sign (word_change_sign x @ [a^]) = (a :: x)%list	";
             responses[i]=data;
           
 
             i = 200;
-            data = "1 goal (ID 142)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  word_change_sign [a^] @ word_change_sign (word_change_sign x) =	  (a :: x)%list	";
+            data = "1 goal (ID 141)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  word_change_sign [a^] @ word_change_sign (word_change_sign x) =	  (a :: x)%list	";
             responses[i]=data;
           
 
             i = 201;
-            data = "1 goal (ID 174)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  (a^)^ = a	";
+            data = "1 goal (ID 173)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : word_change_sign (word_change_sign x) = x	  ============================	  (a^)^ = a	";
             responses[i]=data;
           
 
@@ -1058,7 +1058,7 @@
           
 
             i = 208;
-            data = "1 goal (ID 136)	  	  A : Type	  x : Words	  ============================	  freegroup_eta (word_change_sign x @ x) = mon_unit	";
+            data = "1 goal (ID 135)	  	  A : Type	  x : Words	  ============================	  freegroup_eta (word_change_sign x @ x) = mon_unit	";
             responses[i]=data;
           
 
@@ -1068,47 +1068,47 @@
           
 
             i = 210;
-            data = "2 goals (ID 140)	  	  A : Type	  ============================	  freegroup_eta (word_change_sign nil @ nil) = mon_unit		goal 2 (ID 144) is:	 freegroup_eta (word_change_sign (a :: x)%list @ (a :: x)%list) = mon_unit	";
+            data = "2 goals (ID 139)	  	  A : Type	  ============================	  freegroup_eta (word_change_sign nil @ nil) = mon_unit		goal 2 (ID 143) is:	 freegroup_eta (word_change_sign (a :: x)%list @ (a :: x)%list) = mon_unit	";
             responses[i]=data;
           
 
             i = 211;
-            data = "1 goal (ID 144)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  ============================	  freegroup_eta (word_change_sign (a :: x)%list @ (a :: x)%list) = mon_unit	";
+            data = "1 goal (ID 143)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  ============================	  freegroup_eta (word_change_sign (a :: x)%list @ (a :: x)%list) = mon_unit	";
             responses[i]=data;
           
 
             i = 212;
-            data = "1 goal (ID 146)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  ============================	  freegroup_eta ((word_change_sign x @ [a^]) @ (a :: x)%list) = mon_unit	";
+            data = "1 goal (ID 145)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  ============================	  freegroup_eta ((word_change_sign x @ [a^]) @ (a :: x)%list) = mon_unit	";
             responses[i]=data;
           
 
             i = 213;
-            data = "1 goal (ID 148)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ (a :: x)%list) = mon_unit	";
+            data = "1 goal (ID 147)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ (a :: x)%list) = mon_unit	";
             responses[i]=data;
           
 
             i = 214;
-            data = "1 goal (ID 149)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ ((a^)^ :: x)%list) = mon_unit	";
+            data = "1 goal (ID 148)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ ((a^)^ :: x)%list) = mon_unit	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 goal (ID 150)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ (a'^ :: x)%list) = mon_unit	";
+            data = "1 goal (ID 149)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ (a'^ :: x)%list) = mon_unit	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 goal (ID 155)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ ([a'^] @ x)) = mon_unit	";
+            data = "1 goal (ID 154)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta ((word_change_sign x @ [a']) @ ([a'^] @ x)) = mon_unit	";
             responses[i]=data;
           
 
             i = 217;
-            data = "1 goal (ID 156)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta (((word_change_sign x @ [a']) @ [a'^]) @ x) = mon_unit	";
+            data = "1 goal (ID 155)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta (((word_change_sign x @ [a']) @ [a'^]) @ x) = mon_unit	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 goal (ID 157)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta (word_change_sign x @ x) = mon_unit	";
+            data = "1 goal (ID 156)	  	  A : Type	  a : A + A	  x : list (A + A)	  IHx : freegroup_eta (word_change_sign x @ x) = mon_unit	  a' := a^ : (A + A)%mc	  ============================	  freegroup_eta (word_change_sign x @ x) = mon_unit	";
             responses[i]=data;
           
 
@@ -1143,7 +1143,7 @@
           
 
             i = 225;
-            data = "1 goal (ID 143)	  	  A : Type	  x : Words	  ============================	  freegroup_eta (x @ word_change_sign x) = mon_unit	";
+            data = "1 goal (ID 142)	  	  A : Type	  x : Words	  ============================	  freegroup_eta (x @ word_change_sign x) = mon_unit	";
             responses[i]=data;
           
 
@@ -1153,17 +1153,17 @@
           
 
             i = 227;
-            data = "1 goal (ID 145)	  	  A : Type	  x : Words	  x' := word_change_sign x : Words	  ============================	  freegroup_eta (x @ x') = mon_unit	";
+            data = "1 goal (ID 144)	  	  A : Type	  x : Words	  x' := word_change_sign x : Words	  ============================	  freegroup_eta (x @ x') = mon_unit	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 goal (ID 146)	  	  A : Type	  x : Words	  x' := word_change_sign x : Words	  ============================	  freegroup_eta (word_change_sign (word_change_sign x) @ x') = mon_unit	";
+            data = "1 goal (ID 145)	  	  A : Type	  x : Words	  x' := word_change_sign x : Words	  ============================	  freegroup_eta (word_change_sign (word_change_sign x) @ x') = mon_unit	";
             responses[i]=data;
           
 
             i = 229;
-            data = "1 goal (ID 151)	  	  A : Type	  x : Words	  x' := word_change_sign x : Words	  ============================	  freegroup_eta (word_change_sign x' @ x') = mon_unit	";
+            data = "1 goal (ID 150)	  	  A : Type	  x : Words	  x' := word_change_sign x : Words	  ============================	  freegroup_eta (word_change_sign x' @ x') = mon_unit	";
             responses[i]=data;
           
 
@@ -1198,7 +1198,7 @@
           
 
             i = 236;
-            data = "1 goal (ID 144)	  	  A : Type	  ============================	  Negate freegroup_type	";
+            data = "1 goal (ID 143)	  	  A : Type	  ============================	  Negate freegroup_type	";
             responses[i]=data;
           
 
@@ -1208,107 +1208,107 @@
           
 
             i = 238;
-            data = "1 goal (ID 146)	  	  A : Type	  x : freegroup_type	  ============================	  freegroup_type	";
+            data = "1 goal (ID 145)	  	  A : Type	  x : freegroup_type	  ============================	  freegroup_type	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 goal (ID 173)	  	  A : Type	  x : Coeq map1 map2	  ============================	  freegroup_type	";
+            data = "1 goal (ID 171)	  	  A : Type	  x : Coeq map1 map2	  ============================	  freegroup_type	";
             responses[i]=data;
           
 
             i = 240;
-            data = "2 goals (ID 231)	  	  A : Type	  ============================	  Words -> freegroup_type		goal 2 (ID 233) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
+            data = "2 goals (ID 227)	  	  A : Type	  ============================	  Words -> freegroup_type		goal 2 (ID 229) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 goal (ID 231)	  	  A : Type	  ============================	  Words -> freegroup_type	1 goal (ID 234)	  	  A : Type	  x : Words	  ============================	  freegroup_type	";
+            data = "1 goal (ID 227)	  	  A : Type	  ============================	  Words -> freegroup_type	1 goal (ID 230)	  	  A : Type	  x : Words	  ============================	  freegroup_type	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 goal (ID 235)	  	  A : Type	  x : Words	  ============================	  Words	";
+            data = "1 goal (ID 231)	  	  A : Type	  x : Words	  ============================	  Words	";
             responses[i]=data;
           
 
             i = 243;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 233) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words => freegroup_eta (word_change_sign x)) (map1 b) =	 (fun x : Words => freegroup_eta (word_change_sign x)) (map2 b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 229) is:	 forall b : Words * (A + A) * Words,	 (fun x : Words => freegroup_eta (word_change_sign x)) (map1 b) =	 (fun x : Words => freegroup_eta (word_change_sign x)) (map2 b)	";
             responses[i]=data;
           
 
             i = 244;
-            data = "1 goal (ID 233)	  	  A : Type	  ============================	  forall b : Words * (A + A) * Words,	  (fun x : Words => freegroup_eta (word_change_sign x)) (map1 b) =	  (fun x : Words => freegroup_eta (word_change_sign x)) (map2 b)	1 goal (ID 244)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (map1 (b, a, c))) =	  freegroup_eta (word_change_sign (map2 (b, a, c)))	";
+            data = "1 goal (ID 229)	  	  A : Type	  ============================	  forall b : Words * (A + A) * Words,	  (fun x : Words => freegroup_eta (word_change_sign x)) (map1 b) =	  (fun x : Words => freegroup_eta (word_change_sign x)) (map2 b)	1 goal (ID 240)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (map1 (b, a, c))) =	  freegroup_eta (word_change_sign (map2 (b, a, c)))	";
             responses[i]=data;
           
 
             i = 245;
-            data = "1 goal (ID 245)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (((b @ [a]) @ [a^]) @ c)) =	  freegroup_eta (word_change_sign (b @ c))	";
+            data = "1 goal (ID 241)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (((b @ [a]) @ [a^]) @ c)) =	  freegroup_eta (word_change_sign (b @ c))	";
             responses[i]=data;
           
 
             i = 246;
-            data = "2 focused goals	(shelved: 1) (ID 263)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (((b @ [a]) @ [a^]) @ c)) =	  freegroup_eta ?Goal0		goal 2 (ID 265) is:	 word_change_sign (b @ c) = ?Goal0	";
+            data = "2 focused goals	(shelved: 1) (ID 259)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (((b @ [a]) @ [a^]) @ c)) =	  freegroup_eta ?Goal0		goal 2 (ID 261) is:	 word_change_sign (b @ c) = ?Goal0	";
             responses[i]=data;
           
 
             i = 247;
-            data = "1 goal (ID 263)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (((b @ [a]) @ [a^]) @ c)) =	  freegroup_eta (word_change_sign c @ word_change_sign b)	";
+            data = "1 goal (ID 259)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta (word_change_sign (((b @ [a]) @ [a^]) @ c)) =	  freegroup_eta (word_change_sign c @ word_change_sign b)	";
             responses[i]=data;
           
 
             i = 248;
-            data = "2 focused goals	(shelved: 1) (ID 281)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign (((b @ [a]) @ [a^]) @ c) = ?Goal		goal 2 (ID 282) is:	 freegroup_eta ?Goal =	 freegroup_eta (word_change_sign c @ word_change_sign b)	";
+            data = "2 focused goals	(shelved: 1) (ID 277)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign (((b @ [a]) @ [a^]) @ c) = ?Goal		goal 2 (ID 278) is:	 freegroup_eta ?Goal =	 freegroup_eta (word_change_sign c @ word_change_sign b)	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 focused goal	(shelved: 1) (ID 281)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign (((b @ [a]) @ [a^]) @ c) = ?Goal	1 focused goal	(shelved: 1) (ID 293)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @ word_change_sign ((b @ [a]) @ [a^]) = ?Goal	";
+            data = "1 focused goal	(shelved: 1) (ID 277)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign (((b @ [a]) @ [a^]) @ c) = ?Goal	1 focused goal	(shelved: 1) (ID 289)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @ word_change_sign ((b @ [a]) @ [a^]) = ?Goal	";
             responses[i]=data;
           
 
             i = 250;
-            data = "1 focused goal	(shelved: 1) (ID 297)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign ((b @ [a]) @ [a^]) = ?y	";
+            data = "1 focused goal	(shelved: 1) (ID 293)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign ((b @ [a]) @ [a^]) = ?y	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 focused goal	(shelved: 1) (ID 319)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign (b @ ([a] @ [a^])) = ?y	";
+            data = "1 focused goal	(shelved: 1) (ID 315)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign (b @ ([a] @ [a^])) = ?y	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 focused goal	(shelved: 1) (ID 330)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign ([a] @ [a^]) @ word_change_sign b = ?y	";
+            data = "1 focused goal	(shelved: 1) (ID 326)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign ([a] @ [a^]) @ word_change_sign b = ?y	";
             responses[i]=data;
           
 
             i = 253;
-            data = "1 focused goal	(shelved: 1) (ID 344)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign ([a] @ [a^]) = ?Goal0	";
+            data = "1 focused goal	(shelved: 1) (ID 340)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign ([a] @ [a^]) = ?Goal0	";
             responses[i]=data;
           
 
             i = 254;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 282) is:	 freegroup_eta	   (word_change_sign c @	    ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b)) =	 freegroup_eta (word_change_sign c @ word_change_sign b)	1 goal (ID 282)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta	    (word_change_sign c @	     ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b)) =	  freegroup_eta (word_change_sign c @ word_change_sign b)	1 goal (ID 355)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta	    (word_change_sign c @	     ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b)) =	  freegroup_eta (((word_change_sign c @ [a]) @ [a^]) @ word_change_sign b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 278) is:	 freegroup_eta	   (word_change_sign c @	    ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b)) =	 freegroup_eta (word_change_sign c @ word_change_sign b)	1 goal (ID 278)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta	    (word_change_sign c @	     ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b)) =	  freegroup_eta (word_change_sign c @ word_change_sign b)	1 goal (ID 351)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  freegroup_eta	    (word_change_sign c @	     ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b)) =	  freegroup_eta (((word_change_sign c @ [a]) @ [a^]) @ word_change_sign b)	";
             responses[i]=data;
           
 
             i = 255;
-            data = "1 goal (ID 358)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @	  ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b) =	  ((word_change_sign c @ [a]) @ [a^]) @ word_change_sign b	";
+            data = "1 goal (ID 354)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @	  ((word_change_sign [a^] @ word_change_sign [a]) @ word_change_sign b) =	  ((word_change_sign c @ [a]) @ [a^]) @ word_change_sign b	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 goal (ID 401)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @ (word_change_sign [a^] @ word_change_sign [a]) =	  (word_change_sign c @ [a]) @ [a^]	";
+            data = "1 goal (ID 397)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @ (word_change_sign [a^] @ word_change_sign [a]) =	  (word_change_sign c @ [a]) @ [a^]	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 goal (ID 445)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @ word_change_sign [a^] = word_change_sign c @ [a]	";
+            data = "1 goal (ID 441)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  word_change_sign c @ word_change_sign [a^] = word_change_sign c @ [a]	";
             responses[i]=data;
           
 
             i = 258;
-            data = "1 goal (ID 458)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  (a^)^ = a	";
+            data = "1 goal (ID 454)	  	  A : Type	  b : Words	  a : A + A	  c : Words	  ============================	  (a^)^ = a	";
             responses[i]=data;
           
 
@@ -1353,7 +1353,7 @@
           
 
             i = 267;
-            data = "1 goal (ID 148)	  	  A : Type	  ============================	  Associative sg_op	";
+            data = "1 goal (ID 147)	  	  A : Type	  ============================	  Associative sg_op	";
             responses[i]=data;
           
 
@@ -1363,32 +1363,32 @@
           
 
             i = 269;
-            data = "1 goal (ID 152)	  	  A : Type	  x, y, z : freegroup_type	  ============================	  x * (y * z) = x * y * z	";
+            data = "1 goal (ID 151)	  	  A : Type	  x, y, z : freegroup_type	  ============================	  x * (y * z) = x * y * z	";
             responses[i]=data;
           
 
             i = 270;
-            data = "1 goal (ID 431)	  	  A : Type	  z, y, x : Coeq map1 map2	  ============================	  tr x * (tr y * tr z) = tr x * tr y * tr z	";
+            data = "1 goal (ID 415)	  	  A : Type	  z, y, x : Coeq map1 map2	  ============================	  tr x * (tr y * tr z) = tr x * tr y * tr z	";
             responses[i]=data;
           
 
             i = 271;
-            data = "1 goal (ID 592)	  	  A : Type	  z, y : Coeq map1 map2	  x : Words	  ============================	  (fun w : Coeq map1 map2 => tr w * (tr y * tr z) = tr w * tr y * tr z)	    (coeq x)	";
+            data = "1 goal (ID 554)	  	  A : Type	  z, y : Coeq map1 map2	  x : Words	  ============================	  (fun w : Coeq map1 map2 => tr w * (tr y * tr z) = tr w * tr y * tr z)	    (coeq x)	";
             responses[i]=data;
           
 
             i = 272;
-            data = "1 goal (ID 686)	  	  A : Type	  z : Coeq map1 map2	  x : Words	  y : Words	  ============================	  (fun w : Coeq map1 map2 =>	   (fun w0 : Coeq map1 map2 => tr w0 * (tr w * tr z) = tr w0 * tr w * tr z)	     (coeq x)) (coeq y)	";
+            data = "1 goal (ID 631)	  	  A : Type	  z : Coeq map1 map2	  x : Words	  y : Words	  ============================	  (fun w : Coeq map1 map2 =>	   (fun w0 : Coeq map1 map2 => tr w0 * (tr w * tr z) = tr w0 * tr w * tr z)	     (coeq x)) (coeq y)	";
             responses[i]=data;
           
 
             i = 273;
-            data = "1 goal (ID 780)	  	  A : Type	  x, y : Words	  z : Words	  ============================	  (fun w : Coeq map1 map2 =>	   (fun w0 : Coeq map1 map2 =>	    (fun w1 : Coeq map1 map2 => tr w1 * (tr w0 * tr w) = tr w1 * tr w0 * tr w)	      (coeq x)) (coeq y)) (coeq z)	";
+            data = "1 goal (ID 708)	  	  A : Type	  x, y : Words	  z : Words	  ============================	  (fun w : Coeq map1 map2 =>	   (fun w0 : Coeq map1 map2 =>	    (fun w1 : Coeq map1 map2 => tr w1 * (tr w0 * tr w) = tr w1 * tr w0 * tr w)	      (coeq x)) (coeq y)) (coeq z)	";
             responses[i]=data;
           
 
             i = 274;
-            data = "1 goal (ID 805)	  	  A : Type	  x, y : Words	  z : Words	  ============================	  x @ (y @ z) = (x @ y) @ z	";
+            data = "1 goal (ID 732)	  	  A : Type	  x, y : Words	  z : Words	  ============================	  x @ (y @ z) = (x @ y) @ z	";
             responses[i]=data;
           
 
@@ -1423,7 +1423,7 @@
           
 
             i = 281;
-            data = "1 goal (ID 155)	  	  A : Type	  ============================	  LeftIdentity sg_op mon_unit	";
+            data = "1 goal (ID 154)	  	  A : Type	  ============================	  LeftIdentity sg_op mon_unit	";
             responses[i]=data;
           
 
@@ -1433,12 +1433,12 @@
           
 
             i = 283;
-            data = "1 goal (ID 244)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, mon_unit * tr a = tr a	";
+            data = "1 goal (ID 238)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, mon_unit * tr a = tr a	";
             responses[i]=data;
           
 
             i = 284;
-            data = "1 goal (ID 273)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => mon_unit * tr w = tr w) (coeq x)	";
+            data = "1 goal (ID 267)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => mon_unit * tr w = tr w) (coeq x)	";
             responses[i]=data;
           
 
@@ -1473,7 +1473,7 @@
           
 
             i = 291;
-            data = "1 goal (ID 162)	  	  A : Type	  ============================	  RightIdentity sg_op mon_unit	";
+            data = "1 goal (ID 161)	  	  A : Type	  ============================	  RightIdentity sg_op mon_unit	";
             responses[i]=data;
           
 
@@ -1483,17 +1483,17 @@
           
 
             i = 293;
-            data = "1 goal (ID 251)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, tr a * mon_unit = tr a	";
+            data = "1 goal (ID 245)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, tr a * mon_unit = tr a	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 goal (ID 280)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => tr w * mon_unit = tr w) (coeq x)	";
+            data = "1 goal (ID 274)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => tr w * mon_unit = tr w) (coeq x)	";
             responses[i]=data;
           
 
             i = 295;
-            data = "1 goal (ID 311)	  	  A : Type	  x : Words	  ============================	  x @ nil = x	";
+            data = "1 goal (ID 304)	  	  A : Type	  x : Words	  ============================	  x @ nil = x	";
             responses[i]=data;
           
 
@@ -1528,7 +1528,7 @@
           
 
             i = 302;
-            data = "1 goal (ID 172)	  	  A : Type	  ============================	  LeftInverse sg_op negate mon_unit	";
+            data = "1 goal (ID 171)	  	  A : Type	  ============================	  LeftInverse sg_op negate mon_unit	";
             responses[i]=data;
           
 
@@ -1538,12 +1538,12 @@
           
 
             i = 304;
-            data = "1 goal (ID 261)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, - tr a * tr a = mon_unit	";
+            data = "1 goal (ID 255)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, - tr a * tr a = mon_unit	";
             responses[i]=data;
           
 
             i = 305;
-            data = "1 goal (ID 290)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => - tr w * tr w = mon_unit) (coeq x)	";
+            data = "1 goal (ID 284)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => - tr w * tr w = mon_unit) (coeq x)	";
             responses[i]=data;
           
 
@@ -1578,7 +1578,7 @@
           
 
             i = 312;
-            data = "1 goal (ID 182)	  	  A : Type	  ============================	  RightInverse sg_op negate mon_unit	";
+            data = "1 goal (ID 181)	  	  A : Type	  ============================	  RightInverse sg_op negate mon_unit	";
             responses[i]=data;
           
 
@@ -1588,12 +1588,12 @@
           
 
             i = 314;
-            data = "1 goal (ID 271)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, tr a * - tr a = mon_unit	";
+            data = "1 goal (ID 265)	  	  A : Type	  ============================	  forall a : Coeq map1 map2, tr a * - tr a = mon_unit	";
             responses[i]=data;
           
 
             i = 315;
-            data = "1 goal (ID 300)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => tr w * - tr w = mon_unit) (coeq x)	";
+            data = "1 goal (ID 294)	  	  A : Type	  x : Words	  ============================	  (fun w : Coeq map1 map2 => tr w * - tr w = mon_unit) (coeq x)	";
             responses[i]=data;
           
 
@@ -1638,7 +1638,7 @@
           
 
             i = 324;
-            data = "1 goal (ID 183)	  	  A : Type	  ============================	  Group	";
+            data = "1 goal (ID 182)	  	  A : Type	  ============================	  Group	";
             responses[i]=data;
           
 
@@ -1658,7 +1658,7 @@
           
 
             i = 328;
-            data = "1 goal (ID 186)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  Words -> G	";
+            data = "1 goal (ID 185)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  Words -> G	";
             responses[i]=data;
           
 
@@ -1668,32 +1668,32 @@
           
 
             i = 330;
-            data = "1 goal (ID 187)	  	  A : Type	  G : Group	  s : A -> G	  x : Words	  ============================	  G	";
+            data = "1 goal (ID 186)	  	  A : Type	  G : Group	  s : A -> G	  x : Words	  ============================	  G	";
             responses[i]=data;
           
 
             i = 331;
-            data = "2 goals (ID 191)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  G		goal 2 (ID 195) is:	 G	";
+            data = "2 goals (ID 190)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  G		goal 2 (ID 194) is:	 G	";
             responses[i]=data;
           
 
             i = 332;
-            data = "1 goal (ID 195)	  	  A : Type	  G : Group	  s : A -> G	  x : A + A	  xs : list (A + A)	  IHxs : G	  ============================	  G	";
+            data = "1 goal (ID 194)	  	  A : Type	  G : Group	  s : A -> G	  x : A + A	  xs : list (A + A)	  IHxs : G	  ============================	  G	";
             responses[i]=data;
           
 
             i = 333;
-            data = "1 goal (ID 201)	  	  A : Type	  G : Group	  s : A -> G	  x : A + A	  xs : list (A + A)	  IHxs : G	  ============================	  G	";
+            data = "1 goal (ID 200)	  	  A : Type	  G : Group	  s : A -> G	  x : A + A	  xs : list (A + A)	  IHxs : G	  ============================	  G	";
             responses[i]=data;
           
 
             i = 334;
-            data = "2 goals (ID 208)	  	  A : Type	  G : Group	  s : A -> G	  x : A	  xs : list (A + A)	  IHxs : G	  ============================	  G		goal 2 (ID 210) is:	 G	";
+            data = "2 goals (ID 207)	  	  A : Type	  G : Group	  s : A -> G	  x : A	  xs : list (A + A)	  IHxs : G	  ============================	  G		goal 2 (ID 209) is:	 G	";
             responses[i]=data;
           
 
             i = 335;
-            data = "1 goal (ID 210)	  	  A : Type	  G : Group	  s : A -> G	  x : A	  xs : list (A + A)	  IHxs : G	  ============================	  G	";
+            data = "1 goal (ID 209)	  	  A : Type	  G : Group	  s : A -> G	  x : A	  xs : list (A + A)	  IHxs : G	  ============================	  G	";
             responses[i]=data;
           
 
@@ -1708,7 +1708,7 @@
           
 
             i = 338;
-            data = "1 goal (ID 195)	  	  A : Type	  G : Group	  s : A -> G	  x, y : Words	  ============================	  words_rec G s (x @ y) = words_rec G s x * words_rec G s y	";
+            data = "1 goal (ID 194)	  	  A : Type	  G : Group	  s : A -> G	  x, y : Words	  ============================	  words_rec G s (x @ y) = words_rec G s x * words_rec G s y	";
             responses[i]=data;
           
 
@@ -1718,17 +1718,17 @@
           
 
             i = 340;
-            data = "2 goals (ID 199)	  	  A : Type	  G : Group	  s : A -> G	  y : Words	  ============================	  words_rec G s (nil @ y) = words_rec G s nil * words_rec G s y		goal 2 (ID 205) is:	 words_rec G s ((a :: x)%list @ y) =	 words_rec G s (a :: x)%list * words_rec G s y	";
+            data = "2 goals (ID 198)	  	  A : Type	  G : Group	  s : A -> G	  y : Words	  ============================	  words_rec G s (nil @ y) = words_rec G s nil * words_rec G s y		goal 2 (ID 204) is:	 words_rec G s ((a :: x)%list @ y) =	 words_rec G s (a :: x)%list * words_rec G s y	";
             responses[i]=data;
           
 
             i = 341;
-            data = "1 goal (ID 205)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  x : list (A + A)	  y : Words	  IHx : words_rec G s (x @ y) = words_rec G s x * words_rec G s y	  ============================	  words_rec G s ((a :: x)%list @ y) =	  words_rec G s (a :: x)%list * words_rec G s y	";
+            data = "1 goal (ID 204)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  x : list (A + A)	  y : Words	  IHx : words_rec G s (x @ y) = words_rec G s x * words_rec G s y	  ============================	  words_rec G s ((a :: x)%list @ y) =	  words_rec G s (a :: x)%list * words_rec G s y	";
             responses[i]=data;
           
 
             i = 342;
-            data = "1 goal (ID 632)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  x : list (A + A)	  y : Words	  IHx : words_rec G s (x @ y) = words_rec G s x * words_rec G s y	  ============================	  match a with	  | inl a0 => s a0	  | inr b => - s b	  end *	  list_rect (fun _ : list (A + A) => G) mon_unit	    (fun (x0 : A + A) (_ : list (A + A)) (IHxs : G) =>	     match x0 with	     | inl a0 => s a0	     | inr b => - s b	     end * IHxs) (x @ y) =	  match a with	  | inl a0 => s a0	  | inr b => - s b	  end *	  (list_rect (fun _ : list (A + A) => G) mon_unit	     (fun (x0 : A + A) (_ : list (A + A)) (IHxs : G) =>	      match x0 with	      | inl a0 => s a0	      | inr b => - s b	      end * IHxs) x * words_rec G s y)	";
+            data = "1 goal (ID 579)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  x : list (A + A)	  y : Words	  IHx : words_rec G s (x @ y) = words_rec G s x * words_rec G s y	  ============================	  match a with	  | inl a0 => s a0	  | inr b => - s b	  end *	  list_rect (fun _ : list (A + A) => G) mon_unit	    (fun (x0 : A + A) (_ : list (A + A)) (IHxs : G) =>	     match x0 with	     | inl a0 => s a0	     | inr b => - s b	     end * IHxs) (x @ y) =	  match a with	  | inl a0 => s a0	  | inr b => - s b	  end *	  (list_rect (fun _ : list (A + A) => G) mon_unit	     (fun (x0 : A + A) (_ : list (A + A)) (IHxs : G) =>	      match x0 with	      | inl a0 => s a0	      | inr b => - s b	      end * IHxs) x * words_rec G s y)	";
             responses[i]=data;
           
 
@@ -1743,7 +1743,7 @@
           
 
             i = 345;
-            data = "1 goal (ID 211)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (map1 (b, a, c)) = words_rec G s (map2 (b, a, c))	";
+            data = "1 goal (ID 210)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (map1 (b, a, c)) = words_rec G s (map2 (b, a, c))	";
             responses[i]=data;
           
 
@@ -1753,52 +1753,52 @@
           
 
             i = 347;
-            data = "1 goal (ID 212)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (((b @ [a]) @ [a^]) @ c) = words_rec G s (b @ c)	";
+            data = "1 goal (ID 211)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (((b @ [a]) @ [a^]) @ c) = words_rec G s (b @ c)	";
             responses[i]=data;
           
 
             i = 348;
-            data = "1 goal (ID 226)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (((b @ [a]) @ [a^]) @ c) = words_rec G s b * words_rec G s c	";
+            data = "1 goal (ID 225)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (((b @ [a]) @ [a^]) @ c) = words_rec G s b * words_rec G s c	";
             responses[i]=data;
           
 
             i = 349;
-            data = "1 goal (ID 267)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s ((b @ [a]) @ [a^]) = words_rec G s b	";
+            data = "1 goal (ID 266)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s ((b @ [a]) @ [a^]) = words_rec G s b	";
             responses[i]=data;
           
 
             i = 350;
-            data = "1 goal (ID 398)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s ((b @ [a]) @ [a^]) = words_rec G s b * mon_unit	";
+            data = "1 goal (ID 385)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s ((b @ [a]) @ [a^]) = words_rec G s b * mon_unit	";
             responses[i]=data;
           
 
             i = 351;
-            data = "1 goal (ID 420)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (b @ ([a] @ [a^])) = words_rec G s b * mon_unit	";
+            data = "1 goal (ID 407)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s (b @ ([a] @ [a^])) = words_rec G s b * mon_unit	";
             responses[i]=data;
           
 
             i = 352;
-            data = "1 goal (ID 437)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s ([a] @ [a^]) = mon_unit	";
+            data = "1 goal (ID 424)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  words_rec G s ([a] @ [a^]) = mon_unit	";
             responses[i]=data;
           
 
             i = 353;
-            data = "1 goal (ID 738)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  match a with	  | inl a0 => s a0	  | inr b0 => - s b0	  end * match a^ with	        | inl a0 => s a0	        | inr b0 => - s b0	        end * mon_unit = mon_unit * mon_unit	";
+            data = "1 goal (ID 693)	  	  A : Type	  G : Group	  s : A -> G	  a : A + A	  b, c : Words	  ============================	  match a with	  | inl a0 => s a0	  | inr b0 => - s b0	  end * match a^ with	        | inl a0 => s a0	        | inr b0 => - s b0	        end * mon_unit = mon_unit * mon_unit	";
             responses[i]=data;
           
 
             i = 354;
-            data = "2 goals (ID 779)	  	  A : Type	  G : Group	  s : A -> G	  a : A	  b, c : Words	  ============================	  s a * - s a = mon_unit		goal 2 (ID 809) is:	 - s a * s a = mon_unit	";
+            data = "2 goals (ID 734)	  	  A : Type	  G : Group	  s : A -> G	  a : A	  b, c : Words	  ============================	  s a * - s a = mon_unit		goal 2 (ID 764) is:	 - s a * s a = mon_unit	";
             responses[i]=data;
           
 
             i = 355;
-            data = "1 goal (ID 779)	  	  A : Type	  G : Group	  s : A -> G	  a : A	  b, c : Words	  ============================	  s a * - s a = mon_unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 809) is:	 - s a * s a = mon_unit	";
+            data = "1 goal (ID 734)	  	  A : Type	  G : Group	  s : A -> G	  a : A	  b, c : Words	  ============================	  s a * - s a = mon_unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 764) is:	 - s a * s a = mon_unit	";
             responses[i]=data;
           
 
             i = 356;
-            data = "1 goal (ID 809)	  	  A : Type	  G : Group	  s : A -> G	  a : A	  b, c : Words	  ============================	  - s a * s a = mon_unit	No more goals.	";
+            data = "1 goal (ID 764)	  	  A : Type	  G : Group	  s : A -> G	  a : A	  b, c : Words	  ============================	  - s a * s a = mon_unit	No more goals.	";
             responses[i]=data;
           
 
@@ -1908,7 +1908,7 @@
           
 
             i = 378;
-            data = "1 goal (ID 214)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  GroupHomomorphism FreeGroup G	";
+            data = "1 goal (ID 213)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  GroupHomomorphism FreeGroup G	";
             responses[i]=data;
           
 
@@ -1918,47 +1918,47 @@
           
 
             i = 380;
-            data = "2 goals (ID 224)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  FreeGroup -> G		goal 2 (ID 226) is:	 IsSemiGroupPreserving ?f	";
+            data = "2 goals (ID 223)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  FreeGroup -> G		goal 2 (ID 225) is:	 IsSemiGroupPreserving ?f	";
             responses[i]=data;
           
 
             i = 381;
-            data = "1 goal (ID 224)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  FreeGroup -> G	1 goal (ID 460)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  Coeq map1 map2 -> G	";
+            data = "1 goal (ID 223)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  FreeGroup -> G	1 goal (ID 434)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  Coeq map1 map2 -> G	";
             responses[i]=data;
           
 
             i = 382;
-            data = "2 goals (ID 486)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  Words -> G		goal 2 (ID 488) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
+            data = "2 goals (ID 460)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  Words -> G		goal 2 (ID 462) is:	 forall b : Words * (A + A) * Words, ?coeq' (map1 b) = ?coeq' (map2 b)	";
             responses[i]=data;
           
 
             i = 383;
-            data = "1 goal (ID 488)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  forall b : Words * (A + A) * Words,	  words_rec G s (map1 b) = words_rec G s (map2 b)	";
+            data = "1 goal (ID 462)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  forall b : Words * (A + A) * Words,	  words_rec G s (map1 b) = words_rec G s (map2 b)	";
             responses[i]=data;
           
 
             i = 384;
-            data = "1 goal (ID 498)	  	  A : Type	  G : Group	  s : A -> G	  b : Words	  a : A + A	  c : Words	  ============================	  words_rec G s (map1 (b, a, c)) = words_rec G s (map2 (b, a, c))	";
+            data = "1 goal (ID 472)	  	  A : Type	  G : Group	  s : A -> G	  b : Words	  a : A + A	  c : Words	  ============================	  words_rec G s (map1 (b, a, c)) = words_rec G s (map2 (b, a, c))	";
             responses[i]=data;
           
 
             i = 385;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 226) is:	 IsSemiGroupPreserving	   (Trunc_rec	      (Coeq_rec G (words_rec G s)	         (fun b0 : Words * (A + A) * Words =>	          (fun fst : Words * (A + A) =>	           (fun (b : Words) (a : A + A) (c : Words) =>	            words_rec_coh G s a b c) (Datatypes.fst fst) 	             (snd fst)) (fst b0) (snd b0))))	1 goal (ID 226)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  IsSemiGroupPreserving	    (Trunc_rec	       (Coeq_rec G (words_rec G s)	          (fun b0 : Words * (A + A) * Words =>	           (fun fst : Words * (A + A) =>	            (fun (b : Words) (a : A + A) (c : Words) =>	             words_rec_coh G s a b c) (Datatypes.fst fst) 	              (snd fst)) (fst b0) (snd b0))))	1 goal (ID 1158)	  	  A : Type	  G : Group	  s : A -> G	  y, x : Coeq map1 map2	  ============================	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr x * tr y) =	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0))) 	    (tr x) *	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0))) 	    (tr y)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 225) is:	 IsSemiGroupPreserving	   (Trunc_rec	      (Coeq_rec G (words_rec G s)	         (fun b0 : Words * (A + A) * Words =>	          (fun fst : Words * (A + A) =>	           (fun (b : Words) (a : A + A) (c : Words) =>	            words_rec_coh G s a b c) (Datatypes.fst fst) 	             (snd fst)) (fst b0) (snd b0))))	1 goal (ID 225)	  	  A : Type	  G : Group	  s : A -> G	  ============================	  IsSemiGroupPreserving	    (Trunc_rec	       (Coeq_rec G (words_rec G s)	          (fun b0 : Words * (A + A) * Words =>	           (fun fst : Words * (A + A) =>	            (fun (b : Words) (a : A + A) (c : Words) =>	             words_rec_coh G s a b c) (Datatypes.fst fst) 	              (snd fst)) (fst b0) (snd b0))))	1 goal (ID 1072)	  	  A : Type	  G : Group	  s : A -> G	  y, x : Coeq map1 map2	  ============================	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr x * tr y) =	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0))) 	    (tr x) *	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0))) 	    (tr y)	";
             responses[i]=data;
           
 
             i = 386;
-            data = "1 goal (ID 1322)	  	  A : Type	  G : Group	  s : A -> G	  y : Coeq map1 map2	  x : Words	  ============================	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x) * tr y) =	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x)) *	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0))) 	    (tr y)	";
+            data = "1 goal (ID 1214)	  	  A : Type	  G : Group	  s : A -> G	  y : Coeq map1 map2	  x : Words	  ============================	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x) * tr y) =	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x)) *	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0))) 	    (tr y)	";
             responses[i]=data;
           
 
             i = 387;
-            data = "1 goal (ID 1621)	  	  A : Type	  G : Group	  s : A -> G	  x, y : Words	  ============================	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x) * tr (coeq y)) =	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x)) *	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq y))	";
+            data = "1 goal (ID 1474)	  	  A : Type	  G : Group	  s : A -> G	  x, y : Words	  ============================	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x) * tr (coeq y)) =	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq x)) *	  Trunc_rec	    (Coeq_rec G (words_rec G s)	       (fun b0 : Words * (A + A) * Words =>	        words_rec_coh G s (snd (fst b0)) (fst (fst b0)) (snd b0)))	    (tr (coeq y))	";
             responses[i]=data;
           
 
             i = 388;
-            data = "1 goal (ID 1846)	  	  A : Type	  G : Group	  s : A -> G	  x, y : Words	  ============================	  words_rec G s (x @ y) = words_rec G s x * words_rec G s y	";
+            data = "1 goal (ID 1676)	  	  A : Type	  G : Group	  s : A -> G	  x, y : Words	  ============================	  words_rec G s (x @ y) = words_rec G s x * words_rec G s y	";
             responses[i]=data;
           
 
@@ -1993,7 +1993,7 @@
           
 
             i = 395;
-            data = "1 goal (ID 236)	  	  A : Type	  H : Funext	  ============================	  IsFreeGroupOn A FreeGroup (freegroup_eta o word_sing o inl)	";
+            data = "1 goal (ID 235)	  	  A : Type	  H : Funext	  ============================	  IsFreeGroupOn A FreeGroup (freegroup_eta o word_sing o inl)	";
             responses[i]=data;
           
 
@@ -2003,107 +2003,107 @@
           
 
             i = 397;
-            data = "1 goal (ID 239)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  Contr	    (FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x])	       G f)	";
+            data = "1 goal (ID 238)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  Contr	    (FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x])	       G f)	";
             responses[i]=data;
           
 
             i = 398;
-            data = "2 goals (ID 255)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x]) G	    f		goal 2 (ID 257) is:	 forall	 y : FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x])	       G f, ?center = y	";
+            data = "2 goals (ID 254)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x]) G	    f		goal 2 (ID 256) is:	 forall	 y : FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x])	       G f, ?center = y	";
             responses[i]=data;
           
 
             i = 399;
-            data = "1 goal (ID 255)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x]) G	    f	2 goals (ID 277)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  GroupHomomorphism FreeGroup G		goal 2 (ID 278) is:	 (fun x : A => ?Goal (freegroup_eta [inl x])) == f	";
+            data = "1 goal (ID 254)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x]) G	    f	2 goals (ID 274)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  GroupHomomorphism FreeGroup G		goal 2 (ID 275) is:	 (fun x : A => ?Goal (freegroup_eta [inl x])) == f	";
             responses[i]=data;
           
 
             i = 400;
-            data = "1 goal (ID 278)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  (fun x : A => FreeGroup_rec G f (freegroup_eta [inl x])) == f	";
+            data = "1 goal (ID 275)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  (fun x : A => FreeGroup_rec G f (freegroup_eta [inl x])) == f	";
             responses[i]=data;
           
 
             i = 401;
-            data = "1 goal (ID 284)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  x : A	  ============================	  f x * mon_unit = f x	";
+            data = "1 goal (ID 281)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  x : A	  ============================	  f x * mon_unit = f x	";
             responses[i]=data;
           
 
             i = 402;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 257) is:	 forall	 y : FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x])	       G f, (FreeGroup_rec G f; fun x : A => right_identity (f x)) = y	1 goal (ID 257)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  forall	  y : FactorsThroughFreeGroup A FreeGroup	        (fun x : A => freegroup_eta [inl x]) G f,	  (FreeGroup_rec G f; fun x : A => right_identity (f x)) = y	1 goal (ID 387)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  (FreeGroup_rec G f; fun x : A => right_identity (f x)) = (g; h)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 256) is:	 forall	 y : FactorsThroughFreeGroup A FreeGroup (fun x : A => freegroup_eta [inl x])	       G f, (FreeGroup_rec G f; fun x : A => right_identity (f x)) = y	1 goal (ID 256)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  ============================	  forall	  y : FactorsThroughFreeGroup A FreeGroup	        (fun x : A => freegroup_eta [inl x]) G f,	  (FreeGroup_rec G f; fun x : A => right_identity (f x)) = y	1 goal (ID 372)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  (FreeGroup_rec G f; fun x : A => right_identity (f x)) = (g; h)	";
             responses[i]=data;
           
 
             i = 403;
-            data = "1 goal (ID 412)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  (FreeGroup_rec G f; fun x : A => right_identity (f x)).1 = (g; h).1	";
+            data = "1 goal (ID 397)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  (FreeGroup_rec G f; fun x : A => right_identity (f x)).1 = (g; h).1	";
             responses[i]=data;
           
 
             i = 404;
-            data = "1 goal (ID 726)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  FreeGroup_rec G f = g	";
+            data = "1 goal (ID 675)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  FreeGroup_rec G f = g	";
             responses[i]=data;
           
 
             i = 405;
-            data = "1 goal (ID 735)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  FreeGroup_rec G f == g	";
+            data = "1 goal (ID 684)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  FreeGroup_rec G f == g	";
             responses[i]=data;
           
 
             i = 406;
-            data = "1 goal (ID 737)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : FreeGroup	  ============================	  FreeGroup_rec G f x = g x	";
+            data = "1 goal (ID 686)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : FreeGroup	  ============================	  FreeGroup_rec G f x = g x	";
             responses[i]=data;
           
 
             i = 407;
-            data = "1 goal (ID 745)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : FreeGroup	  ============================	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) x = g x	";
+            data = "1 goal (ID 694)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : FreeGroup	  ============================	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) x = g x	";
             responses[i]=data;
           
 
             i = 408;
-            data = "1 goal (ID 1159)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  forall x : Coeq map1 map2,	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) (tr x) =	  g (tr x)	";
+            data = "1 goal (ID 1073)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  forall x : Coeq map1 map2,	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) (tr x) =	  g (tr x)	";
             responses[i]=data;
           
 
             i = 409;
-            data = "1 goal (ID 1230)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : Words	  ============================	  (fun w : Coeq map1 map2 =>	   FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) (tr w) =	   g (tr w)) (coeq x)	";
+            data = "1 goal (ID 1128)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : Words	  ============================	  (fun w : Coeq map1 map2 =>	   FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) (tr w) =	   g (tr w)) (coeq x)	";
             responses[i]=data;
           
 
             i = 410;
-            data = "1 goal (ID 1465)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : Words	  ============================	  g (tr (coeq x)) =	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) (tr (coeq x))	";
+            data = "1 goal (ID 1340)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  x : Words	  ============================	  g (tr (coeq x)) =	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0])) (tr (coeq x))	";
             responses[i]=data;
           
 
             i = 411;
-            data = "2 goals (ID 1469)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  g (tr (coeq nil)) =	  FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x])) (tr (coeq nil))		goal 2 (ID 1473) is:	 g (tr (coeq (a :: x)%list)) =	 FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0]))	   (tr (coeq (a :: x)%list))	";
+            data = "2 goals (ID 1344)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  ============================	  g (tr (coeq nil)) =	  FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x])) (tr (coeq nil))		goal 2 (ID 1348) is:	 g (tr (coeq (a :: x)%list)) =	 FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0]))	   (tr (coeq (a :: x)%list))	";
             responses[i]=data;
           
 
             i = 412;
-            data = "1 goal (ID 1473)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (tr (coeq (a :: x)%list)) =	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0]))	    (tr (coeq (a :: x)%list))	";
+            data = "1 goal (ID 1348)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (tr (coeq (a :: x)%list)) =	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0]))	    (tr (coeq (a :: x)%list))	";
             responses[i]=data;
           
 
             i = 413;
-            data = "1 goal (ID 1484)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [a]) * g (freegroup_eta x) =	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0]))	    (tr (coeq (a :: x)%list))	";
+            data = "1 goal (ID 1359)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [a]) * g (freegroup_eta x) =	  FreeGroup_rec G (fun x0 : A => g (freegroup_eta [inl x0]))	    (tr (coeq (a :: x)%list))	";
             responses[i]=data;
           
 
             i = 414;
-            data = "1 goal (ID 1486)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [a]) * g (freegroup_eta x) =	  match a with	  | inl a0 => g (freegroup_eta [inl a0])	  | inr b => - g (freegroup_eta [inl b])	  end * words_rec G (fun x0 : A => g (freegroup_eta [inl x0])) x	";
+            data = "1 goal (ID 1361)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [a]) * g (freegroup_eta x) =	  match a with	  | inl a0 => g (freegroup_eta [inl a0])	  | inr b => - g (freegroup_eta [inl b])	  end * words_rec G (fun x0 : A => g (freegroup_eta [inl x0])) x	";
             responses[i]=data;
           
 
             i = 415;
-            data = "1 goal (ID 1517)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [a]) =	  match a with	  | inl a0 => g (freegroup_eta [inl a0])	  | inr b => - g (freegroup_eta [inl b])	  end	";
+            data = "1 goal (ID 1392)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A + A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [a]) =	  match a with	  | inl a0 => g (freegroup_eta [inl a0])	  | inr b => - g (freegroup_eta [inl b])	  end	";
             responses[i]=data;
           
 
             i = 416;
-            data = "2 goals (ID 1524)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [inl a]) = g (freegroup_eta [inl a])		goal 2 (ID 1526) is:	 g (freegroup_eta [inr a]) = - g (freegroup_eta [inl a])	";
+            data = "2 goals (ID 1399)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [inl a]) = g (freegroup_eta [inl a])		goal 2 (ID 1401) is:	 g (freegroup_eta [inr a]) = - g (freegroup_eta [inl a])	";
             responses[i]=data;
           
 
             i = 417;
-            data = "1 goal (ID 1526)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [inr a]) = - g (freegroup_eta [inl a])	";
+            data = "1 goal (ID 1401)	  	  A : Type	  H : Funext	  G : Group	  f : A -> G	  g : Core.Hom FreeGroup G	  h : (fun x : A => g (freegroup_eta [inl x])) == f	  a : A	  x : list (A + A)	  IHx : g (tr (coeq x)) =	        FreeGroup_rec G (fun x : A => g (freegroup_eta [inl x]))	          (tr (coeq x))	  ============================	  g (freegroup_eta [inr a]) = - g (freegroup_eta [inl a])	";
             responses[i]=data;
           
 

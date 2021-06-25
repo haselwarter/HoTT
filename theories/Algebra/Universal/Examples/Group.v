@@ -58,19 +58,28 @@ Proof.
   exact _.
 Qed.
 
-Definition signature_group : Signature :=
-  Build_SingleSortedSignature GroupSymbol
-    (fun s => match s with
+Definition group_symbol_arity := (fun s => match s with
               | group_sgop_sym => Fin 2
               | group_unit_sym => Fin 0
               | group_inverse_sym => Fin 1
               end).
 
-Definition AlgebraGroup : Type := Algebra signature_group.
+Definition group_signature : Signature :=
+  Build_SingleSortedSignature GroupSymbol group_symbol_arity.
 
-Definition equations_group : Equations signature_group (Fin 5).
+Definition AlgebraGroup : Type := Algebra group_signature.
+
+Variant GroupEquation :=
+| group_eq_assoc
+| group_eq_left_unit
+| group_eq_right_unit
+| group_eq_left_inverse
+| group_eq_right_inverse.
+
+
+Definition group_equations : Equations group_signature GroupEquation.
 Proof.
-  constructor. FinInd.
+  constructor. induction 1.
   - exact (equation_associativity _ _ group_sgop_sym idpath).
   - exact (equation_left_unit _ _ group_sgop_sym idpath
             group_unit_sym idpath).
@@ -82,43 +91,201 @@ Proof.
             group_inverse_sym idpath group_unit_sym idpath).
 Defined.
 
-Definition ModelAlgebraGroup : Type := ModelAlgebra equations_group.
+Definition ModelAlgebraGroup : Type := ModelAlgebra group_equations.
 
-Theorem ModelAlgebraGroup_Group_equiv : ModelAlgebraGroup <~> Group.
+Definition Fin1_rec {P : Type} (p : P) : Fin 1 -> P :=
+  fun x => match x with inr tt => p | inl z => Empty_rec P z end.
+
+Definition Fin1_ind {P : Fin 1 -> Type} (p : P (inr tt)) (x : Fin 1) : P x :=
+  match x with inr tt => p | inl z => Empty_rec _ z end.
+
+Definition Fin2_rec {P : Type} (p1 p2 : P) (x : Fin 2) : P :=
+  match x with
+  | inl x => Fin1_rec p1 x
+  | inr tt => p2
+  end.
+
+Definition Fin3_rec {P : Type} (p1 p2 p3 : P) (x : Fin 3) : P :=
+  match x with
+  | inl x => Fin2_rec p1 p2 x
+  | inr tt => p3
+  end.
+
+Local Definition T (uaG : ModelAlgebraGroup) := model_algebra uaG tt.
+
+(* Local Definition g_op {uaG : ModelAlgebraGroup} : SgOp (T uaG) *)
+(*   := *)
+(*     (fun x1 x2 => *)
+(*        (operations uaG group_sgop_sym) *)
+(*          ltac:(intros [[empty|tt]|tt] ; *)
+(*               [ elim empty | exact x1 | exact x2 ])). *)
+
+Local Definition g_op {uaG : ModelAlgebraGroup} : SgOp (T uaG)
+  := fun x y => operations uaG group_sgop_sym (Fin2_rec x y).
+
+Local Definition g_unit {uaG : ModelAlgebraGroup} : MonUnit (T uaG) :=
+  operations uaG group_unit_sym (fun F => ltac:(case F)).
+
+Local Definition g_inverse {uaG : ModelAlgebraGroup} : (Negate (T uaG)) :=
+    fun x =>
+               operations uaG group_inverse_sym
+                          ltac:(intros [F|tt] ; [elim F | exact x ]).
+
+
+(* destruct completely a term of type Fin k *)
+Ltac caseFin x :=
+  let t := type of x in
+  lazymatch t with
+  | Fin O => destruct x
+  | Fin (S ?k) =>
+    let x' := fresh "x" in
+    destruct x as [x'|[]] ; [caseFin x'|]
+  end.
+
+(* destruct completely a term of type Fin k *)
+Ltac caseFin' x :=
+  let t := type of x in
+  lazymatch t with
+  | Empty => destruct x
+  | ?k + Unit =>
+    let x' := fresh "x" in
+    let h := fresh "eq_x" in
+    destruct x as [x'|[]] ; [caseFin' x'|]
+  end.
+
+Definition f (uaG : ModelAlgebraGroup) (x y z : T uaG) : (forall s:Unit, Fin 3 -> uaG s).
+  intros s [[[e|tt]|tt]|tt].
+  - elim e.
+  - destruct s, tt. exact x.
+  - destruct s, tt. exact y.
+  - destruct s, tt. exact z.
+Defined.
+
+Definition g (uaG : ModelAlgebraGroup) (x : T uaG) : (forall s:Unit, Fin 1 -> uaG s).
+  intros s [e|tt].
+  - elim e.
+  - destruct s, tt. exact x.
+Defined.
+
+Theorem ModelAlgebraGroup_Group_equiv `{Funext} : ModelAlgebraGroup <~> Group.
   srapply equiv_adjointify.
-  - intros [alg isModel].
-    destruct alg as [carriers operations hset_carriers].
-    pose signature_group.
-    destruct s.
-    pose (carriers tt) as T.
-    assert (SgOp T) as group_op.
-    { unfold SgOp.
-      pose (operations group_sgop_sym) as op.
-      (* simpl in op. *)
-      unfold Operation in op.
-      cbn in op.
-      change (carriers tt) with T in op.
-      intros x1 x2.
-      apply op.
-      intros [ [?|l] | r].
-      * destruct e.
-      * exact x1.
-      * exact x2. }
-    assert (MonUnit T) as group_unit.
-    { apply (operations group_unit_sym).
-      intros F.
-      destruct F. }
-    assert (Negate T) as group_inverse.
-    { exact (fun x =>
-               operations
-                group_inverse_sym
-                (fun y => match y with inl F => ltac:(contradiction F) | inr tt => x end)).
-    }
-    apply (@Build_Group T group_op group_unit group_inverse).
+  - (* ModelAlgebraGroup -> Group *)
+    intros uaG.
+    apply (@Build_Group (T uaG) g_op g_unit g_inverse).
     apply Build_IsGroup.
-    + admit.
-    + admit.
-    + admit.
+    + apply Build_IsMonoid.
+      * apply Build_IsSemiGroup.
+        -- apply hset_algebra.
+        -- unfold Associative.
+           unfold HeteroAssociative.
+           intros.
+
+           pose (is_equational_model_algebra uaG group_eq_assoc) as models_assoc.
+
+           unfold InterpEquation in models_assoc.
+
+           specialize (models_assoc (f uaG x y z)).
+           symmetry.
+
+           etransitivity.
+
+           2:{ etransitivity.
+               - exact models_assoc.
+               - unfold sg_op.
+                 unfold g_op.
+                 cbn.
+                 apply ap.
+                 funext i.
+                 simpl in i.
+                 unfold transport.
+                 unfold f.
+                 caseFin' i.
+
+                 + cbn. reflexivity.
+                 + cbn. unfold transport. apply ap.
+                   funext j. simpl in j. caseFin' j.
+                   * cbn. reflexivity.
+                   * cbn. reflexivity.
+           }
+
+           { unfold sg_op.
+             unfold g_op.
+             cbn.
+             apply ap.
+             funext i.
+             simpl in i.
+             caseFin' i.
+
+             - cbn. apply ap. funext i. simpl in i. caseFin' i.
+               + reflexivity.
+               + reflexivity.
+             - cbn. reflexivity.
+           }
+
+      * unfold LeftIdentity. intros x.
+        pose (is_equational_model_algebra uaG group_eq_left_unit) as lunit.
+        unfold InterpEquation in lunit.
+        specialize (lunit (g _ x)).
+
+        etransitivity.
+
+        { etransitivity. 2:{ exact lunit. }
+          unfold sg_op, mon_unit, g_op, map_term_algebra, CarriersTermAlgebra_rec, CarriersTermAlgebra_ind.
+          cbn.
+          apply ap.
+
+          funext j.
+          cbn in j.
+          caseFin' j; cbn.
+          + unfold g_unit.
+            apply ap. funext i. destruct i.
+          + reflexivity. }
+
+        { cbn. reflexivity. }
+
+      * unfold RightIdentity. intros x.
+        pose (is_equational_model_algebra uaG group_eq_right_unit) as runit.
+        unfold InterpEquation in runit.
+        specialize (runit (g _ x)).
+
+        etransitivity.
+
+        { etransitivity. 2:{ exact runit. }
+          unfold sg_op, mon_unit, g_op, map_term_algebra, CarriersTermAlgebra_rec, CarriersTermAlgebra_ind.
+          cbn.
+          apply ap.
+
+          funext j.
+          cbn in j.
+          caseFin' j; cbn.
+          + reflexivity.
+          + unfold g_unit.
+            apply ap. funext i. destruct i. }
+        { cbn. reflexivity. }
+
+    + unfold LeftInverse. intros x.
+      pose (is_equational_model_algebra uaG group_eq_left_inverse) as inv.
+      specialize (inv (g _ x)).
+      unfold sg_op, mon_unit, g_op. etransitivity.
+      * etransitivity. 2:{ exact inv. }
+        cbn. apply ap. funext i. cbn in i. caseFin' i.
+        -- cbn. unfold transport. unfold negate, g_inverse. cbn.
+           apply ap. funext i. cbn in i. caseFin' i.
+           reflexivity.
+        -- cbn. reflexivity.
+      * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
+
+    + unfold RightInverse. intros x.
+      pose (is_equational_model_algebra uaG group_eq_right_inverse) as inv.
+      specialize (inv (g _ x)).
+      unfold sg_op, mon_unit, g_op. etransitivity.
+      * etransitivity. 2:{ exact inv. }
+        cbn. apply ap. funext i. cbn in i. caseFin' i.
+        -- cbn. reflexivity.
+        -- cbn. unfold transport. unfold negate, g_inverse. cbn.
+           apply ap. funext i. cbn in i. caseFin' i.
+           reflexivity.
+      * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
   - (* Group -> ModelAlgebraGroup *)
     admit.
   - (* (fun x : ?B => f (g x)) == idmap *)

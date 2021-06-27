@@ -2503,12 +2503,12 @@
           
 
             i = 497;
-            data = "";
+            data = "3 goals (ID 1526)	  	  H : Funext	  ============================	  forall (a b c d : Group) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f = h $o (g $o f)		goal 2 (ID 1527) is:	 forall (a b : Group) (f : a $-> b), Id b $o f = f	goal 3 (ID 1528) is:	 forall (a b : Group) (f : a $-> b), f $o Id a = f	";
             responses[i]=data;
           
 
             i = 498;
-            data = "3 goals (ID 1526)	  	  H : Funext	  ============================	  forall (a b c d : Group) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), h $o g $o f = h $o (g $o f)		goal 2 (ID 1527) is:	 forall (a b : Group) (f : a $-> b), Id b $o f = f	goal 3 (ID 1528) is:	 forall (a b : Group) (f : a $-> b), f $o Id a = f	No more goals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -3308,17 +3308,17 @@
           
 
             i = 658;
-            data = "1 goal (ID 1091)	  	  G : Group	  ============================	  {f : grp_trivial $-> G & forall g : grp_trivial $-> G, g $== f}	";
+            data = "1 goal (ID 1091)	  	  G : Group	  ============================	  {f : grp_trivial $-> G & forall g : grp_trivial $-> G, f $== g}	";
             responses[i]=data;
           
 
             i = 659;
-            data = "1 goal (ID 1095)	  	  G : Group	  ============================	  forall g : grp_trivial $-> G, g $== grp_trivial_rec G	";
+            data = "1 goal (ID 1095)	  	  G : Group	  ============================	  forall g : grp_trivial $-> G, grp_trivial_rec G $== g	";
             responses[i]=data;
           
 
             i = 660;
-            data = "1 goal (ID 1100)	  	  G : Group	  g : grp_trivial $-> G	  ============================	  g tt = grp_trivial_rec G tt	";
+            data = "1 goal (ID 1100)	  	  G : Group	  g : grp_trivial $-> G	  ============================	  grp_trivial_rec G tt = g tt	";
             responses[i]=data;
           
 
@@ -3393,17 +3393,17 @@
           
 
             i = 675;
-            data = "1 goal (ID 1101)	  	  G : Group	  ============================	  {f : G $-> grp_trivial & forall g : G $-> grp_trivial, g $== f}	";
+            data = "1 goal (ID 1101)	  	  G : Group	  ============================	  {f : G $-> grp_trivial & forall g : G $-> grp_trivial, f $== g}	";
             responses[i]=data;
           
 
             i = 676;
-            data = "1 goal (ID 1105)	  	  G : Group	  ============================	  forall g : G $-> grp_trivial, g $== grp_trivial_corec G	";
+            data = "1 goal (ID 1105)	  	  G : Group	  ============================	  forall g : G $-> grp_trivial, grp_trivial_corec G $== g	";
             responses[i]=data;
           
 
             i = 677;
-            data = "1 goal (ID 1108)	  	  G : Group	  g : G $-> grp_trivial	  x : G	  ============================	  g x = grp_trivial_corec G x	";
+            data = "1 goal (ID 1108)	  	  G : Group	  g : G $-> grp_trivial	  x : G	  ============================	  grp_trivial_corec G x = g x	";
             responses[i]=data;
           
 
@@ -6422,7 +6422,7 @@ Inverse
       " onmouseover="
       mouseover(661, '0_3_179');
       "><br>
-  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_unit"><span class="id" title="definition">grp_homo_unit</span></a> <span class="id" title="var">g</span>).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_unit"><span class="id" title="definition">grp_homo_unit</span></a> <span class="id" title="var">g</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_179');
       " onmouseover="
       mouseover(662, '0_3_179');

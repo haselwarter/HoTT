@@ -263,22 +263,22 @@
           
 
             i = 49;
-            data = "No more goals.	";
+            data = "1 goal (ID 97)	  	  A : pType	  B : pType	  f : pUnit ->* B	  g : A ->* pUnit	  ============================	  pconst ==* g	";
             responses[i]=data;
           
 
             i = 50;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 51;
-            data = "<infomsg>equiv_inverse_path_pmap_1 is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 52;
-            data = "";
+            data = "<infomsg>equiv_inverse_path_pmap_1 is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -298,92 +298,92 @@
           
 
             i = 56;
-            data = "1 goal (ID 106)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  ============================	  forall (C : A -> pType) (g : forall a : A, B a ->* C a), P C g	";
+            data = "";
             responses[i]=data;
           
 
             i = 57;
-            data = "";
+            data = "1 goal (ID 106)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  ============================	  forall (C : A -> pType) (g : forall a : A, B a ->* C a), P C g	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 goal (ID 127)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : {f : A -> Type & forall x : A, f x}	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) C a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) C) g	";
+            data = "";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 goal (ID 132)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) 	        (C; c0) a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0)) g	";
+            data = "1 goal (ID 127)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : {f : A -> Type & forall x : A, f x}	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) C a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) C) g	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 goal (ID 155)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f	      : forall x : A,	        B x -> {| pointed_type := C x; ispointed_type := c0 x |} &	      forall x : A,	      f x (point (B x)) =	      point {| pointed_type := C x; ispointed_type := c0 x |}}	  ============================	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0))	    ((equiv_functor_forall_id	        (fun a : A =>	         issig_pmap (B a) {| pointed_type := C a; ispointed_type := c0 a |})	      oE equiv_sig_coind	           (fun x : A =>	            B x -> {| pointed_type := C x; ispointed_type := c0 x |})	           (fun (x : A)	              (f : B x -> {| pointed_type := C x; ispointed_type := c0 x |})	            =>	            f (point (B x)) =	            point {| pointed_type := C x; ispointed_type := c0 x |})) g)	";
+            data = "1 goal (ID 132)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) 	        (C; c0) a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0)) g	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 goal (ID 157)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f : forall x : A, B x -> C x &	      forall x : A, f x (point (B x)) = point (C x)}	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sig_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sig_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x)) g))	";
+            data = "1 goal (ID 155)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f	      : forall x : A,	        B x -> {| pointed_type := C x; ispointed_type := c0 x |} &	      forall x : A,	      f x (point (B x)) =	      point {| pointed_type := C x; ispointed_type := c0 x |}}	  ============================	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sig_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0))	    ((equiv_functor_forall_id	        (fun a : A =>	         issig_pmap (B a) {| pointed_type := C a; ispointed_type := c0 a |})	      oE equiv_sig_coind	           (fun x : A =>	            B x -> {| pointed_type := C x; ispointed_type := c0 x |})	           (fun (x : A)	              (f : B x -> {| pointed_type := C x; ispointed_type := c0 x |})	            =>	            f (point (B x)) =	            point {| pointed_type := C x; ispointed_type := c0 x |})) g)	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 goal (ID 162)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (point (B x)) = point (C x)	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sig_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sig_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
+            data = "1 goal (ID 157)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f : forall x : A, B x -> C x &	      forall x : A, f x (point (B x)) = point (C x)}	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sig_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sig_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x)) g))	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 goal (ID 163)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sig_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sig_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
+            data = "1 goal (ID 162)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (point (B x)) = point (C x)	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sig_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sig_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 goal (ID 164)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (fun b : A =>	     {|	       pointed_type := ((C; c0).1 b; (C; c0).2 b).1;	       ispointed_type := ((C; c0).1 b; (C; c0).2 b).2	     |})	    (fun b : A =>	     {|	       pointed_fun := ((g; g0).1 b; (g; g0).2 b).1;	       dpoint_eq := ((g; g0).1 b; (g; g0).2 b).2	     |})	";
+            data = "1 goal (ID 163)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sig_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sig_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 goal (ID 165)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 goal (ID 164)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (fun b : A =>	     {|	       pointed_type := ((C; c0).1 b; (C; c0).2 b).1;	       ispointed_type := ((C; c0).1 b; (C; c0).2 b).2	     |})	    (fun b : A =>	     {|	       pointed_fun := ((g; g0).1 b; (g; g0).2 b).1;	       dpoint_eq := ((g; g0).1 b; (g; g0).2 b).2	     |})	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 goal (ID 171)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 goal (ID 165)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 67;
-            data = "2 goals (ID 177)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0		goal 2 (ID 178) is:	 P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	   (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 goal (ID 171)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 goal (ID 178)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  X : p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "2 goals (ID 177)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0		goal 2 (ID 178) is:	 P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	   (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 goal (ID 190)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : 1 =	      path_forall (fun x : A => g x (ispointed_type (B x)))	        (fun x : A => g x (ispointed_type (B x))) g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 goal (ID 178)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  X : p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 goal (ID 198)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : (path_forall (fun x : A => g x (ispointed_type (B x)))	         (fun x : A => g x (ispointed_type (B x))))^-1 1 = g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 goal (ID 190)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : 1 =	      path_forall (fun x : A => g x (ispointed_type (B x)))	        (fun x : A => g x (ispointed_type (B x))) g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 goal (ID 202)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A =>	     {|	       pointed_fun := g b;	       dpoint_eq :=	         (path_forall (fun x : A => g x (ispointed_type (B x)))	            (fun x : A => g x (ispointed_type (B x))))^-1 1 b	     |})	";
+            data = "1 goal (ID 198)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : (path_forall (fun x : A => g x (ispointed_type (B x)))	         (fun x : A => g x (ispointed_type (B x))))^-1 1 = g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 72;
-            data = "No more goals.	";
+            data = "1 goal (ID 202)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A =>	     {|	       pointed_fun := g b;	       dpoint_eq :=	         (path_forall (fun x : A => g x (ispointed_type (B x)))	            (fun x : A => g x (ispointed_type (B x))))^-1 1 b	     |})	";
             responses[i]=data;
           
 
             i = 73;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -408,62 +408,62 @@
           
 
             i = 78;
-            data = "1 goal (ID 157)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  f ==* g	";
+            data = "";
             responses[i]=data;
           
 
             i = 79;
-            data = "";
+            data = "1 goal (ID 157)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  f ==* g	";
             responses[i]=data;
           
 
             i = 80;
-            data = "2 goals (ID 173)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  f == g		goal 2 (ID 175) is:	 ?p (point A) = dpoint_eq f @ (dpoint_eq g)^	";
+            data = "";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 goal (ID 175)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  (fun a : A => path_pforall (p a)) (point A) = dpoint_eq f @ (dpoint_eq g)^	";
+            data = "2 goals (ID 173)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  f == g		goal 2 (ID 175) is:	 ?p (point A) = dpoint_eq f @ (dpoint_eq g)^	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 goal (ID 228)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  p (point A) =	  (equiv_path_pforall (f (point A)) (g (point A)))^-1	    (dpoint_eq f @ (dpoint_eq g)^)	";
+            data = "1 goal (ID 175)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  (fun a : A => path_pforall (p a)) (point A) = dpoint_eq f @ (dpoint_eq g)^	";
             responses[i]=data;
           
 
             i = 83;
-            data = "2 focused goals	(shelved: 1) (ID 246)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  ?Goal0 (dpoint_eq f @ (dpoint_eq g)^) = p (point A)		goal 2 (ID 248) is:	 ?Goal0 = (equiv_path_pforall (f (point A)) (g (point A)))^-1	";
+            data = "1 goal (ID 228)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  p (point A) =	  (equiv_path_pforall (f (point A)) (g (point A)))^-1	    (dpoint_eq f @ (dpoint_eq g)^)	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 goal (ID 246)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) = p (point A)	";
+            data = "2 focused goals	(shelved: 1) (ID 246)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  ?Goal0 (dpoint_eq f @ (dpoint_eq g)^) = p (point A)		goal 2 (ID 248) is:	 ?Goal0 = (equiv_path_pforall (f (point A)) (g (point A)))^-1	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 goal (ID 259)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) ==* p (point A)	";
+            data = "1 goal (ID 246)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) = p (point A)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 goal (ID 292)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f) @* phomotopy_path (dpoint_eq g)^ ==*	  phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	";
+            data = "1 goal (ID 259)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) ==* p (point A)	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 goal (ID 299)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq g)^ ==* (phomotopy_path (point_eq g))^*	";
+            data = "1 goal (ID 292)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f) @* phomotopy_path (dpoint_eq g)^ ==*	  phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	";
             responses[i]=data;
           
 
             i = 88;
-            data = "No more goals.	";
+            data = "1 goal (ID 299)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq g)^ ==* (phomotopy_path (point_eq g))^*	";
             responses[i]=data;
           
 
             i = 89;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -488,342 +488,342 @@
           
 
             i = 94;
-            data = "<infomsg>functor_pforall_right is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 95;
-            data = "1 goal (ID 219)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  functor_pforall_right g g₀ f ==* functor_pforall_right g' g₀' f'	";
+            data = "<infomsg>functor_pforall_right is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 96;
-            data = "";
+            data = "1 goal (ID 219)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  functor_pforall_right g g₀ f ==* functor_pforall_right g' g₀' f'	";
             responses[i]=data;
           
 
             i = 97;
-            data = "2 goals (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  functor_pforall_right g g₀ f == functor_pforall_right g' g₀' f'		goal 2 (ID 237) is:	 ?p (point A) =	 dpoint_eq (functor_pforall_right g g₀ f) @	 (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
+            data = "";
             responses[i]=data;
           
 
             i = 98;
-            data = "1 goal (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  functor_pforall_right g g₀ f == functor_pforall_right g' g₀' f'	1 goal (ID 239)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  a : A	  ============================	  functor_pforall_right g g₀ f a = functor_pforall_right g' g₀' f' a	";
+            data = "2 goals (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  functor_pforall_right g g₀ f == functor_pforall_right g' g₀' f'		goal 2 (ID 237) is:	 ?p (point A) =	 dpoint_eq (functor_pforall_right g g₀ f) @	 (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
             responses[i]=data;
           
 
             i = 99;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 237) is:	 (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	 dpoint_eq (functor_pforall_right g g₀ f) @	 (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
+            data = "1 goal (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  functor_pforall_right g g₀ f == functor_pforall_right g' g₀' f'	1 goal (ID 239)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  a : A	  ============================	  functor_pforall_right g g₀ f a = functor_pforall_right g' g₀' f' a	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 goal (ID 237)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	  dpoint_eq (functor_pforall_right g g₀ f) @	  (dpoint_eq (functor_pforall_right g' g₀' f'))^	1 goal (ID 401)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  p point (f point) @ ap (g' point) (q point) =	  ap (g point) (q point) @ p point (f' point)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 237) is:	 (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	 dpoint_eq (functor_pforall_right g g₀ f) @	 (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 goal (ID 423)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  ap (g point) (q point) @ p point (f' point) =	  p point (f point) @ ap (g' point) (q point)	";
+            data = "1 goal (ID 237)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	  dpoint_eq (functor_pforall_right g g₀ f) @	  (dpoint_eq (functor_pforall_right g' g₀' f'))^	1 goal (ID 401)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  p point (f point) @ ap (g' point) (q point) =	  ap (g point) (q point) @ p point (f' point)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "No more goals.	";
+            data = "1 goal (ID 423)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  ap (g point) (q point) @ p point (f' point) =	  p point (f point) @ ap (g' point) (q point)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 goal (ID 261)	  	  A : pType	  B : pFam A	  C : pFam A	  g : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  f : pForall A B	  ============================	  functor2_pforall_right (fun a : A => reflexivity (g a))	    (phomotopy_reflexive f) (concat_1p g₀) ==*	  phomotopy_reflexive (functor_pforall_right g g₀ f)	";
+            data = "";
             responses[i]=data;
           
 
             i = 105;
-            data = "";
+            data = "1 goal (ID 261)	  	  A : pType	  B : pFam A	  C : pFam A	  g : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  f : pForall A B	  ============================	  functor2_pforall_right (fun a : A => reflexivity (g a))	    (phomotopy_reflexive f) (concat_1p g₀) ==*	  phomotopy_reflexive (functor_pforall_right g g₀ f)	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 goal (ID 330)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g : forall a : A, B a -> C a	  f : forall x : A, B x	  ============================	  functor2_pforall_right (fun (a : A) (x0 : B a) => 1)	    (phomotopy_reflexive {| pointed_fun := f; dpoint_eq := 1 |}) 1 ==*	  phomotopy_reflexive	    (functor_pforall_right g 1 {| pointed_fun := f; dpoint_eq := 1 |})	";
+            data = "";
             responses[i]=data;
           
 
             i = 107;
-            data = "No more goals.	";
+            data = "1 goal (ID 330)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g : forall a : A, B a -> C a	  f : forall x : A, B x	  ============================	  functor2_pforall_right (fun (a : A) (x0 : B a) => 1)	    (phomotopy_reflexive {| pointed_fun := f; dpoint_eq := 1 |}) 1 ==*	  phomotopy_reflexive	    (functor_pforall_right g 1 {| pointed_fun := f; dpoint_eq := 1 |})	";
             responses[i]=data;
           
 
             i = 108;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 goal (ID 275)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  ppforall a : A, B' a	";
+            data = "";
             responses[i]=data;
           
 
             i = 110;
-            data = "";
+            data = "1 goal (ID 275)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  ppforall a : A, B' a	";
             responses[i]=data;
           
 
             i = 111;
-            data = "2 goals (ID 280)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  forall a : A,	  pointed_fam (fun a0 : A => B a0) a -> pointed_fam (fun a0 : A => B' a0) a		goal 2 (ID 282) is:	 ?f (point A) (dpoint (pointed_fam (fun a : A => B a))) =	 dpoint (pointed_fam (fun a : A => B' a))	";
+            data = "";
             responses[i]=data;
           
 
             i = 112;
-            data = "1 goal (ID 280)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  forall a : A,	  pointed_fam (fun a0 : A => B a0) a -> pointed_fam (fun a0 : A => B' a0) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 282) is:	 (fun a : A => pointed_fun (g a)) (point A)	   (dpoint (pointed_fam (fun a : A => B a))) =	 dpoint (pointed_fam (fun a : A => B' a))	";
+            data = "2 goals (ID 280)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  forall a : A,	  pointed_fam (fun a0 : A => B a0) a -> pointed_fam (fun a0 : A => B' a0) a		goal 2 (ID 282) is:	 ?f (point A) (dpoint (pointed_fam (fun a : A => B a))) =	 dpoint (pointed_fam (fun a : A => B' a))	";
             responses[i]=data;
           
 
             i = 113;
-            data = "1 goal (ID 282)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  (fun a : A => pointed_fun (g a)) (point A)	    (dpoint (pointed_fam (fun a : A => B a))) =	  dpoint (pointed_fam (fun a : A => B' a))	No more goals.	";
+            data = "1 goal (ID 280)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  forall a : A,	  pointed_fam (fun a0 : A => B a0) a -> pointed_fam (fun a0 : A => B' a0) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 282) is:	 (fun a : A => pointed_fun (g a)) (point A)	   (dpoint (pointed_fam (fun a : A => B a))) =	 dpoint (pointed_fam (fun a : A => B' a))	";
             responses[i]=data;
           
 
             i = 114;
-            data = "";
+            data = "1 goal (ID 282)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  (fun a : A => pointed_fun (g a)) (point A)	    (dpoint (pointed_fam (fun a : A => B a))) =	  dpoint (pointed_fam (fun a : A => B' a))	No more goals.	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 goal (ID 289)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  pmap_compose_ppforall g (point_pforall B) ==* point_pforall B'	";
+            data = "";
             responses[i]=data;
           
 
             i = 116;
-            data = "";
+            data = "1 goal (ID 289)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  pmap_compose_ppforall g (point_pforall B) ==* point_pforall B'	";
             responses[i]=data;
           
 
             i = 117;
-            data = "2 goals (ID 305)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  pmap_compose_ppforall g (point_pforall B) == point_pforall B'		goal 2 (ID 307) is:	 ?p (point A) =	 dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	 (dpoint_eq (point_pforall B'))^	";
+            data = "";
             responses[i]=data;
           
 
             i = 118;
-            data = "1 goal (ID 305)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  pmap_compose_ppforall g (point_pforall B) == point_pforall B'	1 goal (ID 309)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  x : A	  ============================	  pmap_compose_ppforall g (point_pforall B) x = point_pforall B' x	";
+            data = "2 goals (ID 305)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  pmap_compose_ppforall g (point_pforall B) == point_pforall B'		goal 2 (ID 307) is:	 ?p (point A) =	 dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	 (dpoint_eq (point_pforall B'))^	";
             responses[i]=data;
           
 
             i = 119;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 307) is:	 (fun x : A => point_eq (g x)) (point A) =	 dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	 (dpoint_eq (point_pforall B'))^	";
+            data = "1 goal (ID 305)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  pmap_compose_ppforall g (point_pforall B) == point_pforall B'	1 goal (ID 309)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  x : A	  ============================	  pmap_compose_ppforall g (point_pforall B) x = point_pforall B' x	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 goal (ID 307)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  (fun x : A => point_eq (g x)) (point A) =	  dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	  (dpoint_eq (point_pforall B'))^	No more goals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 307) is:	 (fun x : A => point_eq (g x)) (point A) =	 dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	 (dpoint_eq (point_pforall B'))^	";
             responses[i]=data;
           
 
             i = 121;
-            data = "";
+            data = "1 goal (ID 307)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  ============================	  (fun x : A => point_eq (g x)) (point A) =	  dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	  (dpoint_eq (point_pforall B'))^	No more goals.	";
             responses[i]=data;
           
 
             i = 122;
-            data = "1 goal (ID 317)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==*	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	";
+            data = "";
             responses[i]=data;
           
 
             i = 123;
-            data = "";
+            data = "1 goal (ID 317)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==*	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
             i = 124;
-            data = "2 goals (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)		goal 2 (ID 335) is:	 ?p (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
+            data = "";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 goal (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 335) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
+            data = "2 goals (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)		goal 2 (ID 335) is:	 ?p (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 goal (ID 335)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	  (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	1 goal (ID 343)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  1 =	  (ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	   (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))) @	  (ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	   point_eq (h (point A)))^	";
+            data = "1 goal (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 335) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 goal (ID 371)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	  point_eq (h (point A)) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))	";
+            data = "1 goal (ID 335)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	  (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	1 goal (ID 343)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  1 =	  (ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	   (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))) @	  (ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	   point_eq (h (point A)))^	";
             responses[i]=data;
           
 
             i = 128;
-            data = "1 goal (ID 397)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  ap (h (point A)) (point_eq (g (point A)))	";
+            data = "1 goal (ID 371)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	  point_eq (h (point A)) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))	";
             responses[i]=data;
           
 
             i = 129;
-            data = "No more goals.	";
+            data = "1 goal (ID 397)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  ap (h (point A)) (point_eq (g (point A)))	";
             responses[i]=data;
           
 
             i = 130;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 131;
-            data = "1 goal (ID 346)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  pmap_compose_ppforall g f ==* pmap_compose_ppforall g' f'	";
+            data = "";
             responses[i]=data;
           
 
             i = 132;
-            data = "";
+            data = "1 goal (ID 346)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  pmap_compose_ppforall g f ==* pmap_compose_ppforall g' f'	";
             responses[i]=data;
           
 
             i = 133;
-            data = "3 goals (ID 390)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  forall a : A,	  (fun a0 : A => pointed_fun (g a0)) a ==	  (fun a0 : A => pointed_fun (g' a0)) a		goal 2 (ID 392) is:	 f ==* f'	goal 3 (ID 394) is:	 ?p (point A) (dpoint (pointed_fam (fun a : A => P a))) @	 point_eq (g' (point A)) = point_eq (g (point A))	";
+            data = "";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 goal (ID 390)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  forall a : A,	  (fun a0 : A => pointed_fun (g a0)) a ==	  (fun a0 : A => pointed_fun (g' a0)) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 392) is:	 f ==* f'	goal 2 (ID 394) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
+            data = "3 goals (ID 390)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  forall a : A,	  (fun a0 : A => pointed_fun (g a0)) a ==	  (fun a0 : A => pointed_fun (g' a0)) a		goal 2 (ID 392) is:	 f ==* f'	goal 3 (ID 394) is:	 ?p (point A) (dpoint (pointed_fam (fun a : A => P a))) @	 point_eq (g' (point A)) = point_eq (g (point A))	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 goal (ID 392)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  f ==* f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 394) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
+            data = "1 goal (ID 390)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  forall a : A,	  (fun a0 : A => pointed_fun (g a0)) a ==	  (fun a0 : A => pointed_fun (g' a0)) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 392) is:	 f ==* f'	goal 2 (ID 394) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 goal (ID 394)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  (fun a : A => pointed_htpy (p a)) (point A)	    (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	  point_eq (g (point A))	No more goals.	";
+            data = "1 goal (ID 392)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  f ==* f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 394) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
             responses[i]=data;
           
 
             i = 137;
-            data = "";
+            data = "1 goal (ID 394)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  (fun a : A => pointed_htpy (p a)) (point A)	    (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	  point_eq (g (point A))	No more goals.	";
             responses[i]=data;
           
 
             i = 138;
-            data = "<infomsg>pmap_compose_ppforall2_left is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 139;
-            data = "<infomsg>pmap_compose_ppforall2_right is defined</infomsg>	";
+            data = "<infomsg>pmap_compose_ppforall2_left is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 goal (ID 423)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall2 (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
+            data = "<infomsg>pmap_compose_ppforall2_right is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 141;
-            data = "";
+            data = "1 goal (ID 423)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall2 (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 goal (ID 424)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
+            data = "";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 goal (ID 426)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (Q : A -> pType) (g : forall a : A, P a ->* Q a),	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
+            data = "1 goal (ID 424)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 goal (ID 434)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (C : A -> Type) (g : forall a : A, P a -> C a),	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
+            data = "1 goal (ID 426)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (Q : A -> pType) (g : forall a : A, P a ->* Q a),	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 goal (ID 436)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  Q : A -> Type	  g : forall a : A, P a -> Q a	  ============================	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
+            data = "1 goal (ID 434)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (C : A -> Type) (g : forall a : A, P a -> C a),	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
             responses[i]=data;
           
 
             i = 146;
-            data = "No more goals.	";
+            data = "1 goal (ID 436)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  Q : A -> Type	  g : forall a : A, P a -> Q a	  ============================	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
             responses[i]=data;
           
 
             i = 147;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 goal (ID 436)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f ==* f	";
+            data = "";
             responses[i]=data;
           
 
             i = 149;
-            data = "";
+            data = "1 goal (ID 436)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f ==* f	";
             responses[i]=data;
           
 
             i = 150;
-            data = "2 goals (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f		goal 2 (ID 454) is:	 ?p (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
+            data = "";
             responses[i]=data;
           
 
             i = 151;
-            data = "1 goal (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 454) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
+            data = "2 goals (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f		goal 2 (ID 454) is:	 ?p (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
             responses[i]=data;
           
 
             i = 152;
-            data = "1 goal (ID 454)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^	1 goal (ID 471)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
+            data = "1 goal (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 454) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
             responses[i]=data;
           
 
             i = 153;
-            data = "No more goals.	";
+            data = "1 goal (ID 454)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^	1 goal (ID 471)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
             responses[i]=data;
           
 
             i = 154;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 155;
-            data = "1 goal (ID 479)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : f ==* f'	  ============================	  ap (pmap_compose_ppforall g) (path_pforall p) =	  path_pforall (pmap_compose_ppforall2_right g p)	";
-            responses[i]=data;
-          
-
-            i = 156;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 157;
-            data = "1 goal (ID 481)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  forall (f' : ppforall a : A, P a) (p : f ==* f'),	  ap (pmap_compose_ppforall g) (path_pforall p) =	  path_pforall (pmap_compose_ppforall2_right g p)	";
-            responses[i]=data;
-          
-
-            i = 158;
-            data = "1 goal (ID 490)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (pmap_compose_ppforall g) (path_pforall (reflexivity f)) =	  path_pforall (pmap_compose_ppforall2_right g (reflexivity f))	";
-            responses[i]=data;
-          
-
-            i = 159;
-            data = "1 goal (ID 527)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall2_right g (reflexivity f) =	  reflexivity (pmap_compose_ppforall g f)	";
-            responses[i]=data;
-          
-
-            i = 160;
             data = "No more goals.	";
             responses[i]=data;
           
 
-            i = 161;
+            i = 155;
             data = "";
+            responses[i]=data;
+          
+
+            i = 156;
+            data = "1 goal (ID 479)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : f ==* f'	  ============================	  ap (pmap_compose_ppforall g) (path_pforall p) =	  path_pforall (pmap_compose_ppforall2_right g p)	";
+            responses[i]=data;
+          
+
+            i = 157;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 158;
+            data = "1 goal (ID 481)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  forall (f' : ppforall a : A, P a) (p : f ==* f'),	  ap (pmap_compose_ppforall g) (path_pforall p) =	  path_pforall (pmap_compose_ppforall2_right g p)	";
+            responses[i]=data;
+          
+
+            i = 159;
+            data = "1 goal (ID 490)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (pmap_compose_ppforall g) (path_pforall (reflexivity f)) =	  path_pforall (pmap_compose_ppforall2_right g (reflexivity f))	";
+            responses[i]=data;
+          
+
+            i = 160;
+            data = "1 goal (ID 527)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall2_right g (reflexivity f) =	  reflexivity (pmap_compose_ppforall g f)	";
+            responses[i]=data;
+          
+
+            i = 161;
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -878,6 +878,11 @@
           
 
             i = 172;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 173;
             data = "";
             responses[i]=data;
           
@@ -939,7 +944,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab1039"></a><h2 class="section">Trivially pointed maps</h2>
+<a id="lab1041"></a><h2 class="section">Trivially pointed maps</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Not infrequently we have a map between two unpointed types and want to consider it as a pointed map that trivially respects some given point in the domain. 
@@ -1083,15 +1088,20 @@ The same, for a dependent pointed map.
       " onmouseover="
       mouseover(49, '0_3_15');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Pointed.Core.html#pmap_punit_pconst"><span class="id" title="lemma">pmap_punit_pconst</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">symmetry</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(50, '0_3_15');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Pointed.Core.html#pmap_punit_pconst"><span class="id" title="lemma">pmap_punit_pconst</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(51, '0_3_15');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_15');
+      " onmouseover="
+      mouseover(52, '0_3_15');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="equiv_inverse_path_pmap_1" class="idref" href="#equiv_inverse_path_pmap_1"><span class="id" title="definition">equiv_inverse_path_pmap_1</span></a> `{<a id="H:24" class="idref" href="#H:24"><span class="id" title="binder">Funext</span></a>} {<a id="A:25" class="idref" href="#A:25"><span class="id" title="binder">A</span></a> <a id="B:26" class="idref" href="#B:26"><span class="id" title="binder">B</span></a>} {<a id="f:27" class="idref" href="#f:27"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:25"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B:26"><span class="id" title="variable">B</span></a>}<br>
@@ -1099,7 +1109,7 @@ The same, for a dependent pointed map.
   := 1.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(52, '0_3_15');
+      mouseover(53, '0_3_15');
       "><br>
 <br>
 </span>
@@ -1114,7 +1124,7 @@ If we have a fiberwise pointed map, with a variable as codomain, this is an
 <span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(56, '0_3_19');
+      mouseover(57, '0_3_19');
       ">
 <span class="id" title="keyword">Definition</span> <a id="fiberwise_pointed_map_rec" class="idref" href="#fiberwise_pointed_map_rec"><span class="id" title="definition">fiberwise_pointed_map_rec</span></a> `{<a id="H0:28" class="idref" href="#H0:28"><span class="id" title="binder">H0</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<a id="A:29" class="idref" href="#A:29"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>} {<a id="B:30" class="idref" href="#B:30"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:29"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
   (<a id="P:34" class="idref" href="#P:34"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="C:31" class="idref" href="#C:31"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:29"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>) (<a id="g:33" class="idref" href="#g:33"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="a:32" class="idref" href="#a:32"><span class="id" title="binder">a</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B:30"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:32"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#C:31"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:32"><span class="id" title="variable">a</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <span class="id" title="keyword">Type</span>)<br>
@@ -1123,91 +1133,91 @@ If we have a fiberwise pointed map, with a variable as codomain, this is an
   : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="C:40" class="idref" href="#C:40"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:29"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>) (<a id="g:42" class="idref" href="#g:42"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="a:41" class="idref" href="#a:41"><span class="id" title="binder">a</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B:30"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:41"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#C:40"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:41"><span class="id" title="variable">a</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#P:34"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#C:40"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:42"><span class="id" title="variable">g</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(57, '0_3_19');
+      mouseover(58, '0_3_19');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(58, '0_3_19');
+      mouseover(59, '0_3_19');
       "><br>
   <span class="id" title="var">equiv_intros</span> (<a class="idref" href="HoTT.Types.Arrow.html#equiv_functor_arrow'"><span class="id" title="definition">equiv_functor_arrow'</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_idmap"><span class="id" title="definition">equiv_idmap</span></a> <span class="id" title="var">A</span>) <a class="idref" href="HoTT.Pointed.Core.html#issig_ptype"><span class="id" title="definition">issig_ptype</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#::equiv_scope:x_'oE'_x"><span class="id" title="notation">oE</span></a><br>
     <a class="idref" href="HoTT.Types.Sigma.html#equiv_sig_coind"><span class="id" title="definition">equiv_sig_coind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) <span class="id" title="var">C</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(59, '0_3_19');
+      mouseover(60, '0_3_19');
       "><br>
   <span class="id" title="tactic">destruct</span> <span class="id" title="var">C</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">C</span> <span class="id" title="var">c0</span>].</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(60, '0_3_19');
+      mouseover(61, '0_3_19');
       "><br>
   <span class="id" title="var">equiv_intros</span> (@<a class="idref" href="HoTT.Types.Forall.html#equiv_functor_forall_id"><span class="id" title="definition">equiv_functor_forall_id</span></a> <span class="id" title="var">_</span> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><br>
     (<span class="id" title="keyword">fun</span> <a id="a:44" class="idref" href="#a:44"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Pointed.Core.html#issig_pmap"><span class="id" title="definition">issig_pmap</span></a> (<span class="id" title="var">B</span> <a class="idref" href="HoTT.Pointed.pMap.html#a:43"><span class="id" title="variable">a</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#Build_pType"><span class="id" title="constructor">Build_pType</span></a> (<span class="id" title="var">C</span> <a class="idref" href="HoTT.Pointed.pMap.html#a:43"><span class="id" title="variable">a</span></a>) (<span class="id" title="var">c0</span> <a class="idref" href="HoTT.Pointed.pMap.html#a:43"><span class="id" title="variable">a</span></a>))) <a class="idref" href="HoTT.Basics.Equivalences.html#::equiv_scope:x_'oE'_x"><span class="id" title="notation">oE</span></a><br>
     <a class="idref" href="HoTT.Types.Sigma.html#equiv_sig_coind"><span class="id" title="definition">equiv_sig_coind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) <span class="id" title="var">g</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(61, '0_3_19');
+      mouseover(62, '0_3_19');
       "><br>
   <span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> ×. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(62, '0_3_19');
+      mouseover(63, '0_3_19');
       "><span class="id" title="tactic">destruct</span> <span class="id" title="var">g</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">g</span> <span class="id" title="var">g0</span>].</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(63, '0_3_19');
+      mouseover(64, '0_3_19');
       "><br>
   <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">g0</span>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(64, '0_3_19');
+      mouseover(65, '0_3_19');
       "><span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Types.Forall.html#functor_forall"><span class="id" title="definition">functor_forall</span></a>, <a class="idref" href="HoTT.Types.Sigma.html#sig_coind_uncurried"><span class="id" title="definition">sig_coind_uncurried</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(65, '0_3_19');
-      "><span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_19');
-      " onmouseover="
       mouseover(66, '0_3_19');
-      "><br>
-  <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <span class="id" title="var">_</span> <span class="id" title="var">c0</span> <span class="id" title="var">g0</span>).</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(67, '0_3_19');
       "><br>
-  <span class="id" title="tactic">assert</span> (<span class="id" title="var">p</span> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> (<span class="id" title="keyword">fun</span> <a id="x:46" class="idref" href="#x:46"><span class="id" title="binder">x</span></a> : <span class="id" title="var">A</span> ⇒ <span class="id" title="var">g</span> <a class="idref" href="HoTT.Pointed.pMap.html#x:45"><span class="id" title="variable">x</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#ispointed_type"><span class="id" title="projection">ispointed_type</span></a> (<span class="id" title="var">B</span> <a class="idref" href="HoTT.Pointed.pMap.html#x:45"><span class="id" title="variable">x</span></a>))) <span class="id" title="var">c0</span> <span class="id" title="var">g0</span>).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <span class="id" title="var">_</span> <span class="id" title="var">c0</span> <span class="id" title="var">g0</span>).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(68, '0_3_19');
       "><br>
-  1: <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">assert</span> (<span class="id" title="var">p</span> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> (<span class="id" title="keyword">fun</span> <a id="x:46" class="idref" href="#x:46"><span class="id" title="binder">x</span></a> : <span class="id" title="var">A</span> ⇒ <span class="id" title="var">g</span> <a class="idref" href="HoTT.Pointed.pMap.html#x:45"><span class="id" title="variable">x</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#ispointed_type"><span class="id" title="projection">ispointed_type</span></a> (<span class="id" title="var">B</span> <a class="idref" href="HoTT.Pointed.pMap.html#x:45"><span class="id" title="variable">x</span></a>))) <span class="id" title="var">c0</span> <span class="id" title="var">g0</span>).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(69, '0_3_19');
       "><br>
-  <span class="id" title="tactic">induction</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
+  1: <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(70, '0_3_19');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#moveR_equiv_V"><span class="id" title="definition">moveR_equiv_V</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">X</span>. </span><span class="command" onmouseout="
+  <span class="id" title="tactic">induction</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(71, '0_3_19');
-      "><span class="id" title="tactic">induction</span> <span class="id" title="var">X</span>.</span><span class="command" onmouseout="
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#moveR_equiv_V"><span class="id" title="definition">moveR_equiv_V</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">X</span>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(72, '0_3_19');
-      "><br>
-  <span class="id" title="tactic">apply</span> <span class="id" title="var">H</span>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">induction</span> <span class="id" title="var">X</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(73, '0_3_19');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">apply</span> <span class="id" title="var">H</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(74, '0_3_19');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_19');
+      " onmouseover="
+      mouseover(75, '0_3_19');
       "><br>
 <br>
 </span>
@@ -1220,7 +1230,7 @@ A alternative constructor to build a pHomotopy between maps into pForall
 <span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(78, '0_3_23');
+      mouseover(79, '0_3_23');
       ">
 <span class="id" title="keyword">Definition</span> <a id="Build_pHomotopy_pForall" class="idref" href="#Build_pHomotopy_pForall"><span class="id" title="definition">Build_pHomotopy_pForall</span></a> `{<a id="H:47" class="idref" href="#H:47"><span class="id" title="binder">Funext</span></a>} {<a id="A:48" class="idref" href="#A:48"><span class="id" title="binder">A</span></a> <a id="B:49" class="idref" href="#B:49"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="C:50" class="idref" href="#C:50"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#B:49"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
   {<a id="f:52" class="idref" href="#f:52"><span class="id" title="binder">f</span></a> <a id="g:53" class="idref" href="#g:53"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:48"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">ppforall</span></a> <a id="b:51" class="idref" href="#b:51"><span class="id" title="binder">b</span></a><a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#C:50"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#b:51"><span class="id" title="variable">b</span></a>} (<a id="p:55" class="idref" href="#p:55"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="a:54" class="idref" href="#a:54"><span class="id" title="binder">a</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:52"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:54"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:53"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:54"><span class="id" title="variable">a</span></a>)<br>
@@ -1228,62 +1238,62 @@ A alternative constructor to build a pHomotopy between maps into pForall
   : <a class="idref" href="HoTT.Pointed.pMap.html#f:52"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:53"><span class="id" title="variable">g</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(79, '0_3_23');
+      mouseover(80, '0_3_23');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(80, '0_3_23');
+      mouseover(81, '0_3_23');
       "><br>
   <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(81, '0_3_23');
+      mouseover(82, '0_3_23');
       "><br>
   1: <span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#path_pforall"><span class="id" title="definition">path_pforall</span></a> (<span class="id" title="var">p</span> <span class="id" title="var">a</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(82, '0_3_23');
+      mouseover(83, '0_3_23');
       "><br>
   <span class="id" title="tactic">hnf</span>; <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#moveR_equiv_M'"><span class="id" title="definition">moveR_equiv_M'</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(83, '0_3_23');
+      mouseover(84, '0_3_23');
       "><br>
   <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(84, '0_3_23');
+      mouseover(85, '0_3_23');
       "><br>
   2: <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Pointed.Core.html#path_equiv_path_pforall_phomotopy_path"><span class="id" title="definition">path_equiv_path_pforall_phomotopy_path</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(85, '0_3_23');
+      mouseover(86, '0_3_23');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Pointed.Core.html#path_pforall"><span class="id" title="definition">path_pforall</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(86, '0_3_23');
+      mouseover(87, '0_3_23');
       "><br>
   <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.pHomotopy.html#phomotopy_path_pp"><span class="id" title="definition">phomotopy_path_pp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Pointed.Core.html#097106fb85502333814dea69d10e8454"><span class="id" title="notation">@*</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Pointed.Core.html#097106fb85502333814dea69d10e8454"><span class="id" title="notation">@*</span></a> <span class="id" title="var">q</span><a class="idref" href="HoTT.Pointed.Core.html#d0034745486c4a38d2cb3a6aa44cc354"><span class="id" title="notation">^*</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(87, '0_3_23');
+      mouseover(88, '0_3_23');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Pointed.Core.html#phomotopy_prewhisker"><span class="id" title="definition">phomotopy_prewhisker</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(88, '0_3_23');
+      mouseover(89, '0_3_23');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Pointed.pHomotopy.html#phomotopy_path_V"><span class="id" title="definition">phomotopy_path_V</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(89, '0_3_23');
+      mouseover(90, '0_3_23');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(90, '0_3_23');
+      mouseover(91, '0_3_23');
       "><br>
 <br>
 </span>
@@ -1296,7 +1306,7 @@ Operations on dependent pointed maps
 <span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(94, '0_3_27');
+      mouseover(95, '0_3_27');
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="functor_pforall_right" class="idref" href="#functor_pforall_right"><span class="id" title="definition">functor_pforall_right</span></a> {<a id="A:57" class="idref" href="#A:57"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="B:58" class="idref" href="#B:58"><span class="id" title="binder">B</span></a> <a id="B':59" class="idref" href="#B':59"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Pointed.Core.html#pFam"><span class="id" title="definition">pFam</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#A:57"><span class="id" title="variable">A</span></a>}<br>
@@ -1306,7 +1316,7 @@ Operations on dependent pointed maps
   <a class="idref" href="HoTT.Pointed.Core.html#Build_pForall"><span class="id" title="constructor">Build_pForall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#A:57"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B':59"><span class="id" title="variable">B'</span></a> (<span class="id" title="keyword">fun</span> <a id="a:64" class="idref" href="#a:64"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Pointed.pMap.html#f:61"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:64"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#g:63"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:64"><span class="id" title="variable">a</span></a>)) (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#f:61"><span class="id" title="variable">f</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#A:57"><span class="id" title="variable">A</span></a>)) (<a class="idref" href="HoTT.Pointed.Core.html#dpoint_eq"><span class="id" title="projection">dpoint_eq</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:63"><span class="id" title="variable">g</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#p:62"><span class="id" title="variable">p</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(95, '0_3_27');
+      mouseover(96, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="functor2_pforall_right" class="idref" href="#functor2_pforall_right"><span class="id" title="definition">functor2_pforall_right</span></a> {<a id="A:65" class="idref" href="#A:65"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="B:66" class="idref" href="#B:66"><span class="id" title="binder">B</span></a> <a id="C:67" class="idref" href="#C:67"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Pointed.Core.html#pFam"><span class="id" title="definition">pFam</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#A:65"><span class="id" title="variable">A</span></a>}<br>
@@ -1318,44 +1328,44 @@ Operations on dependent pointed maps
   : <a class="idref" href="HoTT.Pointed.pMap.html#functor_pforall_right"><span class="id" title="definition">functor_pforall_right</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:69"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#5e837dd6a13104ab4f35a905ae334488"><span class="id" title="variable">g₀</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:73"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#functor_pforall_right"><span class="id" title="definition">functor_pforall_right</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g':70"><span class="id" title="variable">g'</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#7b2ba2737a1be15b22f2b561798a6529"><span class="id" title="variable">g₀'</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f':74"><span class="id" title="variable">f'</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(96, '0_3_27');
+      mouseover(97, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(97, '0_3_27');
+      mouseover(98, '0_3_27');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(98, '0_3_27');
+      mouseover(99, '0_3_27');
       "><br>
   1: { <span class="id" title="tactic">intro</span> <span class="id" title="var">a</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(99, '0_3_27');
+      mouseover(100, '0_3_27');
       "><span class="id" title="tactic">refine</span> (<span class="id" title="var">p</span> <span class="id" title="var">a</span> (<span class="id" title="var">f</span> <span class="id" title="var">a</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> (<span class="id" title="var">g'</span> <span class="id" title="var">a</span>) (<span class="id" title="var">q</span> <span class="id" title="var">a</span>)). }</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(100, '0_3_27');
+      mouseover(101, '0_3_27');
       "><br>
   <span class="id" title="var">pointed_reduce_rewrite</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(101, '0_3_27');
+      mouseover(102, '0_3_27');
       "><span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(102, '0_3_27');
+      mouseover(103, '0_3_27');
       "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(103, '0_3_27');
+      mouseover(104, '0_3_27');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(104, '0_3_27');
+      mouseover(105, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="functor2_pforall_right_refl" class="idref" href="#functor2_pforall_right_refl"><span class="id" title="definition">functor2_pforall_right_refl</span></a> {<a id="A:79" class="idref" href="#A:79"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="B:80" class="idref" href="#B:80"><span class="id" title="binder">B</span></a> <a id="C:81" class="idref" href="#C:81"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Pointed.Core.html#pFam"><span class="id" title="definition">pFam</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#A:79"><span class="id" title="variable">A</span></a>}<br>
@@ -1366,58 +1376,58 @@ Operations on dependent pointed maps
     <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.Core.html#phomotopy_reflexive"><span class="id" title="instance">phomotopy_reflexive</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#functor_pforall_right"><span class="id" title="definition">functor_pforall_right</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:83"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a02fd84e4d0e14e89b8f1792cb783c09"><span class="id" title="variable">g₀</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:85"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(105, '0_3_27');
+      mouseover(106, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(106, '0_3_27');
+      mouseover(107, '0_3_27');
       "><br>
   <span class="id" title="var">pointed_reduce</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(107, '0_3_27');
+      mouseover(108, '0_3_27');
       "><span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(108, '0_3_27');
+      mouseover(109, '0_3_27');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(109, '0_3_27');
+      mouseover(110, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall" class="idref" href="#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> {<a id="A:87" class="idref" href="#A:87"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="B:88" class="idref" href="#B:88"><span class="id" title="binder">B</span></a> <a id="B':89" class="idref" href="#B':89"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:87"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
   (<a id="g:91" class="idref" href="#g:91"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="a:90" class="idref" href="#a:90"><span class="id" title="binder">a</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B:88"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:90"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B':89"><span class="id" title="variable">B'</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:90"><span class="id" title="variable">a</span></a>) (<a id="f:93" class="idref" href="#f:93"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">ppforall</span></a> <a id="a:92" class="idref" href="#a:92"><span class="id" title="binder">a</span></a><a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B:88"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:92"><span class="id" title="variable">a</span></a>) : <a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">ppforall</span></a> <a id="a:94" class="idref" href="#a:94"><span class="id" title="binder">a</span></a><a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B':89"><span class="id" title="variable">B'</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:94"><span class="id" title="variable">a</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(110, '0_3_27');
+      mouseover(111, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(111, '0_3_27');
+      mouseover(112, '0_3_27');
       "><br>
   <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.pMap.html#functor_pforall_right"><span class="id" title="definition">functor_pforall_right</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">f</span>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(112, '0_3_27');
+      mouseover(113, '0_3_27');
       "><br>
   + <span class="id" title="tactic">exact</span> <span class="id" title="var">g</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(113, '0_3_27');
+      mouseover(114, '0_3_27');
       "><br>
   + <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#point_eq"><span class="id" title="definition">point_eq</span></a> (<span class="id" title="var">g</span> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">A</span>))).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(114, '0_3_27');
+      mouseover(115, '0_3_27');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(115, '0_3_27');
+      mouseover(116, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall_point" class="idref" href="#pmap_compose_ppforall_point"><span class="id" title="definition">pmap_compose_ppforall_point</span></a> {<a id="A:95" class="idref" href="#A:95"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="B:96" class="idref" href="#B:96"><span class="id" title="binder">B</span></a> <a id="B':97" class="idref" href="#B':97"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:95"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
@@ -1425,36 +1435,36 @@ Operations on dependent pointed maps
   : <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:99"><span class="id" title="variable">g</span></a> (<a class="idref" href="HoTT.Pointed.Core.html#point_pforall"><span class="id" title="definition">point_pforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B:96"><span class="id" title="variable">B</span></a>) <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.Core.html#point_pforall"><span class="id" title="definition">point_pforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#B':97"><span class="id" title="variable">B'</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(116, '0_3_27');
+      mouseover(117, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(117, '0_3_27');
+      mouseover(118, '0_3_27');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(118, '0_3_27');
+      mouseover(119, '0_3_27');
       "><br>
   + <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(119, '0_3_27');
-      "><span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#point_eq"><span class="id" title="definition">point_eq</span></a> (<span class="id" title="var">g</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
       mouseover(120, '0_3_27');
-      "><br>
-  + <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#point_eq"><span class="id" title="definition">point_eq</span></a> (<span class="id" title="var">g</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(121, '0_3_27');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  + <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(122, '0_3_27');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(123, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall_compose" class="idref" href="#pmap_compose_ppforall_compose"><span class="id" title="definition">pmap_compose_ppforall_compose</span></a> {<a id="A:100" class="idref" href="#A:100"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:101" class="idref" href="#P:101"><span class="id" title="binder">P</span></a> <a id="Q:102" class="idref" href="#Q:102"><span class="id" title="binder">Q</span></a> <a id="R:103" class="idref" href="#R:103"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:100"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
@@ -1463,46 +1473,46 @@ Operations on dependent pointed maps
   : <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> (<span class="id" title="keyword">fun</span> <a id="a:110" class="idref" href="#a:110"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Pointed.pMap.html#h:105"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:110"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#0d028156a07f625666eaec1a9aed44c4"><span class="id" title="notation">o</span></a><a class="idref" href="HoTT.Pointed.Core.html#0d028156a07f625666eaec1a9aed44c4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:107"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:110"><span class="id" title="variable">a</span></a>) <a class="idref" href="HoTT.Pointed.pMap.html#f:109"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#h:105"><span class="id" title="variable">h</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:107"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:109"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(123, '0_3_27');
+      mouseover(124, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(124, '0_3_27');
+      mouseover(125, '0_3_27');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(125, '0_3_27');
+      mouseover(126, '0_3_27');
       "><br>
   + <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(126, '0_3_27');
+      mouseover(127, '0_3_27');
       "><br>
   + <span class="id" title="tactic">simpl</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(127, '0_3_27');
-      "><span class="id" title="tactic">refine</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerL"><span class="id" title="definition">whiskerL</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#inverse2"><span class="id" title="definition">inverse2</span></a> <span class="id" title="var">_</span>)<a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
       mouseover(128, '0_3_27');
-      "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pp_p"><span class="id" title="definition">concat_pp_p</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">refine</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerL"><span class="id" title="definition">whiskerL</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#inverse2"><span class="id" title="definition">inverse2</span></a> <span class="id" title="var">_</span>)<a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(129, '0_3_27');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_pp"><span class="id" title="definition">ap_pp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_compose"><span class="id" title="definition">ap_compose</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pp_p"><span class="id" title="definition">concat_pp_p</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(130, '0_3_27');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_pp"><span class="id" title="definition">ap_pp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_compose"><span class="id" title="definition">ap_compose</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(131, '0_3_27');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(132, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall2" class="idref" href="#pmap_compose_ppforall2"><span class="id" title="definition">pmap_compose_ppforall2</span></a> {<a id="A:111" class="idref" href="#A:111"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:112" class="idref" href="#P:112"><span class="id" title="binder">P</span></a> <a id="Q:113" class="idref" href="#Q:113"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:111"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="g:115" class="idref" href="#g:115"><span class="id" title="binder">g</span></a> <a id="g':116" class="idref" href="#g':116"><span class="id" title="binder">g'</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="a:114" class="idref" href="#a:114"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:111"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#P:112"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:114"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#Q:113"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:114"><span class="id" title="variable">a</span></a>}<br>
@@ -1510,37 +1520,37 @@ Operations on dependent pointed maps
   : <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:115"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:118"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g':116"><span class="id" title="variable">g'</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f':119"><span class="id" title="variable">f'</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(132, '0_3_27');
+      mouseover(133, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(133, '0_3_27');
+      mouseover(134, '0_3_27');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.pMap.html#functor2_pforall_right"><span class="id" title="definition">functor2_pforall_right</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(134, '0_3_27');
+      mouseover(135, '0_3_27');
       "><br>
   + <span class="id" title="tactic">exact</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(135, '0_3_27');
+      mouseover(136, '0_3_27');
       "><br>
   + <span class="id" title="tactic">exact</span> <span class="id" title="var">q</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(136, '0_3_27');
+      mouseover(137, '0_3_27');
       "><br>
   + <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#point_htpy"><span class="id" title="definition">point_htpy</span></a> (<span class="id" title="var">p</span> (<a class="idref" href="HoTT.Basics.Overture.html#point"><span class="id" title="definition">point</span></a> <span class="id" title="var">A</span>))).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(137, '0_3_27');
+      mouseover(138, '0_3_27');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(138, '0_3_27');
+      mouseover(139, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall2_left" class="idref" href="#pmap_compose_ppforall2_left"><span class="id" title="definition">pmap_compose_ppforall2_left</span></a> {<a id="A:123" class="idref" href="#A:123"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:124" class="idref" href="#P:124"><span class="id" title="binder">P</span></a> <a id="Q:125" class="idref" href="#Q:125"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:123"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="g:127" class="idref" href="#g:127"><span class="id" title="binder">g</span></a> <a id="g':128" class="idref" href="#g':128"><span class="id" title="binder">g'</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="a:126" class="idref" href="#a:126"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:123"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#P:124"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:126"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#Q:125"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:126"><span class="id" title="variable">a</span></a>}<br>
@@ -1549,7 +1559,7 @@ Operations on dependent pointed maps
   <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall2"><span class="id" title="definition">pmap_compose_ppforall2</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#p:132"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Pointed.Core.html#phomotopy_reflexive"><span class="id" title="instance">phomotopy_reflexive</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:130"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(139, '0_3_27');
+      mouseover(140, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall2_right" class="idref" href="#pmap_compose_ppforall2_right"><span class="id" title="definition">pmap_compose_ppforall2_right</span></a> {<a id="A:133" class="idref" href="#A:133"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:134" class="idref" href="#P:134"><span class="id" title="binder">P</span></a> <a id="Q:135" class="idref" href="#Q:135"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:133"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="g:137" class="idref" href="#g:137"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="a:136" class="idref" href="#a:136"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:133"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#P:134"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:136"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#Q:135"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:136"><span class="id" title="variable">a</span></a>)<br>
@@ -1558,7 +1568,7 @@ Operations on dependent pointed maps
   <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall2"><span class="id" title="definition">pmap_compose_ppforall2</span></a> (<span class="id" title="keyword">fun</span> <a id="a:142" class="idref" href="#a:142"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Pointed.Core.html#phomotopy_reflexive"><span class="id" title="instance">phomotopy_reflexive</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#g:137"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:142"><span class="id" title="variable">a</span></a>)) <a class="idref" href="HoTT.Pointed.pMap.html#q:141"><span class="id" title="variable">q</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(140, '0_3_27');
+      mouseover(141, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall2_refl" class="idref" href="#pmap_compose_ppforall2_refl"><span class="id" title="definition">pmap_compose_ppforall2_refl</span></a> `{<a id="H:143" class="idref" href="#H:143"><span class="id" title="binder">Funext</span></a>} {<a id="A:144" class="idref" href="#A:144"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:145" class="idref" href="#P:145"><span class="id" title="binder">P</span></a> <a id="Q:146" class="idref" href="#Q:146"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:144"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
@@ -1567,76 +1577,76 @@ Operations on dependent pointed maps
     <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.Core.html#phomotopy_reflexive"><span class="id" title="instance">phomotopy_reflexive</span></a> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(141, '0_3_27');
+      mouseover(142, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(142, '0_3_27');
+      mouseover(143, '0_3_27');
       "><br>
   <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall2"><span class="id" title="definition">pmap_compose_ppforall2</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(143, '0_3_27');
+      mouseover(144, '0_3_27');
       "><br>
   <span class="id" title="var">revert</span> <span class="id" title="var">Q</span> <span class="id" title="var">g</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(144, '0_3_27');
+      mouseover(145, '0_3_27');
       "><span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.pMap.html#fiberwise_pointed_map_rec"><span class="id" title="definition">fiberwise_pointed_map_rec</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(145, '0_3_27');
-      "><span class="id" title="tactic">intros</span> <span class="id" title="var">Q</span> <span class="id" title="var">g</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
       mouseover(146, '0_3_27');
-      "><br>
-  <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.pMap.html#functor2_pforall_right_refl"><span class="id" title="definition">functor2_pforall_right_refl</span></a>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">intros</span> <span class="id" title="var">Q</span> <span class="id" title="var">g</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(147, '0_3_27');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.pMap.html#functor2_pforall_right_refl"><span class="id" title="definition">functor2_pforall_right_refl</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(148, '0_3_27');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(149, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall_pid_left" class="idref" href="#pmap_compose_ppforall_pid_left"><span class="id" title="definition">pmap_compose_ppforall_pid_left</span></a> {<a id="A:152" class="idref" href="#A:152"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:153" class="idref" href="#P:153"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:152"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
   (<a id="f:155" class="idref" href="#f:155"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">ppforall</span></a> <a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">(</span></a><a id="a:154" class="idref" href="#a:154"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:152"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Pointed.Core.html#81544b3088a44c9237120a91ee47efc9"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#P:153"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#a:154"><span class="id" title="variable">a</span></a>) : <a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall"><span class="id" title="definition">pmap_compose_ppforall</span></a> (<span class="id" title="keyword">fun</span> <a id="a:156" class="idref" href="#a:156"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Pointed.Core.html#pmap_idmap"><span class="id" title="definition">pmap_idmap</span></a>) <a class="idref" href="HoTT.Pointed.pMap.html#f:155"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dc9f9d584001e6dc3295fc596e6e94f6"><span class="id" title="notation">==*</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#f:155"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(149, '0_3_27');
+      mouseover(150, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(150, '0_3_27');
+      mouseover(151, '0_3_27');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Pointed.Core.html#Build_pHomotopy"><span class="id" title="definition">Build_pHomotopy</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(151, '0_3_27');
+      mouseover(152, '0_3_27');
       "><br>
   + <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(152, '0_3_27');
+      mouseover(153, '0_3_27');
       "><br>
   + <span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(153, '0_3_27');
+      mouseover(154, '0_3_27');
       "><span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_idmap"><span class="id" title="definition">ap_idmap</span></a> <span class="id" title="var">_</span>) <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pV"><span class="id" title="definition">concat_pV</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(154, '0_3_27');
+      mouseover(155, '0_3_27');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(155, '0_3_27');
+      mouseover(156, '0_3_27');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pmap_compose_ppforall_path_pforall" class="idref" href="#pmap_compose_ppforall_path_pforall"><span class="id" title="definition">pmap_compose_ppforall_path_pforall</span></a> `{<a id="H:157" class="idref" href="#H:157"><span class="id" title="binder">Funext</span></a>} {<a id="A:158" class="idref" href="#A:158"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="P:159" class="idref" href="#P:159"><span class="id" title="binder">P</span></a> <a id="Q:160" class="idref" href="#Q:160"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.Pointed.pMap.html#A:158"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>}<br>
@@ -1645,36 +1655,36 @@ Operations on dependent pointed maps
   <a class="idref" href="HoTT.Pointed.Core.html#path_pforall"><span class="id" title="definition">path_pforall</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall2_right"><span class="id" title="definition">pmap_compose_ppforall2_right</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#g:162"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Pointed.pMap.html#p:166"><span class="id" title="variable">p</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(156, '0_3_27');
+      mouseover(157, '0_3_27');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(157, '0_3_27');
+      mouseover(158, '0_3_27');
       "><br>
   <span class="id" title="var">revert</span> <span class="id" title="var">f'</span> <span class="id" title="var">p</span>. </span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(158, '0_3_27');
-      "><span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.Core.html#phomotopy_ind"><span class="id" title="definition">phomotopy_ind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
       mouseover(159, '0_3_27');
-      "><br>
-  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Pointed.Core.html#path_pforall_1"><span class="id" title="definition">path_pforall_1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Pointed.Core.html#path_pforall_1"><span class="id" title="definition">path_pforall_1</span></a><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a>).</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Pointed.Core.html#phomotopy_ind"><span class="id" title="definition">phomotopy_ind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(160, '0_3_27');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#path_pforall"><span class="id" title="definition">path_pforall</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall2_refl"><span class="id" title="definition">pmap_compose_ppforall2_refl</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Pointed.Core.html#path_pforall_1"><span class="id" title="definition">path_pforall_1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Pointed.Core.html#path_pforall_1"><span class="id" title="definition">path_pforall_1</span></a><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">^</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(161, '0_3_27');
       "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Pointed.Core.html#path_pforall"><span class="id" title="definition">path_pforall</span></a> (<a class="idref" href="HoTT.Pointed.pMap.html#pmap_compose_ppforall2_refl"><span class="id" title="definition">pmap_compose_ppforall2_refl</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(162, '0_3_27');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_27');
+      " onmouseover="
+      mouseover(163, '0_3_27');
       "><br>
 </span>
 </div>

@@ -813,12 +813,12 @@
           
 
             i = 159;
-            data = "";
+            data = "1 goal (ID 5265)	  	  R : CRing	  x, y : Pos	  IHy : pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) (x + y)%pos =	        sg_op (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) x)	          (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) y)	  ============================	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) x + 1 +	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) y =	  sg_op (sg_op (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) x) 1)	    (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) y)	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 goal (ID 5265)	  	  R : CRing	  x, y : Pos	  IHy : pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) (x + y)%pos =	        sg_op (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) x)	          (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) y)	  ============================	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) x + 1 +	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) y =	  sg_op (sg_op (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) x) 1)	    (pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) y)	No more goals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1098,137 +1098,137 @@
           
 
             i = 216;
-            data = "1 goal (ID 268)	  	  ============================	  forall y : CRing, {f : cring_Z $-> y & forall g : cring_Z $-> y, g $== f}	";
+            data = "1 goal (ID 268)	  	  ============================	  forall y : CRing, {f : cring_Z $-> y & forall g : cring_Z $-> y, f $== g}	";
             responses[i]=data;
           
 
             i = 217;
-            data = "1 goal (ID 269)	  	  R : CRing	  ============================	  {f : cring_Z $-> R & forall g : cring_Z $-> R, g $== f}	";
+            data = "1 goal (ID 269)	  	  R : CRing	  ============================	  {f : cring_Z $-> R & forall g : cring_Z $-> R, f $== g}	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 goal (ID 271)	  	  R : CRing	  ============================	  forall g : cring_Z $-> R, g $== rng_homo_int R	";
+            data = "1 goal (ID 271)	  	  R : CRing	  ============================	  forall g : cring_Z $-> R, rng_homo_int R $== g	";
             responses[i]=data;
           
 
             i = 219;
-            data = "1 goal (ID 274)	  	  R : CRing	  g : cring_Z $-> R	  x : cring_Z	  ============================	  g x = rng_homo_int R x	";
+            data = "1 goal (ID 274)	  	  R : CRing	  g : cring_Z $-> R	  x : cring_Z	  ============================	  rng_homo_int R x = g x	";
             responses[i]=data;
           
 
             i = 220;
-            data = "3 goals (ID 282)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  ============================	  g (neg n) = rng_homo_int R (neg n)		goal 2 (ID 280) is:	 g 0%int = rng_homo_int R 0%int	goal 3 (ID 283) is:	 g (pos p) = rng_homo_int R (pos p)	";
+            data = "3 goals (ID 282)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  ============================	  rng_homo_int R (neg n) = g (neg n)		goal 2 (ID 280) is:	 rng_homo_int R 0%int = g 0%int	goal 3 (ID 283) is:	 rng_homo_int R (pos p) = g (pos p)	";
             responses[i]=data;
           
 
             i = 221;
-            data = "1 goal (ID 282)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  ============================	  g (neg n) = rng_homo_int R (neg n)	2 goals (ID 290)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g (-1)%int = rng_homo_int R (-1)%int		goal 2 (ID 293) is:	 g (neg (pos_succ n)) = rng_homo_int R (neg (pos_succ n))	";
+            data = "1 goal (ID 282)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  ============================	  rng_homo_int R (neg n) = g (neg n)	2 goals (ID 290)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  rng_homo_int R (-1)%int = g (-1)%int		goal 2 (ID 293) is:	 rng_homo_int R (neg (pos_succ n)) = g (neg (pos_succ n))	";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 goal (ID 290)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g (-1)%int = rng_homo_int R (-1)%int	1 goal (ID 294)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g (-1)%int = -1	";
+            data = "1 goal (ID 290)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  rng_homo_int R (-1)%int = g (-1)%int	1 goal (ID 294)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  -1 = g (-1)%int	";
             responses[i]=data;
           
 
             i = 223;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 goals		goal 1 (ID 293) is:	 g (neg (pos_succ n)) = rng_homo_int R (neg (pos_succ n))	goal 2 (ID 280) is:	 g 0%int = rng_homo_int R 0%int	goal 3 (ID 283) is:	 g (pos p) = rng_homo_int R (pos p)	1 goal (ID 293)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (neg (pos_succ n)) = rng_homo_int R (neg (pos_succ n))	1 goal (ID 301)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (neg (pos_succ n)) =	  pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) (pos_succ n)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 goals		goal 1 (ID 293) is:	 rng_homo_int R (neg (pos_succ n)) = g (neg (pos_succ n))	goal 2 (ID 280) is:	 rng_homo_int R 0%int = g 0%int	goal 3 (ID 283) is:	 rng_homo_int R (pos p) = g (pos p)	1 goal (ID 293)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  rng_homo_int R (neg (pos_succ n)) = g (neg (pos_succ n))	1 goal (ID 311)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) (pos_succ n) =	  g (neg (pos_succ n))	";
             responses[i]=data;
           
 
             i = 224;
-            data = "1 goal (ID 302)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (neg (pos_succ n)) =	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 312)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n =	  g (neg (pos_succ n))	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 goal (ID 303)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (int_pred (neg n)) =	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 313)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n =	  g (int_pred (neg n))	";
             responses[i]=data;
           
 
             i = 226;
-            data = "1 goal (ID 304)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (neg n + -1)%int =	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 314)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n =	  g (neg n + -1)%int	";
             responses[i]=data;
           
 
             i = 227;
-            data = "1 goal (ID 305)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (-1 + neg n)%int =	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 315)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n =	  g (-1 + neg n)%int	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 goal (ID 308)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (-1)%int + g (neg n) =	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 318)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n =	  g (-1)%int + g (neg n)	";
             responses[i]=data;
           
 
             i = 229;
-            data = "1 goal (ID 313)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  -1 + g (neg n) =	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 323)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  -1 + pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n =	  -1 + g (neg n)	";
             responses[i]=data;
           
 
             i = 230;
-            data = "1 goal (ID 318)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : g (neg n) = rng_homo_int R (neg n)	  ============================	  g (neg n) = pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n	";
+            data = "1 goal (ID 328)	  	  R : CRing	  g : cring_Z $-> R	  n : Pos	  IHn : rng_homo_int R (neg n) = g (neg n)	  ============================	  pos_peano_rec R (-1) (fun (_ : Pos) (nr : R) => -1 + nr) n = g (neg n)	";
             responses[i]=data;
           
 
             i = 231;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 280) is:	 g 0%int = rng_homo_int R 0%int	goal 2 (ID 283) is:	 g (pos p) = rng_homo_int R (pos p)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 280) is:	 rng_homo_int R 0%int = g 0%int	goal 2 (ID 283) is:	 rng_homo_int R (pos p) = g (pos p)	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 goal (ID 280)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g 0%int = rng_homo_int R 0%int	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 283) is:	 g (pos p) = rng_homo_int R (pos p)	";
+            data = "1 goal (ID 280)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  rng_homo_int R 0%int = g 0%int	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 283) is:	 rng_homo_int R (pos p) = g (pos p)	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 goal (ID 283)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  ============================	  g (pos p) = rng_homo_int R (pos p)	2 goals (ID 333)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g 1%int = rng_homo_int R 1%int		goal 2 (ID 336) is:	 g (pos (pos_succ p)) = rng_homo_int R (pos (pos_succ p))	";
+            data = "1 goal (ID 283)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  ============================	  rng_homo_int R (pos p) = g (pos p)	2 goals (ID 343)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  rng_homo_int R 1%int = g 1%int		goal 2 (ID 346) is:	 rng_homo_int R (pos (pos_succ p)) = g (pos (pos_succ p))	";
             responses[i]=data;
           
 
             i = 234;
-            data = "1 goal (ID 333)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g 1%int = rng_homo_int R 1%int	1 goal (ID 337)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  g 1%int = 1	";
+            data = "1 goal (ID 343)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  rng_homo_int R 1%int = g 1%int	1 goal (ID 347)	  	  R : CRing	  g : cring_Z $-> R	  ============================	  1 = g 1%int	";
             responses[i]=data;
           
 
             i = 235;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 336) is:	 g (pos (pos_succ p)) = rng_homo_int R (pos (pos_succ p))	1 goal (ID 336)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (pos (pos_succ p)) = rng_homo_int R (pos (pos_succ p))	1 goal (ID 344)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (pos (pos_succ p)) =	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) (pos_succ p)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 346) is:	 rng_homo_int R (pos (pos_succ p)) = g (pos (pos_succ p))	1 goal (ID 346)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  rng_homo_int R (pos (pos_succ p)) = g (pos (pos_succ p))	1 goal (ID 364)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) (pos_succ p) =	  g (pos (pos_succ p))	";
             responses[i]=data;
           
 
             i = 236;
-            data = "1 goal (ID 345)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (pos (pos_succ p)) =	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 365)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p =	  g (pos (pos_succ p))	";
             responses[i]=data;
           
 
             i = 237;
-            data = "1 goal (ID 346)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (int_succ (pos p)) =	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 366)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p =	  g (int_succ (pos p))	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 goal (ID 347)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (pos p + 1)%int =	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 367)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p =	  g (pos p + 1)%int	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 goal (ID 348)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (1 + pos p)%int =	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 368)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p =	  g (1 + pos p)%int	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 goal (ID 351)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g 1%int + g (pos p) =	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 371)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p =	  g 1%int + g (pos p)	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 goal (ID 356)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  1 + g (pos p) = 1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 376)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  1 + pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p = 1 + g (pos p)	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 goal (ID 361)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : g (pos p) = rng_homo_int R (pos p)	  ============================	  g (pos p) = pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p	";
+            data = "1 goal (ID 381)	  	  R : CRing	  g : cring_Z $-> R	  p : Pos	  IHp : rng_homo_int R (pos p) = g (pos p)	  ============================	  pos_peano_rec R 1 (fun (_ : Pos) (nr : R) => 1 + nr) p = g (pos p)	";
             responses[i]=data;
           
 
@@ -2349,7 +2349,7 @@ The integers are the initial commutative ring
       mouseout('0_3_51');
       " onmouseover="
       mouseover(223, '0_3_51');
-      "><span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_minus_one"><span class="id" title="definition">rng_homo_minus_one</span></a>. }<br>
+      "><span class="id" title="tactic">symmetry</span>; <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_minus_one"><span class="id" title="definition">rng_homo_minus_one</span></a>. }<br>
     <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
@@ -2409,7 +2409,7 @@ The integers are the initial commutative ring
       mouseout('0_3_51');
       " onmouseover="
       mouseover(235, '0_3_51');
-      "><span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_one"><span class="id" title="definition">rng_homo_one</span></a>. }<br>
+      "><span class="id" title="tactic">symmetry</span>; <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Rings.CRing.html#rng_homo_one"><span class="id" title="definition">rng_homo_one</span></a>. }<br>
     <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="

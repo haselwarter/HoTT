@@ -30,28 +30,28 @@ pre {
 
 <div class="code" title="File: pSusp.v
 Line: 1
-Time: 0.034s">
-<div class="time" style="width: 6.6797642436149%"></div>
+Time: 0.03s">
+<div class="time" style="width: 6.3025210084034%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 1
-Time: 0.018s">
-<div class="time" style="width: 3.5363457760314%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 2
 Time: 0.021s">
-<div class="time" style="width: 4.1257367387033%"></div>
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
 Require Import Pointed.Core.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 3
-Time: 0.043s">
-<div class="time" style="width: 8.4479371316306%"></div>
+Time: 0.037s">
+<div class="time" style="width: 7.7731092436975%"></div>
 <pre>
 Require Import Pointed.Loops.</pre>
 </div>
@@ -93,21 +93,21 @@ Require Import Homotopy.Suspension.</pre>
 <div class="code" title="File: pSusp.v
 Line: 9
 Time: 0.004s">
-<div class="time" style="width: 0.78585461689587%"></div>
+<div class="time" style="width: 0.84033613445378%"></div>
 <pre>
 Require Import Homotopy.Freudenthal.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 10
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 11
 Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -153,7 +153,7 @@ Time: 0s">
 <div class="code" title="File: pSusp.v
 Line: 21
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
 
 Global Instance ispointed_path_susp `{IsPointed X}
@@ -161,8 +161,8 @@ Global Instance ispointed_path_susp `{IsPointed X}
 </div>
 <div class="code" title="File: pSusp.v
 Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
 
 Global Instance ispointed_path_susp' `{IsPointed X}
@@ -170,8 +170,8 @@ Global Instance ispointed_path_susp' `{IsPointed X}
 </div>
 <div class="code" title="File: pSusp.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition psusp (X : pType) : pType
@@ -185,382 +185,319 @@ Time: 0s">
 
 (** ** Suspension Functor *)
 
-(* Definition of pointed suspension functor *)</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 34
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
-<pre>Definition psusp_functor {X Y : pType} (f : X -&gt;* Y) : psusp X -&gt;* psusp Y
-  := Build_pMap (psusp X) (psusp Y) (functor_susp f) 1.</pre>
+(** [psusp] has a functorial action. *)
+(** TODO: make this a displayed functor *)</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 35
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
+<pre>Global Instance is0functor_psusp : Is0Functor psusp
+  := Build_Is0Functor _ _ _ _ psusp (fun X Y f
+      =&gt; Build_pMap (psusp X) (psusp Y) (functor_susp f) 1).</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-(* Suspension functor preserves composition *)</pre>
+(** [psusp] is a 1-functor. *)</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 37
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
-<pre>Definition psusp_functor_compose {X Y Z : pType} (g : Y -&gt;* Z) (f : X -&gt;* Y)
-  : psusp_functor (g o* f) ==* psusp_functor g o* psusp_functor f.</pre>
+Line: 39
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
+<pre>Global Instance is1functor_psusp : Is1Functor psusp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 38
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 39
-Time: 0.012s">
-<div class="time" style="width: 2.3575638506876%"></div>
-<pre>
-  pointed_reduce_rewrite; srefine (Build_pHomotopy _ _); cbn.</pre>
-</div>
-<div class="code" title="File: pSusp.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
 <pre>
-  {</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 41
-Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
-<pre> srapply Susp_ind; try reflexivity; cbn.</pre>
+  snrapply Build_Is1Functor.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    intros x.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 42
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
-<pre>
-    refine (transport_paths_FlFr _ _ @ _).</pre>
+  (** Action on 2-cells *)
+ </pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 43
-Time: 0.004s">
-<div class="time" style="width: 0.78585461689587%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>-</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 43
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros X Y f g p.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 43
+Time: 0.013s">
+<div class="time" style="width: 2.7310924369748%"></div>
 <pre>
-    rewrite concat_p1; apply moveR_Vp.</pre>
+    pointed_reduce.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 44
-Time: 0.017s">
-<div class="time" style="width: 3.3398821218075%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-    by rewrite concat_p1, ap_compose, !Susp_rec_beta_merid.</pre>
+    srapply Build_pHomotopy.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> }</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 45
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
 <pre>
-  reflexivity.</pre>
+    {</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 46
-Time: 0.04s">
-<div class="time" style="width: 7.8585461689587%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> simpl.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 46
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-Qed.</pre>
+      srapply Susp_ind.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-(* Suspension functor preserves identity *)</pre>
+      1,2: reflexivity.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      intro x; cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
-<pre>Definition psusp_functor_idmap {X : pType}
-  : psusp_functor (@pmap_idmap X) ==* pmap_idmap.</pre>
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
+<pre>
+      rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-Proof.</pre>
+      rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 51
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
-  srapply Build_pHomotopy.</pre>
+      rewrite 2 Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 52
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-  {</pre>
+      destruct (p x).</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 53
-Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
-<pre> srapply Susp_ind; try reflexivity.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-    intro x.</pre>
+      apply concat_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 54
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
-<pre>
-    refine (transport_paths_FFlr _ _ @ _).</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 55
-Time: 0.017s">
-<div class="time" style="width: 3.3398821218075%"></div>
-<pre>
-    by rewrite ap_idmap, Susp_rec_beta_merid,
-      concat_p1, concat_Vp.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 57
+Line: 54
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-  reflexivity.</pre>
+    reflexivity.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  (** Preservation of identity. *)
+ </pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>-</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros X.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 57
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
+<pre>
+    srapply Build_pHomotopy.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 58
-Time: 0.019s">
-<div class="time" style="width: 3.7328094302554%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+    {</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
-<pre>
-
-Definition psusp_2functor {X Y} {f g : X -&gt;* Y} (p : f ==* g)
-  : psusp_functor f ==* psusp_functor g.</pre>
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
+<pre> srapply Susp_ind; try reflexivity.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 62
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+      intro x.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 60
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
+<pre>
+      refine (transport_paths_FFlr _ _ @ _).</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 61
+Time: 0.015s">
+<div class="time" style="width: 3.1512605042017%"></div>
+<pre>
+      by rewrite ap_idmap, Susp_rec_beta_merid,
+        concat_p1, concat_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 63
-Time: 0.01s">
-<div class="time" style="width: 1.9646365422397%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 63
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-  pointed_reduce.</pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 64
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
-<pre>
-  srapply Build_pHomotopy.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  {</pre>
+  (** Preservation of composition. *)
+ </pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> simpl.</pre>
+<pre>-</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 66
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.63025210084034%"></div>
+<pre> pointed_reduce_rewrite; srefine (Build_pHomotopy _ _); cbn.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    srapply Susp_ind.</pre>
+    {</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 67
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
+<pre> srapply Susp_ind; try reflexivity; cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    1,2: reflexivity.</pre>
+      intros x.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 68
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-    intro x; cbn.</pre>
+      refine (transport_paths_FlFr _ _ @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 69
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
-    rewrite transport_paths_FlFr.</pre>
+      rewrite concat_p1; apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 70
-Time: 0.026s">
-<div class="time" style="width: 5.1080550098232%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
-    rewrite concat_p1.</pre>
+      by rewrite concat_p1, ap_compose, !Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 71
-Time: 0.004s">
-<div class="time" style="width: 0.78585461689587%"></div>
-<pre>
-    rewrite 2 Susp_rec_beta_merid.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 72
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
-<pre>
-    destruct (p x).</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 73
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    apply concat_Vp.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 74
+Line: 71
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-  reflexivity.</pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 75
-Time: 0.012s">
-<div class="time" style="width: 2.3575638506876%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 76
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Definition pequiv_psusp_functor {X Y : pType} (f : X &lt;~&gt;* Y)
-  : psusp X &lt;~&gt;* psusp Y.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 80
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  srapply pequiv_adjointify.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  1: apply psusp_functor, f.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 82
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  1: apply psusp_functor, f^-1*.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 83
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
-<pre>
-  1,2: refine ((psusp_functor_compose _ _)^* @* _ @* psusp_functor_idmap).</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 84
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  1,2: apply psusp_2functor.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 85
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
-<pre>
-  1: apply peisretr.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 86
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
-<pre>
-  apply peissect.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 87
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+Line: 72
+Time: 0.088s">
+<div class="time" style="width: 18.487394957983%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 88
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -570,13 +507,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 91
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Book_Loop_Susp_Adjunction.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 91
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -585,102 +522,102 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 94
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition loop_susp_adjoint `{Funext} (A B : pType)
   : (psusp A -&gt;* B) &lt;~&gt; (A -&gt;* loops B).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 95
+Line: 80
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 96
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (_ oE (issig_pmap (psusp A) B)^-1).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 97
+Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     refine (_ oE (equiv_functor_sigma_pb
                  (Q := fun NSm =&gt; fst NSm.1 = point B)
                  (equiv_Susp_rec A B))).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 100
+Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     transitivity {bp : {b:B &amp; b = point B} &amp; {b:B &amp; A -&gt; bp.1 = b} }.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 101
+Line: 86
 Time: 0.013s">
-<div class="time" style="width: 2.5540275049116%"></div>
+<div class="time" style="width: 2.7310924369748%"></div>
 <pre>
     1:make_equiv.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 102
-Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+Line: 87
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
     refine (_ oE equiv_contr_sigma _); simpl.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 103
-Time: 0.015s">
-<div class="time" style="width: 2.9469548133595%"></div>
+Line: 88
+Time: 0.014s">
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
     refine (_ oE (equiv_sigma_contr
                    (A := {p : B &amp; A -&gt; point B = p})
                    (fun pm =&gt; { q : point B = pm.1 &amp; pm.2 (point A) = q }))^-1).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 106
+Line: 91
 Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
     transitivity {bp : {b:B &amp; point B = b} &amp; {f : A -&gt; point B = bp.1 &amp; f (point A) = bp.2} }.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 107
-Time: 0.019s">
-<div class="time" style="width: 3.7328094302554%"></div>
+Line: 92
+Time: 0.018s">
+<div class="time" style="width: 3.781512605042%"></div>
 <pre>
     1:make_equiv.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 108
+Line: 93
 Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
     refine (_ oE equiv_contr_sigma _); simpl.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 109
+Line: 94
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (issig_pmap A (loops B)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 110
-Time: 0.023s">
-<div class="time" style="width: 4.5186640471513%"></div>
+Line: 95
+Time: 0.021s">
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 111
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -713,13 +650,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 137
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>End Book_Loop_Susp_Adjunction.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 137
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -729,15 +666,15 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 140
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Line: 125
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>Definition loop_susp_unit (X : pType) : X -&gt;* loops (psusp X)
   := Build_pMap X (loops (psusp X))
       (fun x =&gt; merid x @ (merid (point X))^) (concat_pV _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 142
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -745,36 +682,36 @@ Time: 0s">
 (** By Freudenthal, we have that this map is 2n-connected for a n-connected X *)</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 144
+Line: 129
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>Global Instance conn_map_loop_susp_unit `{Univalence}
   (X : pType) `{IsConnected n.+1 X}
   : IsConnMap (n +2+ n) (fun x =&gt; merid x @ (merid (point X))^).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 146
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 147
-Time: 0.032s">
-<div class="time" style="width: 6.286836935167%"></div>
+Line: 132
+Time: 0.029s">
+<div class="time" style="width: 6.0924369747899%"></div>
 <pre>
   refine (conn_map_compose _ _ (equiv_concat_r (merid (point _))^ _)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 148
+Line: 133
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 149
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -782,224 +719,224 @@ Time: 0s">
 (** We also have this corollary *)</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 151
+Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Lemma pequiv_ptr_loop_psusp `{Univalence} (X : pType) n `{IsConnected n.+1 X}
   : pTr (n +2+ n) X &lt;~&gt;* pTr (n +2+ n) (loops (psusp X)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 152
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 153
+Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
   snrefine (Build_pEquiv _ _ _ (isequiv_conn_map_ino (n +2+ n) _)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 154
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 155
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply ptr_functor.</pre>
+Line: 140
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
+<pre> rapply (fmap (pTr _)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 155
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply loop_susp_unit.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 156
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 156
-Time: 0.011s">
-<div class="time" style="width: 2.1611001964637%"></div>
+Line: 141
+Time: 0.009s">
+<div class="time" style="width: 1.890756302521%"></div>
 <pre>
   all:exact _.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 157
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 158
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 143
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
 
 Definition loop_susp_unit_natural {X Y : pType} (f : X -&gt;* Y)
   : loop_susp_unit Y o* f
-  ==* loops_functor (psusp_functor f) o* loop_susp_unit X.</pre>
+  ==* fmap loops (fmap psusp f) o* loop_susp_unit X.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 162
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 163
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+Line: 148
+Time: 0.008s">
+<div class="time" style="width: 1.6806722689076%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 164
-Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
+Line: 149
+Time: 0.003s">
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 165
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 166
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x; symmetry.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 166
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 151
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (concat_1p _@ (concat_p1 _ @ _)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 167
+Line: 152
 Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
     refine (ap_pp (Susp_rec North South (merid o f))
                   (merid x) (merid (point X))^ @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 169
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 154
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine ((1 @@ ap_V _ _) @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 170
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Line: 155
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     refine (Susp_rec_beta_merid _ @@ inverse2 (Susp_rec_beta_merid _)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 171
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 172
-Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+Line: 157
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 172
+Line: 157
 Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre> apply moveL_pV.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 172
-Time: 0.229s">
-<div class="time" style="width: 44.990176817289%"></div>
+Line: 157
+Time: 0.208s">
+<div class="time" style="width: 43.697478991597%"></div>
 <pre> rewrite !inv_pp, !concat_pp_p, concat_1p; symmetry.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 172
-Time: 0.038s">
-<div class="time" style="width: 7.4656188605108%"></div>
+Line: 157
+Time: 0.003s">
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
     apply moveL_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 173
-Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
+Line: 158
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
 <pre>
     refine (concat_pV_inverse2 _ _ (Susp_rec_beta_merid (point X)) @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 174
-Time: 0.008s">
-<div class="time" style="width: 1.5717092337917%"></div>
+Line: 159
+Time: 0.036s">
+<div class="time" style="width: 7.563025210084%"></div>
 <pre>
     apply moveL_Vp, moveL_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 175
+Line: 160
 Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
     refine (ap_pp_concat_pV _ _ @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 176
-Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+Line: 161
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
     apply moveL_Vp, moveL_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 177
-Time: 0.027s">
-<div class="time" style="width: 5.3045186640472%"></div>
+Line: 162
+Time: 0.024s">
+<div class="time" style="width: 5.0420168067227%"></div>
 <pre>
     rewrite concat_p1_1, concat_1p_1.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 178
-Time: 0.007s">
-<div class="time" style="width: 1.3752455795678%"></div>
+Line: 163
+Time: 0.006s">
+<div class="time" style="width: 1.2605042016807%"></div>
 <pre>
     cbn; symmetry.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 179
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Line: 164
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     refine (concat_p1 _ @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 180
-Time: 0.015s">
-<div class="time" style="width: 2.9469548133595%"></div>
+Line: 165
+Time: 0.008s">
+<div class="time" style="width: 1.6806722689076%"></div>
 <pre>
     refine (ap_compose
       (fun p' =&gt; (ap (Susp_rec North South (merid o f))) p' @ 1)
@@ -1007,164 +944,164 @@ Time: 0.015s">
       (concat_pV (merid (point X))) @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 184
-Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+Line: 169
+Time: 0.01s">
+<div class="time" style="width: 2.1008403361345%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 185
+Line: 170
 Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
     refine (ap_compose (ap (Susp_rec North South (merid o f)))
       (fun p' =&gt; p' @ 1) _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 187
-Time: 0.509s">
+Line: 172
+Time: 0.476s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 188
+Line: 173
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
 
 Definition loop_susp_counit (X : pType) : psusp (loops X) -&gt;* X
   :=  Build_pMap (psusp (loops X)) X (Susp_rec (point X) (point X) idmap) 1.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 191
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 176
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
 
 Definition loop_susp_counit_natural {X Y : pType} (f : X -&gt;* Y)
   : f o* loop_susp_counit X
-  ==* loop_susp_counit Y o* psusp_functor (loops_functor f).</pre>
+  ==* loop_susp_counit Y o* fmap psusp (fmap loops f).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 195
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 196
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+Line: 181
+Time: 0.008s">
+<div class="time" style="width: 1.6806722689076%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 197
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 182
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); simpl.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 198
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 199
-Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
+Line: 184
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre> simple refine (Susp_ind _ _ _ _); cbn; try reflexivity; intros p.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 199
-Time: 0.016s">
-<div class="time" style="width: 3.1434184675835%"></div>
+Line: 184
+Time: 0.012s">
+<div class="time" style="width: 2.5210084033613%"></div>
 <pre>
     rewrite transport_paths_FlFr, ap_compose, concat_p1.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 200
+Line: 185
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 201
-Time: 0.004s">
-<div class="time" style="width: 0.78585461689587%"></div>
+Line: 186
+Time: 0.003s">
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
     refine (ap_compose
               (Susp_rec North South (fun x0 =&gt; merid (1 @ (ap f x0 @ 1))))
               (Susp_rec (point Y) (point Y) idmap) (merid p) @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 204
-Time: 0.013s">
-<div class="time" style="width: 2.5540275049116%"></div>
+Line: 189
+Time: 0.011s">
+<div class="time" style="width: 2.3109243697479%"></div>
 <pre>
     do 2 rewrite Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 205
+Line: 190
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     refine (concat_1p _ @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 206
-Time: 0.012s">
-<div class="time" style="width: 2.3575638506876%"></div>
+Line: 191
+Time: 0.011s">
+<div class="time" style="width: 2.3109243697479%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 206
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 191
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 206
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 206
+Line: 191
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (Susp_rec_beta_merid _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 207
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> 
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 208
-Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
+Line: 193
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 208
-Time: 0.112s">
-<div class="time" style="width: 22.003929273084%"></div>
+Line: 193
+Time: 0.098s">
+<div class="time" style="width: 20.588235294118%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 209
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1174,156 +1111,256 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 212
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 197
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>Definition loop_susp_triangle1 (X : pType)
-  : loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X)
+  : fmap loops (loop_susp_counit X) o* loop_susp_unit (loops X)
   ==* pmap_idmap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 214
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 215
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 216
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 217
+Line: 202
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros p; cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 217
+Line: 202
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (concat_1p _ @ (concat_p1 _ @ _)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 218
+Line: 203
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     refine (ap_pp (Susp_rec (point X) (point X) idmap)
                   (merid p) (merid (point (point X = point X)))^ @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 220
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 205
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine ((1 @@ ap_V _ _) @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 221
+Line: 206
 Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
     refine ((Susp_rec_beta_merid p
       @@ inverse2 (Susp_rec_beta_merid (point (loops X)))) @ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 223
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exact (concat_p1 _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 224
+Line: 209
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 225
+Line: 210
 Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+<div class="time" style="width: 1.2605042016807%"></div>
 <pre> apply moveL_pV.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 225
-Time: 0.04s">
-<div class="time" style="width: 7.8585461689587%"></div>
+Line: 210
+Time: 0.037s">
+<div class="time" style="width: 7.7731092436975%"></div>
 <pre> destruct X as [X x]; cbn; unfold point.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 225
+Line: 210
 Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
     apply whiskerR.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 226
-Time: 0.024s">
-<div class="time" style="width: 4.7151277013752%"></div>
+Line: 211
+Time: 0.021s">
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
     rewrite (concat_pV_inverse2
                (ap (Susp_rec x x idmap) (merid 1))
                1 (Susp_rec_beta_merid 1)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 229
-Time: 0.017s">
-<div class="time" style="width: 3.3398821218075%"></div>
+Line: 214
+Time: 0.015s">
+<div class="time" style="width: 3.1512605042017%"></div>
 <pre>
     rewrite (ap_pp_concat_pV (Susp_rec x x idmap) (merid 1)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 230
-Time: 0.025s">
-<div class="time" style="width: 4.9115913555992%"></div>
+Line: 215
+Time: 0.023s">
+<div class="time" style="width: 4.8319327731092%"></div>
 <pre>
     rewrite ap_compose, (ap_compose _ (fun p =&gt; p @ 1)).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 231
-Time: 0.012s">
-<div class="time" style="width: 2.3575638506876%"></div>
+Line: 216
+Time: 0.013s">
+<div class="time" style="width: 2.7310924369748%"></div>
 <pre>
     rewrite concat_1p_1; apply ap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 232
+Line: 217
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     apply concat_p1_1.</pre>
 </div>
 <div class="code" title="File: pSusp.v
+Line: 218
+Time: 0.124s">
+<div class="time" style="width: 26.050420168067%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 219
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
+<pre>
+
+Definition loop_susp_triangle2 (X : pType)
+  : loop_susp_counit (psusp X) o* fmap psusp (loop_susp_unit X)
+  ==* pmap_idmap.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 223
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 224
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
+<pre>
+  simple refine (Build_pHomotopy _ _);
+  [ simple refine (Susp_ind _ _ _ _) | ]; try reflexivity; cbn.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 226
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 227
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (merid (point X)).</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 227
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 228
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros x.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 228
+Time: 0.013s">
+<div class="time" style="width: 2.7310924369748%"></div>
+<pre>
+    rewrite transport_paths_FlFr, ap_idmap, ap_compose.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 229
+Time: 0.007s">
+<div class="time" style="width: 1.4705882352941%"></div>
+<pre>
+    rewrite Susp_rec_beta_merid.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 230
+Time: 0.007s">
+<div class="time" style="width: 1.4705882352941%"></div>
+<pre>
+    apply moveR_pM; rewrite concat_p1.</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 231
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
+<pre>
+    refine (inverse2 (Susp_rec_beta_merid _) @ _).</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 232
+Time: 0.008s">
+<div class="time" style="width: 1.6806722689076%"></div>
+<pre>
+    rewrite inv_pp, inv_V; reflexivity.</pre>
+</div>
+<div class="code" title="File: pSusp.v
 Line: 233
-Time: 0.136s">
-<div class="time" style="width: 26.71905697446%"></div>
+Time: 0.044s">
+<div class="time" style="width: 9.2436974789916%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 234
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
-Definition loop_susp_triangle2 (X : pType)
-  : loop_susp_counit (psusp X) o* psusp_functor (loop_susp_unit X)
-  ==* pmap_idmap.</pre>
+(** Now we can finally construct the adjunction equivalence. *)
+
+</pre>
+</div>
+<div class="code" title="File: pSusp.v
+Line: 237
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
+<pre>Definition loop_susp_adjoint `{Funext} (A B : pType)
+  : (psusp A -&gt;* B) &lt;~&gt; (A -&gt;* loops B).</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 238
@@ -1334,244 +1371,144 @@ Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
 Line: 239
-Time: 0.004s">
-<div class="time" style="width: 0.78585461689587%"></div>
-<pre>
-  simple refine (Build_pHomotopy _ _);
-  [ simple refine (Susp_ind _ _ _ _) | ]; try reflexivity; cbn.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 241
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (merid (point X)).</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 243
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros x.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 243
-Time: 0.014s">
-<div class="time" style="width: 2.7504911591356%"></div>
-<pre>
-    rewrite transport_paths_FlFr, ap_idmap, ap_compose.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 244
-Time: 0.01s">
-<div class="time" style="width: 1.9646365422397%"></div>
-<pre>
-    rewrite Susp_rec_beta_merid.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 245
-Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
-<pre>
-    apply moveR_pM; rewrite concat_p1.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 246
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
-<pre>
-    refine (inverse2 (Susp_rec_beta_merid _) @ _).</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 247
-Time: 0.008s">
-<div class="time" style="width: 1.5717092337917%"></div>
-<pre>
-    rewrite inv_pp, inv_V; reflexivity.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 248
-Time: 0.054s">
-<div class="time" style="width: 10.609037328094%"></div>
-<pre>
-Qed.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 249
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(** Now we can finally construct the adjunction equivalence. *)
-
-</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 252
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Definition loop_susp_adjoint `{Funext} (A B : pType)
-  : (psusp A -&gt;* B) &lt;~&gt; (A -&gt;* loops B).</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 253
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: pSusp.v
-Line: 254
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
   refine (equiv_adjointify
-            (fun f =&gt; loops_functor f o* loop_susp_unit A)
-            (fun g =&gt; loop_susp_counit B o* psusp_functor g) _ _).</pre>
+            (fun f =&gt; fmap loops f o* loop_susp_unit A)
+            (fun g =&gt; loop_susp_counit B o* fmap psusp g) _ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 257
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 258
+Line: 243
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros g.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 258
+Line: 243
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply path_pforall.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 258
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 243
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
-    refine (pmap_prewhisker _ (loops_functor_compose _ _) @* _).</pre>
+    refine (pmap_prewhisker _ (fmap_comp loops _ _) @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 259
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (pmap_compose_assoc _ _ _ @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 260
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 245
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (pmap_postwhisker _ (loop_susp_unit_natural g)^* @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 261
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine ((pmap_compose_assoc _ _ _)^* @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 262
+Line: 247
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (pmap_prewhisker g (loop_susp_triangle1 B) @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 263
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply pmap_postcompose_idmap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 264
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 265
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros f.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 265
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply path_pforall.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 265
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 250
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
-    refine (pmap_postwhisker _ (psusp_functor_compose _ _) @* _).</pre>
+    refine (pmap_postwhisker _ (fmap_comp psusp _ _) @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 266
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine ((pmap_compose_assoc _ _ _)^* @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 267
+Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
     refine (pmap_prewhisker _ (loop_susp_counit_natural f)^* @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 268
+Line: 253
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (pmap_compose_assoc _ _ _ @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 269
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     refine (pmap_postwhisker f (loop_susp_triangle2 A) @* _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 270
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply pmap_precompose_idmap.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 271
+Line: 256
 Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+<div class="time" style="width: 1.2605042016807%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 272
+Line: 257
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1581,111 +1518,111 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 275
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+Line: 260
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>Definition loop_susp_adjoint_nat_r `{Funext} (A B B' : pType)
   (f : psusp A -&gt;* B) (g : B -&gt;* B') : loop_susp_adjoint A B' (g o* f)
-  ==* loops_functor g o* loop_susp_adjoint A B f.</pre>
+  ==* fmap loops g o* loop_susp_adjoint A B f.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 277
+Line: 262
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 278
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 263
+Time: 0.003s">
+<div class="time" style="width: 0.63025210084034%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 279
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 264
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
   refine (_ @* pmap_compose_assoc _ _ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 280
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 265
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
   apply pmap_prewhisker.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 281
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 266
+Time: 0.006s">
+<div class="time" style="width: 1.2605042016807%"></div>
 <pre>
-  refine (loops_functor_compose g f).</pre>
+  refine (fmap_comp loops f g).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 282
-Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+Line: 267
+Time: 0.022s">
+<div class="time" style="width: 4.6218487394958%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 283
-Time: 0.006s">
-<div class="time" style="width: 1.1787819253438%"></div>
+Line: 268
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
 
 Definition loop_susp_adjoint_nat_l `{Funext} (A A' B : pType)
   (f : A -&gt;* loops B) (g : A' -&gt;* A) : (loop_susp_adjoint A' B)^-1 (f o* g)
-  ==* (loop_susp_adjoint A B)^-1 f o* psusp_functor g.</pre>
+  ==* (loop_susp_adjoint A B)^-1 f o* fmap psusp g.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 287
+Line: 272
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 288
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 273
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 289
+Line: 274
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine (_ @* (pmap_compose_assoc _ _ _)^*).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 290
+Line: 275
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply pmap_postwhisker.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 291
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 276
+Time: 0.001s">
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
-  refine (psusp_functor_compose f g).</pre>
+  exact (fmap_comp psusp g f).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 292
-Time: 0.002s">
-<div class="time" style="width: 0.39292730844794%"></div>
+Line: 277
+Time: 0.004s">
+<div class="time" style="width: 0.84033613445378%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 293
-Time: 0.007s">
-<div class="time" style="width: 1.3752455795678%"></div>
+Line: 278
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
 
 Global Instance is1natural_loop_susp_adjoint_r `{Funext} (A : pType)
@@ -1693,86 +1630,86 @@ Global Instance is1natural_loop_susp_adjoint_r `{Funext} (A : pType)
       (loop_susp_adjoint A).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 297
+Line: 282
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 298
+Line: 283
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros B B' g f.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 299
-Time: 0.007s">
-<div class="time" style="width: 1.3752455795678%"></div>
+Line: 284
+Time: 0.006s">
+<div class="time" style="width: 1.2605042016807%"></div>
 <pre>
   refine ( _ @ cat_assoc_strong _ _ _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 300
+Line: 285
 Time: 0.001s">
-<div class="time" style="width: 0.19646365422397%"></div>
+<div class="time" style="width: 0.21008403361345%"></div>
 <pre>
   refine (ap (fun x =&gt; x o* loop_susp_unit A) _).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 301
+Line: 286
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply path_pforall.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 302
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 287
+Time: 0.005s">
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
-  apply loops_functor_compose.</pre>
+  rapply (fmap_comp loops).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 303
-Time: 0.003s">
-<div class="time" style="width: 0.58939096267191%"></div>
+Line: 288
+Time: 0.002s">
+<div class="time" style="width: 0.42016806722689%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 304
+Line: 289
 Time: 0.005s">
-<div class="time" style="width: 0.98231827111984%"></div>
+<div class="time" style="width: 1.0504201680672%"></div>
 <pre>
 
 Lemma natequiv_loop_susp_adjoint_r `{Funext} (A : pType)
   : NatEquiv (opyon (psusp A)) (opyon A o loops).</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 307
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 308
-Time: 0.034s">
-<div class="time" style="width: 6.6797642436149%"></div>
+Line: 293
+Time: 0.03s">
+<div class="time" style="width: 6.3025210084034%"></div>
 <pre>
   rapply Build_NatEquiv.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 309
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: pSusp.v
-Line: 311
+Line: 296
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

@@ -38,7 +38,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 2
-Time: 0.032s">
+Time: 0.028s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.</pre>
 </div>
@@ -83,8 +83,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 16
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Class Is01Cat (A : Type) `{IsGraph A} :=
 {
   Id  : forall (a : A), a $-&gt; a;
@@ -109,7 +109,7 @@ Notation "g $o f" := (cat_comp g f).</pre>
 <div class="code" title="File: Core.v
 Line: 23
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Definition cat_postcomp {A} `{Is01Cat A} (a : A) {b c : A} (g : b $-&gt; c)
@@ -118,8 +118,8 @@ Definition cat_postcomp {A} `{Is01Cat A} (a : A) {b c : A} (g : b $-&gt; c)
 </div>
 <div class="code" title="File: Core.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition cat_precomp {A} `{Is01Cat A} {a b : A} (c : A) (f : a $-&gt; b)
@@ -137,7 +137,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Class Is0Gpd (A : Type) `{Is01Cat A} :=
   { gpd_rev : forall {a b : A}, (a $-&gt; b) -&gt; (b $-&gt; a) }.</pre>
 </div>
@@ -158,8 +158,8 @@ Notation "a $== b" := (GpdHom a b).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 37
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Global Instance reflexive_GpdHom {A} `{Is0Gpd A}
@@ -169,7 +169,7 @@ Global Instance reflexive_GpdHom {A} `{Is0Gpd A}
 <div class="code" title="File: Core.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Definition gpd_comp {A} `{Is0Gpd A} {a b c : A}
@@ -186,7 +186,7 @@ Infix "$@" := gpd_comp.</pre>
 <div class="code" title="File: Core.v
 Line: 46
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Global Instance transitive_GpdHom {A} `{Is0Gpd A}
@@ -204,7 +204,7 @@ Notation "p ^$" := (gpd_rev p).</pre>
 <div class="code" title="File: Core.v
 Line: 52
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Global Instance symmetric_GpdHom {A} `{Is0Gpd A}
@@ -229,8 +229,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 60
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p; apply Id.</pre>
 </div>
@@ -251,8 +251,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 64
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Class Is0Functor {A B : Type} `{IsGraph A} `{IsGraph B} (F : A -&gt; B)
   := { fmap : forall (a b : A) (f : a $-&gt; b), F a $-&gt; F b }.</pre>
 </div>
@@ -262,7 +262,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Arguments fmap {_ _ _ _} F {_ _ _} f.</pre>
+Arguments fmap {A B isgraph_A isgraph_B} F {is0functor_F a b} f : rename.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 67
@@ -297,8 +297,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 74
-Time: 0.019s">
-<div class="time" style="width: 59.375%"></div>
+Time: 0.017s">
+<div class="time" style="width: 60.714285714286%"></div>
 <pre>Class Is1Cat (A : Type) `{!IsGraph A, !Is2Graph A, !Is01Cat A} :=
 {
   is01cat_hom : forall (a b : A), Is01Cat (a $-&gt; b) ;
@@ -363,8 +363,8 @@ Arguments cat_idr {_ _ _ _ _ _ _} f.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 92
-Time: 0.005s">
-<div class="time" style="width: 15.625%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 
 Definition cat_assoc_opp {A : Type} `{Is1Cat A}
@@ -392,8 +392,8 @@ Infix "$o@" := Comp2.
 </div>
 <div class="code" title="File: Core.v
 Line: 108
-Time: 0.006s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>Definition cat_postwhisker {A} `{Is1Cat A} {a b c : A}
            {f g : a $-&gt; b} (h : b $-&gt; c) (p : f $== g)
   : h $o f $== h $o g
@@ -409,7 +409,7 @@ Notation "h $@L p" := (cat_postwhisker h p).</pre>
 <div class="code" title="File: Core.v
 Line: 112
 Time: 0.005s">
-<div class="time" style="width: 15.625%"></div>
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>
 
 Definition cat_prewhisker {A} `{Is1Cat A} {a b c : A}
@@ -434,7 +434,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 120
-Time: 0.016s">
+Time: 0.014s">
 <div class="time" style="width: 50%"></div>
 <pre>Class Is1Cat_Strong (A : Type)`{!IsGraph A, !Is2Graph A, !Is01Cat A} := 
 {
@@ -476,7 +476,7 @@ Arguments cat_idr_strong {_ _ _ _ _ _ _} f.</pre>
 <div class="code" title="File: Core.v
 Line: 137
 Time: 0.003s">
-<div class="time" style="width: 9.375%"></div>
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
 Definition cat_assoc_opp_strong {A : Type} `{Is1Cat_Strong A}
@@ -502,8 +502,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 146
-Time: 0.021s">
-<div class="time" style="width: 65.625%"></div>
+Time: 0.019s">
+<div class="time" style="width: 67.857142857143%"></div>
 <pre>
   srapply Build_Is1Cat.</pre>
 </div>
@@ -575,8 +575,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 153
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre> intros; apply GpdHom_path, cat_assoc_strong.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -588,8 +588,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 154
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros; apply GpdHom_path, cat_idl_strong.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -601,14 +601,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 155
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre> intros; apply GpdHom_path, cat_idr_strong.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 155
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -622,10 +622,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 158
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Definition IsInitial {A : Type} `{Is1Cat A} (x : A)
-  := forall (y : A), {f : x $-&gt; y &amp; forall g, g $== f}.</pre>
+  := forall (y : A), {f : x $-&gt; y &amp; forall g, f $== g}.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 159
@@ -636,6 +636,27 @@ Existing Class IsInitial.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 160
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+
+Definition mor_initial {A : Type} `{Is1Cat A} (x y : A) {h : IsInitial x}
+  : x $-&gt; y
+  := (h y).1.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 164
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+
+Definition mor_initial_unique {A : Type} `{Is1Cat A} (x y : A) {h : IsInitial x}
+  (f : x $-&gt; y)
+  : mor_initial x y $== f
+  := (h y).2 f.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -643,21 +664,42 @@ Time: 0s">
 (** Terminal objects *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 162
+Line: 171
 Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition IsTerminal {A : Type} `{Is1Cat A} (y : A)
-  := forall (x : A), {f : x $-&gt; y &amp; forall g, g $== f}.</pre>
+  := forall (x : A), {f : x $-&gt; y &amp; forall g, f $== g}.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 163
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Existing Class IsTerminal.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 164
+Line: 173
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition mor_terminal {A : Type} `{Is1Cat A} (x y : A) {h : IsTerminal y}
+  : x $-&gt; y
+  := (h x).1.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 177
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+
+Definition mor_terminal_unique {A : Type} `{Is1Cat A} (x y : A) {h : IsTerminal y}
+  (f : x $-&gt; y)
+  : mor_terminal x y $== f
+  := (h x).2 f.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -665,15 +707,15 @@ Time: 0s">
 (** Generalizing function extensionality, "Morphism extensionality" states that homwise [GpdHom_path] is an equivalence. *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 166
-Time: 0.005s">
-<div class="time" style="width: 15.625%"></div>
+Line: 184
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>Class HasMorExt (A : Type) `{Is1Cat A} := {
   isequiv_Htpy_path : forall a b f g, IsEquiv (@GpdHom_path (a $-&gt; b) _ _ _ f g)
 }.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 168
+Line: 186
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -681,9 +723,9 @@ Time: 0s">
 Global Existing Instance isequiv_Htpy_path.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 170
-Time: 0.005s">
-<div class="time" style="width: 15.625%"></div>
+Line: 188
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 
 Definition path_hom {A} `{HasMorExt A} {a b : A} {f g : a $-&gt; b} (p : f $== g)
@@ -691,7 +733,7 @@ Definition path_hom {A} `{HasMorExt A} {a b : A} {f g : a $-&gt; b} (p : f $== g
   := GpdHom_path^-1 p.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 174
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -699,74 +741,74 @@ Time: 0s">
 (** A 1-category with morphism extensionality induces a strong 1-category *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 176
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance is1cat_strong_hasmorext {A : Type} `{HasMorExt A}
   : Is1Cat_Strong A.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 177
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 178
-Time: 0.032s">
-<div class="time" style="width: 100%"></div>
+Line: 196
+Time: 0.027s">
+<div class="time" style="width: 96.428571428571%"></div>
 <pre>
   rapply Build_Is1Cat_Strong; hnf; intros; apply path_hom.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 179
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 180
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+Line: 198
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply cat_assoc.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 180
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 181
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply cat_idl.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 181
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 182
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply cat_idr.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 182
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 183
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -775,9 +817,9 @@ Time: 0s">
   (* The [!] tells Coq to use typeclass search to find the [IsGraph] parameters of [Is0Functor] instead of assuming additional copies of them. *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 186
-Time: 0.026s">
-<div class="time" style="width: 81.25%"></div>
+Line: 204
+Time: 0.021s">
+<div class="time" style="width: 75%"></div>
 <pre>Class Is1Functor {A B : Type} `{Is1Cat A} `{Is1Cat B}
   (F : A -&gt; B) `{!Is0Functor F} :=
 {
@@ -788,29 +830,38 @@ Time: 0.026s">
 }.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 193
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Arguments fmap2 {A B _ _ _ _ _ _ _ _} F {_ _ _ _ _ _} p.</pre>
+Arguments fmap2 {A B
+  isgraph_A is2graph_A is01cat_A is1cat_A
+  isgraph_B is2graph_B is01cat_B is1cat_B}
+  F {is0functor_F is1functor_F a b f g} p : rename.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 195
+Line: 216
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Arguments fmap_id {A B _ _ _ _ _ _ _ _} F {_ _} a.</pre>
+Arguments fmap_id {A B
+  isgraph_A is2graph_A is01cat_A is1cat_A
+  isgraph_B is2graph_B is01cat_B is1cat_B}
+  F {is0functor_F is1functor_F} a : rename.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 196
+Line: 220
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Arguments fmap_comp {A B _ _ _ _ _ _ _ _} F {_ _ _ _ _} f g.</pre>
+Arguments fmap_comp {A B
+  isgraph_A is2graph_A is01cat_A is1cat_A
+  isgraph_B is2graph_B is01cat_B is1cat_B}
+  F {is0functor_F is1functor_F a b c} f g : rename.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 197
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -820,13 +871,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 200
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section IdentityFunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 200
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -834,142 +885,12 @@ Time: 0s">
   Context {A : Type} `{Is1Cat A}.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 202
+Line: 229
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance is0functor_idmap : Is0Functor idmap.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 204
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 205
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    by apply Build_Is0Functor.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 206
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 207
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-  Global Instance is1functor_idmap : Is1Functor idmap.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 209
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 210
-Time: 0.004s">
-<div class="time" style="width: 12.5%"></div>
-<pre>
-    by apply Build_Is1Functor.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 211
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 212
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-End IdentityFunctor.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 214
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(** Constant functor *)
-
-</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 217
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Section ConstantFunctor.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 217
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-  Context {A B : Type}.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 219
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
-<pre>
-
-  Global Instance is01functor_const
-    `{IsGraph A} `{Is01Cat B} (x : B)
-    : Is0Functor (fun _ : A =&gt; x).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 223
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 224
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
-<pre>
-    srapply Build_Is0Functor.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 225
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    intros a b f; apply Id.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 226
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 227
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
-<pre>
-
-  Global Instance is1functor_const
-   `{Is1Cat A} `{Is1Cat B} (x : B)
-    : Is1Functor (fun _ : A =&gt; x).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 231
@@ -980,69 +901,39 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 232
-Time: 0.011s">
-<div class="time" style="width: 34.375%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    srapply Build_Is1Functor.</pre>
+    by apply Build_Is0Functor.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 233
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    -</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 234
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
-<pre> intros a b f g p; apply Id.</pre>
+  Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 234
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    -</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 235
-Time: 0.015s">
-<div class="time" style="width: 46.875%"></div>
-<pre> intro; apply Id.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 235
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    -</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 236
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros a b c f g.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 236
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> cbn.</pre>
+
+  Global Instance is1functor_idmap : Is1Functor idmap.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 236
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-      symmetry.</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 237
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
-      apply cat_idl.</pre>
+    by apply Build_Is1Functor.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 238
@@ -1057,7 +948,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-End ConstantFunctor.</pre>
+End IdentityFunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 241
@@ -1065,7 +956,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-(** Composite functors *)
+(** Constant functor *)
 
 </pre>
 </div>
@@ -1073,25 +964,25 @@ Time: 0s">
 Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Section CompositeFunctor.</pre>
+<pre>Section ConstantFunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 244
-Time: 0.003s">
-<div class="time" style="width: 9.375%"></div>
-<pre>
-
-  Context {A B C : Type} `{Is1Cat A} `{Is1Cat B} `{Is1Cat C}
-          (F : A -&gt; B) `{!Is0Functor F, !Is1Functor F}
-          (G : B -&gt; C) `{!Is0Functor G, !Is1Functor G}.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Global Instance is0functor_compose : Is0Functor (G o F).</pre>
+  Context {A B : Type}.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 246
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Global Instance is01functor_const
+    `{IsGraph A} `{Is01Cat B} (x : B)
+    : Is0Functor (fun _ : A =&gt; x).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 250
@@ -1103,7 +994,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 251
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
     srapply Build_Is0Functor.</pre>
 </div>
@@ -1112,7 +1003,7 @@ Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    intros a b f; exact (fmap G (fmap F f)).</pre>
+    intros a b f; apply Id.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 253
@@ -1124,50 +1015,26 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 254
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
-  Global Instance is1functor_compose : Is1Functor (G o F).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 256
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 257
-Time: 0.009s">
-<div class="time" style="width: 28.125%"></div>
-<pre>
-    srapply Build_Is1Functor.</pre>
+  Global Instance is1functor_const
+   `{Is1Cat A} `{Is1Cat B} (x : B)
+    : Is1Functor (fun _ : A =&gt; x).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 258
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    -</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 259
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
-<pre> intros a b f g p; exact (fmap2 G (fmap2 F p)).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 259
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.022s">
+<div class="time" style="width: 78.571428571429%"></div>
 <pre>
-    -</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 260
-Time: 0.004s">
-<div class="time" style="width: 12.5%"></div>
-<pre> intros a; exact (fmap2 G (fmap_id F a) $@ fmap_id G (F a)).</pre>
+    srapply Build_Is1Functor.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 260
@@ -1178,41 +1045,225 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 261
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros a b f g p; apply Id.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 261
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 262
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intro; apply Id.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 262
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 263
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b c f g.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 261
-Time: 0.003s">
-<div class="time" style="width: 9.375%"></div>
-<pre>
-      refine (fmap2 G (fmap_comp F f g) $@ _).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 262
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
-<pre>
-      exact (fmap_comp G (fmap F f) (fmap F g)).</pre>
+Line: 263
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> cbn.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 263
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Defined.</pre>
+      symmetry.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 264
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      apply cat_idl.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 265
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 266
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+End ConstantFunctor.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 268
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Composite functors *)
+
+</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 271
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Section CompositeFunctor.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 271
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
+<pre>
+
+  Context {A B C : Type} `{Is1Cat A} `{Is1Cat B} `{Is1Cat C}
+          (F : A -&gt; B) `{!Is0Functor F, !Is1Functor F}
+          (G : B -&gt; C) `{!Is0Functor G, !Is1Functor G}.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 275
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Global Instance is0functor_compose : Is0Functor (G o F).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 277
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 278
 Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+    srapply Build_Is0Functor.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 279
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    intros a b f; exact (fmap G (fmap F f)).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 280
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 281
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+
+  Global Instance is1functor_compose : Is1Functor (G o F).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 283
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 284
+Time: 0.01s">
+<div class="time" style="width: 35.714285714286%"></div>
+<pre>
+    srapply Build_Is1Functor.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 285
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 286
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre> intros a b f g p; exact (fmap2 G (fmap2 F p)).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 286
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 287
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
+<pre> intros a; exact (fmap2 G (fmap_id F a) $@ fmap_id G (F a)).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 287
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    -</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 288
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros a b c f g.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 288
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+      refine (fmap2 G (fmap_comp F f g) $@ _).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 289
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+      exact (fmap_comp G (fmap F f) (fmap F g)).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 290
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 291
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 End CompositeFunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 266
+Line: 293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1222,9 +1273,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 269
-Time: 0.006s">
-<div class="time" style="width: 18.75%"></div>
+Line: 296
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>Class Is1Gpd (A : Type) `{Is1Cat A, !Is0Gpd A} :=
 { 
   gpd_issect : forall {a b : A} (f : a $-&gt; b), f^$ $o f $== Id a ;
@@ -1232,7 +1283,7 @@ Time: 0.006s">
 }.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 273
+Line: 300
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1242,17 +1293,17 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 276
-Time: 0.009s">
-<div class="time" style="width: 28.125%"></div>
+Line: 303
+Time: 0.008s">
+<div class="time" style="width: 28.571428571429%"></div>
 <pre>Definition gpd_V_hh {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : a $-&gt; b) 
   : f^$ $o (f $o g) $== g :=
   (cat_assoc _ _ _)^$ $@ (gpd_issect f $@R g) $@ cat_idl g.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 278
-Time: 0.009s">
-<div class="time" style="width: 28.125%"></div>
+Line: 305
+Time: 0.008s">
+<div class="time" style="width: 28.571428571429%"></div>
 <pre>
 
 Definition gpd_h_Vh {A} `{Is1Gpd A} {a b c : A} (f : c $-&gt; b) (g : a $-&gt; b) 
@@ -1260,9 +1311,9 @@ Definition gpd_h_Vh {A} `{Is1Gpd A} {a b c : A} (f : c $-&gt; b) (g : a $-&gt; b
   (cat_assoc _ _ _)^$ $@ (gpd_isretr f $@R g) $@ cat_idl g.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 282
+Line: 309
 Time: 0.007s">
-<div class="time" style="width: 21.875%"></div>
+<div class="time" style="width: 25%"></div>
 <pre>
 
 Definition gpd_hh_V {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : a $-&gt; b) 
@@ -1270,9 +1321,9 @@ Definition gpd_hh_V {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : a $-&gt; b
   cat_assoc _ _ _ $@ (f $@L gpd_isretr g) $@ cat_idr f.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 286
-Time: 0.007s">
-<div class="time" style="width: 21.875%"></div>
+Line: 313
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
 
 Definition gpd_hV_h {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : b $-&gt; a) 
@@ -1280,131 +1331,50 @@ Definition gpd_hV_h {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : b $-&gt; a
   cat_assoc _ _ _ $@ (f $@L gpd_issect g) $@ cat_idr f.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 290
+Line: 317
 Time: 0.003s">
-<div class="time" style="width: 9.375%"></div>
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
 Definition gpd_moveL_1M {A : Type} `{Is1Gpd A} {x y : A} {p q : x $-&gt; y}
   (r : p $o q^$ $== Id _) : p $== q.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 293
+Line: 320
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 294
-Time: 0.005s">
-<div class="time" style="width: 15.625%"></div>
+Line: 321
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   refine ((cat_idr p)^$ $@ (p $@L (gpd_issect q)^$) $@ (cat_assoc _ _ _)^$ $@ _).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 295
+Line: 322
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine ((r $@R q) $@ cat_idl q).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 296
+Line: 323
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 297
-Time: 0.003s">
-<div class="time" style="width: 9.375%"></div>
-<pre>
-
-Definition gpd_moveL_V1 {A : Type} `{Is1Gpd A} {x y : A} {p : x $-&gt; y}
-  {q : y $-&gt; x} (r : p $o q $== Id _) : p^$ $== q.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 300
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 301
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
-<pre>
-  refine ((cat_idr p^$)^$ $@ (p^$ $@L r^$) $@ _).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 302
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  apply gpd_V_hh.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 303
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 304
-Time: 0.006s">
-<div class="time" style="width: 18.75%"></div>
-<pre>
-
-Definition gpd_moveR_hV {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
-  {q : x $-&gt; y} {r : x $-&gt; z} (s : r $== p $o q) 
-  : r $o q^$ $== p 
-  := (s $@R q^$) $@ gpd_hh_V _ _.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 309
-Time: 0.005s">
-<div class="time" style="width: 15.625%"></div>
-<pre>
-
-Definition gpd_moveR_Vh {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
-  {q : x $-&gt; y} {r : x $-&gt; z} (s : r $== p $o q) 
-  : p^$ $o r $== q 
-  := (p^$ $@L s) $@ gpd_V_hh _ _.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 314
-Time: 0.007s">
-<div class="time" style="width: 21.875%"></div>
-<pre>
-
-Definition gpd_moveL_hV {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
-  {q : x $-&gt; y} {r : x $-&gt; z} (s : p $o q $== r) 
-  : p $== r $o q^$ 
-  := (gpd_moveR_hV s^$)^$.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 319
-Time: 0.006s">
-<div class="time" style="width: 18.75%"></div>
-<pre>
-
-Definition gpd_moveL_Vh {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
-  {q : x $-&gt; y} {r : x $-&gt; z} (s : p $o q $== r) 
-  : q $== p^$ $o r 
-  := (gpd_moveR_Vh s^$)^$.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 324
 Time: 0.003s">
-<div class="time" style="width: 9.375%"></div>
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
-Definition gpd_rev2 {A : Type} `{Is1Gpd A} {x y : A} {p q : x $-&gt; y}
-  (r : p $== q) : p^$ $== q^$.</pre>
+Definition gpd_moveL_V1 {A : Type} `{Is1Gpd A} {x y : A} {p : x $-&gt; y}
+  {q : y $-&gt; x} (r : p $o q $== Id _) : p^$ $== q.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 327
@@ -1415,23 +1385,17 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 328
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
-  apply gpd_moveL_V1.</pre>
+  refine ((cat_idr p^$)^$ $@ (p^$ $@L r^$) $@ _).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 329
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply gpd_moveR_hV.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 329
-Time: 0.001s">
-<div class="time" style="width: 3.125%"></div>
 <pre>
-  exact (r $@ (cat_idl q)^$).</pre>
+  apply gpd_V_hh.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 330
@@ -1442,43 +1406,130 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 331
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>
 
-Definition gpd_rev_pp {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : a $-&gt; b) 
-  : (f $o g)^$ $== g^$ $o f^$.</pre>
+Definition gpd_moveR_hV {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
+  {q : x $-&gt; y} {r : x $-&gt; z} (s : r $== p $o q) 
+  : r $o q^$ $== p 
+  := (s $@R q^$) $@ gpd_hh_V _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 334
+Line: 336
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
+<pre>
+
+Definition gpd_moveR_Vh {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
+  {q : x $-&gt; y} {r : x $-&gt; z} (s : r $== p $o q) 
+  : p^$ $o r $== q 
+  := (p^$ $@L s) $@ gpd_V_hh _ _.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 341
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
+<pre>
+
+Definition gpd_moveL_hV {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
+  {q : x $-&gt; y} {r : x $-&gt; z} (s : p $o q $== r) 
+  : p $== r $o q^$ 
+  := (gpd_moveR_hV s^$)^$.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 346
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
+<pre>
+
+Definition gpd_moveL_Vh {A : Type} `{Is1Gpd A} {x y z : A} {p : y $-&gt; z}
+  {q : x $-&gt; y} {r : x $-&gt; z} (s : p $o q $== r) 
+  : q $== p^$ $o r 
+  := (gpd_moveR_Vh s^$)^$.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 351
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+
+Definition gpd_rev2 {A : Type} `{Is1Gpd A} {x y : A} {p q : x $-&gt; y}
+  (r : p $== q) : p^$ $== q^$.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 335
+Line: 355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply gpd_moveL_V1.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 336
-Time: 0.002s">
-<div class="time" style="width: 6.25%"></div>
-<pre>
-  refine (cat_assoc _ _ _ $@ (f $@L gpd_h_Vh g f^$) $@ gpd_isretr f).</pre>
+Line: 356
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply gpd_moveR_hV.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 337
+Line: 356
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+  exact (r $@ (cat_idl q)^$).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 357
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 338
+Line: 358
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+
+Definition gpd_rev_pp {A} `{Is1Gpd A} {a b c : A} (f : b $-&gt; c) (g : a $-&gt; b) 
+  : (f $o g)^$ $== g^$ $o f^$.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 361
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 362
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply gpd_moveL_V1.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 363
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+  refine (cat_assoc _ _ _ $@ (f $@L gpd_h_Vh g f^$) $@ gpd_isretr f).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 364
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 365
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1487,21 +1538,139 @@ Class Is3Graph (A : Type) `{Is2Graph A}
   := isgraph_hom_hom : forall (a b : A), Is2Graph (a $-&gt; b).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 341
+Line: 368
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance isgraph_hom_hom | 30.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 342
+Line: 369
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Typeclasses Transparent Is3Graph.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 344
+Line: 370
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** *** Preservation of initial and terminal objects *)
+
+</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 373
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>Class PreservesInitial {A B : Type} (F : A -&gt; B)
+  `{Is1Functor A B F} : Type
+  := isinitial_preservesinitial
+    : forall (x : A), IsInitial x -&gt; IsInitial (F x).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 376
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Global Existing Instance isinitial_preservesinitial.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 377
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** The initial morphism is preserved by such a functor. *)</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 379
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
+<pre>Lemma fmap_initial {A B : Type} (F : A -&gt; B)
+  `{PreservesInitial A B F} (x y : A) (h : IsInitial x)
+  : fmap F (mor_initial x y) $== mor_initial (F x) (F y).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 381
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 382
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+  exact (mor_initial_unique _ _ _)^$.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 383
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 384
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
+<pre>
+
+Class PreservesTerminal {A B : Type} (F : A -&gt; B)
+  `{Is1Functor A B F} : Type
+  := isterminal_preservesterminal
+    : forall (x : A), IsTerminal x -&gt; IsTerminal (F x).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 389
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Global Existing Instance isterminal_preservesterminal.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 390
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** The terminal morphism is preserved by such a functor. *)</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 392
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
+<pre>Lemma fmap_terminal {A B : Type} (F : A -&gt; B)
+  `{PreservesTerminal A B F} (x y : A) (h : IsTerminal y)
+  : fmap F (mor_terminal x y) $== mor_terminal (F x) (F y).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 394
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 395
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre>
+  exact (mor_terminal_unique _ _ _)^$.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 396
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 398
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

@@ -498,17 +498,17 @@
           
 
             i = 96;
-            data = "1 goal (ID 115)	  	  A : Type0	  ============================	  {f : Empty $-> A & forall g : Empty $-> A, g $== f}	";
+            data = "1 goal (ID 115)	  	  A : Type0	  ============================	  {f : Empty $-> A & forall g : Empty $-> A, f $== g}	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 goal (ID 119)	  	  A : Type0	  ============================	  forall g : Empty $-> A, g $== Empty_rec A	";
+            data = "1 goal (ID 119)	  	  A : Type0	  ============================	  forall g : Empty $-> A, Empty_rec A $== g	";
             responses[i]=data;
           
 
             i = 98;
-            data = "1 goal (ID 120)	  	  A : Type0	  g : Empty $-> A	  ============================	  g $== Empty_rec A	";
+            data = "1 goal (ID 120)	  	  A : Type0	  g : Empty $-> A	  ============================	  Empty_rec A $== g	";
             responses[i]=data;
           
 
@@ -533,17 +533,17 @@
           
 
             i = 103;
-            data = "1 goal (ID 124)	  	  A : Type0	  ============================	  {f : A $-> Unit & forall g : A $-> Unit, g $== f}	";
+            data = "1 goal (ID 124)	  	  A : Type0	  ============================	  {f : A $-> Unit & forall g : A $-> Unit, f $== g}	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 goal (ID 127)	  	  A : Type0	  ============================	  forall g : A $-> Unit, g $== (fun _ : A => tt)	";
+            data = "1 goal (ID 127)	  	  A : Type0	  ============================	  forall g : A $-> Unit, (fun _ : A => tt) $== g	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 goal (ID 130)	  	  A : Type0	  f : A $-> Unit	  x : A	  ============================	  f x = tt	";
+            data = "1 goal (ID 130)	  	  A : Type0	  f : A $-> Unit	  x : A	  ============================	  tt = f x	";
             responses[i]=data;
           
 
@@ -658,7 +658,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab1447"></a><h2 class="section">The category of types</h2>
+<a id="lab1451"></a><h2 class="section">The category of types</h2>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="

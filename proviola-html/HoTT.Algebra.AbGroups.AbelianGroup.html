@@ -673,17 +673,17 @@
           
 
             i = 131;
-            data = "1 goal (ID 491)	  	  ============================	  IsInitial abgroup_trivial	1 goal (ID 504)	  	  A : AbGroup	  ============================	  {f : abgroup_trivial $-> A & forall g : abgroup_trivial $-> A, g $== f}	";
+            data = "1 goal (ID 491)	  	  ============================	  IsInitial abgroup_trivial	1 goal (ID 504)	  	  A : AbGroup	  ============================	  {f : abgroup_trivial $-> A & forall g : abgroup_trivial $-> A, f $== g}	";
             responses[i]=data;
           
 
             i = 132;
-            data = "3 goals (ID 512)	  	  A : AbGroup	  g : abgroup_trivial	  ============================	  MonUnit A		goal 2 (ID 513) is:	 IsSemiGroupPreserving (fun H : abgroup_trivial => mon_unit)	goal 3 (ID 515) is:	 (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, g $== f)	   (Build_GroupHomomorphism (fun H : abgroup_trivial => mon_unit))	";
+            data = "3 goals (ID 512)	  	  A : AbGroup	  g : abgroup_trivial	  ============================	  MonUnit A		goal 2 (ID 513) is:	 IsSemiGroupPreserving (fun H : abgroup_trivial => mon_unit)	goal 3 (ID 515) is:	 (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, f $== g)	   (Build_GroupHomomorphism (fun H : abgroup_trivial => mon_unit))	";
             responses[i]=data;
           
 
             i = 133;
-            data = "2 goals (ID 513)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun _ : abgroup_trivial => mon_unit)		goal 2 (ID 515) is:	 (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, g $== f)	   (Build_GroupHomomorphism (fun _ : abgroup_trivial => mon_unit))	";
+            data = "2 goals (ID 513)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun _ : abgroup_trivial => mon_unit)		goal 2 (ID 515) is:	 (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, f $== g)	   (Build_GroupHomomorphism (fun _ : abgroup_trivial => mon_unit))	";
             responses[i]=data;
           
 
@@ -698,42 +698,42 @@
           
 
             i = 136;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 515) is:	 (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, g $== f)	   (Build_GroupHomomorphism (fun _ : abgroup_trivial => mon_unit))	goal 2 (ID 493) is:	 IsTerminal abgroup_trivial	1 goal (ID 515)	  	  A : AbGroup	  ============================	  (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, g $== f)	    (Build_GroupHomomorphism (fun _ : abgroup_trivial => mon_unit))	1 goal (ID 637)	  	  A : AbGroup	  g : abgroup_trivial $-> A	  ============================	  g tt = mon_unit	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 515) is:	 (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, f $== g)	   (Build_GroupHomomorphism (fun _ : abgroup_trivial => mon_unit))	goal 2 (ID 493) is:	 IsTerminal abgroup_trivial	1 goal (ID 515)	  	  A : AbGroup	  ============================	  (fun f : abgroup_trivial $-> A => forall g : abgroup_trivial $-> A, f $== g)	    (Build_GroupHomomorphism (fun _ : abgroup_trivial => mon_unit))	1 goal (ID 637)	  	  A : AbGroup	  g : abgroup_trivial $-> A	  ============================	  mon_unit = g tt	";
             responses[i]=data;
           
 
             i = 137;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 493) is:	 IsTerminal abgroup_trivial	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 493) is:	 IsTerminal abgroup_trivial	1 goal (ID 493)	  	  ============================	  IsTerminal abgroup_trivial	1 goal (ID 644)	  	  A : AbGroup	  ============================	  {f : A $-> abgroup_trivial & forall g : A $-> abgroup_trivial, f $== g}	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 goal (ID 493)	  	  ============================	  IsTerminal abgroup_trivial	1 goal (ID 641)	  	  A : AbGroup	  ============================	  {f : A $-> abgroup_trivial & forall g : A $-> abgroup_trivial, g $== f}	";
+            data = "3 goals (ID 652)	  	  A : AbGroup	  g : A	  ============================	  MonUnit abgroup_trivial		goal 2 (ID 653) is:	 IsSemiGroupPreserving (fun H : A => mon_unit)	goal 3 (ID 655) is:	 (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, f $== g)	   (Build_GroupHomomorphism (fun H : A => mon_unit))	";
             responses[i]=data;
           
 
             i = 139;
-            data = "3 goals (ID 649)	  	  A : AbGroup	  g : A	  ============================	  MonUnit abgroup_trivial		goal 2 (ID 650) is:	 IsSemiGroupPreserving (fun H : A => mon_unit)	goal 3 (ID 652) is:	 (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, g $== f)	   (Build_GroupHomomorphism (fun H : A => mon_unit))	";
+            data = "2 goals (ID 653)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun _ : A => mon_unit)		goal 2 (ID 655) is:	 (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, f $== g)	   (Build_GroupHomomorphism (fun _ : A => mon_unit))	";
             responses[i]=data;
           
 
             i = 140;
-            data = "2 goals (ID 650)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun _ : A => mon_unit)		goal 2 (ID 652) is:	 (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, g $== f)	   (Build_GroupHomomorphism (fun _ : A => mon_unit))	";
+            data = "1 goal (ID 653)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun _ : A => mon_unit)	1 goal (ID 680)	  	  A : AbGroup	  x, y : A	  ============================	  mon_unit + mon_unit = mon_unit	";
             responses[i]=data;
           
 
             i = 141;
-            data = "1 goal (ID 650)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun _ : A => mon_unit)	1 goal (ID 677)	  	  A : AbGroup	  x, y : A	  ============================	  mon_unit + mon_unit = mon_unit	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 655) is:	 (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, f $== g)	   (Build_GroupHomomorphism (fun _ : A => mon_unit))	1 goal (ID 655)	  	  A : AbGroup	  ============================	  (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, f $== g)	    (Build_GroupHomomorphism (fun _ : A => mon_unit))	1 goal (ID 771)	  	  A : AbGroup	  g : A $-> abgroup_trivial	  x : A	  ============================	  tt = g x	";
             responses[i]=data;
           
 
             i = 142;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 652) is:	 (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, g $== f)	   (Build_GroupHomomorphism (fun _ : A => mon_unit))	1 goal (ID 652)	  	  A : AbGroup	  ============================	  (fun f : A $-> abgroup_trivial => forall g : A $-> abgroup_trivial, g $== f)	    (Build_GroupHomomorphism (fun _ : A => mon_unit))	1 goal (ID 768)	  	  A : AbGroup	  g : A $-> abgroup_trivial	  x : A	  ============================	  g x = tt	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 143;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -758,12 +758,12 @@
           
 
             i = 148;
-            data = "";
+            data = "<infomsg>abgroup_image is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 149;
-            data = "<infomsg>abgroup_image is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -783,32 +783,32 @@
           
 
             i = 153;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 154;
             data = "1 goal (ID 1210)	  	  H : Funext	  A, B : AbGroup	  f : A $-> B	  ============================	  GroupIsomorphism (QuotientAbGroup A (grp_kernel f)) (abgroup_image f)	";
             responses[i]=data;
           
 
-            i = 155;
+            i = 154;
             data = "";
             responses[i]=data;
           
 
-            i = 156;
+            i = 155;
             data = "2 focused goals	(shelved: 1) (ID 1223)	  	  H : Funext	  A, B : AbGroup	  f : A $-> B	  ============================	  GroupIsomorphism (QuotientAbGroup A (grp_kernel f)) ?Goal		goal 2 (ID 1224) is:	 GroupIsomorphism ?Goal (abgroup_image f)	";
             responses[i]=data;
           
 
-            i = 157;
+            i = 156;
             data = "1 goal (ID 1223)	  	  H : Funext	  A, B : AbGroup	  f : A $-> B	  ============================	  GroupIsomorphism (QuotientAbGroup A (grp_kernel f))	    (QuotientGroup A (grp_kernel f))	";
             responses[i]=data;
           
 
-            i = 158;
+            i = 157;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 158;
+            data = "";
             responses[i]=data;
           
 
@@ -848,32 +848,32 @@
           
 
             i = 166;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 167;
             data = "1 goal (ID 1213)	  	  A : AbGroup	  B : AbGroup	  ============================	  AbGroup	";
             responses[i]=data;
           
 
-            i = 168;
+            i = 167;
             data = "";
             responses[i]=data;
           
 
-            i = 169;
+            i = 168;
             data = "1 goal (ID 1381)	  	  A : AbGroup	  B : AbGroup	  ============================	  Commutative group_sgop	";
             responses[i]=data;
           
 
-            i = 170;
+            i = 169;
             data = "1 goal (ID 1392)	  	  A : AbGroup	  B : AbGroup	  a : A	  b : B	  a' : A	  b' : B	  ============================	  group_sgop (a, b) (a', b') = group_sgop (a', b') (a, b)	";
             responses[i]=data;
           
 
-            i = 171;
+            i = 170;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 171;
+            data = "";
             responses[i]=data;
           
 
@@ -918,17 +918,17 @@
           
 
             i = 180;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 181;
             data = "<infomsg>ab_biprod_inl is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 182;
+            i = 181;
             data = "<infomsg>ab_biprod_inr is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 182;
+            data = "";
             responses[i]=data;
           
 
@@ -948,67 +948,67 @@
           
 
             i = 186;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 187;
             data = "1 goal (ID 1233)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  ============================	  ab_biprod A B $-> Y	";
             responses[i]=data;
           
 
-            i = 188;
+            i = 187;
             data = "";
             responses[i]=data;
           
 
-            i = 189;
+            i = 188;
             data = "2 goals (ID 1243)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  ============================	  ab_biprod A B -> Y		goal 2 (ID 1245) is:	 IsSemiGroupPreserving ?f	";
             responses[i]=data;
           
 
-            i = 190;
+            i = 189;
             data = "1 goal (ID 1243)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  ============================	  ab_biprod A B -> Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 1245) is:	 IsSemiGroupPreserving	   (fun X : ab_biprod A B =>	    (fun (a : A) (b : B) => f a + g b) (fst X) (snd X))	";
             responses[i]=data;
           
 
-            i = 191;
+            i = 190;
             data = "1 goal (ID 1245)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  ============================	  IsSemiGroupPreserving	    (fun X : ab_biprod A B =>	     (fun (a : A) (b : B) => f a + g b) (fst X) (snd X))	1 goal (ID 1274)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f (a + a') + g (b + b') = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 192;
+            i = 191;
             data = "1 goal (ID 1277)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f a + f a' + g (b + b') = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 193;
+            i = 192;
             data = "1 goal (ID 1282)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f a + f a' + (g b + g b') = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 194;
+            i = 193;
             data = "1 goal (ID 1440)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f a + f a' + g b + g b' = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 195;
+            i = 194;
             data = "1 goal (ID 1611)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f a + (f a' + g b) + g b' = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 196;
+            i = 195;
             data = "1 goal (ID 1633)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f a + (g b + f a') + g b' = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 197;
+            i = 196;
             data = "1 goal (ID 1795)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  a : A	  b : B	  a' : A	  b' : B	  ============================	  f a + g b + f a' + g b' = f a + g b + (f a' + g b')	";
             responses[i]=data;
           
 
-            i = 198;
+            i = 197;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 198;
+            data = "";
             responses[i]=data;
           
 
@@ -1053,232 +1053,232 @@
           
 
             i = 207;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 208;
             data = "<infomsg>ab_biprod_pr1 is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 209;
+            i = 208;
             data = "<infomsg>ab_biprod_pr2 is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 210;
+            i = 209;
             data = "1 goal (ID 1251)	  	  A, B, Y : AbGroup	  ============================	  (A $-> Y) * (B $-> Y) -> ab_biprod A B $-> Y	";
             responses[i]=data;
           
 
-            i = 211;
+            i = 210;
             data = "";
             responses[i]=data;
           
 
-            i = 212;
+            i = 211;
             data = "1 goal (ID 1256)	  	  A, B, Y : AbGroup	  f : A $-> Y	  g : B $-> Y	  ============================	  ab_biprod A B $-> Y	";
             responses[i]=data;
           
 
-            i = 213;
+            i = 212;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 213;
+            data = "";
             responses[i]=data;
           
 
             i = 214;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 215;
             data = "1 goal (ID 1279)	  	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  ============================	  ab_biprod_rec (u $o ab_biprod_inl) (u $o ab_biprod_inr) == u	";
             responses[i]=data;
           
 
-            i = 216;
+            i = 215;
             data = "";
             responses[i]=data;
           
 
-            i = 217;
+            i = 216;
             data = "1 goal (ID 1286)	  	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  a : A	  b : B	  ============================	  u (a, mon_unit) + u (mon_unit, b) = u (a, b)	";
             responses[i]=data;
           
 
-            i = 218;
+            i = 217;
             data = "1 goal (ID 1306)	  	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  a : A	  b : B	  ============================	  (a, mon_unit) + (mon_unit, b) = (a, b)	";
             responses[i]=data;
           
 
-            i = 219;
+            i = 218;
             data = "2 goals (ID 1309)	  	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  a : A	  b : B	  ============================	  fst ((a, mon_unit) + (mon_unit, b)) = fst (a, b)		goal 2 (ID 1310) is:	 snd ((a, mon_unit) + (mon_unit, b)) = snd (a, b)	";
             responses[i]=data;
           
 
-            i = 220;
+            i = 219;
             data = "1 goal (ID 1309)	  	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  a : A	  b : B	  ============================	  fst ((a, mon_unit) + (mon_unit, b)) = fst (a, b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 1310) is:	 snd ((a, mon_unit) + (mon_unit, b)) = snd (a, b)	";
             responses[i]=data;
           
 
-            i = 221;
+            i = 220;
             data = "1 goal (ID 1310)	  	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  a : A	  b : B	  ============================	  snd ((a, mon_unit) + (mon_unit, b)) = snd (a, b)	No more goals.	";
             responses[i]=data;
           
 
-            i = 222;
+            i = 221;
             data = "";
             responses[i]=data;
           
 
-            i = 223;
+            i = 222;
             data = "1 goal (ID 1308)	  	  H : Funext	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  ============================	  ab_biprod_rec (u $o ab_biprod_inl) (u $o ab_biprod_inr) = u	";
             responses[i]=data;
           
 
-            i = 224;
+            i = 223;
             data = "";
             responses[i]=data;
           
 
-            i = 225;
+            i = 224;
             data = "1 goal (ID 1317)	  	  H : Funext	  A, B, Y : AbGroup	  u : ab_biprod A B $-> Y	  ============================	  ab_biprod_rec (u $o ab_biprod_inl) (u $o ab_biprod_inr) == u	";
             responses[i]=data;
           
 
-            i = 226;
+            i = 225;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 226;
+            data = "";
             responses[i]=data;
           
 
             i = 227;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 228;
             data = "1 goal (ID 1332)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  ab_biprod_rec a b $o ab_biprod_inl = a	";
             responses[i]=data;
           
 
-            i = 229;
+            i = 228;
             data = "";
             responses[i]=data;
           
 
-            i = 230;
+            i = 229;
             data = "1 goal (ID 1341)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  ab_biprod_rec a b $o ab_biprod_inl == a	";
             responses[i]=data;
           
 
-            i = 231;
+            i = 230;
             data = "1 goal (ID 1344)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  x : A	  ============================	  a x + b mon_unit = a x	";
             responses[i]=data;
           
 
-            i = 232;
+            i = 231;
             data = "1 goal (ID 1347)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  x : A	  ============================	  a x + mon_unit = a x	";
             responses[i]=data;
           
 
-            i = 233;
+            i = 232;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 233;
+            data = "";
             responses[i]=data;
           
 
             i = 234;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 235;
             data = "1 goal (ID 1356)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  ab_biprod_rec a b $o ab_biprod_inr = b	";
             responses[i]=data;
           
 
-            i = 236;
+            i = 235;
             data = "";
             responses[i]=data;
           
 
-            i = 237;
+            i = 236;
             data = "1 goal (ID 1365)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  ab_biprod_rec a b $o ab_biprod_inr == b	";
             responses[i]=data;
           
 
-            i = 238;
+            i = 237;
             data = "1 goal (ID 1368)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  y : B	  ============================	  a mon_unit + b y = b y	";
             responses[i]=data;
           
 
-            i = 239;
+            i = 238;
             data = "1 goal (ID 1371)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  y : B	  ============================	  mon_unit + b y = b y	";
             responses[i]=data;
           
 
-            i = 240;
+            i = 239;
             data = "No more goals.	";
             responses[i]=data;
           
 
-            i = 241;
+            i = 240;
             data = "";
             responses[i]=data;
           
 
-            i = 242;
+            i = 241;
             data = "1 goal (ID 1363)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  IsEquiv ab_biprod_rec_uncurried	";
             responses[i]=data;
           
 
-            i = 243;
+            i = 242;
             data = "";
             responses[i]=data;
           
 
-            i = 244;
+            i = 243;
             data = "3 goals (ID 1389)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  (ab_biprod A B $-> Y) -> ((A $-> Y) * (B $-> Y))%type		goal 2 (ID 1391) is:	 ab_biprod_rec_uncurried o ?g == idmap	goal 3 (ID 1393) is:	 ?g o ab_biprod_rec_uncurried == idmap	";
             responses[i]=data;
           
 
-            i = 245;
+            i = 244;
             data = "1 goal (ID 1389)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  (ab_biprod A B $-> Y) -> ((A $-> Y) * (B $-> Y))%type	1 goal (ID 1394)	  	  H : Funext	  A, B, Y : AbGroup	  phi : ab_biprod A B $-> Y	  ============================	  (A $-> Y) * (B $-> Y)	";
             responses[i]=data;
           
 
-            i = 246;
+            i = 245;
             data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 1391) is:	 ab_biprod_rec_uncurried	 o (fun phi : ab_biprod A B $-> Y =>	    (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) == idmap	goal 2 (ID 1393) is:	 (fun phi : ab_biprod A B $-> Y =>	  (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) o ab_biprod_rec_uncurried ==	 idmap	";
             responses[i]=data;
           
 
-            i = 247;
+            i = 246;
             data = "1 goal (ID 1391)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  ab_biprod_rec_uncurried	  o (fun phi : ab_biprod A B $-> Y =>	     (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) == idmap	1 goal (ID 1414)	  	  H : Funext	  A, B, Y : AbGroup	  phi : ab_biprod A B $-> Y	  ============================	  ab_biprod_rec_uncurried (phi $o ab_biprod_inl, phi $o ab_biprod_inr) = phi	";
             responses[i]=data;
           
 
-            i = 248;
+            i = 247;
             data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 1393) is:	 (fun phi : ab_biprod A B $-> Y =>	  (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) o ab_biprod_rec_uncurried ==	 idmap	";
             responses[i]=data;
           
 
-            i = 249;
+            i = 248;
             data = "1 goal (ID 1393)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  (fun phi : ab_biprod A B $-> Y =>	   (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) o ab_biprod_rec_uncurried ==	  idmap	1 goal (ID 1424)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	  ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	  (a, b)	";
             responses[i]=data;
           
 
-            i = 250;
+            i = 249;
             data = "2 goals (ID 1427)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  fst	    (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	    ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	  fst (a, b)		goal 2 (ID 1428) is:	 snd	   (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	   ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	 snd (a, b)	";
             responses[i]=data;
           
 
-            i = 251;
+            i = 250;
             data = "1 goal (ID 1427)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  fst	    (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	    ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	  fst (a, b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 1428) is:	 snd	   (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	   ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	 snd (a, b)	";
             responses[i]=data;
           
 
-            i = 252;
+            i = 251;
             data = "1 goal (ID 1428)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  snd	    (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	    ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	  snd (a, b)	No more goals.	";
+            responses[i]=data;
+          
+
+            i = 252;
+            data = "";
             responses[i]=data;
           
 
@@ -1303,17 +1303,17 @@
           
 
             i = 257;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 258;
             data = "<infomsg>ab_biprod_corec is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 259;
+            i = 258;
             data = "<infomsg>ab_corec_beta is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 259;
+            data = "";
             responses[i]=data;
           
 
@@ -1348,77 +1348,77 @@
           
 
             i = 266;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 267;
             data = "<infomsg>functor_ab_biprod is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 268;
+            i = 267;
             data = "<infomsg>ab_biprod_functor_beta is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 269;
+            i = 268;
             data = "1 goal (ID 1504)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  IsEquiv (functor_ab_biprod f g)	";
             responses[i]=data;
           
 
-            i = 270;
+            i = 269;
             data = "";
             responses[i]=data;
           
 
-            i = 271;
+            i = 270;
             data = "3 goals (ID 1530)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  ab_biprod A' B' -> ab_biprod A B		goal 2 (ID 1532) is:	 functor_ab_biprod f g o ?g == idmap	goal 3 (ID 1534) is:	 ?g o functor_ab_biprod f g == idmap	";
             responses[i]=data;
           
 
-            i = 272;
+            i = 271;
             data = "1 goal (ID 1530)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  ab_biprod A' B' -> ab_biprod A B	2 goals (ID 1560)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  GroupIsomorphism A A'		goal 2 (ID 1566) is:	 GroupIsomorphism B B'	";
             responses[i]=data;
           
 
-            i = 273;
+            i = 272;
             data = "1 goal (ID 1560)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  GroupIsomorphism A A'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 goals		goal 1 (ID 1566) is:	 GroupIsomorphism B B'	goal 2 (ID 1532) is:	 functor_ab_biprod f g	 o functor_ab_biprod	     (let X :=	        fun H1 : GroupIsomorphism A A' =>	        grp_iso_homo A' A (grp_iso_inverse H1) in	      X {| grp_iso_homo := f; isequiv_group_iso := H |})	     (let X :=	        fun H1 : GroupIsomorphism B B' =>	        grp_iso_homo B' B (grp_iso_inverse H1) in	      X ?Goal) == idmap	goal 3 (ID 1534) is:	 functor_ab_biprod	   (let X :=	      fun H1 : GroupIsomorphism A A' =>	      grp_iso_homo A' A (grp_iso_inverse H1) in	    X {| grp_iso_homo := f; isequiv_group_iso := H |})	   (let X :=	      fun H1 : GroupIsomorphism B B' =>	      grp_iso_homo B' B (grp_iso_inverse H1) in	    X ?Goal) o functor_ab_biprod f g == idmap	";
             responses[i]=data;
           
 
-            i = 274;
+            i = 273;
             data = "1 goal (ID 1566)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  GroupIsomorphism B B'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 1532) is:	 functor_ab_biprod f g	 o functor_ab_biprod	     (let X :=	        fun H1 : GroupIsomorphism A A' =>	        grp_iso_homo A' A (grp_iso_inverse H1) in	      X {| grp_iso_homo := f; isequiv_group_iso := H |})	     (let X :=	        fun H1 : GroupIsomorphism B B' =>	        grp_iso_homo B' B (grp_iso_inverse H1) in	      X {| grp_iso_homo := g; isequiv_group_iso := H0 |}) == idmap	goal 2 (ID 1534) is:	 functor_ab_biprod	   (let X :=	      fun H1 : GroupIsomorphism A A' =>	      grp_iso_homo A' A (grp_iso_inverse H1) in	    X {| grp_iso_homo := f; isequiv_group_iso := H |})	   (let X :=	      fun H1 : GroupIsomorphism B B' =>	      grp_iso_homo B' B (grp_iso_inverse H1) in	    X {| grp_iso_homo := g; isequiv_group_iso := H0 |})	 o functor_ab_biprod f g == idmap	";
             responses[i]=data;
           
 
-            i = 275;
+            i = 274;
             data = "2 goals (ID 1532)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  ============================	  functor_ab_biprod f g	  o functor_ab_biprod	      (let X :=	         fun H1 : GroupIsomorphism A A' =>	         grp_iso_homo A' A (grp_iso_inverse H1) in	       X {| grp_iso_homo := f; isequiv_group_iso := H |})	      (let X :=	         fun H1 : GroupIsomorphism B B' =>	         grp_iso_homo B' B (grp_iso_inverse H1) in	       X {| grp_iso_homo := g; isequiv_group_iso := H0 |}) == idmap		goal 2 (ID 1534) is:	 functor_ab_biprod	   (let X :=	      fun H1 : GroupIsomorphism A A' =>	      grp_iso_homo A' A (grp_iso_inverse H1) in	    X {| grp_iso_homo := f; isequiv_group_iso := H |})	   (let X :=	      fun H1 : GroupIsomorphism B B' =>	      grp_iso_homo B' B (grp_iso_inverse H1) in	    X {| grp_iso_homo := g; isequiv_group_iso := H0 |})	 o functor_ab_biprod f g == idmap	2 goals (ID 1591)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  a : A'	  b : B'	  ============================	  (f (f^-1 a), g (g^-1 b)) = (a, b)		goal 2 (ID 1592) is:	 (f^-1 (f a), g^-1 (g b)) = (a, b)	";
             responses[i]=data;
           
 
-            i = 276;
+            i = 275;
             data = "4 goals (ID 1599)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  a : A'	  b : B'	  ============================	  f (f^-1 a) = a		goal 2 (ID 1600) is:	 g (g^-1 b) = b	goal 3 (ID 1607) is:	 f^-1 (f a) = a	goal 4 (ID 1608) is:	 g^-1 (g b) = b	";
             responses[i]=data;
           
 
-            i = 277;
+            i = 276;
             data = "2 goals (ID 1607)	  	  A, A', B, B' : AbGroup	  f : A $-> A'	  g : B $-> B'	  H : IsEquiv f	  H0 : IsEquiv g	  a : A	  b : B	  ============================	  f^-1 (f a) = a		goal 2 (ID 1608) is:	 g^-1 (g b) = b	";
             responses[i]=data;
           
 
-            i = 278;
+            i = 277;
             data = "No more goals.	";
             responses[i]=data;
           
 
-            i = 279;
+            i = 278;
             data = "";
             responses[i]=data;
           
 
-            i = 280;
+            i = 279;
             data = "<infomsg>equiv_functor_ab_biprod is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 280;
+            data = "";
             responses[i]=data;
           
 
@@ -1493,52 +1493,52 @@
           
 
             i = 295;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 296;
             data = "<infomsg>ab_kernel is defined</infomsg>	1 goal (ID 2336)	  	  H : Univalence	  A, B, B' : AbGroup	  p : B = B'	  f : GroupHomomorphism A B	  ============================	  transport (Hom A) p f = grp_homo_compose (equiv_path_abgroup^-1 p) f	";
             responses[i]=data;
           
 
-            i = 297;
+            i = 296;
             data = "";
             responses[i]=data;
           
 
-            i = 298;
+            i = 297;
             data = "1 goal (ID 2340)	  	  H : Univalence	  A, B : AbGroup	  f : GroupHomomorphism A B	  ============================	  transport (Hom A) 1 f = grp_homo_compose (equiv_path_abgroup^-1 1%path) f	";
             responses[i]=data;
           
 
-            i = 299;
+            i = 298;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 299;
+            data = "";
             responses[i]=data;
           
 
             i = 300;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 301;
             data = "1 goal (ID 2370)	  	  H : Univalence	  A, A', B : AbGroup	  p : A = A'	  f : GroupHomomorphism A B	  ============================	  transport (fun G : AbGroup => G $-> B) p f =	  grp_homo_compose f (grp_iso_inverse (equiv_path_abgroup^-1 p))	";
             responses[i]=data;
           
 
-            i = 302;
+            i = 301;
             data = "";
             responses[i]=data;
           
 
-            i = 303;
+            i = 302;
             data = "1 goal (ID 2375)	  	  H : Univalence	  A, B : AbGroup	  f : GroupHomomorphism A B	  ============================	  f = grp_homo_compose f (Build_GroupHomomorphism idmap)	";
             responses[i]=data;
           
 
-            i = 304;
+            i = 303;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 304;
+            data = "";
             responses[i]=data;
           
 
@@ -1588,62 +1588,62 @@
           
 
             i = 314;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 315;
             data = "1 goal (ID 2372)	  	  A : AbGroup	  ============================	  GroupIsomorphism A A	";
             responses[i]=data;
           
 
-            i = 316;
+            i = 315;
             data = "";
             responses[i]=data;
           
 
-            i = 317;
+            i = 316;
             data = "2 goals (ID 2390)	  	  A : AbGroup	  ============================	  GroupHomomorphism A A		goal 2 (ID 2392) is:	 IsEquiv ?grp_iso_homo	";
             responses[i]=data;
           
 
-            i = 318;
+            i = 317;
             data = "1 goal (ID 2390)	  	  A : AbGroup	  ============================	  GroupHomomorphism A A	2 goals (ID 2412)	  	  A : AbGroup	  ============================	  A -> A		goal 2 (ID 2414) is:	 IsSemiGroupPreserving ?f	";
             responses[i]=data;
           
 
-            i = 319;
+            i = 318;
             data = "1 goal (ID 2412)	  	  A : AbGroup	  ============================	  A -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 2414) is:	 IsSemiGroupPreserving (fun a : A => - a)	goal 2 (ID 2392) is:	 IsEquiv (Build_GroupHomomorphism (fun a : A => - a))	";
             responses[i]=data;
           
 
-            i = 320;
+            i = 319;
             data = "1 goal (ID 2414)	  	  A : AbGroup	  ============================	  IsSemiGroupPreserving (fun a : A => - a)	1 goal (ID 2430)	  	  A : AbGroup	  x, y : A	  ============================	  - (x + y) = - x + - y	";
             responses[i]=data;
           
 
-            i = 321;
+            i = 320;
             data = "1 goal (ID 2438)	  	  A : AbGroup	  x, y : A	  ============================	  - y + - x = - x + - y	";
             responses[i]=data;
           
 
-            i = 322;
+            i = 321;
             data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 2392) is:	 IsEquiv (Build_GroupHomomorphism (fun a : A => - a))	";
             responses[i]=data;
           
 
-            i = 323;
+            i = 322;
             data = "1 goal (ID 2392)	  	  A : AbGroup	  ============================	  IsEquiv (Build_GroupHomomorphism (fun a : A => - a))	3 goals (ID 2468)	  	  A : AbGroup	  ============================	  A -> A		goal 2 (ID 2470) is:	 Build_GroupHomomorphism (fun a : A => - a) o ?g == idmap	goal 3 (ID 2472) is:	 ?g o Build_GroupHomomorphism (fun a : A => - a) == idmap	";
             responses[i]=data;
           
 
-            i = 324;
+            i = 323;
             data = "2 goals (ID 2470)	  	  A : AbGroup	  ============================	  Build_GroupHomomorphism (fun a : A => - a) o (fun a : A => - a) == idmap		goal 2 (ID 2472) is:	 (fun a : A => - a) o Build_GroupHomomorphism (fun a : A => - a) == idmap	";
             responses[i]=data;
           
 
-            i = 325;
+            i = 324;
             data = "No more goals.	";
+            responses[i]=data;
+          
+
+            i = 325;
+            data = "";
             responses[i]=data;
           
 
@@ -1708,12 +1708,12 @@
           
 
             i = 338;
-            data = "";
+            data = "<infomsg>ab_add_homo is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 339;
-            data = "<infomsg>ab_add_homo is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -1733,22 +1733,22 @@
           
 
             i = 343;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 344;
             data = "1 goal (ID 2390)	  	  A : Group	  B : AbGroup	  f, g : A $-> B	  ============================	  A $-> B	";
             responses[i]=data;
           
 
-            i = 345;
+            i = 344;
             data = "";
             responses[i]=data;
           
 
-            i = 346;
+            i = 345;
             data = "1 goal (ID 2396)	  	  A : Group	  B : AbGroup	  f, g : A $-> B	  ============================	  GroupHomomorphism A (ab_biprod B B)	";
+            responses[i]=data;
+          
+
+            i = 346;
+            data = "";
             responses[i]=data;
           
 
@@ -1828,12 +1828,12 @@
           
 
             i = 362;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 363;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1888,11 +1888,6 @@
           
 
             i = 374;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 375;
             data = "";
             responses[i]=data;
           
@@ -2473,46 +2468,42 @@ AbGroup is a pointed category
       " onmouseover="
       mouseover(137, '0_3_35');
       "><br>
-    <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_unit"><span class="id" title="definition">grp_homo_unit</span></a> <span class="id" title="var">g</span>). }</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_unit"><span class="id" title="definition">grp_homo_unit</span></a> <span class="id" title="var">g</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>. }<br>
+  <span class="id" title="tactic">intro</span> <span class="id" title="var">A</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(138, '0_3_35');
       "><br>
-  <span class="id" title="tactic">intro</span> <span class="id" title="var">A</span>.</span><span class="command" onmouseout="
+  <span class="id" title="var">snrefine</span> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupHomomorphism"><span class="id" title="definition">Build_GroupHomomorphism</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#mon_unit"><span class="id" title="definition">mon_unit</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(139, '0_3_35');
       "><br>
-  <span class="id" title="var">snrefine</span> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupHomomorphism"><span class="id" title="definition">Build_GroupHomomorphism</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#mon_unit"><span class="id" title="definition">mon_unit</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+  1: <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(140, '0_3_35');
       "><br>
-  1: <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_35');
-      " onmouseover="
-      mouseover(141, '0_3_35');
-      "><br>
   { <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">symmetry</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(142, '0_3_35');
+      mouseover(141, '0_3_35');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_identity"><span class="id" title="definition">left_identity</span></a>. }<br>
   <span class="id" title="tactic">intros</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(143, '0_3_35');
+      mouseover(142, '0_3_35');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Unit.html#path_unit"><span class="id" title="definition">path_unit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(144, '0_3_35');
+      mouseover(143, '0_3_35');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(145, '0_3_35');
+      mouseover(144, '0_3_35');
       "><br>
 <br>
 </span>
@@ -2525,13 +2516,13 @@ Image of group homomorphisms between abelian groups
 <span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
-      mouseover(149, '0_3_39');
+      mouseover(148, '0_3_39');
       ">
 <span class="id" title="keyword">Definition</span> <a id="abgroup_image" class="idref" href="#abgroup_image"><span class="id" title="definition">abgroup_image</span></a> {<a id="A:30" class="idref" href="#A:30"><span class="id" title="binder">A</span></a> <a id="B:31" class="idref" href="#B:31"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f:32" class="idref" href="#f:32"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:30"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:31"><span class="id" title="variable">B</span></a>) : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a><br>
   := <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a> (<a class="idref" href="HoTT.Algebra.Groups.Image.html#grp_image"><span class="id" title="definition">grp_image</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:32"><span class="id" title="variable">f</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
-      mouseover(150, '0_3_39');
+      mouseover(149, '0_3_39');
       "><br>
 <br>
 </span>
@@ -2544,38 +2535,38 @@ First isomorphism theorem of abelian groups
 <span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(154, '0_3_43');
+      mouseover(153, '0_3_43');
       ">
 <span class="id" title="keyword">Definition</span> <a id="abgroup_first_iso" class="idref" href="#abgroup_first_iso"><span class="id" title="definition">abgroup_first_iso</span></a> `{<a id="H:33" class="idref" href="#H:33"><span class="id" title="binder">Funext</span></a>} {<a id="A:34" class="idref" href="#A:34"><span class="id" title="binder">A</span></a> <a id="B:35" class="idref" href="#B:35"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f:36" class="idref" href="#f:36"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:34"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:35"><span class="id" title="variable">B</span></a>)<br>
   : <a class="idref" href="HoTT.Algebra.Groups.Group.html#GroupIsomorphism"><span class="id" title="record">GroupIsomorphism</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#QuotientAbGroup"><span class="id" title="definition">QuotientAbGroup</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:34"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Algebra.Groups.Kernel.html#grp_kernel"><span class="id" title="definition">grp_kernel</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:36"><span class="id" title="variable">f</span></a>)) (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#abgroup_image"><span class="id" title="definition">abgroup_image</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:36"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(155, '0_3_43');
+      mouseover(154, '0_3_43');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(156, '0_3_43');
+      mouseover(155, '0_3_43');
       "><br>
   <span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(157, '0_3_43');
+      mouseover(156, '0_3_43');
       "><br>
   2: <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.Groups.QuotientGroup.html#grp_first_iso"><span class="id" title="lemma">grp_first_iso</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(158, '0_3_43');
+      mouseover(157, '0_3_43');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.QuotientGroup.html#grp_iso_quotient_normal"><span class="id" title="definition">grp_iso_quotient_normal</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(159, '0_3_43');
+      mouseover(158, '0_3_43');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
-      mouseover(160, '0_3_43');
+      mouseover(159, '0_3_43');
       "><br>
 <br>
 </span>
@@ -2588,38 +2579,38 @@ First isomorphism theorem of abelian groups
 <span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(167, '0_3_47');
+      mouseover(166, '0_3_47');
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod" class="idref" href="#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> (<a id="A:37" class="idref" href="#A:37"><span class="id" title="binder">A</span></a> <a id="B:38" class="idref" href="#B:38"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>) : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(168, '0_3_47');
+      mouseover(167, '0_3_47');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(169, '0_3_47');
+      mouseover(168, '0_3_47');
       "><br>
   <span class="id" title="var">rapply</span> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod"><span class="id" title="definition">grp_prod</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(170, '0_3_47');
+      mouseover(169, '0_3_47');
       "><br>
   <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>] [<span class="id" title="var">a'</span> <span class="id" title="var">b'</span>].</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(171, '0_3_47');
+      mouseover(170, '0_3_47');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Prod.html#path_prod"><span class="id" title="definition">path_prod</span></a>; <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(172, '0_3_47');
+      mouseover(171, '0_3_47');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
-      mouseover(173, '0_3_47');
+      mouseover(172, '0_3_47');
       "><br>
 <br>
 </span>
@@ -2632,17 +2623,17 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Basics.Trunc.
 <span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
-      mouseover(181, '0_3_51');
+      mouseover(180, '0_3_51');
       ">
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod_inl" class="idref" href="#ab_biprod_inl"><span class="id" title="definition">ab_biprod_inl</span></a> {<a id="A:39" class="idref" href="#A:39"><span class="id" title="binder">A</span></a> <a id="B:40" class="idref" href="#B:40"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:39"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:39"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:40"><span class="id" title="variable">B</span></a> := <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod_inl"><span class="id" title="definition">grp_prod_inl</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
-      mouseover(182, '0_3_51');
+      mouseover(181, '0_3_51');
       "><br>
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod_inr" class="idref" href="#ab_biprod_inr"><span class="id" title="definition">ab_biprod_inr</span></a> {<a id="A:41" class="idref" href="#A:41"><span class="id" title="binder">A</span></a> <a id="B:42" class="idref" href="#B:42"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:42"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:41"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:42"><span class="id" title="variable">B</span></a> := <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod_inr"><span class="id" title="definition">grp_prod_inr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
-      mouseover(183, '0_3_51');
+      mouseover(182, '0_3_51');
       "><br>
 <br>
 </span>
@@ -2655,74 +2646,74 @@ Recursion principle
 <span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(187, '0_3_55');
+      mouseover(186, '0_3_55');
       ">
 <span class="id" title="keyword">Proposition</span> <a id="ab_biprod_rec" class="idref" href="#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> {<a id="A:43" class="idref" href="#A:43"><span class="id" title="binder">A</span></a> <a id="B:44" class="idref" href="#B:44"><span class="id" title="binder">B</span></a> <a id="Y:45" class="idref" href="#Y:45"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
             (<a id="f:46" class="idref" href="#f:46"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:43"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:45"><span class="id" title="variable">Y</span></a>) (<a id="g:47" class="idref" href="#g:47"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:44"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:45"><span class="id" title="variable">Y</span></a>)<br>
   : <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:43"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:44"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:45"><span class="id" title="variable">Y</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(188, '0_3_55');
+      mouseover(187, '0_3_55');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(189, '0_3_55');
+      mouseover(188, '0_3_55');
       "><br>
   <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupHomomorphism"><span class="id" title="definition">Build_GroupHomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(190, '0_3_55');
+      mouseover(189, '0_3_55');
       "><br>
   - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>]; <span class="id" title="tactic">exact</span> (<span class="id" title="var">f</span> <span class="id" title="var">a</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#903023549b997efe3766fb719fc396b5"><span class="id" title="notation">+</span></a> <span class="id" title="var">g</span> <span class="id" title="var">b</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(191, '0_3_55');
+      mouseover(190, '0_3_55');
       "><br>
   - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>] [<span class="id" title="var">a'</span> <span class="id" title="var">b'</span>]; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(192, '0_3_55');
+      mouseover(191, '0_3_55');
       "><br>
     <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_op"><span class="id" title="definition">grp_homo_op</span></a> <span class="id" title="var">f</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(193, '0_3_55');
+      mouseover(192, '0_3_55');
       "><br>
     <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_op"><span class="id" title="definition">grp_homo_op</span></a> <span class="id" title="var">g</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(194, '0_3_55');
+      mouseover(193, '0_3_55');
       "><br>
     <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#associativity"><span class="id" title="definition">associativity</span></a> <span class="id" title="var">_</span> (<span class="id" title="var">g</span> <span class="id" title="var">b</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(195, '0_3_55');
+      mouseover(194, '0_3_55');
       "><br>
     <span class="id" title="tactic">rewrite</span> &lt;- (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#associativity"><span class="id" title="definition">associativity</span></a> <span class="id" title="var">_</span> (<span class="id" title="var">f</span> <span class="id" title="var">a'</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(196, '0_3_55');
+      mouseover(195, '0_3_55');
       "><br>
     <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a> (<span class="id" title="var">f</span> <span class="id" title="var">a'</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(197, '0_3_55');
+      mouseover(196, '0_3_55');
       "><br>
     <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#associativity"><span class="id" title="definition">associativity</span></a> <span class="id" title="var">_</span> (<span class="id" title="var">g</span> <span class="id" title="var">b</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(198, '0_3_55');
+      mouseover(197, '0_3_55');
       "><br>
     <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#associativity"><span class="id" title="definition">associativity</span></a> <span class="id" title="var">_</span> (<span class="id" title="var">f</span> <span class="id" title="var">a'</span>) <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(199, '0_3_55');
+      mouseover(198, '0_3_55');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
-      mouseover(200, '0_3_55');
+      mouseover(199, '0_3_55');
       "><br>
 <br>
 </span>
@@ -2735,17 +2726,17 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Truncations.C
 <span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(208, '0_3_59');
+      mouseover(207, '0_3_59');
       ">
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod_pr1" class="idref" href="#ab_biprod_pr1"><span class="id" title="definition">ab_biprod_pr1</span></a> {<a id="A:48" class="idref" href="#A:48"><span class="id" title="binder">A</span></a> <a id="B:49" class="idref" href="#B:49"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:48"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:49"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:48"><span class="id" title="variable">A</span></a> := <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod_pr1"><span class="id" title="definition">grp_prod_pr1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(209, '0_3_59');
+      mouseover(208, '0_3_59');
       "><br>
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod_pr2" class="idref" href="#ab_biprod_pr2"><span class="id" title="definition">ab_biprod_pr2</span></a> {<a id="A:50" class="idref" href="#A:50"><span class="id" title="binder">A</span></a> <a id="B:51" class="idref" href="#B:51"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:50"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:51"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:51"><span class="id" title="variable">B</span></a> := <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod_pr2"><span class="id" title="definition">grp_prod_pr2</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(210, '0_3_59');
+      mouseover(209, '0_3_59');
       "><br>
 <br>
 <span class="id" title="keyword">Corollary</span> <a id="ab_biprod_rec_uncurried" class="idref" href="#ab_biprod_rec_uncurried"><span class="id" title="lemma">ab_biprod_rec_uncurried</span></a> {<a id="A:52" class="idref" href="#A:52"><span class="id" title="binder">A</span></a> <a id="B:53" class="idref" href="#B:53"><span class="id" title="binder">B</span></a> <a id="Y:54" class="idref" href="#Y:54"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -2753,26 +2744,26 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Truncations.C
     <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:52"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:53"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:54"><span class="id" title="variable">Y</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(211, '0_3_59');
+      mouseover(210, '0_3_59');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(212, '0_3_59');
+      mouseover(211, '0_3_59');
       "><br>
   <span class="id" title="tactic">intros</span> [<span class="id" title="var">f</span> <span class="id" title="var">g</span>]. </span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(213, '0_3_59');
+      mouseover(212, '0_3_59');
       "><span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> <span class="id" title="var">f</span> <span class="id" title="var">g</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(214, '0_3_59');
+      mouseover(213, '0_3_59');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(215, '0_3_59');
+      mouseover(214, '0_3_59');
       "><br>
 <br>
 <span class="id" title="keyword">Proposition</span> <a id="ab_biprod_rec_beta'" class="idref" href="#ab_biprod_rec_beta'"><span class="id" title="lemma">ab_biprod_rec_beta'</span></a> {<a id="A:55" class="idref" href="#A:55"><span class="id" title="binder">A</span></a> <a id="B:56" class="idref" href="#B:56"><span class="id" title="binder">B</span></a> <a id="Y:57" class="idref" href="#Y:57"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -2780,42 +2771,42 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Truncations.C
   : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#u:58"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inl"><span class="id" title="definition">ab_biprod_inl</span></a>) (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#u:58"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inr"><span class="id" title="definition">ab_biprod_inr</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#u:58"><span class="id" title="variable">u</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(216, '0_3_59');
+      mouseover(215, '0_3_59');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(217, '0_3_59');
+      mouseover(216, '0_3_59');
       "><br>
   <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>]; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(218, '0_3_59');
+      mouseover(217, '0_3_59');
       "><br>
   <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_op"><span class="id" title="definition">grp_homo_op</span></a> <span class="id" title="var">u</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">u</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(219, '0_3_59');
+      mouseover(218, '0_3_59');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Prod.html#path_prod"><span class="id" title="definition">path_prod</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(220, '0_3_59');
+      mouseover(219, '0_3_59');
       "><br>
   - <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_identity"><span class="id" title="definition">right_identity</span></a> <span class="id" title="var">a</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(221, '0_3_59');
+      mouseover(220, '0_3_59');
       "><br>
   - <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_identity"><span class="id" title="definition">left_identity</span></a> <span class="id" title="var">b</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(222, '0_3_59');
+      mouseover(221, '0_3_59');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(223, '0_3_59');
+      mouseover(222, '0_3_59');
       "><br>
 <br>
 <span class="id" title="keyword">Proposition</span> <a id="ab_biprod_rec_beta" class="idref" href="#ab_biprod_rec_beta"><span class="id" title="lemma">ab_biprod_rec_beta</span></a> `{<a id="H:59" class="idref" href="#H:59"><span class="id" title="binder">Funext</span></a>} {<a id="A:60" class="idref" href="#A:60"><span class="id" title="binder">A</span></a> <a id="B:61" class="idref" href="#B:61"><span class="id" title="binder">B</span></a> <a id="Y:62" class="idref" href="#Y:62"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -2823,27 +2814,27 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Truncations.C
   : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#u:63"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inl"><span class="id" title="definition">ab_biprod_inl</span></a>) (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#u:63"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inr"><span class="id" title="definition">ab_biprod_inr</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#u:63"><span class="id" title="variable">u</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(224, '0_3_59');
+      mouseover(223, '0_3_59');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(225, '0_3_59');
+      mouseover(224, '0_3_59');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#equiv_path_grouphomomorphism"><span class="id" title="definition">equiv_path_grouphomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(226, '0_3_59');
+      mouseover(225, '0_3_59');
       "><br>
   <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec_beta'"><span class="id" title="lemma">ab_biprod_rec_beta'</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(227, '0_3_59');
+      mouseover(226, '0_3_59');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(228, '0_3_59');
+      mouseover(227, '0_3_59');
       "><br>
 <br>
 <span class="id" title="keyword">Proposition</span> <a id="ab_biprod_rec_inl_beta" class="idref" href="#ab_biprod_rec_inl_beta"><span class="id" title="lemma">ab_biprod_rec_inl_beta</span></a> `{<a id="H:64" class="idref" href="#H:64"><span class="id" title="binder">Funext</span></a>} {<a id="A:65" class="idref" href="#A:65"><span class="id" title="binder">A</span></a> <a id="B:66" class="idref" href="#B:66"><span class="id" title="binder">B</span></a> <a id="Y:67" class="idref" href="#Y:67"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -2851,37 +2842,37 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Truncations.C
   : <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#a:68"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#b:69"><span class="id" title="variable">b</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inl"><span class="id" title="definition">ab_biprod_inl</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#a:68"><span class="id" title="variable">a</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(229, '0_3_59');
+      mouseover(228, '0_3_59');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(230, '0_3_59');
+      mouseover(229, '0_3_59');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#equiv_path_grouphomomorphism"><span class="id" title="definition">equiv_path_grouphomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(231, '0_3_59');
+      mouseover(230, '0_3_59');
       "><br>
   <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(232, '0_3_59');
+      mouseover(231, '0_3_59');
       "><br>
   <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_unit"><span class="id" title="definition">grp_homo_unit</span></a> <span class="id" title="var">b</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(233, '0_3_59');
+      mouseover(232, '0_3_59');
       "><br>
   <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#right_identity"><span class="id" title="definition">right_identity</span></a> (<span class="id" title="var">a</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(234, '0_3_59');
+      mouseover(233, '0_3_59');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(235, '0_3_59');
+      mouseover(234, '0_3_59');
       "><br>
 <br>
 <span class="id" title="keyword">Proposition</span> <a id="ab_biprod_rec_inr_beta" class="idref" href="#ab_biprod_rec_inr_beta"><span class="id" title="lemma">ab_biprod_rec_inr_beta</span></a> `{<a id="H:70" class="idref" href="#H:70"><span class="id" title="binder">Funext</span></a>} {<a id="A:71" class="idref" href="#A:71"><span class="id" title="binder">A</span></a> <a id="B:72" class="idref" href="#B:72"><span class="id" title="binder">B</span></a> <a id="Y:73" class="idref" href="#Y:73"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -2889,99 +2880,99 @@ These inherit <span class="inlinecode"><a class="idref" href="HoTT.Truncations.C
   : <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#a:74"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#b:75"><span class="id" title="variable">b</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inr"><span class="id" title="definition">ab_biprod_inr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#b:75"><span class="id" title="variable">b</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(236, '0_3_59');
+      mouseover(235, '0_3_59');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(237, '0_3_59');
+      mouseover(236, '0_3_59');
       "><br>
   <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#equiv_path_grouphomomorphism"><span class="id" title="definition">equiv_path_grouphomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(238, '0_3_59');
+      mouseover(237, '0_3_59');
       "><br>
   <span class="id" title="tactic">intro</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(239, '0_3_59');
+      mouseover(238, '0_3_59');
       "><br>
   <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_unit"><span class="id" title="definition">grp_homo_unit</span></a> <span class="id" title="var">a</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(240, '0_3_59');
+      mouseover(239, '0_3_59');
       "><br>
   <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#left_identity"><span class="id" title="definition">left_identity</span></a> (<span class="id" title="var">b</span> <span class="id" title="var">y</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(241, '0_3_59');
+      mouseover(240, '0_3_59');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(242, '0_3_59');
+      mouseover(241, '0_3_59');
       "><br>
 <br>
 <span class="id" title="keyword">Theorem</span> <a id="isequiv_ab_biprod_rec" class="idref" href="#isequiv_ab_biprod_rec"><span class="id" title="lemma">isequiv_ab_biprod_rec</span></a> `{<a id="H:76" class="idref" href="#H:76"><span class="id" title="binder">Funext</span></a>} {<a id="A:77" class="idref" href="#A:77"><span class="id" title="binder">A</span></a> <a id="B:78" class="idref" href="#B:78"><span class="id" title="binder">B</span></a> <a id="Y:79" class="idref" href="#Y:79"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (@<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec_uncurried"><span class="id" title="lemma">ab_biprod_rec_uncurried</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:77"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:78"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:79"><span class="id" title="variable">Y</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(243, '0_3_59');
+      mouseover(242, '0_3_59');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(244, '0_3_59');
+      mouseover(243, '0_3_59');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_adjointify"><span class="id" title="definition">isequiv_adjointify</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(245, '0_3_59');
+      mouseover(244, '0_3_59');
       "><br>
   - <span class="id" title="tactic">intro</span> <span class="id" title="var">phi</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(246, '0_3_59');
+      mouseover(245, '0_3_59');
       "><br>
     <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">phi</span> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inl"><span class="id" title="definition">ab_biprod_inl</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">phi</span> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_inr"><span class="id" title="definition">ab_biprod_inr</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(247, '0_3_59');
+      mouseover(246, '0_3_59');
       "><br>
   - <span class="id" title="tactic">intro</span> <span class="id" title="var">phi</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(248, '0_3_59');
+      mouseover(247, '0_3_59');
       "><br>
     <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec_beta"><span class="id" title="lemma">ab_biprod_rec_beta</span></a> <span class="id" title="var">phi</span>).</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(249, '0_3_59');
+      mouseover(248, '0_3_59');
       "><br>
   - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>].</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(250, '0_3_59');
+      mouseover(249, '0_3_59');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Prod.html#path_prod"><span class="id" title="definition">path_prod</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(251, '0_3_59');
+      mouseover(250, '0_3_59');
       "><br>
     + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec_inl_beta"><span class="id" title="lemma">ab_biprod_rec_inl_beta</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(252, '0_3_59');
+      mouseover(251, '0_3_59');
       "><br>
     + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec_inr_beta"><span class="id" title="lemma">ab_biprod_rec_inr_beta</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(253, '0_3_59');
+      mouseover(252, '0_3_59');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
-      mouseover(254, '0_3_59');
+      mouseover(253, '0_3_59');
       "><br>
 <br>
 </span>
@@ -2994,14 +2985,14 @@ Corecursion principle, inherited from Groups/Group.v.
 <span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
-      mouseover(258, '0_3_63');
+      mouseover(257, '0_3_63');
       ">
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod_corec" class="idref" href="#ab_biprod_corec"><span class="id" title="definition">ab_biprod_corec</span></a> {<a id="A:80" class="idref" href="#A:80"><span class="id" title="binder">A</span></a> <a id="B:81" class="idref" href="#B:81"><span class="id" title="binder">B</span></a> <a id="X:82" class="idref" href="#X:82"><span class="id" title="binder">X</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
            (<a id="f:83" class="idref" href="#f:83"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#X:82"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:80"><span class="id" title="variable">A</span></a>) (<a id="g:84" class="idref" href="#g:84"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#X:82"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:81"><span class="id" title="variable">B</span></a>)<br>
   : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#X:82"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:80"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:81"><span class="id" title="variable">B</span></a> := <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod_corec"><span class="id" title="lemma">grp_prod_corec</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:83"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#g:84"><span class="id" title="variable">g</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
-      mouseover(259, '0_3_63');
+      mouseover(258, '0_3_63');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="ab_corec_beta" class="idref" href="#ab_corec_beta"><span class="id" title="definition">ab_corec_beta</span></a> {<a id="X:85" class="idref" href="#X:85"><span class="id" title="binder">X</span></a> <a id="Y:86" class="idref" href="#Y:86"><span class="id" title="binder">Y</span></a> <a id="A:87" class="idref" href="#A:87"><span class="id" title="binder">A</span></a> <a id="B:88" class="idref" href="#B:88"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f:89" class="idref" href="#f:89"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#X:85"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:86"><span class="id" title="variable">Y</span></a>) (<a id="g0:90" class="idref" href="#g0:90"><span class="id" title="binder">g0</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:86"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:87"><span class="id" title="variable">A</span></a>) (<a id="g1:91" class="idref" href="#g1:91"><span class="id" title="binder">g1</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:86"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:88"><span class="id" title="variable">B</span></a>)<br>
@@ -3009,7 +3000,7 @@ Corecursion principle, inherited from Groups/Group.v.
   := <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
-      mouseover(260, '0_3_63');
+      mouseover(259, '0_3_63');
       "><br>
 <br>
 </span>
@@ -3023,7 +3014,7 @@ Corecursion principle, inherited from Groups/Group.v.
 <span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(267, '0_3_67');
+      mouseover(266, '0_3_67');
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="functor_ab_biprod" class="idref" href="#functor_ab_biprod"><span class="id" title="definition">functor_ab_biprod</span></a> {<a id="A:92" class="idref" href="#A:92"><span class="id" title="binder">A</span></a> <a id="A':93" class="idref" href="#A':93"><span class="id" title="binder">A'</span></a> <a id="B:94" class="idref" href="#B:94"><span class="id" title="binder">B</span></a> <a id="B':95" class="idref" href="#B':95"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f:96" class="idref" href="#f:96"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:92"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A':93"><span class="id" title="variable">A'</span></a>) (<a id="g:97" class="idref" href="#g:97"><span class="id" title="binder">g</span></a>: <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:94"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B':95"><span class="id" title="variable">B'</span></a>)<br>
@@ -3031,7 +3022,7 @@ Corecursion principle, inherited from Groups/Group.v.
   := (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_corec"><span class="id" title="definition">ab_biprod_corec</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:96"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_pr1"><span class="id" title="definition">ab_biprod_pr1</span></a>) (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#g:97"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_pr2"><span class="id" title="definition">ab_biprod_pr2</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(268, '0_3_67');
+      mouseover(267, '0_3_67');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="ab_biprod_functor_beta" class="idref" href="#ab_biprod_functor_beta"><span class="id" title="definition">ab_biprod_functor_beta</span></a> {<a id="Z:98" class="idref" href="#Z:98"><span class="id" title="binder">Z</span></a> <a id="X:99" class="idref" href="#X:99"><span class="id" title="binder">X</span></a> <a id="Y:100" class="idref" href="#Y:100"><span class="id" title="binder">Y</span></a> <a id="A:101" class="idref" href="#A:101"><span class="id" title="binder">A</span></a> <a id="B:102" class="idref" href="#B:102"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f0:103" class="idref" href="#f0:103"><span class="id" title="binder">f0</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Z:98"><span class="id" title="variable">Z</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#X:99"><span class="id" title="variable">X</span></a>) (<a id="f1:104" class="idref" href="#f1:104"><span class="id" title="binder">f1</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Z:98"><span class="id" title="variable">Z</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Y:100"><span class="id" title="variable">Y</span></a>)<br>
@@ -3041,7 +3032,7 @@ Corecursion principle, inherited from Groups/Group.v.
   := <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(269, '0_3_67');
+      mouseover(268, '0_3_67');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="isequiv_functor_ab_biprod" class="idref" href="#isequiv_functor_ab_biprod"><span class="id" title="definition">isequiv_functor_ab_biprod</span></a> {<a id="A:107" class="idref" href="#A:107"><span class="id" title="binder">A</span></a> <a id="A':108" class="idref" href="#A':108"><span class="id" title="binder">A'</span></a> <a id="B:109" class="idref" href="#B:109"><span class="id" title="binder">B</span></a> <a id="B':110" class="idref" href="#B':110"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -3049,58 +3040,58 @@ Corecursion principle, inherited from Groups/Group.v.
   : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#functor_ab_biprod"><span class="id" title="definition">functor_ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:111"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#g:112"><span class="id" title="variable">g</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(270, '0_3_67');
+      mouseover(269, '0_3_67');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(271, '0_3_67');
+      mouseover(270, '0_3_67');
       "><br>
   <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_adjointify"><span class="id" title="definition">isequiv_adjointify</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(272, '0_3_67');
+      mouseover(271, '0_3_67');
       "><br>
   1: { <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#functor_ab_biprod"><span class="id" title="definition">functor_ab_biprod</span></a>;<br>
        <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_iso_inverse"><span class="id" title="definition">grp_iso_inverse</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(273, '0_3_67');
+      mouseover(272, '0_3_67');
       "><br>
        + <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupIsomorphism"><span class="id" title="constructor">Build_GroupIsomorphism</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">f</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(274, '0_3_67');
+      mouseover(273, '0_3_67');
       "><br>
        + <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupIsomorphism"><span class="id" title="constructor">Build_GroupIsomorphism</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">g</span> <span class="id" title="var">_</span>). }</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(275, '0_3_67');
+      mouseover(274, '0_3_67');
       "><br>
   <span class="id" title="var">all</span>: <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>]; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(276, '0_3_67');
+      mouseover(275, '0_3_67');
       "><br>
   <span class="id" title="var">all</span>: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Prod.html#path_prod'"><span class="id" title="definition">path_prod'</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(277, '0_3_67');
+      mouseover(276, '0_3_67');
       "><br>
   1,2: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(278, '0_3_67');
+      mouseover(277, '0_3_67');
       "><br>
   <span class="id" title="var">all</span>: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="method">eissect</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(279, '0_3_67');
+      mouseover(278, '0_3_67');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(280, '0_3_67');
+      mouseover(279, '0_3_67');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="equiv_functor_ab_biprod" class="idref" href="#equiv_functor_ab_biprod"><span class="id" title="definition">equiv_functor_ab_biprod</span></a> {<a id="A:115" class="idref" href="#A:115"><span class="id" title="binder">A</span></a> <a id="A':116" class="idref" href="#A':116"><span class="id" title="binder">A'</span></a> <a id="B:117" class="idref" href="#B:117"><span class="id" title="binder">B</span></a> <a id="B':118" class="idref" href="#B':118"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -3109,7 +3100,7 @@ Corecursion principle, inherited from Groups/Group.v.
   := <a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupIsomorphism"><span class="id" title="constructor">Build_GroupIsomorphism</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#isequiv_functor_ab_biprod"><span class="id" title="definition">isequiv_functor_ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:119"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#g:120"><span class="id" title="variable">g</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_67');
       " onmouseover="
-      mouseover(281, '0_3_67');
+      mouseover(280, '0_3_67');
       "><br>
 <br>
 </span>
@@ -3122,14 +3113,14 @@ Corecursion principle, inherited from Groups/Group.v.
 <span class="command" onmouseout="
       mouseout('0_3_71');
       " onmouseover="
-      mouseover(288, '0_3_71');
+      mouseover(287, '0_3_71');
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="ab_kernel" class="idref" href="#ab_kernel"><span class="id" title="definition">ab_kernel</span></a> {<a id="A:123" class="idref" href="#A:123"><span class="id" title="binder">A</span></a> <a id="B:124" class="idref" href="#B:124"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f:125" class="idref" href="#f:125"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:123"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:124"><span class="id" title="variable">B</span></a>) : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a><br>
   := <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#Build_AbGroup"><span class="id" title="constructor">Build_AbGroup</span></a> (<a class="idref" href="HoTT.Algebra.Groups.Kernel.html#grp_kernel"><span class="id" title="definition">grp_kernel</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:125"><span class="id" title="variable">f</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_71');
       " onmouseover="
-      mouseover(289, '0_3_71');
+      mouseover(288, '0_3_71');
       "><br>
 <br>
 </span>
@@ -3142,7 +3133,7 @@ Corecursion principle, inherited from Groups/Group.v.
 <span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(296, '0_3_75');
+      mouseover(295, '0_3_75');
       ">
 <br>
 <span class="id" title="keyword">Lemma</span> <a id="transport_abgrouphomomorphism_from_const" class="idref" href="#transport_abgrouphomomorphism_from_const"><span class="id" title="lemma">transport_abgrouphomomorphism_from_const</span></a> `{<a id="H:126" class="idref" href="#H:126"><span class="id" title="binder">Univalence</span></a>} {<a id="A:127" class="idref" href="#A:127"><span class="id" title="binder">A</span></a> <a id="B:128" class="idref" href="#B:128"><span class="id" title="binder">B</span></a> <a id="B':129" class="idref" href="#B':129"><span class="id" title="binder">B'</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -3151,27 +3142,27 @@ Corecursion principle, inherited from Groups/Group.v.
     <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_compose"><span class="id" title="definition">grp_homo_compose</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#equiv_path_abgroup"><span class="id" title="definition">equiv_path_abgroup</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">p</span></a>) <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:131"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(297, '0_3_75');
+      mouseover(296, '0_3_75');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(298, '0_3_75');
+      mouseover(297, '0_3_75');
       "><br>
   <span class="id" title="tactic">induction</span> <span class="id" title="var">p</span>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(299, '0_3_75');
+      mouseover(298, '0_3_75');
       "><br>
   <span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#equiv_path_grouphomomorphism"><span class="id" title="definition">equiv_path_grouphomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(300, '0_3_75');
+      mouseover(299, '0_3_75');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(301, '0_3_75');
+      mouseover(300, '0_3_75');
       "><br>
 <br>
 <span class="id" title="keyword">Lemma</span> <a id="transport_abgrouphomomorphism_to_const" class="idref" href="#transport_abgrouphomomorphism_to_const"><span class="id" title="lemma">transport_abgrouphomomorphism_to_const</span></a> `{<a id="H:132" class="idref" href="#H:132"><span class="id" title="binder">Univalence</span></a>} {<a id="A:133" class="idref" href="#A:133"><span class="id" title="binder">A</span></a> <a id="A':134" class="idref" href="#A':134"><span class="id" title="binder">A'</span></a> <a id="B:135" class="idref" href="#B:135"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
@@ -3180,27 +3171,27 @@ Corecursion principle, inherited from Groups/Group.v.
     <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_compose"><span class="id" title="definition">grp_homo_compose</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#f:137"><span class="id" title="variable">f</span></a> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_iso_inverse"><span class="id" title="definition">grp_iso_inverse</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#equiv_path_abgroup"><span class="id" title="definition">equiv_path_abgroup</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">p</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(302, '0_3_75');
+      mouseover(301, '0_3_75');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(303, '0_3_75');
+      mouseover(302, '0_3_75');
       "><br>
   <span class="id" title="tactic">induction</span> <span class="id" title="var">p</span>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(304, '0_3_75');
+      mouseover(303, '0_3_75');
       "><br>
   <span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#equiv_path_grouphomomorphism"><span class="id" title="definition">equiv_path_grouphomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(305, '0_3_75');
+      mouseover(304, '0_3_75');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
-      mouseover(306, '0_3_75');
+      mouseover(305, '0_3_75');
       "><br>
 <br>
 </span>
@@ -3216,67 +3207,67 @@ Corecursion principle, inherited from Groups/Group.v.
 <span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(315, '0_3_79');
+      mouseover(314, '0_3_79');
       ">
 <span class="id" title="keyword">Definition</span> <a id="ab_homo_negation" class="idref" href="#ab_homo_negation"><span class="id" title="definition">ab_homo_negation</span></a> {<a id="A:139" class="idref" href="#A:139"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} : <a class="idref" href="HoTT.Algebra.Groups.Group.html#GroupIsomorphism"><span class="id" title="record">GroupIsomorphism</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:139"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:139"><span class="id" title="variable">A</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(316, '0_3_79');
+      mouseover(315, '0_3_79');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(317, '0_3_79');
+      mouseover(316, '0_3_79');
       "><br>
   <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupIsomorphism"><span class="id" title="constructor">Build_GroupIsomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(318, '0_3_79');
+      mouseover(317, '0_3_79');
       "><br>
   - <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Algebra.Groups.Group.html#Build_GroupHomomorphism"><span class="id" title="definition">Build_GroupHomomorphism</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(319, '0_3_79');
+      mouseover(318, '0_3_79');
       "><br>
     + <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="a:141" class="idref" href="#a:141"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a><a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#a:140"><span class="id" title="variable">a</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(320, '0_3_79');
+      mouseover(319, '0_3_79');
       "><br>
     + <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(321, '0_3_79');
+      mouseover(320, '0_3_79');
       "><br>
       <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_inv_op"><span class="id" title="definition">grp_inv_op</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(322, '0_3_79');
+      mouseover(321, '0_3_79');
       "><br>
       <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#commutativity"><span class="id" title="definition">commutativity</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(323, '0_3_79');
+      mouseover(322, '0_3_79');
       "><br>
   - <span class="id" title="var">srapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_adjointify"><span class="id" title="definition">isequiv_adjointify</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(324, '0_3_79');
+      mouseover(323, '0_3_79');
       "><br>
     1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="a:143" class="idref" href="#a:143"><span class="id" title="binder">a</span></a> ⇒ <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#::mc_scope:'-'_x"><span class="id" title="notation">-</span></a><a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#a:142"><span class="id" title="variable">a</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(325, '0_3_79');
+      mouseover(324, '0_3_79');
       "><br>
     1-2: <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Classes.theory.groups.html#negate_involutive"><span class="id" title="instance">negate_involutive</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(326, '0_3_79');
+      mouseover(325, '0_3_79');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
-      mouseover(327, '0_3_79');
+      mouseover(326, '0_3_79');
       "><br>
 <br>
 </span>
@@ -3289,14 +3280,14 @@ Addition <span class="inlinecode">+</span> is a group homomorphism <span class="
 <span class="command" onmouseout="
       mouseout('0_3_83');
       " onmouseover="
-      mouseover(339, '0_3_83');
+      mouseover(338, '0_3_83');
       ">
 <span class="id" title="keyword">Definition</span> <a id="ab_add_homo" class="idref" href="#ab_add_homo"><span class="id" title="definition">ab_add_homo</span></a> {<a id="A:144" class="idref" href="#A:144"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>}<br>
   : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod"><span class="id" title="definition">ab_biprod</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:144"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:144"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:144"><span class="id" title="variable">A</span></a><br>
   := <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_biprod_rec"><span class="id" title="lemma">ab_biprod_rec</span></a> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_id"><span class="id" title="definition">grp_homo_id</span></a> <a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_id"><span class="id" title="definition">grp_homo_id</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_83');
       " onmouseover="
-      mouseover(340, '0_3_83');
+      mouseover(339, '0_3_83');
       "><br>
 <br>
 </span>
@@ -3309,23 +3300,23 @@ We can add group homomorphisms.
 <span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
-      mouseover(344, '0_3_87');
+      mouseover(343, '0_3_87');
       ">
 <span class="id" title="keyword">Definition</span> <a id="ab_homo_add" class="idref" href="#ab_homo_add"><span class="id" title="definition">ab_homo_add</span></a> {<a id="A:145" class="idref" href="#A:145"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>} {<a id="B:146" class="idref" href="#B:146"><span class="id" title="binder">B</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>} (<a id="f:147" class="idref" href="#f:147"><span class="id" title="binder">f</span></a> <a id="g:148" class="idref" href="#g:148"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:145"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:146"><span class="id" title="variable">B</span></a>)<br>
   : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#A:145"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#B:146"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
-      mouseover(345, '0_3_87');
+      mouseover(344, '0_3_87');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
-      mouseover(346, '0_3_87');
+      mouseover(345, '0_3_87');
       "><br>
   <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_homo_compose"><span class="id" title="definition">grp_homo_compose</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#ab_add_homo"><span class="id" title="definition">ab_add_homo</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
-      mouseover(347, '0_3_87');
+      mouseover(346, '0_3_87');
       "><br>
 </span>
 </div>
@@ -3337,17 +3328,17 @@ We can add group homomorphisms.
 <span class="command" onmouseout="
       mouseout('0_3_91');
       " onmouseover="
-      mouseover(363, '0_3_91');
+      mouseover(362, '0_3_91');
       ">
   <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Algebra.Groups.Group.html#grp_prod_corec"><span class="id" title="lemma">grp_prod_corec</span></a> <span class="id" title="var">f</span> <span class="id" title="var">g</span>).</span><span class="command" onmouseout="
       mouseout('0_3_91');
       " onmouseover="
-      mouseover(364, '0_3_91');
+      mouseover(363, '0_3_91');
       "><br>
 <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_91');
       " onmouseover="
-      mouseover(365, '0_3_91');
+      mouseover(364, '0_3_91');
       "><br>
 </span>
 </div>

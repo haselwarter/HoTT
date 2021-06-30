@@ -161,11 +161,112 @@ Definition f (uaG : ModelAlgebraGroup) (x y z : T uaG) : (forall s:Unit, Fin 3 -
   - destruct s, tt. exact z.
 Defined.
 
+Definition f'
+      (Sym : Type)
+      `{!IsHSet Sym}
+      (Aris : Sym -> Type)
+      (A : Algebra (Build_SingleSortedSignature Sym Aris))
+      (x y z : carriers A tt) : (forall s:Unit, Fin 3 -> carriers A s).
+  intros s [[[e|tt]|tt]|tt].
+  - elim e.
+  - destruct s, tt. exact x.
+  - destruct s, tt. exact y.
+  - destruct s, tt. exact z.
+Defined.
+
 Definition g (uaG : ModelAlgebraGroup) (x : T uaG) : (forall s:Unit, Fin 1 -> uaG s).
   intros s [e|tt].
   - elim e.
   - destruct s, tt. exact x.
 Defined.
+
+Definition Algebra_of_Group (g : Group) : Algebra group_signature.
+  { apply (@Build_Algebra group_signature (fun _ => group_type g)).
+      - cbn. intros u. destruct u.
+        + unfold Operation. cbn.
+          pose (m := @group_sgop g).
+          unfold SgOp in m.
+          intros args.
+          pose (x := args (inr tt)).
+          pose (y := args (inl (inr tt))).
+          exact (m x y).
+        + intros args. cbn in args.
+          apply group_unit.
+        + intros args. cbn in args.
+          exact (group_inverse (args (inr tt))).
+      - cbn. intros. destruct (@group_isgroup g).
+        destruct group_monoid. destruct monoid_semigroup.
+        exact sg_set.
+    }
+Defined.
+
+(* Register paths_ind as core.eq.type. *)
+
+Lemma assoc_if_models_assoc
+      `{Funext}
+      (Sym : Type)
+      `{!IsHSet Sym}
+      (Aris : Sym -> Type)
+      (A : Algebra (Build_SingleSortedSignature Sym Aris))
+      (m : Symbol (Build_SingleSortedSignature Sym Aris))
+      (isbin : Aris m = Fin 2)
+      (models_assoc : InterpEquation A (equation_associativity Sym Aris m isbin))
+      (x y z : carriers A tt)
+  : let op := (fun a b =>
+                 operations
+                   A m
+                   (transport (fun T : Type => T -> A tt)
+                              isbin^ (Fin2_rec a b))) in
+    op x (op y z) = op (op x y) z.
+
+           unfold InterpEquation in models_assoc.
+
+           (* specialize (models_assoc (Fin3_rec A x y z)). *)
+           specialize (models_assoc (f' Sym Aris A x y z)).
+           simpl.
+
+           etransitivity.
+
+           2:{ etransitivity.
+               - exact models_assoc.
+               - unfold sg_op.
+                 unfold g_op.
+                 cbn.
+                 apply ap.
+                 funext i.
+                 simpl in i.
+                 unfold transport.
+                 unfold f'.
+                 cbn.
+                 compute.
+
+                 subst.
+                 revert i.
+                 induction isbin.
+                 caseFin' i.
+
+                 + cbn. reflexivity.
+                 + cbn. unfold transport. apply ap.
+                   funext j. simpl in j. caseFin' j.
+                   * cbn. reflexivity.
+                   * cbn. reflexivity.
+           }
+
+           { unfold sg_op.
+             unfold g_op.
+             cbn.
+             apply ap.
+             funext i.
+             simpl in i.
+             caseFin' i.
+
+             - cbn. apply ap. funext i. simpl in i. caseFin' i.
+               + reflexivity.
+               + reflexivity.
+             - cbn. reflexivity.
+           }
+
+
 
 Theorem ModelAlgebraGroup_Group_equiv `{Funext} : ModelAlgebraGroup <~> Group.
   srapply equiv_adjointify.
@@ -287,7 +388,41 @@ Theorem ModelAlgebraGroup_Group_equiv `{Funext} : ModelAlgebraGroup <~> Group.
            reflexivity.
       * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
   - (* Group -> ModelAlgebraGroup *)
-    admit.
+    intros g. unfold ModelAlgebraGroup.
+    apply (@Build_ModelAlgebra _ _ _ {| model_algebra := Algebra_of_Group g |}).
+    cbn.
+    unfold IsModelAlgebra. unfold InterpEquations.
+    intros i. induction i; unfold InterpEquation.
+    + intros f.
+      cbn in f.
+      pose (isg := @group_isgroup g). destruct isg.
+      destruct group_monoid. destruct monoid_semigroup.
+      unfold Associative, HeteroAssociative in sg_ass.
+      unfold sg_op in sg_ass.
+      unfold Algebra_of_Group. cbn.
+      apply sg_ass.
+    + intros f.
+      cbn in f.
+      unfold Algebra_of_Group. cbn.
+      pose (isg := @group_isgroup g). destruct isg.
+      destruct group_monoid.
+      apply monoid_right_id.
+    + intros f.
+      cbn in f.
+      unfold Algebra_of_Group. cbn.
+      pose (isg := @group_isgroup g). destruct isg.
+      destruct group_monoid.
+      apply monoid_left_id.
+    + intros f.
+      cbn in f.
+      unfold Algebra_of_Group. cbn.
+      pose (isg := @group_isgroup g). destruct isg.
+      apply negate_r.
+    + intros f.
+      cbn in f.
+      unfold Algebra_of_Group. cbn.
+      pose (isg := @group_isgroup g). destruct isg.
+      apply negate_l.
   - (* (fun x : ?B => f (g x)) == idmap *)
     admit.
   - (* (fun x : ?A => g (f x)) == idmap *)

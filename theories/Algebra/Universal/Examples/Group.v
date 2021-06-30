@@ -131,17 +131,6 @@ Local Definition g_inverse {uaG : ModelAlgebraGroup} : (Negate (T uaG)) :=
                operations uaG group_inverse_sym
                           ltac:(intros [F|tt] ; [elim F | exact x ]).
 
-
-(* destruct completely a term of type Fin k *)
-Ltac caseFin x :=
-  let t := type of x in
-  lazymatch t with
-  | Fin O => destruct x
-  | Fin (S ?k) =>
-    let x' := fresh "x" in
-    destruct x as [x'|[]] ; [caseFin x'|]
-  end.
-
 (* destruct completely a term of type Fin k *)
 Ltac caseFin' x :=
   let t := type of x in
@@ -153,7 +142,7 @@ Ltac caseFin' x :=
     destruct x as [x'|[]] ; [caseFin' x'|]
   end.
 
-Definition f (uaG : ModelAlgebraGroup) (x y z : T uaG) : (forall s:Unit, Fin 3 -> uaG s).
+Definition equational_context_vars_3 (uaG : ModelAlgebraGroup) (x y z : T uaG) : (forall s:Unit, Fin 3 -> uaG s).
   intros s [[[e|tt]|tt]|tt].
   - elim e.
   - destruct s, tt. exact x.
@@ -161,26 +150,221 @@ Definition f (uaG : ModelAlgebraGroup) (x y z : T uaG) : (forall s:Unit, Fin 3 -
   - destruct s, tt. exact z.
 Defined.
 
-Definition f'
-      (Sym : Type)
-      `{!IsHSet Sym}
-      (Aris : Sym -> Type)
-      (A : Algebra (Build_SingleSortedSignature Sym Aris))
-      (x y z : carriers A tt) : (forall s:Unit, Fin 3 -> carriers A s).
-  intros s [[[e|tt]|tt]|tt].
-  - elim e.
-  - destruct s, tt. exact x.
-  - destruct s, tt. exact y.
-  - destruct s, tt. exact z.
-Defined.
-
-Definition g (uaG : ModelAlgebraGroup) (x : T uaG) : (forall s:Unit, Fin 1 -> uaG s).
+Definition equational_context_vars_1 (uaG : ModelAlgebraGroup) (x : T uaG) : (forall s:Unit, Fin 1 -> uaG s).
   intros s [e|tt].
   - elim e.
   - destruct s, tt. exact x.
 Defined.
 
-Definition Algebra_of_Group (g : Group) : Algebra group_signature.
+Section RefactorEquationalProofs.
+
+(* Commented out is an attempt at factoring out the construction of Associative in the sense of Classes *)
+(* from InterpEquation equation_associativity. It is currently stuck because unlike the concrete *)
+(* case of groups (which use idpath), the equation `isbin : Aris m = Fin 2` does not compute, and *)
+(* we cannot rewrite along it, possibly because of the following related Coq bugs:
+   - https://github.com/coq/coq/issues/6623
+     Dan Grayson experiencing a similar issue in UniMath with rewrite.
+   - https://github.com/coq/coq/issues/14582
+     Inverting the orientation of the `isbin` equation leads to an universe inconsistency.
+ *)
+
+  Definition f'
+             (Sym : Type)
+             `{!IsHSet Sym}
+             (Aris : Sym -> Type)
+             (A : Algebra (Build_SingleSortedSignature Sym Aris))
+             (x y z : carriers A tt) : (forall s:Unit, Fin 3 -> carriers A s).
+    intros s [[[e|tt]|tt]|tt].
+    - elim e.
+    - destruct s, tt. exact x.
+    - destruct s, tt. exact y.
+    - destruct s, tt. exact z.
+  Defined.
+
+  (* Register paths_ind as core.eq.type. *)
+  Lemma assoc_if_models_assoc
+        `{Funext}
+        (Sym : Type)
+        `{!IsHSet Sym}
+        (Aris : Sym -> Type)
+        (A : Algebra (Build_SingleSortedSignature Sym Aris))
+        (m : Symbol (Build_SingleSortedSignature Sym Aris))
+        (isbin : Aris m = Fin 2)
+        (models_assoc : InterpEquation A (equation_associativity Sym Aris m isbin))
+        (x y z : carriers A tt)
+    : let op := (fun a b =>
+                   operations
+                     A m
+                     (transport (fun T : Type => T -> A tt)
+                                isbin^ (Fin2_rec a b))) in
+      op x (op y z) = op (op x y) z.
+
+    unfold InterpEquation in models_assoc.
+    specialize (models_assoc (f' Sym Aris A x y z)).
+    simpl.
+    etransitivity.
+    2:{ etransitivity.
+        - exact models_assoc.
+        - unfold sg_op.
+          unfold g_op.
+          cbn.
+          apply ap.
+          funext i.
+          simpl in i.
+          unfold transport.
+          unfold f'.
+          cbn.
+          compute.
+
+          subst.
+          revert i.
+          Fail rewrite isbin.
+  Abort.
+    (*       caseFin' i. *)
+
+    (*       + cbn. reflexivity. *)
+    (*       + cbn. unfold transport. apply ap. *)
+    (*         funext j. simpl in j. caseFin' j. *)
+    (*         * cbn. reflexivity. *)
+    (*         * cbn. reflexivity. *)
+    (* } *)
+    (* { unfold sg_op. *)
+    (*   unfold g_op. *)
+    (*   cbn. *)
+    (*   apply ap. *)
+    (*   funext i. *)
+    (*   simpl in i. *)
+    (*   caseFin' i. *)
+    (*   - cbn. apply ap. funext i. simpl in i. caseFin' i. *)
+    (*     + reflexivity. *)
+    (*     + reflexivity. *)
+    (*   - cbn. reflexivity. *)
+    (* } *)
+End RefactorEquationalProofs.
+
+Lemma assoc_if_models_group `{Funext}
+      (uaG : ModelAlgebraGroup) (x y z : T uaG)
+  : g_op x (g_op y z) = g_op (g_op x y) z.
+Proof.
+  pose (is_equational_model_algebra uaG group_eq_assoc) as models_assoc.
+  unfold InterpEquation in models_assoc.
+  specialize (models_assoc (equational_context_vars_3 uaG x y z)).
+  symmetry.
+  etransitivity.
+  2:{ etransitivity.
+      - exact models_assoc.
+      - unfold sg_op. unfold g_op. cbn.
+        apply ap.
+        funext i. cbn in i.
+        unfold transport. unfold equational_context_vars_3.
+        caseFin' i; cbn.
+        + reflexivity.
+        + unfold transport. apply ap.
+          funext j. cbn in j. caseFin' j.
+          * cbn. reflexivity.
+          * cbn. reflexivity.
+  }
+  { unfold sg_op, g_op; cbn.
+    apply ap. funext i; cbn in i.
+    caseFin' i; cbn.
+    - apply ap. funext i. cbn in i. caseFin' i.
+      + reflexivity.
+      + reflexivity.
+    - cbn. reflexivity.
+  }
+Qed.
+
+Lemma left_unit_if_models_group `{Funext}
+      (uaG : ModelAlgebraGroup)
+  : LeftIdentity (@sg_op _ (@g_op uaG)) (@mon_unit _ g_unit).
+Proof.
+  unfold LeftIdentity. intros x.
+  pose (is_equational_model_algebra uaG group_eq_left_unit) as lunit.
+  unfold InterpEquation in lunit.
+  specialize (lunit (equational_context_vars_1 _ x)).
+  etransitivity.
+  { etransitivity. 2:{ exact lunit. }
+    unfold sg_op, mon_unit, g_op, map_term_algebra, CarriersTermAlgebra_rec, CarriersTermAlgebra_ind. cbn.
+    apply ap. funext i. cbn in i.
+    caseFin' i; cbn.
+    + unfold g_unit. apply ap. funext j. destruct j.
+    + reflexivity. }
+  { cbn. reflexivity. }
+Qed.
+
+Lemma right_unit_if_models_group `{Funext}
+      (uaG : ModelAlgebraGroup)
+  : RightIdentity (@sg_op _ (@g_op uaG)) (@mon_unit _ g_unit).
+Proof.
+  unfold RightIdentity. intros x.
+  pose (is_equational_model_algebra uaG group_eq_right_unit) as runit.
+  unfold InterpEquation in runit.
+  specialize (runit (equational_context_vars_1 _ x)).
+  etransitivity.
+  { etransitivity. 2:{ exact runit. }
+    unfold sg_op, mon_unit, g_op, map_term_algebra, CarriersTermAlgebra_rec,
+                   CarriersTermAlgebra_ind. cbn.
+    apply ap. funext i. cbn in i.
+    caseFin' i; cbn.
+    + reflexivity.
+    + unfold g_unit.
+      apply ap. funext j. destruct j. }
+  { cbn. reflexivity. }
+Qed.
+
+Lemma LeftInverse_if_models_group `{Funext}
+  (uaG : ModelAlgebraGroup)
+  : LeftInverse (@sg_op _ (@g_op uaG))
+                (@negate (T uaG) (@g_inverse uaG)) (@mon_unit _ g_unit).
+Proof.
+  unfold LeftInverse. intros x.
+  pose (is_equational_model_algebra uaG group_eq_left_inverse) as inv.
+  specialize (inv (equational_context_vars_1 _ x)).
+  unfold sg_op, mon_unit, g_op. etransitivity.
+  * etransitivity. 2:{ exact inv. }
+    cbn. apply ap. funext i. cbn in i. caseFin' i.
+    -- cbn. unfold transport. unfold negate, g_inverse. cbn.
+       apply ap. funext i. cbn in i. caseFin' i.
+       reflexivity.
+    -- cbn. reflexivity.
+  * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
+Qed.
+
+Lemma RightInverse_if_models_group `{Funext}
+      (uaG : ModelAlgebraGroup)
+  : RightInverse (@sg_op _ (@g_op uaG))
+                 (@negate (T uaG) (@g_inverse uaG)) (@mon_unit _ g_unit).
+Proof.
+  unfold RightInverse. intros x.
+  pose (is_equational_model_algebra uaG group_eq_right_inverse) as inv.
+  specialize (inv (equational_context_vars_1 _ x)).
+  unfold sg_op, mon_unit, g_op. etransitivity.
+  * etransitivity. 2:{ exact inv. }
+    cbn. apply ap. funext i. cbn in i. caseFin' i.
+    -- cbn. reflexivity.
+    -- cbn. unfold transport. unfold negate, g_inverse. cbn.
+       apply ap. funext i. cbn in i. caseFin' i.
+       reflexivity.
+  * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
+Qed.
+
+Definition Group_from_ModelAlgebraGroup `{Funext}
+  (uaG : ModelAlgebraGroup) : Group.
+    apply (@Build_Group (T uaG) g_op g_unit g_inverse).
+    apply Build_IsGroup.
+    + apply Build_IsMonoid.
+      * apply Build_IsSemiGroup.
+        -- apply hset_algebra.
+        -- unfold Associative.
+           unfold HeteroAssociative.
+           apply assoc_if_models_group.
+      * apply left_unit_if_models_group.
+      * apply right_unit_if_models_group.
+    + apply LeftInverse_if_models_group.
+    + apply RightInverse_if_models_group.
+Defined.
+
+Definition Algebra_from_Group (g : Group) : Algebra group_signature.
   { apply (@Build_Algebra group_signature (fun _ => group_type g)).
       - cbn. intros u. destruct u.
         + unfold Operation. cbn.
@@ -200,234 +384,57 @@ Definition Algebra_of_Group (g : Group) : Algebra group_signature.
     }
 Defined.
 
-(* Register paths_ind as core.eq.type. *)
-
-Lemma assoc_if_models_assoc
-      `{Funext}
-      (Sym : Type)
-      `{!IsHSet Sym}
-      (Aris : Sym -> Type)
-      (A : Algebra (Build_SingleSortedSignature Sym Aris))
-      (m : Symbol (Build_SingleSortedSignature Sym Aris))
-      (isbin : Aris m = Fin 2)
-      (models_assoc : InterpEquation A (equation_associativity Sym Aris m isbin))
-      (x y z : carriers A tt)
-  : let op := (fun a b =>
-                 operations
-                   A m
-                   (transport (fun T : Type => T -> A tt)
-                              isbin^ (Fin2_rec a b))) in
-    op x (op y z) = op (op x y) z.
-
-           unfold InterpEquation in models_assoc.
-
-           (* specialize (models_assoc (Fin3_rec A x y z)). *)
-           specialize (models_assoc (f' Sym Aris A x y z)).
-           simpl.
-
-           etransitivity.
-
-           2:{ etransitivity.
-               - exact models_assoc.
-               - unfold sg_op.
-                 unfold g_op.
-                 cbn.
-                 apply ap.
-                 funext i.
-                 simpl in i.
-                 unfold transport.
-                 unfold f'.
-                 cbn.
-                 compute.
-
-                 subst.
-                 revert i.
-                 induction isbin.
-                 caseFin' i.
-
-                 + cbn. reflexivity.
-                 + cbn. unfold transport. apply ap.
-                   funext j. simpl in j. caseFin' j.
-                   * cbn. reflexivity.
-                   * cbn. reflexivity.
-           }
-
-           { unfold sg_op.
-             unfold g_op.
-             cbn.
-             apply ap.
-             funext i.
-             simpl in i.
-             caseFin' i.
-
-             - cbn. apply ap. funext i. simpl in i. caseFin' i.
-               + reflexivity.
-               + reflexivity.
-             - cbn. reflexivity.
-           }
-
-
+(* TODO: factor out components to make it more readable if it appears in a goal. *)
+Definition ModelAlgebraGroup_from_Group `{Funext} (g : Group)
+  : ModelAlgebraGroup.
+  unfold ModelAlgebraGroup.
+  apply (@Build_ModelAlgebra _ _ _ {| model_algebra := Algebra_from_Group g |}).
+  cbn.
+  unfold IsModelAlgebra. unfold InterpEquations.
+  intros i. induction i; unfold InterpEquation.
+  + intros f.
+    cbn in f.
+    pose (isg := @group_isgroup g). destruct isg.
+    destruct group_monoid. destruct monoid_semigroup.
+    unfold Associative, HeteroAssociative in sg_ass.
+    unfold sg_op in sg_ass.
+    unfold Algebra_from_Group. cbn.
+    apply sg_ass.
+  + intros f.
+    cbn in f.
+    unfold Algebra_from_Group. cbn.
+    pose (isg := @group_isgroup g). destruct isg.
+    destruct group_monoid.
+    apply monoid_right_id.
+  + intros f.
+    cbn in f.
+    unfold Algebra_from_Group. cbn.
+    pose (isg := @group_isgroup g). destruct isg.
+    destruct group_monoid.
+    apply monoid_left_id.
+  + intros f.
+    cbn in f.
+    unfold Algebra_from_Group. cbn.
+    pose (isg := @group_isgroup g). destruct isg.
+    apply negate_r.
+  + intros f.
+    cbn in f.
+    unfold Algebra_from_Group. cbn.
+    pose (isg := @group_isgroup g). destruct isg.
+    apply negate_l.
+Defined.
 
 Theorem ModelAlgebraGroup_Group_equiv `{Funext} : ModelAlgebraGroup <~> Group.
   srapply equiv_adjointify.
-  - (* ModelAlgebraGroup -> Group *)
-    intros uaG.
-    apply (@Build_Group (T uaG) g_op g_unit g_inverse).
-    apply Build_IsGroup.
-    + apply Build_IsMonoid.
-      * apply Build_IsSemiGroup.
-        -- apply hset_algebra.
-        -- unfold Associative.
-           unfold HeteroAssociative.
-           intros.
-
-           pose (is_equational_model_algebra uaG group_eq_assoc) as models_assoc.
-
-           unfold InterpEquation in models_assoc.
-
-           specialize (models_assoc (f uaG x y z)).
-           symmetry.
-
-           etransitivity.
-
-           2:{ etransitivity.
-               - exact models_assoc.
-               - unfold sg_op.
-                 unfold g_op.
-                 cbn.
-                 apply ap.
-                 funext i.
-                 simpl in i.
-                 unfold transport.
-                 unfold f.
-                 caseFin' i.
-
-                 + cbn. reflexivity.
-                 + cbn. unfold transport. apply ap.
-                   funext j. simpl in j. caseFin' j.
-                   * cbn. reflexivity.
-                   * cbn. reflexivity.
-           }
-
-           { unfold sg_op.
-             unfold g_op.
-             cbn.
-             apply ap.
-             funext i.
-             simpl in i.
-             caseFin' i.
-
-             - cbn. apply ap. funext i. simpl in i. caseFin' i.
-               + reflexivity.
-               + reflexivity.
-             - cbn. reflexivity.
-           }
-
-      * unfold LeftIdentity. intros x.
-        pose (is_equational_model_algebra uaG group_eq_left_unit) as lunit.
-        unfold InterpEquation in lunit.
-        specialize (lunit (g _ x)).
-
-        etransitivity.
-
-        { etransitivity. 2:{ exact lunit. }
-          unfold sg_op, mon_unit, g_op, map_term_algebra, CarriersTermAlgebra_rec, CarriersTermAlgebra_ind.
-          cbn.
-          apply ap.
-
-          funext j.
-          cbn in j.
-          caseFin' j; cbn.
-          + unfold g_unit.
-            apply ap. funext i. destruct i.
-          + reflexivity. }
-
-        { cbn. reflexivity. }
-
-      * unfold RightIdentity. intros x.
-        pose (is_equational_model_algebra uaG group_eq_right_unit) as runit.
-        unfold InterpEquation in runit.
-        specialize (runit (g _ x)).
-
-        etransitivity.
-
-        { etransitivity. 2:{ exact runit. }
-          unfold sg_op, mon_unit, g_op, map_term_algebra, CarriersTermAlgebra_rec, CarriersTermAlgebra_ind.
-          cbn.
-          apply ap.
-
-          funext j.
-          cbn in j.
-          caseFin' j; cbn.
-          + reflexivity.
-          + unfold g_unit.
-            apply ap. funext i. destruct i. }
-        { cbn. reflexivity. }
-
-    + unfold LeftInverse. intros x.
-      pose (is_equational_model_algebra uaG group_eq_left_inverse) as inv.
-      specialize (inv (g _ x)).
-      unfold sg_op, mon_unit, g_op. etransitivity.
-      * etransitivity. 2:{ exact inv. }
-        cbn. apply ap. funext i. cbn in i. caseFin' i.
-        -- cbn. unfold transport. unfold negate, g_inverse. cbn.
-           apply ap. funext i. cbn in i. caseFin' i.
-           reflexivity.
-        -- cbn. reflexivity.
-      * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
-
-    + unfold RightInverse. intros x.
-      pose (is_equational_model_algebra uaG group_eq_right_inverse) as inv.
-      specialize (inv (g _ x)).
-      unfold sg_op, mon_unit, g_op. etransitivity.
-      * etransitivity. 2:{ exact inv. }
-        cbn. apply ap. funext i. cbn in i. caseFin' i.
-        -- cbn. reflexivity.
-        -- cbn. unfold transport. unfold negate, g_inverse. cbn.
-           apply ap. funext i. cbn in i. caseFin' i.
-           reflexivity.
-      * cbn. unfold g_unit. apply ap. cbn. funext i ; destruct i.
-  - (* Group -> ModelAlgebraGroup *)
-    intros g. unfold ModelAlgebraGroup.
-    apply (@Build_ModelAlgebra _ _ _ {| model_algebra := Algebra_of_Group g |}).
-    cbn.
-    unfold IsModelAlgebra. unfold InterpEquations.
-    intros i. induction i; unfold InterpEquation.
-    + intros f.
-      cbn in f.
-      pose (isg := @group_isgroup g). destruct isg.
-      destruct group_monoid. destruct monoid_semigroup.
-      unfold Associative, HeteroAssociative in sg_ass.
-      unfold sg_op in sg_ass.
-      unfold Algebra_of_Group. cbn.
-      apply sg_ass.
-    + intros f.
-      cbn in f.
-      unfold Algebra_of_Group. cbn.
-      pose (isg := @group_isgroup g). destruct isg.
-      destruct group_monoid.
-      apply monoid_right_id.
-    + intros f.
-      cbn in f.
-      unfold Algebra_of_Group. cbn.
-      pose (isg := @group_isgroup g). destruct isg.
-      destruct group_monoid.
-      apply monoid_left_id.
-    + intros f.
-      cbn in f.
-      unfold Algebra_of_Group. cbn.
-      pose (isg := @group_isgroup g). destruct isg.
-      apply negate_r.
-    + intros f.
-      cbn in f.
-      unfold Algebra_of_Group. cbn.
-      pose (isg := @group_isgroup g). destruct isg.
-      apply negate_l.
-  - (* (fun x : ?B => f (g x)) == idmap *)
+  - apply Group_from_ModelAlgebraGroup.
+  - apply ModelAlgebraGroup_from_Group. (* Group -> ModelAlgebraGroup *)
+  - (* Group_from_ModelAlgebraGroup o ModelAlgebraGroup_from_Group == idmap *)
+    (* unfold Group_from_ModelAlgebraGroup. *)
+    (* unfold ModelAlgebraGroup_from_Group. *)
     admit.
-  - (* (fun x : ?A => g (f x)) == idmap *)
+  - (* ModelAlgebraGroup_from_Group o Group_from_ModelAlgebraGroup == idmap *)
     admit.
-Admitted.
+Abort.
 
 (* Here I list some of the missing results for this file. Remember that univalence is an axiom, so try to use it only for h-props.
    1. Show that [ModelAlgebraGroup] is equivalent to [Group], [ModelAlgebraGroup <~> Group].
